@@ -1,0 +1,6 @@
+@base <https://spectacular-voyage.github.io/test-inn-ambush/> .
+@prefix sflo: <https://semantic-flow.github.io/sflo/ontology/> .
+
+<authority/operations/authority-operation-request-plan-b-commit/_knop> a sflo:Knop ;
+  sflo:designatorPath "authority/operations/authority-operation-request-plan-b-commit" ;
+  sflo:hasWorkingKnopInventoryFile <authority/operations/authority-operation-request-plan-b-commit/_knop/_inventory/inventory.ttl> .

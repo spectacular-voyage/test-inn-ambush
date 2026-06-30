@@ -1,0 +1,23 @@
+@base <https://spectacular-voyage.github.io/test-inn-ambush/> .
+@prefix sflo: <https://semantic-flow.github.io/sflo/ontology/> .
+
+<authority/journals/plan-b/_knop> a sflo:Knop ;
+  sflo:hasKnopMetadata <authority/journals/plan-b/_knop/_meta> ;
+  sflo:hasKnopInventory <authority/journals/plan-b/_knop/_inventory> ;
+  sflo:hasWorkingKnopInventoryFile <authority/journals/plan-b/_knop/_inventory/inventory.ttl> ;
+  sflo:hasPayloadArtifact <authority/journals/plan-b> .
+
+<authority/journals/plan-b> a sflo:PayloadArtifact, sflo:DigitalArtifact, sflo:RdfDocument ;
+  sflo:hasWorkingLocatedFile <authority/journals/plan-b/plan-b.ttl> .
+
+<authority/journals/plan-b/_knop/_meta> a sflo:KnopMetadata, sflo:DigitalArtifact, sflo:RdfDocument ;
+  sflo:hasWorkingLocatedFile <authority/journals/plan-b/_knop/_meta/meta.ttl> .
+
+<authority/journals/plan-b/_knop/_inventory> a sflo:KnopInventory, sflo:DigitalArtifact, sflo:RdfDocument ;
+  sflo:hasWorkingLocatedFile <authority/journals/plan-b/_knop/_inventory/inventory.ttl> .
+
+<authority/journals/plan-b/_knop/_meta/meta.ttl> a sflo:LocatedFile, sflo:RdfDocument .
+
+<authority/journals/plan-b/_knop/_inventory/inventory.ttl> a sflo:LocatedFile, sflo:RdfDocument .
+
+<authority/journals/plan-b/plan-b.ttl> a sflo:LocatedFile, sflo:RdfDocument .

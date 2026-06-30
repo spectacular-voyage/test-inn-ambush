@@ -1,0 +1,6 @@
+@base <https://spectacular-voyage.github.io/test-inn-ambush/> .
+@prefix sflo: <https://semantic-flow.github.io/sflo/ontology/> .
+
+<projections/notifications/plan-b-projection-ready/_knop> a sflo:Knop ;
+  sflo:designatorPath "projections/notifications/plan-b-projection-ready" ;
+  sflo:hasWorkingKnopInventoryFile <projections/notifications/plan-b-projection-ready/_knop/_inventory/inventory.ttl> .

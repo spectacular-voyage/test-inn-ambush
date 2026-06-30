@@ -1,0 +1,23 @@
+@base <https://spectacular-voyage.github.io/test-inn-ambush/> .
+@prefix sflo: <https://semantic-flow.github.io/sflo/ontology/> .
+
+<projections/requests/participant-projection-request-alice/_knop> a sflo:Knop ;
+  sflo:hasKnopMetadata <projections/requests/participant-projection-request-alice/_knop/_meta> ;
+  sflo:hasKnopInventory <projections/requests/participant-projection-request-alice/_knop/_inventory> ;
+  sflo:hasWorkingKnopInventoryFile <projections/requests/participant-projection-request-alice/_knop/_inventory/inventory.ttl> ;
+  sflo:hasPayloadArtifact <projections/requests/participant-projection-request-alice> .
+
+<projections/requests/participant-projection-request-alice> a sflo:PayloadArtifact, sflo:DigitalArtifact ;
+  sflo:hasWorkingLocatedFile <projections/requests/participant-projection-request-alice/participant-projection-request-alice.json> .
+
+<projections/requests/participant-projection-request-alice/_knop/_meta> a sflo:KnopMetadata, sflo:DigitalArtifact, sflo:RdfDocument ;
+  sflo:hasWorkingLocatedFile <projections/requests/participant-projection-request-alice/_knop/_meta/meta.ttl> .
+
+<projections/requests/participant-projection-request-alice/_knop/_inventory> a sflo:KnopInventory, sflo:DigitalArtifact, sflo:RdfDocument ;
+  sflo:hasWorkingLocatedFile <projections/requests/participant-projection-request-alice/_knop/_inventory/inventory.ttl> .
+
+<projections/requests/participant-projection-request-alice/_knop/_meta/meta.ttl> a sflo:LocatedFile, sflo:RdfDocument .
+
+<projections/requests/participant-projection-request-alice/_knop/_inventory/inventory.ttl> a sflo:LocatedFile, sflo:RdfDocument .
+
+<projections/requests/participant-projection-request-alice/participant-projection-request-alice.json> a sflo:LocatedFile .

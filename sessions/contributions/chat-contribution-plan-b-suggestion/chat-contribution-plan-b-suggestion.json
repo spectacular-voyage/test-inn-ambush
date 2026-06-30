@@ -1,0 +1,26 @@
+{
+  "@context": "https://spectacular-voyage.github.io/test-inn-ambush/projections/contracts/inn-ambush-contract.context.jsonld",
+  "@type": "ChatContribution",
+  "type": "stagecraft.chat.contribution.v1",
+  "id": "chatcontrib-plan-b-suggestion-001",
+  "session": "https://spectacular-voyage.github.io/test-inn-ambush/session/inn-ambush-001",
+  "conversation": "https://spectacular-voyage.github.io/test-inn-ambush/conversation/table",
+  "submittedByParticipant": "https://spectacular-voyage.github.io/test-inn-ambush/participant/bob",
+  "speakingContext": {
+    "type": "SuggestorContribution",
+    "speaker": "https://spectacular-voyage.github.io/test-inn-ambush/participant/bob",
+    "suggestedTo": "https://spectacular-voyage.github.io/test-inn-ambush/participant/alice"
+  },
+  "contributionKind": "suggestion",
+  "body": "What if Elara bars the door with Ashfang?",
+  "modality": "text",
+  "visibilityScope": "table",
+  "sourceProjection": {
+    "projectionState": "https://spectacular-voyage.github.io/test-inn-ambush/rdf-export/inn-ambush-plan-b/state/s0001",
+    "participantProjection": "https://spectacular-voyage.github.io/test-inn-ambush/projection/alice/inn-ambush-plan-b"
+  },
+  "relatesTo": [
+    "https://spectacular-voyage.github.io/test-inn-ambush/suggestion/plan-b"
+  ],
+  "createdAt": "2026-06-29T13:30:00Z"
+}

@@ -1,0 +1,6 @@
+@base <https://spectacular-voyage.github.io/test-inn-ambush/> .
+@prefix sflo: <https://semantic-flow.github.io/sflo/ontology/> .
+
+<projections/contracts/inn-ambush-contract-shapes/_knop> a sflo:Knop ;
+  sflo:designatorPath "projections/contracts/inn-ambush-contract-shapes" ;
+  sflo:hasWorkingKnopInventoryFile <projections/contracts/inn-ambush-contract-shapes/_knop/_inventory/inventory.ttl> .

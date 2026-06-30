@@ -1,0 +1,121 @@
+@base <https://spectacular-voyage.github.io/test-inn-ambush/> .
+@prefix sflo: <https://semantic-flow.github.io/sflo/ontology/> .
+@prefix sfcfg: <https://semantic-flow.github.io/sflo/config/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<_mesh> a sflo:SemanticMesh ;
+  sflo:meshBase "https://spectacular-voyage.github.io/test-inn-ambush/"^^xsd:anyURI ;
+  sflo:hasMeshMetadata <_mesh/_meta> ;
+  sflo:hasMeshInventory <_mesh/_inventory> ;
+  sfcfg:hasConfig <_mesh/_config> .
+
+<_mesh/_meta> a sflo:MeshMetadata, sflo:DigitalArtifact, sflo:RdfDocument ;
+  sflo:hasWorkingLocatedFile <_mesh/_meta/meta.ttl> .
+
+<_mesh/_inventory> a sflo:MeshInventory, sflo:DigitalArtifact, sflo:RdfDocument ;
+  sflo:hasWorkingLocatedFile <_mesh/_inventory/inventory.ttl> .
+
+<_mesh/_config> a sfcfg:MeshConfig, sflo:DigitalArtifact, sflo:RdfDocument ;
+  sflo:hasWorkingLocatedFile <_mesh/_config/config.ttl> .
+
+<_mesh/_meta/meta.ttl> a sflo:LocatedFile, sflo:RdfDocument .
+
+<_mesh/_inventory/inventory.ttl> a sflo:LocatedFile, sflo:RdfDocument .
+
+<_mesh/_config/config.ttl> a sflo:LocatedFile, sflo:RdfDocument .
+
+<_mesh> sflo:hasKnop <authority/journals/plan-b/_knop> .
+
+<authority/journals/plan-b> a sflo:PayloadArtifact, sflo:DigitalArtifact, sflo:RdfDocument ;
+  sflo:hasWorkingLocatedFile <authority/journals/plan-b/plan-b.ttl> .
+
+<authority/journals/plan-b/_knop> a sflo:Knop ;
+  sflo:hasWorkingKnopInventoryFile <authority/journals/plan-b/_knop/_inventory/inventory.ttl> .
+
+<authority/journals/plan-b/_knop/_inventory/inventory.ttl> a sflo:LocatedFile, sflo:RdfDocument .
+
+<authority/journals/plan-b/plan-b.ttl> a sflo:LocatedFile, sflo:RdfDocument .
+
+<_mesh> sflo:hasKnop <world/states/inn-ambush-plan-b-state/_knop> .
+
+<world/states/inn-ambush-plan-b-state> a sflo:PayloadArtifact, sflo:DigitalArtifact, sflo:RdfDocument ;
+  sflo:hasWorkingLocatedFile <world/states/inn-ambush-plan-b-state/inn-ambush-plan-b-state.ttl> .
+
+<world/states/inn-ambush-plan-b-state/_knop> a sflo:Knop ;
+  sflo:hasWorkingKnopInventoryFile <world/states/inn-ambush-plan-b-state/_knop/_inventory/inventory.ttl> .
+
+<world/states/inn-ambush-plan-b-state/_knop/_inventory/inventory.ttl> a sflo:LocatedFile, sflo:RdfDocument .
+
+<world/states/inn-ambush-plan-b-state/inn-ambush-plan-b-state.ttl> a sflo:LocatedFile, sflo:RdfDocument .
+
+<_mesh> sflo:hasKnop <projections/contracts/inn-ambush-contract-context/_knop> .
+
+<projections/contracts/inn-ambush-contract-context> a sflo:PayloadArtifact, sflo:DigitalArtifact, sflo:RdfDocument ;
+  sflo:hasWorkingLocatedFile <projections/contracts/inn-ambush-contract.context.jsonld> .
+
+<projections/contracts/inn-ambush-contract-context/_knop> a sflo:Knop ;
+  sflo:hasWorkingKnopInventoryFile <projections/contracts/inn-ambush-contract-context/_knop/_inventory/inventory.ttl> .
+
+<projections/contracts/inn-ambush-contract-context/_knop/_inventory/inventory.ttl> a sflo:LocatedFile, sflo:RdfDocument .
+
+<projections/contracts/inn-ambush-contract.context.jsonld> a sflo:LocatedFile, sflo:RdfDocument .
+
+<_mesh> sflo:hasKnop <projections/contracts/inn-ambush-contract-shapes/_knop> .
+
+<projections/contracts/inn-ambush-contract-shapes> a sflo:PayloadArtifact, sflo:DigitalArtifact, sflo:RdfDocument ;
+  sflo:hasWorkingLocatedFile <projections/contracts/inn-ambush-contract.shapes.ttl> .
+
+<projections/contracts/inn-ambush-contract-shapes/_knop> a sflo:Knop ;
+  sflo:hasWorkingKnopInventoryFile <projections/contracts/inn-ambush-contract-shapes/_knop/_inventory/inventory.ttl> .
+
+<projections/contracts/inn-ambush-contract-shapes/_knop/_inventory/inventory.ttl> a sflo:LocatedFile, sflo:RdfDocument .
+
+<projections/contracts/inn-ambush-contract.shapes.ttl> a sflo:LocatedFile, sflo:RdfDocument .
+
+<_mesh> sflo:hasKnop <projections/notifications/plan-b-projection-ready/_knop> .
+
+<projections/notifications/plan-b-projection-ready> a sflo:PayloadArtifact, sflo:DigitalArtifact ;
+  sflo:hasWorkingLocatedFile <projections/notifications/plan-b-projection-ready/plan-b-projection-ready.json> .
+
+<projections/notifications/plan-b-projection-ready/_knop> a sflo:Knop ;
+  sflo:hasWorkingKnopInventoryFile <projections/notifications/plan-b-projection-ready/_knop/_inventory/inventory.ttl> .
+
+<projections/notifications/plan-b-projection-ready/_knop/_inventory/inventory.ttl> a sflo:LocatedFile, sflo:RdfDocument .
+
+<projections/notifications/plan-b-projection-ready/plan-b-projection-ready.json> a sflo:LocatedFile .
+
+<_mesh> sflo:hasKnop <projections/requests/participant-projection-request-alice/_knop> .
+
+<projections/requests/participant-projection-request-alice> a sflo:PayloadArtifact, sflo:DigitalArtifact ;
+  sflo:hasWorkingLocatedFile <projections/requests/participant-projection-request-alice/participant-projection-request-alice.json> .
+
+<projections/requests/participant-projection-request-alice/_knop> a sflo:Knop ;
+  sflo:hasWorkingKnopInventoryFile <projections/requests/participant-projection-request-alice/_knop/_inventory/inventory.ttl> .
+
+<projections/requests/participant-projection-request-alice/_knop/_inventory/inventory.ttl> a sflo:LocatedFile, sflo:RdfDocument .
+
+<projections/requests/participant-projection-request-alice/participant-projection-request-alice.json> a sflo:LocatedFile .
+
+<_mesh> sflo:hasKnop <sessions/contributions/chat-contribution-plan-b-suggestion/_knop> .
+
+<sessions/contributions/chat-contribution-plan-b-suggestion> a sflo:PayloadArtifact, sflo:DigitalArtifact ;
+  sflo:hasWorkingLocatedFile <sessions/contributions/chat-contribution-plan-b-suggestion/chat-contribution-plan-b-suggestion.json> .
+
+<sessions/contributions/chat-contribution-plan-b-suggestion/_knop> a sflo:Knop ;
+  sflo:hasWorkingKnopInventoryFile <sessions/contributions/chat-contribution-plan-b-suggestion/_knop/_inventory/inventory.ttl> .
+
+<sessions/contributions/chat-contribution-plan-b-suggestion/_knop/_inventory/inventory.ttl> a sflo:LocatedFile, sflo:RdfDocument .
+
+<sessions/contributions/chat-contribution-plan-b-suggestion/chat-contribution-plan-b-suggestion.json> a sflo:LocatedFile .
+
+<_mesh> sflo:hasKnop <authority/operations/authority-operation-request-plan-b-commit/_knop> .
+
+<authority/operations/authority-operation-request-plan-b-commit> a sflo:PayloadArtifact, sflo:DigitalArtifact ;
+  sflo:hasWorkingLocatedFile <authority/operations/authority-operation-request-plan-b-commit/authority-operation-request-plan-b-commit.json> .
+
+<authority/operations/authority-operation-request-plan-b-commit/_knop> a sflo:Knop ;
+  sflo:hasWorkingKnopInventoryFile <authority/operations/authority-operation-request-plan-b-commit/_knop/_inventory/inventory.ttl> .
+
+<authority/operations/authority-operation-request-plan-b-commit/_knop/_inventory/inventory.ttl> a sflo:LocatedFile, sflo:RdfDocument .
+
+<authority/operations/authority-operation-request-plan-b-commit/authority-operation-request-plan-b-commit.json> a sflo:LocatedFile .
