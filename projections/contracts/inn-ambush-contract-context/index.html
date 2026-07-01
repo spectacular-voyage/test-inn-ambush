@@ -147,21 +147,10 @@
 <pre class="shiki github-dark-default" style="background-color:#0d1117;color:#e6edf3" tabindex="0"><code><span class="line"><span style="color:#E6EDF3">{</span></span>
 <span class="line"><span style="color:#7EE787">  "@context"</span><span style="color:#E6EDF3">: {</span></span>
 <span class="line"><span style="color:#7EE787">    "@version"</span><span style="color:#E6EDF3">: </span><span style="color:#79C0FF">1.1</span><span style="color:#E6EDF3">,</span></span>
+<span class="line"><span style="color:#7EE787">    "@vocab"</span><span style="color:#E6EDF3">: </span><span style="color:#A5D6FF">"https://spectacular-voyage.github.io/stagecraft/ontology/"</span><span style="color:#E6EDF3">,</span></span>
 <span class="line"><span style="color:#7EE787">    "sc"</span><span style="color:#E6EDF3">: </span><span style="color:#A5D6FF">"https://spectacular-voyage.github.io/stagecraft/ontology/"</span><span style="color:#E6EDF3">,</span></span>
 <span class="line"><span style="color:#7EE787">    "sflo"</span><span style="color:#E6EDF3">: </span><span style="color:#A5D6FF">"https://semantic-flow.github.io/sflo/ontology/"</span><span style="color:#E6EDF3">,</span></span>
 <span class="line"><span style="color:#7EE787">    "xsd"</span><span style="color:#E6EDF3">: </span><span style="color:#A5D6FF">"http://www.w3.org/2001/XMLSchema#"</span><span style="color:#E6EDF3">,</span></span>
-<span class="line"><span style="color:#7EE787">    "OutcomeCommitted"</span><span style="color:#E6EDF3">: </span><span style="color:#A5D6FF">"sc:OutcomeCommitted"</span><span style="color:#E6EDF3">,</span></span>
-<span class="line"><span style="color:#7EE787">    "CommittedEvent"</span><span style="color:#E6EDF3">: </span><span style="color:#A5D6FF">"sc:CommittedEvent"</span><span style="color:#E6EDF3">,</span></span>
-<span class="line"><span style="color:#7EE787">    "CommitCertificate"</span><span style="color:#E6EDF3">: </span><span style="color:#A5D6FF">"sc:CommitCertificate"</span><span style="color:#E6EDF3">,</span></span>
-<span class="line"><span style="color:#7EE787">    "StateMutation"</span><span style="color:#E6EDF3">: </span><span style="color:#A5D6FF">"sc:StateMutation"</span><span style="color:#E6EDF3">,</span></span>
-<span class="line"><span style="color:#7EE787">    "ProjectionState"</span><span style="color:#E6EDF3">: </span><span style="color:#A5D6FF">"sc:ProjectionState"</span><span style="color:#E6EDF3">,</span></span>
-<span class="line"><span style="color:#7EE787">    "ParticipantProjection"</span><span style="color:#E6EDF3">: </span><span style="color:#A5D6FF">"sc:ParticipantProjection"</span><span style="color:#E6EDF3">,</span></span>
-<span class="line"><span style="color:#7EE787">    "SourceProjection"</span><span style="color:#E6EDF3">: </span><span style="color:#A5D6FF">"sc:SourceProjection"</span><span style="color:#E6EDF3">,</span></span>
-<span class="line"><span style="color:#7EE787">    "ProjectionNotification"</span><span style="color:#E6EDF3">: </span><span style="color:#A5D6FF">"sc:ProjectionNotification"</span><span style="color:#E6EDF3">,</span></span>
-<span class="line"><span style="color:#7EE787">    "ProjectionRequest"</span><span style="color:#E6EDF3">: </span><span style="color:#A5D6FF">"sc:ProjectionRequest"</span><span style="color:#E6EDF3">,</span></span>
-<span class="line"><span style="color:#7EE787">    "ChatContribution"</span><span style="color:#E6EDF3">: </span><span style="color:#A5D6FF">"sc:ChatContribution"</span><span style="color:#E6EDF3">,</span></span>
-<span class="line"><span style="color:#7EE787">    "AuthorityOperation"</span><span style="color:#E6EDF3">: </span><span style="color:#A5D6FF">"sc:AuthorityOperation"</span><span style="color:#E6EDF3">,</span></span>
-<span class="line"><span style="color:#7EE787">    "HistoricalState"</span><span style="color:#E6EDF3">: </span><span style="color:#A5D6FF">"sflo:HistoricalState"</span><span style="color:#E6EDF3">,</span></span>
 <span class="line"><span style="color:#7EE787">    "type"</span><span style="color:#E6EDF3">: </span><span style="color:#A5D6FF">"sc:envelopeType"</span><span style="color:#E6EDF3">,</span></span>
 <span class="line"><span style="color:#7EE787">    "id"</span><span style="color:#E6EDF3">: </span><span style="color:#A5D6FF">"sc:envelopeId"</span><span style="color:#E6EDF3">,</span></span>
 <span class="line"><span style="color:#7EE787">    "specversion"</span><span style="color:#E6EDF3">: </span><span style="color:#A5D6FF">"sc:cloudEventSpecVersion"</span><span style="color:#E6EDF3">,</span></span>
@@ -175,40 +164,28 @@
 <span class="line"><span style="color:#7EE787">      "@type"</span><span style="color:#E6EDF3">: </span><span style="color:#A5D6FF">"@id"</span></span>
 <span class="line"><span style="color:#E6EDF3">    },</span></span>
 <span class="line"><span style="color:#7EE787">    "datacontenttype"</span><span style="color:#E6EDF3">: </span><span style="color:#A5D6FF">"sc:dataContentType"</span><span style="color:#E6EDF3">,</span></span>
-<span class="line"><span style="color:#7EE787">    "data"</span><span style="color:#E6EDF3">: </span><span style="color:#A5D6FF">"sc:data"</span><span style="color:#E6EDF3">,</span></span>
-<span class="line"><span style="color:#7EE787">    "signal"</span><span style="color:#E6EDF3">: </span><span style="color:#A5D6FF">"sc:signal"</span><span style="color:#E6EDF3">,</span></span>
 <span class="line"><span style="color:#7EE787">    "session"</span><span style="color:#E6EDF3">: {</span></span>
-<span class="line"><span style="color:#7EE787">      "@id"</span><span style="color:#E6EDF3">: </span><span style="color:#A5D6FF">"sc:session"</span><span style="color:#E6EDF3">,</span></span>
 <span class="line"><span style="color:#7EE787">      "@type"</span><span style="color:#E6EDF3">: </span><span style="color:#A5D6FF">"@id"</span></span>
 <span class="line"><span style="color:#E6EDF3">    },</span></span>
 <span class="line"><span style="color:#7EE787">    "conversation"</span><span style="color:#E6EDF3">: {</span></span>
-<span class="line"><span style="color:#7EE787">      "@id"</span><span style="color:#E6EDF3">: </span><span style="color:#A5D6FF">"sc:conversation"</span><span style="color:#E6EDF3">,</span></span>
 <span class="line"><span style="color:#7EE787">      "@type"</span><span style="color:#E6EDF3">: </span><span style="color:#A5D6FF">"@id"</span></span>
 <span class="line"><span style="color:#E6EDF3">    },</span></span>
 <span class="line"><span style="color:#7EE787">    "submittedByParticipant"</span><span style="color:#E6EDF3">: {</span></span>
-<span class="line"><span style="color:#7EE787">      "@id"</span><span style="color:#E6EDF3">: </span><span style="color:#A5D6FF">"sc:submittedByParticipant"</span><span style="color:#E6EDF3">,</span></span>
 <span class="line"><span style="color:#7EE787">      "@type"</span><span style="color:#E6EDF3">: </span><span style="color:#A5D6FF">"@id"</span></span>
 <span class="line"><span style="color:#E6EDF3">    },</span></span>
 <span class="line"><span style="color:#7EE787">    "requestedByParticipant"</span><span style="color:#E6EDF3">: {</span></span>
-<span class="line"><span style="color:#7EE787">      "@id"</span><span style="color:#E6EDF3">: </span><span style="color:#A5D6FF">"sc:requestedByParticipant"</span><span style="color:#E6EDF3">,</span></span>
 <span class="line"><span style="color:#7EE787">      "@type"</span><span style="color:#E6EDF3">: </span><span style="color:#A5D6FF">"@id"</span></span>
 <span class="line"><span style="color:#E6EDF3">    },</span></span>
 <span class="line"><span style="color:#7EE787">    "projectionId"</span><span style="color:#E6EDF3">: {</span></span>
-<span class="line"><span style="color:#7EE787">      "@id"</span><span style="color:#E6EDF3">: </span><span style="color:#A5D6FF">"sc:projectionId"</span><span style="color:#E6EDF3">,</span></span>
 <span class="line"><span style="color:#7EE787">      "@type"</span><span style="color:#E6EDF3">: </span><span style="color:#A5D6FF">"@id"</span></span>
 <span class="line"><span style="color:#E6EDF3">    },</span></span>
-<span class="line"><span style="color:#7EE787">    "projectionAudience"</span><span style="color:#E6EDF3">: </span><span style="color:#A5D6FF">"sc:projectionAudience"</span><span style="color:#E6EDF3">,</span></span>
-<span class="line"><span style="color:#7EE787">    "visibilityScope"</span><span style="color:#E6EDF3">: </span><span style="color:#A5D6FF">"sc:visibilityScope"</span><span style="color:#E6EDF3">,</span></span>
 <span class="line"><span style="color:#7EE787">    "historyScope"</span><span style="color:#E6EDF3">: {</span></span>
-<span class="line"><span style="color:#7EE787">      "@id"</span><span style="color:#E6EDF3">: </span><span style="color:#A5D6FF">"sc:historyScope"</span><span style="color:#E6EDF3">,</span></span>
 <span class="line"><span style="color:#7EE787">      "@type"</span><span style="color:#E6EDF3">: </span><span style="color:#A5D6FF">"@id"</span></span>
 <span class="line"><span style="color:#E6EDF3">    },</span></span>
 <span class="line"><span style="color:#7EE787">    "branchScope"</span><span style="color:#E6EDF3">: {</span></span>
-<span class="line"><span style="color:#7EE787">      "@id"</span><span style="color:#E6EDF3">: </span><span style="color:#A5D6FF">"sc:branchScope"</span><span style="color:#E6EDF3">,</span></span>
 <span class="line"><span style="color:#7EE787">      "@type"</span><span style="color:#E6EDF3">: </span><span style="color:#A5D6FF">"@id"</span></span>
 <span class="line"><span style="color:#E6EDF3">    },</span></span>
 <span class="line"><span style="color:#7EE787">    "temporalScope"</span><span style="color:#E6EDF3">: {</span></span>
-<span class="line"><span style="color:#7EE787">      "@id"</span><span style="color:#E6EDF3">: </span><span style="color:#A5D6FF">"sc:temporalScope"</span><span style="color:#E6EDF3">,</span></span>
 <span class="line"><span style="color:#7EE787">      "@type"</span><span style="color:#E6EDF3">: </span><span style="color:#A5D6FF">"@id"</span></span>
 <span class="line"><span style="color:#E6EDF3">    },</span></span>
 <span class="line"><span style="color:#7EE787">    "speakingContext"</span><span style="color:#E6EDF3">: {</span></span>
@@ -216,98 +193,45 @@
 <span class="line"><span style="color:#7EE787">      "@context"</span><span style="color:#E6EDF3">: {</span></span>
 <span class="line"><span style="color:#7EE787">        "type"</span><span style="color:#E6EDF3">: </span><span style="color:#A5D6FF">"sc:speakingContextType"</span><span style="color:#E6EDF3">,</span></span>
 <span class="line"><span style="color:#7EE787">        "speaker"</span><span style="color:#E6EDF3">: {</span></span>
-<span class="line"><span style="color:#7EE787">          "@id"</span><span style="color:#E6EDF3">: </span><span style="color:#A5D6FF">"sc:speaker"</span><span style="color:#E6EDF3">,</span></span>
 <span class="line"><span style="color:#7EE787">          "@type"</span><span style="color:#E6EDF3">: </span><span style="color:#A5D6FF">"@id"</span></span>
 <span class="line"><span style="color:#E6EDF3">        },</span></span>
 <span class="line"><span style="color:#7EE787">        "suggestedTo"</span><span style="color:#E6EDF3">: {</span></span>
-<span class="line"><span style="color:#7EE787">          "@id"</span><span style="color:#E6EDF3">: </span><span style="color:#A5D6FF">"sc:suggestedTo"</span><span style="color:#E6EDF3">,</span></span>
 <span class="line"><span style="color:#7EE787">          "@type"</span><span style="color:#E6EDF3">: </span><span style="color:#A5D6FF">"@id"</span></span>
-<span class="line"><span style="color:#E6EDF3">        },</span></span>
-<span class="line"><span style="color:#7EE787">        "authorityScope"</span><span style="color:#E6EDF3">: </span><span style="color:#A5D6FF">"sc:authorityScope"</span></span>
+<span class="line"><span style="color:#E6EDF3">        }</span></span>
 <span class="line"><span style="color:#E6EDF3">      }</span></span>
 <span class="line"><span style="color:#E6EDF3">    },</span></span>
-<span class="line"><span style="color:#7EE787">    "contributionKind"</span><span style="color:#E6EDF3">: </span><span style="color:#A5D6FF">"sc:contributionKind"</span><span style="color:#E6EDF3">,</span></span>
-<span class="line"><span style="color:#7EE787">    "body"</span><span style="color:#E6EDF3">: </span><span style="color:#A5D6FF">"sc:body"</span><span style="color:#E6EDF3">,</span></span>
-<span class="line"><span style="color:#7EE787">    "modality"</span><span style="color:#E6EDF3">: </span><span style="color:#A5D6FF">"sc:modality"</span><span style="color:#E6EDF3">,</span></span>
 <span class="line"><span style="color:#7EE787">    "barred"</span><span style="color:#E6EDF3">: {</span></span>
-<span class="line"><span style="color:#7EE787">      "@id"</span><span style="color:#E6EDF3">: </span><span style="color:#A5D6FF">"sc:barred"</span><span style="color:#E6EDF3">,</span></span>
 <span class="line"><span style="color:#7EE787">      "@type"</span><span style="color:#E6EDF3">: </span><span style="color:#A5D6FF">"xsd:boolean"</span></span>
 <span class="line"><span style="color:#E6EDF3">    },</span></span>
 <span class="line"><span style="color:#7EE787">    "lastAuthorityRecord"</span><span style="color:#E6EDF3">: {</span></span>
-<span class="line"><span style="color:#7EE787">      "@id"</span><span style="color:#E6EDF3">: </span><span style="color:#A5D6FF">"sc:lastAuthorityRecord"</span><span style="color:#E6EDF3">,</span></span>
-<span class="line"><span style="color:#7EE787">      "@type"</span><span style="color:#E6EDF3">: </span><span style="color:#A5D6FF">"@id"</span></span>
-<span class="line"><span style="color:#E6EDF3">    },</span></span>
-<span class="line"><span style="color:#7EE787">    "producedResources"</span><span style="color:#E6EDF3">: </span><span style="color:#A5D6FF">"sc:producedResources"</span><span style="color:#E6EDF3">,</span></span>
-<span class="line"><span style="color:#7EE787">    "sourceProjection"</span><span style="color:#E6EDF3">: {</span></span>
-<span class="line"><span style="color:#7EE787">      "@id"</span><span style="color:#E6EDF3">: </span><span style="color:#A5D6FF">"sc:sourceProjection"</span><span style="color:#E6EDF3">,</span></span>
-<span class="line"><span style="color:#7EE787">      "@context"</span><span style="color:#E6EDF3">: {</span></span>
-<span class="line"><span style="color:#7EE787">        "projectionState"</span><span style="color:#E6EDF3">: {</span></span>
-<span class="line"><span style="color:#7EE787">          "@id"</span><span style="color:#E6EDF3">: </span><span style="color:#A5D6FF">"sc:projectionState"</span><span style="color:#E6EDF3">,</span></span>
-<span class="line"><span style="color:#7EE787">          "@type"</span><span style="color:#E6EDF3">: </span><span style="color:#A5D6FF">"@id"</span></span>
-<span class="line"><span style="color:#E6EDF3">        },</span></span>
-<span class="line"><span style="color:#7EE787">        "participantProjection"</span><span style="color:#E6EDF3">: {</span></span>
-<span class="line"><span style="color:#7EE787">          "@id"</span><span style="color:#E6EDF3">: </span><span style="color:#A5D6FF">"sc:participantProjection"</span><span style="color:#E6EDF3">,</span></span>
-<span class="line"><span style="color:#7EE787">          "@type"</span><span style="color:#E6EDF3">: </span><span style="color:#A5D6FF">"@id"</span></span>
-<span class="line"><span style="color:#E6EDF3">        }</span></span>
-<span class="line"><span style="color:#E6EDF3">      }</span></span>
-<span class="line"><span style="color:#E6EDF3">    },</span></span>
-<span class="line"><span style="color:#7EE787">    "relatesTo"</span><span style="color:#E6EDF3">: {</span></span>
-<span class="line"><span style="color:#7EE787">      "@id"</span><span style="color:#E6EDF3">: </span><span style="color:#A5D6FF">"sc:relatesTo"</span><span style="color:#E6EDF3">,</span></span>
-<span class="line"><span style="color:#7EE787">      "@type"</span><span style="color:#E6EDF3">: </span><span style="color:#A5D6FF">"@id"</span></span>
-<span class="line"><span style="color:#E6EDF3">    },</span></span>
-<span class="line"><span style="color:#7EE787">    "createdAt"</span><span style="color:#E6EDF3">: {</span></span>
-<span class="line"><span style="color:#7EE787">      "@id"</span><span style="color:#E6EDF3">: </span><span style="color:#A5D6FF">"sc:createdAt"</span><span style="color:#E6EDF3">,</span></span>
-<span class="line"><span style="color:#7EE787">      "@type"</span><span style="color:#E6EDF3">: </span><span style="color:#A5D6FF">"xsd:dateTime"</span></span>
-<span class="line"><span style="color:#E6EDF3">    },</span></span>
-<span class="line"><span style="color:#7EE787">    "requestedAt"</span><span style="color:#E6EDF3">: {</span></span>
-<span class="line"><span style="color:#7EE787">      "@id"</span><span style="color:#E6EDF3">: </span><span style="color:#A5D6FF">"sc:requestedAt"</span><span style="color:#E6EDF3">,</span></span>
-<span class="line"><span style="color:#7EE787">      "@type"</span><span style="color:#E6EDF3">: </span><span style="color:#A5D6FF">"xsd:dateTime"</span></span>
-<span class="line"><span style="color:#E6EDF3">    },</span></span>
-<span class="line"><span style="color:#7EE787">    "authorityRecord"</span><span style="color:#E6EDF3">: {</span></span>
-<span class="line"><span style="color:#7EE787">      "@id"</span><span style="color:#E6EDF3">: </span><span style="color:#A5D6FF">"sc:authorityRecord"</span><span style="color:#E6EDF3">,</span></span>
-<span class="line"><span style="color:#7EE787">      "@type"</span><span style="color:#E6EDF3">: </span><span style="color:#A5D6FF">"@id"</span></span>
-<span class="line"><span style="color:#E6EDF3">    },</span></span>
-<span class="line"><span style="color:#7EE787">    "committedEvent"</span><span style="color:#E6EDF3">: {</span></span>
-<span class="line"><span style="color:#7EE787">      "@id"</span><span style="color:#E6EDF3">: </span><span style="color:#A5D6FF">"sc:committedEvent"</span><span style="color:#E6EDF3">,</span></span>
-<span class="line"><span style="color:#7EE787">      "@type"</span><span style="color:#E6EDF3">: </span><span style="color:#A5D6FF">"@id"</span></span>
-<span class="line"><span style="color:#E6EDF3">    },</span></span>
-<span class="line"><span style="color:#7EE787">    "commitCertificate"</span><span style="color:#E6EDF3">: {</span></span>
-<span class="line"><span style="color:#7EE787">      "@id"</span><span style="color:#E6EDF3">: </span><span style="color:#A5D6FF">"sc:commitCertificate"</span><span style="color:#E6EDF3">,</span></span>
 <span class="line"><span style="color:#7EE787">      "@type"</span><span style="color:#E6EDF3">: </span><span style="color:#A5D6FF">"@id"</span></span>
 <span class="line"><span style="color:#E6EDF3">    },</span></span>
 <span class="line"><span style="color:#7EE787">    "projectionState"</span><span style="color:#E6EDF3">: {</span></span>
-<span class="line"><span style="color:#7EE787">      "@id"</span><span style="color:#E6EDF3">: </span><span style="color:#A5D6FF">"sc:projectionState"</span><span style="color:#E6EDF3">,</span></span>
+<span class="line"><span style="color:#7EE787">      "@type"</span><span style="color:#E6EDF3">: </span><span style="color:#A5D6FF">"@id"</span></span>
+<span class="line"><span style="color:#E6EDF3">    },</span></span>
+<span class="line"><span style="color:#7EE787">    "participantProjection"</span><span style="color:#E6EDF3">: {</span></span>
+<span class="line"><span style="color:#7EE787">      "@type"</span><span style="color:#E6EDF3">: </span><span style="color:#A5D6FF">"@id"</span></span>
+<span class="line"><span style="color:#E6EDF3">    },</span></span>
+<span class="line"><span style="color:#7EE787">    "relatesTo"</span><span style="color:#E6EDF3">: {</span></span>
+<span class="line"><span style="color:#7EE787">      "@type"</span><span style="color:#E6EDF3">: </span><span style="color:#A5D6FF">"@id"</span></span>
+<span class="line"><span style="color:#E6EDF3">    },</span></span>
+<span class="line"><span style="color:#7EE787">    "createdAt"</span><span style="color:#E6EDF3">: {</span></span>
+<span class="line"><span style="color:#7EE787">      "@type"</span><span style="color:#E6EDF3">: </span><span style="color:#A5D6FF">"xsd:dateTime"</span></span>
+<span class="line"><span style="color:#E6EDF3">    },</span></span>
+<span class="line"><span style="color:#7EE787">    "requestedAt"</span><span style="color:#E6EDF3">: {</span></span>
+<span class="line"><span style="color:#7EE787">      "@type"</span><span style="color:#E6EDF3">: </span><span style="color:#A5D6FF">"xsd:dateTime"</span></span>
+<span class="line"><span style="color:#E6EDF3">    },</span></span>
+<span class="line"><span style="color:#7EE787">    "authorityRecord"</span><span style="color:#E6EDF3">: {</span></span>
+<span class="line"><span style="color:#7EE787">      "@type"</span><span style="color:#E6EDF3">: </span><span style="color:#A5D6FF">"@id"</span></span>
+<span class="line"><span style="color:#E6EDF3">    },</span></span>
+<span class="line"><span style="color:#7EE787">    "committedEvent"</span><span style="color:#E6EDF3">: {</span></span>
+<span class="line"><span style="color:#7EE787">      "@type"</span><span style="color:#E6EDF3">: </span><span style="color:#A5D6FF">"@id"</span></span>
+<span class="line"><span style="color:#E6EDF3">    },</span></span>
+<span class="line"><span style="color:#7EE787">    "commitCertificate"</span><span style="color:#E6EDF3">: {</span></span>
 <span class="line"><span style="color:#7EE787">      "@type"</span><span style="color:#E6EDF3">: </span><span style="color:#A5D6FF">"@id"</span></span>
 <span class="line"><span style="color:#E6EDF3">    },</span></span>
 <span class="line"><span style="color:#7EE787">    "stateMutation"</span><span style="color:#E6EDF3">: {</span></span>
-<span class="line"><span style="color:#7EE787">      "@id"</span><span style="color:#E6EDF3">: </span><span style="color:#A5D6FF">"sc:stateMutation"</span><span style="color:#E6EDF3">,</span></span>
 <span class="line"><span style="color:#7EE787">      "@type"</span><span style="color:#E6EDF3">: </span><span style="color:#A5D6FF">"@id"</span></span>
-<span class="line"><span style="color:#E6EDF3">    },</span></span>
-<span class="line"><span style="color:#7EE787">    "projectionPath"</span><span style="color:#E6EDF3">: </span><span style="color:#A5D6FF">"sc:projectionPath"</span><span style="color:#E6EDF3">,</span></span>
-<span class="line"><span style="color:#7EE787">    "resourcePointers"</span><span style="color:#E6EDF3">: {</span></span>
-<span class="line"><span style="color:#7EE787">      "@id"</span><span style="color:#E6EDF3">: </span><span style="color:#A5D6FF">"sc:resourcePointers"</span><span style="color:#E6EDF3">,</span></span>
-<span class="line"><span style="color:#7EE787">      "@context"</span><span style="color:#E6EDF3">: {</span></span>
-<span class="line"><span style="color:#7EE787">        "authorityRecord"</span><span style="color:#E6EDF3">: {</span></span>
-<span class="line"><span style="color:#7EE787">          "@id"</span><span style="color:#E6EDF3">: </span><span style="color:#A5D6FF">"sc:authorityRecord"</span><span style="color:#E6EDF3">,</span></span>
-<span class="line"><span style="color:#7EE787">          "@type"</span><span style="color:#E6EDF3">: </span><span style="color:#A5D6FF">"@id"</span></span>
-<span class="line"><span style="color:#E6EDF3">        },</span></span>
-<span class="line"><span style="color:#7EE787">        "committedEvent"</span><span style="color:#E6EDF3">: {</span></span>
-<span class="line"><span style="color:#7EE787">          "@id"</span><span style="color:#E6EDF3">: </span><span style="color:#A5D6FF">"sc:committedEvent"</span><span style="color:#E6EDF3">,</span></span>
-<span class="line"><span style="color:#7EE787">          "@type"</span><span style="color:#E6EDF3">: </span><span style="color:#A5D6FF">"@id"</span></span>
-<span class="line"><span style="color:#E6EDF3">        },</span></span>
-<span class="line"><span style="color:#7EE787">        "commitCertificate"</span><span style="color:#E6EDF3">: {</span></span>
-<span class="line"><span style="color:#7EE787">          "@id"</span><span style="color:#E6EDF3">: </span><span style="color:#A5D6FF">"sc:commitCertificate"</span><span style="color:#E6EDF3">,</span></span>
-<span class="line"><span style="color:#7EE787">          "@type"</span><span style="color:#E6EDF3">: </span><span style="color:#A5D6FF">"@id"</span></span>
-<span class="line"><span style="color:#E6EDF3">        },</span></span>
-<span class="line"><span style="color:#7EE787">        "projectionState"</span><span style="color:#E6EDF3">: {</span></span>
-<span class="line"><span style="color:#7EE787">          "@id"</span><span style="color:#E6EDF3">: </span><span style="color:#A5D6FF">"sc:projectionState"</span><span style="color:#E6EDF3">,</span></span>
-<span class="line"><span style="color:#7EE787">          "@type"</span><span style="color:#E6EDF3">: </span><span style="color:#A5D6FF">"@id"</span></span>
-<span class="line"><span style="color:#E6EDF3">        },</span></span>
-<span class="line"><span style="color:#7EE787">        "stateMutation"</span><span style="color:#E6EDF3">: {</span></span>
-<span class="line"><span style="color:#7EE787">          "@id"</span><span style="color:#E6EDF3">: </span><span style="color:#A5D6FF">"sc:stateMutation"</span><span style="color:#E6EDF3">,</span></span>
-<span class="line"><span style="color:#7EE787">          "@type"</span><span style="color:#E6EDF3">: </span><span style="color:#A5D6FF">"@id"</span></span>
-<span class="line"><span style="color:#E6EDF3">        }</span></span>
-<span class="line"><span style="color:#E6EDF3">      }</span></span>
 <span class="line"><span style="color:#E6EDF3">    },</span></span>
 <span class="line"><span style="color:#7EE787">    "resync"</span><span style="color:#E6EDF3">: {</span></span>
 <span class="line"><span style="color:#7EE787">      "@id"</span><span style="color:#E6EDF3">: </span><span style="color:#A5D6FF">"sc:resync"</span><span style="color:#E6EDF3">,</span></span>
@@ -320,52 +244,20 @@
 <span class="line"><span style="color:#7EE787">        "path"</span><span style="color:#E6EDF3">: </span><span style="color:#A5D6FF">"sc:resyncPath"</span></span>
 <span class="line"><span style="color:#E6EDF3">      }</span></span>
 <span class="line"><span style="color:#E6EDF3">    },</span></span>
-<span class="line"><span style="color:#7EE787">    "operation"</span><span style="color:#E6EDF3">: </span><span style="color:#A5D6FF">"sc:operation"</span><span style="color:#E6EDF3">,</span></span>
 <span class="line"><span style="color:#7EE787">    "execute"</span><span style="color:#E6EDF3">: {</span></span>
-<span class="line"><span style="color:#7EE787">      "@id"</span><span style="color:#E6EDF3">: </span><span style="color:#A5D6FF">"sc:execute"</span><span style="color:#E6EDF3">,</span></span>
 <span class="line"><span style="color:#7EE787">      "@type"</span><span style="color:#E6EDF3">: </span><span style="color:#A5D6FF">"xsd:boolean"</span></span>
 <span class="line"><span style="color:#E6EDF3">    },</span></span>
-<span class="line"><span style="color:#7EE787">    "inputs"</span><span style="color:#E6EDF3">: {</span></span>
-<span class="line"><span style="color:#7EE787">      "@id"</span><span style="color:#E6EDF3">: </span><span style="color:#A5D6FF">"sc:inputs"</span><span style="color:#E6EDF3">,</span></span>
-<span class="line"><span style="color:#7EE787">      "@context"</span><span style="color:#E6EDF3">: {</span></span>
-<span class="line"><span style="color:#7EE787">        "acceptedIntent"</span><span style="color:#E6EDF3">: {</span></span>
-<span class="line"><span style="color:#7EE787">          "@id"</span><span style="color:#E6EDF3">: </span><span style="color:#A5D6FF">"sc:acceptedIntent"</span><span style="color:#E6EDF3">,</span></span>
-<span class="line"><span style="color:#7EE787">          "@type"</span><span style="color:#E6EDF3">: </span><span style="color:#A5D6FF">"@id"</span></span>
-<span class="line"><span style="color:#E6EDF3">        },</span></span>
-<span class="line"><span style="color:#7EE787">        "proposedOutcome"</span><span style="color:#E6EDF3">: {</span></span>
-<span class="line"><span style="color:#7EE787">          "@id"</span><span style="color:#E6EDF3">: </span><span style="color:#A5D6FF">"sc:proposedOutcome"</span><span style="color:#E6EDF3">,</span></span>
-<span class="line"><span style="color:#7EE787">          "@type"</span><span style="color:#E6EDF3">: </span><span style="color:#A5D6FF">"@id"</span></span>
-<span class="line"><span style="color:#E6EDF3">        },</span></span>
-<span class="line"><span style="color:#7EE787">        "targetEntity"</span><span style="color:#E6EDF3">: {</span></span>
-<span class="line"><span style="color:#7EE787">          "@id"</span><span style="color:#E6EDF3">: </span><span style="color:#A5D6FF">"sc:targetEntity"</span><span style="color:#E6EDF3">,</span></span>
-<span class="line"><span style="color:#7EE787">          "@type"</span><span style="color:#E6EDF3">: </span><span style="color:#A5D6FF">"@id"</span></span>
-<span class="line"><span style="color:#E6EDF3">        },</span></span>
-<span class="line"><span style="color:#7EE787">        "consequence"</span><span style="color:#E6EDF3">: {</span></span>
-<span class="line"><span style="color:#7EE787">          "@id"</span><span style="color:#E6EDF3">: </span><span style="color:#A5D6FF">"sc:consequence"</span><span style="color:#E6EDF3">,</span></span>
-<span class="line"><span style="color:#7EE787">          "@type"</span><span style="color:#E6EDF3">: </span><span style="color:#A5D6FF">"@id"</span></span>
-<span class="line"><span style="color:#E6EDF3">        }</span></span>
-<span class="line"><span style="color:#E6EDF3">      }</span></span>
+<span class="line"><span style="color:#7EE787">    "acceptedIntent"</span><span style="color:#E6EDF3">: {</span></span>
+<span class="line"><span style="color:#7EE787">      "@type"</span><span style="color:#E6EDF3">: </span><span style="color:#A5D6FF">"@id"</span></span>
 <span class="line"><span style="color:#E6EDF3">    },</span></span>
-<span class="line"><span style="color:#7EE787">    "wouldProduce"</span><span style="color:#E6EDF3">: {</span></span>
-<span class="line"><span style="color:#7EE787">      "@id"</span><span style="color:#E6EDF3">: </span><span style="color:#A5D6FF">"sc:wouldProduce"</span><span style="color:#E6EDF3">,</span></span>
-<span class="line"><span style="color:#7EE787">      "@context"</span><span style="color:#E6EDF3">: {</span></span>
-<span class="line"><span style="color:#7EE787">        "authorityRecord"</span><span style="color:#E6EDF3">: {</span></span>
-<span class="line"><span style="color:#7EE787">          "@id"</span><span style="color:#E6EDF3">: </span><span style="color:#A5D6FF">"sc:authorityRecord"</span><span style="color:#E6EDF3">,</span></span>
-<span class="line"><span style="color:#7EE787">          "@type"</span><span style="color:#E6EDF3">: </span><span style="color:#A5D6FF">"@id"</span></span>
-<span class="line"><span style="color:#E6EDF3">        },</span></span>
-<span class="line"><span style="color:#7EE787">        "committedEvent"</span><span style="color:#E6EDF3">: {</span></span>
-<span class="line"><span style="color:#7EE787">          "@id"</span><span style="color:#E6EDF3">: </span><span style="color:#A5D6FF">"sc:committedEvent"</span><span style="color:#E6EDF3">,</span></span>
-<span class="line"><span style="color:#7EE787">          "@type"</span><span style="color:#E6EDF3">: </span><span style="color:#A5D6FF">"@id"</span></span>
-<span class="line"><span style="color:#E6EDF3">        },</span></span>
-<span class="line"><span style="color:#7EE787">        "commitCertificate"</span><span style="color:#E6EDF3">: {</span></span>
-<span class="line"><span style="color:#7EE787">          "@id"</span><span style="color:#E6EDF3">: </span><span style="color:#A5D6FF">"sc:commitCertificate"</span><span style="color:#E6EDF3">,</span></span>
-<span class="line"><span style="color:#7EE787">          "@type"</span><span style="color:#E6EDF3">: </span><span style="color:#A5D6FF">"@id"</span></span>
-<span class="line"><span style="color:#E6EDF3">        },</span></span>
-<span class="line"><span style="color:#7EE787">        "stateMutation"</span><span style="color:#E6EDF3">: {</span></span>
-<span class="line"><span style="color:#7EE787">          "@id"</span><span style="color:#E6EDF3">: </span><span style="color:#A5D6FF">"sc:stateMutation"</span><span style="color:#E6EDF3">,</span></span>
-<span class="line"><span style="color:#7EE787">          "@type"</span><span style="color:#E6EDF3">: </span><span style="color:#A5D6FF">"@id"</span></span>
-<span class="line"><span style="color:#E6EDF3">        }</span></span>
-<span class="line"><span style="color:#E6EDF3">      }</span></span>
+<span class="line"><span style="color:#7EE787">    "proposedOutcome"</span><span style="color:#E6EDF3">: {</span></span>
+<span class="line"><span style="color:#7EE787">      "@type"</span><span style="color:#E6EDF3">: </span><span style="color:#A5D6FF">"@id"</span></span>
+<span class="line"><span style="color:#E6EDF3">    },</span></span>
+<span class="line"><span style="color:#7EE787">    "targetEntity"</span><span style="color:#E6EDF3">: {</span></span>
+<span class="line"><span style="color:#7EE787">      "@type"</span><span style="color:#E6EDF3">: </span><span style="color:#A5D6FF">"@id"</span></span>
+<span class="line"><span style="color:#E6EDF3">    },</span></span>
+<span class="line"><span style="color:#7EE787">    "consequence"</span><span style="color:#E6EDF3">: {</span></span>
+<span class="line"><span style="color:#7EE787">      "@type"</span><span style="color:#E6EDF3">: </span><span style="color:#A5D6FF">"@id"</span></span>
 <span class="line"><span style="color:#E6EDF3">    }</span></span>
 <span class="line"><span style="color:#E6EDF3">  }</span></span>
 <span class="line"><span style="color:#E6EDF3">}</span></span>
@@ -394,7 +286,7 @@
     </article>
   </main>
   <footer class="wf-generated">
-    Generated on <span class="wf-term wf-date-tip" tabindex="0" title="2026-07-01T14:54:25.695Z" data-tooltip="2026-07-01T14:54:25.695Z">July 1, 2026</span> by <a href="https://github.com/semantic-flow/weave/">Weave</a>
+    Generated on <span class="wf-term wf-date-tip" tabindex="0" title="2026-07-01T15:27:09.468Z" data-tooltip="2026-07-01T15:27:09.468Z">July 1, 2026</span> by <a href="https://github.com/semantic-flow/weave/">Weave</a>
   </footer>
 </body>
 </html>
