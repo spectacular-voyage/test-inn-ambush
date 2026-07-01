@@ -107,19 +107,19 @@
             {
               "id": "#ask-outcome-committed",
               "type": "SparqlAskAssertion",
-              "query": "ASK { <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/outcome-committed/plan-b-001> a <https://stagecraft.dev/ns/stagecraft/OutcomeCommitted> ; <https://stagecraft.dev/ns/stagecraft/committedEvent> <https://spectacular-voyage.github.io/test-inn-ambush/committed-event/plan-b-001> ; <https://stagecraft.dev/ns/stagecraft/hasCommitCertificate> <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/commit-certificate/plan-b-001> . }",
+              "query": "ASK { <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/outcome-committed/plan-b-001> a <https://spectacular-voyage.github.io/stagecraft/ontology/OutcomeCommitted> ; <https://spectacular-voyage.github.io/stagecraft/ontology/committedEvent> <https://spectacular-voyage.github.io/test-inn-ambush/committed-event/plan-b-001> ; <https://spectacular-voyage.github.io/stagecraft/ontology/hasCommitCertificate> <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/commit-certificate/plan-b-001> . }",
               "expectedBoolean": true
             },
             {
               "id": "#ask-commit-certificate",
               "type": "SparqlAskAssertion",
-              "query": "ASK { <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/commit-certificate/plan-b-001> a <https://stagecraft.dev/ns/stagecraft/CommitCertificate> ; <https://stagecraft.dev/ns/stagecraft/committedEvent> <https://spectacular-voyage.github.io/test-inn-ambush/committed-event/plan-b-001> . }",
+              "query": "ASK { <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/commit-certificate/plan-b-001> a <https://spectacular-voyage.github.io/stagecraft/ontology/CommitCertificate> ; <https://spectacular-voyage.github.io/stagecraft/ontology/committedEvent> <https://spectacular-voyage.github.io/test-inn-ambush/committed-event/plan-b-001> . }",
               "expectedBoolean": true
             },
             {
               "id": "#ask-committed-event",
               "type": "SparqlAskAssertion",
-              "query": "ASK { <https://spectacular-voyage.github.io/test-inn-ambush/committed-event/plan-b-001> a <https://stagecraft.dev/ns/stagecraft/CommittedEvent> ; <https://stagecraft.dev/ns/stagecraft/producesStateMutation> <https://spectacular-voyage.github.io/test-inn-ambush/state-mutation/door-barred-plan-b-001> . }",
+              "query": "ASK { <https://spectacular-voyage.github.io/test-inn-ambush/committed-event/plan-b-001> a <https://spectacular-voyage.github.io/stagecraft/ontology/CommittedEvent> ; <https://spectacular-voyage.github.io/stagecraft/ontology/producesStateMutation> <https://spectacular-voyage.github.io/test-inn-ambush/state-mutation/door-barred-plan-b-001> . }",
               "expectedBoolean": true
             }
           ]
@@ -132,13 +132,13 @@
             {
               "id": "#ask-projection-notification-shape",
               "type": "SparqlAskAssertion",
-              "query": "ASK { <https://stagecraft.dev/ns/provisional/stagecraft-contract-shape#ProjectionNotificationShape> a <http://www.w3.org/ns/shacl#NodeShape> ; <http://www.w3.org/ns/shacl#targetClass> <https://stagecraft.dev/ns/stagecraft/ProjectionNotification> . }",
+              "query": "ASK { <https://stagecraft.dev/ns/provisional/stagecraft-contract-shape#ProjectionNotificationShape> a <http://www.w3.org/ns/shacl#NodeShape> ; <http://www.w3.org/ns/shacl#targetClass> <https://spectacular-voyage.github.io/stagecraft/ontology/ProjectionNotification> . }",
               "expectedBoolean": true
             },
             {
               "id": "#ask-authority-operation-shape",
               "type": "SparqlAskAssertion",
-              "query": "ASK { <https://stagecraft.dev/ns/provisional/stagecraft-contract-shape#AuthorityOperationShape> a <http://www.w3.org/ns/shacl#NodeShape> ; <http://www.w3.org/ns/shacl#targetClass> <https://stagecraft.dev/ns/stagecraft/AuthorityOperation> . }",
+              "query": "ASK { <https://stagecraft.dev/ns/provisional/stagecraft-contract-shape#AuthorityOperationShape> a <http://www.w3.org/ns/shacl#NodeShape> ; <http://www.w3.org/ns/shacl#targetClass> <https://spectacular-voyage.github.io/stagecraft/ontology/AuthorityOperation> . }",
               "expectedBoolean": true
             }
           ]
@@ -157,13 +157,13 @@
             {
               "id": "#ask-door-barred",
               "type": "SparqlAskAssertion",
-              "query": "ASK { <https://spectacular-voyage.github.io/test-inn-ambush/target/door> a <https://stagecraft.dev/ns/stagecraft/Target> ; <https://stagecraft.dev/ns/stagecraft/barred> \"true\"^^<http://www.w3.org/2001/XMLSchema#boolean> ; <https://stagecraft.dev/ns/stagecraft/lastCommittedEvent> <https://spectacular-voyage.github.io/test-inn-ambush/committed-event/plan-b-001> . }",
+              "query": "ASK { <https://spectacular-voyage.github.io/test-inn-ambush/target/door> a <https://spectacular-voyage.github.io/stagecraft/ontology/Target> ; <https://spectacular-voyage.github.io/stagecraft/ontology/barred> \"true\"^^<http://www.w3.org/2001/XMLSchema#boolean> ; <https://spectacular-voyage.github.io/stagecraft/ontology/lastCommittedEvent> <https://spectacular-voyage.github.io/test-inn-ambush/committed-event/plan-b-001> . }",
               "expectedBoolean": true
             },
             {
               "id": "#ask-state-mutation",
               "type": "SparqlAskAssertion",
-              "query": "ASK { <https://spectacular-voyage.github.io/test-inn-ambush/state-mutation/door-barred-plan-b-001> a <https://stagecraft.dev/ns/stagecraft/StateMutation> ; <https://stagecraft.dev/ns/stagecraft/causedByCommittedEvent> <https://spectacular-voyage.github.io/test-inn-ambush/committed-event/plan-b-001> ; <https://stagecraft.dev/ns/stagecraft/affectsEntity> <https://spectacular-voyage.github.io/test-inn-ambush/target/door> . }",
+              "query": "ASK { <https://spectacular-voyage.github.io/test-inn-ambush/state-mutation/door-barred-plan-b-001> a <https://spectacular-voyage.github.io/stagecraft/ontology/StateMutation> ; <https://spectacular-voyage.github.io/stagecraft/ontology/causedByCommittedEvent> <https://spectacular-voyage.github.io/test-inn-ambush/committed-event/plan-b-001> ; <https://spectacular-voyage.github.io/stagecraft/ontology/affectsEntity> <https://spectacular-voyage.github.io/test-inn-ambush/target/door> . }",
               "expectedBoolean": true
             }
           ]
