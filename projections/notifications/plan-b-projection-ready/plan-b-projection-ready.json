@@ -1,0 +1,25 @@
+{
+  "specversion": "1.0",
+  "type": "stagecraft.projection.ready.v1",
+  "source": "stagecraft/experiments/inn-ambush",
+  "id": "inn-ambush-plan-b-001-projection-ready",
+  "time": "2026-06-29T13:35:01Z",
+  "subject": "https://spectacular-voyage.github.io/test-inn-ambush/scenario/inn-ambush",
+  "datacontenttype": "application/ld+json",
+  "data": {
+    "@context": "https://spectacular-voyage.github.io/test-inn-ambush/projections/contracts/inn-ambush-contract.context.jsonld",
+    "@type": "ProjectionNotification",
+    "signal": "projection-ready",
+    "authorityRecord": "https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/outcome-committed/plan-b-001",
+    "committedEvent": "https://spectacular-voyage.github.io/test-inn-ambush/committed-event/plan-b-001",
+    "commitCertificate": "https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/commit-certificate/plan-b-001",
+    "projectionState": "https://spectacular-voyage.github.io/test-inn-ambush/rdf-export/inn-ambush-plan-b/state/s0001",
+    "stateMutation": "https://spectacular-voyage.github.io/test-inn-ambush/state-mutation/door-barred-plan-b-001",
+    "projectionPath": "dependencies/github.com/spectacular-voyage/test-inn-ambush/world/states/inn-ambush-plan-b-state/inn-ambush-plan-b-state.ttl",
+    "resync": {
+      "mode": "read-projection-fixture",
+      "state": "https://spectacular-voyage.github.io/test-inn-ambush/rdf-export/inn-ambush-plan-b/state/s0001",
+      "path": "dependencies/github.com/spectacular-voyage/test-inn-ambush/world/states/inn-ambush-plan-b-state/inn-ambush-plan-b-state.ttl"
+    }
+  }
+}
