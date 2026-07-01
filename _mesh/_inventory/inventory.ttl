@@ -119,3 +119,67 @@
 <authority/operations/authority-operation-request-plan-b-commit/_knop/_inventory/inventory.ttl> a sflo:LocatedFile, sflo:RdfDocument .
 
 <authority/operations/authority-operation-request-plan-b-commit/authority-operation-request-plan-b-commit.json> a sflo:LocatedFile .
+
+<authority/journals/plan-b> sflo:hasResourcePage <authority/journals/plan-b/index.html> .
+
+<authority/journals/plan-b/_knop> sflo:hasResourcePage <authority/journals/plan-b/_knop/index.html> .
+
+<authority/journals/plan-b/index.html> a sflo:ResourcePage, sflo:LocatedFile .
+
+<authority/journals/plan-b/_knop/index.html> a sflo:ResourcePage, sflo:LocatedFile .
+
+<authority/operations/authority-operation-request-plan-b-commit> sflo:hasResourcePage <authority/operations/authority-operation-request-plan-b-commit/index.html> .
+
+<authority/operations/authority-operation-request-plan-b-commit/_knop> sflo:hasResourcePage <authority/operations/authority-operation-request-plan-b-commit/_knop/index.html> .
+
+<authority/operations/authority-operation-request-plan-b-commit/index.html> a sflo:ResourcePage, sflo:LocatedFile .
+
+<authority/operations/authority-operation-request-plan-b-commit/_knop/index.html> a sflo:ResourcePage, sflo:LocatedFile .
+
+<projections/contracts/inn-ambush-contract-context> sflo:hasResourcePage <projections/contracts/inn-ambush-contract-context/index.html> .
+
+<projections/contracts/inn-ambush-contract-context/_knop> sflo:hasResourcePage <projections/contracts/inn-ambush-contract-context/_knop/index.html> .
+
+<projections/contracts/inn-ambush-contract-context/index.html> a sflo:ResourcePage, sflo:LocatedFile .
+
+<projections/contracts/inn-ambush-contract-context/_knop/index.html> a sflo:ResourcePage, sflo:LocatedFile .
+
+<projections/contracts/inn-ambush-contract-shapes> sflo:hasResourcePage <projections/contracts/inn-ambush-contract-shapes/index.html> .
+
+<projections/contracts/inn-ambush-contract-shapes/_knop> sflo:hasResourcePage <projections/contracts/inn-ambush-contract-shapes/_knop/index.html> .
+
+<projections/contracts/inn-ambush-contract-shapes/index.html> a sflo:ResourcePage, sflo:LocatedFile .
+
+<projections/contracts/inn-ambush-contract-shapes/_knop/index.html> a sflo:ResourcePage, sflo:LocatedFile .
+
+<projections/notifications/plan-b-projection-ready> sflo:hasResourcePage <projections/notifications/plan-b-projection-ready/index.html> .
+
+<projections/notifications/plan-b-projection-ready/_knop> sflo:hasResourcePage <projections/notifications/plan-b-projection-ready/_knop/index.html> .
+
+<projections/notifications/plan-b-projection-ready/index.html> a sflo:ResourcePage, sflo:LocatedFile .
+
+<projections/notifications/plan-b-projection-ready/_knop/index.html> a sflo:ResourcePage, sflo:LocatedFile .
+
+<projections/requests/participant-projection-request-alice> sflo:hasResourcePage <projections/requests/participant-projection-request-alice/index.html> .
+
+<projections/requests/participant-projection-request-alice/_knop> sflo:hasResourcePage <projections/requests/participant-projection-request-alice/_knop/index.html> .
+
+<projections/requests/participant-projection-request-alice/index.html> a sflo:ResourcePage, sflo:LocatedFile .
+
+<projections/requests/participant-projection-request-alice/_knop/index.html> a sflo:ResourcePage, sflo:LocatedFile .
+
+<sessions/contributions/chat-contribution-plan-b-suggestion> sflo:hasResourcePage <sessions/contributions/chat-contribution-plan-b-suggestion/index.html> .
+
+<sessions/contributions/chat-contribution-plan-b-suggestion/_knop> sflo:hasResourcePage <sessions/contributions/chat-contribution-plan-b-suggestion/_knop/index.html> .
+
+<sessions/contributions/chat-contribution-plan-b-suggestion/index.html> a sflo:ResourcePage, sflo:LocatedFile .
+
+<sessions/contributions/chat-contribution-plan-b-suggestion/_knop/index.html> a sflo:ResourcePage, sflo:LocatedFile .
+
+<world/states/inn-ambush-plan-b-state> sflo:hasResourcePage <world/states/inn-ambush-plan-b-state/index.html> .
+
+<world/states/inn-ambush-plan-b-state/_knop> sflo:hasResourcePage <world/states/inn-ambush-plan-b-state/_knop/index.html> .
+
+<world/states/inn-ambush-plan-b-state/index.html> a sflo:ResourcePage, sflo:LocatedFile .
+
+<world/states/inn-ambush-plan-b-state/_knop/index.html> a sflo:ResourcePage, sflo:LocatedFile .

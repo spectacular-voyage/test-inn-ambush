@@ -1,23 +1,65 @@
 @base <https://spectacular-voyage.github.io/test-inn-ambush/> .
 @prefix sflo: <https://semantic-flow.github.io/sflo/ontology/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <sessions/contributions/chat-contribution-plan-b-suggestion/_knop> a sflo:Knop ;
   sflo:hasKnopMetadata <sessions/contributions/chat-contribution-plan-b-suggestion/_knop/_meta> ;
   sflo:hasKnopInventory <sessions/contributions/chat-contribution-plan-b-suggestion/_knop/_inventory> ;
   sflo:hasWorkingKnopInventoryFile <sessions/contributions/chat-contribution-plan-b-suggestion/_knop/_inventory/inventory.ttl> ;
-  sflo:hasPayloadArtifact <sessions/contributions/chat-contribution-plan-b-suggestion> .
+  sflo:hasPayloadArtifact <sessions/contributions/chat-contribution-plan-b-suggestion> ;
+  sflo:hasResourcePage <sessions/contributions/chat-contribution-plan-b-suggestion/_knop/index.html> .
 
 <sessions/contributions/chat-contribution-plan-b-suggestion> a sflo:PayloadArtifact, sflo:DigitalArtifact ;
-  sflo:hasWorkingLocatedFile <sessions/contributions/chat-contribution-plan-b-suggestion/chat-contribution-plan-b-suggestion.json> .
+  sflo:hasArtifactHistory <sessions/contributions/chat-contribution-plan-b-suggestion/_history001> ;
+  sflo:currentArtifactHistory <sessions/contributions/chat-contribution-plan-b-suggestion/_history001> ;
+  sflo:nextHistoryOrdinal "2"^^xsd:nonNegativeInteger ;
+  sflo:hasWorkingLocatedFile <sessions/contributions/chat-contribution-plan-b-suggestion/chat-contribution-plan-b-suggestion.json> ;
+  sflo:hasResourcePage <sessions/contributions/chat-contribution-plan-b-suggestion/index.html> .
+
+<sessions/contributions/chat-contribution-plan-b-suggestion/_history001> a sflo:ArtifactHistory ;
+  sflo:historyOrdinal "1"^^xsd:nonNegativeInteger ;
+  sflo:hasHistoricalState <sessions/contributions/chat-contribution-plan-b-suggestion/_history001/_s0001> ;
+  sflo:latestHistoricalState <sessions/contributions/chat-contribution-plan-b-suggestion/_history001/_s0001> ;
+  sflo:nextStateOrdinal "2"^^xsd:nonNegativeInteger ;
+  sflo:hasResourcePage <sessions/contributions/chat-contribution-plan-b-suggestion/_history001/index.html> .
+
+<sessions/contributions/chat-contribution-plan-b-suggestion/_history001/_s0001> a sflo:HistoricalState ;
+  sflo:stateOrdinal "1"^^xsd:nonNegativeInteger ;
+  sflo:hasManifestation <sessions/contributions/chat-contribution-plan-b-suggestion/_history001/_s0001/json> ;
+  sflo:locatedFileForState <sessions/contributions/chat-contribution-plan-b-suggestion/_history001/_s0001/json/chat-contribution-plan-b-suggestion.json> ;
+  sflo:hasResourcePage <sessions/contributions/chat-contribution-plan-b-suggestion/_history001/_s0001/index.html> .
+
+<sessions/contributions/chat-contribution-plan-b-suggestion/_history001/_s0001/json> a sflo:ArtifactManifestation ;
+  sflo:locatedFileForManifestation <sessions/contributions/chat-contribution-plan-b-suggestion/_history001/_s0001/json/chat-contribution-plan-b-suggestion.json> ;
+  sflo:hasResourcePage <sessions/contributions/chat-contribution-plan-b-suggestion/_history001/_s0001/json/index.html> .
 
 <sessions/contributions/chat-contribution-plan-b-suggestion/_knop/_meta> a sflo:KnopMetadata, sflo:DigitalArtifact, sflo:RdfDocument ;
-  sflo:hasWorkingLocatedFile <sessions/contributions/chat-contribution-plan-b-suggestion/_knop/_meta/meta.ttl> .
+  sflo:hasWorkingLocatedFile <sessions/contributions/chat-contribution-plan-b-suggestion/_knop/_meta/meta.ttl> ;
+  sflo:hasResourcePage <sessions/contributions/chat-contribution-plan-b-suggestion/_knop/_meta/index.html> .
 
 <sessions/contributions/chat-contribution-plan-b-suggestion/_knop/_inventory> a sflo:KnopInventory, sflo:DigitalArtifact, sflo:RdfDocument ;
-  sflo:hasWorkingLocatedFile <sessions/contributions/chat-contribution-plan-b-suggestion/_knop/_inventory/inventory.ttl> .
+  sflo:hasWorkingLocatedFile <sessions/contributions/chat-contribution-plan-b-suggestion/_knop/_inventory/inventory.ttl> ;
+  sflo:hasResourcePage <sessions/contributions/chat-contribution-plan-b-suggestion/_knop/_inventory/index.html> .
 
 <sessions/contributions/chat-contribution-plan-b-suggestion/_knop/_meta/meta.ttl> a sflo:LocatedFile, sflo:RdfDocument .
 
 <sessions/contributions/chat-contribution-plan-b-suggestion/_knop/_inventory/inventory.ttl> a sflo:LocatedFile, sflo:RdfDocument .
 
 <sessions/contributions/chat-contribution-plan-b-suggestion/chat-contribution-plan-b-suggestion.json> a sflo:LocatedFile .
+
+<sessions/contributions/chat-contribution-plan-b-suggestion/_history001/_s0001/json/chat-contribution-plan-b-suggestion.json> a sflo:LocatedFile .
+
+<sessions/contributions/chat-contribution-plan-b-suggestion/index.html> a sflo:ResourcePage, sflo:LocatedFile .
+
+<sessions/contributions/chat-contribution-plan-b-suggestion/_history001/index.html> a sflo:ResourcePage, sflo:LocatedFile .
+
+<sessions/contributions/chat-contribution-plan-b-suggestion/_history001/_s0001/index.html> a sflo:ResourcePage, sflo:LocatedFile .
+
+<sessions/contributions/chat-contribution-plan-b-suggestion/_history001/_s0001/json/index.html> a sflo:ResourcePage, sflo:LocatedFile .
+
+<sessions/contributions/chat-contribution-plan-b-suggestion/_knop/index.html> a sflo:ResourcePage, sflo:LocatedFile .
+
+<sessions/contributions/chat-contribution-plan-b-suggestion/_knop/_meta/index.html> a sflo:ResourcePage, sflo:LocatedFile .
+
+<sessions/contributions/chat-contribution-plan-b-suggestion/_knop/_inventory/index.html> a sflo:ResourcePage, sflo:LocatedFile .
+
