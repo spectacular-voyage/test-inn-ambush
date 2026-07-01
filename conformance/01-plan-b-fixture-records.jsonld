@@ -132,13 +132,13 @@
             {
               "id": "#ask-projection-notification-shape",
               "type": "SparqlAskAssertion",
-              "query": "ASK { <https://stagecraft.dev/ns/provisional/stagecraft-contract-shape#ProjectionNotificationShape> a <http://www.w3.org/ns/shacl#NodeShape> ; <http://www.w3.org/ns/shacl#targetClass> <https://spectacular-voyage.github.io/stagecraft/ontology/ProjectionNotification> . }",
+              "query": "ASK { <https://spectacular-voyage.github.io/stagecraft/shacl/ProjectionNotificationShape> a <http://www.w3.org/ns/shacl#NodeShape> ; <http://www.w3.org/ns/shacl#targetClass> <https://spectacular-voyage.github.io/stagecraft/ontology/ProjectionNotification> . }",
               "expectedBoolean": true
             },
             {
               "id": "#ask-authority-operation-shape",
               "type": "SparqlAskAssertion",
-              "query": "ASK { <https://stagecraft.dev/ns/provisional/stagecraft-contract-shape#AuthorityOperationShape> a <http://www.w3.org/ns/shacl#NodeShape> ; <http://www.w3.org/ns/shacl#targetClass> <https://spectacular-voyage.github.io/stagecraft/ontology/AuthorityOperation> . }",
+              "query": "ASK { <https://spectacular-voyage.github.io/stagecraft/shacl/AuthorityOperationShape> a <http://www.w3.org/ns/shacl#NodeShape> ; <http://www.w3.org/ns/shacl#targetClass> <https://spectacular-voyage.github.io/stagecraft/ontology/AuthorityOperation> . }",
               "expectedBoolean": true
             }
           ]
