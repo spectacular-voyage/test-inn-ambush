@@ -1,0 +1,71 @@
+{
+  "@context": {
+    "@vocab": "https://spectacular-voyage.github.io/accord/ontology/",
+    "dcterms": "http://purl.org/dc/terms/",
+    "id": "@id",
+    "type": "@type",
+    "lane": {
+      "@type": "@id"
+    },
+    "locatorKind": {
+      "@type": "@vocab"
+    }
+  },
+  "type": "ScenarioIndex",
+  "id": "urn:accord:stagecraft:test-inn-ambush:scenario-index",
+  "dcterms:title": "Inn Ambush fixture ladder",
+  "defaultFixtureRepo": "github.com/spectacular-voyage/test-inn-ambush",
+  "branchPrefix": "a.",
+  "hasStateLane": [
+    {
+      "id": "#fixture-lane",
+      "type": "StateLane",
+      "laneKey": "fixture",
+      "branchPrefix": "a."
+    }
+  ],
+  "hasStep": [
+    {
+      "id": "#01-plan-b-fixture-records",
+      "type": "ScenarioStep",
+      "manifestPath": "01-plan-b-fixture-records.jsonld",
+      "hasLaneBinding": [
+        {
+          "type": "LaneStateBinding",
+          "lane": "#fixture-lane",
+          "fromLaneState": {
+            "type": "StateLocator",
+            "locatorKind": "gitRefState",
+            "ref": "a.00-empty-mesh"
+          },
+          "toLaneState": {
+            "type": "StateLocator",
+            "locatorKind": "gitRefState",
+            "ref": "a.01-plan-b-fixture-records"
+          }
+        }
+      ]
+    },
+    {
+      "id": "#02-plan-b-woven",
+      "type": "ScenarioStep",
+      "manifestPath": "02-plan-b-woven.jsonld",
+      "hasLaneBinding": [
+        {
+          "type": "LaneStateBinding",
+          "lane": "#fixture-lane",
+          "fromLaneState": {
+            "type": "StateLocator",
+            "locatorKind": "gitRefState",
+            "ref": "a.01-plan-b-fixture-records"
+          },
+          "toLaneState": {
+            "type": "StateLocator",
+            "locatorKind": "gitRefState",
+            "ref": "a.02-plan-b-woven"
+          }
+        }
+      ]
+    }
+  ]
+}
