@@ -1,9 +1,9 @@
 @prefix sc: <https://spectacular-voyage.github.io/stagecraft/ontology/> .
-@prefix scshape: <https://stagecraft.dev/ns/provisional/stagecraft-contract-shape#> .
+@prefix sc-sh: <https://spectacular-voyage.github.io/stagecraft/shacl/> .
 @prefix sh: <http://www.w3.org/ns/shacl#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-scshape:ProjectionNotificationShape
+sc-sh:ProjectionNotificationShape
   a sh:NodeShape ;
   sh:targetClass sc:ProjectionNotification ;
   sh:property [
@@ -50,7 +50,7 @@ scshape:ProjectionNotificationShape
   ] ;
   sh:property [
     sh:path sc:resync ;
-    sh:node scshape:ResyncShape ;
+    sh:node sc-sh:ResyncShape ;
     sh:minCount 1 ;
     sh:maxCount 1 ;
   ] ;
@@ -65,7 +65,7 @@ scshape:ProjectionNotificationShape
     sh:message "ProjectionNotification must point to authority records without embedding accepted state provenance fields." ;
   ] .
 
-scshape:ProjectionRequestShape
+sc-sh:ProjectionRequestShape
   a sh:NodeShape ;
   sh:targetClass sc:ProjectionRequest ;
   sh:property [
@@ -106,18 +106,18 @@ scshape:ProjectionRequestShape
   ] ;
   sh:property [
     sh:path sc:resourcePointers ;
-    sh:node scshape:ResourcePointersShape ;
+    sh:node sc-sh:ResourcePointersShape ;
     sh:minCount 1 ;
     sh:maxCount 1 ;
   ] ;
   sh:property [
     sh:path sc:resync ;
-    sh:node scshape:ResyncShape ;
+    sh:node sc-sh:ResyncShape ;
     sh:minCount 1 ;
     sh:maxCount 1 ;
   ] .
 
-scshape:ChatContributionShape
+sc-sh:ChatContributionShape
   a sh:NodeShape ;
   sh:targetClass sc:ChatContribution ;
   sh:property [
@@ -146,13 +146,13 @@ scshape:ChatContributionShape
   ] ;
   sh:property [
     sh:path sc:speakingContext ;
-    sh:node scshape:SpeakingContextShape ;
+    sh:node sc-sh:SpeakingContextShape ;
     sh:minCount 1 ;
     sh:maxCount 1 ;
   ] ;
   sh:property [
     sh:path sc:sourceProjection ;
-    sh:node scshape:SourceProjectionShape ;
+    sh:node sc-sh:SourceProjectionShape ;
     sh:minCount 1 ;
     sh:maxCount 1 ;
   ] ;
@@ -217,7 +217,7 @@ scshape:ChatContributionShape
     sh:message "ChatContribution must not carry accepted state provenance facts." ;
   ] .
 
-scshape:AuthorityOperationShape
+sc-sh:AuthorityOperationShape
   a sh:NodeShape ;
   sh:targetClass sc:AuthorityOperation ;
   sh:property [
@@ -259,13 +259,13 @@ scshape:AuthorityOperationShape
   ] ;
   sh:property [
     sh:path sc:inputs ;
-    sh:node scshape:AuthorityInputsShape ;
+    sh:node sc-sh:AuthorityInputsShape ;
     sh:minCount 1 ;
     sh:maxCount 1 ;
   ] ;
   sh:property [
     sh:path sc:wouldProduce ;
-    sh:node scshape:AuthorityWouldProduceShape ;
+    sh:node sc-sh:AuthorityWouldProduceShape ;
     sh:minCount 1 ;
     sh:maxCount 1 ;
   ] ;
@@ -280,7 +280,7 @@ scshape:AuthorityOperationShape
     sh:message "AuthorityOperation request must not embed accepted state provenance facts." ;
   ] .
 
-scshape:SpeakingContextShape
+sc-sh:SpeakingContextShape
   a sh:NodeShape ;
   sh:property [
     sh:path sc:speakingContextType ;
@@ -294,7 +294,7 @@ scshape:SpeakingContextShape
     sh:maxCount 1 ;
   ] .
 
-scshape:SourceProjectionShape
+sc-sh:SourceProjectionShape
   a sh:NodeShape ;
   sh:property [
     sh:path sc:projectionState ;
@@ -309,7 +309,7 @@ scshape:SourceProjectionShape
     sh:maxCount 1 ;
   ] .
 
-scshape:ResourcePointersShape
+sc-sh:ResourcePointersShape
   a sh:NodeShape ;
   sh:property [
     sh:path sc:authorityRecord ;
@@ -342,7 +342,7 @@ scshape:ResourcePointersShape
     sh:maxCount 1 ;
   ] .
 
-scshape:ResyncShape
+sc-sh:ResyncShape
   a sh:NodeShape ;
   sh:property [
     sh:path sc:resyncMode ;
@@ -363,7 +363,7 @@ scshape:ResyncShape
     sh:maxCount 1 ;
   ] .
 
-scshape:AuthorityInputsShape
+sc-sh:AuthorityInputsShape
   a sh:NodeShape ;
   sh:property [
     sh:path sc:acceptedIntent ;
@@ -390,7 +390,7 @@ scshape:AuthorityInputsShape
     sh:maxCount 1 ;
   ] .
 
-scshape:AuthorityWouldProduceShape
+sc-sh:AuthorityWouldProduceShape
   a sh:NodeShape ;
   sh:property [
     sh:path sc:authorityRecord ;
