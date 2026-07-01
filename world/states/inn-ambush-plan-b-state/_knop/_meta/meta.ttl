@@ -1,6 +1,0 @@
-@base <https://spectacular-voyage.github.io/test-inn-ambush/> .
-@prefix sflo: <https://semantic-flow.github.io/sflo/ontology/> .
-
-<world/states/inn-ambush-plan-b-state/_knop> a sflo:Knop ;
-  sflo:designatorPath "world/states/inn-ambush-plan-b-state" ;
-  sflo:hasWorkingKnopInventoryFile <world/states/inn-ambush-plan-b-state/_knop/_inventory/inventory.ttl> .

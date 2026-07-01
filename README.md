@@ -23,17 +23,6 @@ projections/
 audit/
 ```
 
-The current first bundle keeps the original Plan B fixture artifacts intact:
-
-- `authority/journals/plan-b/plan-b.ttl`
-- `world/states/inn-ambush-plan-b-state/inn-ambush-plan-b-state.ttl`
-- `projections/contracts/inn-ambush-contract.context.jsonld`
-- `projections/contracts/inn-ambush-contract.shapes.ttl`
-- `projections/notifications/plan-b-projection-ready/plan-b-projection-ready.json`
-- `projections/requests/participant-projection-request-alice/participant-projection-request-alice.json`
-- `sessions/contributions/chat-contribution-plan-b-suggestion/chat-contribution-plan-b-suggestion.json`
-- `authority/operations/authority-operation-request-plan-b-commit/authority-operation-request-plan-b-commit.json`
-
-`events/` and `audit/` are present as top-level lanes, but the first Plan B bundle does not split committed events or validation evidence into standalone files yet.
+This rung is the empty mesh control state. It carries the mesh base, control metadata, and tracked lane placeholder docs, but no Plan B payload records yet.
 
 Do not treat this repository as the Stagecraft runtime event store. It is a fixture/test-data mesh for stable identifiers, snapshots, audit evidence, validation evidence, and publication experiments.
