@@ -1,21 +1,10 @@
 {
   "@context": {
     "@version": 1.1,
+    "@vocab": "https://spectacular-voyage.github.io/stagecraft/ontology/",
     "sc": "https://spectacular-voyage.github.io/stagecraft/ontology/",
     "sflo": "https://semantic-flow.github.io/sflo/ontology/",
     "xsd": "http://www.w3.org/2001/XMLSchema#",
-    "OutcomeCommitted": "sc:OutcomeCommitted",
-    "CommittedEvent": "sc:CommittedEvent",
-    "CommitCertificate": "sc:CommitCertificate",
-    "StateMutation": "sc:StateMutation",
-    "ProjectionState": "sc:ProjectionState",
-    "ParticipantProjection": "sc:ParticipantProjection",
-    "SourceProjection": "sc:SourceProjection",
-    "ProjectionNotification": "sc:ProjectionNotification",
-    "ProjectionRequest": "sc:ProjectionRequest",
-    "ChatContribution": "sc:ChatContribution",
-    "AuthorityOperation": "sc:AuthorityOperation",
-    "HistoricalState": "sflo:HistoricalState",
     "type": "sc:envelopeType",
     "id": "sc:envelopeId",
     "specversion": "sc:cloudEventSpecVersion",
@@ -29,40 +18,28 @@
       "@type": "@id"
     },
     "datacontenttype": "sc:dataContentType",
-    "data": "sc:data",
-    "signal": "sc:signal",
     "session": {
-      "@id": "sc:session",
       "@type": "@id"
     },
     "conversation": {
-      "@id": "sc:conversation",
       "@type": "@id"
     },
     "submittedByParticipant": {
-      "@id": "sc:submittedByParticipant",
       "@type": "@id"
     },
     "requestedByParticipant": {
-      "@id": "sc:requestedByParticipant",
       "@type": "@id"
     },
     "projectionId": {
-      "@id": "sc:projectionId",
       "@type": "@id"
     },
-    "projectionAudience": "sc:projectionAudience",
-    "visibilityScope": "sc:visibilityScope",
     "historyScope": {
-      "@id": "sc:historyScope",
       "@type": "@id"
     },
     "branchScope": {
-      "@id": "sc:branchScope",
       "@type": "@id"
     },
     "temporalScope": {
-      "@id": "sc:temporalScope",
       "@type": "@id"
     },
     "speakingContext": {
@@ -70,98 +47,45 @@
       "@context": {
         "type": "sc:speakingContextType",
         "speaker": {
-          "@id": "sc:speaker",
           "@type": "@id"
         },
         "suggestedTo": {
-          "@id": "sc:suggestedTo",
           "@type": "@id"
-        },
-        "authorityScope": "sc:authorityScope"
+        }
       }
     },
-    "contributionKind": "sc:contributionKind",
-    "body": "sc:body",
-    "modality": "sc:modality",
     "barred": {
-      "@id": "sc:barred",
       "@type": "xsd:boolean"
     },
     "lastAuthorityRecord": {
-      "@id": "sc:lastAuthorityRecord",
-      "@type": "@id"
-    },
-    "producedResources": "sc:producedResources",
-    "sourceProjection": {
-      "@id": "sc:sourceProjection",
-      "@context": {
-        "projectionState": {
-          "@id": "sc:projectionState",
-          "@type": "@id"
-        },
-        "participantProjection": {
-          "@id": "sc:participantProjection",
-          "@type": "@id"
-        }
-      }
-    },
-    "relatesTo": {
-      "@id": "sc:relatesTo",
-      "@type": "@id"
-    },
-    "createdAt": {
-      "@id": "sc:createdAt",
-      "@type": "xsd:dateTime"
-    },
-    "requestedAt": {
-      "@id": "sc:requestedAt",
-      "@type": "xsd:dateTime"
-    },
-    "authorityRecord": {
-      "@id": "sc:authorityRecord",
-      "@type": "@id"
-    },
-    "committedEvent": {
-      "@id": "sc:committedEvent",
-      "@type": "@id"
-    },
-    "commitCertificate": {
-      "@id": "sc:commitCertificate",
       "@type": "@id"
     },
     "projectionState": {
-      "@id": "sc:projectionState",
+      "@type": "@id"
+    },
+    "participantProjection": {
+      "@type": "@id"
+    },
+    "relatesTo": {
+      "@type": "@id"
+    },
+    "createdAt": {
+      "@type": "xsd:dateTime"
+    },
+    "requestedAt": {
+      "@type": "xsd:dateTime"
+    },
+    "authorityRecord": {
+      "@type": "@id"
+    },
+    "committedEvent": {
+      "@type": "@id"
+    },
+    "commitCertificate": {
       "@type": "@id"
     },
     "stateMutation": {
-      "@id": "sc:stateMutation",
       "@type": "@id"
-    },
-    "projectionPath": "sc:projectionPath",
-    "resourcePointers": {
-      "@id": "sc:resourcePointers",
-      "@context": {
-        "authorityRecord": {
-          "@id": "sc:authorityRecord",
-          "@type": "@id"
-        },
-        "committedEvent": {
-          "@id": "sc:committedEvent",
-          "@type": "@id"
-        },
-        "commitCertificate": {
-          "@id": "sc:commitCertificate",
-          "@type": "@id"
-        },
-        "projectionState": {
-          "@id": "sc:projectionState",
-          "@type": "@id"
-        },
-        "stateMutation": {
-          "@id": "sc:stateMutation",
-          "@type": "@id"
-        }
-      }
     },
     "resync": {
       "@id": "sc:resync",
@@ -174,52 +98,20 @@
         "path": "sc:resyncPath"
       }
     },
-    "operation": "sc:operation",
     "execute": {
-      "@id": "sc:execute",
       "@type": "xsd:boolean"
     },
-    "inputs": {
-      "@id": "sc:inputs",
-      "@context": {
-        "acceptedIntent": {
-          "@id": "sc:acceptedIntent",
-          "@type": "@id"
-        },
-        "proposedOutcome": {
-          "@id": "sc:proposedOutcome",
-          "@type": "@id"
-        },
-        "targetEntity": {
-          "@id": "sc:targetEntity",
-          "@type": "@id"
-        },
-        "consequence": {
-          "@id": "sc:consequence",
-          "@type": "@id"
-        }
-      }
+    "acceptedIntent": {
+      "@type": "@id"
     },
-    "wouldProduce": {
-      "@id": "sc:wouldProduce",
-      "@context": {
-        "authorityRecord": {
-          "@id": "sc:authorityRecord",
-          "@type": "@id"
-        },
-        "committedEvent": {
-          "@id": "sc:committedEvent",
-          "@type": "@id"
-        },
-        "commitCertificate": {
-          "@id": "sc:commitCertificate",
-          "@type": "@id"
-        },
-        "stateMutation": {
-          "@id": "sc:stateMutation",
-          "@type": "@id"
-        }
-      }
+    "proposedOutcome": {
+      "@type": "@id"
+    },
+    "targetEntity": {
+      "@type": "@id"
+    },
+    "consequence": {
+      "@type": "@id"
     }
   }
 }
