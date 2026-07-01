@@ -1,23 +1,65 @@
 @base <https://spectacular-voyage.github.io/test-inn-ambush/> .
 @prefix sflo: <https://semantic-flow.github.io/sflo/ontology/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <authority/operations/authority-operation-request-plan-b-commit/_knop> a sflo:Knop ;
   sflo:hasKnopMetadata <authority/operations/authority-operation-request-plan-b-commit/_knop/_meta> ;
   sflo:hasKnopInventory <authority/operations/authority-operation-request-plan-b-commit/_knop/_inventory> ;
   sflo:hasWorkingKnopInventoryFile <authority/operations/authority-operation-request-plan-b-commit/_knop/_inventory/inventory.ttl> ;
-  sflo:hasPayloadArtifact <authority/operations/authority-operation-request-plan-b-commit> .
+  sflo:hasPayloadArtifact <authority/operations/authority-operation-request-plan-b-commit> ;
+  sflo:hasResourcePage <authority/operations/authority-operation-request-plan-b-commit/_knop/index.html> .
 
 <authority/operations/authority-operation-request-plan-b-commit> a sflo:PayloadArtifact, sflo:DigitalArtifact ;
-  sflo:hasWorkingLocatedFile <authority/operations/authority-operation-request-plan-b-commit/authority-operation-request-plan-b-commit.json> .
+  sflo:hasArtifactHistory <authority/operations/authority-operation-request-plan-b-commit/_history001> ;
+  sflo:currentArtifactHistory <authority/operations/authority-operation-request-plan-b-commit/_history001> ;
+  sflo:nextHistoryOrdinal "2"^^xsd:nonNegativeInteger ;
+  sflo:hasWorkingLocatedFile <authority/operations/authority-operation-request-plan-b-commit/authority-operation-request-plan-b-commit.json> ;
+  sflo:hasResourcePage <authority/operations/authority-operation-request-plan-b-commit/index.html> .
+
+<authority/operations/authority-operation-request-plan-b-commit/_history001> a sflo:ArtifactHistory ;
+  sflo:historyOrdinal "1"^^xsd:nonNegativeInteger ;
+  sflo:hasHistoricalState <authority/operations/authority-operation-request-plan-b-commit/_history001/_s0001> ;
+  sflo:latestHistoricalState <authority/operations/authority-operation-request-plan-b-commit/_history001/_s0001> ;
+  sflo:nextStateOrdinal "2"^^xsd:nonNegativeInteger ;
+  sflo:hasResourcePage <authority/operations/authority-operation-request-plan-b-commit/_history001/index.html> .
+
+<authority/operations/authority-operation-request-plan-b-commit/_history001/_s0001> a sflo:HistoricalState ;
+  sflo:stateOrdinal "1"^^xsd:nonNegativeInteger ;
+  sflo:hasManifestation <authority/operations/authority-operation-request-plan-b-commit/_history001/_s0001/json> ;
+  sflo:locatedFileForState <authority/operations/authority-operation-request-plan-b-commit/_history001/_s0001/json/authority-operation-request-plan-b-commit.json> ;
+  sflo:hasResourcePage <authority/operations/authority-operation-request-plan-b-commit/_history001/_s0001/index.html> .
+
+<authority/operations/authority-operation-request-plan-b-commit/_history001/_s0001/json> a sflo:ArtifactManifestation ;
+  sflo:locatedFileForManifestation <authority/operations/authority-operation-request-plan-b-commit/_history001/_s0001/json/authority-operation-request-plan-b-commit.json> ;
+  sflo:hasResourcePage <authority/operations/authority-operation-request-plan-b-commit/_history001/_s0001/json/index.html> .
 
 <authority/operations/authority-operation-request-plan-b-commit/_knop/_meta> a sflo:KnopMetadata, sflo:DigitalArtifact, sflo:RdfDocument ;
-  sflo:hasWorkingLocatedFile <authority/operations/authority-operation-request-plan-b-commit/_knop/_meta/meta.ttl> .
+  sflo:hasWorkingLocatedFile <authority/operations/authority-operation-request-plan-b-commit/_knop/_meta/meta.ttl> ;
+  sflo:hasResourcePage <authority/operations/authority-operation-request-plan-b-commit/_knop/_meta/index.html> .
 
 <authority/operations/authority-operation-request-plan-b-commit/_knop/_inventory> a sflo:KnopInventory, sflo:DigitalArtifact, sflo:RdfDocument ;
-  sflo:hasWorkingLocatedFile <authority/operations/authority-operation-request-plan-b-commit/_knop/_inventory/inventory.ttl> .
+  sflo:hasWorkingLocatedFile <authority/operations/authority-operation-request-plan-b-commit/_knop/_inventory/inventory.ttl> ;
+  sflo:hasResourcePage <authority/operations/authority-operation-request-plan-b-commit/_knop/_inventory/index.html> .
 
 <authority/operations/authority-operation-request-plan-b-commit/_knop/_meta/meta.ttl> a sflo:LocatedFile, sflo:RdfDocument .
 
 <authority/operations/authority-operation-request-plan-b-commit/_knop/_inventory/inventory.ttl> a sflo:LocatedFile, sflo:RdfDocument .
 
 <authority/operations/authority-operation-request-plan-b-commit/authority-operation-request-plan-b-commit.json> a sflo:LocatedFile .
+
+<authority/operations/authority-operation-request-plan-b-commit/_history001/_s0001/json/authority-operation-request-plan-b-commit.json> a sflo:LocatedFile .
+
+<authority/operations/authority-operation-request-plan-b-commit/index.html> a sflo:ResourcePage, sflo:LocatedFile .
+
+<authority/operations/authority-operation-request-plan-b-commit/_history001/index.html> a sflo:ResourcePage, sflo:LocatedFile .
+
+<authority/operations/authority-operation-request-plan-b-commit/_history001/_s0001/index.html> a sflo:ResourcePage, sflo:LocatedFile .
+
+<authority/operations/authority-operation-request-plan-b-commit/_history001/_s0001/json/index.html> a sflo:ResourcePage, sflo:LocatedFile .
+
+<authority/operations/authority-operation-request-plan-b-commit/_knop/index.html> a sflo:ResourcePage, sflo:LocatedFile .
+
+<authority/operations/authority-operation-request-plan-b-commit/_knop/_meta/index.html> a sflo:ResourcePage, sflo:LocatedFile .
+
+<authority/operations/authority-operation-request-plan-b-commit/_knop/_inventory/index.html> a sflo:ResourcePage, sflo:LocatedFile .
+
