@@ -1,6 +1,6 @@
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
-@prefix sc: <https://stagecraft.dev/ns/stagecraft/> .
+@prefix sc: <https://spectacular-voyage.github.io/stagecraft/ontology/> .
 @prefix schema: <https://schema.org/> .
 @prefix sflo: <https://semantic-flow.github.io/sflo/ontology/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
