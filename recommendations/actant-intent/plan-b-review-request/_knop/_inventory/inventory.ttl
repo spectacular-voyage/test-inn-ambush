@@ -19,8 +19,9 @@
 <recommendations/actant-intent/plan-b-review-request/_history001> a sflo:ArtifactHistory ;
   sflo:historyOrdinal "1"^^xsd:nonNegativeInteger ;
   sflo:hasHistoricalState <recommendations/actant-intent/plan-b-review-request/_history001/_s0001> ;
-  sflo:latestHistoricalState <recommendations/actant-intent/plan-b-review-request/_history001/_s0001> ;
-  sflo:nextStateOrdinal "2"^^xsd:nonNegativeInteger ;
+  sflo:hasHistoricalState <recommendations/actant-intent/plan-b-review-request/_history001/_s0002> ;
+  sflo:latestHistoricalState <recommendations/actant-intent/plan-b-review-request/_history001/_s0002> ;
+  sflo:nextStateOrdinal "3"^^xsd:nonNegativeInteger ;
   sflo:hasResourcePage <recommendations/actant-intent/plan-b-review-request/_history001/index.html> .
 
 <recommendations/actant-intent/plan-b-review-request/_history001/_s0001> a sflo:HistoricalState ;
@@ -32,6 +33,17 @@
 <recommendations/actant-intent/plan-b-review-request/_history001/_s0001/json> a sflo:ArtifactManifestation ;
   sflo:locatedFileForManifestation <recommendations/actant-intent/plan-b-review-request/_history001/_s0001/json/actant-intent-recommendation-request-plan-b-review.json> ;
   sflo:hasResourcePage <recommendations/actant-intent/plan-b-review-request/_history001/_s0001/json/index.html> .
+
+<recommendations/actant-intent/plan-b-review-request/_history001/_s0002> a sflo:HistoricalState ;
+  sflo:stateOrdinal "2"^^xsd:nonNegativeInteger ;
+  sflo:previousHistoricalState <recommendations/actant-intent/plan-b-review-request/_history001/_s0001> ;
+  sflo:hasManifestation <recommendations/actant-intent/plan-b-review-request/_history001/_s0002/json> ;
+  sflo:locatedFileForState <recommendations/actant-intent/plan-b-review-request/_history001/_s0002/json/actant-intent-recommendation-request-plan-b-review.json> ;
+  sflo:hasResourcePage <recommendations/actant-intent/plan-b-review-request/_history001/_s0002/index.html> .
+
+<recommendations/actant-intent/plan-b-review-request/_history001/_s0002/json> a sflo:ArtifactManifestation ;
+  sflo:locatedFileForManifestation <recommendations/actant-intent/plan-b-review-request/_history001/_s0002/json/actant-intent-recommendation-request-plan-b-review.json> ;
+  sflo:hasResourcePage <recommendations/actant-intent/plan-b-review-request/_history001/_s0002/json/index.html> .
 
 <recommendations/actant-intent/plan-b-review-request/_knop/_meta> a sflo:KnopMetadata, sflo:DigitalArtifact, sflo:RdfDocument ;
   sflo:hasWorkingLocatedFile <recommendations/actant-intent/plan-b-review-request/_knop/_meta/meta.ttl> ;
@@ -49,6 +61,8 @@
 
 <recommendations/actant-intent/plan-b-review-request/_history001/_s0001/json/actant-intent-recommendation-request-plan-b-review.json> a sflo:LocatedFile .
 
+<recommendations/actant-intent/plan-b-review-request/_history001/_s0002/json/actant-intent-recommendation-request-plan-b-review.json> a sflo:LocatedFile .
+
 <recommendations/actant-intent/plan-b-review-request/index.html> a sflo:ResourcePage, sflo:LocatedFile .
 
 <recommendations/actant-intent/plan-b-review-request/_history001/index.html> a sflo:ResourcePage, sflo:LocatedFile .
@@ -57,9 +71,12 @@
 
 <recommendations/actant-intent/plan-b-review-request/_history001/_s0001/json/index.html> a sflo:ResourcePage, sflo:LocatedFile .
 
+<recommendations/actant-intent/plan-b-review-request/_history001/_s0002/index.html> a sflo:ResourcePage, sflo:LocatedFile .
+
+<recommendations/actant-intent/plan-b-review-request/_history001/_s0002/json/index.html> a sflo:ResourcePage, sflo:LocatedFile .
+
 <recommendations/actant-intent/plan-b-review-request/_knop/index.html> a sflo:ResourcePage, sflo:LocatedFile .
 
 <recommendations/actant-intent/plan-b-review-request/_knop/_meta/index.html> a sflo:ResourcePage, sflo:LocatedFile .
 
 <recommendations/actant-intent/plan-b-review-request/_knop/_inventory/index.html> a sflo:ResourcePage, sflo:LocatedFile .
-
