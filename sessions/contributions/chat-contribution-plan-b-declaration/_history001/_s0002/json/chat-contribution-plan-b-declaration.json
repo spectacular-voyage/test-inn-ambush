@@ -1,0 +1,27 @@
+{
+  "@context": "https://spectacular-voyage.github.io/test-inn-ambush/projections/contracts/inn-ambush-contract.context.jsonld",
+  "@type": "ChatContribution",
+  "type": "stagecraft.chat.contribution.v1",
+  "id": "chatcontrib-plan-b-declaration-001",
+  "session": "https://spectacular-voyage.github.io/test-inn-ambush/session/inn-ambush-001",
+  "conversation": "https://spectacular-voyage.github.io/test-inn-ambush/conversation/table",
+  "submittedByParticipant": "https://spectacular-voyage.github.io/test-inn-ambush/participant/alice",
+  "speakingContext": {
+    "type": "VoiceForActant",
+    "speaker": "https://spectacular-voyage.github.io/test-inn-ambush/participant/alice",
+    "actant": "https://spectacular-voyage.github.io/test-inn-ambush/actant/elara"
+  },
+  "contributionKind": "declaredIntent",
+  "body": "Yeah, Plan B. Elara bars the door with Ashfang so Nera can get clear.",
+  "modality": "text",
+  "visibilityScope": "table",
+  "sourceProjection": {
+    "observedProjectionState": "https://spectacular-voyage.github.io/test-inn-ambush/rdf-export/inn-ambush-plan-b/state/s0001",
+    "participantProjection": "https://spectacular-voyage.github.io/test-inn-ambush/projection/alice/inn-ambush-plan-b"
+  },
+  "relatesTo": [
+    "https://spectacular-voyage.github.io/test-inn-ambush/suggestion/plan-b",
+    "https://spectacular-voyage.github.io/test-inn-ambush/intent/elara-plan-b"
+  ],
+  "createdAt": "2026-06-29T13:31:00Z"
+}

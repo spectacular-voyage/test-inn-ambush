@@ -19,8 +19,9 @@
 <sessions/contributions/chat-contribution-plan-b-declaration/_history001> a sflo:ArtifactHistory ;
   sflo:historyOrdinal "1"^^xsd:nonNegativeInteger ;
   sflo:hasHistoricalState <sessions/contributions/chat-contribution-plan-b-declaration/_history001/_s0001> ;
-  sflo:latestHistoricalState <sessions/contributions/chat-contribution-plan-b-declaration/_history001/_s0001> ;
-  sflo:nextStateOrdinal "2"^^xsd:nonNegativeInteger ;
+  sflo:hasHistoricalState <sessions/contributions/chat-contribution-plan-b-declaration/_history001/_s0002> ;
+  sflo:latestHistoricalState <sessions/contributions/chat-contribution-plan-b-declaration/_history001/_s0002> ;
+  sflo:nextStateOrdinal "3"^^xsd:nonNegativeInteger ;
   sflo:hasResourcePage <sessions/contributions/chat-contribution-plan-b-declaration/_history001/index.html> .
 
 <sessions/contributions/chat-contribution-plan-b-declaration/_history001/_s0001> a sflo:HistoricalState ;
@@ -32,6 +33,17 @@
 <sessions/contributions/chat-contribution-plan-b-declaration/_history001/_s0001/json> a sflo:ArtifactManifestation ;
   sflo:locatedFileForManifestation <sessions/contributions/chat-contribution-plan-b-declaration/_history001/_s0001/json/chat-contribution-plan-b-declaration.json> ;
   sflo:hasResourcePage <sessions/contributions/chat-contribution-plan-b-declaration/_history001/_s0001/json/index.html> .
+
+<sessions/contributions/chat-contribution-plan-b-declaration/_history001/_s0002> a sflo:HistoricalState ;
+  sflo:stateOrdinal "2"^^xsd:nonNegativeInteger ;
+  sflo:previousHistoricalState <sessions/contributions/chat-contribution-plan-b-declaration/_history001/_s0001> ;
+  sflo:hasManifestation <sessions/contributions/chat-contribution-plan-b-declaration/_history001/_s0002/json> ;
+  sflo:locatedFileForState <sessions/contributions/chat-contribution-plan-b-declaration/_history001/_s0002/json/chat-contribution-plan-b-declaration.json> ;
+  sflo:hasResourcePage <sessions/contributions/chat-contribution-plan-b-declaration/_history001/_s0002/index.html> .
+
+<sessions/contributions/chat-contribution-plan-b-declaration/_history001/_s0002/json> a sflo:ArtifactManifestation ;
+  sflo:locatedFileForManifestation <sessions/contributions/chat-contribution-plan-b-declaration/_history001/_s0002/json/chat-contribution-plan-b-declaration.json> ;
+  sflo:hasResourcePage <sessions/contributions/chat-contribution-plan-b-declaration/_history001/_s0002/json/index.html> .
 
 <sessions/contributions/chat-contribution-plan-b-declaration/_knop/_meta> a sflo:KnopMetadata, sflo:DigitalArtifact, sflo:RdfDocument ;
   sflo:hasWorkingLocatedFile <sessions/contributions/chat-contribution-plan-b-declaration/_knop/_meta/meta.ttl> ;
@@ -49,6 +61,8 @@
 
 <sessions/contributions/chat-contribution-plan-b-declaration/_history001/_s0001/json/chat-contribution-plan-b-declaration.json> a sflo:LocatedFile .
 
+<sessions/contributions/chat-contribution-plan-b-declaration/_history001/_s0002/json/chat-contribution-plan-b-declaration.json> a sflo:LocatedFile .
+
 <sessions/contributions/chat-contribution-plan-b-declaration/index.html> a sflo:ResourcePage, sflo:LocatedFile .
 
 <sessions/contributions/chat-contribution-plan-b-declaration/_history001/index.html> a sflo:ResourcePage, sflo:LocatedFile .
@@ -57,9 +71,12 @@
 
 <sessions/contributions/chat-contribution-plan-b-declaration/_history001/_s0001/json/index.html> a sflo:ResourcePage, sflo:LocatedFile .
 
+<sessions/contributions/chat-contribution-plan-b-declaration/_history001/_s0002/index.html> a sflo:ResourcePage, sflo:LocatedFile .
+
+<sessions/contributions/chat-contribution-plan-b-declaration/_history001/_s0002/json/index.html> a sflo:ResourcePage, sflo:LocatedFile .
+
 <sessions/contributions/chat-contribution-plan-b-declaration/_knop/index.html> a sflo:ResourcePage, sflo:LocatedFile .
 
 <sessions/contributions/chat-contribution-plan-b-declaration/_knop/_meta/index.html> a sflo:ResourcePage, sflo:LocatedFile .
 
 <sessions/contributions/chat-contribution-plan-b-declaration/_knop/_inventory/index.html> a sflo:ResourcePage, sflo:LocatedFile .
-
