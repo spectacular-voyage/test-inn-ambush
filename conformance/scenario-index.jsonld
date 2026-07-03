@@ -66,6 +66,48 @@
           }
         }
       ]
+    },
+    {
+      "id": "#03-plan-b-recommendation-records",
+      "type": "ScenarioStep",
+      "manifestPath": "03-plan-b-recommendation-records.jsonld",
+      "hasLaneBinding": [
+        {
+          "type": "LaneStateBinding",
+          "lane": "#fixture-lane",
+          "fromLaneState": {
+            "type": "StateLocator",
+            "locatorKind": "gitRefState",
+            "ref": "a.02-plan-b-woven"
+          },
+          "toLaneState": {
+            "type": "StateLocator",
+            "locatorKind": "gitRefState",
+            "ref": "a.03-plan-b-recommendation-records"
+          }
+        }
+      ]
+    },
+    {
+      "id": "#04-plan-b-recommendation-woven",
+      "type": "ScenarioStep",
+      "manifestPath": "04-plan-b-recommendation-woven.jsonld",
+      "hasLaneBinding": [
+        {
+          "type": "LaneStateBinding",
+          "lane": "#fixture-lane",
+          "fromLaneState": {
+            "type": "StateLocator",
+            "locatorKind": "gitRefState",
+            "ref": "a.03-plan-b-recommendation-records"
+          },
+          "toLaneState": {
+            "type": "StateLocator",
+            "locatorKind": "gitRefState",
+            "ref": "a.04-plan-b-recommendation-woven"
+          }
+        }
+      ]
     }
   ]
 }

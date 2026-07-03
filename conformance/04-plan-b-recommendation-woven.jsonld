@@ -1,0 +1,410 @@
+{
+  "@context": {
+    "@vocab": "https://spectacular-voyage.github.io/accord/ontology/",
+    "dcterms": "http://purl.org/dc/terms/",
+    "id": "@id",
+    "type": "@type",
+    "changeType": {
+      "@type": "@vocab"
+    },
+    "compareMode": {
+      "@type": "@vocab"
+    },
+    "targetsFileExpectation": {
+      "@type": "@id"
+    },
+    "locatorKind": {
+      "@type": "@vocab"
+    }
+  },
+  "type": "Manifest",
+  "id": "urn:accord:stagecraft:test-inn-ambush:04-plan-b-recommendation-woven",
+  "dcterms:title": "Inn Ambush 04 Plan B recommendation woven",
+  "hasCase": [
+    {
+      "type": "TransitionCase",
+      "id": "#weave-plan-b-recommendation-records",
+      "fixtureRepo": "github.com/spectacular-voyage/test-inn-ambush",
+      "operationId": "stagecraft.fixture.weavePlanBRecommendationRecords",
+      "fromRef": "a.03-plan-b-recommendation-records",
+      "toRef": "a.04-plan-b-recommendation-woven",
+      "fromState": {
+        "type": "StateLocator",
+        "locatorKind": "gitRefState",
+        "ref": "a.03-plan-b-recommendation-records"
+      },
+      "toState": {
+        "type": "StateLocator",
+        "locatorKind": "gitRefState",
+        "ref": "a.04-plan-b-recommendation-woven"
+      },
+      "hasFileExpectation": [
+        {
+          "id": "#mesh-inventory",
+          "type": "FileExpectation",
+          "path": "_mesh/_inventory/inventory.ttl",
+          "changeType": "updated",
+          "compareMode": "rdfCanonical"
+        },
+        {
+          "id": "#contract-context-history-s0002-index",
+          "type": "FileExpectation",
+          "path": "projections/contracts/inn-ambush-contract-context/_history001/_s0002/index.html",
+          "changeType": "added"
+        },
+        {
+          "id": "#contract-context-history-s0002-jsonld-index",
+          "type": "FileExpectation",
+          "path": "projections/contracts/inn-ambush-contract-context/_history001/_s0002/jsonld/index.html",
+          "changeType": "added"
+        },
+        {
+          "id": "#contract-context-history-s0002-payload",
+          "type": "FileExpectation",
+          "path": "projections/contracts/inn-ambush-contract-context/_history001/_s0002/jsonld/inn-ambush-contract.context.jsonld",
+          "changeType": "added"
+        },
+        {
+          "id": "#contract-context-history-index",
+          "type": "FileExpectation",
+          "path": "projections/contracts/inn-ambush-contract-context/_history001/index.html",
+          "changeType": "updated"
+        },
+        {
+          "id": "#contract-context-knop-inventory-index",
+          "type": "FileExpectation",
+          "path": "projections/contracts/inn-ambush-contract-context/_knop/_inventory/index.html",
+          "changeType": "updated"
+        },
+        {
+          "id": "#contract-context-knop-inventory",
+          "type": "FileExpectation",
+          "path": "projections/contracts/inn-ambush-contract-context/_knop/_inventory/inventory.ttl",
+          "changeType": "updated",
+          "compareMode": "rdfCanonical"
+        },
+        {
+          "id": "#contract-context-index",
+          "type": "FileExpectation",
+          "path": "projections/contracts/inn-ambush-contract-context/index.html",
+          "changeType": "updated"
+        },
+        {
+          "id": "#contract-shapes-history-s0002-index",
+          "type": "FileExpectation",
+          "path": "projections/contracts/inn-ambush-contract-shapes/_history001/_s0002/index.html",
+          "changeType": "added"
+        },
+        {
+          "id": "#contract-shapes-history-s0002-ttl-index",
+          "type": "FileExpectation",
+          "path": "projections/contracts/inn-ambush-contract-shapes/_history001/_s0002/ttl/index.html",
+          "changeType": "added"
+        },
+        {
+          "id": "#contract-shapes-history-s0002-payload",
+          "type": "FileExpectation",
+          "path": "projections/contracts/inn-ambush-contract-shapes/_history001/_s0002/ttl/inn-ambush-contract.shapes.ttl",
+          "changeType": "added",
+          "compareMode": "rdfCanonical"
+        },
+        {
+          "id": "#contract-shapes-history-index",
+          "type": "FileExpectation",
+          "path": "projections/contracts/inn-ambush-contract-shapes/_history001/index.html",
+          "changeType": "updated"
+        },
+        {
+          "id": "#contract-shapes-knop-inventory-index",
+          "type": "FileExpectation",
+          "path": "projections/contracts/inn-ambush-contract-shapes/_knop/_inventory/index.html",
+          "changeType": "updated"
+        },
+        {
+          "id": "#contract-shapes-knop-inventory",
+          "type": "FileExpectation",
+          "path": "projections/contracts/inn-ambush-contract-shapes/_knop/_inventory/inventory.ttl",
+          "changeType": "updated",
+          "compareMode": "rdfCanonical"
+        },
+        {
+          "id": "#contract-shapes-index",
+          "type": "FileExpectation",
+          "path": "projections/contracts/inn-ambush-contract-shapes/index.html",
+          "changeType": "updated"
+        },
+        {
+          "id": "#recommendation-request-history-s0001-index",
+          "type": "FileExpectation",
+          "path": "recommendations/actant-intent/plan-b-review-request/_history001/_s0001/index.html",
+          "changeType": "added"
+        },
+        {
+          "id": "#recommendation-request-history-s0001-payload",
+          "type": "FileExpectation",
+          "path": "recommendations/actant-intent/plan-b-review-request/_history001/_s0001/json/actant-intent-recommendation-request-plan-b-review.json",
+          "changeType": "added"
+        },
+        {
+          "id": "#recommendation-request-history-s0001-json-index",
+          "type": "FileExpectation",
+          "path": "recommendations/actant-intent/plan-b-review-request/_history001/_s0001/json/index.html",
+          "changeType": "added"
+        },
+        {
+          "id": "#recommendation-request-history-index",
+          "type": "FileExpectation",
+          "path": "recommendations/actant-intent/plan-b-review-request/_history001/index.html",
+          "changeType": "added"
+        },
+        {
+          "id": "#recommendation-request-knop-inventory-index",
+          "type": "FileExpectation",
+          "path": "recommendations/actant-intent/plan-b-review-request/_knop/_inventory/index.html",
+          "changeType": "added"
+        },
+        {
+          "id": "#recommendation-request-knop-inventory",
+          "type": "FileExpectation",
+          "path": "recommendations/actant-intent/plan-b-review-request/_knop/_inventory/inventory.ttl",
+          "changeType": "added",
+          "compareMode": "rdfCanonical"
+        },
+        {
+          "id": "#recommendation-request-knop-meta-index",
+          "type": "FileExpectation",
+          "path": "recommendations/actant-intent/plan-b-review-request/_knop/_meta/index.html",
+          "changeType": "added"
+        },
+        {
+          "id": "#recommendation-request-knop-meta",
+          "type": "FileExpectation",
+          "path": "recommendations/actant-intent/plan-b-review-request/_knop/_meta/meta.ttl",
+          "changeType": "added",
+          "compareMode": "rdfCanonical"
+        },
+        {
+          "id": "#recommendation-request-knop-index",
+          "type": "FileExpectation",
+          "path": "recommendations/actant-intent/plan-b-review-request/_knop/index.html",
+          "changeType": "added"
+        },
+        {
+          "id": "#recommendation-request-index",
+          "type": "FileExpectation",
+          "path": "recommendations/actant-intent/plan-b-review-request/index.html",
+          "changeType": "added"
+        },
+        {
+          "id": "#recommendation-response-history-s0001-index",
+          "type": "FileExpectation",
+          "path": "recommendations/actant-intent/plan-b-review-response/_history001/_s0001/index.html",
+          "changeType": "added"
+        },
+        {
+          "id": "#recommendation-response-history-s0001-payload",
+          "type": "FileExpectation",
+          "path": "recommendations/actant-intent/plan-b-review-response/_history001/_s0001/json/actant-intent-recommendation-plan-b-review.json",
+          "changeType": "added"
+        },
+        {
+          "id": "#recommendation-response-history-s0001-json-index",
+          "type": "FileExpectation",
+          "path": "recommendations/actant-intent/plan-b-review-response/_history001/_s0001/json/index.html",
+          "changeType": "added"
+        },
+        {
+          "id": "#recommendation-response-history-index",
+          "type": "FileExpectation",
+          "path": "recommendations/actant-intent/plan-b-review-response/_history001/index.html",
+          "changeType": "added"
+        },
+        {
+          "id": "#recommendation-response-knop-inventory-index",
+          "type": "FileExpectation",
+          "path": "recommendations/actant-intent/plan-b-review-response/_knop/_inventory/index.html",
+          "changeType": "added"
+        },
+        {
+          "id": "#recommendation-response-knop-inventory",
+          "type": "FileExpectation",
+          "path": "recommendations/actant-intent/plan-b-review-response/_knop/_inventory/inventory.ttl",
+          "changeType": "added",
+          "compareMode": "rdfCanonical"
+        },
+        {
+          "id": "#recommendation-response-knop-meta-index",
+          "type": "FileExpectation",
+          "path": "recommendations/actant-intent/plan-b-review-response/_knop/_meta/index.html",
+          "changeType": "added"
+        },
+        {
+          "id": "#recommendation-response-knop-meta",
+          "type": "FileExpectation",
+          "path": "recommendations/actant-intent/plan-b-review-response/_knop/_meta/meta.ttl",
+          "changeType": "added",
+          "compareMode": "rdfCanonical"
+        },
+        {
+          "id": "#recommendation-response-knop-index",
+          "type": "FileExpectation",
+          "path": "recommendations/actant-intent/plan-b-review-response/_knop/index.html",
+          "changeType": "added"
+        },
+        {
+          "id": "#recommendation-response-index",
+          "type": "FileExpectation",
+          "path": "recommendations/actant-intent/plan-b-review-response/index.html",
+          "changeType": "added"
+        },
+        {
+          "id": "#alice-declaration-history-s0001-index",
+          "type": "FileExpectation",
+          "path": "sessions/contributions/chat-contribution-plan-b-declaration/_history001/_s0001/index.html",
+          "changeType": "added"
+        },
+        {
+          "id": "#alice-declaration-history-s0001-payload",
+          "type": "FileExpectation",
+          "path": "sessions/contributions/chat-contribution-plan-b-declaration/_history001/_s0001/json/chat-contribution-plan-b-declaration.json",
+          "changeType": "added"
+        },
+        {
+          "id": "#alice-declaration-history-s0001-json-index",
+          "type": "FileExpectation",
+          "path": "sessions/contributions/chat-contribution-plan-b-declaration/_history001/_s0001/json/index.html",
+          "changeType": "added"
+        },
+        {
+          "id": "#alice-declaration-history-index",
+          "type": "FileExpectation",
+          "path": "sessions/contributions/chat-contribution-plan-b-declaration/_history001/index.html",
+          "changeType": "added"
+        },
+        {
+          "id": "#alice-declaration-knop-inventory-index",
+          "type": "FileExpectation",
+          "path": "sessions/contributions/chat-contribution-plan-b-declaration/_knop/_inventory/index.html",
+          "changeType": "added"
+        },
+        {
+          "id": "#alice-declaration-knop-inventory",
+          "type": "FileExpectation",
+          "path": "sessions/contributions/chat-contribution-plan-b-declaration/_knop/_inventory/inventory.ttl",
+          "changeType": "added",
+          "compareMode": "rdfCanonical"
+        },
+        {
+          "id": "#alice-declaration-knop-meta-index",
+          "type": "FileExpectation",
+          "path": "sessions/contributions/chat-contribution-plan-b-declaration/_knop/_meta/index.html",
+          "changeType": "added"
+        },
+        {
+          "id": "#alice-declaration-knop-meta",
+          "type": "FileExpectation",
+          "path": "sessions/contributions/chat-contribution-plan-b-declaration/_knop/_meta/meta.ttl",
+          "changeType": "added",
+          "compareMode": "rdfCanonical"
+        },
+        {
+          "id": "#alice-declaration-knop-index",
+          "type": "FileExpectation",
+          "path": "sessions/contributions/chat-contribution-plan-b-declaration/_knop/index.html",
+          "changeType": "added"
+        },
+        {
+          "id": "#alice-declaration-index",
+          "type": "FileExpectation",
+          "path": "sessions/contributions/chat-contribution-plan-b-declaration/index.html",
+          "changeType": "added"
+        }
+      ],
+      "hasRdfExpectation": [
+        {
+          "id": "#mesh-inventory-rdf",
+          "type": "RdfExpectation",
+          "targetsFileExpectation": "#mesh-inventory",
+          "hasAskAssertion": [
+            {
+              "id": "#ask-recommendation-request-knop",
+              "type": "SparqlAskAssertion",
+              "query": "ASK { <https://spectacular-voyage.github.io/test-inn-ambush/_mesh> <https://semantic-flow.github.io/sflo/ontology/hasKnop> <https://spectacular-voyage.github.io/test-inn-ambush/recommendations/actant-intent/plan-b-review-request/_knop> . <https://spectacular-voyage.github.io/test-inn-ambush/recommendations/actant-intent/plan-b-review-request> a <https://semantic-flow.github.io/sflo/ontology/PayloadArtifact> ; <https://semantic-flow.github.io/sflo/ontology/hasWorkingLocatedFile> <https://spectacular-voyage.github.io/test-inn-ambush/recommendations/actant-intent/plan-b-review-request/actant-intent-recommendation-request-plan-b-review.json> ; <https://semantic-flow.github.io/sflo/ontology/hasResourcePage> <https://spectacular-voyage.github.io/test-inn-ambush/recommendations/actant-intent/plan-b-review-request/index.html> . }",
+              "expectedBoolean": true
+            },
+            {
+              "id": "#ask-recommendation-response-knop",
+              "type": "SparqlAskAssertion",
+              "query": "ASK { <https://spectacular-voyage.github.io/test-inn-ambush/_mesh> <https://semantic-flow.github.io/sflo/ontology/hasKnop> <https://spectacular-voyage.github.io/test-inn-ambush/recommendations/actant-intent/plan-b-review-response/_knop> . <https://spectacular-voyage.github.io/test-inn-ambush/recommendations/actant-intent/plan-b-review-response> a <https://semantic-flow.github.io/sflo/ontology/PayloadArtifact> ; <https://semantic-flow.github.io/sflo/ontology/hasWorkingLocatedFile> <https://spectacular-voyage.github.io/test-inn-ambush/recommendations/actant-intent/plan-b-review-response/actant-intent-recommendation-plan-b-review.json> ; <https://semantic-flow.github.io/sflo/ontology/hasResourcePage> <https://spectacular-voyage.github.io/test-inn-ambush/recommendations/actant-intent/plan-b-review-response/index.html> . }",
+              "expectedBoolean": true
+            },
+            {
+              "id": "#ask-alice-declaration-knop",
+              "type": "SparqlAskAssertion",
+              "query": "ASK { <https://spectacular-voyage.github.io/test-inn-ambush/_mesh> <https://semantic-flow.github.io/sflo/ontology/hasKnop> <https://spectacular-voyage.github.io/test-inn-ambush/sessions/contributions/chat-contribution-plan-b-declaration/_knop> . <https://spectacular-voyage.github.io/test-inn-ambush/sessions/contributions/chat-contribution-plan-b-declaration> a <https://semantic-flow.github.io/sflo/ontology/PayloadArtifact> ; <https://semantic-flow.github.io/sflo/ontology/hasWorkingLocatedFile> <https://spectacular-voyage.github.io/test-inn-ambush/sessions/contributions/chat-contribution-plan-b-declaration/chat-contribution-plan-b-declaration.json> ; <https://semantic-flow.github.io/sflo/ontology/hasResourcePage> <https://spectacular-voyage.github.io/test-inn-ambush/sessions/contributions/chat-contribution-plan-b-declaration/index.html> . }",
+              "expectedBoolean": true
+            }
+          ]
+        },
+        {
+          "id": "#contract-shapes-history-s0002-rdf",
+          "type": "RdfExpectation",
+          "targetsFileExpectation": "#contract-shapes-history-s0002-payload",
+          "hasAskAssertion": [
+            {
+              "id": "#ask-history-recommendation-request-shape",
+              "type": "SparqlAskAssertion",
+              "query": "ASK { <https://spectacular-voyage.github.io/stagecraft/shacl/ActantIntentRecommendationRequestShape> a <http://www.w3.org/ns/shacl#NodeShape> ; <http://www.w3.org/ns/shacl#targetClass> <https://spectacular-voyage.github.io/stagecraft/ontology/ActantIntentRecommendationRequest> . }",
+              "expectedBoolean": true
+            },
+            {
+              "id": "#ask-history-recommendation-shape",
+              "type": "SparqlAskAssertion",
+              "query": "ASK { <https://spectacular-voyage.github.io/stagecraft/shacl/ActantIntentRecommendationShape> a <http://www.w3.org/ns/shacl#NodeShape> ; <http://www.w3.org/ns/shacl#targetClass> <https://spectacular-voyage.github.io/stagecraft/ontology/ActantIntentRecommendation> . }",
+              "expectedBoolean": true
+            }
+          ]
+        },
+        {
+          "id": "#recommendation-request-knop-inventory-rdf",
+          "type": "RdfExpectation",
+          "targetsFileExpectation": "#recommendation-request-knop-inventory",
+          "hasAskAssertion": [
+            {
+              "id": "#ask-recommendation-request-history",
+              "type": "SparqlAskAssertion",
+              "query": "ASK { <https://spectacular-voyage.github.io/test-inn-ambush/recommendations/actant-intent/plan-b-review-request> a <https://semantic-flow.github.io/sflo/ontology/PayloadArtifact> ; <https://semantic-flow.github.io/sflo/ontology/hasArtifactHistory> <https://spectacular-voyage.github.io/test-inn-ambush/recommendations/actant-intent/plan-b-review-request/_history001> ; <https://semantic-flow.github.io/sflo/ontology/hasResourcePage> <https://spectacular-voyage.github.io/test-inn-ambush/recommendations/actant-intent/plan-b-review-request/index.html> . <https://spectacular-voyage.github.io/test-inn-ambush/recommendations/actant-intent/plan-b-review-request/_history001/_s0001> a <https://semantic-flow.github.io/sflo/ontology/HistoricalState> ; <https://semantic-flow.github.io/sflo/ontology/locatedFileForState> <https://spectacular-voyage.github.io/test-inn-ambush/recommendations/actant-intent/plan-b-review-request/_history001/_s0001/json/actant-intent-recommendation-request-plan-b-review.json> . }",
+              "expectedBoolean": true
+            }
+          ]
+        },
+        {
+          "id": "#recommendation-response-knop-inventory-rdf",
+          "type": "RdfExpectation",
+          "targetsFileExpectation": "#recommendation-response-knop-inventory",
+          "hasAskAssertion": [
+            {
+              "id": "#ask-recommendation-response-history",
+              "type": "SparqlAskAssertion",
+              "query": "ASK { <https://spectacular-voyage.github.io/test-inn-ambush/recommendations/actant-intent/plan-b-review-response> a <https://semantic-flow.github.io/sflo/ontology/PayloadArtifact> ; <https://semantic-flow.github.io/sflo/ontology/hasArtifactHistory> <https://spectacular-voyage.github.io/test-inn-ambush/recommendations/actant-intent/plan-b-review-response/_history001> ; <https://semantic-flow.github.io/sflo/ontology/hasResourcePage> <https://spectacular-voyage.github.io/test-inn-ambush/recommendations/actant-intent/plan-b-review-response/index.html> . <https://spectacular-voyage.github.io/test-inn-ambush/recommendations/actant-intent/plan-b-review-response/_history001/_s0001> a <https://semantic-flow.github.io/sflo/ontology/HistoricalState> ; <https://semantic-flow.github.io/sflo/ontology/locatedFileForState> <https://spectacular-voyage.github.io/test-inn-ambush/recommendations/actant-intent/plan-b-review-response/_history001/_s0001/json/actant-intent-recommendation-plan-b-review.json> . }",
+              "expectedBoolean": true
+            }
+          ]
+        },
+        {
+          "id": "#alice-declaration-knop-inventory-rdf",
+          "type": "RdfExpectation",
+          "targetsFileExpectation": "#alice-declaration-knop-inventory",
+          "hasAskAssertion": [
+            {
+              "id": "#ask-alice-declaration-history",
+              "type": "SparqlAskAssertion",
+              "query": "ASK { <https://spectacular-voyage.github.io/test-inn-ambush/sessions/contributions/chat-contribution-plan-b-declaration> a <https://semantic-flow.github.io/sflo/ontology/PayloadArtifact> ; <https://semantic-flow.github.io/sflo/ontology/hasArtifactHistory> <https://spectacular-voyage.github.io/test-inn-ambush/sessions/contributions/chat-contribution-plan-b-declaration/_history001> ; <https://semantic-flow.github.io/sflo/ontology/hasResourcePage> <https://spectacular-voyage.github.io/test-inn-ambush/sessions/contributions/chat-contribution-plan-b-declaration/index.html> . <https://spectacular-voyage.github.io/test-inn-ambush/sessions/contributions/chat-contribution-plan-b-declaration/_history001/_s0001> a <https://semantic-flow.github.io/sflo/ontology/HistoricalState> ; <https://semantic-flow.github.io/sflo/ontology/locatedFileForState> <https://spectacular-voyage.github.io/test-inn-ambush/sessions/contributions/chat-contribution-plan-b-declaration/_history001/_s0001/json/chat-contribution-plan-b-declaration.json> . }",
+              "expectedBoolean": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

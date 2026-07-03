@@ -1,0 +1,122 @@
+{
+  "@context": {
+    "@vocab": "https://spectacular-voyage.github.io/accord/ontology/",
+    "dcterms": "http://purl.org/dc/terms/",
+    "id": "@id",
+    "type": "@type",
+    "changeType": {
+      "@type": "@vocab"
+    },
+    "compareMode": {
+      "@type": "@vocab"
+    },
+    "targetsFileExpectation": {
+      "@type": "@id"
+    },
+    "locatorKind": {
+      "@type": "@vocab"
+    }
+  },
+  "type": "Manifest",
+  "id": "urn:accord:stagecraft:test-inn-ambush:03-plan-b-recommendation-records",
+  "dcterms:title": "Inn Ambush 03 Plan B recommendation records",
+  "hasCase": [
+    {
+      "type": "TransitionCase",
+      "id": "#add-plan-b-recommendation-records",
+      "fixtureRepo": "github.com/spectacular-voyage/test-inn-ambush",
+      "operationId": "stagecraft.fixture.addPlanBRecommendationRecords",
+      "fromRef": "a.02-plan-b-woven",
+      "toRef": "a.03-plan-b-recommendation-records",
+      "fromState": {
+        "type": "StateLocator",
+        "locatorKind": "gitRefState",
+        "ref": "a.02-plan-b-woven"
+      },
+      "toState": {
+        "type": "StateLocator",
+        "locatorKind": "gitRefState",
+        "ref": "a.03-plan-b-recommendation-records"
+      },
+      "hasFileExpectation": [
+        {
+          "id": "#readme",
+          "type": "FileExpectation",
+          "path": "README.md",
+          "changeType": "updated",
+          "compareMode": "text"
+        },
+        {
+          "id": "#projection-context",
+          "type": "FileExpectation",
+          "path": "projections/contracts/inn-ambush-contract.context.jsonld",
+          "changeType": "updated"
+        },
+        {
+          "id": "#projection-shapes",
+          "type": "FileExpectation",
+          "path": "projections/contracts/inn-ambush-contract.shapes.ttl",
+          "changeType": "updated",
+          "compareMode": "rdfCanonical"
+        },
+        {
+          "id": "#recommendations-readme",
+          "type": "FileExpectation",
+          "path": "recommendations/README.md",
+          "changeType": "added"
+        },
+        {
+          "id": "#actant-intent-recommendation-request",
+          "type": "FileExpectation",
+          "path": "recommendations/actant-intent/plan-b-review-request/actant-intent-recommendation-request-plan-b-review.json",
+          "changeType": "added"
+        },
+        {
+          "id": "#actant-intent-recommendation",
+          "type": "FileExpectation",
+          "path": "recommendations/actant-intent/plan-b-review-response/actant-intent-recommendation-plan-b-review.json",
+          "changeType": "added"
+        },
+        {
+          "id": "#alice-plan-b-declaration-contribution",
+          "type": "FileExpectation",
+          "path": "sessions/contributions/chat-contribution-plan-b-declaration/chat-contribution-plan-b-declaration.json",
+          "changeType": "added"
+        }
+      ],
+      "hasRdfExpectation": [
+        {
+          "id": "#projection-shapes-rdf",
+          "type": "RdfExpectation",
+          "targetsFileExpectation": "#projection-shapes",
+          "hasAskAssertion": [
+            {
+              "id": "#ask-recommendation-request-shape",
+              "type": "SparqlAskAssertion",
+              "query": "ASK { <https://spectacular-voyage.github.io/stagecraft/shacl/ActantIntentRecommendationRequestShape> a <http://www.w3.org/ns/shacl#NodeShape> ; <http://www.w3.org/ns/shacl#targetClass> <https://spectacular-voyage.github.io/stagecraft/ontology/ActantIntentRecommendationRequest> . }",
+              "expectedBoolean": true
+            },
+            {
+              "id": "#ask-recommendation-shape",
+              "type": "SparqlAskAssertion",
+              "query": "ASK { <https://spectacular-voyage.github.io/stagecraft/shacl/ActantIntentRecommendationShape> a <http://www.w3.org/ns/shacl#NodeShape> ; <http://www.w3.org/ns/shacl#targetClass> <https://spectacular-voyage.github.io/stagecraft/ontology/ActantIntentRecommendation> . }",
+              "expectedBoolean": true
+            },
+            {
+              "id": "#ask-request-review-operation",
+              "type": "SparqlAskAssertion",
+              "query": "ASK { <https://spectacular-voyage.github.io/stagecraft/shacl/ActantIntentRecommendationRequestShape> <http://www.w3.org/ns/shacl#property> ?property . ?property <http://www.w3.org/ns/shacl#path> <https://spectacular-voyage.github.io/stagecraft/ontology/requestedOperation> ; <http://www.w3.org/ns/shacl#hasValue> \"reviewCandidateActantIntent\" . }",
+              "expectedBoolean": true
+            },
+            {
+              "id": "#ask-recommendation-advisory-only-shape",
+              "type": "SparqlAskAssertion",
+              "query": "ASK { <https://spectacular-voyage.github.io/stagecraft/shacl/ActantIntentRecommendationShape> <http://www.w3.org/ns/shacl#property> ?committedEventProperty, ?stateMutationProperty, ?producedResourcesProperty . ?committedEventProperty <http://www.w3.org/ns/shacl#path> <https://spectacular-voyage.github.io/stagecraft/ontology/committedEvent> ; <http://www.w3.org/ns/shacl#maxCount> \"0\"^^<http://www.w3.org/2001/XMLSchema#integer> . ?stateMutationProperty <http://www.w3.org/ns/shacl#path> <https://spectacular-voyage.github.io/stagecraft/ontology/stateMutation> ; <http://www.w3.org/ns/shacl#maxCount> \"0\"^^<http://www.w3.org/2001/XMLSchema#integer> . ?producedResourcesProperty <http://www.w3.org/ns/shacl#path> <https://spectacular-voyage.github.io/stagecraft/ontology/producedResources> ; <http://www.w3.org/ns/shacl#maxCount> \"0\"^^<http://www.w3.org/2001/XMLSchema#integer> . }",
+              "expectedBoolean": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
