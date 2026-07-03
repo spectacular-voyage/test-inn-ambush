@@ -1,0 +1,108 @@
+{
+  "@context": {
+    "@vocab": "https://spectacular-voyage.github.io/accord/ontology/",
+    "dcterms": "http://purl.org/dc/terms/",
+    "id": "@id",
+    "type": "@type",
+    "changeType": {
+      "@type": "@vocab"
+    },
+    "compareMode": {
+      "@type": "@vocab"
+    },
+    "targetsFileExpectation": {
+      "@type": "@id"
+    },
+    "locatorKind": {
+      "@type": "@vocab"
+    }
+  },
+  "type": "Manifest",
+  "id": "urn:accord:stagecraft:test-inn-ambush:05-participant-projection-contract-rename-records",
+  "dcterms:title": "Inn Ambush 05 participant projection contract rename records",
+  "hasCase": [
+    {
+      "type": "TransitionCase",
+      "id": "#rename-source-projection-state-records",
+      "fixtureRepo": "github.com/spectacular-voyage/test-inn-ambush",
+      "operationId": "stagecraft.fixture.renameSourceProjectionStateRecords",
+      "fromRef": "a.04-plan-b-recommendation-woven",
+      "toRef": "a.05-participant-projection-contract-rename-records",
+      "fromState": {
+        "type": "StateLocator",
+        "locatorKind": "gitRefState",
+        "ref": "a.04-plan-b-recommendation-woven"
+      },
+      "toState": {
+        "type": "StateLocator",
+        "locatorKind": "gitRefState",
+        "ref": "a.05-participant-projection-contract-rename-records"
+      },
+      "hasFileExpectation": [
+        {
+          "id": "#readme",
+          "type": "FileExpectation",
+          "path": "README.md",
+          "changeType": "updated",
+          "compareMode": "text"
+        },
+        {
+          "id": "#projection-context",
+          "type": "FileExpectation",
+          "path": "projections/contracts/inn-ambush-contract.context.jsonld",
+          "changeType": "updated",
+          "compareMode": "text"
+        },
+        {
+          "id": "#projection-shapes",
+          "type": "FileExpectation",
+          "path": "projections/contracts/inn-ambush-contract.shapes.ttl",
+          "changeType": "updated",
+          "compareMode": "rdfCanonical"
+        },
+        {
+          "id": "#recommendation-request",
+          "type": "FileExpectation",
+          "path": "recommendations/actant-intent/plan-b-review-request/actant-intent-recommendation-request-plan-b-review.json",
+          "changeType": "updated",
+          "compareMode": "text"
+        },
+        {
+          "id": "#alice-declaration-contribution",
+          "type": "FileExpectation",
+          "path": "sessions/contributions/chat-contribution-plan-b-declaration/chat-contribution-plan-b-declaration.json",
+          "changeType": "updated",
+          "compareMode": "text"
+        },
+        {
+          "id": "#alice-suggestion-contribution",
+          "type": "FileExpectation",
+          "path": "sessions/contributions/chat-contribution-plan-b-suggestion/chat-contribution-plan-b-suggestion.json",
+          "changeType": "updated",
+          "compareMode": "text"
+        }
+      ],
+      "hasRdfExpectation": [
+        {
+          "id": "#projection-shapes-rdf",
+          "type": "RdfExpectation",
+          "targetsFileExpectation": "#projection-shapes",
+          "hasAskAssertion": [
+            {
+              "id": "#ask-source-projection-observed-state",
+              "type": "SparqlAskAssertion",
+              "query": "ASK { <https://spectacular-voyage.github.io/stagecraft/shacl/SourceProjectionShape> <http://www.w3.org/ns/shacl#property> ?property . ?property <http://www.w3.org/ns/shacl#path> <https://spectacular-voyage.github.io/stagecraft/ontology/observedProjectionState> ; <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#IRI> ; <http://www.w3.org/ns/shacl#minCount> \"1\"^^<http://www.w3.org/2001/XMLSchema#integer> ; <http://www.w3.org/ns/shacl#maxCount> \"1\"^^<http://www.w3.org/2001/XMLSchema#integer> . }",
+              "expectedBoolean": true
+            },
+            {
+              "id": "#ask-resource-pointers-keep-projection-state",
+              "type": "SparqlAskAssertion",
+              "query": "ASK { <https://spectacular-voyage.github.io/stagecraft/shacl/ResourcePointersShape> <http://www.w3.org/ns/shacl#property> ?property . ?property <http://www.w3.org/ns/shacl#path> <https://spectacular-voyage.github.io/stagecraft/ontology/projectionState> ; <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#IRI> ; <http://www.w3.org/ns/shacl#minCount> \"1\"^^<http://www.w3.org/2001/XMLSchema#integer> ; <http://www.w3.org/ns/shacl#maxCount> \"1\"^^<http://www.w3.org/2001/XMLSchema#integer> . }",
+              "expectedBoolean": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

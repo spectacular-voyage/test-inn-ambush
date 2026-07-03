@@ -108,6 +108,48 @@
           }
         }
       ]
+    },
+    {
+      "id": "#05-participant-projection-contract-rename-records",
+      "type": "ScenarioStep",
+      "manifestPath": "05-participant-projection-contract-rename-records.jsonld",
+      "hasLaneBinding": [
+        {
+          "type": "LaneStateBinding",
+          "lane": "#fixture-lane",
+          "fromLaneState": {
+            "type": "StateLocator",
+            "locatorKind": "gitRefState",
+            "ref": "a.04-plan-b-recommendation-woven"
+          },
+          "toLaneState": {
+            "type": "StateLocator",
+            "locatorKind": "gitRefState",
+            "ref": "a.05-participant-projection-contract-rename-records"
+          }
+        }
+      ]
+    },
+    {
+      "id": "#06-participant-projection-contract-rename-woven",
+      "type": "ScenarioStep",
+      "manifestPath": "06-participant-projection-contract-rename-woven.jsonld",
+      "hasLaneBinding": [
+        {
+          "type": "LaneStateBinding",
+          "lane": "#fixture-lane",
+          "fromLaneState": {
+            "type": "StateLocator",
+            "locatorKind": "gitRefState",
+            "ref": "a.05-participant-projection-contract-rename-records"
+          },
+          "toLaneState": {
+            "type": "StateLocator",
+            "locatorKind": "gitRefState",
+            "ref": "a.06-participant-projection-contract-rename-woven"
+          }
+        }
+      ]
     }
   ]
 }
