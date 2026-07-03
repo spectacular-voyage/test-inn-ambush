@@ -20,6 +20,7 @@ world/
 events/
 authority/
 projections/
+recommendations/
 audit/
 ```
 
@@ -32,7 +33,10 @@ The current first bundle keeps the original Plan B fixture artifacts intact:
 - `projections/notifications/plan-b-projection-ready/plan-b-projection-ready.json`
 - `projections/requests/participant-projection-request-alice/participant-projection-request-alice.json`
 - `sessions/contributions/chat-contribution-plan-b-suggestion/chat-contribution-plan-b-suggestion.json`
+- `sessions/contributions/chat-contribution-plan-b-declaration/chat-contribution-plan-b-declaration.json`
 - `authority/operations/authority-operation-request-plan-b-commit/authority-operation-request-plan-b-commit.json`
+- `recommendations/actant-intent/plan-b-review-request/actant-intent-recommendation-request-plan-b-review.json`
+- `recommendations/actant-intent/plan-b-review-response/actant-intent-recommendation-plan-b-review.json`
 
 `events/` and `audit/` are present as top-level lanes, but the first Plan B bundle does not split committed events or validation evidence into standalone files yet.
 
