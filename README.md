@@ -38,6 +38,8 @@ The current first bundle keeps the original Plan B fixture artifacts intact:
 - `recommendations/actant-intent/plan-b-review-request/actant-intent-recommendation-request-plan-b-review.json`
 - `recommendations/actant-intent/plan-b-review-response/actant-intent-recommendation-plan-b-review.json`
 
+Contribution and recommendation `sourceProjection` records use `observedProjectionState` for the shared RDF projection state the contributor saw, plus `participantProjection` for Alice's participant-scoped view identity. Generic `projectionState` remains on notification/request resource pointers where the pointer is to the shared durable projection state.
+
 `events/` and `audit/` are present as top-level lanes, but the first Plan B bundle does not split committed events or validation evidence into standalone files yet.
 
 Do not treat this repository as the Stagecraft runtime event store. It is a fixture/test-data mesh for stable identifiers, snapshots, audit evidence, validation evidence, and publication experiments.

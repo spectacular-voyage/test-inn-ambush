@@ -531,7 +531,7 @@ sc-sh:SpeakingContextShape
 sc-sh:SourceProjectionShape
   a sh:NodeShape ;
   sh:property [
-    sh:path sc:projectionState ;
+    sh:path sc:observedProjectionState ;
     sh:nodeKind sh:IRI ;
     sh:minCount 1 ;
     sh:maxCount 1 ;

@@ -16,7 +16,7 @@
   "candidateSourceKind": "contribution",
   "sourceArtifact": "https://spectacular-voyage.github.io/test-inn-ambush/sessions/contributions/chat-contribution-plan-b-declaration",
   "sourceProjection": {
-    "projectionState": "https://spectacular-voyage.github.io/test-inn-ambush/rdf-export/inn-ambush-plan-b/state/s0001",
+    "observedProjectionState": "https://spectacular-voyage.github.io/test-inn-ambush/rdf-export/inn-ambush-plan-b/state/s0001",
     "participantProjection": "https://spectacular-voyage.github.io/test-inn-ambush/projection/alice/inn-ambush-plan-b"
   },
   "candidateProposedByParticipant": "https://spectacular-voyage.github.io/test-inn-ambush/participant/alice",
