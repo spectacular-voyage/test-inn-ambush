@@ -1,0 +1,38 @@
+{
+  "@context": "https://spectacular-voyage.github.io/test-inn-ambush/projections/contracts/inn-ambush-contract.context.jsonld",
+  "@type": "ActantIntentRecommendationRequest",
+  "type": "stagecraft.actant-intent-recommendation.request.v1",
+  "id": "actant-intent-recommendation-request-plan-b-review-001",
+  "session": "https://spectacular-voyage.github.io/test-inn-ambush/session/inn-ambush-001",
+  "conversation": "https://spectacular-voyage.github.io/test-inn-ambush/conversation/table",
+  "requestedBy": "https://spectacular-voyage.github.io/test-inn-ambush/participant/alice",
+  "requestedOperation": "reviewCandidateActantIntent",
+  "requestedFocus": [
+    "roleplayFit",
+    "delegationScope"
+  ],
+  "intentBearingActant": "https://spectacular-voyage.github.io/test-inn-ambush/actant/elara",
+  "candidateActantIntent": "https://spectacular-voyage.github.io/test-inn-ambush/intent/elara-plan-b",
+  "candidateSourceKind": "contribution",
+  "sourceArtifact": "https://spectacular-voyage.github.io/test-inn-ambush/sessions/contributions/chat-contribution-plan-b-declaration",
+  "sourceProjection": {
+    "projectionState": "https://spectacular-voyage.github.io/test-inn-ambush/rdf-export/inn-ambush-plan-b/state/s0001",
+    "participantProjection": "https://spectacular-voyage.github.io/test-inn-ambush/projection/alice/inn-ambush-plan-b"
+  },
+  "candidateProposedByParticipant": "https://spectacular-voyage.github.io/test-inn-ambush/participant/alice",
+  "roleplayer": "https://spectacular-voyage.github.io/test-inn-ambush/participant/alice",
+  "visibleResources": [
+    "https://spectacular-voyage.github.io/test-inn-ambush/suggestion/plan-b",
+    "https://spectacular-voyage.github.io/test-inn-ambush/intent/elara-plan-b",
+    "https://spectacular-voyage.github.io/test-inn-ambush/projection/alice/inn-ambush-plan-b"
+  ],
+  "evidencePointers": [
+    "https://spectacular-voyage.github.io/test-inn-ambush/sessions/contributions/chat-contribution-plan-b-declaration",
+    "https://spectacular-voyage.github.io/test-inn-ambush/projections/requests/participant-projection-request-alice",
+    "https://spectacular-voyage.github.io/test-inn-ambush/suggestion/plan-b",
+    "https://spectacular-voyage.github.io/test-inn-ambush/intent/elara-plan-b",
+    "https://spectacular-voyage.github.io/test-inn-ambush/participant/alice",
+    "https://spectacular-voyage.github.io/test-inn-ambush/actant/elara"
+  ],
+  "createdAt": "2026-06-29T13:31:20Z"
+}

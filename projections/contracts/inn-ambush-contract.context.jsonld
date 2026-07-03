@@ -30,6 +30,15 @@
     "requestedByParticipant": {
       "@type": "@id"
     },
+    "requestedBy": {
+      "@type": "@id"
+    },
+    "respondsTo": {
+      "@type": "@id"
+    },
+    "producedByParticipant": {
+      "@type": "@id"
+    },
     "projectionId": {
       "@type": "@id"
     },
@@ -51,6 +60,9 @@
         },
         "suggestedTo": {
           "@type": "@id"
+        },
+        "actant": {
+          "@type": "@id"
         }
       }
     },
@@ -69,6 +81,41 @@
     "relatesTo": {
       "@type": "@id"
     },
+    "intentBearingActant": {
+      "@type": "@id"
+    },
+    "candidateActantIntent": {
+      "@type": "@id"
+    },
+    "sourceArtifact": {
+      "@type": "@id"
+    },
+    "candidateProposedByParticipant": {
+      "@type": "@id"
+    },
+    "roleplayer": {
+      "@type": "@id"
+    },
+    "participantAimContext": {
+      "@type": "@id"
+    },
+    "visibleResources": {
+      "@type": "@id"
+    },
+    "evidencePointers": {
+      "@type": "@id"
+    },
+    "recommendedActantIntent": {
+      "@type": "@id"
+    },
+    "requestedOperation": "sc:requestedOperation",
+    "requestedFocus": "sc:requestedFocus",
+    "candidateSourceKind": "sc:candidateSourceKind",
+    "recommendationDisposition": "sc:recommendationDisposition",
+    "reasonSummary": "sc:reasonSummary",
+    "confidenceLevel": "sc:confidenceLevel",
+    "suggestedOversightText": "sc:suggestedOversightText",
+    "producerProvenance": "sc:producerProvenance",
     "createdAt": {
       "@type": "xsd:dateTime"
     },

@@ -1,0 +1,23 @@
+{
+  "@context": "https://spectacular-voyage.github.io/test-inn-ambush/projections/contracts/inn-ambush-contract.context.jsonld",
+  "@type": "ActantIntentRecommendation",
+  "type": "stagecraft.actant-intent-recommendation.v1",
+  "id": "actant-intent-recommendation-plan-b-review-001",
+  "respondsTo": "https://spectacular-voyage.github.io/test-inn-ambush/recommendations/actant-intent/plan-b-review-request",
+  "producedByParticipant": "https://spectacular-voyage.github.io/test-inn-ambush/fixture/plan-b-recommendation-reviewer",
+  "recommendationDisposition": "usableAsSubmitted",
+  "reasonSummary": "Alice is Elara's roleplayer, the candidate follows Bob's visible Plan B suggestion, and the declaration stays within roleplay and delegation scope.",
+  "confidenceLevel": "medium",
+  "evidencePointers": [
+    "https://spectacular-voyage.github.io/test-inn-ambush/recommendations/actant-intent/plan-b-review-request",
+    "https://spectacular-voyage.github.io/test-inn-ambush/sessions/contributions/chat-contribution-plan-b-declaration",
+    "https://spectacular-voyage.github.io/test-inn-ambush/projections/requests/participant-projection-request-alice",
+    "https://spectacular-voyage.github.io/test-inn-ambush/suggestion/plan-b",
+    "https://spectacular-voyage.github.io/test-inn-ambush/intent/elara-plan-b",
+    "https://spectacular-voyage.github.io/test-inn-ambush/participant/alice",
+    "https://spectacular-voyage.github.io/test-inn-ambush/actant/elara"
+  ],
+  "suggestedOversightText": "Usable as submitted: Alice may declare Elara's Plan B intent; no consequence approval is implied.",
+  "producerProvenance": "fixture:plan-b-actant-intent-review-001",
+  "createdAt": "2026-06-29T13:31:30Z"
+}

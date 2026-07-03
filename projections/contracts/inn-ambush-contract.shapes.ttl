@@ -280,6 +280,240 @@ sc-sh:AuthorityOperationShape
     sh:message "AuthorityOperation request must not embed accepted state provenance facts." ;
   ] .
 
+sc-sh:ActantIntentRecommendationRequestShape
+  a sh:NodeShape ;
+  sh:targetClass sc:ActantIntentRecommendationRequest ;
+  sh:property [
+    sh:path sc:envelopeType ;
+    sh:hasValue "stagecraft.actant-intent-recommendation.request.v1" ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path sc:requestedBy ;
+    sh:nodeKind sh:IRI ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path sc:requestedOperation ;
+    sh:hasValue "reviewCandidateActantIntent" ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path sc:requestedFocus ;
+    sh:hasValue "roleplayFit" ;
+    sh:minCount 1 ;
+  ] ;
+  sh:property [
+    sh:path sc:requestedFocus ;
+    sh:hasValue "delegationScope" ;
+    sh:minCount 1 ;
+  ] ;
+  sh:property [
+    sh:path sc:intentBearingActant ;
+    sh:nodeKind sh:IRI ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path sc:candidateActantIntent ;
+    sh:nodeKind sh:IRI ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path sc:candidateSourceKind ;
+    sh:hasValue "contribution" ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path sc:sourceArtifact ;
+    sh:nodeKind sh:IRI ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path sc:sourceProjection ;
+    sh:node sc-sh:SourceProjectionShape ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path sc:candidateProposedByParticipant ;
+    sh:nodeKind sh:IRI ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path sc:roleplayer ;
+    sh:nodeKind sh:IRI ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path sc:evidencePointers ;
+    sh:nodeKind sh:IRI ;
+    sh:minCount 1 ;
+  ] ;
+  sh:property [
+    sh:path sc:authorityRecord ;
+    sh:maxCount 0 ;
+    sh:message "ActantIntentRecommendationRequest must not claim authority-produced resources." ;
+  ] ;
+  sh:property [
+    sh:path sc:committedEvent ;
+    sh:maxCount 0 ;
+    sh:message "ActantIntentRecommendationRequest must not claim committed events." ;
+  ] ;
+  sh:property [
+    sh:path sc:commitCertificate ;
+    sh:maxCount 0 ;
+    sh:message "ActantIntentRecommendationRequest must not claim commit certificates." ;
+  ] ;
+  sh:property [
+    sh:path sc:stateMutation ;
+    sh:maxCount 0 ;
+    sh:message "ActantIntentRecommendationRequest must not claim state mutations." ;
+  ] ;
+  sh:property [
+    sh:path sc:wouldProduce ;
+    sh:maxCount 0 ;
+    sh:message "ActantIntentRecommendationRequest must not preview authority-produced resources." ;
+  ] ;
+  sh:property [
+    sh:path sc:producedResources ;
+    sh:maxCount 0 ;
+    sh:message "ActantIntentRecommendationRequest must not claim produced resources." ;
+  ] ;
+  sh:property [
+    sh:path sc:barred ;
+    sh:maxCount 0 ;
+    sh:message "ActantIntentRecommendationRequest must not carry accepted state facts." ;
+  ] ;
+  sh:property [
+    sh:path sc:lastAuthorityRecord ;
+    sh:maxCount 0 ;
+    sh:message "ActantIntentRecommendationRequest must not carry accepted state provenance facts." ;
+  ] .
+
+sc-sh:ActantIntentRecommendationShape
+  a sh:NodeShape ;
+  sh:targetClass sc:ActantIntentRecommendation ;
+  sh:property [
+    sh:path sc:envelopeType ;
+    sh:hasValue "stagecraft.actant-intent-recommendation.v1" ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path sc:respondsTo ;
+    sh:nodeKind sh:IRI ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path sc:producedByParticipant ;
+    sh:nodeKind sh:IRI ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path sc:recommendationDisposition ;
+    sh:in (
+      "candidateRecommended"
+      "usableAsSubmitted"
+      "needsClarification"
+      "deferUntilTurn"
+      "reviseBeforeUse"
+      "blockIntent"
+      "escalateToGM"
+    ) ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path sc:recommendedActantIntent ;
+    sh:nodeKind sh:IRI ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path sc:reasonSummary ;
+    sh:datatype xsd:string ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path sc:confidenceLevel ;
+    sh:in (
+      "low"
+      "medium"
+      "high"
+      "unknown"
+    ) ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path sc:evidencePointers ;
+    sh:nodeKind sh:IRI ;
+    sh:minCount 1 ;
+  ] ;
+  sh:property [
+    sh:path sc:suggestedOversightText ;
+    sh:datatype xsd:string ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path sc:producerProvenance ;
+    sh:datatype xsd:string ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path sc:authorityRecord ;
+    sh:maxCount 0 ;
+    sh:message "ActantIntentRecommendation must not claim authority-produced resources." ;
+  ] ;
+  sh:property [
+    sh:path sc:committedEvent ;
+    sh:maxCount 0 ;
+    sh:message "ActantIntentRecommendation must not claim committed events." ;
+  ] ;
+  sh:property [
+    sh:path sc:commitCertificate ;
+    sh:maxCount 0 ;
+    sh:message "ActantIntentRecommendation must not claim commit certificates." ;
+  ] ;
+  sh:property [
+    sh:path sc:stateMutation ;
+    sh:maxCount 0 ;
+    sh:message "ActantIntentRecommendation must not claim state mutations." ;
+  ] ;
+  sh:property [
+    sh:path sc:wouldProduce ;
+    sh:maxCount 0 ;
+    sh:message "ActantIntentRecommendation must not preview authority-produced resources." ;
+  ] ;
+  sh:property [
+    sh:path sc:producedResources ;
+    sh:maxCount 0 ;
+    sh:message "ActantIntentRecommendation must not claim produced resources." ;
+  ] ;
+  sh:property [
+    sh:path sc:barred ;
+    sh:maxCount 0 ;
+    sh:message "ActantIntentRecommendation must not carry accepted state facts." ;
+  ] ;
+  sh:property [
+    sh:path sc:lastAuthorityRecord ;
+    sh:maxCount 0 ;
+    sh:message "ActantIntentRecommendation must not carry accepted state provenance facts." ;
+  ] .
+
 sc-sh:SpeakingContextShape
   a sh:NodeShape ;
   sh:property [
