@@ -183,3 +183,63 @@
 <world/states/inn-ambush-plan-b-state/index.html> a sflo:ResourcePage, sflo:LocatedFile .
 
 <world/states/inn-ambush-plan-b-state/_knop/index.html> a sflo:ResourcePage, sflo:LocatedFile .
+
+<_mesh> sflo:hasKnop <sessions/contributions/chat-contribution-plan-b-declaration/_knop> .
+
+<sessions/contributions/chat-contribution-plan-b-declaration> a sflo:PayloadArtifact, sflo:DigitalArtifact ;
+  sflo:hasWorkingLocatedFile <sessions/contributions/chat-contribution-plan-b-declaration/chat-contribution-plan-b-declaration.json> .
+
+<sessions/contributions/chat-contribution-plan-b-declaration/_knop> a sflo:Knop ;
+  sflo:hasWorkingKnopInventoryFile <sessions/contributions/chat-contribution-plan-b-declaration/_knop/_inventory/inventory.ttl> .
+
+<sessions/contributions/chat-contribution-plan-b-declaration/_knop/_inventory/inventory.ttl> a sflo:LocatedFile, sflo:RdfDocument .
+
+<sessions/contributions/chat-contribution-plan-b-declaration/chat-contribution-plan-b-declaration.json> a sflo:LocatedFile .
+
+<_mesh> sflo:hasKnop <recommendations/actant-intent/plan-b-review-request/_knop> .
+
+<recommendations/actant-intent/plan-b-review-request> a sflo:PayloadArtifact, sflo:DigitalArtifact ;
+  sflo:hasWorkingLocatedFile <recommendations/actant-intent/plan-b-review-request/actant-intent-recommendation-request-plan-b-review.json> .
+
+<recommendations/actant-intent/plan-b-review-request/_knop> a sflo:Knop ;
+  sflo:hasWorkingKnopInventoryFile <recommendations/actant-intent/plan-b-review-request/_knop/_inventory/inventory.ttl> .
+
+<recommendations/actant-intent/plan-b-review-request/_knop/_inventory/inventory.ttl> a sflo:LocatedFile, sflo:RdfDocument .
+
+<recommendations/actant-intent/plan-b-review-request/actant-intent-recommendation-request-plan-b-review.json> a sflo:LocatedFile .
+
+<_mesh> sflo:hasKnop <recommendations/actant-intent/plan-b-review-response/_knop> .
+
+<recommendations/actant-intent/plan-b-review-response> a sflo:PayloadArtifact, sflo:DigitalArtifact ;
+  sflo:hasWorkingLocatedFile <recommendations/actant-intent/plan-b-review-response/actant-intent-recommendation-plan-b-review.json> .
+
+<recommendations/actant-intent/plan-b-review-response/_knop> a sflo:Knop ;
+  sflo:hasWorkingKnopInventoryFile <recommendations/actant-intent/plan-b-review-response/_knop/_inventory/inventory.ttl> .
+
+<recommendations/actant-intent/plan-b-review-response/_knop/_inventory/inventory.ttl> a sflo:LocatedFile, sflo:RdfDocument .
+
+<recommendations/actant-intent/plan-b-review-response/actant-intent-recommendation-plan-b-review.json> a sflo:LocatedFile .
+
+<recommendations/actant-intent/plan-b-review-request> sflo:hasResourcePage <recommendations/actant-intent/plan-b-review-request/index.html> .
+
+<recommendations/actant-intent/plan-b-review-request/_knop> sflo:hasResourcePage <recommendations/actant-intent/plan-b-review-request/_knop/index.html> .
+
+<recommendations/actant-intent/plan-b-review-request/index.html> a sflo:ResourcePage, sflo:LocatedFile .
+
+<recommendations/actant-intent/plan-b-review-request/_knop/index.html> a sflo:ResourcePage, sflo:LocatedFile .
+
+<recommendations/actant-intent/plan-b-review-response> sflo:hasResourcePage <recommendations/actant-intent/plan-b-review-response/index.html> .
+
+<recommendations/actant-intent/plan-b-review-response/_knop> sflo:hasResourcePage <recommendations/actant-intent/plan-b-review-response/_knop/index.html> .
+
+<recommendations/actant-intent/plan-b-review-response/index.html> a sflo:ResourcePage, sflo:LocatedFile .
+
+<recommendations/actant-intent/plan-b-review-response/_knop/index.html> a sflo:ResourcePage, sflo:LocatedFile .
+
+<sessions/contributions/chat-contribution-plan-b-declaration> sflo:hasResourcePage <sessions/contributions/chat-contribution-plan-b-declaration/index.html> .
+
+<sessions/contributions/chat-contribution-plan-b-declaration/_knop> sflo:hasResourcePage <sessions/contributions/chat-contribution-plan-b-declaration/_knop/index.html> .
+
+<sessions/contributions/chat-contribution-plan-b-declaration/index.html> a sflo:ResourcePage, sflo:LocatedFile .
+
+<sessions/contributions/chat-contribution-plan-b-declaration/_knop/index.html> a sflo:ResourcePage, sflo:LocatedFile .

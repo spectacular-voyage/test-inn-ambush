@@ -1,0 +1,164 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "@vocab": "https://spectacular-voyage.github.io/stagecraft/ontology/",
+    "sc": "https://spectacular-voyage.github.io/stagecraft/ontology/",
+    "sflo": "https://semantic-flow.github.io/sflo/ontology/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "type": "sc:envelopeType",
+    "id": "sc:envelopeId",
+    "specversion": "sc:cloudEventSpecVersion",
+    "source": "sc:cloudEventSource",
+    "time": {
+      "@id": "sc:cloudEventTime",
+      "@type": "xsd:dateTime"
+    },
+    "subject": {
+      "@id": "sc:subject",
+      "@type": "@id"
+    },
+    "datacontenttype": "sc:dataContentType",
+    "session": {
+      "@type": "@id"
+    },
+    "conversation": {
+      "@type": "@id"
+    },
+    "submittedByParticipant": {
+      "@type": "@id"
+    },
+    "requestedByParticipant": {
+      "@type": "@id"
+    },
+    "requestedBy": {
+      "@type": "@id"
+    },
+    "respondsTo": {
+      "@type": "@id"
+    },
+    "producedByParticipant": {
+      "@type": "@id"
+    },
+    "projectionId": {
+      "@type": "@id"
+    },
+    "historyScope": {
+      "@type": "@id"
+    },
+    "branchScope": {
+      "@type": "@id"
+    },
+    "temporalScope": {
+      "@type": "@id"
+    },
+    "speakingContext": {
+      "@id": "sc:speakingContext",
+      "@context": {
+        "type": "sc:speakingContextType",
+        "speaker": {
+          "@type": "@id"
+        },
+        "suggestedTo": {
+          "@type": "@id"
+        },
+        "actant": {
+          "@type": "@id"
+        }
+      }
+    },
+    "barred": {
+      "@type": "xsd:boolean"
+    },
+    "lastAuthorityRecord": {
+      "@type": "@id"
+    },
+    "projectionState": {
+      "@type": "@id"
+    },
+    "participantProjection": {
+      "@type": "@id"
+    },
+    "relatesTo": {
+      "@type": "@id"
+    },
+    "intentBearingActant": {
+      "@type": "@id"
+    },
+    "candidateActantIntent": {
+      "@type": "@id"
+    },
+    "sourceArtifact": {
+      "@type": "@id"
+    },
+    "candidateProposedByParticipant": {
+      "@type": "@id"
+    },
+    "roleplayer": {
+      "@type": "@id"
+    },
+    "participantAimContext": {
+      "@type": "@id"
+    },
+    "visibleResources": {
+      "@type": "@id"
+    },
+    "evidencePointers": {
+      "@type": "@id"
+    },
+    "recommendedActantIntent": {
+      "@type": "@id"
+    },
+    "requestedOperation": "sc:requestedOperation",
+    "requestedFocus": "sc:requestedFocus",
+    "candidateSourceKind": "sc:candidateSourceKind",
+    "recommendationDisposition": "sc:recommendationDisposition",
+    "reasonSummary": "sc:reasonSummary",
+    "confidenceLevel": "sc:confidenceLevel",
+    "suggestedOversightText": "sc:suggestedOversightText",
+    "producerProvenance": "sc:producerProvenance",
+    "createdAt": {
+      "@type": "xsd:dateTime"
+    },
+    "requestedAt": {
+      "@type": "xsd:dateTime"
+    },
+    "authorityRecord": {
+      "@type": "@id"
+    },
+    "committedEvent": {
+      "@type": "@id"
+    },
+    "commitCertificate": {
+      "@type": "@id"
+    },
+    "stateMutation": {
+      "@type": "@id"
+    },
+    "resync": {
+      "@id": "sc:resync",
+      "@context": {
+        "mode": "sc:resyncMode",
+        "state": {
+          "@id": "sc:resyncState",
+          "@type": "@id"
+        },
+        "path": "sc:resyncPath"
+      }
+    },
+    "execute": {
+      "@type": "xsd:boolean"
+    },
+    "acceptedIntent": {
+      "@type": "@id"
+    },
+    "proposedOutcome": {
+      "@type": "@id"
+    },
+    "targetEntity": {
+      "@type": "@id"
+    },
+    "consequence": {
+      "@type": "@id"
+    }
+  }
+}

@@ -1,0 +1,65 @@
+@base <https://spectacular-voyage.github.io/test-inn-ambush/> .
+@prefix sflo: <https://semantic-flow.github.io/sflo/ontology/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<recommendations/actant-intent/plan-b-review-response/_knop> a sflo:Knop ;
+  sflo:hasKnopMetadata <recommendations/actant-intent/plan-b-review-response/_knop/_meta> ;
+  sflo:hasKnopInventory <recommendations/actant-intent/plan-b-review-response/_knop/_inventory> ;
+  sflo:hasWorkingKnopInventoryFile <recommendations/actant-intent/plan-b-review-response/_knop/_inventory/inventory.ttl> ;
+  sflo:hasPayloadArtifact <recommendations/actant-intent/plan-b-review-response> ;
+  sflo:hasResourcePage <recommendations/actant-intent/plan-b-review-response/_knop/index.html> .
+
+<recommendations/actant-intent/plan-b-review-response> a sflo:PayloadArtifact, sflo:DigitalArtifact ;
+  sflo:hasArtifactHistory <recommendations/actant-intent/plan-b-review-response/_history001> ;
+  sflo:currentArtifactHistory <recommendations/actant-intent/plan-b-review-response/_history001> ;
+  sflo:nextHistoryOrdinal "2"^^xsd:nonNegativeInteger ;
+  sflo:hasWorkingLocatedFile <recommendations/actant-intent/plan-b-review-response/actant-intent-recommendation-plan-b-review.json> ;
+  sflo:hasResourcePage <recommendations/actant-intent/plan-b-review-response/index.html> .
+
+<recommendations/actant-intent/plan-b-review-response/_history001> a sflo:ArtifactHistory ;
+  sflo:historyOrdinal "1"^^xsd:nonNegativeInteger ;
+  sflo:hasHistoricalState <recommendations/actant-intent/plan-b-review-response/_history001/_s0001> ;
+  sflo:latestHistoricalState <recommendations/actant-intent/plan-b-review-response/_history001/_s0001> ;
+  sflo:nextStateOrdinal "2"^^xsd:nonNegativeInteger ;
+  sflo:hasResourcePage <recommendations/actant-intent/plan-b-review-response/_history001/index.html> .
+
+<recommendations/actant-intent/plan-b-review-response/_history001/_s0001> a sflo:HistoricalState ;
+  sflo:stateOrdinal "1"^^xsd:nonNegativeInteger ;
+  sflo:hasManifestation <recommendations/actant-intent/plan-b-review-response/_history001/_s0001/json> ;
+  sflo:locatedFileForState <recommendations/actant-intent/plan-b-review-response/_history001/_s0001/json/actant-intent-recommendation-plan-b-review.json> ;
+  sflo:hasResourcePage <recommendations/actant-intent/plan-b-review-response/_history001/_s0001/index.html> .
+
+<recommendations/actant-intent/plan-b-review-response/_history001/_s0001/json> a sflo:ArtifactManifestation ;
+  sflo:locatedFileForManifestation <recommendations/actant-intent/plan-b-review-response/_history001/_s0001/json/actant-intent-recommendation-plan-b-review.json> ;
+  sflo:hasResourcePage <recommendations/actant-intent/plan-b-review-response/_history001/_s0001/json/index.html> .
+
+<recommendations/actant-intent/plan-b-review-response/_knop/_meta> a sflo:KnopMetadata, sflo:DigitalArtifact, sflo:RdfDocument ;
+  sflo:hasWorkingLocatedFile <recommendations/actant-intent/plan-b-review-response/_knop/_meta/meta.ttl> ;
+  sflo:hasResourcePage <recommendations/actant-intent/plan-b-review-response/_knop/_meta/index.html> .
+
+<recommendations/actant-intent/plan-b-review-response/_knop/_inventory> a sflo:KnopInventory, sflo:DigitalArtifact, sflo:RdfDocument ;
+  sflo:hasWorkingLocatedFile <recommendations/actant-intent/plan-b-review-response/_knop/_inventory/inventory.ttl> ;
+  sflo:hasResourcePage <recommendations/actant-intent/plan-b-review-response/_knop/_inventory/index.html> .
+
+<recommendations/actant-intent/plan-b-review-response/_knop/_meta/meta.ttl> a sflo:LocatedFile, sflo:RdfDocument .
+
+<recommendations/actant-intent/plan-b-review-response/_knop/_inventory/inventory.ttl> a sflo:LocatedFile, sflo:RdfDocument .
+
+<recommendations/actant-intent/plan-b-review-response/actant-intent-recommendation-plan-b-review.json> a sflo:LocatedFile .
+
+<recommendations/actant-intent/plan-b-review-response/_history001/_s0001/json/actant-intent-recommendation-plan-b-review.json> a sflo:LocatedFile .
+
+<recommendations/actant-intent/plan-b-review-response/index.html> a sflo:ResourcePage, sflo:LocatedFile .
+
+<recommendations/actant-intent/plan-b-review-response/_history001/index.html> a sflo:ResourcePage, sflo:LocatedFile .
+
+<recommendations/actant-intent/plan-b-review-response/_history001/_s0001/index.html> a sflo:ResourcePage, sflo:LocatedFile .
+
+<recommendations/actant-intent/plan-b-review-response/_history001/_s0001/json/index.html> a sflo:ResourcePage, sflo:LocatedFile .
+
+<recommendations/actant-intent/plan-b-review-response/_knop/index.html> a sflo:ResourcePage, sflo:LocatedFile .
+
+<recommendations/actant-intent/plan-b-review-response/_knop/_meta/index.html> a sflo:ResourcePage, sflo:LocatedFile .
+
+<recommendations/actant-intent/plan-b-review-response/_knop/_inventory/index.html> a sflo:ResourcePage, sflo:LocatedFile .
+
