@@ -283,3 +283,43 @@
 <sessions/contributions/chat-contribution-plan-b-declaration/index.html> a sflo:ResourcePage, sflo:LocatedFile .
 
 <sessions/contributions/chat-contribution-plan-b-declaration/_knop/index.html> a sflo:ResourcePage, sflo:LocatedFile .
+
+<_mesh> sflo:hasKnop <projections/responses/participant-projection-response-alice/_knop> .
+
+<projections/responses/participant-projection-response-alice> a sflo:PayloadArtifact, sflo:DigitalArtifact ;
+  sflo:hasWorkingLocatedFile <projections/responses/participant-projection-response-alice/participant-projection-response-alice.json> .
+
+<projections/responses/participant-projection-response-alice/_knop> a sflo:Knop ;
+  sflo:hasWorkingKnopInventoryFile <projections/responses/participant-projection-response-alice/_knop/_inventory/inventory.ttl> .
+
+<projections/responses/participant-projection-response-alice/_knop/_inventory/inventory.ttl> a sflo:LocatedFile, sflo:RdfDocument .
+
+<projections/responses/participant-projection-response-alice/participant-projection-response-alice.json> a sflo:LocatedFile .
+
+<_mesh> sflo:hasKnop <projections/responses/participant-projection-response-gm/_knop> .
+
+<projections/responses/participant-projection-response-gm> a sflo:PayloadArtifact, sflo:DigitalArtifact ;
+  sflo:hasWorkingLocatedFile <projections/responses/participant-projection-response-gm/participant-projection-response-gm.json> .
+
+<projections/responses/participant-projection-response-gm/_knop> a sflo:Knop ;
+  sflo:hasWorkingKnopInventoryFile <projections/responses/participant-projection-response-gm/_knop/_inventory/inventory.ttl> .
+
+<projections/responses/participant-projection-response-gm/_knop/_inventory/inventory.ttl> a sflo:LocatedFile, sflo:RdfDocument .
+
+<projections/responses/participant-projection-response-gm/participant-projection-response-gm.json> a sflo:LocatedFile .
+
+<projections/responses/participant-projection-response-alice> sflo:hasResourcePage <projections/responses/participant-projection-response-alice/index.html> .
+
+<projections/responses/participant-projection-response-alice/_knop> sflo:hasResourcePage <projections/responses/participant-projection-response-alice/_knop/index.html> .
+
+<projections/responses/participant-projection-response-alice/index.html> a sflo:ResourcePage, sflo:LocatedFile .
+
+<projections/responses/participant-projection-response-alice/_knop/index.html> a sflo:ResourcePage, sflo:LocatedFile .
+
+<projections/responses/participant-projection-response-gm> sflo:hasResourcePage <projections/responses/participant-projection-response-gm/index.html> .
+
+<projections/responses/participant-projection-response-gm/_knop> sflo:hasResourcePage <projections/responses/participant-projection-response-gm/_knop/index.html> .
+
+<projections/responses/participant-projection-response-gm/index.html> a sflo:ResourcePage, sflo:LocatedFile .
+
+<projections/responses/participant-projection-response-gm/_knop/index.html> a sflo:ResourcePage, sflo:LocatedFile .
