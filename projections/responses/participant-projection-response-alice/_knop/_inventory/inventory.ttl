@@ -1,0 +1,65 @@
+@base <https://spectacular-voyage.github.io/test-inn-ambush/> .
+@prefix sflo: <https://semantic-flow.github.io/sflo/ontology/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<projections/responses/participant-projection-response-alice/_knop> a sflo:Knop ;
+  sflo:hasKnopMetadata <projections/responses/participant-projection-response-alice/_knop/_meta> ;
+  sflo:hasKnopInventory <projections/responses/participant-projection-response-alice/_knop/_inventory> ;
+  sflo:hasWorkingKnopInventoryFile <projections/responses/participant-projection-response-alice/_knop/_inventory/inventory.ttl> ;
+  sflo:hasPayloadArtifact <projections/responses/participant-projection-response-alice> ;
+  sflo:hasResourcePage <projections/responses/participant-projection-response-alice/_knop/index.html> .
+
+<projections/responses/participant-projection-response-alice> a sflo:PayloadArtifact, sflo:DigitalArtifact ;
+  sflo:hasArtifactHistory <projections/responses/participant-projection-response-alice/_history001> ;
+  sflo:currentArtifactHistory <projections/responses/participant-projection-response-alice/_history001> ;
+  sflo:nextHistoryOrdinal "2"^^xsd:nonNegativeInteger ;
+  sflo:hasWorkingLocatedFile <projections/responses/participant-projection-response-alice/participant-projection-response-alice.json> ;
+  sflo:hasResourcePage <projections/responses/participant-projection-response-alice/index.html> .
+
+<projections/responses/participant-projection-response-alice/_history001> a sflo:ArtifactHistory ;
+  sflo:historyOrdinal "1"^^xsd:nonNegativeInteger ;
+  sflo:hasHistoricalState <projections/responses/participant-projection-response-alice/_history001/_s0001> ;
+  sflo:latestHistoricalState <projections/responses/participant-projection-response-alice/_history001/_s0001> ;
+  sflo:nextStateOrdinal "2"^^xsd:nonNegativeInteger ;
+  sflo:hasResourcePage <projections/responses/participant-projection-response-alice/_history001/index.html> .
+
+<projections/responses/participant-projection-response-alice/_history001/_s0001> a sflo:HistoricalState ;
+  sflo:stateOrdinal "1"^^xsd:nonNegativeInteger ;
+  sflo:hasManifestation <projections/responses/participant-projection-response-alice/_history001/_s0001/json> ;
+  sflo:locatedFileForState <projections/responses/participant-projection-response-alice/_history001/_s0001/json/participant-projection-response-alice.json> ;
+  sflo:hasResourcePage <projections/responses/participant-projection-response-alice/_history001/_s0001/index.html> .
+
+<projections/responses/participant-projection-response-alice/_history001/_s0001/json> a sflo:ArtifactManifestation ;
+  sflo:locatedFileForManifestation <projections/responses/participant-projection-response-alice/_history001/_s0001/json/participant-projection-response-alice.json> ;
+  sflo:hasResourcePage <projections/responses/participant-projection-response-alice/_history001/_s0001/json/index.html> .
+
+<projections/responses/participant-projection-response-alice/_knop/_meta> a sflo:KnopMetadata, sflo:DigitalArtifact, sflo:RdfDocument ;
+  sflo:hasWorkingLocatedFile <projections/responses/participant-projection-response-alice/_knop/_meta/meta.ttl> ;
+  sflo:hasResourcePage <projections/responses/participant-projection-response-alice/_knop/_meta/index.html> .
+
+<projections/responses/participant-projection-response-alice/_knop/_inventory> a sflo:KnopInventory, sflo:DigitalArtifact, sflo:RdfDocument ;
+  sflo:hasWorkingLocatedFile <projections/responses/participant-projection-response-alice/_knop/_inventory/inventory.ttl> ;
+  sflo:hasResourcePage <projections/responses/participant-projection-response-alice/_knop/_inventory/index.html> .
+
+<projections/responses/participant-projection-response-alice/_knop/_meta/meta.ttl> a sflo:LocatedFile, sflo:RdfDocument .
+
+<projections/responses/participant-projection-response-alice/_knop/_inventory/inventory.ttl> a sflo:LocatedFile, sflo:RdfDocument .
+
+<projections/responses/participant-projection-response-alice/participant-projection-response-alice.json> a sflo:LocatedFile .
+
+<projections/responses/participant-projection-response-alice/_history001/_s0001/json/participant-projection-response-alice.json> a sflo:LocatedFile .
+
+<projections/responses/participant-projection-response-alice/index.html> a sflo:ResourcePage, sflo:LocatedFile .
+
+<projections/responses/participant-projection-response-alice/_history001/index.html> a sflo:ResourcePage, sflo:LocatedFile .
+
+<projections/responses/participant-projection-response-alice/_history001/_s0001/index.html> a sflo:ResourcePage, sflo:LocatedFile .
+
+<projections/responses/participant-projection-response-alice/_history001/_s0001/json/index.html> a sflo:ResourcePage, sflo:LocatedFile .
+
+<projections/responses/participant-projection-response-alice/_knop/index.html> a sflo:ResourcePage, sflo:LocatedFile .
+
+<projections/responses/participant-projection-response-alice/_knop/_meta/index.html> a sflo:ResourcePage, sflo:LocatedFile .
+
+<projections/responses/participant-projection-response-alice/_knop/_inventory/index.html> a sflo:ResourcePage, sflo:LocatedFile .
+

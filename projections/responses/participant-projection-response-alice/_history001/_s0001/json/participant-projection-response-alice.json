@@ -1,0 +1,41 @@
+{
+  "@context": "https://spectacular-voyage.github.io/test-inn-ambush/projections/contracts/inn-ambush-contract.context.jsonld",
+  "@type": "ParticipantProjectionResponse",
+  "type": "stagecraft.participant-projection.response.v1",
+  "id": "participant-projection-response-alice-current-001",
+  "participant": "https://spectacular-voyage.github.io/test-inn-ambush/participant/alice",
+  "participantProjection": "https://spectacular-voyage.github.io/test-inn-ambush/projection/alice/inn-ambush-plan-b",
+  "projectionAudience": "participant",
+  "projectionHistory": "https://spectacular-voyage.github.io/test-inn-ambush/rdf-export/inn-ambush-plan-b/history/main",
+  "projectionState": "https://spectacular-voyage.github.io/test-inn-ambush/rdf-export/inn-ambush-plan-b/state/s0001",
+  "projectionStateOrdinal": 1,
+  "sourceProjection": {
+    "observedProjectionState": "https://spectacular-voyage.github.io/test-inn-ambush/rdf-export/inn-ambush-plan-b/state/s0001",
+    "participantProjection": "https://spectacular-voyage.github.io/test-inn-ambush/projection/alice/inn-ambush-plan-b"
+  },
+  "visibleResources": [
+    "https://spectacular-voyage.github.io/test-inn-ambush/beat/plan-b",
+    "https://spectacular-voyage.github.io/test-inn-ambush/suggestion/plan-b",
+    "https://spectacular-voyage.github.io/test-inn-ambush/intent/elara-plan-b"
+  ],
+  "resourceSummaries": [
+    {
+      "resource": "https://spectacular-voyage.github.io/test-inn-ambush/beat/plan-b",
+      "resourceClass": "https://spectacular-voyage.github.io/stagecraft/ontology/Beat",
+      "label": "Plan B beat",
+      "summary": "Plan B is the accepted table beat: Elara bars the inn door with Ashfang."
+    },
+    {
+      "resource": "https://spectacular-voyage.github.io/test-inn-ambush/suggestion/plan-b",
+      "resourceClass": "https://spectacular-voyage.github.io/stagecraft/ontology/Suggestion",
+      "label": "Bob's Plan B suggestion",
+      "summary": "Bob suggested that Elara bar the door with Ashfang."
+    },
+    {
+      "resource": "https://spectacular-voyage.github.io/test-inn-ambush/intent/elara-plan-b",
+      "resourceClass": "https://spectacular-voyage.github.io/stagecraft/ontology/Intent",
+      "label": "Elara's Plan B intent",
+      "summary": "Alice declared Elara's intent to bar the door before the ambush resolves."
+    }
+  ]
+}
