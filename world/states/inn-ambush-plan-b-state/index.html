@@ -141,14 +141,15 @@
       <details open>
         <summary>Latest historical manifestation file</summary>
         <div class="wf-source-meta">
-          <span>world/states/inn-ambush-plan-b-state/_history001/_s0002/ttl/inn-ambush-plan-b-state.ttl</span>
-          <a href="/test-inn-ambush/world/states/inn-ambush-plan-b-state/_history001/_s0002/ttl/inn-ambush-plan-b-state.ttl">Raw file</a>
+          <span>world/states/inn-ambush-plan-b-state/_history001/_s0003/ttl/inn-ambush-plan-b-state.ttl</span>
+          <a href="/test-inn-ambush/world/states/inn-ambush-plan-b-state/_history001/_s0003/ttl/inn-ambush-plan-b-state.ttl">Raw file</a>
         </div>
 <pre class="shiki github-dark-default" style="background-color:#0d1117;color:#e6edf3" tabindex="0"><code><span class="line"><span style="color:#FF7B72">@prefix dcat:</span><span style="color:#FFA657"> &#x3C;http://www.w3.org/ns/dcat#></span><span style="color:#E6EDF3"> .</span></span>
 <span class="line"><span style="color:#FF7B72">@prefix dcterms:</span><span style="color:#FFA657"> &#x3C;http://purl.org/dc/terms/></span><span style="color:#E6EDF3"> .</span></span>
 <span class="line"><span style="color:#FF7B72">@prefix sc:</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/stagecraft/ontology/></span><span style="color:#E6EDF3"> .</span></span>
 <span class="line"><span style="color:#FF7B72">@prefix schema:</span><span style="color:#FFA657"> &#x3C;https://schema.org/></span><span style="color:#E6EDF3"> .</span></span>
 <span class="line"><span style="color:#FF7B72">@prefix sflo:</span><span style="color:#FFA657"> &#x3C;https://semantic-flow.github.io/sflo/ontology/></span><span style="color:#E6EDF3"> .</span></span>
+<span class="line"><span style="color:#FF7B72">@prefix time:</span><span style="color:#FFA657"> &#x3C;http://www.w3.org/2006/time#></span><span style="color:#E6EDF3"> .</span></span>
 <span class="line"><span style="color:#FF7B72">@prefix xsd:</span><span style="color:#FFA657"> &#x3C;http://www.w3.org/2001/XMLSchema#></span><span style="color:#E6EDF3"> .</span></span>
 <span class="line"></span>
 <span class="line"><span style="color:#FFA657">&#x3C;https://spectacular-voyage.github.io/test-inn-ambush/rdf-export/inn-ambush-plan-b></span></span>
@@ -238,11 +239,24 @@
 <span class="line"><span style="color:#FF7B72">  sc:</span><span style="color:#79C0FF">inScenario</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/scenario/inn-ambush></span><span style="color:#E6EDF3"> .</span></span>
 <span class="line"></span>
 <span class="line"><span style="color:#FFA657">&#x3C;https://spectacular-voyage.github.io/test-inn-ambush/scene-local-time/inn-scene-plan-b></span></span>
-<span class="line"><span style="color:#FF7B72">  a</span><span style="color:#FF7B72"> sc:</span><span style="color:#79C0FF">SceneLocalTime</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  a</span><span style="color:#FF7B72"> sc:</span><span style="color:#79C0FF">SceneLocalTime</span><span style="color:#E6EDF3">, </span><span style="color:#FF7B72">sc:</span><span style="color:#79C0FF">TemporalAnchor</span><span style="color:#E6EDF3">, </span><span style="color:#FF7B72">time:</span><span style="color:#79C0FF">ProperInterval</span><span style="color:#E6EDF3"> ;</span></span>
 <span class="line"><span style="color:#FF7B72">  dcterms:</span><span style="color:#79C0FF">description</span><span style="color:#A5D6FF"> "Scene beat 02: Plan B has been accepted while the enemy attack is staged but unresolved."</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dcterms:</span><span style="color:#79C0FF">references</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/beat/plan-b></span><span style="color:#E6EDF3"> ;</span></span>
 <span class="line"><span style="color:#FF7B72">  sc:</span><span style="color:#79C0FF">basedOnAuthorityRecord</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/outcome-committed/plan-b-001></span><span style="color:#E6EDF3"> ;</span></span>
 <span class="line"><span style="color:#FF7B72">  sc:</span><span style="color:#79C0FF">hasWorldTimePolicy</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/world-time-policy/held-elastic></span><span style="color:#E6EDF3"> ;</span></span>
-<span class="line"><span style="color:#FF7B72">  sc:</span><span style="color:#79C0FF">inTemporalScope</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/temporal-scope/inn-scene></span><span style="color:#E6EDF3"> .</span></span>
+<span class="line"><span style="color:#FF7B72">  sc:</span><span style="color:#79C0FF">inTemporalScope</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/temporal-scope/inn-scene></span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  time:</span><span style="color:#79C0FF">hasBeginning</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/temporal-anchor/inn-scene-plan-b/beginning></span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  time:</span><span style="color:#79C0FF">hasEnd</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/temporal-anchor/inn-scene-plan-b/end></span><span style="color:#E6EDF3"> .</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FFA657">&#x3C;https://spectacular-voyage.github.io/test-inn-ambush/temporal-anchor/inn-scene-plan-b/beginning></span></span>
+<span class="line"><span style="color:#FF7B72">  a</span><span style="color:#FF7B72"> sc:</span><span style="color:#79C0FF">TemporalAnchor</span><span style="color:#E6EDF3">, </span><span style="color:#FF7B72">time:</span><span style="color:#79C0FF">Instant</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dcterms:</span><span style="color:#79C0FF">description</span><span style="color:#A5D6FF"> "Beginning anchor for the held-elastic Inn scene Plan B beat."</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dcterms:</span><span style="color:#79C0FF">references</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/beat/plan-b></span><span style="color:#E6EDF3"> .</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FFA657">&#x3C;https://spectacular-voyage.github.io/test-inn-ambush/temporal-anchor/inn-scene-plan-b/end></span></span>
+<span class="line"><span style="color:#FF7B72">  a</span><span style="color:#FF7B72"> sc:</span><span style="color:#79C0FF">TemporalAnchor</span><span style="color:#E6EDF3">, </span><span style="color:#FF7B72">time:</span><span style="color:#79C0FF">Instant</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dcterms:</span><span style="color:#79C0FF">description</span><span style="color:#A5D6FF"> "End anchor for the held-elastic Inn scene Plan B beat."</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dcterms:</span><span style="color:#79C0FF">references</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/beat/plan-b></span><span style="color:#E6EDF3"> .</span></span>
 <span class="line"></span>
 <span class="line"><span style="color:#FFA657">&#x3C;https://spectacular-voyage.github.io/test-inn-ambush/duration/inn-scene-elastic-window></span></span>
 <span class="line"><span style="color:#FF7B72">  a</span><span style="color:#FF7B72"> sc:</span><span style="color:#79C0FF">ElasticDuration</span><span style="color:#E6EDF3"> ;</span></span>
@@ -289,8 +303,6 @@
 <span class="line"><span style="color:#FF7B72">  a</span><span style="color:#FF7B72"> sc:</span><span style="color:#79C0FF">Suggestion</span><span style="color:#E6EDF3"> ;</span></span>
 <span class="line"><span style="color:#FF7B72">  sc:</span><span style="color:#79C0FF">suggestedBy</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/participant/bob></span><span style="color:#E6EDF3"> ;</span></span>
 <span class="line"><span style="color:#FF7B72">  sc:</span><span style="color:#79C0FF">suggestedTo</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/participant/alice></span><span style="color:#E6EDF3"> ;</span></span>
-<span class="line"><span style="color:#FF7B72">  sc:</span><span style="color:#79C0FF">visibleTo</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/participant/alice></span><span style="color:#E6EDF3">,</span></span>
-<span class="line"><span style="color:#FFA657">    &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/gm/alex></span><span style="color:#E6EDF3"> ;</span></span>
 <span class="line"><span style="color:#FF7B72">  sc:</span><span style="color:#79C0FF">inHistory</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/history/main></span><span style="color:#E6EDF3"> ;</span></span>
 <span class="line"><span style="color:#FF7B72">  sc:</span><span style="color:#79C0FF">inScenario</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/scenario/inn-ambush></span><span style="color:#E6EDF3"> ;</span></span>
 <span class="line"><span style="color:#FF7B72">  sc:</span><span style="color:#79C0FF">inTemporalScope</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/temporal-scope/inn-scene></span><span style="color:#E6EDF3"> .</span></span>
@@ -299,8 +311,6 @@
 <span class="line"><span style="color:#FF7B72">  a</span><span style="color:#FF7B72"> sc:</span><span style="color:#79C0FF">Intent</span><span style="color:#E6EDF3"> ;</span></span>
 <span class="line"><span style="color:#FF7B72">  sc:</span><span style="color:#79C0FF">referencesSuggestion</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/suggestion/plan-b></span><span style="color:#E6EDF3"> ;</span></span>
 <span class="line"><span style="color:#FF7B72">  sc:</span><span style="color:#79C0FF">focusesOn</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/actant/elara></span><span style="color:#E6EDF3"> ;</span></span>
-<span class="line"><span style="color:#FF7B72">  sc:</span><span style="color:#79C0FF">visibleTo</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/participant/alice></span><span style="color:#E6EDF3">,</span></span>
-<span class="line"><span style="color:#FFA657">    &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/gm/alex></span><span style="color:#E6EDF3"> ;</span></span>
 <span class="line"><span style="color:#FF7B72">  sc:</span><span style="color:#79C0FF">inHistory</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/history/main></span><span style="color:#E6EDF3"> ;</span></span>
 <span class="line"><span style="color:#FF7B72">  sc:</span><span style="color:#79C0FF">inScenario</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/scenario/inn-ambush></span><span style="color:#E6EDF3"> ;</span></span>
 <span class="line"><span style="color:#FF7B72">  sc:</span><span style="color:#79C0FF">inTemporalScope</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/temporal-scope/inn-scene></span><span style="color:#E6EDF3"> .</span></span>
@@ -326,9 +336,6 @@
 <span class="line"><span style="color:#FF7B72">  dcterms:</span><span style="color:#79C0FF">description</span><span style="color:#A5D6FF"> "Plan B is a dramatic beat with visible opportunities for Alice, Bob, and Alex."</span><span style="color:#E6EDF3"> ;</span></span>
 <span class="line"><span style="color:#FF7B72">  sc:</span><span style="color:#79C0FF">hasNarrativeFunction</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/narrative-function/dramatic-beat></span><span style="color:#E6EDF3"> ;</span></span>
 <span class="line"><span style="color:#FF7B72">  sc:</span><span style="color:#79C0FF">offersOpportunityTo</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/participant/alice></span><span style="color:#E6EDF3">,</span></span>
-<span class="line"><span style="color:#FFA657">    &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/participant/bob></span><span style="color:#E6EDF3">,</span></span>
-<span class="line"><span style="color:#FFA657">    &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/gm/alex></span><span style="color:#E6EDF3"> ;</span></span>
-<span class="line"><span style="color:#FF7B72">  sc:</span><span style="color:#79C0FF">visibleTo</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/participant/alice></span><span style="color:#E6EDF3">,</span></span>
 <span class="line"><span style="color:#FFA657">    &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/participant/bob></span><span style="color:#E6EDF3">,</span></span>
 <span class="line"><span style="color:#FFA657">    &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/gm/alex></span><span style="color:#E6EDF3"> ;</span></span>
 <span class="line"><span style="color:#FF7B72">  sc:</span><span style="color:#79C0FF">inHistory</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/history/main></span><span style="color:#E6EDF3"> ;</span></span>
@@ -368,8 +375,6 @@
 <span class="line"></span>
 <span class="line"><span style="color:#FFA657">&#x3C;https://spectacular-voyage.github.io/test-inn-ambush/actant/elara></span></span>
 <span class="line"><span style="color:#FF7B72">  a</span><span style="color:#FF7B72"> sc:</span><span style="color:#79C0FF">Actant</span><span style="color:#E6EDF3">, </span><span style="color:#FF7B72">sc:</span><span style="color:#79C0FF">Character</span><span style="color:#E6EDF3"> ;</span></span>
-<span class="line"><span style="color:#FF7B72">  sc:</span><span style="color:#79C0FF">visibleTo</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/participant/alice></span><span style="color:#E6EDF3">,</span></span>
-<span class="line"><span style="color:#FFA657">    &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/gm/alex></span><span style="color:#E6EDF3"> ;</span></span>
 <span class="line"><span style="color:#FF7B72">  sc:</span><span style="color:#79C0FF">inHistory</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/history/main></span><span style="color:#E6EDF3"> ;</span></span>
 <span class="line"><span style="color:#FF7B72">  sc:</span><span style="color:#79C0FF">inScenario</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/scenario/inn-ambush></span><span style="color:#E6EDF3"> ;</span></span>
 <span class="line"><span style="color:#FF7B72">  sc:</span><span style="color:#79C0FF">inTemporalScope</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/temporal-scope/inn-scene></span><span style="color:#E6EDF3"> ;</span></span>
@@ -377,12 +382,95 @@
 <span class="line"></span>
 <span class="line"><span style="color:#FFA657">&#x3C;https://spectacular-voyage.github.io/test-inn-ambush/actant/nera></span></span>
 <span class="line"><span style="color:#FF7B72">  a</span><span style="color:#FF7B72"> sc:</span><span style="color:#79C0FF">Actant</span><span style="color:#E6EDF3">, </span><span style="color:#FF7B72">sc:</span><span style="color:#79C0FF">Character</span><span style="color:#E6EDF3"> ;</span></span>
-<span class="line"><span style="color:#FF7B72">  sc:</span><span style="color:#79C0FF">visibleTo</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/participant/alice></span><span style="color:#E6EDF3">,</span></span>
-<span class="line"><span style="color:#FFA657">    &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/gm/alex></span><span style="color:#E6EDF3"> ;</span></span>
 <span class="line"><span style="color:#FF7B72">  sc:</span><span style="color:#79C0FF">inHistory</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/history/main></span><span style="color:#E6EDF3"> ;</span></span>
 <span class="line"><span style="color:#FF7B72">  sc:</span><span style="color:#79C0FF">inScenario</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/scenario/inn-ambush></span><span style="color:#E6EDF3"> ;</span></span>
 <span class="line"><span style="color:#FF7B72">  sc:</span><span style="color:#79C0FF">inTemporalScope</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/temporal-scope/inn-scene></span><span style="color:#E6EDF3"> ;</span></span>
 <span class="line"><span style="color:#FF7B72">  sc:</span><span style="color:#79C0FF">locatedIn</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/room/old-mill-inn></span><span style="color:#E6EDF3"> .</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FFA657">&#x3C;https://spectacular-voyage.github.io/test-inn-ambush/relator/visibility/suggestion-plan-b/alice-current></span></span>
+<span class="line"><span style="color:#FF7B72">  a</span><span style="color:#FF7B72"> sc:</span><span style="color:#79C0FF">TemporalRelator</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sc:</span><span style="color:#79C0FF">subject</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/suggestion/plan-b></span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sc:</span><span style="color:#79C0FF">predicate</span><span style="color:#FF7B72"> sc:</span><span style="color:#79C0FF">visibleTo</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sc:</span><span style="color:#79C0FF">object</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/participant/alice></span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sc:</span><span style="color:#79C0FF">acceptedFrom</span><span style="color:#A5D6FF"> "2026-06-29T13:35:00Z"</span><span style="color:#E6EDF3">^^</span><span style="color:#FF7B72">xsd:</span><span style="color:#79C0FF">dateTime</span><span style="color:#E6EDF3"> .</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FFA657">&#x3C;https://spectacular-voyage.github.io/test-inn-ambush/relator/visibility/suggestion-plan-b/alex-current></span></span>
+<span class="line"><span style="color:#FF7B72">  a</span><span style="color:#FF7B72"> sc:</span><span style="color:#79C0FF">TemporalRelator</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sc:</span><span style="color:#79C0FF">subject</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/suggestion/plan-b></span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sc:</span><span style="color:#79C0FF">predicate</span><span style="color:#FF7B72"> sc:</span><span style="color:#79C0FF">visibleTo</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sc:</span><span style="color:#79C0FF">object</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/gm/alex></span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sc:</span><span style="color:#79C0FF">acceptedFrom</span><span style="color:#A5D6FF"> "2026-06-29T13:35:00Z"</span><span style="color:#E6EDF3">^^</span><span style="color:#FF7B72">xsd:</span><span style="color:#79C0FF">dateTime</span><span style="color:#E6EDF3"> .</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FFA657">&#x3C;https://spectacular-voyage.github.io/test-inn-ambush/relator/visibility/suggestion-plan-b/bob-superseded></span></span>
+<span class="line"><span style="color:#FF7B72">  a</span><span style="color:#FF7B72"> sc:</span><span style="color:#79C0FF">TemporalRelator</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sc:</span><span style="color:#79C0FF">subject</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/suggestion/plan-b></span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sc:</span><span style="color:#79C0FF">predicate</span><span style="color:#FF7B72"> sc:</span><span style="color:#79C0FF">visibleTo</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sc:</span><span style="color:#79C0FF">object</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/participant/bob></span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sc:</span><span style="color:#79C0FF">acceptedFrom</span><span style="color:#A5D6FF"> "2026-06-29T13:34:00Z"</span><span style="color:#E6EDF3">^^</span><span style="color:#FF7B72">xsd:</span><span style="color:#79C0FF">dateTime</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sc:</span><span style="color:#79C0FF">acceptedUntil</span><span style="color:#A5D6FF"> "2026-06-29T13:35:00Z"</span><span style="color:#E6EDF3">^^</span><span style="color:#FF7B72">xsd:</span><span style="color:#79C0FF">dateTime</span><span style="color:#E6EDF3"> .</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FFA657">&#x3C;https://spectacular-voyage.github.io/test-inn-ambush/relator/visibility/intent-elara-plan-b/alice-current></span></span>
+<span class="line"><span style="color:#FF7B72">  a</span><span style="color:#FF7B72"> sc:</span><span style="color:#79C0FF">TemporalRelator</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sc:</span><span style="color:#79C0FF">subject</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/intent/elara-plan-b></span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sc:</span><span style="color:#79C0FF">predicate</span><span style="color:#FF7B72"> sc:</span><span style="color:#79C0FF">visibleTo</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sc:</span><span style="color:#79C0FF">object</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/participant/alice></span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sc:</span><span style="color:#79C0FF">acceptedFrom</span><span style="color:#A5D6FF"> "2026-06-29T13:35:00Z"</span><span style="color:#E6EDF3">^^</span><span style="color:#FF7B72">xsd:</span><span style="color:#79C0FF">dateTime</span><span style="color:#E6EDF3"> .</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FFA657">&#x3C;https://spectacular-voyage.github.io/test-inn-ambush/relator/visibility/intent-elara-plan-b/alex-current></span></span>
+<span class="line"><span style="color:#FF7B72">  a</span><span style="color:#FF7B72"> sc:</span><span style="color:#79C0FF">TemporalRelator</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sc:</span><span style="color:#79C0FF">subject</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/intent/elara-plan-b></span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sc:</span><span style="color:#79C0FF">predicate</span><span style="color:#FF7B72"> sc:</span><span style="color:#79C0FF">visibleTo</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sc:</span><span style="color:#79C0FF">object</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/gm/alex></span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sc:</span><span style="color:#79C0FF">acceptedFrom</span><span style="color:#A5D6FF"> "2026-06-29T13:35:00Z"</span><span style="color:#E6EDF3">^^</span><span style="color:#FF7B72">xsd:</span><span style="color:#79C0FF">dateTime</span><span style="color:#E6EDF3"> .</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FFA657">&#x3C;https://spectacular-voyage.github.io/test-inn-ambush/relator/visibility/beat-plan-b/alice-current></span></span>
+<span class="line"><span style="color:#FF7B72">  a</span><span style="color:#FF7B72"> sc:</span><span style="color:#79C0FF">TemporalRelator</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sc:</span><span style="color:#79C0FF">subject</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/beat/plan-b></span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sc:</span><span style="color:#79C0FF">predicate</span><span style="color:#FF7B72"> sc:</span><span style="color:#79C0FF">visibleTo</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sc:</span><span style="color:#79C0FF">object</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/participant/alice></span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sc:</span><span style="color:#79C0FF">acceptedFrom</span><span style="color:#A5D6FF"> "2026-06-29T13:35:00Z"</span><span style="color:#E6EDF3">^^</span><span style="color:#FF7B72">xsd:</span><span style="color:#79C0FF">dateTime</span><span style="color:#E6EDF3"> .</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FFA657">&#x3C;https://spectacular-voyage.github.io/test-inn-ambush/relator/visibility/beat-plan-b/bob-current></span></span>
+<span class="line"><span style="color:#FF7B72">  a</span><span style="color:#FF7B72"> sc:</span><span style="color:#79C0FF">TemporalRelator</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sc:</span><span style="color:#79C0FF">subject</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/beat/plan-b></span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sc:</span><span style="color:#79C0FF">predicate</span><span style="color:#FF7B72"> sc:</span><span style="color:#79C0FF">visibleTo</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sc:</span><span style="color:#79C0FF">object</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/participant/bob></span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sc:</span><span style="color:#79C0FF">acceptedFrom</span><span style="color:#A5D6FF"> "2026-06-29T13:35:00Z"</span><span style="color:#E6EDF3">^^</span><span style="color:#FF7B72">xsd:</span><span style="color:#79C0FF">dateTime</span><span style="color:#E6EDF3"> .</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FFA657">&#x3C;https://spectacular-voyage.github.io/test-inn-ambush/relator/visibility/beat-plan-b/alex-current></span></span>
+<span class="line"><span style="color:#FF7B72">  a</span><span style="color:#FF7B72"> sc:</span><span style="color:#79C0FF">TemporalRelator</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sc:</span><span style="color:#79C0FF">subject</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/beat/plan-b></span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sc:</span><span style="color:#79C0FF">predicate</span><span style="color:#FF7B72"> sc:</span><span style="color:#79C0FF">visibleTo</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sc:</span><span style="color:#79C0FF">object</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/gm/alex></span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sc:</span><span style="color:#79C0FF">acceptedFrom</span><span style="color:#A5D6FF"> "2026-06-29T13:35:00Z"</span><span style="color:#E6EDF3">^^</span><span style="color:#FF7B72">xsd:</span><span style="color:#79C0FF">dateTime</span><span style="color:#E6EDF3"> .</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FFA657">&#x3C;https://spectacular-voyage.github.io/test-inn-ambush/relator/visibility/elara/alice-current></span></span>
+<span class="line"><span style="color:#FF7B72">  a</span><span style="color:#FF7B72"> sc:</span><span style="color:#79C0FF">TemporalRelator</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sc:</span><span style="color:#79C0FF">subject</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/actant/elara></span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sc:</span><span style="color:#79C0FF">predicate</span><span style="color:#FF7B72"> sc:</span><span style="color:#79C0FF">visibleTo</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sc:</span><span style="color:#79C0FF">object</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/participant/alice></span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sc:</span><span style="color:#79C0FF">acceptedFrom</span><span style="color:#A5D6FF"> "2026-06-29T13:35:00Z"</span><span style="color:#E6EDF3">^^</span><span style="color:#FF7B72">xsd:</span><span style="color:#79C0FF">dateTime</span><span style="color:#E6EDF3"> .</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FFA657">&#x3C;https://spectacular-voyage.github.io/test-inn-ambush/relator/visibility/elara/alex-current></span></span>
+<span class="line"><span style="color:#FF7B72">  a</span><span style="color:#FF7B72"> sc:</span><span style="color:#79C0FF">TemporalRelator</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sc:</span><span style="color:#79C0FF">subject</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/actant/elara></span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sc:</span><span style="color:#79C0FF">predicate</span><span style="color:#FF7B72"> sc:</span><span style="color:#79C0FF">visibleTo</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sc:</span><span style="color:#79C0FF">object</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/gm/alex></span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sc:</span><span style="color:#79C0FF">acceptedFrom</span><span style="color:#A5D6FF"> "2026-06-29T13:35:00Z"</span><span style="color:#E6EDF3">^^</span><span style="color:#FF7B72">xsd:</span><span style="color:#79C0FF">dateTime</span><span style="color:#E6EDF3"> .</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FFA657">&#x3C;https://spectacular-voyage.github.io/test-inn-ambush/relator/visibility/nera/alice-current></span></span>
+<span class="line"><span style="color:#FF7B72">  a</span><span style="color:#FF7B72"> sc:</span><span style="color:#79C0FF">TemporalRelator</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sc:</span><span style="color:#79C0FF">subject</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/actant/nera></span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sc:</span><span style="color:#79C0FF">predicate</span><span style="color:#FF7B72"> sc:</span><span style="color:#79C0FF">visibleTo</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sc:</span><span style="color:#79C0FF">object</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/participant/alice></span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sc:</span><span style="color:#79C0FF">acceptedFrom</span><span style="color:#A5D6FF"> "2026-06-29T13:35:00Z"</span><span style="color:#E6EDF3">^^</span><span style="color:#FF7B72">xsd:</span><span style="color:#79C0FF">dateTime</span><span style="color:#E6EDF3"> .</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FFA657">&#x3C;https://spectacular-voyage.github.io/test-inn-ambush/relator/visibility/nera/alex-current></span></span>
+<span class="line"><span style="color:#FF7B72">  a</span><span style="color:#FF7B72"> sc:</span><span style="color:#79C0FF">TemporalRelator</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sc:</span><span style="color:#79C0FF">subject</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/actant/nera></span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sc:</span><span style="color:#79C0FF">predicate</span><span style="color:#FF7B72"> sc:</span><span style="color:#79C0FF">visibleTo</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sc:</span><span style="color:#79C0FF">object</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/gm/alex></span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sc:</span><span style="color:#79C0FF">acceptedFrom</span><span style="color:#A5D6FF"> "2026-06-29T13:35:00Z"</span><span style="color:#E6EDF3">^^</span><span style="color:#FF7B72">xsd:</span><span style="color:#79C0FF">dateTime</span><span style="color:#E6EDF3"> .</span></span>
 <span class="line"></span>
 <span class="line"><span style="color:#FFA657">&#x3C;https://spectacular-voyage.github.io/test-inn-ambush/item/ashfang></span></span>
 <span class="line"><span style="color:#FF7B72">  a</span><span style="color:#FF7B72"> sc:</span><span style="color:#79C0FF">Item</span><span style="color:#E6EDF3">, </span><span style="color:#FF7B72">sc:</span><span style="color:#79C0FF">Target</span><span style="color:#E6EDF3"> ;</span></span>
@@ -395,16 +483,35 @@
 <span class="line"><span style="color:#FFA657">&#x3C;https://spectacular-voyage.github.io/test-inn-ambush/target/door></span></span>
 <span class="line"><span style="color:#FF7B72">  a</span><span style="color:#FF7B72"> sc:</span><span style="color:#79C0FF">Target</span><span style="color:#E6EDF3"> ;</span></span>
 <span class="line"><span style="color:#FF7B72">  sc:</span><span style="color:#79C0FF">appliesConsequence</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/consequence/door-barred></span><span style="color:#E6EDF3"> ;</span></span>
-<span class="line"><span style="color:#FF7B72">  sc:</span><span style="color:#79C0FF">barred</span><span style="color:#79C0FF"> true</span><span style="color:#E6EDF3"> ;</span></span>
 <span class="line"><span style="color:#FF7B72">  sc:</span><span style="color:#79C0FF">branchContext</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/branch/plan-b></span><span style="color:#E6EDF3"> ;</span></span>
 <span class="line"><span style="color:#FF7B72">  sc:</span><span style="color:#79C0FF">continuityDebtRecord</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/continuity-debt/plan-b-door-barred-before-attack></span><span style="color:#E6EDF3"> ;</span></span>
 <span class="line"><span style="color:#FF7B72">  sc:</span><span style="color:#79C0FF">inHistory</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/history/main></span><span style="color:#E6EDF3"> ;</span></span>
 <span class="line"><span style="color:#FF7B72">  sc:</span><span style="color:#79C0FF">inScenario</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/scenario/inn-ambush></span><span style="color:#E6EDF3"> ;</span></span>
 <span class="line"><span style="color:#FF7B72">  sc:</span><span style="color:#79C0FF">inTemporalScope</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/temporal-scope/inn-scene></span><span style="color:#E6EDF3"> ;</span></span>
-<span class="line"><span style="color:#FF7B72">  sc:</span><span style="color:#79C0FF">lastAuthorityRecord</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/outcome-committed/plan-b-001></span><span style="color:#E6EDF3"> ;</span></span>
-<span class="line"><span style="color:#FF7B72">  sc:</span><span style="color:#79C0FF">lastCommittedEvent</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/committed-event/plan-b-001></span><span style="color:#E6EDF3"> ;</span></span>
-<span class="line"><span style="color:#FF7B72">  sc:</span><span style="color:#79C0FF">lastStateMutation</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/state-mutation/door-barred-plan-b-001></span><span style="color:#E6EDF3"> ;</span></span>
 <span class="line"><span style="color:#FF7B72">  sc:</span><span style="color:#79C0FF">locatedIn</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/room/old-mill-inn></span><span style="color:#E6EDF3"> .</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FFA657">&#x3C;https://spectacular-voyage.github.io/test-inn-ambush/relator/door-barred/plan-b-001-superseded></span></span>
+<span class="line"><span style="color:#FF7B72">  a</span><span style="color:#FF7B72"> sc:</span><span style="color:#79C0FF">TemporalRelator</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sc:</span><span style="color:#79C0FF">subject</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/target/door></span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sc:</span><span style="color:#79C0FF">predicate</span><span style="color:#FF7B72"> sc:</span><span style="color:#79C0FF">barred</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sc:</span><span style="color:#79C0FF">object</span><span style="color:#79C0FF"> false</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sc:</span><span style="color:#79C0FF">acceptedFrom</span><span style="color:#A5D6FF"> "2026-06-29T13:34:00Z"</span><span style="color:#E6EDF3">^^</span><span style="color:#FF7B72">xsd:</span><span style="color:#79C0FF">dateTime</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sc:</span><span style="color:#79C0FF">acceptedUntil</span><span style="color:#A5D6FF"> "2026-06-29T13:35:00Z"</span><span style="color:#E6EDF3">^^</span><span style="color:#FF7B72">xsd:</span><span style="color:#79C0FF">dateTime</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sc:</span><span style="color:#79C0FF">applicableDuring</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/scene-local-time/inn-scene-plan-b></span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sc:</span><span style="color:#79C0FF">basedOnAuthorityRecord</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/outcome-committed/plan-b-001></span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sc:</span><span style="color:#79C0FF">branchContext</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/branch/plan-b></span><span style="color:#E6EDF3"> .</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FFA657">&#x3C;https://spectacular-voyage.github.io/test-inn-ambush/relator/door-barred/plan-b-001-current></span></span>
+<span class="line"><span style="color:#FF7B72">  a</span><span style="color:#FF7B72"> sc:</span><span style="color:#79C0FF">TemporalRelator</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sc:</span><span style="color:#79C0FF">subject</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/target/door></span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sc:</span><span style="color:#79C0FF">predicate</span><span style="color:#FF7B72"> sc:</span><span style="color:#79C0FF">barred</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sc:</span><span style="color:#79C0FF">object</span><span style="color:#79C0FF"> true</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sc:</span><span style="color:#79C0FF">acceptedFrom</span><span style="color:#A5D6FF"> "2026-06-29T13:35:00Z"</span><span style="color:#E6EDF3">^^</span><span style="color:#FF7B72">xsd:</span><span style="color:#79C0FF">dateTime</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sc:</span><span style="color:#79C0FF">applicableDuring</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/scene-local-time/inn-scene-plan-b></span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sc:</span><span style="color:#79C0FF">basedOnAuthorityRecord</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/outcome-committed/plan-b-001></span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sc:</span><span style="color:#79C0FF">branchContext</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/branch/plan-b></span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sc:</span><span style="color:#79C0FF">causedByCommittedEvent</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/committed-event/plan-b-001></span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sc:</span><span style="color:#79C0FF">producedStateMutation</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/state-mutation/door-barred-plan-b-001></span><span style="color:#E6EDF3"> .</span></span>
 <span class="line"></span>
 <span class="line"><span style="color:#FFA657">&#x3C;https://spectacular-voyage.github.io/test-inn-ambush/consequence/door-barred></span></span>
 <span class="line"><span style="color:#FF7B72">  a</span><span style="color:#FF7B72"> sc:</span><span style="color:#79C0FF">InWorldConsequence</span><span style="color:#E6EDF3"> ;</span></span>
@@ -481,6 +588,15 @@
                 </div>
               </details>
             </details>
+            <details class="wf-history-node wf-history-node--state" open>
+              <summary class="wf-history-node-header"><a href="/test-inn-ambush/world/states/inn-ambush-plan-b-state/_history001/_s0003">_s0003</a></summary>
+              <details class="wf-history-node wf-history-node--manifestation" open>
+                <summary class="wf-history-node-header"><a href="/test-inn-ambush/world/states/inn-ambush-plan-b-state/_history001/_s0003/ttl">ttl</a></summary>
+                <div class="wf-history-node wf-history-node--file">
+                  <div class="wf-history-node-header"><a href="/test-inn-ambush/world/states/inn-ambush-plan-b-state/_history001/_s0003/ttl/inn-ambush-plan-b-state.ttl" class="wf-history-file-iri">https://spectacular-voyage.github.io/test-inn-ambush/world/states/inn-ambush-plan-b-state/_history001/_s0003/ttl/inn-ambush-plan-b-state.ttl</a></div>
+                </div>
+              </details>
+            </details>
           </details>
         </div>
       </details>
@@ -489,7 +605,7 @@
     </article>
   </main>
   <footer class="wf-generated">
-    Generated on <span class="wf-term wf-date-tip" tabindex="0" title="2026-07-04T02:24:04.839Z" data-tooltip="2026-07-04T02:24:04.839Z">July 4, 2026</span> by <a href="https://github.com/semantic-flow/weave/">Weave</a>
+    Generated on <span class="wf-term wf-date-tip" tabindex="0" title="2026-07-04T06:45:07.889Z" data-tooltip="2026-07-04T06:45:07.889Z">July 4, 2026</span> by <a href="https://github.com/semantic-flow/weave/">Weave</a>
   </footer>
 </body>
 </html>
