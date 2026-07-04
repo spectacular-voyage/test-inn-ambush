@@ -9,7 +9,7 @@
   sflo:hasPayloadArtifact <projections/responses/participant-projection-response-gm> ;
   sflo:hasResourcePage <projections/responses/participant-projection-response-gm/_knop/index.html> .
 
-<projections/responses/participant-projection-response-gm> a sflo:PayloadArtifact, sflo:DigitalArtifact ;
+<projections/responses/participant-projection-response-gm> a sflo:PayloadArtifact, sflo:DigitalArtifact, sflo:RdfDocument ;
   sflo:hasArtifactHistory <projections/responses/participant-projection-response-gm/_history001> ;
   sflo:currentArtifactHistory <projections/responses/participant-projection-response-gm/_history001> ;
   sflo:nextHistoryOrdinal "2"^^xsd:nonNegativeInteger ;
@@ -19,8 +19,9 @@
 <projections/responses/participant-projection-response-gm/_history001> a sflo:ArtifactHistory ;
   sflo:historyOrdinal "1"^^xsd:nonNegativeInteger ;
   sflo:hasHistoricalState <projections/responses/participant-projection-response-gm/_history001/_s0001> ;
-  sflo:latestHistoricalState <projections/responses/participant-projection-response-gm/_history001/_s0001> ;
-  sflo:nextStateOrdinal "2"^^xsd:nonNegativeInteger ;
+  sflo:hasHistoricalState <projections/responses/participant-projection-response-gm/_history001/_s0002> ;
+  sflo:latestHistoricalState <projections/responses/participant-projection-response-gm/_history001/_s0002> ;
+  sflo:nextStateOrdinal "3"^^xsd:nonNegativeInteger ;
   sflo:hasResourcePage <projections/responses/participant-projection-response-gm/_history001/index.html> .
 
 <projections/responses/participant-projection-response-gm/_history001/_s0001> a sflo:HistoricalState ;
@@ -29,9 +30,20 @@
   sflo:locatedFileForState <projections/responses/participant-projection-response-gm/_history001/_s0001/json/participant-projection-response-gm.json> ;
   sflo:hasResourcePage <projections/responses/participant-projection-response-gm/_history001/_s0001/index.html> .
 
-<projections/responses/participant-projection-response-gm/_history001/_s0001/json> a sflo:ArtifactManifestation ;
+<projections/responses/participant-projection-response-gm/_history001/_s0001/json> a sflo:ArtifactManifestation, sflo:RdfDocument ;
   sflo:locatedFileForManifestation <projections/responses/participant-projection-response-gm/_history001/_s0001/json/participant-projection-response-gm.json> ;
   sflo:hasResourcePage <projections/responses/participant-projection-response-gm/_history001/_s0001/json/index.html> .
+
+<projections/responses/participant-projection-response-gm/_history001/_s0002> a sflo:HistoricalState ;
+  sflo:stateOrdinal "2"^^xsd:nonNegativeInteger ;
+  sflo:previousHistoricalState <projections/responses/participant-projection-response-gm/_history001/_s0001> ;
+  sflo:hasManifestation <projections/responses/participant-projection-response-gm/_history001/_s0002/json> ;
+  sflo:locatedFileForState <projections/responses/participant-projection-response-gm/_history001/_s0002/json/participant-projection-response-gm.json> ;
+  sflo:hasResourcePage <projections/responses/participant-projection-response-gm/_history001/_s0002/index.html> .
+
+<projections/responses/participant-projection-response-gm/_history001/_s0002/json> a sflo:ArtifactManifestation, sflo:RdfDocument ;
+  sflo:locatedFileForManifestation <projections/responses/participant-projection-response-gm/_history001/_s0002/json/participant-projection-response-gm.json> ;
+  sflo:hasResourcePage <projections/responses/participant-projection-response-gm/_history001/_s0002/json/index.html> .
 
 <projections/responses/participant-projection-response-gm/_knop/_meta> a sflo:KnopMetadata, sflo:DigitalArtifact, sflo:RdfDocument ;
   sflo:hasWorkingLocatedFile <projections/responses/participant-projection-response-gm/_knop/_meta/meta.ttl> ;
@@ -45,9 +57,11 @@
 
 <projections/responses/participant-projection-response-gm/_knop/_inventory/inventory.ttl> a sflo:LocatedFile, sflo:RdfDocument .
 
-<projections/responses/participant-projection-response-gm/participant-projection-response-gm.json> a sflo:LocatedFile .
+<projections/responses/participant-projection-response-gm/participant-projection-response-gm.json> a sflo:LocatedFile, sflo:RdfDocument .
 
-<projections/responses/participant-projection-response-gm/_history001/_s0001/json/participant-projection-response-gm.json> a sflo:LocatedFile .
+<projections/responses/participant-projection-response-gm/_history001/_s0001/json/participant-projection-response-gm.json> a sflo:LocatedFile, sflo:RdfDocument .
+
+<projections/responses/participant-projection-response-gm/_history001/_s0002/json/participant-projection-response-gm.json> a sflo:LocatedFile, sflo:RdfDocument .
 
 <projections/responses/participant-projection-response-gm/index.html> a sflo:ResourcePage, sflo:LocatedFile .
 
@@ -56,6 +70,10 @@
 <projections/responses/participant-projection-response-gm/_history001/_s0001/index.html> a sflo:ResourcePage, sflo:LocatedFile .
 
 <projections/responses/participant-projection-response-gm/_history001/_s0001/json/index.html> a sflo:ResourcePage, sflo:LocatedFile .
+
+<projections/responses/participant-projection-response-gm/_history001/_s0002/index.html> a sflo:ResourcePage, sflo:LocatedFile .
+
+<projections/responses/participant-projection-response-gm/_history001/_s0002/json/index.html> a sflo:ResourcePage, sflo:LocatedFile .
 
 <projections/responses/participant-projection-response-gm/_knop/index.html> a sflo:ResourcePage, sflo:LocatedFile .
 

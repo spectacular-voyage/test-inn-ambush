@@ -1,0 +1,83 @@
+{
+  "@context": "https://spectacular-voyage.github.io/test-inn-ambush/projections/contracts/inn-ambush-contract.context.jsonld",
+  "@type": "ParticipantProjectionResponse",
+  "type": "stagecraft.participant-projection.response.v1",
+  "id": "participant-projection-response-gm-current-001",
+  "participant": "https://spectacular-voyage.github.io/test-inn-ambush/gm/alex",
+  "participantProjection": "https://spectacular-voyage.github.io/test-inn-ambush/projection/gm/alex/inn-ambush-plan-b",
+  "projectionAudience": "gm",
+  "projectionHistory": "https://spectacular-voyage.github.io/test-inn-ambush/rdf-export/inn-ambush-plan-b/history/main",
+  "projectionState": "https://spectacular-voyage.github.io/test-inn-ambush/rdf-export/inn-ambush-plan-b/state/s0001",
+  "projectionStateOrdinal": 1,
+  "sourceProjection": {
+    "observedProjectionState": "https://spectacular-voyage.github.io/test-inn-ambush/rdf-export/inn-ambush-plan-b/state/s0001",
+    "participantProjection": "https://spectacular-voyage.github.io/test-inn-ambush/projection/gm/alex/inn-ambush-plan-b"
+  },
+  "visibleResources": [
+    "https://spectacular-voyage.github.io/test-inn-ambush/beat/plan-b",
+    "https://spectacular-voyage.github.io/test-inn-ambush/actant/elara",
+    "https://spectacular-voyage.github.io/test-inn-ambush/actant/nera",
+    "https://spectacular-voyage.github.io/test-inn-ambush/suggestion/plan-b",
+    "https://spectacular-voyage.github.io/test-inn-ambush/intent/elara-plan-b",
+    "https://spectacular-voyage.github.io/test-inn-ambush/target/door",
+    "https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/outcome-committed/plan-b-001",
+    "https://spectacular-voyage.github.io/test-inn-ambush/committed-event/plan-b-001",
+    "https://spectacular-voyage.github.io/test-inn-ambush/state-mutation/door-barred-plan-b-001"
+  ],
+  "resourceSummaries": [
+    {
+      "resource": "https://spectacular-voyage.github.io/test-inn-ambush/beat/plan-b",
+      "resourceClass": "https://spectacular-voyage.github.io/stagecraft/ontology/Beat",
+      "label": "Plan B beat",
+      "summary": "Plan B is the accepted table beat: Elara bars the inn door with Ashfang."
+    },
+    {
+      "resource": "https://spectacular-voyage.github.io/test-inn-ambush/actant/elara",
+      "resourceClass": "https://spectacular-voyage.github.io/stagecraft/ontology/Character",
+      "label": "Elara",
+      "summary": "Elara is Alice's character and the actant carrying the Plan B intent."
+    },
+    {
+      "resource": "https://spectacular-voyage.github.io/test-inn-ambush/actant/nera",
+      "resourceClass": "https://spectacular-voyage.github.io/stagecraft/ontology/Character",
+      "label": "Nera",
+      "summary": "Nera is in the inn scene; Plan B is about creating space for her escape."
+    },
+    {
+      "resource": "https://spectacular-voyage.github.io/test-inn-ambush/suggestion/plan-b",
+      "resourceClass": "https://spectacular-voyage.github.io/stagecraft/ontology/Suggestion",
+      "label": "Bob's Plan B suggestion",
+      "summary": "Bob suggested that Elara bar the door with Ashfang."
+    },
+    {
+      "resource": "https://spectacular-voyage.github.io/test-inn-ambush/intent/elara-plan-b",
+      "resourceClass": "https://spectacular-voyage.github.io/stagecraft/ontology/Intent",
+      "label": "Elara's Plan B intent",
+      "summary": "Alice declared Elara's intent to bar the door before the ambush resolves."
+    },
+    {
+      "resource": "https://spectacular-voyage.github.io/test-inn-ambush/target/door",
+      "resourceClass": "https://spectacular-voyage.github.io/stagecraft/ontology/Target",
+      "label": "Old Mill Inn door",
+      "summary": "The door is currently barred on the Plan B branch."
+    },
+    {
+      "resource": "https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/outcome-committed/plan-b-001",
+      "resourceClass": "https://spectacular-voyage.github.io/stagecraft/ontology/OutcomeCommitted",
+      "label": "Plan B outcome commit",
+      "summary": "Alex committed the Plan B outcome into the authority journal."
+    },
+    {
+      "resource": "https://spectacular-voyage.github.io/test-inn-ambush/committed-event/plan-b-001",
+      "resourceClass": "https://spectacular-voyage.github.io/stagecraft/ontology/CommittedEvent",
+      "label": "Plan B committed event",
+      "summary": "The committed event records Elara barring the door before the ambush resolves."
+    },
+    {
+      "resource": "https://spectacular-voyage.github.io/test-inn-ambush/state-mutation/door-barred-plan-b-001",
+      "resourceClass": "https://spectacular-voyage.github.io/stagecraft/ontology/StateMutation",
+      "label": "Door barred state mutation",
+      "summary": "The state mutation makes the Old Mill Inn door barred in the Plan B branch."
+    }
+  ]
+}
