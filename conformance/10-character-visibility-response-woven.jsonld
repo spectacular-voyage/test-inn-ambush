@@ -1,0 +1,213 @@
+{
+  "@context": {
+    "@vocab": "https://spectacular-voyage.github.io/accord/ontology/",
+    "dcterms": "http://purl.org/dc/terms/",
+    "id": "@id",
+    "type": "@type",
+    "changeType": {
+      "@type": "@vocab"
+    },
+    "compareMode": {
+      "@type": "@vocab"
+    },
+    "targetsFileExpectation": {
+      "@type": "@id"
+    },
+    "locatorKind": {
+      "@type": "@vocab"
+    }
+  },
+  "type": "Manifest",
+  "id": "urn:accord:stagecraft:test-inn-ambush:10-character-visibility-response-woven",
+  "dcterms:title": "Inn Ambush 10 character visibility response woven",
+  "hasCase": [
+    {
+      "type": "TransitionCase",
+      "id": "#weave-character-visibility-response",
+      "fixtureRepo": "github.com/spectacular-voyage/test-inn-ambush",
+      "operationId": "stagecraft.fixture.weaveCharacterVisibilityResponse",
+      "fromRef": "a.09-character-visibility-response-records",
+      "toRef": "a.10-character-visibility-response-woven",
+      "fromState": {
+        "type": "StateLocator",
+        "locatorKind": "gitRefState",
+        "ref": "a.09-character-visibility-response-records"
+      },
+      "toState": {
+        "type": "StateLocator",
+        "locatorKind": "gitRefState",
+        "ref": "a.10-character-visibility-response-woven"
+      },
+      "hasFileExpectation": [
+        {
+          "id": "#mesh-inventory",
+          "type": "FileExpectation",
+          "path": "_mesh/_inventory/inventory.ttl",
+          "changeType": "updated",
+          "compareMode": "rdfCanonical"
+        },
+        {
+          "id": "#mesh-inventory-index",
+          "type": "FileExpectation",
+          "path": "_mesh/_inventory/index.html",
+          "changeType": "updated"
+        },
+        {
+          "id": "#alice-response-history-payload",
+          "type": "FileExpectation",
+          "path": "projections/responses/participant-projection-response-alice/_history001/_s0002/json/participant-projection-response-alice.json",
+          "changeType": "added",
+          "compareMode": "text"
+        },
+        {
+          "id": "#alice-response-history-json-index",
+          "type": "FileExpectation",
+          "path": "projections/responses/participant-projection-response-alice/_history001/_s0002/json/index.html",
+          "changeType": "added"
+        },
+        {
+          "id": "#alice-response-history-index",
+          "type": "FileExpectation",
+          "path": "projections/responses/participant-projection-response-alice/_history001/_s0002/index.html",
+          "changeType": "added"
+        },
+        {
+          "id": "#alice-response-history-root-index",
+          "type": "FileExpectation",
+          "path": "projections/responses/participant-projection-response-alice/_history001/index.html",
+          "changeType": "updated"
+        },
+        {
+          "id": "#alice-response-knop-inventory-index",
+          "type": "FileExpectation",
+          "path": "projections/responses/participant-projection-response-alice/_knop/_inventory/index.html",
+          "changeType": "updated"
+        },
+        {
+          "id": "#alice-response-knop-inventory",
+          "type": "FileExpectation",
+          "path": "projections/responses/participant-projection-response-alice/_knop/_inventory/inventory.ttl",
+          "changeType": "updated",
+          "compareMode": "rdfCanonical"
+        },
+        {
+          "id": "#alice-response-index",
+          "type": "FileExpectation",
+          "path": "projections/responses/participant-projection-response-alice/index.html",
+          "changeType": "updated"
+        },
+        {
+          "id": "#gm-response-history-payload",
+          "type": "FileExpectation",
+          "path": "projections/responses/participant-projection-response-gm/_history001/_s0002/json/participant-projection-response-gm.json",
+          "changeType": "added",
+          "compareMode": "text"
+        },
+        {
+          "id": "#gm-response-history-json-index",
+          "type": "FileExpectation",
+          "path": "projections/responses/participant-projection-response-gm/_history001/_s0002/json/index.html",
+          "changeType": "added"
+        },
+        {
+          "id": "#gm-response-history-index",
+          "type": "FileExpectation",
+          "path": "projections/responses/participant-projection-response-gm/_history001/_s0002/index.html",
+          "changeType": "added"
+        },
+        {
+          "id": "#gm-response-history-root-index",
+          "type": "FileExpectation",
+          "path": "projections/responses/participant-projection-response-gm/_history001/index.html",
+          "changeType": "updated"
+        },
+        {
+          "id": "#gm-response-knop-inventory-index",
+          "type": "FileExpectation",
+          "path": "projections/responses/participant-projection-response-gm/_knop/_inventory/index.html",
+          "changeType": "updated"
+        },
+        {
+          "id": "#gm-response-knop-inventory",
+          "type": "FileExpectation",
+          "path": "projections/responses/participant-projection-response-gm/_knop/_inventory/inventory.ttl",
+          "changeType": "updated",
+          "compareMode": "rdfCanonical"
+        },
+        {
+          "id": "#gm-response-index",
+          "type": "FileExpectation",
+          "path": "projections/responses/participant-projection-response-gm/index.html",
+          "changeType": "updated"
+        },
+        {
+          "id": "#world-state-history-payload",
+          "type": "FileExpectation",
+          "path": "world/states/inn-ambush-plan-b-state/_history001/_s0002/ttl/inn-ambush-plan-b-state.ttl",
+          "changeType": "updated",
+          "compareMode": "rdfCanonical"
+        },
+        {
+          "id": "#world-state-index",
+          "type": "FileExpectation",
+          "path": "world/states/inn-ambush-plan-b-state/index.html",
+          "changeType": "updated"
+        }
+      ],
+      "hasRdfExpectation": [
+        {
+          "id": "#mesh-inventory-rdf",
+          "type": "RdfExpectation",
+          "targetsFileExpectation": "#mesh-inventory",
+          "hasAskAssertion": [
+            {
+              "id": "#ask-response-payloads-are-rdf-documents",
+              "type": "SparqlAskAssertion",
+              "query": "ASK { <https://spectacular-voyage.github.io/test-inn-ambush/projections/responses/participant-projection-response-alice> a <https://semantic-flow.github.io/sflo/ontology/RdfDocument> . <https://spectacular-voyage.github.io/test-inn-ambush/projections/responses/participant-projection-response-gm> a <https://semantic-flow.github.io/sflo/ontology/RdfDocument> . }",
+              "expectedBoolean": true
+            }
+          ]
+        },
+        {
+          "id": "#alice-response-inventory-rdf",
+          "type": "RdfExpectation",
+          "targetsFileExpectation": "#alice-response-knop-inventory",
+          "hasAskAssertion": [
+            {
+              "id": "#ask-alice-response-history",
+              "type": "SparqlAskAssertion",
+              "query": "ASK { <https://spectacular-voyage.github.io/test-inn-ambush/projections/responses/participant-projection-response-alice> a <https://semantic-flow.github.io/sflo/ontology/RdfDocument> . <https://spectacular-voyage.github.io/test-inn-ambush/projections/responses/participant-projection-response-alice/_history001> <https://semantic-flow.github.io/sflo/ontology/latestHistoricalState> <https://spectacular-voyage.github.io/test-inn-ambush/projections/responses/participant-projection-response-alice/_history001/_s0002> . <https://spectacular-voyage.github.io/test-inn-ambush/projections/responses/participant-projection-response-alice/_history001/_s0002> <https://semantic-flow.github.io/sflo/ontology/locatedFileForState> <https://spectacular-voyage.github.io/test-inn-ambush/projections/responses/participant-projection-response-alice/_history001/_s0002/json/participant-projection-response-alice.json> . }",
+              "expectedBoolean": true
+            }
+          ]
+        },
+        {
+          "id": "#gm-response-inventory-rdf",
+          "type": "RdfExpectation",
+          "targetsFileExpectation": "#gm-response-knop-inventory",
+          "hasAskAssertion": [
+            {
+              "id": "#ask-gm-response-history",
+              "type": "SparqlAskAssertion",
+              "query": "ASK { <https://spectacular-voyage.github.io/test-inn-ambush/projections/responses/participant-projection-response-gm> a <https://semantic-flow.github.io/sflo/ontology/RdfDocument> . <https://spectacular-voyage.github.io/test-inn-ambush/projections/responses/participant-projection-response-gm/_history001> <https://semantic-flow.github.io/sflo/ontology/latestHistoricalState> <https://spectacular-voyage.github.io/test-inn-ambush/projections/responses/participant-projection-response-gm/_history001/_s0002> . <https://spectacular-voyage.github.io/test-inn-ambush/projections/responses/participant-projection-response-gm/_history001/_s0002> <https://semantic-flow.github.io/sflo/ontology/locatedFileForState> <https://spectacular-voyage.github.io/test-inn-ambush/projections/responses/participant-projection-response-gm/_history001/_s0002/json/participant-projection-response-gm.json> . }",
+              "expectedBoolean": true
+            }
+          ]
+        },
+        {
+          "id": "#world-state-history-rdf",
+          "type": "RdfExpectation",
+          "targetsFileExpectation": "#world-state-history-payload",
+          "hasAskAssertion": [
+            {
+              "id": "#ask-character-history-visibility",
+              "type": "SparqlAskAssertion",
+              "query": "ASK { <https://spectacular-voyage.github.io/test-inn-ambush/actant/elara> a <https://spectacular-voyage.github.io/stagecraft/ontology/Character> ; <https://spectacular-voyage.github.io/stagecraft/ontology/visibleTo> <https://spectacular-voyage.github.io/test-inn-ambush/participant/alice> ; <https://spectacular-voyage.github.io/stagecraft/ontology/visibleTo> <https://spectacular-voyage.github.io/test-inn-ambush/gm/alex> . <https://spectacular-voyage.github.io/test-inn-ambush/actant/nera> a <https://spectacular-voyage.github.io/stagecraft/ontology/Character> ; <https://spectacular-voyage.github.io/stagecraft/ontology/visibleTo> <https://spectacular-voyage.github.io/test-inn-ambush/participant/alice> ; <https://spectacular-voyage.github.io/stagecraft/ontology/visibleTo> <https://spectacular-voyage.github.io/test-inn-ambush/gm/alex> . }",
+              "expectedBoolean": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

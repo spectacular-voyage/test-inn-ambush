@@ -1,0 +1,81 @@
+{
+  "@context": {
+    "@vocab": "https://spectacular-voyage.github.io/accord/ontology/",
+    "dcterms": "http://purl.org/dc/terms/",
+    "id": "@id",
+    "type": "@type",
+    "changeType": {
+      "@type": "@vocab"
+    },
+    "compareMode": {
+      "@type": "@vocab"
+    },
+    "targetsFileExpectation": {
+      "@type": "@id"
+    },
+    "locatorKind": {
+      "@type": "@vocab"
+    }
+  },
+  "type": "Manifest",
+  "id": "urn:accord:stagecraft:test-inn-ambush:09-character-visibility-response-records",
+  "dcterms:title": "Inn Ambush 09 character visibility response records",
+  "hasCase": [
+    {
+      "type": "TransitionCase",
+      "id": "#character-visibility-response-records",
+      "fixtureRepo": "github.com/spectacular-voyage/test-inn-ambush",
+      "operationId": "stagecraft.fixture.addCharacterVisibilityResponseRecords",
+      "fromRef": "a.08-participant-projection-response-woven",
+      "toRef": "a.09-character-visibility-response-records",
+      "fromState": {
+        "type": "StateLocator",
+        "locatorKind": "gitRefState",
+        "ref": "a.08-participant-projection-response-woven"
+      },
+      "toState": {
+        "type": "StateLocator",
+        "locatorKind": "gitRefState",
+        "ref": "a.09-character-visibility-response-records"
+      },
+      "hasFileExpectation": [
+        {
+          "id": "#alice-response",
+          "type": "FileExpectation",
+          "path": "projections/responses/participant-projection-response-alice/participant-projection-response-alice.json",
+          "changeType": "updated",
+          "compareMode": "text"
+        },
+        {
+          "id": "#gm-response",
+          "type": "FileExpectation",
+          "path": "projections/responses/participant-projection-response-gm/participant-projection-response-gm.json",
+          "changeType": "updated",
+          "compareMode": "text"
+        },
+        {
+          "id": "#world-state",
+          "type": "FileExpectation",
+          "path": "world/states/inn-ambush-plan-b-state/inn-ambush-plan-b-state.ttl",
+          "changeType": "updated",
+          "compareMode": "rdfCanonical"
+        }
+      ],
+      "hasRdfExpectation": [
+        {
+          "id": "#world-state-rdf",
+          "type": "RdfExpectation",
+          "targetsFileExpectation": "#world-state",
+          "hasAskAssertion": [
+            {
+              "id": "#ask-character-visibility",
+              "type": "SparqlAskAssertion",
+              "query": "ASK { <https://spectacular-voyage.github.io/test-inn-ambush/actant/elara> a <https://spectacular-voyage.github.io/stagecraft/ontology/Character> ; <https://spectacular-voyage.github.io/stagecraft/ontology/visibleTo> <https://spectacular-voyage.github.io/test-inn-ambush/participant/alice> ; <https://spectacular-voyage.github.io/stagecraft/ontology/visibleTo> <https://spectacular-voyage.github.io/test-inn-ambush/gm/alex> . <https://spectacular-voyage.github.io/test-inn-ambush/actant/nera> a <https://spectacular-voyage.github.io/stagecraft/ontology/Character> ; <https://spectacular-voyage.github.io/stagecraft/ontology/visibleTo> <https://spectacular-voyage.github.io/test-inn-ambush/participant/alice> ; <https://spectacular-voyage.github.io/stagecraft/ontology/visibleTo> <https://spectacular-voyage.github.io/test-inn-ambush/gm/alex> . }",
+              "expectedBoolean": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

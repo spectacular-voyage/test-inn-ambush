@@ -192,6 +192,48 @@
           }
         }
       ]
+    },
+    {
+      "id": "#09-character-visibility-response-records",
+      "type": "ScenarioStep",
+      "manifestPath": "09-character-visibility-response-records.jsonld",
+      "hasLaneBinding": [
+        {
+          "type": "LaneStateBinding",
+          "lane": "#fixture-lane",
+          "fromLaneState": {
+            "type": "StateLocator",
+            "locatorKind": "gitRefState",
+            "ref": "a.08-participant-projection-response-woven"
+          },
+          "toLaneState": {
+            "type": "StateLocator",
+            "locatorKind": "gitRefState",
+            "ref": "a.09-character-visibility-response-records"
+          }
+        }
+      ]
+    },
+    {
+      "id": "#10-character-visibility-response-woven",
+      "type": "ScenarioStep",
+      "manifestPath": "10-character-visibility-response-woven.jsonld",
+      "hasLaneBinding": [
+        {
+          "type": "LaneStateBinding",
+          "lane": "#fixture-lane",
+          "fromLaneState": {
+            "type": "StateLocator",
+            "locatorKind": "gitRefState",
+            "ref": "a.09-character-visibility-response-records"
+          },
+          "toLaneState": {
+            "type": "StateLocator",
+            "locatorKind": "gitRefState",
+            "ref": "a.10-character-visibility-response-woven"
+          }
+        }
+      ]
     }
   ]
 }
