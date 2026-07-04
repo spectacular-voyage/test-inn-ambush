@@ -234,6 +234,48 @@
           }
         }
       ]
+    },
+    {
+      "id": "#11-temporal-vocabulary-records",
+      "type": "ScenarioStep",
+      "manifestPath": "11-temporal-vocabulary-records.jsonld",
+      "hasLaneBinding": [
+        {
+          "type": "LaneStateBinding",
+          "lane": "#fixture-lane",
+          "fromLaneState": {
+            "type": "StateLocator",
+            "locatorKind": "gitRefState",
+            "ref": "a.10-character-visibility-response-woven"
+          },
+          "toLaneState": {
+            "type": "StateLocator",
+            "locatorKind": "gitRefState",
+            "ref": "a.11-temporal-vocabulary-records"
+          }
+        }
+      ]
+    },
+    {
+      "id": "#12-temporal-vocabulary-woven",
+      "type": "ScenarioStep",
+      "manifestPath": "12-temporal-vocabulary-woven.jsonld",
+      "hasLaneBinding": [
+        {
+          "type": "LaneStateBinding",
+          "lane": "#fixture-lane",
+          "fromLaneState": {
+            "type": "StateLocator",
+            "locatorKind": "gitRefState",
+            "ref": "a.11-temporal-vocabulary-records"
+          },
+          "toLaneState": {
+            "type": "StateLocator",
+            "locatorKind": "gitRefState",
+            "ref": "a.12-temporal-vocabulary-woven"
+          }
+        }
+      ]
     }
   ]
 }
