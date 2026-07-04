@@ -150,6 +150,48 @@
           }
         }
       ]
+    },
+    {
+      "id": "#07-participant-projection-response-records",
+      "type": "ScenarioStep",
+      "manifestPath": "07-participant-projection-response-records.jsonld",
+      "hasLaneBinding": [
+        {
+          "type": "LaneStateBinding",
+          "lane": "#fixture-lane",
+          "fromLaneState": {
+            "type": "StateLocator",
+            "locatorKind": "gitRefState",
+            "ref": "a.06-participant-projection-contract-rename-woven"
+          },
+          "toLaneState": {
+            "type": "StateLocator",
+            "locatorKind": "gitRefState",
+            "ref": "a.07-participant-projection-response-records"
+          }
+        }
+      ]
+    },
+    {
+      "id": "#08-participant-projection-response-woven",
+      "type": "ScenarioStep",
+      "manifestPath": "08-participant-projection-response-woven.jsonld",
+      "hasLaneBinding": [
+        {
+          "type": "LaneStateBinding",
+          "lane": "#fixture-lane",
+          "fromLaneState": {
+            "type": "StateLocator",
+            "locatorKind": "gitRefState",
+            "ref": "a.07-participant-projection-response-records"
+          },
+          "toLaneState": {
+            "type": "StateLocator",
+            "locatorKind": "gitRefState",
+            "ref": "a.08-participant-projection-response-woven"
+          }
+        }
+      ]
     }
   ]
 }
