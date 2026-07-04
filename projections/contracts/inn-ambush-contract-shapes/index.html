@@ -141,12 +141,13 @@
       <details open>
         <summary>Latest historical manifestation file</summary>
         <div class="wf-source-meta">
-          <span>projections/contracts/inn-ambush-contract-shapes/_history001/_s0003/ttl/inn-ambush-contract.shapes.ttl</span>
-          <a href="/test-inn-ambush/projections/contracts/inn-ambush-contract-shapes/_history001/_s0003/ttl/inn-ambush-contract.shapes.ttl">Raw file</a>
+          <span>projections/contracts/inn-ambush-contract-shapes/_history001/_s0004/ttl/inn-ambush-contract.shapes.ttl</span>
+          <a href="/test-inn-ambush/projections/contracts/inn-ambush-contract-shapes/_history001/_s0004/ttl/inn-ambush-contract.shapes.ttl">Raw file</a>
         </div>
 <pre class="shiki github-dark-default" style="background-color:#0d1117;color:#e6edf3" tabindex="0"><code><span class="line"><span style="color:#FF7B72">@prefix sc:</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/stagecraft/ontology/></span><span style="color:#E6EDF3"> .</span></span>
 <span class="line"><span style="color:#FF7B72">@prefix </span><span style="color:#E6EDF3">sc-</span><span style="color:#FF7B72">sh:</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/stagecraft/shacl/></span><span style="color:#E6EDF3"> .</span></span>
 <span class="line"><span style="color:#FF7B72">@prefix sh:</span><span style="color:#FFA657"> &#x3C;http://www.w3.org/ns/shacl#></span><span style="color:#E6EDF3"> .</span></span>
+<span class="line"><span style="color:#FF7B72">@prefix time:</span><span style="color:#FFA657"> &#x3C;http://www.w3.org/2006/time#></span><span style="color:#E6EDF3"> .</span></span>
 <span class="line"><span style="color:#FF7B72">@prefix xsd:</span><span style="color:#FFA657"> &#x3C;http://www.w3.org/2001/XMLSchema#></span><span style="color:#E6EDF3"> .</span></span>
 <span class="line"></span>
 <span class="line"><span style="color:#E6EDF3">sc-</span><span style="color:#FF7B72">sh:</span><span style="color:#79C0FF">ProjectionNotificationShape</span></span>
@@ -261,6 +262,126 @@
 <span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">node</span><span style="color:#E6EDF3"> sc-</span><span style="color:#FF7B72">sh:</span><span style="color:#79C0FF">ResyncShape</span><span style="color:#E6EDF3"> ;</span></span>
 <span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">minCount</span><span style="color:#79C0FF"> 1</span><span style="color:#E6EDF3"> ;</span></span>
 <span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">maxCount</span><span style="color:#79C0FF"> 1</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#E6EDF3">  ] .</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E6EDF3">sc-</span><span style="color:#FF7B72">sh:</span><span style="color:#79C0FF">ParticipantProjectionResponseShape</span></span>
+<span class="line"><span style="color:#FF7B72">  a</span><span style="color:#FF7B72"> sh:</span><span style="color:#79C0FF">NodeShape</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sh:</span><span style="color:#79C0FF">targetClass</span><span style="color:#FF7B72"> sc:</span><span style="color:#79C0FF">ParticipantProjectionResponse</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sh:</span><span style="color:#79C0FF">property</span><span style="color:#E6EDF3"> [</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">path</span><span style="color:#FF7B72"> sc:</span><span style="color:#79C0FF">envelopeType</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">hasValue</span><span style="color:#A5D6FF"> "stagecraft.participant-projection.response.v1"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">minCount</span><span style="color:#79C0FF"> 1</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">maxCount</span><span style="color:#79C0FF"> 1</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#E6EDF3">  ] ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sh:</span><span style="color:#79C0FF">property</span><span style="color:#E6EDF3"> [</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">path</span><span style="color:#FF7B72"> sc:</span><span style="color:#79C0FF">participant</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">nodeKind</span><span style="color:#FF7B72"> sh:</span><span style="color:#79C0FF">IRI</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">minCount</span><span style="color:#79C0FF"> 1</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">maxCount</span><span style="color:#79C0FF"> 1</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#E6EDF3">  ] ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sh:</span><span style="color:#79C0FF">property</span><span style="color:#E6EDF3"> [</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">path</span><span style="color:#FF7B72"> sc:</span><span style="color:#79C0FF">participantProjection</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">nodeKind</span><span style="color:#FF7B72"> sh:</span><span style="color:#79C0FF">IRI</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">minCount</span><span style="color:#79C0FF"> 1</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">maxCount</span><span style="color:#79C0FF"> 1</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#E6EDF3">  ] ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sh:</span><span style="color:#79C0FF">property</span><span style="color:#E6EDF3"> [</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">path</span><span style="color:#FF7B72"> sc:</span><span style="color:#79C0FF">projectionHistory</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">nodeKind</span><span style="color:#FF7B72"> sh:</span><span style="color:#79C0FF">IRI</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">minCount</span><span style="color:#79C0FF"> 1</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">maxCount</span><span style="color:#79C0FF"> 1</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#E6EDF3">  ] ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sh:</span><span style="color:#79C0FF">property</span><span style="color:#E6EDF3"> [</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">path</span><span style="color:#FF7B72"> sc:</span><span style="color:#79C0FF">projectionState</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">nodeKind</span><span style="color:#FF7B72"> sh:</span><span style="color:#79C0FF">IRI</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">minCount</span><span style="color:#79C0FF"> 1</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">maxCount</span><span style="color:#79C0FF"> 1</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#E6EDF3">  ] ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sh:</span><span style="color:#79C0FF">property</span><span style="color:#E6EDF3"> [</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">path</span><span style="color:#FF7B72"> sc:</span><span style="color:#79C0FF">projectionStateOrdinal</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">datatype</span><span style="color:#FF7B72"> xsd:</span><span style="color:#79C0FF">nonNegativeInteger</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">minCount</span><span style="color:#79C0FF"> 1</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">maxCount</span><span style="color:#79C0FF"> 1</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#E6EDF3">  ] ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sh:</span><span style="color:#79C0FF">property</span><span style="color:#E6EDF3"> [</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">path</span><span style="color:#FF7B72"> sc:</span><span style="color:#79C0FF">sourceProjection</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">node</span><span style="color:#E6EDF3"> sc-</span><span style="color:#FF7B72">sh:</span><span style="color:#79C0FF">SourceProjectionShape</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">minCount</span><span style="color:#79C0FF"> 1</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">maxCount</span><span style="color:#79C0FF"> 1</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#E6EDF3">  ] ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sh:</span><span style="color:#79C0FF">property</span><span style="color:#E6EDF3"> [</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">path</span><span style="color:#FF7B72"> sc:</span><span style="color:#79C0FF">visibleResources</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">nodeKind</span><span style="color:#FF7B72"> sh:</span><span style="color:#79C0FF">IRI</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">minCount</span><span style="color:#79C0FF"> 1</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#E6EDF3">  ] ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sh:</span><span style="color:#79C0FF">property</span><span style="color:#E6EDF3"> [</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">path</span><span style="color:#FF7B72"> sc:</span><span style="color:#79C0FF">resourceSummaries</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">node</span><span style="color:#E6EDF3"> sc-</span><span style="color:#FF7B72">sh:</span><span style="color:#79C0FF">ResourceSummaryShape</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#E6EDF3">  ] ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sh:</span><span style="color:#79C0FF">property</span><span style="color:#E6EDF3"> [</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">path</span><span style="color:#FF7B72"> sc:</span><span style="color:#79C0FF">historyScope</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">maxCount</span><span style="color:#79C0FF"> 0</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">message</span><span style="color:#A5D6FF"> "ParticipantProjectionResponse carries resolved current state, not a request history scope."</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#E6EDF3">  ] ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sh:</span><span style="color:#79C0FF">property</span><span style="color:#E6EDF3"> [</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">path</span><span style="color:#FF7B72"> sc:</span><span style="color:#79C0FF">branchScope</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">maxCount</span><span style="color:#79C0FF"> 0</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">message</span><span style="color:#A5D6FF"> "ParticipantProjectionResponse carries resolved current state, not a request branch scope."</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#E6EDF3">  ] ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sh:</span><span style="color:#79C0FF">property</span><span style="color:#E6EDF3"> [</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">path</span><span style="color:#FF7B72"> sc:</span><span style="color:#79C0FF">temporalScope</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">maxCount</span><span style="color:#79C0FF"> 0</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">message</span><span style="color:#A5D6FF"> "ParticipantProjectionResponse v1 does not carry temporal axes."</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#E6EDF3">  ] ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sh:</span><span style="color:#79C0FF">property</span><span style="color:#E6EDF3"> [</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">path</span><span style="color:#FF7B72"> sc:</span><span style="color:#79C0FF">acceptanceInterval</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">maxCount</span><span style="color:#79C0FF"> 0</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">message</span><span style="color:#A5D6FF"> "ParticipantProjectionResponse v1 does not expose acceptance intervals."</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#E6EDF3">  ] ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sh:</span><span style="color:#79C0FF">property</span><span style="color:#E6EDF3"> [</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">path</span><span style="color:#FF7B72"> sc:</span><span style="color:#79C0FF">applicabilityInterval</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">maxCount</span><span style="color:#79C0FF"> 0</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">message</span><span style="color:#A5D6FF"> "ParticipantProjectionResponse v1 does not expose applicability intervals."</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#E6EDF3">  ] ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sh:</span><span style="color:#79C0FF">property</span><span style="color:#E6EDF3"> [</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">path</span><span style="color:#FF7B72"> sc:</span><span style="color:#79C0FF">requestedOperation</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">maxCount</span><span style="color:#79C0FF"> 0</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">message</span><span style="color:#A5D6FF"> "ParticipantProjectionResponse is a read envelope, not an operation request."</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#E6EDF3">  ] ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sh:</span><span style="color:#79C0FF">property</span><span style="color:#E6EDF3"> [</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">path</span><span style="color:#FF7B72"> sc:</span><span style="color:#79C0FF">execute</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">maxCount</span><span style="color:#79C0FF"> 0</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">message</span><span style="color:#A5D6FF"> "ParticipantProjectionResponse is a read envelope, not an executable operation."</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#E6EDF3">  ] ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sh:</span><span style="color:#79C0FF">property</span><span style="color:#E6EDF3"> [</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">path</span><span style="color:#FF7B72"> sc:</span><span style="color:#79C0FF">wouldProduce</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">maxCount</span><span style="color:#79C0FF"> 0</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">message</span><span style="color:#A5D6FF"> "ParticipantProjectionResponse must not preview authority-produced resources."</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#E6EDF3">  ] ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sh:</span><span style="color:#79C0FF">property</span><span style="color:#E6EDF3"> [</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">path</span><span style="color:#FF7B72"> sc:</span><span style="color:#79C0FF">producedResources</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">maxCount</span><span style="color:#79C0FF"> 0</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">message</span><span style="color:#A5D6FF"> "ParticipantProjectionResponse must not claim produced resources."</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#E6EDF3">  ] ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sh:</span><span style="color:#79C0FF">property</span><span style="color:#E6EDF3"> [</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">path</span><span style="color:#FF7B72"> sc:</span><span style="color:#79C0FF">authorityRecord</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">maxCount</span><span style="color:#79C0FF"> 0</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">message</span><span style="color:#A5D6FF"> "ParticipantProjectionResponse exposes authority records only as visible resource pointers."</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#E6EDF3">  ] ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sh:</span><span style="color:#79C0FF">property</span><span style="color:#E6EDF3"> [</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">path</span><span style="color:#FF7B72"> sc:</span><span style="color:#79C0FF">committedEvent</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">maxCount</span><span style="color:#79C0FF"> 0</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">message</span><span style="color:#A5D6FF"> "ParticipantProjectionResponse exposes committed events only as visible resource pointers."</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#E6EDF3">  ] ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sh:</span><span style="color:#79C0FF">property</span><span style="color:#E6EDF3"> [</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">path</span><span style="color:#FF7B72"> sc:</span><span style="color:#79C0FF">commitCertificate</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">maxCount</span><span style="color:#79C0FF"> 0</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">message</span><span style="color:#A5D6FF"> "ParticipantProjectionResponse exposes commit certificates only as visible resource pointers."</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#E6EDF3">  ] ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sh:</span><span style="color:#79C0FF">property</span><span style="color:#E6EDF3"> [</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">path</span><span style="color:#FF7B72"> sc:</span><span style="color:#79C0FF">stateMutation</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">maxCount</span><span style="color:#79C0FF"> 0</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">message</span><span style="color:#A5D6FF"> "ParticipantProjectionResponse exposes state mutations only as visible resource pointers."</span><span style="color:#E6EDF3"> ;</span></span>
 <span class="line"><span style="color:#E6EDF3">  ] .</span></span>
 <span class="line"></span>
 <span class="line"><span style="color:#E6EDF3">sc-</span><span style="color:#FF7B72">sh:</span><span style="color:#79C0FF">ChatContributionShape</span></span>
@@ -722,6 +843,33 @@
 <span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">maxCount</span><span style="color:#79C0FF"> 1</span><span style="color:#E6EDF3"> ;</span></span>
 <span class="line"><span style="color:#E6EDF3">  ] .</span></span>
 <span class="line"></span>
+<span class="line"><span style="color:#E6EDF3">sc-</span><span style="color:#FF7B72">sh:</span><span style="color:#79C0FF">ResourceSummaryShape</span></span>
+<span class="line"><span style="color:#FF7B72">  a</span><span style="color:#FF7B72"> sh:</span><span style="color:#79C0FF">NodeShape</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sh:</span><span style="color:#79C0FF">property</span><span style="color:#E6EDF3"> [</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">path</span><span style="color:#FF7B72"> sc:</span><span style="color:#79C0FF">resource</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">nodeKind</span><span style="color:#FF7B72"> sh:</span><span style="color:#79C0FF">IRI</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">minCount</span><span style="color:#79C0FF"> 1</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">maxCount</span><span style="color:#79C0FF"> 1</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#E6EDF3">  ] ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sh:</span><span style="color:#79C0FF">property</span><span style="color:#E6EDF3"> [</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">path</span><span style="color:#FF7B72"> sc:</span><span style="color:#79C0FF">resourceClass</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">nodeKind</span><span style="color:#FF7B72"> sh:</span><span style="color:#79C0FF">IRI</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">minCount</span><span style="color:#79C0FF"> 1</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">maxCount</span><span style="color:#79C0FF"> 1</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#E6EDF3">  ] ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sh:</span><span style="color:#79C0FF">property</span><span style="color:#E6EDF3"> [</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">path</span><span style="color:#FF7B72"> sc:</span><span style="color:#79C0FF">label</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">datatype</span><span style="color:#FF7B72"> xsd:</span><span style="color:#79C0FF">string</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">minCount</span><span style="color:#79C0FF"> 1</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">maxCount</span><span style="color:#79C0FF"> 1</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#E6EDF3">  ] ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sh:</span><span style="color:#79C0FF">property</span><span style="color:#E6EDF3"> [</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">path</span><span style="color:#FF7B72"> sc:</span><span style="color:#79C0FF">summary</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">datatype</span><span style="color:#FF7B72"> xsd:</span><span style="color:#79C0FF">string</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">minCount</span><span style="color:#79C0FF"> 1</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">maxCount</span><span style="color:#79C0FF"> 1</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#E6EDF3">  ] .</span></span>
+<span class="line"></span>
 <span class="line"><span style="color:#E6EDF3">sc-</span><span style="color:#FF7B72">sh:</span><span style="color:#79C0FF">ResyncShape</span></span>
 <span class="line"><span style="color:#FF7B72">  a</span><span style="color:#FF7B72"> sh:</span><span style="color:#79C0FF">NodeShape</span><span style="color:#E6EDF3"> ;</span></span>
 <span class="line"><span style="color:#FF7B72">  sh:</span><span style="color:#79C0FF">property</span><span style="color:#E6EDF3"> [</span></span>
@@ -796,6 +944,82 @@
 <span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">minCount</span><span style="color:#79C0FF"> 1</span><span style="color:#E6EDF3"> ;</span></span>
 <span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">maxCount</span><span style="color:#79C0FF"> 1</span><span style="color:#E6EDF3"> ;</span></span>
 <span class="line"><span style="color:#E6EDF3">  ] .</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E6EDF3">sc-</span><span style="color:#FF7B72">sh:</span><span style="color:#79C0FF">TemporalRelatorShape</span></span>
+<span class="line"><span style="color:#FF7B72">  a</span><span style="color:#FF7B72"> sh:</span><span style="color:#79C0FF">NodeShape</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sh:</span><span style="color:#79C0FF">targetClass</span><span style="color:#FF7B72"> sc:</span><span style="color:#79C0FF">TemporalRelator</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sh:</span><span style="color:#79C0FF">property</span><span style="color:#E6EDF3"> [</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">path</span><span style="color:#FF7B72"> sc:</span><span style="color:#79C0FF">subject</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">nodeKind</span><span style="color:#FF7B72"> sh:</span><span style="color:#79C0FF">IRI</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">minCount</span><span style="color:#79C0FF"> 0</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#E6EDF3">  ] ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sh:</span><span style="color:#79C0FF">property</span><span style="color:#E6EDF3"> [</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">path</span><span style="color:#FF7B72"> sc:</span><span style="color:#79C0FF">predicate</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">nodeKind</span><span style="color:#FF7B72"> sh:</span><span style="color:#79C0FF">IRI</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">minCount</span><span style="color:#79C0FF"> 0</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#E6EDF3">  ] ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sh:</span><span style="color:#79C0FF">property</span><span style="color:#E6EDF3"> [</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">path</span><span style="color:#FF7B72"> sc:</span><span style="color:#79C0FF">object</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">minCount</span><span style="color:#79C0FF"> 0</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#E6EDF3">  ] ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sh:</span><span style="color:#79C0FF">property</span><span style="color:#E6EDF3"> [</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">path</span><span style="color:#FF7B72"> sc:</span><span style="color:#79C0FF">acceptedFrom</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">datatype</span><span style="color:#FF7B72"> xsd:</span><span style="color:#79C0FF">dateTime</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">minCount</span><span style="color:#79C0FF"> 0</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">maxCount</span><span style="color:#79C0FF"> 1</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#E6EDF3">  ] ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sh:</span><span style="color:#79C0FF">property</span><span style="color:#E6EDF3"> [</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">path</span><span style="color:#FF7B72"> sc:</span><span style="color:#79C0FF">acceptedUntil</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">datatype</span><span style="color:#FF7B72"> xsd:</span><span style="color:#79C0FF">dateTime</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">minCount</span><span style="color:#79C0FF"> 0</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">maxCount</span><span style="color:#79C0FF"> 1</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#E6EDF3">  ] ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sh:</span><span style="color:#79C0FF">property</span><span style="color:#E6EDF3"> [</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">path</span><span style="color:#FF7B72"> sc:</span><span style="color:#79C0FF">applicableDuring</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">nodeKind</span><span style="color:#FF7B72"> sh:</span><span style="color:#79C0FF">IRI</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">class</span><span style="color:#FF7B72"> sc:</span><span style="color:#79C0FF">TemporalAnchor</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">minCount</span><span style="color:#79C0FF"> 0</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#E6EDF3">  ] ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sh:</span><span style="color:#79C0FF">property</span><span style="color:#E6EDF3"> [</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">path</span><span style="color:#FF7B72"> sc:</span><span style="color:#79C0FF">applicableFrom</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">nodeKind</span><span style="color:#FF7B72"> sh:</span><span style="color:#79C0FF">IRI</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">class</span><span style="color:#FF7B72"> sc:</span><span style="color:#79C0FF">TemporalAnchor</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">minCount</span><span style="color:#79C0FF"> 0</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#E6EDF3">  ] ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sh:</span><span style="color:#79C0FF">property</span><span style="color:#E6EDF3"> [</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">path</span><span style="color:#FF7B72"> sc:</span><span style="color:#79C0FF">applicableUntil</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">nodeKind</span><span style="color:#FF7B72"> sh:</span><span style="color:#79C0FF">IRI</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">class</span><span style="color:#FF7B72"> sc:</span><span style="color:#79C0FF">TemporalAnchor</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">minCount</span><span style="color:#79C0FF"> 0</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#E6EDF3">  ] ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sh:</span><span style="color:#79C0FF">property</span><span style="color:#E6EDF3"> [</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">path</span><span style="color:#FF7B72"> sc:</span><span style="color:#79C0FF">applicableAfter</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">nodeKind</span><span style="color:#FF7B72"> sh:</span><span style="color:#79C0FF">IRI</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">class</span><span style="color:#FF7B72"> sc:</span><span style="color:#79C0FF">TemporalAnchor</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">minCount</span><span style="color:#79C0FF"> 0</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#E6EDF3">  ] ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sh:</span><span style="color:#79C0FF">property</span><span style="color:#E6EDF3"> [</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">path</span><span style="color:#FF7B72"> sc:</span><span style="color:#79C0FF">applicableBefore</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">nodeKind</span><span style="color:#FF7B72"> sh:</span><span style="color:#79C0FF">IRI</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">class</span><span style="color:#FF7B72"> sc:</span><span style="color:#79C0FF">TemporalAnchor</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">minCount</span><span style="color:#79C0FF"> 0</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#E6EDF3">  ] .</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E6EDF3">sc-</span><span style="color:#FF7B72">sh:</span><span style="color:#79C0FF">TemporalAnchorShape</span></span>
+<span class="line"><span style="color:#FF7B72">  a</span><span style="color:#FF7B72"> sh:</span><span style="color:#79C0FF">NodeShape</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sh:</span><span style="color:#79C0FF">targetClass</span><span style="color:#FF7B72"> sc:</span><span style="color:#79C0FF">TemporalAnchor</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sh:</span><span style="color:#79C0FF">property</span><span style="color:#E6EDF3"> [</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">path</span><span style="color:#FF7B72"> time:</span><span style="color:#79C0FF">hasBeginning</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">nodeKind</span><span style="color:#FF7B72"> sh:</span><span style="color:#79C0FF">IRI</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">class</span><span style="color:#FF7B72"> time:</span><span style="color:#79C0FF">Instant</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">minCount</span><span style="color:#79C0FF"> 0</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#E6EDF3">  ] ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sh:</span><span style="color:#79C0FF">property</span><span style="color:#E6EDF3"> [</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">path</span><span style="color:#FF7B72"> time:</span><span style="color:#79C0FF">hasEnd</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">nodeKind</span><span style="color:#FF7B72"> sh:</span><span style="color:#79C0FF">IRI</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">class</span><span style="color:#FF7B72"> time:</span><span style="color:#79C0FF">Instant</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">minCount</span><span style="color:#79C0FF"> 0</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#E6EDF3">  ] .</span></span>
 <span class="line"></span></code></pre>
       </details>
     </section>    <section class="wf-section">
@@ -831,6 +1055,15 @@
                 </div>
               </details>
             </details>
+            <details class="wf-history-node wf-history-node--state" open>
+              <summary class="wf-history-node-header"><a href="/test-inn-ambush/projections/contracts/inn-ambush-contract-shapes/_history001/_s0004">_s0004</a></summary>
+              <details class="wf-history-node wf-history-node--manifestation" open>
+                <summary class="wf-history-node-header"><a href="/test-inn-ambush/projections/contracts/inn-ambush-contract-shapes/_history001/_s0004/ttl">ttl</a></summary>
+                <div class="wf-history-node wf-history-node--file">
+                  <div class="wf-history-node-header"><a href="/test-inn-ambush/projections/contracts/inn-ambush-contract-shapes/_history001/_s0004/ttl/inn-ambush-contract.shapes.ttl" class="wf-history-file-iri">https://spectacular-voyage.github.io/test-inn-ambush/projections/contracts/inn-ambush-contract-shapes/_history001/_s0004/ttl/inn-ambush-contract.shapes.ttl</a></div>
+                </div>
+              </details>
+            </details>
           </details>
         </div>
       </details>
@@ -839,7 +1072,7 @@
     </article>
   </main>
   <footer class="wf-generated">
-    Generated on <span class="wf-term wf-date-tip" tabindex="0" title="2026-07-03T20:28:47.492Z" data-tooltip="2026-07-03T20:28:47.492Z">July 3, 2026</span> by <a href="https://github.com/semantic-flow/weave/">Weave</a>
+    Generated on <span class="wf-term wf-date-tip" tabindex="0" title="2026-07-04T06:45:07.889Z" data-tooltip="2026-07-04T06:45:07.889Z">July 4, 2026</span> by <a href="https://github.com/semantic-flow/weave/">Weave</a>
   </footer>
 </body>
 </html>
