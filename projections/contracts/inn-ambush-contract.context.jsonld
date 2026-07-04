@@ -4,6 +4,7 @@
     "@vocab": "https://spectacular-voyage.github.io/stagecraft/ontology/",
     "sc": "https://spectacular-voyage.github.io/stagecraft/ontology/",
     "sflo": "https://semantic-flow.github.io/sflo/ontology/",
+    "time": "http://www.w3.org/2006/time#",
     "xsd": "http://www.w3.org/2001/XMLSchema#",
     "type": "sc:envelopeType",
     "id": "sc:envelopeId",
@@ -16,6 +17,12 @@
     "subject": {
       "@id": "sc:subject",
       "@type": "@id"
+    },
+    "predicate": {
+      "@type": "@id"
+    },
+    "object": {
+      "@id": "sc:object"
     },
     "datacontenttype": "sc:dataContentType",
     "session": {
@@ -72,6 +79,35 @@
     },
     "barred": {
       "@type": "xsd:boolean"
+    },
+    "acceptedFrom": {
+      "@type": "xsd:dateTime"
+    },
+    "acceptedUntil": {
+      "@type": "xsd:dateTime"
+    },
+    "applicableDuring": {
+      "@type": "@id"
+    },
+    "applicableFrom": {
+      "@type": "@id"
+    },
+    "applicableUntil": {
+      "@type": "@id"
+    },
+    "applicableAfter": {
+      "@type": "@id"
+    },
+    "applicableBefore": {
+      "@type": "@id"
+    },
+    "hasBeginning": {
+      "@id": "time:hasBeginning",
+      "@type": "@id"
+    },
+    "hasEnd": {
+      "@id": "time:hasEnd",
+      "@type": "@id"
     },
     "lastAuthorityRecord": {
       "@type": "@id"

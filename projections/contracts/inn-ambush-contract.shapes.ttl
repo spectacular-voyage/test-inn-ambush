@@ -1,6 +1,7 @@
 @prefix sc: <https://spectacular-voyage.github.io/stagecraft/ontology/> .
 @prefix sc-sh: <https://spectacular-voyage.github.io/stagecraft/shacl/> .
 @prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix time: <http://www.w3.org/2006/time#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 sc-sh:ProjectionNotificationShape
@@ -796,4 +797,80 @@ sc-sh:AuthorityWouldProduceShape
     sh:nodeKind sh:IRI ;
     sh:minCount 1 ;
     sh:maxCount 1 ;
+  ] .
+
+sc-sh:TemporalRelatorShape
+  a sh:NodeShape ;
+  sh:targetClass sc:TemporalRelator ;
+  sh:property [
+    sh:path sc:subject ;
+    sh:nodeKind sh:IRI ;
+    sh:minCount 0 ;
+  ] ;
+  sh:property [
+    sh:path sc:predicate ;
+    sh:nodeKind sh:IRI ;
+    sh:minCount 0 ;
+  ] ;
+  sh:property [
+    sh:path sc:object ;
+    sh:minCount 0 ;
+  ] ;
+  sh:property [
+    sh:path sc:acceptedFrom ;
+    sh:datatype xsd:dateTime ;
+    sh:minCount 0 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path sc:acceptedUntil ;
+    sh:datatype xsd:dateTime ;
+    sh:minCount 0 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path sc:applicableDuring ;
+    sh:nodeKind sh:IRI ;
+    sh:class sc:TemporalAnchor ;
+    sh:minCount 0 ;
+  ] ;
+  sh:property [
+    sh:path sc:applicableFrom ;
+    sh:nodeKind sh:IRI ;
+    sh:class sc:TemporalAnchor ;
+    sh:minCount 0 ;
+  ] ;
+  sh:property [
+    sh:path sc:applicableUntil ;
+    sh:nodeKind sh:IRI ;
+    sh:class sc:TemporalAnchor ;
+    sh:minCount 0 ;
+  ] ;
+  sh:property [
+    sh:path sc:applicableAfter ;
+    sh:nodeKind sh:IRI ;
+    sh:class sc:TemporalAnchor ;
+    sh:minCount 0 ;
+  ] ;
+  sh:property [
+    sh:path sc:applicableBefore ;
+    sh:nodeKind sh:IRI ;
+    sh:class sc:TemporalAnchor ;
+    sh:minCount 0 ;
+  ] .
+
+sc-sh:TemporalAnchorShape
+  a sh:NodeShape ;
+  sh:targetClass sc:TemporalAnchor ;
+  sh:property [
+    sh:path time:hasBeginning ;
+    sh:nodeKind sh:IRI ;
+    sh:class time:Instant ;
+    sh:minCount 0 ;
+  ] ;
+  sh:property [
+    sh:path time:hasEnd ;
+    sh:nodeKind sh:IRI ;
+    sh:class time:Instant ;
+    sh:minCount 0 ;
   ] .

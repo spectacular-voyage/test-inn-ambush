@@ -3,6 +3,7 @@
 @prefix sc: <https://spectacular-voyage.github.io/stagecraft/ontology/> .
 @prefix schema: <https://schema.org/> .
 @prefix sflo: <https://semantic-flow.github.io/sflo/ontology/> .
+@prefix time: <http://www.w3.org/2006/time#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://spectacular-voyage.github.io/test-inn-ambush/rdf-export/inn-ambush-plan-b>
@@ -92,11 +93,24 @@
   sc:inScenario <https://spectacular-voyage.github.io/test-inn-ambush/scenario/inn-ambush> .
 
 <https://spectacular-voyage.github.io/test-inn-ambush/scene-local-time/inn-scene-plan-b>
-  a sc:SceneLocalTime ;
+  a sc:SceneLocalTime, sc:TemporalAnchor, time:ProperInterval ;
   dcterms:description "Scene beat 02: Plan B has been accepted while the enemy attack is staged but unresolved." ;
+  dcterms:references <https://spectacular-voyage.github.io/test-inn-ambush/beat/plan-b> ;
   sc:basedOnAuthorityRecord <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/outcome-committed/plan-b-001> ;
   sc:hasWorldTimePolicy <https://spectacular-voyage.github.io/test-inn-ambush/world-time-policy/held-elastic> ;
-  sc:inTemporalScope <https://spectacular-voyage.github.io/test-inn-ambush/temporal-scope/inn-scene> .
+  sc:inTemporalScope <https://spectacular-voyage.github.io/test-inn-ambush/temporal-scope/inn-scene> ;
+  time:hasBeginning <https://spectacular-voyage.github.io/test-inn-ambush/temporal-anchor/inn-scene-plan-b/beginning> ;
+  time:hasEnd <https://spectacular-voyage.github.io/test-inn-ambush/temporal-anchor/inn-scene-plan-b/end> .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/temporal-anchor/inn-scene-plan-b/beginning>
+  a sc:TemporalAnchor, time:Instant ;
+  dcterms:description "Beginning anchor for the held-elastic Inn scene Plan B beat." ;
+  dcterms:references <https://spectacular-voyage.github.io/test-inn-ambush/beat/plan-b> .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/temporal-anchor/inn-scene-plan-b/end>
+  a sc:TemporalAnchor, time:Instant ;
+  dcterms:description "End anchor for the held-elastic Inn scene Plan B beat." ;
+  dcterms:references <https://spectacular-voyage.github.io/test-inn-ambush/beat/plan-b> .
 
 <https://spectacular-voyage.github.io/test-inn-ambush/duration/inn-scene-elastic-window>
   a sc:ElasticDuration ;
@@ -143,8 +157,6 @@
   a sc:Suggestion ;
   sc:suggestedBy <https://spectacular-voyage.github.io/test-inn-ambush/participant/bob> ;
   sc:suggestedTo <https://spectacular-voyage.github.io/test-inn-ambush/participant/alice> ;
-  sc:visibleTo <https://spectacular-voyage.github.io/test-inn-ambush/participant/alice>,
-    <https://spectacular-voyage.github.io/test-inn-ambush/gm/alex> ;
   sc:inHistory <https://spectacular-voyage.github.io/test-inn-ambush/history/main> ;
   sc:inScenario <https://spectacular-voyage.github.io/test-inn-ambush/scenario/inn-ambush> ;
   sc:inTemporalScope <https://spectacular-voyage.github.io/test-inn-ambush/temporal-scope/inn-scene> .
@@ -153,8 +165,6 @@
   a sc:Intent ;
   sc:referencesSuggestion <https://spectacular-voyage.github.io/test-inn-ambush/suggestion/plan-b> ;
   sc:focusesOn <https://spectacular-voyage.github.io/test-inn-ambush/actant/elara> ;
-  sc:visibleTo <https://spectacular-voyage.github.io/test-inn-ambush/participant/alice>,
-    <https://spectacular-voyage.github.io/test-inn-ambush/gm/alex> ;
   sc:inHistory <https://spectacular-voyage.github.io/test-inn-ambush/history/main> ;
   sc:inScenario <https://spectacular-voyage.github.io/test-inn-ambush/scenario/inn-ambush> ;
   sc:inTemporalScope <https://spectacular-voyage.github.io/test-inn-ambush/temporal-scope/inn-scene> .
@@ -180,9 +190,6 @@
   dcterms:description "Plan B is a dramatic beat with visible opportunities for Alice, Bob, and Alex." ;
   sc:hasNarrativeFunction <https://spectacular-voyage.github.io/test-inn-ambush/narrative-function/dramatic-beat> ;
   sc:offersOpportunityTo <https://spectacular-voyage.github.io/test-inn-ambush/participant/alice>,
-    <https://spectacular-voyage.github.io/test-inn-ambush/participant/bob>,
-    <https://spectacular-voyage.github.io/test-inn-ambush/gm/alex> ;
-  sc:visibleTo <https://spectacular-voyage.github.io/test-inn-ambush/participant/alice>,
     <https://spectacular-voyage.github.io/test-inn-ambush/participant/bob>,
     <https://spectacular-voyage.github.io/test-inn-ambush/gm/alex> ;
   sc:inHistory <https://spectacular-voyage.github.io/test-inn-ambush/history/main> ;
@@ -222,8 +229,6 @@
 
 <https://spectacular-voyage.github.io/test-inn-ambush/actant/elara>
   a sc:Actant, sc:Character ;
-  sc:visibleTo <https://spectacular-voyage.github.io/test-inn-ambush/participant/alice>,
-    <https://spectacular-voyage.github.io/test-inn-ambush/gm/alex> ;
   sc:inHistory <https://spectacular-voyage.github.io/test-inn-ambush/history/main> ;
   sc:inScenario <https://spectacular-voyage.github.io/test-inn-ambush/scenario/inn-ambush> ;
   sc:inTemporalScope <https://spectacular-voyage.github.io/test-inn-ambush/temporal-scope/inn-scene> ;
@@ -231,12 +236,95 @@
 
 <https://spectacular-voyage.github.io/test-inn-ambush/actant/nera>
   a sc:Actant, sc:Character ;
-  sc:visibleTo <https://spectacular-voyage.github.io/test-inn-ambush/participant/alice>,
-    <https://spectacular-voyage.github.io/test-inn-ambush/gm/alex> ;
   sc:inHistory <https://spectacular-voyage.github.io/test-inn-ambush/history/main> ;
   sc:inScenario <https://spectacular-voyage.github.io/test-inn-ambush/scenario/inn-ambush> ;
   sc:inTemporalScope <https://spectacular-voyage.github.io/test-inn-ambush/temporal-scope/inn-scene> ;
   sc:locatedIn <https://spectacular-voyage.github.io/test-inn-ambush/room/old-mill-inn> .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/relator/visibility/suggestion-plan-b/alice-current>
+  a sc:TemporalRelator ;
+  sc:subject <https://spectacular-voyage.github.io/test-inn-ambush/suggestion/plan-b> ;
+  sc:predicate sc:visibleTo ;
+  sc:object <https://spectacular-voyage.github.io/test-inn-ambush/participant/alice> ;
+  sc:acceptedFrom "2026-06-29T13:35:00Z"^^xsd:dateTime .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/relator/visibility/suggestion-plan-b/alex-current>
+  a sc:TemporalRelator ;
+  sc:subject <https://spectacular-voyage.github.io/test-inn-ambush/suggestion/plan-b> ;
+  sc:predicate sc:visibleTo ;
+  sc:object <https://spectacular-voyage.github.io/test-inn-ambush/gm/alex> ;
+  sc:acceptedFrom "2026-06-29T13:35:00Z"^^xsd:dateTime .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/relator/visibility/suggestion-plan-b/bob-superseded>
+  a sc:TemporalRelator ;
+  sc:subject <https://spectacular-voyage.github.io/test-inn-ambush/suggestion/plan-b> ;
+  sc:predicate sc:visibleTo ;
+  sc:object <https://spectacular-voyage.github.io/test-inn-ambush/participant/bob> ;
+  sc:acceptedFrom "2026-06-29T13:34:00Z"^^xsd:dateTime ;
+  sc:acceptedUntil "2026-06-29T13:35:00Z"^^xsd:dateTime .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/relator/visibility/intent-elara-plan-b/alice-current>
+  a sc:TemporalRelator ;
+  sc:subject <https://spectacular-voyage.github.io/test-inn-ambush/intent/elara-plan-b> ;
+  sc:predicate sc:visibleTo ;
+  sc:object <https://spectacular-voyage.github.io/test-inn-ambush/participant/alice> ;
+  sc:acceptedFrom "2026-06-29T13:35:00Z"^^xsd:dateTime .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/relator/visibility/intent-elara-plan-b/alex-current>
+  a sc:TemporalRelator ;
+  sc:subject <https://spectacular-voyage.github.io/test-inn-ambush/intent/elara-plan-b> ;
+  sc:predicate sc:visibleTo ;
+  sc:object <https://spectacular-voyage.github.io/test-inn-ambush/gm/alex> ;
+  sc:acceptedFrom "2026-06-29T13:35:00Z"^^xsd:dateTime .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/relator/visibility/beat-plan-b/alice-current>
+  a sc:TemporalRelator ;
+  sc:subject <https://spectacular-voyage.github.io/test-inn-ambush/beat/plan-b> ;
+  sc:predicate sc:visibleTo ;
+  sc:object <https://spectacular-voyage.github.io/test-inn-ambush/participant/alice> ;
+  sc:acceptedFrom "2026-06-29T13:35:00Z"^^xsd:dateTime .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/relator/visibility/beat-plan-b/bob-current>
+  a sc:TemporalRelator ;
+  sc:subject <https://spectacular-voyage.github.io/test-inn-ambush/beat/plan-b> ;
+  sc:predicate sc:visibleTo ;
+  sc:object <https://spectacular-voyage.github.io/test-inn-ambush/participant/bob> ;
+  sc:acceptedFrom "2026-06-29T13:35:00Z"^^xsd:dateTime .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/relator/visibility/beat-plan-b/alex-current>
+  a sc:TemporalRelator ;
+  sc:subject <https://spectacular-voyage.github.io/test-inn-ambush/beat/plan-b> ;
+  sc:predicate sc:visibleTo ;
+  sc:object <https://spectacular-voyage.github.io/test-inn-ambush/gm/alex> ;
+  sc:acceptedFrom "2026-06-29T13:35:00Z"^^xsd:dateTime .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/relator/visibility/elara/alice-current>
+  a sc:TemporalRelator ;
+  sc:subject <https://spectacular-voyage.github.io/test-inn-ambush/actant/elara> ;
+  sc:predicate sc:visibleTo ;
+  sc:object <https://spectacular-voyage.github.io/test-inn-ambush/participant/alice> ;
+  sc:acceptedFrom "2026-06-29T13:35:00Z"^^xsd:dateTime .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/relator/visibility/elara/alex-current>
+  a sc:TemporalRelator ;
+  sc:subject <https://spectacular-voyage.github.io/test-inn-ambush/actant/elara> ;
+  sc:predicate sc:visibleTo ;
+  sc:object <https://spectacular-voyage.github.io/test-inn-ambush/gm/alex> ;
+  sc:acceptedFrom "2026-06-29T13:35:00Z"^^xsd:dateTime .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/relator/visibility/nera/alice-current>
+  a sc:TemporalRelator ;
+  sc:subject <https://spectacular-voyage.github.io/test-inn-ambush/actant/nera> ;
+  sc:predicate sc:visibleTo ;
+  sc:object <https://spectacular-voyage.github.io/test-inn-ambush/participant/alice> ;
+  sc:acceptedFrom "2026-06-29T13:35:00Z"^^xsd:dateTime .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/relator/visibility/nera/alex-current>
+  a sc:TemporalRelator ;
+  sc:subject <https://spectacular-voyage.github.io/test-inn-ambush/actant/nera> ;
+  sc:predicate sc:visibleTo ;
+  sc:object <https://spectacular-voyage.github.io/test-inn-ambush/gm/alex> ;
+  sc:acceptedFrom "2026-06-29T13:35:00Z"^^xsd:dateTime .
 
 <https://spectacular-voyage.github.io/test-inn-ambush/item/ashfang>
   a sc:Item, sc:Target ;
@@ -249,16 +337,35 @@
 <https://spectacular-voyage.github.io/test-inn-ambush/target/door>
   a sc:Target ;
   sc:appliesConsequence <https://spectacular-voyage.github.io/test-inn-ambush/consequence/door-barred> ;
-  sc:barred true ;
   sc:branchContext <https://spectacular-voyage.github.io/test-inn-ambush/branch/plan-b> ;
   sc:continuityDebtRecord <https://spectacular-voyage.github.io/test-inn-ambush/continuity-debt/plan-b-door-barred-before-attack> ;
   sc:inHistory <https://spectacular-voyage.github.io/test-inn-ambush/history/main> ;
   sc:inScenario <https://spectacular-voyage.github.io/test-inn-ambush/scenario/inn-ambush> ;
   sc:inTemporalScope <https://spectacular-voyage.github.io/test-inn-ambush/temporal-scope/inn-scene> ;
-  sc:lastAuthorityRecord <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/outcome-committed/plan-b-001> ;
-  sc:lastCommittedEvent <https://spectacular-voyage.github.io/test-inn-ambush/committed-event/plan-b-001> ;
-  sc:lastStateMutation <https://spectacular-voyage.github.io/test-inn-ambush/state-mutation/door-barred-plan-b-001> ;
   sc:locatedIn <https://spectacular-voyage.github.io/test-inn-ambush/room/old-mill-inn> .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/relator/door-barred/plan-b-001-superseded>
+  a sc:TemporalRelator ;
+  sc:subject <https://spectacular-voyage.github.io/test-inn-ambush/target/door> ;
+  sc:predicate sc:barred ;
+  sc:object false ;
+  sc:acceptedFrom "2026-06-29T13:34:00Z"^^xsd:dateTime ;
+  sc:acceptedUntil "2026-06-29T13:35:00Z"^^xsd:dateTime ;
+  sc:applicableDuring <https://spectacular-voyage.github.io/test-inn-ambush/scene-local-time/inn-scene-plan-b> ;
+  sc:basedOnAuthorityRecord <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/outcome-committed/plan-b-001> ;
+  sc:branchContext <https://spectacular-voyage.github.io/test-inn-ambush/branch/plan-b> .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/relator/door-barred/plan-b-001-current>
+  a sc:TemporalRelator ;
+  sc:subject <https://spectacular-voyage.github.io/test-inn-ambush/target/door> ;
+  sc:predicate sc:barred ;
+  sc:object true ;
+  sc:acceptedFrom "2026-06-29T13:35:00Z"^^xsd:dateTime ;
+  sc:applicableDuring <https://spectacular-voyage.github.io/test-inn-ambush/scene-local-time/inn-scene-plan-b> ;
+  sc:basedOnAuthorityRecord <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/outcome-committed/plan-b-001> ;
+  sc:branchContext <https://spectacular-voyage.github.io/test-inn-ambush/branch/plan-b> ;
+  sc:causedByCommittedEvent <https://spectacular-voyage.github.io/test-inn-ambush/committed-event/plan-b-001> ;
+  sc:producedStateMutation <https://spectacular-voyage.github.io/test-inn-ambush/state-mutation/door-barred-plan-b-001> .
 
 <https://spectacular-voyage.github.io/test-inn-ambush/consequence/door-barred>
   a sc:InWorldConsequence ;
