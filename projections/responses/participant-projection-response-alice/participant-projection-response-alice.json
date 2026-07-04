@@ -15,6 +15,8 @@
   },
   "visibleResources": [
     "https://spectacular-voyage.github.io/test-inn-ambush/beat/plan-b",
+    "https://spectacular-voyage.github.io/test-inn-ambush/actant/elara",
+    "https://spectacular-voyage.github.io/test-inn-ambush/actant/nera",
     "https://spectacular-voyage.github.io/test-inn-ambush/suggestion/plan-b",
     "https://spectacular-voyage.github.io/test-inn-ambush/intent/elara-plan-b"
   ],
@@ -24,6 +26,18 @@
       "resourceClass": "https://spectacular-voyage.github.io/stagecraft/ontology/Beat",
       "label": "Plan B beat",
       "summary": "Plan B is the accepted table beat: Elara bars the inn door with Ashfang."
+    },
+    {
+      "resource": "https://spectacular-voyage.github.io/test-inn-ambush/actant/elara",
+      "resourceClass": "https://spectacular-voyage.github.io/stagecraft/ontology/Character",
+      "label": "Elara",
+      "summary": "Elara is Alice's character and the actant carrying the Plan B intent."
+    },
+    {
+      "resource": "https://spectacular-voyage.github.io/test-inn-ambush/actant/nera",
+      "resourceClass": "https://spectacular-voyage.github.io/stagecraft/ontology/Character",
+      "label": "Nera",
+      "summary": "Nera is in the inn scene; Plan B is about creating space for her escape."
     },
     {
       "resource": "https://spectacular-voyage.github.io/test-inn-ambush/suggestion/plan-b",
