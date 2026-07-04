@@ -222,6 +222,8 @@
 
 <https://spectacular-voyage.github.io/test-inn-ambush/actant/elara>
   a sc:Actant, sc:Character ;
+  sc:visibleTo <https://spectacular-voyage.github.io/test-inn-ambush/participant/alice>,
+    <https://spectacular-voyage.github.io/test-inn-ambush/gm/alex> ;
   sc:inHistory <https://spectacular-voyage.github.io/test-inn-ambush/history/main> ;
   sc:inScenario <https://spectacular-voyage.github.io/test-inn-ambush/scenario/inn-ambush> ;
   sc:inTemporalScope <https://spectacular-voyage.github.io/test-inn-ambush/temporal-scope/inn-scene> ;
@@ -229,6 +231,8 @@
 
 <https://spectacular-voyage.github.io/test-inn-ambush/actant/nera>
   a sc:Actant, sc:Character ;
+  sc:visibleTo <https://spectacular-voyage.github.io/test-inn-ambush/participant/alice>,
+    <https://spectacular-voyage.github.io/test-inn-ambush/gm/alex> ;
   sc:inHistory <https://spectacular-voyage.github.io/test-inn-ambush/history/main> ;
   sc:inScenario <https://spectacular-voyage.github.io/test-inn-ambush/scenario/inn-ambush> ;
   sc:inTemporalScope <https://spectacular-voyage.github.io/test-inn-ambush/temporal-scope/inn-scene> ;
