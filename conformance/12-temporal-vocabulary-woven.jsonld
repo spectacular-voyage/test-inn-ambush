@@ -40,11 +40,10 @@
       },
       "hasFileExpectation": [
         {
-          "id": "#context-history-payload",
+          "id": "#context-history-state-index",
           "type": "FileExpectation",
-          "path": "projections/contracts/inn-ambush-contract-context/_history001/_s0004/jsonld/inn-ambush-contract.context.jsonld",
-          "changeType": "added",
-          "compareMode": "text"
+          "path": "projections/contracts/inn-ambush-contract-context/_history001/_s0004/index.html",
+          "changeType": "added"
         },
         {
           "id": "#context-history-jsonld-index",
@@ -53,13 +52,14 @@
           "changeType": "added"
         },
         {
-          "id": "#context-history-index",
+          "id": "#context-history-payload",
           "type": "FileExpectation",
-          "path": "projections/contracts/inn-ambush-contract-context/_history001/_s0004/index.html",
-          "changeType": "added"
+          "path": "projections/contracts/inn-ambush-contract-context/_history001/_s0004/jsonld/inn-ambush-contract.context.jsonld",
+          "changeType": "added",
+          "compareMode": "text"
         },
         {
-          "id": "#context-history-root-index",
+          "id": "#context-history-index",
           "type": "FileExpectation",
           "path": "projections/contracts/inn-ambush-contract-context/_history001/index.html",
           "changeType": "updated"
@@ -84,11 +84,10 @@
           "changeType": "updated"
         },
         {
-          "id": "#shapes-history-payload",
+          "id": "#shapes-history-state-index",
           "type": "FileExpectation",
-          "path": "projections/contracts/inn-ambush-contract-shapes/_history001/_s0004/ttl/inn-ambush-contract.shapes.ttl",
-          "changeType": "added",
-          "compareMode": "rdfCanonical"
+          "path": "projections/contracts/inn-ambush-contract-shapes/_history001/_s0004/index.html",
+          "changeType": "added"
         },
         {
           "id": "#shapes-history-ttl-index",
@@ -97,13 +96,14 @@
           "changeType": "added"
         },
         {
-          "id": "#shapes-history-index",
+          "id": "#shapes-history-payload",
           "type": "FileExpectation",
-          "path": "projections/contracts/inn-ambush-contract-shapes/_history001/_s0004/index.html",
-          "changeType": "added"
+          "path": "projections/contracts/inn-ambush-contract-shapes/_history001/_s0004/ttl/inn-ambush-contract.shapes.ttl",
+          "changeType": "added",
+          "compareMode": "rdfCanonical"
         },
         {
-          "id": "#shapes-history-root-index",
+          "id": "#shapes-history-index",
           "type": "FileExpectation",
           "path": "projections/contracts/inn-ambush-contract-shapes/_history001/index.html",
           "changeType": "updated"
@@ -128,11 +128,10 @@
           "changeType": "updated"
         },
         {
-          "id": "#world-state-history-payload",
+          "id": "#world-state-history-state-index",
           "type": "FileExpectation",
-          "path": "world/states/inn-ambush-plan-b-state/_history001/_s0003/ttl/inn-ambush-plan-b-state.ttl",
-          "changeType": "added",
-          "compareMode": "rdfCanonical"
+          "path": "world/states/inn-ambush-plan-b-state/_history001/_s0003/index.html",
+          "changeType": "added"
         },
         {
           "id": "#world-state-history-ttl-index",
@@ -141,13 +140,14 @@
           "changeType": "added"
         },
         {
-          "id": "#world-state-history-index",
+          "id": "#world-state-history-payload",
           "type": "FileExpectation",
-          "path": "world/states/inn-ambush-plan-b-state/_history001/_s0003/index.html",
-          "changeType": "added"
+          "path": "world/states/inn-ambush-plan-b-state/_history001/_s0003/ttl/inn-ambush-plan-b-state.ttl",
+          "changeType": "added",
+          "compareMode": "rdfCanonical"
         },
         {
-          "id": "#world-state-history-root-index",
+          "id": "#world-state-history-index",
           "type": "FileExpectation",
           "path": "world/states/inn-ambush-plan-b-state/_history001/index.html",
           "changeType": "updated"
@@ -174,12 +174,12 @@
       ],
       "hasRdfExpectation": [
         {
-          "id": "#context-inventory-rdf",
+          "id": "#context-knop-inventory-rdf",
           "type": "RdfExpectation",
           "targetsFileExpectation": "#context-knop-inventory",
           "hasAskAssertion": [
             {
-              "id": "#ask-context-history-advances",
+              "id": "#ask-context-latest-history-state",
               "type": "SparqlAskAssertion",
               "query": "ASK { <https://spectacular-voyage.github.io/test-inn-ambush/projections/contracts/inn-ambush-contract-context/_history001> <https://semantic-flow.github.io/sflo/ontology/latestHistoricalState> <https://spectacular-voyage.github.io/test-inn-ambush/projections/contracts/inn-ambush-contract-context/_history001/_s0004> . <https://spectacular-voyage.github.io/test-inn-ambush/projections/contracts/inn-ambush-contract-context/_history001/_s0004> <https://semantic-flow.github.io/sflo/ontology/locatedFileForState> <https://spectacular-voyage.github.io/test-inn-ambush/projections/contracts/inn-ambush-contract-context/_history001/_s0004/jsonld/inn-ambush-contract.context.jsonld> . }",
               "expectedBoolean": true
@@ -187,12 +187,12 @@
           ]
         },
         {
-          "id": "#shapes-inventory-rdf",
+          "id": "#shapes-knop-inventory-rdf",
           "type": "RdfExpectation",
           "targetsFileExpectation": "#shapes-knop-inventory",
           "hasAskAssertion": [
             {
-              "id": "#ask-shapes-history-advances",
+              "id": "#ask-shapes-latest-history-state",
               "type": "SparqlAskAssertion",
               "query": "ASK { <https://spectacular-voyage.github.io/test-inn-ambush/projections/contracts/inn-ambush-contract-shapes/_history001> <https://semantic-flow.github.io/sflo/ontology/latestHistoricalState> <https://spectacular-voyage.github.io/test-inn-ambush/projections/contracts/inn-ambush-contract-shapes/_history001/_s0004> . <https://spectacular-voyage.github.io/test-inn-ambush/projections/contracts/inn-ambush-contract-shapes/_history001/_s0004> <https://semantic-flow.github.io/sflo/ontology/locatedFileForState> <https://spectacular-voyage.github.io/test-inn-ambush/projections/contracts/inn-ambush-contract-shapes/_history001/_s0004/ttl/inn-ambush-contract.shapes.ttl> . }",
               "expectedBoolean": true
@@ -200,12 +200,12 @@
           ]
         },
         {
-          "id": "#world-state-inventory-rdf",
+          "id": "#world-state-knop-inventory-rdf",
           "type": "RdfExpectation",
           "targetsFileExpectation": "#world-state-knop-inventory",
           "hasAskAssertion": [
             {
-              "id": "#ask-world-state-history-advances",
+              "id": "#ask-world-state-latest-history-state",
               "type": "SparqlAskAssertion",
               "query": "ASK { <https://spectacular-voyage.github.io/test-inn-ambush/world/states/inn-ambush-plan-b-state/_history001> <https://semantic-flow.github.io/sflo/ontology/latestHistoricalState> <https://spectacular-voyage.github.io/test-inn-ambush/world/states/inn-ambush-plan-b-state/_history001/_s0003> . <https://spectacular-voyage.github.io/test-inn-ambush/world/states/inn-ambush-plan-b-state/_history001/_s0003> <https://semantic-flow.github.io/sflo/ontology/locatedFileForState> <https://spectacular-voyage.github.io/test-inn-ambush/world/states/inn-ambush-plan-b-state/_history001/_s0003/ttl/inn-ambush-plan-b-state.ttl> . }",
               "expectedBoolean": true
@@ -218,9 +218,9 @@
           "targetsFileExpectation": "#shapes-history-payload",
           "hasAskAssertion": [
             {
-              "id": "#ask-woven-shapes-temporal-relator",
+              "id": "#ask-woven-temporal-relator-shape",
               "type": "SparqlAskAssertion",
-              "query": "ASK { <https://spectacular-voyage.github.io/stagecraft/shacl/TemporalRelatorShape> a <http://www.w3.org/ns/shacl#NodeShape> ; <http://www.w3.org/ns/shacl#targetClass> <https://spectacular-voyage.github.io/stagecraft/ontology/TemporalRelator> ; <http://www.w3.org/ns/shacl#property> ?acceptedUntil ; <http://www.w3.org/ns/shacl#property> ?applicableUntil . ?acceptedUntil <http://www.w3.org/ns/shacl#path> <https://spectacular-voyage.github.io/stagecraft/ontology/acceptedUntil> ; <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#dateTime> ; <http://www.w3.org/ns/shacl#minCount> \"0\"^^<http://www.w3.org/2001/XMLSchema#integer> . ?applicableUntil <http://www.w3.org/ns/shacl#path> <https://spectacular-voyage.github.io/stagecraft/ontology/applicableUntil> ; <http://www.w3.org/ns/shacl#class> <https://spectacular-voyage.github.io/stagecraft/ontology/TemporalAnchor> ; <http://www.w3.org/ns/shacl#minCount> \"0\"^^<http://www.w3.org/2001/XMLSchema#integer> . }",
+              "query": "ASK { <https://spectacular-voyage.github.io/stagecraft/shacl/TemporalRelatorShape> a <http://www.w3.org/ns/shacl#NodeShape> ; <http://www.w3.org/ns/shacl#targetClass> <https://spectacular-voyage.github.io/stagecraft/ontology/TemporalRelator> ; <http://www.w3.org/ns/shacl#property> ?acceptedFrom ; <http://www.w3.org/ns/shacl#property> ?applicableDuring . ?acceptedFrom <http://www.w3.org/ns/shacl#path> <https://spectacular-voyage.github.io/stagecraft/ontology/acceptedFrom> ; <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#dateTime> ; <http://www.w3.org/ns/shacl#minCount> \"0\"^^<http://www.w3.org/2001/XMLSchema#integer> . ?applicableDuring <http://www.w3.org/ns/shacl#path> <https://spectacular-voyage.github.io/stagecraft/ontology/applicableDuring> ; <http://www.w3.org/ns/shacl#class> <https://spectacular-voyage.github.io/stagecraft/ontology/TemporalAnchor> ; <http://www.w3.org/ns/shacl#minCount> \"0\"^^<http://www.w3.org/2001/XMLSchema#integer> . }",
               "expectedBoolean": true
             }
           ]
@@ -231,15 +231,21 @@
           "targetsFileExpectation": "#world-state-history-payload",
           "hasAskAssertion": [
             {
-              "id": "#ask-woven-door-relator",
+              "id": "#ask-woven-door-relators",
               "type": "SparqlAskAssertion",
-              "query": "ASK { <https://spectacular-voyage.github.io/test-inn-ambush/relator/door-barred/plan-b-001-current> a <https://spectacular-voyage.github.io/stagecraft/ontology/TemporalRelator> ; <https://spectacular-voyage.github.io/stagecraft/ontology/subject> <https://spectacular-voyage.github.io/test-inn-ambush/target/door> ; <https://spectacular-voyage.github.io/stagecraft/ontology/predicate> <https://spectacular-voyage.github.io/stagecraft/ontology/barred> ; <https://spectacular-voyage.github.io/stagecraft/ontology/object> true ; <https://spectacular-voyage.github.io/stagecraft/ontology/acceptedFrom> \"2026-06-29T13:35:00Z\"^^<http://www.w3.org/2001/XMLSchema#dateTime> ; <https://spectacular-voyage.github.io/stagecraft/ontology/applicableDuring> <https://spectacular-voyage.github.io/test-inn-ambush/scene-local-time/inn-scene-plan-b> . <https://spectacular-voyage.github.io/test-inn-ambush/relator/door-barred/plan-b-001-superseded> <https://spectacular-voyage.github.io/stagecraft/ontology/acceptedUntil> \"2026-06-29T13:35:00Z\"^^<http://www.w3.org/2001/XMLSchema#dateTime> . }",
+              "query": "ASK { <https://spectacular-voyage.github.io/test-inn-ambush/relator/door-barred/plan-b-001-current> a <https://spectacular-voyage.github.io/stagecraft/ontology/TemporalRelator> ; <https://spectacular-voyage.github.io/stagecraft/ontology/subject> <https://spectacular-voyage.github.io/test-inn-ambush/target/door> ; <https://spectacular-voyage.github.io/stagecraft/ontology/predicate> <https://spectacular-voyage.github.io/stagecraft/ontology/barred> ; <https://spectacular-voyage.github.io/stagecraft/ontology/object> \"true\"^^<http://www.w3.org/2001/XMLSchema#boolean> ; <https://spectacular-voyage.github.io/stagecraft/ontology/acceptedFrom> \"2026-06-29T13:35:00Z\"^^<http://www.w3.org/2001/XMLSchema#dateTime> . <https://spectacular-voyage.github.io/test-inn-ambush/relator/door-barred/plan-b-001-superseded> a <https://spectacular-voyage.github.io/stagecraft/ontology/TemporalRelator> ; <https://spectacular-voyage.github.io/stagecraft/ontology/subject> <https://spectacular-voyage.github.io/test-inn-ambush/target/door> ; <https://spectacular-voyage.github.io/stagecraft/ontology/predicate> <https://spectacular-voyage.github.io/stagecraft/ontology/barred> ; <https://spectacular-voyage.github.io/stagecraft/ontology/object> \"false\"^^<http://www.w3.org/2001/XMLSchema#boolean> ; <https://spectacular-voyage.github.io/stagecraft/ontology/acceptedUntil> \"2026-06-29T13:35:00Z\"^^<http://www.w3.org/2001/XMLSchema#dateTime> . }",
               "expectedBoolean": true
             },
             {
-              "id": "#ask-woven-visibleto-and-anchor",
+              "id": "#ask-woven-visibility-relators",
               "type": "SparqlAskAssertion",
-              "query": "ASK { <https://spectacular-voyage.github.io/test-inn-ambush/relator/visibility/elara/alice-current> a <https://spectacular-voyage.github.io/stagecraft/ontology/TemporalRelator> ; <https://spectacular-voyage.github.io/stagecraft/ontology/predicate> <https://spectacular-voyage.github.io/stagecraft/ontology/visibleTo> ; <https://spectacular-voyage.github.io/stagecraft/ontology/object> <https://spectacular-voyage.github.io/test-inn-ambush/participant/alice> ; <https://spectacular-voyage.github.io/stagecraft/ontology/acceptedFrom> \"2026-06-29T13:35:00Z\"^^<http://www.w3.org/2001/XMLSchema#dateTime> . <https://spectacular-voyage.github.io/test-inn-ambush/scene-local-time/inn-scene-plan-b> a <https://spectacular-voyage.github.io/stagecraft/ontology/TemporalAnchor> ; <http://www.w3.org/2006/time#hasBeginning> <https://spectacular-voyage.github.io/test-inn-ambush/temporal-anchor/inn-scene-plan-b/beginning> ; <http://www.w3.org/2006/time#hasEnd> <https://spectacular-voyage.github.io/test-inn-ambush/temporal-anchor/inn-scene-plan-b/end> . FILTER NOT EXISTS { <https://spectacular-voyage.github.io/test-inn-ambush/relator/visibility/elara/alice-current> <https://spectacular-voyage.github.io/stagecraft/ontology/acceptedUntil> ?until . } }",
+              "query": "ASK { <https://spectacular-voyage.github.io/test-inn-ambush/relator/visibility/elara/alice-current> a <https://spectacular-voyage.github.io/stagecraft/ontology/TemporalRelator> ; <https://spectacular-voyage.github.io/stagecraft/ontology/subject> <https://spectacular-voyage.github.io/test-inn-ambush/actant/elara> ; <https://spectacular-voyage.github.io/stagecraft/ontology/predicate> <https://spectacular-voyage.github.io/stagecraft/ontology/visibleTo> ; <https://spectacular-voyage.github.io/stagecraft/ontology/object> <https://spectacular-voyage.github.io/test-inn-ambush/participant/alice> ; <https://spectacular-voyage.github.io/stagecraft/ontology/acceptedFrom> \"2026-06-29T13:35:00Z\"^^<http://www.w3.org/2001/XMLSchema#dateTime> . <https://spectacular-voyage.github.io/test-inn-ambush/relator/visibility/suggestion-plan-b/bob-superseded> a <https://spectacular-voyage.github.io/stagecraft/ontology/TemporalRelator> ; <https://spectacular-voyage.github.io/stagecraft/ontology/predicate> <https://spectacular-voyage.github.io/stagecraft/ontology/visibleTo> ; <https://spectacular-voyage.github.io/stagecraft/ontology/object> <https://spectacular-voyage.github.io/test-inn-ambush/participant/bob> ; <https://spectacular-voyage.github.io/stagecraft/ontology/acceptedUntil> \"2026-06-29T13:35:00Z\"^^<http://www.w3.org/2001/XMLSchema#dateTime> . }",
+              "expectedBoolean": true
+            },
+            {
+              "id": "#ask-woven-temporal-anchor",
+              "type": "SparqlAskAssertion",
+              "query": "ASK { <https://spectacular-voyage.github.io/test-inn-ambush/relator/door-barred/plan-b-001-current> <https://spectacular-voyage.github.io/stagecraft/ontology/applicableDuring> <https://spectacular-voyage.github.io/test-inn-ambush/scene-local-time/inn-scene-plan-b> . <https://spectacular-voyage.github.io/test-inn-ambush/scene-local-time/inn-scene-plan-b> a <https://spectacular-voyage.github.io/stagecraft/ontology/TemporalAnchor> ; <http://purl.org/dc/terms/references> <https://spectacular-voyage.github.io/test-inn-ambush/beat/plan-b> ; <http://www.w3.org/2006/time#hasBeginning> <https://spectacular-voyage.github.io/test-inn-ambush/temporal-anchor/inn-scene-plan-b/beginning> ; <http://www.w3.org/2006/time#hasEnd> <https://spectacular-voyage.github.io/test-inn-ambush/temporal-anchor/inn-scene-plan-b/end> . }",
               "expectedBoolean": true
             }
           ]
