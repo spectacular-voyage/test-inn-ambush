@@ -4,7 +4,7 @@
     "@vocab": "https://spectacular-voyage.github.io/stagecraft/ontology/",
     "sc": "https://spectacular-voyage.github.io/stagecraft/ontology/",
     "sflo": "https://semantic-flow.github.io/sflo/ontology/",
-    "time": "http://www.w3.org/2006/time#",
+    "owlTime": "http://www.w3.org/2006/time#",
     "xsd": "http://www.w3.org/2001/XMLSchema#",
     "type": "sc:envelopeType",
     "id": "sc:envelopeId",
@@ -102,11 +102,11 @@
       "@type": "@id"
     },
     "hasBeginning": {
-      "@id": "time:hasBeginning",
+      "@id": "owlTime:hasBeginning",
       "@type": "@id"
     },
     "hasEnd": {
-      "@id": "time:hasEnd",
+      "@id": "owlTime:hasEnd",
       "@type": "@id"
     },
     "lastAuthorityRecord": {
