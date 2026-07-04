@@ -30,6 +30,10 @@
     "requestedByParticipant": {
       "@type": "@id"
     },
+    "participant": {
+      "@id": "sc:participant",
+      "@type": "@id"
+    },
     "requestedBy": {
       "@type": "@id"
     },
@@ -72,8 +76,16 @@
     "lastAuthorityRecord": {
       "@type": "@id"
     },
+    "projectionHistory": {
+      "@id": "sc:projectionHistory",
+      "@type": "@id"
+    },
     "projectionState": {
       "@type": "@id"
+    },
+    "projectionStateOrdinal": {
+      "@id": "sc:projectionStateOrdinal",
+      "@type": "xsd:nonNegativeInteger"
     },
     "observedProjectionState": {
       "@type": "@id"
@@ -104,6 +116,21 @@
     },
     "visibleResources": {
       "@type": "@id"
+    },
+    "resourceSummaries": {
+      "@id": "sc:resourceSummaries",
+      "@context": {
+        "resource": {
+          "@id": "sc:resource",
+          "@type": "@id"
+        },
+        "resourceClass": {
+          "@id": "sc:resourceClass",
+          "@type": "@id"
+        },
+        "label": "sc:label",
+        "summary": "sc:summary"
+      }
     },
     "evidencePointers": {
       "@type": "@id"

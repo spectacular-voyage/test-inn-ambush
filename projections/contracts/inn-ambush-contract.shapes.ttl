@@ -117,6 +117,126 @@ sc-sh:ProjectionRequestShape
     sh:maxCount 1 ;
   ] .
 
+sc-sh:ParticipantProjectionResponseShape
+  a sh:NodeShape ;
+  sh:targetClass sc:ParticipantProjectionResponse ;
+  sh:property [
+    sh:path sc:envelopeType ;
+    sh:hasValue "stagecraft.participant-projection.response.v1" ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path sc:participant ;
+    sh:nodeKind sh:IRI ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path sc:participantProjection ;
+    sh:nodeKind sh:IRI ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path sc:projectionHistory ;
+    sh:nodeKind sh:IRI ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path sc:projectionState ;
+    sh:nodeKind sh:IRI ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path sc:projectionStateOrdinal ;
+    sh:datatype xsd:nonNegativeInteger ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path sc:sourceProjection ;
+    sh:node sc-sh:SourceProjectionShape ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path sc:visibleResources ;
+    sh:nodeKind sh:IRI ;
+    sh:minCount 1 ;
+  ] ;
+  sh:property [
+    sh:path sc:resourceSummaries ;
+    sh:node sc-sh:ResourceSummaryShape ;
+  ] ;
+  sh:property [
+    sh:path sc:historyScope ;
+    sh:maxCount 0 ;
+    sh:message "ParticipantProjectionResponse carries resolved current state, not a request history scope." ;
+  ] ;
+  sh:property [
+    sh:path sc:branchScope ;
+    sh:maxCount 0 ;
+    sh:message "ParticipantProjectionResponse carries resolved current state, not a request branch scope." ;
+  ] ;
+  sh:property [
+    sh:path sc:temporalScope ;
+    sh:maxCount 0 ;
+    sh:message "ParticipantProjectionResponse v1 does not carry temporal axes." ;
+  ] ;
+  sh:property [
+    sh:path sc:acceptanceInterval ;
+    sh:maxCount 0 ;
+    sh:message "ParticipantProjectionResponse v1 does not expose acceptance intervals." ;
+  ] ;
+  sh:property [
+    sh:path sc:applicabilityInterval ;
+    sh:maxCount 0 ;
+    sh:message "ParticipantProjectionResponse v1 does not expose applicability intervals." ;
+  ] ;
+  sh:property [
+    sh:path sc:requestedOperation ;
+    sh:maxCount 0 ;
+    sh:message "ParticipantProjectionResponse is a read envelope, not an operation request." ;
+  ] ;
+  sh:property [
+    sh:path sc:execute ;
+    sh:maxCount 0 ;
+    sh:message "ParticipantProjectionResponse is a read envelope, not an executable operation." ;
+  ] ;
+  sh:property [
+    sh:path sc:wouldProduce ;
+    sh:maxCount 0 ;
+    sh:message "ParticipantProjectionResponse must not preview authority-produced resources." ;
+  ] ;
+  sh:property [
+    sh:path sc:producedResources ;
+    sh:maxCount 0 ;
+    sh:message "ParticipantProjectionResponse must not claim produced resources." ;
+  ] ;
+  sh:property [
+    sh:path sc:authorityRecord ;
+    sh:maxCount 0 ;
+    sh:message "ParticipantProjectionResponse exposes authority records only as visible resource pointers." ;
+  ] ;
+  sh:property [
+    sh:path sc:committedEvent ;
+    sh:maxCount 0 ;
+    sh:message "ParticipantProjectionResponse exposes committed events only as visible resource pointers." ;
+  ] ;
+  sh:property [
+    sh:path sc:commitCertificate ;
+    sh:maxCount 0 ;
+    sh:message "ParticipantProjectionResponse exposes commit certificates only as visible resource pointers." ;
+  ] ;
+  sh:property [
+    sh:path sc:stateMutation ;
+    sh:maxCount 0 ;
+    sh:message "ParticipantProjectionResponse exposes state mutations only as visible resource pointers." ;
+  ] .
+
 sc-sh:ChatContributionShape
   a sh:NodeShape ;
   sh:targetClass sc:ChatContribution ;
@@ -572,6 +692,33 @@ sc-sh:ResourcePointersShape
   sh:property [
     sh:path sc:stateMutation ;
     sh:nodeKind sh:IRI ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] .
+
+sc-sh:ResourceSummaryShape
+  a sh:NodeShape ;
+  sh:property [
+    sh:path sc:resource ;
+    sh:nodeKind sh:IRI ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path sc:resourceClass ;
+    sh:nodeKind sh:IRI ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path sc:label ;
+    sh:datatype xsd:string ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path sc:summary ;
+    sh:datatype xsd:string ;
     sh:minCount 1 ;
     sh:maxCount 1 ;
   ] .

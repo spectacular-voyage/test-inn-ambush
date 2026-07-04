@@ -221,14 +221,14 @@
   sc:inTemporalScope <https://spectacular-voyage.github.io/test-inn-ambush/temporal-scope/inn-scene> .
 
 <https://spectacular-voyage.github.io/test-inn-ambush/actant/elara>
-  a sc:Actant ;
+  a sc:Actant, sc:Character ;
   sc:inHistory <https://spectacular-voyage.github.io/test-inn-ambush/history/main> ;
   sc:inScenario <https://spectacular-voyage.github.io/test-inn-ambush/scenario/inn-ambush> ;
   sc:inTemporalScope <https://spectacular-voyage.github.io/test-inn-ambush/temporal-scope/inn-scene> ;
   sc:locatedIn <https://spectacular-voyage.github.io/test-inn-ambush/room/old-mill-inn> .
 
 <https://spectacular-voyage.github.io/test-inn-ambush/actant/nera>
-  a sc:Actant ;
+  a sc:Actant, sc:Character ;
   sc:inHistory <https://spectacular-voyage.github.io/test-inn-ambush/history/main> ;
   sc:inScenario <https://spectacular-voyage.github.io/test-inn-ambush/scenario/inn-ambush> ;
   sc:inTemporalScope <https://spectacular-voyage.github.io/test-inn-ambush/temporal-scope/inn-scene> ;
