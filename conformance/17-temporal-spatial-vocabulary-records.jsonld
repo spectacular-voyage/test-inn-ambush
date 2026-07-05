@@ -1,0 +1,126 @@
+{
+  "@context": {
+    "@vocab": "https://spectacular-voyage.github.io/accord/ontology/",
+    "dcterms": "http://purl.org/dc/terms/",
+    "id": "@id",
+    "type": "@type",
+    "changeType": {
+      "@type": "@vocab"
+    },
+    "compareMode": {
+      "@type": "@vocab"
+    },
+    "targetsFileExpectation": {
+      "@type": "@id"
+    },
+    "locatorKind": {
+      "@type": "@vocab"
+    }
+  },
+  "type": "Manifest",
+  "id": "urn:accord:stagecraft:test-inn-ambush:17-temporal-spatial-vocabulary-records",
+  "dcterms:title": "Inn Ambush 17 temporal spatial vocabulary records",
+  "hasCase": [
+    {
+      "type": "TransitionCase",
+      "id": "#temporal-spatial-vocabulary-records",
+      "fixtureRepo": "github.com/spectacular-voyage/test-inn-ambush",
+      "operationId": "stagecraft.fixture.addTemporalSpatialVocabularyRecords",
+      "fromRef": "08b909a34908b7fcfb22168e86e3cef8e2de8c4d",
+      "toRef": "a.17-temporal-spatial-vocabulary-records",
+      "fromState": {
+        "type": "StateLocator",
+        "locatorKind": "gitRefState",
+        "ref": "08b909a34908b7fcfb22168e86e3cef8e2de8c4d"
+      },
+      "toState": {
+        "type": "StateLocator",
+        "locatorKind": "gitRefState",
+        "ref": "a.17-temporal-spatial-vocabulary-records"
+      },
+      "hasFileExpectation": [
+        {
+          "id": "#projection-context",
+          "type": "FileExpectation",
+          "path": "projections/contracts/inn-ambush-contract.context.jsonld",
+          "changeType": "updated",
+          "compareMode": "text"
+        },
+        {
+          "id": "#projection-shapes",
+          "type": "FileExpectation",
+          "path": "projections/contracts/inn-ambush-contract.shapes.ttl",
+          "changeType": "updated",
+          "compareMode": "rdfCanonical"
+        },
+        {
+          "id": "#authority-journal",
+          "type": "FileExpectation",
+          "path": "authority/journals/plan-b/plan-b.ttl",
+          "changeType": "updated",
+          "compareMode": "rdfCanonical"
+        },
+        {
+          "id": "#world-state",
+          "type": "FileExpectation",
+          "path": "world/states/inn-ambush-plan-b-state/inn-ambush-plan-b-state.ttl",
+          "changeType": "updated",
+          "compareMode": "rdfCanonical"
+        }
+      ],
+      "hasRdfExpectation": [
+        {
+          "id": "#projection-shapes-rdf",
+          "type": "RdfExpectation",
+          "targetsFileExpectation": "#projection-shapes",
+          "hasAskAssertion": [
+            {
+              "id": "#ask-clock-anchor-flowing-place-and-location-shapes",
+              "type": "SparqlAskAssertion",
+              "query": "ASK { <https://spectacular-voyage.github.io/stagecraft/shacl/ClockAnchorShape> a <http://www.w3.org/ns/shacl#NodeShape> ; <http://www.w3.org/ns/shacl#targetClass> <https://spectacular-voyage.github.io/stagecraft/ontology/ClockAnchor> . <https://spectacular-voyage.github.io/stagecraft/shacl/FlowingWorldTimeShape> a <http://www.w3.org/ns/shacl#NodeShape> ; <http://www.w3.org/ns/shacl#targetClass> <https://spectacular-voyage.github.io/stagecraft/ontology/FlowingWorldTime> . <https://spectacular-voyage.github.io/stagecraft/shacl/TemporalGroundingShape> a <http://www.w3.org/ns/shacl#NodeShape> ; <http://www.w3.org/ns/shacl#targetClass> <https://spectacular-voyage.github.io/stagecraft/ontology/TemporalGrounding> . <https://spectacular-voyage.github.io/stagecraft/shacl/PlaceShape> a <http://www.w3.org/ns/shacl#NodeShape> ; <http://www.w3.org/ns/shacl#targetClass> <https://spectacular-voyage.github.io/stagecraft/ontology/Place> . <https://spectacular-voyage.github.io/stagecraft/shacl/LocatedInRelatorShape> a <http://www.w3.org/ns/shacl#NodeShape> ; <http://www.w3.org/ns/shacl#targetClass> <https://spectacular-voyage.github.io/stagecraft/ontology/LocatedInRelator> . <https://spectacular-voyage.github.io/stagecraft/shacl/MovementEventShape> a <http://www.w3.org/ns/shacl#NodeShape> ; <http://www.w3.org/ns/shacl#targetClass> <https://spectacular-voyage.github.io/stagecraft/ontology/MovementEvent> . }",
+              "expectedBoolean": true
+            }
+          ]
+        },
+        {
+          "id": "#world-state-rdf",
+          "type": "RdfExpectation",
+          "targetsFileExpectation": "#world-state",
+          "hasAskAssertion": [
+            {
+              "id": "#ask-held-and-flowing-world-time-coexist",
+              "type": "SparqlAskAssertion",
+              "query": "ASK { <https://spectacular-voyage.github.io/test-inn-ambush/world-time-policy/held-elastic> a <https://spectacular-voyage.github.io/stagecraft/ontology/WorldTimePolicy> ; a <https://spectacular-voyage.github.io/stagecraft/ontology/HeldWorldTime> . <https://spectacular-voyage.github.io/test-inn-ambush/world-time-policy/flowing-server> a <https://spectacular-voyage.github.io/stagecraft/ontology/WorldTimePolicy> ; a <https://spectacular-voyage.github.io/stagecraft/ontology/FlowingWorldTime> ; <https://spectacular-voyage.github.io/stagecraft/ontology/usesWorldTimeAxis> <https://spectacular-voyage.github.io/test-inn-ambush/world-time-axis/main> ; <https://spectacular-voyage.github.io/stagecraft/ontology/startsAtClockAnchor> <https://spectacular-voyage.github.io/test-inn-ambush/clock-anchor/inn-clock-001> . <https://spectacular-voyage.github.io/test-inn-ambush/clock-anchor/inn-clock-001> a <https://spectacular-voyage.github.io/stagecraft/ontology/TemporalAnchor> ; a <https://spectacular-voyage.github.io/stagecraft/ontology/ClockAnchor> ; <https://spectacular-voyage.github.io/stagecraft/ontology/clockOffsetSeconds> \"900.0\"^^<http://www.w3.org/2001/XMLSchema#decimal> ; <https://spectacular-voyage.github.io/stagecraft/ontology/clockPrecision> \"minute\" ; <https://spectacular-voyage.github.io/stagecraft/ontology/onWorldTimeAxis> <https://spectacular-voyage.github.io/test-inn-ambush/world-time-axis/main> . <https://spectacular-voyage.github.io/test-inn-ambush/temporal-grounding/inn-scene-plan-b-to-clock-001> a <https://spectacular-voyage.github.io/stagecraft/ontology/TemporalGrounding> ; <https://spectacular-voyage.github.io/stagecraft/ontology/groundsTemporalAnchor> <https://spectacular-voyage.github.io/test-inn-ambush/scene-local-time/inn-scene-plan-b> ; <https://spectacular-voyage.github.io/stagecraft/ontology/groundedToClockAnchor> <https://spectacular-voyage.github.io/test-inn-ambush/clock-anchor/inn-clock-001> ; <https://spectacular-voyage.github.io/stagecraft/ontology/basedOnAuthorityRecord> <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/time-advanced/inn-clock-001> . }",
+              "expectedBoolean": true
+            },
+            {
+              "id": "#ask-location-zone-graph-and-movement-intervals",
+              "type": "SparqlAskAssertion",
+              "query": "ASK { <https://spectacular-voyage.github.io/test-inn-ambush/place/common-room> a <https://spectacular-voyage.github.io/stagecraft/ontology/Place> ; <https://spectacular-voyage.github.io/stagecraft/ontology/containedIn> <https://spectacular-voyage.github.io/test-inn-ambush/room/old-mill-inn> ; <https://spectacular-voyage.github.io/stagecraft/ontology/adjacentTo> <https://spectacular-voyage.github.io/test-inn-ambush/place/front-door-threshold> . <https://spectacular-voyage.github.io/test-inn-ambush/place/front-door-threshold> <https://spectacular-voyage.github.io/stagecraft/ontology/adjacentTo> <https://spectacular-voyage.github.io/test-inn-ambush/place/old-road> . <https://spectacular-voyage.github.io/test-inn-ambush/relator/location/nera/common-room-superseded> a <https://spectacular-voyage.github.io/stagecraft/ontology/LocatedInRelator> ; <https://spectacular-voyage.github.io/stagecraft/ontology/subject> <https://spectacular-voyage.github.io/test-inn-ambush/actant/nera> ; <https://spectacular-voyage.github.io/stagecraft/ontology/predicate> <https://spectacular-voyage.github.io/stagecraft/ontology/locatedIn> ; <https://spectacular-voyage.github.io/stagecraft/ontology/object> <https://spectacular-voyage.github.io/test-inn-ambush/place/common-room> ; <https://spectacular-voyage.github.io/stagecraft/ontology/acceptedUntil> \"2026-06-29T13:38:00Z\"^^<http://www.w3.org/2001/XMLSchema#dateTime> . <https://spectacular-voyage.github.io/test-inn-ambush/relator/location/nera/old-road-current> a <https://spectacular-voyage.github.io/stagecraft/ontology/LocatedInRelator> ; <https://spectacular-voyage.github.io/stagecraft/ontology/subject> <https://spectacular-voyage.github.io/test-inn-ambush/actant/nera> ; <https://spectacular-voyage.github.io/stagecraft/ontology/predicate> <https://spectacular-voyage.github.io/stagecraft/ontology/locatedIn> ; <https://spectacular-voyage.github.io/stagecraft/ontology/object> <https://spectacular-voyage.github.io/test-inn-ambush/place/old-road> ; <https://spectacular-voyage.github.io/stagecraft/ontology/acceptedFrom> \"2026-06-29T13:38:00Z\"^^<http://www.w3.org/2001/XMLSchema#dateTime> ; <https://spectacular-voyage.github.io/stagecraft/ontology/causedByCommittedEvent> <https://spectacular-voyage.github.io/test-inn-ambush/movement/nera-to-old-road-001> . }",
+              "expectedBoolean": true
+            },
+            {
+              "id": "#ask-no-direct-nera-located-in-fact",
+              "type": "SparqlAskAssertion",
+              "query": "ASK { <https://spectacular-voyage.github.io/test-inn-ambush/actant/nera> <https://spectacular-voyage.github.io/stagecraft/ontology/locatedIn> ?place . }",
+              "expectedBoolean": false
+            }
+          ]
+        },
+        {
+          "id": "#authority-journal-rdf",
+          "type": "RdfExpectation",
+          "targetsFileExpectation": "#authority-journal",
+          "hasAskAssertion": [
+            {
+              "id": "#ask-time-and-movement-commit-records-own-instants",
+              "type": "SparqlAskAssertion",
+              "query": "ASK { <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/time-advanced/inn-clock-001> a <https://spectacular-voyage.github.io/stagecraft/ontology/TimeAdvanced> ; <http://purl.org/dc/terms/created> \"2026-06-29T13:37:00Z\"^^<http://www.w3.org/2001/XMLSchema#dateTime> ; <https://spectacular-voyage.github.io/stagecraft/ontology/advancesWorldTimeTo> <https://spectacular-voyage.github.io/test-inn-ambush/clock-anchor/inn-clock-001> ; <https://spectacular-voyage.github.io/stagecraft/ontology/committedEvent> <https://spectacular-voyage.github.io/test-inn-ambush/committed-event/time-advanced-inn-clock-001> . <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/movement-committed/nera-to-old-road-001> a <https://spectacular-voyage.github.io/stagecraft/ontology/MovementCommitted> ; <http://purl.org/dc/terms/created> \"2026-06-29T13:38:00Z\"^^<http://www.w3.org/2001/XMLSchema#dateTime> ; <https://spectacular-voyage.github.io/stagecraft/ontology/committedEvent> <https://spectacular-voyage.github.io/test-inn-ambush/movement/nera-to-old-road-001> ; <https://spectacular-voyage.github.io/stagecraft/ontology/movesActant> <https://spectacular-voyage.github.io/test-inn-ambush/actant/nera> ; <https://spectacular-voyage.github.io/stagecraft/ontology/fromPlace> <https://spectacular-voyage.github.io/test-inn-ambush/place/common-room> ; <https://spectacular-voyage.github.io/stagecraft/ontology/toPlace> <https://spectacular-voyage.github.io/test-inn-ambush/place/old-road> . <https://spectacular-voyage.github.io/test-inn-ambush/movement/nera-to-old-road-001> a <https://spectacular-voyage.github.io/stagecraft/ontology/MovementEvent> ; <https://spectacular-voyage.github.io/stagecraft/ontology/authorizedByAuthorityRecord> <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/movement-committed/nera-to-old-road-001> . FILTER NOT EXISTS { <https://spectacular-voyage.github.io/test-inn-ambush/movement/nera-to-old-road-001> <http://purl.org/dc/terms/created> ?movementCreated . } FILTER NOT EXISTS { <https://spectacular-voyage.github.io/test-inn-ambush/committed-event/time-advanced-inn-clock-001> <http://purl.org/dc/terms/created> ?timeCreated . } }",
+              "expectedBoolean": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
