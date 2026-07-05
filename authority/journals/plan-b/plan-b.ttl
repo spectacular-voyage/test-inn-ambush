@@ -48,6 +48,23 @@
   sc:basedOnHistory <https://spectacular-voyage.github.io/test-inn-ambush/history/main> ;
   sc:idempotencyKey "inn-ambush-plan-b-001" .
 
+<https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/commit-certificate/speech-hello-barkeep-001>
+  a sc:CommitCertificate ;
+  dcterms:created "2026-06-29T13:36:00Z"^^xsd:dateTime ;
+  sc:committedBy <https://spectacular-voyage.github.io/test-inn-ambush/authority-policy/speech-always-commit> ;
+  sc:committedEvent <https://spectacular-voyage.github.io/test-inn-ambush/speech-event/hello-barkeep-001> ;
+  sc:basedOnHistory <https://spectacular-voyage.github.io/test-inn-ambush/history/main> ;
+  sc:idempotencyKey "chatcontrib-hello-barkeep-001" .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/speech-committed/hello-barkeep-001>
+  a sc:SpeechCommitted ;
+  dcterms:created "2026-06-29T13:36:00Z"^^xsd:dateTime ;
+  sc:committedBy <https://spectacular-voyage.github.io/test-inn-ambush/authority-policy/speech-always-commit> ;
+  sc:committedEvent <https://spectacular-voyage.github.io/test-inn-ambush/speech-event/hello-barkeep-001> ;
+  sc:hasCommitCertificate <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/commit-certificate/speech-hello-barkeep-001> ;
+  dcterms:references <https://spectacular-voyage.github.io/test-inn-ambush/sessions/contributions/chat-contribution-hello-barkeep> ;
+  sc:basedOnHistory <https://spectacular-voyage.github.io/test-inn-ambush/history/main> .
+
 <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/outcome-committed/plan-b-001>
   a sc:OutcomeCommitted ;
   dcterms:created "2026-06-29T13:34:00Z"^^xsd:dateTime ;

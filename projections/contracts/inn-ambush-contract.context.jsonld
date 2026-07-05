@@ -4,6 +4,7 @@
     "@vocab": "https://spectacular-voyage.github.io/stagecraft/ontology/",
     "sc": "https://spectacular-voyage.github.io/stagecraft/ontology/",
     "sflo": "https://semantic-flow.github.io/sflo/ontology/",
+    "dcterms": "http://purl.org/dc/terms/",
     "owlTime": "http://www.w3.org/2006/time#",
     "xsd": "http://www.w3.org/2001/XMLSchema#",
     "type": "sc:envelopeType",
@@ -31,6 +32,26 @@
     "conversation": {
       "@type": "@id"
     },
+    "references": {
+      "@id": "dcterms:references",
+      "@type": "@id"
+    },
+    "authorizedByAuthorityRecord": {
+      "@type": "@id"
+    },
+    "basedOnHistory": {
+      "@type": "@id"
+    },
+    "deliveredTo": {
+      "@type": "@id"
+    },
+    "spokenByActant": {
+      "@type": "@id"
+    },
+    "spokenByParticipant": {
+      "@type": "@id"
+    },
+    "speechKind": "sc:speechKind",
     "submittedByParticipant": {
       "@type": "@id"
     },

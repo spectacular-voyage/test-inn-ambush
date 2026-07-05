@@ -1,5 +1,6 @@
 @prefix sc: <https://spectacular-voyage.github.io/stagecraft/ontology/> .
 @prefix sc-sh: <https://spectacular-voyage.github.io/stagecraft/shacl/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix sh: <http://www.w3.org/ns/shacl#> .
 @prefix time: <http://www.w3.org/2006/time#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
@@ -278,6 +279,14 @@ sc-sh:ChatContributionShape
     sh:maxCount 1 ;
   ] ;
   sh:property [
+    sh:path sc:body ;
+    sh:datatype xsd:string ;
+    sh:minLength 1 ;
+    sh:pattern "\\S" ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
     sh:path sc:relatesTo ;
     sh:nodeKind sh:IRI ;
     sh:minCount 1 ;
@@ -336,6 +345,155 @@ sc-sh:ChatContributionShape
     sh:path sc:lastAuthorityRecord ;
     sh:maxCount 0 ;
     sh:message "ChatContribution must not carry accepted state provenance facts." ;
+  ] .
+
+sc-sh:CommittedSpeechEventShape
+  a sh:NodeShape ;
+  sh:targetClass sc:CommittedSpeechEvent ;
+  sh:property [
+    sh:path sc:envelopeType ;
+    sh:hasValue "stagecraft.committed-speech-event.v1" ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path sc:session ;
+    sh:nodeKind sh:IRI ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path sc:conversation ;
+    sh:nodeKind sh:IRI ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path dcterms:references ;
+    sh:nodeKind sh:IRI ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path sc:authorizedByAuthorityRecord ;
+    sh:nodeKind sh:IRI ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path sc:basedOnHistory ;
+    sh:nodeKind sh:IRI ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path sc:spokenByParticipant ;
+    sh:nodeKind sh:IRI ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path sc:spokenByActant ;
+    sh:nodeKind sh:IRI ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path sc:speechKind ;
+    sh:in (
+      "in-character"
+      "table-talk"
+    ) ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path sc:deliveredTo ;
+    sh:nodeKind sh:IRI ;
+    sh:minCount 1 ;
+  ] ;
+  sh:property [
+    sh:path dcterms:created ;
+    sh:maxCount 0 ;
+    sh:message "CommittedSpeechEvent must not duplicate the journal commit instant." ;
+  ] ;
+  sh:property [
+    sh:path sc:createdAt ;
+    sh:maxCount 0 ;
+    sh:message "CommittedSpeechEvent must not mint a separate createdAt timestamp." ;
+  ] ;
+  sh:property [
+    sh:path sc:acceptedFrom ;
+    sh:maxCount 0 ;
+    sh:message "CommittedSpeechEvent is session truth, not an accepted state relator." ;
+  ] ;
+  sh:property [
+    sh:path sc:acceptedUntil ;
+    sh:maxCount 0 ;
+    sh:message "CommittedSpeechEvent is session truth, not an accepted state relator." ;
+  ] ;
+  sh:property [
+    sh:path sc:affectsEntity ;
+    sh:maxCount 0 ;
+    sh:message "CommittedSpeechEvent must not claim consequence-bearing affected entities." ;
+  ] ;
+  sh:property [
+    sh:path sc:appliesConsequence ;
+    sh:maxCount 0 ;
+    sh:message "CommittedSpeechEvent has zero consequence relators." ;
+  ] ;
+  sh:property [
+    sh:path sc:producesStateMutation ;
+    sh:maxCount 0 ;
+    sh:message "CommittedSpeechEvent must not produce state mutations." ;
+  ] ;
+  sh:property [
+    sh:path sc:stateMutation ;
+    sh:maxCount 0 ;
+    sh:message "CommittedSpeechEvent must not point to state mutation records." ;
+  ] .
+
+sc-sh:SpeechCommittedShape
+  a sh:NodeShape ;
+  sh:targetClass sc:SpeechCommitted ;
+  sh:property [
+    sh:path dcterms:created ;
+    sh:datatype xsd:dateTime ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path sc:committedEvent ;
+    sh:nodeKind sh:IRI ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path sc:hasCommitCertificate ;
+    sh:nodeKind sh:IRI ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path dcterms:references ;
+    sh:nodeKind sh:IRI ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path sc:affectsEntity ;
+    sh:maxCount 0 ;
+    sh:message "SpeechCommitted must not claim consequence-bearing affected entities." ;
+  ] ;
+  sh:property [
+    sh:path sc:appliesConsequence ;
+    sh:maxCount 0 ;
+    sh:message "SpeechCommitted must not apply an in-world consequence." ;
+  ] ;
+  sh:property [
+    sh:path sc:stateMutation ;
+    sh:maxCount 0 ;
+    sh:message "SpeechCommitted must not point to state mutation records." ;
   ] .
 
 sc-sh:AuthorityOperationShape
