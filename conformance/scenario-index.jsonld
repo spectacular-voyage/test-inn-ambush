@@ -486,6 +486,69 @@
           }
         }
       ]
+    },
+    {
+      "id": "#21-movement-affordance-mask-records",
+      "type": "ScenarioStep",
+      "manifestPath": "21-movement-affordance-mask-records.jsonld",
+      "hasLaneBinding": [
+        {
+          "type": "LaneStateBinding",
+          "lane": "#fixture-lane",
+          "fromLaneState": {
+            "type": "StateLocator",
+            "locatorKind": "gitRefState",
+            "ref": "d7124ce6a8483656a1b6e89e67de45e23dd4236d"
+          },
+          "toLaneState": {
+            "type": "StateLocator",
+            "locatorKind": "gitRefState",
+            "ref": "a.21-movement-affordance-mask-records"
+          }
+        }
+      ]
+    },
+    {
+      "id": "#22-srd-conditions-checks-records",
+      "type": "ScenarioStep",
+      "manifestPath": "22-srd-conditions-checks-records.jsonld",
+      "hasLaneBinding": [
+        {
+          "type": "LaneStateBinding",
+          "lane": "#fixture-lane",
+          "fromLaneState": {
+            "type": "StateLocator",
+            "locatorKind": "gitRefState",
+            "ref": "8e895784b80ba7714a41ee05b1cb152c5b461d3c"
+          },
+          "toLaneState": {
+            "type": "StateLocator",
+            "locatorKind": "gitRefState",
+            "ref": "a.22-srd-conditions-checks-records"
+          }
+        }
+      ]
+    },
+    {
+      "id": "#23-srd-conditions-checks-woven",
+      "type": "ScenarioStep",
+      "manifestPath": "23-srd-conditions-checks-woven.jsonld",
+      "hasLaneBinding": [
+        {
+          "type": "LaneStateBinding",
+          "lane": "#fixture-lane",
+          "fromLaneState": {
+            "type": "StateLocator",
+            "locatorKind": "gitRefState",
+            "ref": "aa4a55e560db5bd93f7b4611c6df3d7f77b0f77f"
+          },
+          "toLaneState": {
+            "type": "StateLocator",
+            "locatorKind": "gitRefState",
+            "ref": "a.23-srd-conditions-checks-woven"
+          }
+        }
+      ]
     }
   ]
 }

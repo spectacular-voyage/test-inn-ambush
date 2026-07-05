@@ -1,0 +1,189 @@
+{
+  "@context": {
+    "@vocab": "https://spectacular-voyage.github.io/accord/ontology/",
+    "dcterms": "http://purl.org/dc/terms/",
+    "id": "@id",
+    "type": "@type",
+    "changeType": {
+      "@type": "@vocab"
+    },
+    "compareMode": {
+      "@type": "@vocab"
+    },
+    "targetsFileExpectation": {
+      "@type": "@id"
+    },
+    "locatorKind": {
+      "@type": "@vocab"
+    }
+  },
+  "type": "Manifest",
+  "id": "urn:accord:stagecraft:test-inn-ambush:22-srd-conditions-checks-records",
+  "dcterms:title": "Inn Ambush 22 SRD conditions and checks records",
+  "hasCase": [
+    {
+      "type": "TransitionCase",
+      "id": "#srd-conditions-checks-records",
+      "fixtureRepo": "github.com/spectacular-voyage/test-inn-ambush",
+      "operationId": "stagecraft.fixture.addSrdConditionsChecksRecords",
+      "fromRef": "8e895784b80ba7714a41ee05b1cb152c5b461d3c",
+      "toRef": "a.22-srd-conditions-checks-records",
+      "fromState": {
+        "type": "StateLocator",
+        "locatorKind": "gitRefState",
+        "ref": "8e895784b80ba7714a41ee05b1cb152c5b461d3c"
+      },
+      "toState": {
+        "type": "StateLocator",
+        "locatorKind": "gitRefState",
+        "ref": "a.22-srd-conditions-checks-records"
+      },
+      "hasFileExpectation": [
+        {
+          "id": "#authority-journal",
+          "type": "FileExpectation",
+          "path": "authority/journals/plan-b/plan-b.ttl",
+          "changeType": "updated",
+          "compareMode": "rdfCanonical"
+        },
+        {
+          "id": "#world-state",
+          "type": "FileExpectation",
+          "path": "world/states/inn-ambush-plan-b-state/inn-ambush-plan-b-state.ttl",
+          "changeType": "updated",
+          "compareMode": "rdfCanonical"
+        },
+        {
+          "id": "#conditions-readme",
+          "type": "FileExpectation",
+          "path": "rules/dynamis/srd-5-2-1/conditions/README.md",
+          "changeType": "added",
+          "compareMode": "text"
+        },
+        {
+          "id": "#conditions-csvw",
+          "type": "FileExpectation",
+          "path": "rules/dynamis/srd-5-2-1/conditions/conditions.csvw.json",
+          "changeType": "added",
+          "compareMode": "json"
+        },
+        {
+          "id": "#conditions-csv",
+          "type": "FileExpectation",
+          "path": "rules/dynamis/srd-5-2-1/conditions/conditions.effects.csv",
+          "changeType": "added",
+          "compareMode": "text"
+        },
+        {
+          "id": "#conditions-rdf",
+          "type": "FileExpectation",
+          "path": "rules/dynamis/srd-5-2-1/conditions/conditions.ttl",
+          "changeType": "added",
+          "compareMode": "rdfCanonical"
+        },
+        {
+          "id": "#d20-readme",
+          "type": "FileExpectation",
+          "path": "rules/dynamis/srd-5-2-1/d20-test/README.md",
+          "changeType": "added",
+          "compareMode": "text"
+        },
+        {
+          "id": "#d20-abilities-csv",
+          "type": "FileExpectation",
+          "path": "rules/dynamis/srd-5-2-1/d20-test/d20-test.abilities.csv",
+          "changeType": "added",
+          "compareMode": "text"
+        },
+        {
+          "id": "#d20-csvw",
+          "type": "FileExpectation",
+          "path": "rules/dynamis/srd-5-2-1/d20-test/d20-test.csvw.json",
+          "changeType": "added",
+          "compareMode": "json"
+        },
+        {
+          "id": "#d20-skills-csv",
+          "type": "FileExpectation",
+          "path": "rules/dynamis/srd-5-2-1/d20-test/d20-test.skills.csv",
+          "changeType": "added",
+          "compareMode": "text"
+        },
+        {
+          "id": "#d20-test-types-csv",
+          "type": "FileExpectation",
+          "path": "rules/dynamis/srd-5-2-1/d20-test/d20-test.test-types.csv",
+          "changeType": "added",
+          "compareMode": "text"
+        },
+        {
+          "id": "#d20-rdf",
+          "type": "FileExpectation",
+          "path": "rules/dynamis/srd-5-2-1/d20-test/d20-test.ttl",
+          "changeType": "added",
+          "compareMode": "rdfCanonical"
+        }
+      ],
+      "hasRdfExpectation": [
+        {
+          "id": "#conditions-rdf-expectation",
+          "type": "RdfExpectation",
+          "targetsFileExpectation": "#conditions-rdf",
+          "hasAskAssertion": [
+            {
+              "id": "#ask-conditions-package-attribution-and-restrained-mask",
+              "type": "SparqlAskAssertion",
+              "query": "ASK { <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions> a <http://www.w3.org/ns/dcat#Dataset> ; <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/4.0/> ; <http://purl.org/dc/terms/source> <https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf> . <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/restrained/effect/speed-0> a <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/AffordanceMaskDefinition> ; <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/masksActionType> <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/Move> ; <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> \"Your Speed is 0 and can't increase.\" . }",
+              "expectedBoolean": true
+            },
+            {
+              "id": "#ask-paralyzed-inherited-masks",
+              "type": "SparqlAskAssertion",
+              "query": "ASK { <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/paralyzed/effect/incapacitated> a <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/AffordanceMaskDefinition> ; <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/masksActionType> <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/Speak>, <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/TakeAction>, <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/TakeBonusAction>, <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/TakeReaction> . <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/paralyzed/effect/speed-0> <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/masksActionType> <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/Move> . }",
+              "expectedBoolean": true
+            }
+          ]
+        },
+        {
+          "id": "#d20-rdf-expectation",
+          "type": "RdfExpectation",
+          "targetsFileExpectation": "#d20-rdf",
+          "hasAskAssertion": [
+            {
+              "id": "#ask-d20-athletics-clickable-check-data",
+              "type": "SparqlAskAssertion",
+              "query": "ASK { <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/Athletics> a <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/Skill> ; <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/defaultAbility> <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/Strength> ; <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/exampleUses> \"Jump farther than normal, stay afloat in rough water, or break something.\" . <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/d20-test/skill-rule/athletics> <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/actionType> <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/AbilityCheck> . <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/SavingThrow> a <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/D20TestType>, <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/ActionType> . }",
+              "expectedBoolean": true
+            }
+          ]
+        },
+        {
+          "id": "#world-state-rdf-expectation",
+          "type": "RdfExpectation",
+          "targetsFileExpectation": "#world-state",
+          "hasAskAssertion": [
+            {
+              "id": "#ask-restraint-mask-links-extracted-condition",
+              "type": "SparqlAskAssertion",
+              "query": "ASK { <https://spectacular-voyage.github.io/test-inn-ambush/affordance-mask/restraint-nera-001> <http://purl.org/dc/terms/references> <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/restrained/effect/speed-0> ; <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/masksActionType> <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/Move> . }",
+              "expectedBoolean": true
+            }
+          ]
+        },
+        {
+          "id": "#authority-journal-rdf-expectation",
+          "type": "RdfExpectation",
+          "targetsFileExpectation": "#authority-journal",
+          "hasAskAssertion": [
+            {
+              "id": "#ask-restraint-authority-record-links-extracted-condition",
+              "type": "SparqlAskAssertion",
+              "query": "ASK { <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/outcome-committed/restraint-nera-001> <http://purl.org/dc/terms/references> <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions>, <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/restrained/effect/speed-0> ; <https://spectacular-voyage.github.io/stagecraft/ontology/committedEvent> <https://spectacular-voyage.github.io/test-inn-ambush/committed-event/restraint-nera-001> . }",
+              "expectedBoolean": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

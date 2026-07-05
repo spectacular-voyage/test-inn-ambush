@@ -1,0 +1,266 @@
+{
+  "@context": {
+    "@vocab": "https://spectacular-voyage.github.io/accord/ontology/",
+    "dcterms": "http://purl.org/dc/terms/",
+    "id": "@id",
+    "type": "@type",
+    "changeType": {
+      "@type": "@vocab"
+    },
+    "compareMode": {
+      "@type": "@vocab"
+    },
+    "targetsFileExpectation": {
+      "@type": "@id"
+    },
+    "locatorKind": {
+      "@type": "@vocab"
+    }
+  },
+  "type": "Manifest",
+  "id": "urn:accord:stagecraft:test-inn-ambush:23-srd-conditions-checks-woven",
+  "dcterms:title": "Inn Ambush 23 SRD conditions and checks woven",
+  "hasCase": [
+    {
+      "type": "TransitionCase",
+      "id": "#weave-srd-conditions-checks",
+      "fixtureRepo": "github.com/spectacular-voyage/test-inn-ambush",
+      "operationId": "stagecraft.fixture.weaveSrdConditionsChecks",
+      "fromRef": "aa4a55e560db5bd93f7b4611c6df3d7f77b0f77f",
+      "toRef": "a.23-srd-conditions-checks-woven",
+      "fromState": {
+        "type": "StateLocator",
+        "locatorKind": "gitRefState",
+        "ref": "aa4a55e560db5bd93f7b4611c6df3d7f77b0f77f"
+      },
+      "toState": {
+        "type": "StateLocator",
+        "locatorKind": "gitRefState",
+        "ref": "a.23-srd-conditions-checks-woven"
+      },
+      "hasFileExpectation": [
+        {
+          "id": "#mesh-inventory",
+          "type": "FileExpectation",
+          "path": "_mesh/_inventory/inventory.ttl",
+          "changeType": "updated",
+          "compareMode": "rdfCanonical"
+        },
+        {
+          "id": "#mesh-inventory-page",
+          "type": "FileExpectation",
+          "path": "_mesh/_inventory/index.html",
+          "changeType": "updated",
+          "compareMode": "text"
+        },
+        {
+          "id": "#conditions-knop-meta",
+          "type": "FileExpectation",
+          "path": "rules/dynamis/srd-5-2-1/conditions/_knop/_meta/meta.ttl",
+          "changeType": "added",
+          "compareMode": "rdfCanonical"
+        },
+        {
+          "id": "#conditions-knop-inventory",
+          "type": "FileExpectation",
+          "path": "rules/dynamis/srd-5-2-1/conditions/_knop/_inventory/inventory.ttl",
+          "changeType": "added",
+          "compareMode": "rdfCanonical"
+        },
+        {
+          "id": "#conditions-history-payload",
+          "type": "FileExpectation",
+          "path": "rules/dynamis/srd-5-2-1/conditions/_history001/_s0001/ttl/conditions.ttl",
+          "changeType": "added",
+          "compareMode": "rdfCanonical"
+        },
+        {
+          "id": "#conditions-page",
+          "type": "FileExpectation",
+          "path": "rules/dynamis/srd-5-2-1/conditions/index.html",
+          "changeType": "added",
+          "compareMode": "text"
+        },
+        {
+          "id": "#conditions-history-page",
+          "type": "FileExpectation",
+          "path": "rules/dynamis/srd-5-2-1/conditions/_history001/index.html",
+          "changeType": "added",
+          "compareMode": "text"
+        },
+        {
+          "id": "#conditions-history-state-page",
+          "type": "FileExpectation",
+          "path": "rules/dynamis/srd-5-2-1/conditions/_history001/_s0001/index.html",
+          "changeType": "added",
+          "compareMode": "text"
+        },
+        {
+          "id": "#conditions-history-manifestation-page",
+          "type": "FileExpectation",
+          "path": "rules/dynamis/srd-5-2-1/conditions/_history001/_s0001/ttl/index.html",
+          "changeType": "added",
+          "compareMode": "text"
+        },
+        {
+          "id": "#conditions-knop-page",
+          "type": "FileExpectation",
+          "path": "rules/dynamis/srd-5-2-1/conditions/_knop/index.html",
+          "changeType": "added",
+          "compareMode": "text"
+        },
+        {
+          "id": "#conditions-knop-meta-page",
+          "type": "FileExpectation",
+          "path": "rules/dynamis/srd-5-2-1/conditions/_knop/_meta/index.html",
+          "changeType": "added",
+          "compareMode": "text"
+        },
+        {
+          "id": "#conditions-knop-inventory-page",
+          "type": "FileExpectation",
+          "path": "rules/dynamis/srd-5-2-1/conditions/_knop/_inventory/index.html",
+          "changeType": "added",
+          "compareMode": "text"
+        },
+        {
+          "id": "#d20-knop-meta",
+          "type": "FileExpectation",
+          "path": "rules/dynamis/srd-5-2-1/d20-test/_knop/_meta/meta.ttl",
+          "changeType": "added",
+          "compareMode": "rdfCanonical"
+        },
+        {
+          "id": "#d20-knop-inventory",
+          "type": "FileExpectation",
+          "path": "rules/dynamis/srd-5-2-1/d20-test/_knop/_inventory/inventory.ttl",
+          "changeType": "added",
+          "compareMode": "rdfCanonical"
+        },
+        {
+          "id": "#d20-history-payload",
+          "type": "FileExpectation",
+          "path": "rules/dynamis/srd-5-2-1/d20-test/_history001/_s0001/ttl/d20-test.ttl",
+          "changeType": "added",
+          "compareMode": "rdfCanonical"
+        },
+        {
+          "id": "#d20-page",
+          "type": "FileExpectation",
+          "path": "rules/dynamis/srd-5-2-1/d20-test/index.html",
+          "changeType": "added",
+          "compareMode": "text"
+        },
+        {
+          "id": "#d20-history-page",
+          "type": "FileExpectation",
+          "path": "rules/dynamis/srd-5-2-1/d20-test/_history001/index.html",
+          "changeType": "added",
+          "compareMode": "text"
+        },
+        {
+          "id": "#d20-history-state-page",
+          "type": "FileExpectation",
+          "path": "rules/dynamis/srd-5-2-1/d20-test/_history001/_s0001/index.html",
+          "changeType": "added",
+          "compareMode": "text"
+        },
+        {
+          "id": "#d20-history-manifestation-page",
+          "type": "FileExpectation",
+          "path": "rules/dynamis/srd-5-2-1/d20-test/_history001/_s0001/ttl/index.html",
+          "changeType": "added",
+          "compareMode": "text"
+        },
+        {
+          "id": "#d20-knop-page",
+          "type": "FileExpectation",
+          "path": "rules/dynamis/srd-5-2-1/d20-test/_knop/index.html",
+          "changeType": "added",
+          "compareMode": "text"
+        },
+        {
+          "id": "#d20-knop-meta-page",
+          "type": "FileExpectation",
+          "path": "rules/dynamis/srd-5-2-1/d20-test/_knop/_meta/index.html",
+          "changeType": "added",
+          "compareMode": "text"
+        },
+        {
+          "id": "#d20-knop-inventory-page",
+          "type": "FileExpectation",
+          "path": "rules/dynamis/srd-5-2-1/d20-test/_knop/_inventory/index.html",
+          "changeType": "added",
+          "compareMode": "text"
+        }
+      ],
+      "hasRdfExpectation": [
+        {
+          "id": "#mesh-inventory-rdf",
+          "type": "RdfExpectation",
+          "targetsFileExpectation": "#mesh-inventory",
+          "hasAskAssertion": [
+            {
+              "id": "#ask-mesh-registers-srd-knops",
+              "type": "SparqlAskAssertion",
+              "query": "ASK { <https://spectacular-voyage.github.io/test-inn-ambush/_mesh> <https://semantic-flow.github.io/sflo/ontology/hasKnop> <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/_knop>, <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/d20-test/_knop> . <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions> a <https://semantic-flow.github.io/sflo/ontology/PayloadArtifact>, <https://semantic-flow.github.io/sflo/ontology/RdfDocument> ; <https://semantic-flow.github.io/sflo/ontology/hasWorkingLocatedFile> <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/conditions.ttl> . <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/d20-test> a <https://semantic-flow.github.io/sflo/ontology/PayloadArtifact>, <https://semantic-flow.github.io/sflo/ontology/RdfDocument> ; <https://semantic-flow.github.io/sflo/ontology/hasWorkingLocatedFile> <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/d20-test/d20-test.ttl> . }",
+              "expectedBoolean": true
+            }
+          ]
+        },
+        {
+          "id": "#conditions-knop-inventory-rdf",
+          "type": "RdfExpectation",
+          "targetsFileExpectation": "#conditions-knop-inventory",
+          "hasAskAssertion": [
+            {
+              "id": "#ask-conditions-latest-history-state",
+              "type": "SparqlAskAssertion",
+              "query": "ASK { <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions> <https://semantic-flow.github.io/sflo/ontology/hasArtifactHistory> <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/_history001> ; <https://semantic-flow.github.io/sflo/ontology/currentArtifactHistory> <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/_history001> . <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/_history001> <https://semantic-flow.github.io/sflo/ontology/latestHistoricalState> <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/_history001/_s0001> . <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/_history001/_s0001> <https://semantic-flow.github.io/sflo/ontology/locatedFileForState> <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/_history001/_s0001/ttl/conditions.ttl> . }",
+              "expectedBoolean": true
+            }
+          ]
+        },
+        {
+          "id": "#d20-knop-inventory-rdf",
+          "type": "RdfExpectation",
+          "targetsFileExpectation": "#d20-knop-inventory",
+          "hasAskAssertion": [
+            {
+              "id": "#ask-d20-latest-history-state",
+              "type": "SparqlAskAssertion",
+              "query": "ASK { <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/d20-test> <https://semantic-flow.github.io/sflo/ontology/hasArtifactHistory> <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/d20-test/_history001> ; <https://semantic-flow.github.io/sflo/ontology/currentArtifactHistory> <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/d20-test/_history001> . <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/d20-test/_history001> <https://semantic-flow.github.io/sflo/ontology/latestHistoricalState> <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/d20-test/_history001/_s0001> . <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/d20-test/_history001/_s0001> <https://semantic-flow.github.io/sflo/ontology/locatedFileForState> <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/d20-test/_history001/_s0001/ttl/d20-test.ttl> . }",
+              "expectedBoolean": true
+            }
+          ]
+        },
+        {
+          "id": "#conditions-history-payload-rdf",
+          "type": "RdfExpectation",
+          "targetsFileExpectation": "#conditions-history-payload",
+          "hasAskAssertion": [
+            {
+              "id": "#ask-conditions-history-preserves-package-data",
+              "type": "SparqlAskAssertion",
+              "query": "ASK { <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions> a <http://www.w3.org/ns/dcat#Dataset> ; <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/4.0/> ; <http://purl.org/dc/terms/source> <https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf> . <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/restrained/effect/speed-0> a <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/AffordanceMaskDefinition> ; <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/masksActionType> <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/Move> . }",
+              "expectedBoolean": true
+            }
+          ]
+        },
+        {
+          "id": "#d20-history-payload-rdf",
+          "type": "RdfExpectation",
+          "targetsFileExpectation": "#d20-history-payload",
+          "hasAskAssertion": [
+            {
+              "id": "#ask-d20-history-preserves-package-data",
+              "type": "SparqlAskAssertion",
+              "query": "ASK { <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/d20-test> a <http://www.w3.org/ns/dcat#Dataset> ; <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/4.0/> ; <http://purl.org/dc/terms/source> <https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf> . <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/Athletics> a <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/Skill> ; <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/defaultAbility> <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/Strength> . <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/AbilityCheck> a <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/D20TestType>, <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/ActionType> . }",
+              "expectedBoolean": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
