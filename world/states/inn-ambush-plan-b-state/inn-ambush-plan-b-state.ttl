@@ -38,9 +38,26 @@
     <https://spectacular-voyage.github.io/test-inn-ambush/temporal-scope/inn-scene>,
     <https://spectacular-voyage.github.io/test-inn-ambush/scene-local-time/inn-scene-plan-b>,
     <https://spectacular-voyage.github.io/test-inn-ambush/world-time-policy/held-elastic>,
+    <https://spectacular-voyage.github.io/test-inn-ambush/world-time-policy/flowing-server>,
+    <https://spectacular-voyage.github.io/test-inn-ambush/world-time-axis/main>,
+    <https://spectacular-voyage.github.io/test-inn-ambush/clock-anchor/inn-clock-001>,
+    <https://spectacular-voyage.github.io/test-inn-ambush/temporal-grounding/inn-scene-plan-b-to-clock-001>,
     <https://spectacular-voyage.github.io/test-inn-ambush/duration/inn-scene-elastic-window>,
     <https://spectacular-voyage.github.io/test-inn-ambush/staged-attack/enemy-ambush>,
     <https://spectacular-voyage.github.io/test-inn-ambush/continuity-debt/plan-b-door-barred-before-attack>,
+    <https://spectacular-voyage.github.io/test-inn-ambush/place/common-room>,
+    <https://spectacular-voyage.github.io/test-inn-ambush/place/front-door-threshold>,
+    <https://spectacular-voyage.github.io/test-inn-ambush/place/old-road>,
+    <https://spectacular-voyage.github.io/test-inn-ambush/relator/location/elara/common-room-current>,
+    <https://spectacular-voyage.github.io/test-inn-ambush/relator/location/nera/common-room-superseded>,
+    <https://spectacular-voyage.github.io/test-inn-ambush/relator/location/nera/old-road-current>,
+    <https://spectacular-voyage.github.io/test-inn-ambush/relator/location/ashfang/common-room-current>,
+    <https://spectacular-voyage.github.io/test-inn-ambush/relator/location/front-door/front-door-threshold-current>,
+    <https://spectacular-voyage.github.io/test-inn-ambush/movement/nera-to-old-road-001>,
+    <https://spectacular-voyage.github.io/test-inn-ambush/state-mutation/location-nera-to-old-road-001>,
+    <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/world-seeded/inn-ambush-001>,
+    <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/time-advanced/inn-clock-001>,
+    <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/movement-committed/nera-to-old-road-001>,
     <https://spectacular-voyage.github.io/test-inn-ambush/beat/plan-b>,
     <https://spectacular-voyage.github.io/test-inn-ambush/opportunity/alice-elara-plan-b-focus>,
     <https://spectacular-voyage.github.io/test-inn-ambush/opportunity/bob-plan-b-contribution>,
@@ -68,7 +85,8 @@
   a sc:Scenario ;
   sc:hasHistory <https://spectacular-voyage.github.io/test-inn-ambush/history/main> ;
   sc:hasBranch <https://spectacular-voyage.github.io/test-inn-ambush/branch/plan-b> ;
-  sc:hasWorldTimePolicy <https://spectacular-voyage.github.io/test-inn-ambush/world-time-policy/held-elastic> .
+  sc:hasWorldTimePolicy <https://spectacular-voyage.github.io/test-inn-ambush/world-time-policy/held-elastic>,
+    <https://spectacular-voyage.github.io/test-inn-ambush/world-time-policy/flowing-server> .
 
 <https://spectacular-voyage.github.io/test-inn-ambush/history/main>
   a sc:History .
@@ -91,6 +109,35 @@
   dcterms:description "World time is held elastically while the Inn scene resolves; no fake global timestamp is minted for the staged attack." ;
   sc:hasContinuityDebt <https://spectacular-voyage.github.io/test-inn-ambush/continuity-debt/plan-b-door-barred-before-attack> ;
   sc:inScenario <https://spectacular-voyage.github.io/test-inn-ambush/scenario/inn-ambush> .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/world-time-axis/main>
+  a sc:WorldTimeAxis ;
+  dcterms:description "Monotonic server-advanced world time axis for the live-world preview; calendar labels are deliberately out of scope for this rung." ;
+  sc:inScenario <https://spectacular-voyage.github.io/test-inn-ambush/scenario/inn-ambush> .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/world-time-policy/flowing-server>
+  a sc:WorldTimePolicy, sc:FlowingWorldTime ;
+  dcterms:description "Server authority advances world time by committing clock anchors on the world time axis." ;
+  sc:inScenario <https://spectacular-voyage.github.io/test-inn-ambush/scenario/inn-ambush> ;
+  sc:usesWorldTimeAxis <https://spectacular-voyage.github.io/test-inn-ambush/world-time-axis/main> ;
+  sc:startsAtClockAnchor <https://spectacular-voyage.github.io/test-inn-ambush/clock-anchor/inn-clock-001> .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/clock-anchor/inn-clock-001>
+  a sc:TemporalAnchor, sc:ClockAnchor, time:Instant ;
+  dcterms:description "First fixture-proven clock anchor: fifteen minutes after the world-time axis seed." ;
+  sc:basedOnAuthorityRecord <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/time-advanced/inn-clock-001> ;
+  sc:clockOffsetSeconds 900.0 ;
+  sc:clockPrecision "minute" ;
+  sc:onWorldTimeAxis <https://spectacular-voyage.github.io/test-inn-ambush/world-time-axis/main> .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/temporal-grounding/inn-scene-plan-b-to-clock-001>
+  a sc:TemporalRelator, sc:TemporalGrounding ;
+  dcterms:description "Authority-committed grounding from the Plan B narrative anchor onto the advancing world clock." ;
+  sc:acceptedFrom "2026-06-29T13:37:00Z"^^xsd:dateTime ;
+  sc:basedOnAuthorityRecord <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/time-advanced/inn-clock-001> ;
+  sc:branchContext <https://spectacular-voyage.github.io/test-inn-ambush/branch/plan-b> ;
+  sc:groundedToClockAnchor <https://spectacular-voyage.github.io/test-inn-ambush/clock-anchor/inn-clock-001> ;
+  sc:groundsTemporalAnchor <https://spectacular-voyage.github.io/test-inn-ambush/scene-local-time/inn-scene-plan-b> .
 
 <https://spectacular-voyage.github.io/test-inn-ambush/scene-local-time/inn-scene-plan-b>
   a sc:SceneLocalTime, sc:TemporalAnchor, time:ProperInterval ;
@@ -137,7 +184,29 @@
   sc:inTemporalScope <https://spectacular-voyage.github.io/test-inn-ambush/temporal-scope/inn-scene> .
 
 <https://spectacular-voyage.github.io/test-inn-ambush/room/old-mill-inn>
-  a sc:Room ;
+  a sc:Place, sc:Room ;
+  dcterms:description "The Old Mill Inn as the containing place for the initial Inn Ambush scene geography." ;
+  sc:inScenario <https://spectacular-voyage.github.io/test-inn-ambush/scenario/inn-ambush> .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/place/common-room>
+  a sc:Place, sc:Room ;
+  dcterms:description "The inn common room where Elara, Nera, Ashfang, and the Plan B beat begin." ;
+  sc:containedIn <https://spectacular-voyage.github.io/test-inn-ambush/room/old-mill-inn> ;
+  sc:adjacentTo <https://spectacular-voyage.github.io/test-inn-ambush/place/front-door-threshold> ;
+  sc:inScenario <https://spectacular-voyage.github.io/test-inn-ambush/scenario/inn-ambush> .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/place/front-door-threshold>
+  a sc:Place ;
+  dcterms:description "The spatial threshold at the inn door; distinct from the physical door target that can be barred." ;
+  sc:containedIn <https://spectacular-voyage.github.io/test-inn-ambush/room/old-mill-inn> ;
+  sc:adjacentTo <https://spectacular-voyage.github.io/test-inn-ambush/place/common-room>,
+    <https://spectacular-voyage.github.io/test-inn-ambush/place/old-road> ;
+  sc:inScenario <https://spectacular-voyage.github.io/test-inn-ambush/scenario/inn-ambush> .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/place/old-road>
+  a sc:Place ;
+  dcterms:description "The road outside the Old Mill Inn." ;
+  sc:adjacentTo <https://spectacular-voyage.github.io/test-inn-ambush/place/front-door-threshold> ;
   sc:inScenario <https://spectacular-voyage.github.io/test-inn-ambush/scenario/inn-ambush> .
 
 <https://spectacular-voyage.github.io/test-inn-ambush/participant/alice>
@@ -231,15 +300,13 @@
   a sc:Actant, sc:Character ;
   sc:inHistory <https://spectacular-voyage.github.io/test-inn-ambush/history/main> ;
   sc:inScenario <https://spectacular-voyage.github.io/test-inn-ambush/scenario/inn-ambush> ;
-  sc:inTemporalScope <https://spectacular-voyage.github.io/test-inn-ambush/temporal-scope/inn-scene> ;
-  sc:locatedIn <https://spectacular-voyage.github.io/test-inn-ambush/room/old-mill-inn> .
+  sc:inTemporalScope <https://spectacular-voyage.github.io/test-inn-ambush/temporal-scope/inn-scene> .
 
 <https://spectacular-voyage.github.io/test-inn-ambush/actant/nera>
   a sc:Actant, sc:Character ;
   sc:inHistory <https://spectacular-voyage.github.io/test-inn-ambush/history/main> ;
   sc:inScenario <https://spectacular-voyage.github.io/test-inn-ambush/scenario/inn-ambush> ;
-  sc:inTemporalScope <https://spectacular-voyage.github.io/test-inn-ambush/temporal-scope/inn-scene> ;
-  sc:locatedIn <https://spectacular-voyage.github.io/test-inn-ambush/room/old-mill-inn> .
+  sc:inTemporalScope <https://spectacular-voyage.github.io/test-inn-ambush/temporal-scope/inn-scene> .
 
 <https://spectacular-voyage.github.io/test-inn-ambush/relator/visibility/suggestion-plan-b/alice-current>
   a sc:TemporalRelator ;
@@ -331,8 +398,7 @@
   sc:heldBy <https://spectacular-voyage.github.io/test-inn-ambush/actant/elara> ;
   sc:inHistory <https://spectacular-voyage.github.io/test-inn-ambush/history/main> ;
   sc:inScenario <https://spectacular-voyage.github.io/test-inn-ambush/scenario/inn-ambush> ;
-  sc:inTemporalScope <https://spectacular-voyage.github.io/test-inn-ambush/temporal-scope/inn-scene> ;
-  sc:locatedIn <https://spectacular-voyage.github.io/test-inn-ambush/room/old-mill-inn> .
+  sc:inTemporalScope <https://spectacular-voyage.github.io/test-inn-ambush/temporal-scope/inn-scene> .
 
 <https://spectacular-voyage.github.io/test-inn-ambush/target/door>
   a sc:Target ;
@@ -341,8 +407,83 @@
   sc:continuityDebtRecord <https://spectacular-voyage.github.io/test-inn-ambush/continuity-debt/plan-b-door-barred-before-attack> ;
   sc:inHistory <https://spectacular-voyage.github.io/test-inn-ambush/history/main> ;
   sc:inScenario <https://spectacular-voyage.github.io/test-inn-ambush/scenario/inn-ambush> ;
+  sc:inTemporalScope <https://spectacular-voyage.github.io/test-inn-ambush/temporal-scope/inn-scene> .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/relator/location/elara/common-room-current>
+  a sc:TemporalRelator, sc:LocatedInRelator ;
+  sc:subject <https://spectacular-voyage.github.io/test-inn-ambush/actant/elara> ;
+  sc:predicate sc:locatedIn ;
+  sc:object <https://spectacular-voyage.github.io/test-inn-ambush/place/common-room> ;
+  sc:acceptedFrom "2026-06-29T13:35:00Z"^^xsd:dateTime ;
+  sc:applicableDuring <https://spectacular-voyage.github.io/test-inn-ambush/scene-local-time/inn-scene-plan-b> ;
+  sc:basedOnAuthorityRecord <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/world-seeded/inn-ambush-001> ;
+  sc:branchContext <https://spectacular-voyage.github.io/test-inn-ambush/branch/plan-b> .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/relator/location/nera/common-room-superseded>
+  a sc:TemporalRelator, sc:LocatedInRelator ;
+  sc:subject <https://spectacular-voyage.github.io/test-inn-ambush/actant/nera> ;
+  sc:predicate sc:locatedIn ;
+  sc:object <https://spectacular-voyage.github.io/test-inn-ambush/place/common-room> ;
+  sc:acceptedFrom "2026-06-29T13:35:00Z"^^xsd:dateTime ;
+  sc:acceptedUntil "2026-06-29T13:38:00Z"^^xsd:dateTime ;
+  sc:applicableDuring <https://spectacular-voyage.github.io/test-inn-ambush/scene-local-time/inn-scene-plan-b> ;
+  sc:basedOnAuthorityRecord <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/world-seeded/inn-ambush-001> ;
+  sc:branchContext <https://spectacular-voyage.github.io/test-inn-ambush/branch/plan-b> .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/relator/location/nera/old-road-current>
+  a sc:TemporalRelator, sc:LocatedInRelator ;
+  sc:subject <https://spectacular-voyage.github.io/test-inn-ambush/actant/nera> ;
+  sc:predicate sc:locatedIn ;
+  sc:object <https://spectacular-voyage.github.io/test-inn-ambush/place/old-road> ;
+  sc:acceptedFrom "2026-06-29T13:38:00Z"^^xsd:dateTime ;
+  sc:applicableDuring <https://spectacular-voyage.github.io/test-inn-ambush/scene-local-time/inn-scene-plan-b> ;
+  sc:basedOnAuthorityRecord <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/movement-committed/nera-to-old-road-001> ;
+  sc:branchContext <https://spectacular-voyage.github.io/test-inn-ambush/branch/plan-b> ;
+  sc:causedByCommittedEvent <https://spectacular-voyage.github.io/test-inn-ambush/movement/nera-to-old-road-001> ;
+  sc:producedStateMutation <https://spectacular-voyage.github.io/test-inn-ambush/state-mutation/location-nera-to-old-road-001> .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/relator/location/ashfang/common-room-current>
+  a sc:TemporalRelator, sc:LocatedInRelator ;
+  sc:subject <https://spectacular-voyage.github.io/test-inn-ambush/item/ashfang> ;
+  sc:predicate sc:locatedIn ;
+  sc:object <https://spectacular-voyage.github.io/test-inn-ambush/place/common-room> ;
+  sc:acceptedFrom "2026-06-29T13:35:00Z"^^xsd:dateTime ;
+  sc:applicableDuring <https://spectacular-voyage.github.io/test-inn-ambush/scene-local-time/inn-scene-plan-b> ;
+  sc:basedOnAuthorityRecord <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/world-seeded/inn-ambush-001> ;
+  sc:branchContext <https://spectacular-voyage.github.io/test-inn-ambush/branch/plan-b> .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/relator/location/front-door/front-door-threshold-current>
+  a sc:TemporalRelator, sc:LocatedInRelator ;
+  sc:subject <https://spectacular-voyage.github.io/test-inn-ambush/target/door> ;
+  sc:predicate sc:locatedIn ;
+  sc:object <https://spectacular-voyage.github.io/test-inn-ambush/place/front-door-threshold> ;
+  sc:acceptedFrom "2026-06-29T13:35:00Z"^^xsd:dateTime ;
+  sc:applicableDuring <https://spectacular-voyage.github.io/test-inn-ambush/scene-local-time/inn-scene-plan-b> ;
+  sc:basedOnAuthorityRecord <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/world-seeded/inn-ambush-001> ;
+  sc:branchContext <https://spectacular-voyage.github.io/test-inn-ambush/branch/plan-b> .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/movement/nera-to-old-road-001>
+  a sc:CommittedEvent, sc:MovementEvent ;
+  sc:authorizedByAuthorityRecord <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/movement-committed/nera-to-old-road-001> ;
+  sc:branchContext <https://spectacular-voyage.github.io/test-inn-ambush/branch/plan-b> ;
+  sc:fromPlace <https://spectacular-voyage.github.io/test-inn-ambush/place/common-room> ;
+  sc:inHistory <https://spectacular-voyage.github.io/test-inn-ambush/history/main> ;
   sc:inTemporalScope <https://spectacular-voyage.github.io/test-inn-ambush/temporal-scope/inn-scene> ;
-  sc:locatedIn <https://spectacular-voyage.github.io/test-inn-ambush/room/old-mill-inn> .
+  sc:movesActant <https://spectacular-voyage.github.io/test-inn-ambush/actant/nera> ;
+  sc:producesStateMutation <https://spectacular-voyage.github.io/test-inn-ambush/state-mutation/location-nera-to-old-road-001> ;
+  sc:toPlace <https://spectacular-voyage.github.io/test-inn-ambush/place/old-road> .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/state-mutation/location-nera-to-old-road-001>
+  a sc:StateMutation ;
+  sc:affectsEntity <https://spectacular-voyage.github.io/test-inn-ambush/actant/nera> ;
+  sc:authorizedByAuthorityRecord <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/movement-committed/nera-to-old-road-001> ;
+  sc:branchContext <https://spectacular-voyage.github.io/test-inn-ambush/branch/plan-b> ;
+  sc:causedByCommittedEvent <https://spectacular-voyage.github.io/test-inn-ambush/movement/nera-to-old-road-001> ;
+  sc:fromPlace <https://spectacular-voyage.github.io/test-inn-ambush/place/common-room> ;
+  sc:hasSceneLocalTime <https://spectacular-voyage.github.io/test-inn-ambush/scene-local-time/inn-scene-plan-b> ;
+  sc:inHistory <https://spectacular-voyage.github.io/test-inn-ambush/history/main> ;
+  sc:inTemporalScope <https://spectacular-voyage.github.io/test-inn-ambush/temporal-scope/inn-scene> ;
+  sc:toPlace <https://spectacular-voyage.github.io/test-inn-ambush/place/old-road> .
 
 <https://spectacular-voyage.github.io/test-inn-ambush/relator/door-barred/plan-b-001-superseded>
   a sc:TemporalRelator ;
