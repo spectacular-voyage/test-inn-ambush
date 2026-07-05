@@ -1,5 +1,6 @@
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dyn: <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/> .
 @prefix sc: <https://spectacular-voyage.github.io/stagecraft/ontology/> .
 @prefix schema: <https://schema.org/> .
 @prefix sflo: <https://semantic-flow.github.io/sflo/ontology/> .
@@ -461,6 +462,21 @@
   sc:applicableDuring <https://spectacular-voyage.github.io/test-inn-ambush/scene-local-time/inn-scene-plan-b> ;
   sc:basedOnAuthorityRecord <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/world-seeded/inn-ambush-001> ;
   sc:branchContext <https://spectacular-voyage.github.io/test-inn-ambush/branch/plan-b> .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/affordance-mask/silence-elara-001>
+  a sc:TemporalRelator, dyn:AffordanceMask ;
+  sc:subject <https://spectacular-voyage.github.io/test-inn-ambush/actant/elara> ;
+  sc:predicate dyn:canPerformActionType ;
+  sc:object dyn:Speak ;
+  sc:acceptedFrom "2026-06-29T13:39:00Z"^^xsd:dateTime ;
+  sc:acceptedUntil "2026-06-29T13:40:00Z"^^xsd:dateTime ;
+  sc:applicableDuring <https://spectacular-voyage.github.io/test-inn-ambush/scene-local-time/inn-scene-plan-b> ;
+  sc:basedOnAuthorityRecord <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/outcome-committed/silence-elara-001> ;
+  sc:branchContext <https://spectacular-voyage.github.io/test-inn-ambush/branch/plan-b> ;
+  sc:causedByCommittedEvent <https://spectacular-voyage.github.io/test-inn-ambush/committed-event/silence-elara-001> ;
+  sc:producedStateMutation <https://spectacular-voyage.github.io/test-inn-ambush/state-mutation/silence-elara-001> ;
+  dyn:masksActionType dyn:Speak ;
+  dyn:maskedActant <https://spectacular-voyage.github.io/test-inn-ambush/actant/elara> .
 
 <https://spectacular-voyage.github.io/test-inn-ambush/movement/nera-to-old-road-001>
   a sc:CommittedEvent, sc:MovementEvent ;

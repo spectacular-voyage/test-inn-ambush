@@ -148,3 +148,44 @@
   sc:hasSceneLocalTime <https://spectacular-voyage.github.io/test-inn-ambush/scene-local-time/inn-scene-plan-b> ;
   sc:inTemporalScope <https://spectacular-voyage.github.io/test-inn-ambush/temporal-scope/inn-scene> ;
   sc:producesStateMutation <https://spectacular-voyage.github.io/test-inn-ambush/state-mutation/door-barred-plan-b-001> .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/commit-certificate/silence-elara-001>
+  a sc:CommitCertificate ;
+  dcterms:created "2026-06-29T13:39:00Z"^^xsd:dateTime ;
+  sc:committedBy <https://spectacular-voyage.github.io/test-inn-ambush/authority-policy/srd-starter-silence-mask> ;
+  sc:committedEvent <https://spectacular-voyage.github.io/test-inn-ambush/committed-event/silence-elara-001> ;
+  sc:basedOnHistory <https://spectacular-voyage.github.io/test-inn-ambush/history/main> ;
+  sc:idempotencyKey "silence-elara-001" .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/outcome-committed/silence-elara-001>
+  a sc:OutcomeCommitted ;
+  dcterms:created "2026-06-29T13:39:00Z"^^xsd:dateTime ;
+  dcterms:references <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-starter> ;
+  sc:committedBy <https://spectacular-voyage.github.io/test-inn-ambush/authority-policy/srd-starter-silence-mask> ;
+  sc:committedEvent <https://spectacular-voyage.github.io/test-inn-ambush/committed-event/silence-elara-001> ;
+  sc:hasCommitCertificate <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/commit-certificate/silence-elara-001> ;
+  sc:affectsEntity <https://spectacular-voyage.github.io/test-inn-ambush/actant/elara> ;
+  sc:appliesConsequence <https://spectacular-voyage.github.io/test-inn-ambush/consequence/silence-mask-elara-001> ;
+  sc:basedOnHistory <https://spectacular-voyage.github.io/test-inn-ambush/history/main> .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/committed-event/silence-elara-001>
+  a sc:CommittedEvent ;
+  sc:authorizedByAuthorityRecord <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/outcome-committed/silence-elara-001> ;
+  sc:affectsEntity <https://spectacular-voyage.github.io/test-inn-ambush/actant/elara> ;
+  sc:appliesConsequence <https://spectacular-voyage.github.io/test-inn-ambush/consequence/silence-mask-elara-001> ;
+  sc:basedOnHistory <https://spectacular-voyage.github.io/test-inn-ambush/history/main> ;
+  sc:branchContext <https://spectacular-voyage.github.io/test-inn-ambush/branch/plan-b> ;
+  sc:hasSceneLocalTime <https://spectacular-voyage.github.io/test-inn-ambush/scene-local-time/inn-scene-plan-b> ;
+  sc:inTemporalScope <https://spectacular-voyage.github.io/test-inn-ambush/temporal-scope/inn-scene> ;
+  sc:producesStateMutation <https://spectacular-voyage.github.io/test-inn-ambush/state-mutation/silence-elara-001> .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/state-mutation/silence-elara-001>
+  a sc:StateMutation ;
+  sc:authorizedByAuthorityRecord <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/outcome-committed/silence-elara-001> ;
+  sc:causedByCommittedEvent <https://spectacular-voyage.github.io/test-inn-ambush/committed-event/silence-elara-001> ;
+  sc:affectsEntity <https://spectacular-voyage.github.io/test-inn-ambush/actant/elara> ;
+  sc:appliesConsequence <https://spectacular-voyage.github.io/test-inn-ambush/consequence/silence-mask-elara-001> ;
+  sc:branchContext <https://spectacular-voyage.github.io/test-inn-ambush/branch/plan-b> ;
+  sc:hasSceneLocalTime <https://spectacular-voyage.github.io/test-inn-ambush/scene-local-time/inn-scene-plan-b> ;
+  sc:inHistory <https://spectacular-voyage.github.io/test-inn-ambush/history/main> ;
+  sc:inTemporalScope <https://spectacular-voyage.github.io/test-inn-ambush/temporal-scope/inn-scene> .
