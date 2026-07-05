@@ -141,11 +141,12 @@
       <details open>
         <summary>Latest historical manifestation file</summary>
         <div class="wf-source-meta">
-          <span>projections/contracts/inn-ambush-contract-shapes/_history001/_s0004/ttl/inn-ambush-contract.shapes.ttl</span>
-          <a href="/test-inn-ambush/projections/contracts/inn-ambush-contract-shapes/_history001/_s0004/ttl/inn-ambush-contract.shapes.ttl">Raw file</a>
+          <span>projections/contracts/inn-ambush-contract-shapes/_history001/_s0005/ttl/inn-ambush-contract.shapes.ttl</span>
+          <a href="/test-inn-ambush/projections/contracts/inn-ambush-contract-shapes/_history001/_s0005/ttl/inn-ambush-contract.shapes.ttl">Raw file</a>
         </div>
 <pre class="shiki github-dark-default" style="background-color:#0d1117;color:#e6edf3" tabindex="0"><code><span class="line"><span style="color:#FF7B72">@prefix sc:</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/stagecraft/ontology/></span><span style="color:#E6EDF3"> .</span></span>
 <span class="line"><span style="color:#FF7B72">@prefix </span><span style="color:#E6EDF3">sc-</span><span style="color:#FF7B72">sh:</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/stagecraft/shacl/></span><span style="color:#E6EDF3"> .</span></span>
+<span class="line"><span style="color:#FF7B72">@prefix dcterms:</span><span style="color:#FFA657"> &#x3C;http://purl.org/dc/terms/></span><span style="color:#E6EDF3"> .</span></span>
 <span class="line"><span style="color:#FF7B72">@prefix sh:</span><span style="color:#FFA657"> &#x3C;http://www.w3.org/ns/shacl#></span><span style="color:#E6EDF3"> .</span></span>
 <span class="line"><span style="color:#FF7B72">@prefix time:</span><span style="color:#FFA657"> &#x3C;http://www.w3.org/2006/time#></span><span style="color:#E6EDF3"> .</span></span>
 <span class="line"><span style="color:#FF7B72">@prefix xsd:</span><span style="color:#FFA657"> &#x3C;http://www.w3.org/2001/XMLSchema#></span><span style="color:#E6EDF3"> .</span></span>
@@ -424,6 +425,14 @@
 <span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">maxCount</span><span style="color:#79C0FF"> 1</span><span style="color:#E6EDF3"> ;</span></span>
 <span class="line"><span style="color:#E6EDF3">  ] ;</span></span>
 <span class="line"><span style="color:#FF7B72">  sh:</span><span style="color:#79C0FF">property</span><span style="color:#E6EDF3"> [</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">path</span><span style="color:#FF7B72"> sc:</span><span style="color:#79C0FF">body</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">datatype</span><span style="color:#FF7B72"> xsd:</span><span style="color:#79C0FF">string</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">minLength</span><span style="color:#79C0FF"> 1</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">pattern</span><span style="color:#A5D6FF"> "</span><span style="color:#FF7B72">\\</span><span style="color:#A5D6FF">S"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">minCount</span><span style="color:#79C0FF"> 1</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">maxCount</span><span style="color:#79C0FF"> 1</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#E6EDF3">  ] ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sh:</span><span style="color:#79C0FF">property</span><span style="color:#E6EDF3"> [</span></span>
 <span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">path</span><span style="color:#FF7B72"> sc:</span><span style="color:#79C0FF">relatesTo</span><span style="color:#E6EDF3"> ;</span></span>
 <span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">nodeKind</span><span style="color:#FF7B72"> sh:</span><span style="color:#79C0FF">IRI</span><span style="color:#E6EDF3"> ;</span></span>
 <span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">minCount</span><span style="color:#79C0FF"> 1</span><span style="color:#E6EDF3"> ;</span></span>
@@ -482,6 +491,155 @@
 <span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">path</span><span style="color:#FF7B72"> sc:</span><span style="color:#79C0FF">lastAuthorityRecord</span><span style="color:#E6EDF3"> ;</span></span>
 <span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">maxCount</span><span style="color:#79C0FF"> 0</span><span style="color:#E6EDF3"> ;</span></span>
 <span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">message</span><span style="color:#A5D6FF"> "ChatContribution must not carry accepted state provenance facts."</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#E6EDF3">  ] .</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E6EDF3">sc-</span><span style="color:#FF7B72">sh:</span><span style="color:#79C0FF">CommittedSpeechEventShape</span></span>
+<span class="line"><span style="color:#FF7B72">  a</span><span style="color:#FF7B72"> sh:</span><span style="color:#79C0FF">NodeShape</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sh:</span><span style="color:#79C0FF">targetClass</span><span style="color:#FF7B72"> sc:</span><span style="color:#79C0FF">CommittedSpeechEvent</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sh:</span><span style="color:#79C0FF">property</span><span style="color:#E6EDF3"> [</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">path</span><span style="color:#FF7B72"> sc:</span><span style="color:#79C0FF">envelopeType</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">hasValue</span><span style="color:#A5D6FF"> "stagecraft.committed-speech-event.v1"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">minCount</span><span style="color:#79C0FF"> 1</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">maxCount</span><span style="color:#79C0FF"> 1</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#E6EDF3">  ] ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sh:</span><span style="color:#79C0FF">property</span><span style="color:#E6EDF3"> [</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">path</span><span style="color:#FF7B72"> sc:</span><span style="color:#79C0FF">session</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">nodeKind</span><span style="color:#FF7B72"> sh:</span><span style="color:#79C0FF">IRI</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">minCount</span><span style="color:#79C0FF"> 1</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">maxCount</span><span style="color:#79C0FF"> 1</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#E6EDF3">  ] ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sh:</span><span style="color:#79C0FF">property</span><span style="color:#E6EDF3"> [</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">path</span><span style="color:#FF7B72"> sc:</span><span style="color:#79C0FF">conversation</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">nodeKind</span><span style="color:#FF7B72"> sh:</span><span style="color:#79C0FF">IRI</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">minCount</span><span style="color:#79C0FF"> 1</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">maxCount</span><span style="color:#79C0FF"> 1</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#E6EDF3">  ] ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sh:</span><span style="color:#79C0FF">property</span><span style="color:#E6EDF3"> [</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">path</span><span style="color:#FF7B72"> dcterms:</span><span style="color:#79C0FF">references</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">nodeKind</span><span style="color:#FF7B72"> sh:</span><span style="color:#79C0FF">IRI</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">minCount</span><span style="color:#79C0FF"> 1</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">maxCount</span><span style="color:#79C0FF"> 1</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#E6EDF3">  ] ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sh:</span><span style="color:#79C0FF">property</span><span style="color:#E6EDF3"> [</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">path</span><span style="color:#FF7B72"> sc:</span><span style="color:#79C0FF">authorizedByAuthorityRecord</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">nodeKind</span><span style="color:#FF7B72"> sh:</span><span style="color:#79C0FF">IRI</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">minCount</span><span style="color:#79C0FF"> 1</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">maxCount</span><span style="color:#79C0FF"> 1</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#E6EDF3">  ] ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sh:</span><span style="color:#79C0FF">property</span><span style="color:#E6EDF3"> [</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">path</span><span style="color:#FF7B72"> sc:</span><span style="color:#79C0FF">basedOnHistory</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">nodeKind</span><span style="color:#FF7B72"> sh:</span><span style="color:#79C0FF">IRI</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">minCount</span><span style="color:#79C0FF"> 1</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">maxCount</span><span style="color:#79C0FF"> 1</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#E6EDF3">  ] ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sh:</span><span style="color:#79C0FF">property</span><span style="color:#E6EDF3"> [</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">path</span><span style="color:#FF7B72"> sc:</span><span style="color:#79C0FF">spokenByParticipant</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">nodeKind</span><span style="color:#FF7B72"> sh:</span><span style="color:#79C0FF">IRI</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">minCount</span><span style="color:#79C0FF"> 1</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">maxCount</span><span style="color:#79C0FF"> 1</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#E6EDF3">  ] ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sh:</span><span style="color:#79C0FF">property</span><span style="color:#E6EDF3"> [</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">path</span><span style="color:#FF7B72"> sc:</span><span style="color:#79C0FF">spokenByActant</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">nodeKind</span><span style="color:#FF7B72"> sh:</span><span style="color:#79C0FF">IRI</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">minCount</span><span style="color:#79C0FF"> 1</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">maxCount</span><span style="color:#79C0FF"> 1</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#E6EDF3">  ] ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sh:</span><span style="color:#79C0FF">property</span><span style="color:#E6EDF3"> [</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">path</span><span style="color:#FF7B72"> sc:</span><span style="color:#79C0FF">speechKind</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">in</span><span style="color:#E6EDF3"> (</span></span>
+<span class="line"><span style="color:#A5D6FF">      "in-character"</span></span>
+<span class="line"><span style="color:#A5D6FF">      "table-talk"</span></span>
+<span class="line"><span style="color:#E6EDF3">    ) ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">minCount</span><span style="color:#79C0FF"> 1</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">maxCount</span><span style="color:#79C0FF"> 1</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#E6EDF3">  ] ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sh:</span><span style="color:#79C0FF">property</span><span style="color:#E6EDF3"> [</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">path</span><span style="color:#FF7B72"> sc:</span><span style="color:#79C0FF">deliveredTo</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">nodeKind</span><span style="color:#FF7B72"> sh:</span><span style="color:#79C0FF">IRI</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">minCount</span><span style="color:#79C0FF"> 1</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#E6EDF3">  ] ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sh:</span><span style="color:#79C0FF">property</span><span style="color:#E6EDF3"> [</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">path</span><span style="color:#FF7B72"> dcterms:</span><span style="color:#79C0FF">created</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">maxCount</span><span style="color:#79C0FF"> 0</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">message</span><span style="color:#A5D6FF"> "CommittedSpeechEvent must not duplicate the journal commit instant."</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#E6EDF3">  ] ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sh:</span><span style="color:#79C0FF">property</span><span style="color:#E6EDF3"> [</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">path</span><span style="color:#FF7B72"> sc:</span><span style="color:#79C0FF">createdAt</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">maxCount</span><span style="color:#79C0FF"> 0</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">message</span><span style="color:#A5D6FF"> "CommittedSpeechEvent must not mint a separate createdAt timestamp."</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#E6EDF3">  ] ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sh:</span><span style="color:#79C0FF">property</span><span style="color:#E6EDF3"> [</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">path</span><span style="color:#FF7B72"> sc:</span><span style="color:#79C0FF">acceptedFrom</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">maxCount</span><span style="color:#79C0FF"> 0</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">message</span><span style="color:#A5D6FF"> "CommittedSpeechEvent is session truth, not an accepted state relator."</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#E6EDF3">  ] ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sh:</span><span style="color:#79C0FF">property</span><span style="color:#E6EDF3"> [</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">path</span><span style="color:#FF7B72"> sc:</span><span style="color:#79C0FF">acceptedUntil</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">maxCount</span><span style="color:#79C0FF"> 0</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">message</span><span style="color:#A5D6FF"> "CommittedSpeechEvent is session truth, not an accepted state relator."</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#E6EDF3">  ] ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sh:</span><span style="color:#79C0FF">property</span><span style="color:#E6EDF3"> [</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">path</span><span style="color:#FF7B72"> sc:</span><span style="color:#79C0FF">affectsEntity</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">maxCount</span><span style="color:#79C0FF"> 0</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">message</span><span style="color:#A5D6FF"> "CommittedSpeechEvent must not claim consequence-bearing affected entities."</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#E6EDF3">  ] ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sh:</span><span style="color:#79C0FF">property</span><span style="color:#E6EDF3"> [</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">path</span><span style="color:#FF7B72"> sc:</span><span style="color:#79C0FF">appliesConsequence</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">maxCount</span><span style="color:#79C0FF"> 0</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">message</span><span style="color:#A5D6FF"> "CommittedSpeechEvent has zero consequence relators."</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#E6EDF3">  ] ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sh:</span><span style="color:#79C0FF">property</span><span style="color:#E6EDF3"> [</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">path</span><span style="color:#FF7B72"> sc:</span><span style="color:#79C0FF">producesStateMutation</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">maxCount</span><span style="color:#79C0FF"> 0</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">message</span><span style="color:#A5D6FF"> "CommittedSpeechEvent must not produce state mutations."</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#E6EDF3">  ] ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sh:</span><span style="color:#79C0FF">property</span><span style="color:#E6EDF3"> [</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">path</span><span style="color:#FF7B72"> sc:</span><span style="color:#79C0FF">stateMutation</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">maxCount</span><span style="color:#79C0FF"> 0</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">message</span><span style="color:#A5D6FF"> "CommittedSpeechEvent must not point to state mutation records."</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#E6EDF3">  ] .</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E6EDF3">sc-</span><span style="color:#FF7B72">sh:</span><span style="color:#79C0FF">SpeechCommittedShape</span></span>
+<span class="line"><span style="color:#FF7B72">  a</span><span style="color:#FF7B72"> sh:</span><span style="color:#79C0FF">NodeShape</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sh:</span><span style="color:#79C0FF">targetClass</span><span style="color:#FF7B72"> sc:</span><span style="color:#79C0FF">SpeechCommitted</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sh:</span><span style="color:#79C0FF">property</span><span style="color:#E6EDF3"> [</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">path</span><span style="color:#FF7B72"> dcterms:</span><span style="color:#79C0FF">created</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">datatype</span><span style="color:#FF7B72"> xsd:</span><span style="color:#79C0FF">dateTime</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">minCount</span><span style="color:#79C0FF"> 1</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">maxCount</span><span style="color:#79C0FF"> 1</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#E6EDF3">  ] ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sh:</span><span style="color:#79C0FF">property</span><span style="color:#E6EDF3"> [</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">path</span><span style="color:#FF7B72"> sc:</span><span style="color:#79C0FF">committedEvent</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">nodeKind</span><span style="color:#FF7B72"> sh:</span><span style="color:#79C0FF">IRI</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">minCount</span><span style="color:#79C0FF"> 1</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">maxCount</span><span style="color:#79C0FF"> 1</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#E6EDF3">  ] ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sh:</span><span style="color:#79C0FF">property</span><span style="color:#E6EDF3"> [</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">path</span><span style="color:#FF7B72"> sc:</span><span style="color:#79C0FF">hasCommitCertificate</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">nodeKind</span><span style="color:#FF7B72"> sh:</span><span style="color:#79C0FF">IRI</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">minCount</span><span style="color:#79C0FF"> 1</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">maxCount</span><span style="color:#79C0FF"> 1</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#E6EDF3">  ] ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sh:</span><span style="color:#79C0FF">property</span><span style="color:#E6EDF3"> [</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">path</span><span style="color:#FF7B72"> dcterms:</span><span style="color:#79C0FF">references</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">nodeKind</span><span style="color:#FF7B72"> sh:</span><span style="color:#79C0FF">IRI</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">minCount</span><span style="color:#79C0FF"> 1</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">maxCount</span><span style="color:#79C0FF"> 1</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#E6EDF3">  ] ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sh:</span><span style="color:#79C0FF">property</span><span style="color:#E6EDF3"> [</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">path</span><span style="color:#FF7B72"> sc:</span><span style="color:#79C0FF">affectsEntity</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">maxCount</span><span style="color:#79C0FF"> 0</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">message</span><span style="color:#A5D6FF"> "SpeechCommitted must not claim consequence-bearing affected entities."</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#E6EDF3">  ] ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sh:</span><span style="color:#79C0FF">property</span><span style="color:#E6EDF3"> [</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">path</span><span style="color:#FF7B72"> sc:</span><span style="color:#79C0FF">appliesConsequence</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">maxCount</span><span style="color:#79C0FF"> 0</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">message</span><span style="color:#A5D6FF"> "SpeechCommitted must not apply an in-world consequence."</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#E6EDF3">  ] ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sh:</span><span style="color:#79C0FF">property</span><span style="color:#E6EDF3"> [</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">path</span><span style="color:#FF7B72"> sc:</span><span style="color:#79C0FF">stateMutation</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">maxCount</span><span style="color:#79C0FF"> 0</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">message</span><span style="color:#A5D6FF"> "SpeechCommitted must not point to state mutation records."</span><span style="color:#E6EDF3"> ;</span></span>
 <span class="line"><span style="color:#E6EDF3">  ] .</span></span>
 <span class="line"></span>
 <span class="line"><span style="color:#E6EDF3">sc-</span><span style="color:#FF7B72">sh:</span><span style="color:#79C0FF">AuthorityOperationShape</span></span>
@@ -1064,6 +1222,15 @@
                 </div>
               </details>
             </details>
+            <details class="wf-history-node wf-history-node--state" open>
+              <summary class="wf-history-node-header"><a href="/test-inn-ambush/projections/contracts/inn-ambush-contract-shapes/_history001/_s0005">_s0005</a></summary>
+              <details class="wf-history-node wf-history-node--manifestation" open>
+                <summary class="wf-history-node-header"><a href="/test-inn-ambush/projections/contracts/inn-ambush-contract-shapes/_history001/_s0005/ttl">ttl</a></summary>
+                <div class="wf-history-node wf-history-node--file">
+                  <div class="wf-history-node-header"><a href="/test-inn-ambush/projections/contracts/inn-ambush-contract-shapes/_history001/_s0005/ttl/inn-ambush-contract.shapes.ttl" class="wf-history-file-iri">https://spectacular-voyage.github.io/test-inn-ambush/projections/contracts/inn-ambush-contract-shapes/_history001/_s0005/ttl/inn-ambush-contract.shapes.ttl</a></div>
+                </div>
+              </details>
+            </details>
           </details>
         </div>
       </details>
@@ -1072,7 +1239,7 @@
     </article>
   </main>
   <footer class="wf-generated">
-    Generated on <span class="wf-term wf-date-tip" tabindex="0" title="2026-07-04T06:45:07.889Z" data-tooltip="2026-07-04T06:45:07.889Z">July 4, 2026</span> by <a href="https://github.com/semantic-flow/weave/">Weave</a>
+    Generated on <span class="wf-term wf-date-tip" tabindex="0" title="2026-07-05T01:12:11.485Z" data-tooltip="2026-07-05T01:12:11.485Z">July 5, 2026</span> by <a href="https://github.com/semantic-flow/weave/">Weave</a>
   </footer>
 </body>
 </html>
