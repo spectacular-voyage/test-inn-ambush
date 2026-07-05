@@ -1,0 +1,114 @@
+{
+  "@context": {
+    "@vocab": "https://spectacular-voyage.github.io/accord/ontology/",
+    "dcterms": "http://purl.org/dc/terms/",
+    "id": "@id",
+    "type": "@type",
+    "changeType": {
+      "@type": "@vocab"
+    },
+    "compareMode": {
+      "@type": "@vocab"
+    },
+    "targetsFileExpectation": {
+      "@type": "@id"
+    },
+    "locatorKind": {
+      "@type": "@vocab"
+    }
+  },
+  "type": "Manifest",
+  "id": "urn:accord:stagecraft:test-inn-ambush:24-world-clock-rate-advance-records",
+  "dcterms:title": "Inn Ambush 24 world clock rate and advancement records",
+  "hasCase": [
+    {
+      "type": "TransitionCase",
+      "id": "#world-clock-rate-advance-records",
+      "fixtureRepo": "github.com/spectacular-voyage/test-inn-ambush",
+      "operationId": "stagecraft.fixture.addWorldClockRateAdvanceRecords",
+      "fromRef": "f4e946947da4985ffb461c8d253a5870ed6f9b8e",
+      "toRef": "a.24-world-clock-rate-advance-records",
+      "fromState": {
+        "type": "StateLocator",
+        "locatorKind": "gitRefState",
+        "ref": "f4e946947da4985ffb461c8d253a5870ed6f9b8e"
+      },
+      "toState": {
+        "type": "StateLocator",
+        "locatorKind": "gitRefState",
+        "ref": "a.24-world-clock-rate-advance-records"
+      },
+      "hasFileExpectation": [
+        {
+          "id": "#contract-context",
+          "type": "FileExpectation",
+          "path": "projections/contracts/inn-ambush-contract.context.jsonld",
+          "changeType": "updated",
+          "compareMode": "json"
+        },
+        {
+          "id": "#contract-shapes",
+          "type": "FileExpectation",
+          "path": "projections/contracts/inn-ambush-contract.shapes.ttl",
+          "changeType": "updated",
+          "compareMode": "rdfCanonical"
+        },
+        {
+          "id": "#authority-journal",
+          "type": "FileExpectation",
+          "path": "authority/journals/plan-b/plan-b.ttl",
+          "changeType": "updated",
+          "compareMode": "rdfCanonical"
+        },
+        {
+          "id": "#world-state",
+          "type": "FileExpectation",
+          "path": "world/states/inn-ambush-plan-b-state/inn-ambush-plan-b-state.ttl",
+          "changeType": "updated",
+          "compareMode": "rdfCanonical"
+        }
+      ],
+      "hasRdfExpectation": [
+        {
+          "id": "#contract-shapes-rdf",
+          "type": "RdfExpectation",
+          "targetsFileExpectation": "#contract-shapes",
+          "hasAskAssertion": [
+            {
+              "id": "#ask-flowing-rate-shape",
+              "type": "SparqlAskAssertion",
+              "query": "ASK { <https://spectacular-voyage.github.io/stagecraft/shacl/FlowingWorldTimeShape> a <http://www.w3.org/ns/shacl#NodeShape> ; <http://www.w3.org/ns/shacl#property> ?property . ?property <http://www.w3.org/ns/shacl#path> <https://spectacular-voyage.github.io/stagecraft/ontology/advancesClockEverySeconds> ; <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#decimal> ; <http://www.w3.org/ns/shacl#minCount> 1 ; <http://www.w3.org/ns/shacl#maxCount> 1 . <https://spectacular-voyage.github.io/stagecraft/shacl/TimeAdvancedEventShape> a <http://www.w3.org/ns/shacl#NodeShape> ; <http://www.w3.org/ns/shacl#targetClass> <https://spectacular-voyage.github.io/stagecraft/ontology/TimeAdvancedEvent> . }",
+              "expectedBoolean": true
+            }
+          ]
+        },
+        {
+          "id": "#world-state-rdf",
+          "type": "RdfExpectation",
+          "targetsFileExpectation": "#world-state",
+          "hasAskAssertion": [
+            {
+              "id": "#ask-flowing-policy-rate-and-offset-anchor",
+              "type": "SparqlAskAssertion",
+              "query": "ASK { <https://spectacular-voyage.github.io/test-inn-ambush/world-time-policy/flowing-server> a <https://spectacular-voyage.github.io/stagecraft/ontology/FlowingWorldTime> ; <https://spectacular-voyage.github.io/stagecraft/ontology/advancesClockEverySeconds> \"60.0\"^^<http://www.w3.org/2001/XMLSchema#decimal> ; <https://spectacular-voyage.github.io/stagecraft/ontology/usesWorldTimeAxis> <https://spectacular-voyage.github.io/test-inn-ambush/world-time-axis/main> . <https://spectacular-voyage.github.io/test-inn-ambush/clock-anchor/world-clock/offset-960s> a <https://spectacular-voyage.github.io/stagecraft/ontology/ClockAnchor> ; <https://spectacular-voyage.github.io/stagecraft/ontology/clockOffsetSeconds> \"960.0\"^^<http://www.w3.org/2001/XMLSchema#decimal> ; <https://spectacular-voyage.github.io/stagecraft/ontology/onWorldTimeAxis> <https://spectacular-voyage.github.io/test-inn-ambush/world-time-axis/main> ; <https://spectacular-voyage.github.io/stagecraft/ontology/basedOnAuthorityRecord> <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/time-advanced/world-clock/offset-960s> . FILTER NOT EXISTS { <https://spectacular-voyage.github.io/test-inn-ambush/world-time-policy/held-elastic> <https://spectacular-voyage.github.io/stagecraft/ontology/advancesClockEverySeconds> ?heldRate . } FILTER NOT EXISTS { <https://spectacular-voyage.github.io/test-inn-ambush/clock-anchor/world-clock/offset-960s> <http://purl.org/dc/terms/created> ?anchorCreated . } }",
+              "expectedBoolean": true
+            }
+          ]
+        },
+        {
+          "id": "#authority-journal-rdf",
+          "type": "RdfExpectation",
+          "targetsFileExpectation": "#authority-journal",
+          "hasAskAssertion": [
+            {
+              "id": "#ask-time-advanced-record-chain",
+              "type": "SparqlAskAssertion",
+              "query": "ASK { <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/time-advanced/world-clock/offset-960s> a <https://spectacular-voyage.github.io/stagecraft/ontology/TimeAdvanced> ; <http://purl.org/dc/terms/created> \"2026-06-29T13:37:05Z\"^^<http://www.w3.org/2001/XMLSchema#dateTime> ; <https://spectacular-voyage.github.io/stagecraft/ontology/advancesWorldTimeTo> <https://spectacular-voyage.github.io/test-inn-ambush/clock-anchor/world-clock/offset-960s> ; <https://spectacular-voyage.github.io/stagecraft/ontology/committedEvent> <https://spectacular-voyage.github.io/test-inn-ambush/committed-event/time-advanced/world-clock/offset-960s> ; <https://spectacular-voyage.github.io/stagecraft/ontology/hasCommitCertificate> <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/commit-certificate/world-clock/offset-960s> . <https://spectacular-voyage.github.io/test-inn-ambush/committed-event/time-advanced/world-clock/offset-960s> a <https://spectacular-voyage.github.io/stagecraft/ontology/TimeAdvancedEvent> ; <https://spectacular-voyage.github.io/stagecraft/ontology/advancesWorldTimeTo> <https://spectacular-voyage.github.io/test-inn-ambush/clock-anchor/world-clock/offset-960s> ; <https://spectacular-voyage.github.io/stagecraft/ontology/authorizedByAuthorityRecord> <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/time-advanced/world-clock/offset-960s> . FILTER NOT EXISTS { <https://spectacular-voyage.github.io/test-inn-ambush/committed-event/time-advanced/world-clock/offset-960s> <http://purl.org/dc/terms/created> ?eventCreated . } }",
+              "expectedBoolean": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

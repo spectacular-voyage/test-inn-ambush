@@ -549,6 +549,27 @@
           }
         }
       ]
+    },
+    {
+      "id": "#24-world-clock-rate-advance-records",
+      "type": "ScenarioStep",
+      "manifestPath": "24-world-clock-rate-advance-records.jsonld",
+      "hasLaneBinding": [
+        {
+          "type": "LaneStateBinding",
+          "lane": "#fixture-lane",
+          "fromLaneState": {
+            "type": "StateLocator",
+            "locatorKind": "gitRefState",
+            "ref": "f4e946947da4985ffb461c8d253a5870ed6f9b8e"
+          },
+          "toLaneState": {
+            "type": "StateLocator",
+            "locatorKind": "gitRefState",
+            "ref": "a.24-world-clock-rate-advance-records"
+          }
+        }
+      ]
     }
   ]
 }

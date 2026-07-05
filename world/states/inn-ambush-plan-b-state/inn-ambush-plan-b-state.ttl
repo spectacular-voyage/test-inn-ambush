@@ -119,6 +119,7 @@
 <https://spectacular-voyage.github.io/test-inn-ambush/world-time-policy/flowing-server>
   a sc:WorldTimePolicy, sc:FlowingWorldTime ;
   dcterms:description "Server authority advances world time by committing clock anchors on the world time axis." ;
+  sc:advancesClockEverySeconds 60.0 ;
   sc:inScenario <https://spectacular-voyage.github.io/test-inn-ambush/scenario/inn-ambush> ;
   sc:usesWorldTimeAxis <https://spectacular-voyage.github.io/test-inn-ambush/world-time-axis/main> ;
   sc:startsAtClockAnchor <https://spectacular-voyage.github.io/test-inn-ambush/clock-anchor/inn-clock-001> .
@@ -129,6 +130,14 @@
   sc:basedOnAuthorityRecord <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/time-advanced/inn-clock-001> ;
   sc:clockOffsetSeconds 900.0 ;
   sc:clockPrecision "minute" ;
+  sc:onWorldTimeAxis <https://spectacular-voyage.github.io/test-inn-ambush/world-time-axis/main> .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/clock-anchor/world-clock/offset-960s>
+  a sc:TemporalAnchor, sc:ClockAnchor, time:Instant ;
+  dcterms:description "Fixture-proven world-clock loop anchor one policy tick after inn-clock-001." ;
+  sc:basedOnAuthorityRecord <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/time-advanced/world-clock/offset-960s> ;
+  sc:clockOffsetSeconds 960.0 ;
+  sc:clockPrecision "second" ;
   sc:onWorldTimeAxis <https://spectacular-voyage.github.io/test-inn-ambush/world-time-axis/main> .
 
 <https://spectacular-voyage.github.io/test-inn-ambush/temporal-grounding/inn-scene-plan-b-to-clock-001>

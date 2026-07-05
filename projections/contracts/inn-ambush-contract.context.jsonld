@@ -133,6 +133,9 @@
     "clockOffsetSeconds": {
       "@type": "xsd:decimal"
     },
+    "advancesClockEverySeconds": {
+      "@type": "xsd:decimal"
+    },
     "clockPrecision": "sc:clockPrecision",
     "usesWorldTimeAxis": {
       "@type": "@id"

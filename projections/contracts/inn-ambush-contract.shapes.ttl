@@ -1076,6 +1076,13 @@ sc-sh:WorldTimePolicyShape
     sh:class sc:ClockAnchor ;
     sh:minCount 0 ;
     sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path sc:advancesClockEverySeconds ;
+    sh:datatype xsd:decimal ;
+    sh:minExclusive 0 ;
+    sh:minCount 0 ;
+    sh:maxCount 1 ;
   ] .
 
 sc-sh:FlowingWorldTimeShape
@@ -1092,6 +1099,13 @@ sc-sh:FlowingWorldTimeShape
     sh:path sc:startsAtClockAnchor ;
     sh:nodeKind sh:IRI ;
     sh:class sc:ClockAnchor ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path sc:advancesClockEverySeconds ;
+    sh:datatype xsd:decimal ;
+    sh:minExclusive 0 ;
     sh:minCount 1 ;
     sh:maxCount 1 ;
   ] .
@@ -1152,6 +1166,28 @@ sc-sh:TimeAdvancedShape
     sh:class sc:ClockAnchor ;
     sh:minCount 1 ;
     sh:maxCount 1 ;
+  ] .
+
+sc-sh:TimeAdvancedEventShape
+  a sh:NodeShape ;
+  sh:targetClass sc:TimeAdvancedEvent ;
+  sh:property [
+    sh:path sc:authorizedByAuthorityRecord ;
+    sh:nodeKind sh:IRI ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path sc:advancesWorldTimeTo ;
+    sh:nodeKind sh:IRI ;
+    sh:class sc:ClockAnchor ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path dcterms:created ;
+    sh:maxCount 0 ;
+    sh:message "TimeAdvancedEvent commit instants live on authority journal records." ;
   ] .
 
 sc-sh:PlaceShape
