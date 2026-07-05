@@ -1,0 +1,57 @@
+{
+  "@context": "http://www.w3.org/ns/csvw",
+  "dc:title": "Inn Ambush custom calendar curated CSV tables",
+  "tables": [
+    {
+      "url": "weekdays.csv",
+      "tableSchema": {
+        "columns": [
+          { "name": "weekdayKey", "datatype": "string", "required": true },
+          { "name": "ordinal", "datatype": "integer", "required": true },
+          { "name": "label", "datatype": "string", "required": true }
+        ],
+        "primaryKey": "weekdayKey",
+        "aboutUrl": "https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/weekday/{weekdayKey}"
+      }
+    },
+    {
+      "url": "months.csv",
+      "tableSchema": {
+        "columns": [
+          { "name": "monthKey", "datatype": "string", "required": true },
+          { "name": "ordinal", "datatype": "integer", "required": true },
+          { "name": "label", "datatype": "string", "required": true },
+          { "name": "days", "datatype": "integer", "required": true }
+        ],
+        "primaryKey": "monthKey",
+        "aboutUrl": "https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/month/{monthKey}"
+      }
+    },
+    {
+      "url": "seasons.csv",
+      "tableSchema": {
+        "columns": [
+          { "name": "seasonKey", "datatype": "string", "required": true },
+          { "name": "startDayOfYear", "datatype": "integer", "required": true },
+          { "name": "endDayOfYear", "datatype": "integer", "required": true },
+          { "name": "label", "datatype": "string", "required": true }
+        ],
+        "primaryKey": "seasonKey",
+        "aboutUrl": "https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/season/{seasonKey}"
+      }
+    },
+    {
+      "url": "bands.csv",
+      "tableSchema": {
+        "columns": [
+          { "name": "bandKey", "datatype": "string", "required": true },
+          { "name": "fromHour", "datatype": "decimal", "required": true },
+          { "name": "toHour", "datatype": "decimal", "required": true },
+          { "name": "label", "datatype": "string", "required": true }
+        ],
+        "primaryKey": "bandKey",
+        "aboutUrl": "https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/band/{bandKey}"
+      }
+    }
+  ]
+}

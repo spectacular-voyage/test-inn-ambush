@@ -570,6 +570,27 @@
           }
         }
       ]
+    },
+    {
+      "id": "#25-prose-clock-calendar",
+      "type": "ScenarioStep",
+      "manifestPath": "25-prose-clock-calendar.jsonld",
+      "hasLaneBinding": [
+        {
+          "type": "LaneStateBinding",
+          "lane": "#fixture-lane",
+          "fromLaneState": {
+            "type": "StateLocator",
+            "locatorKind": "gitRefState",
+            "ref": "6707942932fc9723986aef006b94996262dc3ac8"
+          },
+          "toLaneState": {
+            "type": "StateLocator",
+            "locatorKind": "gitRefState",
+            "ref": "a.25-prose-clock-calendar"
+          }
+        }
+      ]
     }
   ]
 }

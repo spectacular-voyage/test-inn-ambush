@@ -1,0 +1,136 @@
+{
+  "@context": {
+    "@vocab": "https://spectacular-voyage.github.io/accord/ontology/",
+    "dcterms": "http://purl.org/dc/terms/",
+    "id": "@id",
+    "type": "@type",
+    "changeType": {
+      "@type": "@vocab"
+    },
+    "compareMode": {
+      "@type": "@vocab"
+    },
+    "targetsFileExpectation": {
+      "@type": "@id"
+    },
+    "locatorKind": {
+      "@type": "@vocab"
+    }
+  },
+  "type": "Manifest",
+  "id": "urn:accord:stagecraft:test-inn-ambush:25-prose-clock-calendar",
+  "dcterms:title": "Inn Ambush 25 prose clock calendar",
+  "hasCase": [
+    {
+      "type": "TransitionCase",
+      "id": "#prose-clock-calendar",
+      "fixtureRepo": "github.com/spectacular-voyage/test-inn-ambush",
+      "operationId": "stagecraft.fixture.addProseClockCalendar",
+      "fromRef": "6707942932fc9723986aef006b94996262dc3ac8",
+      "toRef": "a.25-prose-clock-calendar",
+      "fromState": {
+        "type": "StateLocator",
+        "locatorKind": "gitRefState",
+        "ref": "6707942932fc9723986aef006b94996262dc3ac8"
+      },
+      "toState": {
+        "type": "StateLocator",
+        "locatorKind": "gitRefState",
+        "ref": "a.25-prose-clock-calendar"
+      },
+      "hasFileExpectation": [
+        {
+          "id": "#world-state",
+          "type": "FileExpectation",
+          "path": "world/states/inn-ambush-plan-b-state/inn-ambush-plan-b-state.ttl",
+          "changeType": "updated",
+          "compareMode": "rdfCanonical"
+        },
+        {
+          "id": "#calendar-rdf",
+          "type": "FileExpectation",
+          "path": "world/calendars/inn-ambush-calendar/calendar.ttl",
+          "changeType": "added",
+          "compareMode": "rdfCanonical"
+        },
+        {
+          "id": "#calendar-csvw",
+          "type": "FileExpectation",
+          "path": "world/calendars/inn-ambush-calendar/calendar.csvw.json",
+          "changeType": "added",
+          "compareMode": "json"
+        },
+        {
+          "id": "#weekdays-csv",
+          "type": "FileExpectation",
+          "path": "world/calendars/inn-ambush-calendar/weekdays.csv",
+          "changeType": "added",
+          "compareMode": "text"
+        },
+        {
+          "id": "#months-csv",
+          "type": "FileExpectation",
+          "path": "world/calendars/inn-ambush-calendar/months.csv",
+          "changeType": "added",
+          "compareMode": "text"
+        },
+        {
+          "id": "#seasons-csv",
+          "type": "FileExpectation",
+          "path": "world/calendars/inn-ambush-calendar/seasons.csv",
+          "changeType": "added",
+          "compareMode": "text"
+        },
+        {
+          "id": "#bands-csv",
+          "type": "FileExpectation",
+          "path": "world/calendars/inn-ambush-calendar/bands.csv",
+          "changeType": "added",
+          "compareMode": "text"
+        },
+        {
+          "id": "#manifest",
+          "type": "FileExpectation",
+          "path": "conformance/25-prose-clock-calendar.jsonld",
+          "changeType": "added",
+          "compareMode": "json"
+        },
+        {
+          "id": "#scenario-index",
+          "type": "FileExpectation",
+          "path": "conformance/scenario-index.jsonld",
+          "changeType": "updated",
+          "compareMode": "json"
+        }
+      ],
+      "hasRdfExpectation": [
+        {
+          "id": "#calendar-rdf-assertions",
+          "type": "RdfExpectation",
+          "targetsFileExpectation": "#calendar-rdf",
+          "hasAskAssertion": [
+            {
+              "id": "#ask-custom-calendar-package",
+              "type": "SparqlAskAssertion",
+              "query": "ASK { <https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar> a <https://spectacular-voyage.github.io/stagecraft/ontology/temporaenum/Calendar> ; <https://spectacular-voyage.github.io/stagecraft/ontology/temporaenum/calendarKind> \"custom\" ; <https://spectacular-voyage.github.io/stagecraft/ontology/temporaenum/secondsPerDay> \"86400.0\"^^<http://www.w3.org/2001/XMLSchema#decimal> ; <https://spectacular-voyage.github.io/stagecraft/ontology/temporaenum/epochSecondOfDay> \"74580.0\"^^<http://www.w3.org/2001/XMLSchema#decimal> ; <https://spectacular-voyage.github.io/stagecraft/ontology/temporaenum/hasWeekday> <https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/weekday/toilday> ; <https://spectacular-voyage.github.io/stagecraft/ontology/temporaenum/hasSeason> <https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/season/early-autumn> ; <https://spectacular-voyage.github.io/stagecraft/ontology/temporaenum/hasTimeOfDayBand> <https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/band/late-evening>, <https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/band/night-after-evening> . <https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/weekday/toilday> <http://www.w3.org/2000/01/rdf-schema#label> \"Toilday\" ; <https://spectacular-voyage.github.io/stagecraft/ontology/temporaenum/ordinal> 1 . <https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/band/late-evening> <http://www.w3.org/2000/01/rdf-schema#label> \"late evening\" ; <https://spectacular-voyage.github.io/stagecraft/ontology/temporaenum/fromHour> \"18.0\"^^<http://www.w3.org/2001/XMLSchema#decimal> ; <https://spectacular-voyage.github.io/stagecraft/ontology/temporaenum/toHour> \"21.0\"^^<http://www.w3.org/2001/XMLSchema#decimal> . }",
+              "expectedBoolean": true
+            }
+          ]
+        },
+        {
+          "id": "#world-state-rdf-assertions",
+          "type": "RdfExpectation",
+          "targetsFileExpectation": "#world-state",
+          "hasAskAssertion": [
+            {
+              "id": "#ask-axis-calendar-link-and-visibility",
+              "type": "SparqlAskAssertion",
+              "query": "ASK { <https://spectacular-voyage.github.io/test-inn-ambush/world-time-axis/main> <https://spectacular-voyage.github.io/stagecraft/ontology/temporaenum/hasCalendar> <https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar> . <https://spectacular-voyage.github.io/test-inn-ambush/relator/visibility/calendar/package/players-current> a <https://spectacular-voyage.github.io/stagecraft/ontology/TemporalRelator> ; <https://spectacular-voyage.github.io/stagecraft/ontology/subject> <https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar> ; <https://spectacular-voyage.github.io/stagecraft/ontology/predicate> <https://spectacular-voyage.github.io/stagecraft/ontology/visibleTo> ; <https://spectacular-voyage.github.io/stagecraft/ontology/object> <https://spectacular-voyage.github.io/test-inn-ambush/participant/alice>, <https://spectacular-voyage.github.io/test-inn-ambush/participant/bob> ; <https://spectacular-voyage.github.io/stagecraft/ontology/acceptedFrom> \"2026-06-29T13:35:00Z\"^^<http://www.w3.org/2001/XMLSchema#dateTime> . }",
+              "expectedBoolean": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

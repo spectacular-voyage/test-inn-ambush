@@ -1,0 +1,5 @@
+seasonKey,startDayOfYear,endDayOfYear,label
+early-autumn,0,90,early autumn
+deep-winter,90,180,deep winter
+new-spring,180,270,new spring
+high-summer,270,360,high summer

@@ -1,0 +1,8 @@
+bandKey,fromHour,toHour,label
+night-before-dawn,0,6,night
+early-morning,6,9,early morning
+midmorning,9,12,midmorning
+midday,12,14,midday
+afternoon,14,18,afternoon
+late-evening,18,21,late evening
+night-after-evening,21,24,night
