@@ -318,6 +318,48 @@
           }
         }
       ]
+    },
+    {
+      "id": "#13-dialogue-commit-speech-records",
+      "type": "ScenarioStep",
+      "manifestPath": "13-dialogue-commit-speech-records.jsonld",
+      "hasLaneBinding": [
+        {
+          "type": "LaneStateBinding",
+          "lane": "#fixture-lane",
+          "fromLaneState": {
+            "type": "StateLocator",
+            "locatorKind": "gitRefState",
+            "ref": "a.12-temporal-vocabulary-woven"
+          },
+          "toLaneState": {
+            "type": "StateLocator",
+            "locatorKind": "gitRefState",
+            "ref": "a.13-dialogue-commit-speech-records"
+          }
+        }
+      ]
+    },
+    {
+      "id": "#14-dialogue-commit-speech-woven",
+      "type": "ScenarioStep",
+      "manifestPath": "14-dialogue-commit-speech-woven.jsonld",
+      "hasLaneBinding": [
+        {
+          "type": "LaneStateBinding",
+          "lane": "#fixture-lane",
+          "fromLaneState": {
+            "type": "StateLocator",
+            "locatorKind": "gitRefState",
+            "ref": "a.13-dialogue-commit-speech-records"
+          },
+          "toLaneState": {
+            "type": "StateLocator",
+            "locatorKind": "gitRefState",
+            "ref": "a.14-dialogue-commit-speech-woven"
+          }
+        }
+      ]
     }
   ]
 }

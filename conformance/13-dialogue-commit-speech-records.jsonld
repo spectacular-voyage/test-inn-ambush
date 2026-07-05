@@ -1,0 +1,120 @@
+{
+  "@context": {
+    "@vocab": "https://spectacular-voyage.github.io/accord/ontology/",
+    "dcterms": "http://purl.org/dc/terms/",
+    "id": "@id",
+    "type": "@type",
+    "changeType": {
+      "@type": "@vocab"
+    },
+    "compareMode": {
+      "@type": "@vocab"
+    },
+    "targetsFileExpectation": {
+      "@type": "@id"
+    },
+    "locatorKind": {
+      "@type": "@vocab"
+    }
+  },
+  "type": "Manifest",
+  "id": "urn:accord:stagecraft:test-inn-ambush:13-dialogue-commit-speech-records",
+  "dcterms:title": "Inn Ambush 13 dialogue commit speech records",
+  "hasCase": [
+    {
+      "type": "TransitionCase",
+      "id": "#dialogue-commit-speech-records",
+      "fixtureRepo": "github.com/spectacular-voyage/test-inn-ambush",
+      "operationId": "stagecraft.fixture.addDialogueCommitSpeechRecords",
+      "fromRef": "a.12-temporal-vocabulary-woven",
+      "toRef": "a.13-dialogue-commit-speech-records",
+      "fromState": {
+        "type": "StateLocator",
+        "locatorKind": "gitRefState",
+        "ref": "a.12-temporal-vocabulary-woven"
+      },
+      "toState": {
+        "type": "StateLocator",
+        "locatorKind": "gitRefState",
+        "ref": "a.13-dialogue-commit-speech-records"
+      },
+      "hasFileExpectation": [
+        {
+          "id": "#projection-context",
+          "type": "FileExpectation",
+          "path": "projections/contracts/inn-ambush-contract.context.jsonld",
+          "changeType": "updated",
+          "compareMode": "text"
+        },
+        {
+          "id": "#projection-shapes",
+          "type": "FileExpectation",
+          "path": "projections/contracts/inn-ambush-contract.shapes.ttl",
+          "changeType": "updated",
+          "compareMode": "rdfCanonical"
+        },
+        {
+          "id": "#authority-journal",
+          "type": "FileExpectation",
+          "path": "authority/journals/plan-b/plan-b.ttl",
+          "changeType": "updated",
+          "compareMode": "rdfCanonical"
+        },
+        {
+          "id": "#speech-contribution",
+          "type": "FileExpectation",
+          "path": "sessions/contributions/chat-contribution-hello-barkeep/chat-contribution-hello-barkeep.json",
+          "changeType": "added",
+          "compareMode": "text"
+        },
+        {
+          "id": "#committed-speech-event",
+          "type": "FileExpectation",
+          "path": "sessions/speech-events/committed-speech-event-hello-barkeep/committed-speech-event-hello-barkeep.json",
+          "changeType": "added",
+          "compareMode": "text"
+        }
+      ],
+      "hasRdfExpectation": [
+        {
+          "id": "#projection-shapes-rdf",
+          "type": "RdfExpectation",
+          "targetsFileExpectation": "#projection-shapes",
+          "hasAskAssertion": [
+            {
+              "id": "#ask-committed-speech-event-shape",
+              "type": "SparqlAskAssertion",
+              "query": "ASK { <https://spectacular-voyage.github.io/stagecraft/shacl/CommittedSpeechEventShape> a <http://www.w3.org/ns/shacl#NodeShape> ; <http://www.w3.org/ns/shacl#targetClass> <https://spectacular-voyage.github.io/stagecraft/ontology/CommittedSpeechEvent> ; <http://www.w3.org/ns/shacl#property> ?createdGuard ; <http://www.w3.org/ns/shacl#property> ?consequenceGuard ; <http://www.w3.org/ns/shacl#property> ?delivery . ?createdGuard <http://www.w3.org/ns/shacl#path> <http://purl.org/dc/terms/created> ; <http://www.w3.org/ns/shacl#maxCount> \"0\"^^<http://www.w3.org/2001/XMLSchema#integer> . ?consequenceGuard <http://www.w3.org/ns/shacl#path> <https://spectacular-voyage.github.io/stagecraft/ontology/appliesConsequence> ; <http://www.w3.org/ns/shacl#maxCount> \"0\"^^<http://www.w3.org/2001/XMLSchema#integer> . ?delivery <http://www.w3.org/ns/shacl#path> <https://spectacular-voyage.github.io/stagecraft/ontology/deliveredTo> ; <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#IRI> ; <http://www.w3.org/ns/shacl#minCount> \"1\"^^<http://www.w3.org/2001/XMLSchema#integer> . }",
+              "expectedBoolean": true
+            },
+            {
+              "id": "#ask-speech-committed-shape",
+              "type": "SparqlAskAssertion",
+              "query": "ASK { <https://spectacular-voyage.github.io/stagecraft/shacl/SpeechCommittedShape> a <http://www.w3.org/ns/shacl#NodeShape> ; <http://www.w3.org/ns/shacl#targetClass> <https://spectacular-voyage.github.io/stagecraft/ontology/SpeechCommitted> ; <http://www.w3.org/ns/shacl#property> ?created ; <http://www.w3.org/ns/shacl#property> ?stateMutationGuard . ?created <http://www.w3.org/ns/shacl#path> <http://purl.org/dc/terms/created> ; <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#dateTime> ; <http://www.w3.org/ns/shacl#minCount> \"1\"^^<http://www.w3.org/2001/XMLSchema#integer> . ?stateMutationGuard <http://www.w3.org/ns/shacl#path> <https://spectacular-voyage.github.io/stagecraft/ontology/stateMutation> ; <http://www.w3.org/ns/shacl#maxCount> \"0\"^^<http://www.w3.org/2001/XMLSchema#integer> . }",
+              "expectedBoolean": true
+            }
+          ]
+        },
+        {
+          "id": "#authority-journal-rdf",
+          "type": "RdfExpectation",
+          "targetsFileExpectation": "#authority-journal",
+          "hasAskAssertion": [
+            {
+              "id": "#ask-speech-commit-journal-record",
+              "type": "SparqlAskAssertion",
+              "query": "ASK { <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/speech-committed/hello-barkeep-001> a <https://spectacular-voyage.github.io/stagecraft/ontology/SpeechCommitted> ; <http://purl.org/dc/terms/created> \"2026-06-29T13:36:00Z\"^^<http://www.w3.org/2001/XMLSchema#dateTime> ; <https://spectacular-voyage.github.io/stagecraft/ontology/committedEvent> <https://spectacular-voyage.github.io/test-inn-ambush/speech-event/hello-barkeep-001> ; <http://purl.org/dc/terms/references> <https://spectacular-voyage.github.io/test-inn-ambush/sessions/contributions/chat-contribution-hello-barkeep> . }",
+              "expectedBoolean": true
+            },
+            {
+              "id": "#ask-speech-commit-has-no-consequence",
+              "type": "SparqlAskAssertion",
+              "query": "ASK { <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/speech-committed/hello-barkeep-001> <https://spectacular-voyage.github.io/stagecraft/ontology/appliesConsequence> ?consequence . }",
+              "expectedBoolean": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
