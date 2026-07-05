@@ -19,6 +19,7 @@ sessions/
 world/
 events/
 authority/
+rules/
 projections/
 recommendations/
 audit/
