@@ -1,0 +1,117 @@
+{
+  "@context": {
+    "@vocab": "https://spectacular-voyage.github.io/accord/ontology/",
+    "dcterms": "http://purl.org/dc/terms/",
+    "id": "@id",
+    "type": "@type",
+    "changeType": {
+      "@type": "@vocab"
+    },
+    "compareMode": {
+      "@type": "@vocab"
+    },
+    "targetsFileExpectation": {
+      "@type": "@id"
+    },
+    "locatorKind": {
+      "@type": "@vocab"
+    }
+  },
+  "type": "Manifest",
+  "id": "urn:accord:stagecraft:test-inn-ambush:16-dialogue-commit-speech-notification-shape-woven",
+  "dcterms:title": "Inn Ambush 16 dialogue commit speech notification shape woven",
+  "hasCase": [
+    {
+      "type": "TransitionCase",
+      "id": "#weave-dialogue-commit-speech-notification-shape",
+      "fixtureRepo": "github.com/spectacular-voyage/test-inn-ambush",
+      "operationId": "stagecraft.fixture.weaveSpeechProjectionNotificationShape",
+      "fromRef": "a.15-dialogue-commit-speech-notification-shape",
+      "toRef": "a.16-dialogue-commit-speech-notification-shape-woven",
+      "fromState": {
+        "type": "StateLocator",
+        "locatorKind": "gitRefState",
+        "ref": "a.15-dialogue-commit-speech-notification-shape"
+      },
+      "toState": {
+        "type": "StateLocator",
+        "locatorKind": "gitRefState",
+        "ref": "a.16-dialogue-commit-speech-notification-shape-woven"
+      },
+      "hasFileExpectation": [
+        {
+          "id": "#shapes-history-state-index",
+          "type": "FileExpectation",
+          "path": "projections/contracts/inn-ambush-contract-shapes/_history001/_s0006/index.html",
+          "changeType": "added"
+        },
+        {
+          "id": "#shapes-history-ttl-index",
+          "type": "FileExpectation",
+          "path": "projections/contracts/inn-ambush-contract-shapes/_history001/_s0006/ttl/index.html",
+          "changeType": "added"
+        },
+        {
+          "id": "#shapes-history-payload",
+          "type": "FileExpectation",
+          "path": "projections/contracts/inn-ambush-contract-shapes/_history001/_s0006/ttl/inn-ambush-contract.shapes.ttl",
+          "changeType": "added",
+          "compareMode": "rdfCanonical"
+        },
+        {
+          "id": "#shapes-history-index",
+          "type": "FileExpectation",
+          "path": "projections/contracts/inn-ambush-contract-shapes/_history001/index.html",
+          "changeType": "updated"
+        },
+        {
+          "id": "#shapes-knop-inventory-index",
+          "type": "FileExpectation",
+          "path": "projections/contracts/inn-ambush-contract-shapes/_knop/_inventory/index.html",
+          "changeType": "updated"
+        },
+        {
+          "id": "#shapes-knop-inventory",
+          "type": "FileExpectation",
+          "path": "projections/contracts/inn-ambush-contract-shapes/_knop/_inventory/inventory.ttl",
+          "changeType": "updated",
+          "compareMode": "rdfCanonical"
+        },
+        {
+          "id": "#shapes-index",
+          "type": "FileExpectation",
+          "path": "projections/contracts/inn-ambush-contract-shapes/index.html",
+          "changeType": "updated"
+        }
+      ],
+      "hasRdfExpectation": [
+        {
+          "id": "#shapes-knop-inventory-rdf",
+          "type": "RdfExpectation",
+          "targetsFileExpectation": "#shapes-knop-inventory",
+          "hasAskAssertion": [
+            {
+              "id": "#ask-shapes-latest-history-state",
+              "type": "SparqlAskAssertion",
+              "query": "ASK { <https://spectacular-voyage.github.io/test-inn-ambush/projections/contracts/inn-ambush-contract-shapes/_history001> <https://semantic-flow.github.io/sflo/ontology/latestHistoricalState> <https://spectacular-voyage.github.io/test-inn-ambush/projections/contracts/inn-ambush-contract-shapes/_history001/_s0006> . <https://spectacular-voyage.github.io/test-inn-ambush/projections/contracts/inn-ambush-contract-shapes/_history001/_s0006> <https://semantic-flow.github.io/sflo/ontology/locatedFileForState> <https://spectacular-voyage.github.io/test-inn-ambush/projections/contracts/inn-ambush-contract-shapes/_history001/_s0006/ttl/inn-ambush-contract.shapes.ttl> . }",
+              "expectedBoolean": true
+            }
+          ]
+        },
+        {
+          "id": "#shapes-history-rdf",
+          "type": "RdfExpectation",
+          "targetsFileExpectation": "#shapes-history-payload",
+          "hasAskAssertion": [
+            {
+              "id": "#ask-state-mutation-pointer-is-not-required",
+              "type": "SparqlAskAssertion",
+              "query": "ASK { <https://spectacular-voyage.github.io/stagecraft/shacl/ProjectionNotificationShape> <http://www.w3.org/ns/shacl#property> ?property . ?property <http://www.w3.org/ns/shacl#path> <https://spectacular-voyage.github.io/stagecraft/ontology/stateMutation> ; <http://www.w3.org/ns/shacl#minCount> ?minCount . }",
+              "expectedBoolean": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

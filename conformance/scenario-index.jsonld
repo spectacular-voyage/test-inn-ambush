@@ -360,6 +360,48 @@
           }
         }
       ]
+    },
+    {
+      "id": "#15-dialogue-commit-speech-notification-shape",
+      "type": "ScenarioStep",
+      "manifestPath": "15-dialogue-commit-speech-notification-shape.jsonld",
+      "hasLaneBinding": [
+        {
+          "type": "LaneStateBinding",
+          "lane": "#fixture-lane",
+          "fromLaneState": {
+            "type": "StateLocator",
+            "locatorKind": "gitRefState",
+            "ref": "28ac6d423f992284423ffbceb3ea3b8b180e3dc2"
+          },
+          "toLaneState": {
+            "type": "StateLocator",
+            "locatorKind": "gitRefState",
+            "ref": "a.15-dialogue-commit-speech-notification-shape"
+          }
+        }
+      ]
+    },
+    {
+      "id": "#16-dialogue-commit-speech-notification-shape-woven",
+      "type": "ScenarioStep",
+      "manifestPath": "16-dialogue-commit-speech-notification-shape-woven.jsonld",
+      "hasLaneBinding": [
+        {
+          "type": "LaneStateBinding",
+          "lane": "#fixture-lane",
+          "fromLaneState": {
+            "type": "StateLocator",
+            "locatorKind": "gitRefState",
+            "ref": "a.15-dialogue-commit-speech-notification-shape"
+          },
+          "toLaneState": {
+            "type": "StateLocator",
+            "locatorKind": "gitRefState",
+            "ref": "a.16-dialogue-commit-speech-notification-shape-woven"
+          }
+        }
+      ]
     }
   ]
 }
