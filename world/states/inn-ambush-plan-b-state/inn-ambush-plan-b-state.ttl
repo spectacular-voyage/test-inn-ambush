@@ -478,6 +478,21 @@
   dyn:masksActionType dyn:Speak ;
   dyn:maskedActant <https://spectacular-voyage.github.io/test-inn-ambush/actant/elara> .
 
+<https://spectacular-voyage.github.io/test-inn-ambush/affordance-mask/restraint-nera-001>
+  a sc:TemporalRelator, dyn:AffordanceMask ;
+  sc:subject <https://spectacular-voyage.github.io/test-inn-ambush/actant/nera> ;
+  sc:predicate dyn:canPerformActionType ;
+  sc:object dyn:Move ;
+  sc:acceptedFrom "2026-06-29T13:39:00Z"^^xsd:dateTime ;
+  sc:acceptedUntil "2026-06-29T13:40:00Z"^^xsd:dateTime ;
+  sc:applicableDuring <https://spectacular-voyage.github.io/test-inn-ambush/scene-local-time/inn-scene-plan-b> ;
+  sc:basedOnAuthorityRecord <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/outcome-committed/restraint-nera-001> ;
+  sc:branchContext <https://spectacular-voyage.github.io/test-inn-ambush/branch/plan-b> ;
+  sc:causedByCommittedEvent <https://spectacular-voyage.github.io/test-inn-ambush/committed-event/restraint-nera-001> ;
+  sc:producedStateMutation <https://spectacular-voyage.github.io/test-inn-ambush/state-mutation/restraint-nera-001> ;
+  dyn:masksActionType dyn:Move ;
+  dyn:maskedActant <https://spectacular-voyage.github.io/test-inn-ambush/actant/nera> .
+
 <https://spectacular-voyage.github.io/test-inn-ambush/movement/nera-to-old-road-001>
   a sc:CommittedEvent, sc:MovementEvent ;
   sc:authorizedByAuthorityRecord <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/movement-committed/nera-to-old-road-001> ;
