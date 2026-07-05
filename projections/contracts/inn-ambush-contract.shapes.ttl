@@ -1031,3 +1031,217 @@ sc-sh:TemporalAnchorShape
     sh:class time:Instant ;
     sh:minCount 0 ;
   ] .
+
+sc-sh:ClockAnchorShape
+  a sh:NodeShape ;
+  sh:targetClass sc:ClockAnchor ;
+  sh:property [
+    sh:path sc:onWorldTimeAxis ;
+    sh:nodeKind sh:IRI ;
+    sh:class sc:WorldTimeAxis ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path sc:clockOffsetSeconds ;
+    sh:datatype xsd:decimal ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path sc:clockPrecision ;
+    sh:in (
+      "second"
+      "minute"
+      "scene"
+      "unknown"
+    ) ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] .
+
+sc-sh:WorldTimePolicyShape
+  a sh:NodeShape ;
+  sh:targetClass sc:WorldTimePolicy ;
+  sh:property [
+    sh:path sc:usesWorldTimeAxis ;
+    sh:nodeKind sh:IRI ;
+    sh:class sc:WorldTimeAxis ;
+    sh:minCount 0 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path sc:startsAtClockAnchor ;
+    sh:nodeKind sh:IRI ;
+    sh:class sc:ClockAnchor ;
+    sh:minCount 0 ;
+    sh:maxCount 1 ;
+  ] .
+
+sc-sh:FlowingWorldTimeShape
+  a sh:NodeShape ;
+  sh:targetClass sc:FlowingWorldTime ;
+  sh:property [
+    sh:path sc:usesWorldTimeAxis ;
+    sh:nodeKind sh:IRI ;
+    sh:class sc:WorldTimeAxis ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path sc:startsAtClockAnchor ;
+    sh:nodeKind sh:IRI ;
+    sh:class sc:ClockAnchor ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] .
+
+sc-sh:TemporalGroundingShape
+  a sh:NodeShape ;
+  sh:targetClass sc:TemporalGrounding ;
+  sh:property [
+    sh:path sc:groundsTemporalAnchor ;
+    sh:nodeKind sh:IRI ;
+    sh:class sc:TemporalAnchor ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path sc:groundedToClockAnchor ;
+    sh:nodeKind sh:IRI ;
+    sh:class sc:ClockAnchor ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path sc:acceptedFrom ;
+    sh:datatype xsd:dateTime ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path sc:basedOnAuthorityRecord ;
+    sh:nodeKind sh:IRI ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path dcterms:created ;
+    sh:maxCount 0 ;
+    sh:message "TemporalGrounding commit instants live on authority journal records." ;
+  ] .
+
+sc-sh:TimeAdvancedShape
+  a sh:NodeShape ;
+  sh:targetClass sc:TimeAdvanced ;
+  sh:property [
+    sh:path dcterms:created ;
+    sh:datatype xsd:dateTime ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path sc:committedEvent ;
+    sh:nodeKind sh:IRI ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path sc:advancesWorldTimeTo ;
+    sh:nodeKind sh:IRI ;
+    sh:class sc:ClockAnchor ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] .
+
+sc-sh:PlaceShape
+  a sh:NodeShape ;
+  sh:targetClass sc:Place ;
+  sh:property [
+    sh:path sc:containedIn ;
+    sh:nodeKind sh:IRI ;
+    sh:class sc:Place ;
+    sh:minCount 0 ;
+  ] ;
+  sh:property [
+    sh:path sc:adjacentTo ;
+    sh:nodeKind sh:IRI ;
+    sh:class sc:Place ;
+    sh:minCount 0 ;
+  ] .
+
+sc-sh:LocatedInRelatorShape
+  a sh:NodeShape ;
+  sh:targetClass sc:LocatedInRelator ;
+  sh:property [
+    sh:path sc:subject ;
+    sh:nodeKind sh:IRI ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path sc:predicate ;
+    sh:hasValue sc:locatedIn ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path sc:object ;
+    sh:nodeKind sh:IRI ;
+    sh:class sc:Place ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path sc:acceptedFrom ;
+    sh:datatype xsd:dateTime ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path sc:acceptedUntil ;
+    sh:datatype xsd:dateTime ;
+    sh:minCount 0 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path sc:basedOnAuthorityRecord ;
+    sh:nodeKind sh:IRI ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] .
+
+sc-sh:MovementEventShape
+  a sh:NodeShape ;
+  sh:targetClass sc:MovementEvent ;
+  sh:property [
+    sh:path sc:authorizedByAuthorityRecord ;
+    sh:nodeKind sh:IRI ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path sc:movesActant ;
+    sh:nodeKind sh:IRI ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path sc:fromPlace ;
+    sh:nodeKind sh:IRI ;
+    sh:class sc:Place ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path sc:toPlace ;
+    sh:nodeKind sh:IRI ;
+    sh:class sc:Place ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path dcterms:created ;
+    sh:maxCount 0 ;
+    sh:message "MovementEvent commit instants live on authority journal records." ;
+  ] .

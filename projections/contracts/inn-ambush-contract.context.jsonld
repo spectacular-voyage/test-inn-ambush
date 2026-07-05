@@ -130,6 +130,46 @@
       "@id": "owlTime:hasEnd",
       "@type": "@id"
     },
+    "clockOffsetSeconds": {
+      "@type": "xsd:decimal"
+    },
+    "clockPrecision": "sc:clockPrecision",
+    "usesWorldTimeAxis": {
+      "@type": "@id"
+    },
+    "onWorldTimeAxis": {
+      "@type": "@id"
+    },
+    "startsAtClockAnchor": {
+      "@type": "@id"
+    },
+    "groundsTemporalAnchor": {
+      "@type": "@id"
+    },
+    "groundedToClockAnchor": {
+      "@type": "@id"
+    },
+    "advancesWorldTimeTo": {
+      "@type": "@id"
+    },
+    "containedIn": {
+      "@type": "@id"
+    },
+    "adjacentTo": {
+      "@type": "@id"
+    },
+    "locatedIn": {
+      "@type": "@id"
+    },
+    "movesActant": {
+      "@type": "@id"
+    },
+    "fromPlace": {
+      "@type": "@id"
+    },
+    "toPlace": {
+      "@type": "@id"
+    },
     "lastAuthorityRecord": {
       "@type": "@id"
     },
