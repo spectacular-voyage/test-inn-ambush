@@ -141,8 +141,8 @@
       <details open>
         <summary>Latest historical manifestation file</summary>
         <div class="wf-source-meta">
-          <span>projections/contracts/inn-ambush-contract-context/_history001/_s0005/jsonld/inn-ambush-contract.context.jsonld</span>
-          <a href="/test-inn-ambush/projections/contracts/inn-ambush-contract-context/_history001/_s0005/jsonld/inn-ambush-contract.context.jsonld">Raw file</a>
+          <span>projections/contracts/inn-ambush-contract-context/_history001/_s0006/jsonld/inn-ambush-contract.context.jsonld</span>
+          <a href="/test-inn-ambush/projections/contracts/inn-ambush-contract-context/_history001/_s0006/jsonld/inn-ambush-contract.context.jsonld">Raw file</a>
         </div>
 <pre class="shiki github-dark-default" style="background-color:#0d1117;color:#e6edf3" tabindex="0"><code><span class="line"><span style="color:#E6EDF3">{</span></span>
 <span class="line"><span style="color:#7EE787">  "@context"</span><span style="color:#E6EDF3">: {</span></span>
@@ -274,6 +274,46 @@
 <span class="line"><span style="color:#E6EDF3">    },</span></span>
 <span class="line"><span style="color:#7EE787">    "hasEnd"</span><span style="color:#E6EDF3">: {</span></span>
 <span class="line"><span style="color:#7EE787">      "@id"</span><span style="color:#E6EDF3">: </span><span style="color:#A5D6FF">"owlTime:hasEnd"</span><span style="color:#E6EDF3">,</span></span>
+<span class="line"><span style="color:#7EE787">      "@type"</span><span style="color:#E6EDF3">: </span><span style="color:#A5D6FF">"@id"</span></span>
+<span class="line"><span style="color:#E6EDF3">    },</span></span>
+<span class="line"><span style="color:#7EE787">    "clockOffsetSeconds"</span><span style="color:#E6EDF3">: {</span></span>
+<span class="line"><span style="color:#7EE787">      "@type"</span><span style="color:#E6EDF3">: </span><span style="color:#A5D6FF">"xsd:decimal"</span></span>
+<span class="line"><span style="color:#E6EDF3">    },</span></span>
+<span class="line"><span style="color:#7EE787">    "clockPrecision"</span><span style="color:#E6EDF3">: </span><span style="color:#A5D6FF">"sc:clockPrecision"</span><span style="color:#E6EDF3">,</span></span>
+<span class="line"><span style="color:#7EE787">    "usesWorldTimeAxis"</span><span style="color:#E6EDF3">: {</span></span>
+<span class="line"><span style="color:#7EE787">      "@type"</span><span style="color:#E6EDF3">: </span><span style="color:#A5D6FF">"@id"</span></span>
+<span class="line"><span style="color:#E6EDF3">    },</span></span>
+<span class="line"><span style="color:#7EE787">    "onWorldTimeAxis"</span><span style="color:#E6EDF3">: {</span></span>
+<span class="line"><span style="color:#7EE787">      "@type"</span><span style="color:#E6EDF3">: </span><span style="color:#A5D6FF">"@id"</span></span>
+<span class="line"><span style="color:#E6EDF3">    },</span></span>
+<span class="line"><span style="color:#7EE787">    "startsAtClockAnchor"</span><span style="color:#E6EDF3">: {</span></span>
+<span class="line"><span style="color:#7EE787">      "@type"</span><span style="color:#E6EDF3">: </span><span style="color:#A5D6FF">"@id"</span></span>
+<span class="line"><span style="color:#E6EDF3">    },</span></span>
+<span class="line"><span style="color:#7EE787">    "groundsTemporalAnchor"</span><span style="color:#E6EDF3">: {</span></span>
+<span class="line"><span style="color:#7EE787">      "@type"</span><span style="color:#E6EDF3">: </span><span style="color:#A5D6FF">"@id"</span></span>
+<span class="line"><span style="color:#E6EDF3">    },</span></span>
+<span class="line"><span style="color:#7EE787">    "groundedToClockAnchor"</span><span style="color:#E6EDF3">: {</span></span>
+<span class="line"><span style="color:#7EE787">      "@type"</span><span style="color:#E6EDF3">: </span><span style="color:#A5D6FF">"@id"</span></span>
+<span class="line"><span style="color:#E6EDF3">    },</span></span>
+<span class="line"><span style="color:#7EE787">    "advancesWorldTimeTo"</span><span style="color:#E6EDF3">: {</span></span>
+<span class="line"><span style="color:#7EE787">      "@type"</span><span style="color:#E6EDF3">: </span><span style="color:#A5D6FF">"@id"</span></span>
+<span class="line"><span style="color:#E6EDF3">    },</span></span>
+<span class="line"><span style="color:#7EE787">    "containedIn"</span><span style="color:#E6EDF3">: {</span></span>
+<span class="line"><span style="color:#7EE787">      "@type"</span><span style="color:#E6EDF3">: </span><span style="color:#A5D6FF">"@id"</span></span>
+<span class="line"><span style="color:#E6EDF3">    },</span></span>
+<span class="line"><span style="color:#7EE787">    "adjacentTo"</span><span style="color:#E6EDF3">: {</span></span>
+<span class="line"><span style="color:#7EE787">      "@type"</span><span style="color:#E6EDF3">: </span><span style="color:#A5D6FF">"@id"</span></span>
+<span class="line"><span style="color:#E6EDF3">    },</span></span>
+<span class="line"><span style="color:#7EE787">    "locatedIn"</span><span style="color:#E6EDF3">: {</span></span>
+<span class="line"><span style="color:#7EE787">      "@type"</span><span style="color:#E6EDF3">: </span><span style="color:#A5D6FF">"@id"</span></span>
+<span class="line"><span style="color:#E6EDF3">    },</span></span>
+<span class="line"><span style="color:#7EE787">    "movesActant"</span><span style="color:#E6EDF3">: {</span></span>
+<span class="line"><span style="color:#7EE787">      "@type"</span><span style="color:#E6EDF3">: </span><span style="color:#A5D6FF">"@id"</span></span>
+<span class="line"><span style="color:#E6EDF3">    },</span></span>
+<span class="line"><span style="color:#7EE787">    "fromPlace"</span><span style="color:#E6EDF3">: {</span></span>
+<span class="line"><span style="color:#7EE787">      "@type"</span><span style="color:#E6EDF3">: </span><span style="color:#A5D6FF">"@id"</span></span>
+<span class="line"><span style="color:#E6EDF3">    },</span></span>
+<span class="line"><span style="color:#7EE787">    "toPlace"</span><span style="color:#E6EDF3">: {</span></span>
 <span class="line"><span style="color:#7EE787">      "@type"</span><span style="color:#E6EDF3">: </span><span style="color:#A5D6FF">"@id"</span></span>
 <span class="line"><span style="color:#E6EDF3">    },</span></span>
 <span class="line"><span style="color:#7EE787">    "lastAuthorityRecord"</span><span style="color:#E6EDF3">: {</span></span>
@@ -448,6 +488,15 @@
                 </div>
               </details>
             </details>
+            <details class="wf-history-node wf-history-node--state" open>
+              <summary class="wf-history-node-header"><a href="/test-inn-ambush/projections/contracts/inn-ambush-contract-context/_history001/_s0006">_s0006</a></summary>
+              <details class="wf-history-node wf-history-node--manifestation" open>
+                <summary class="wf-history-node-header"><a href="/test-inn-ambush/projections/contracts/inn-ambush-contract-context/_history001/_s0006/jsonld">jsonld</a></summary>
+                <div class="wf-history-node wf-history-node--file">
+                  <div class="wf-history-node-header"><a href="/test-inn-ambush/projections/contracts/inn-ambush-contract-context/_history001/_s0006/jsonld/inn-ambush-contract.context.jsonld" class="wf-history-file-iri">https://spectacular-voyage.github.io/test-inn-ambush/projections/contracts/inn-ambush-contract-context/_history001/_s0006/jsonld/inn-ambush-contract.context.jsonld</a></div>
+                </div>
+              </details>
+            </details>
           </details>
         </div>
       </details>
@@ -456,7 +505,7 @@
     </article>
   </main>
   <footer class="wf-generated">
-    Generated on <span class="wf-term wf-date-tip" tabindex="0" title="2026-07-05T01:12:11.432Z" data-tooltip="2026-07-05T01:12:11.432Z">July 5, 2026</span> by <a href="https://github.com/semantic-flow/weave/">Weave</a>
+    Generated on <span class="wf-term wf-date-tip" tabindex="0" title="2026-07-05T16:29:33.692Z" data-tooltip="2026-07-05T16:29:33.692Z">July 5, 2026</span> by <a href="https://github.com/semantic-flow/weave/">Weave</a>
   </footer>
 </body>
 </html>
