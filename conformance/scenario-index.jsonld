@@ -423,6 +423,27 @@
           }
         }
       ]
+    },
+    {
+      "id": "#18-temporal-spatial-vocabulary-woven",
+      "type": "ScenarioStep",
+      "manifestPath": "18-temporal-spatial-vocabulary-woven.jsonld",
+      "hasLaneBinding": [
+        {
+          "type": "LaneStateBinding",
+          "lane": "#fixture-lane",
+          "fromLaneState": {
+            "type": "StateLocator",
+            "locatorKind": "gitRefState",
+            "ref": "181735af84755483c58f416515bf7a125677c9af"
+          },
+          "toLaneState": {
+            "type": "StateLocator",
+            "locatorKind": "gitRefState",
+            "ref": "a.18-temporal-spatial-vocabulary-woven"
+          }
+        }
+      ]
     }
   ]
 }

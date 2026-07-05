@@ -1,0 +1,155 @@
+{
+  "@context": {
+    "@vocab": "https://spectacular-voyage.github.io/accord/ontology/",
+    "dcterms": "http://purl.org/dc/terms/",
+    "id": "@id",
+    "type": "@type",
+    "changeType": {
+      "@type": "@vocab"
+    },
+    "compareMode": {
+      "@type": "@vocab"
+    },
+    "targetsFileExpectation": {
+      "@type": "@id"
+    },
+    "locatorKind": {
+      "@type": "@vocab"
+    }
+  },
+  "type": "Manifest",
+  "id": "urn:accord:stagecraft:test-inn-ambush:18-temporal-spatial-vocabulary-woven",
+  "dcterms:title": "Inn Ambush 18 temporal spatial vocabulary woven",
+  "hasCase": [
+    {
+      "type": "TransitionCase",
+      "id": "#weave-temporal-spatial-vocabulary",
+      "fixtureRepo": "github.com/spectacular-voyage/test-inn-ambush",
+      "operationId": "stagecraft.fixture.weaveTemporalSpatialVocabulary",
+      "fromRef": "181735af84755483c58f416515bf7a125677c9af",
+      "toRef": "a.18-temporal-spatial-vocabulary-woven",
+      "fromState": {
+        "type": "StateLocator",
+        "locatorKind": "gitRefState",
+        "ref": "181735af84755483c58f416515bf7a125677c9af"
+      },
+      "toState": {
+        "type": "StateLocator",
+        "locatorKind": "gitRefState",
+        "ref": "a.18-temporal-spatial-vocabulary-woven"
+      },
+      "hasFileExpectation": [
+        {
+          "id": "#authority-journal-history-payload",
+          "type": "FileExpectation",
+          "path": "authority/journals/plan-b/_history001/_s0003/ttl/plan-b.ttl",
+          "changeType": "added",
+          "compareMode": "rdfCanonical"
+        },
+        {
+          "id": "#authority-journal-knop-inventory",
+          "type": "FileExpectation",
+          "path": "authority/journals/plan-b/_knop/_inventory/inventory.ttl",
+          "changeType": "updated",
+          "compareMode": "rdfCanonical"
+        },
+        {
+          "id": "#context-history-payload",
+          "type": "FileExpectation",
+          "path": "projections/contracts/inn-ambush-contract-context/_history001/_s0006/jsonld/inn-ambush-contract.context.jsonld",
+          "changeType": "added",
+          "compareMode": "text"
+        },
+        {
+          "id": "#context-knop-inventory",
+          "type": "FileExpectation",
+          "path": "projections/contracts/inn-ambush-contract-context/_knop/_inventory/inventory.ttl",
+          "changeType": "updated",
+          "compareMode": "rdfCanonical"
+        },
+        {
+          "id": "#shapes-history-payload",
+          "type": "FileExpectation",
+          "path": "projections/contracts/inn-ambush-contract-shapes/_history001/_s0007/ttl/inn-ambush-contract.shapes.ttl",
+          "changeType": "added",
+          "compareMode": "rdfCanonical"
+        },
+        {
+          "id": "#shapes-knop-inventory",
+          "type": "FileExpectation",
+          "path": "projections/contracts/inn-ambush-contract-shapes/_knop/_inventory/inventory.ttl",
+          "changeType": "updated",
+          "compareMode": "rdfCanonical"
+        },
+        {
+          "id": "#world-state-history-payload",
+          "type": "FileExpectation",
+          "path": "world/states/inn-ambush-plan-b-state/_history001/_s0004/ttl/inn-ambush-plan-b-state.ttl",
+          "changeType": "added",
+          "compareMode": "rdfCanonical"
+        },
+        {
+          "id": "#world-state-knop-inventory",
+          "type": "FileExpectation",
+          "path": "world/states/inn-ambush-plan-b-state/_knop/_inventory/inventory.ttl",
+          "changeType": "updated",
+          "compareMode": "rdfCanonical"
+        }
+      ],
+      "hasRdfExpectation": [
+        {
+          "id": "#authority-journal-knop-inventory-rdf",
+          "type": "RdfExpectation",
+          "targetsFileExpectation": "#authority-journal-knop-inventory",
+          "hasAskAssertion": [
+            {
+              "id": "#ask-authority-journal-latest-history-state",
+              "type": "SparqlAskAssertion",
+              "query": "ASK { <https://spectacular-voyage.github.io/test-inn-ambush/authority/journals/plan-b/_history001> <https://semantic-flow.github.io/sflo/ontology/latestHistoricalState> <https://spectacular-voyage.github.io/test-inn-ambush/authority/journals/plan-b/_history001/_s0003> . <https://spectacular-voyage.github.io/test-inn-ambush/authority/journals/plan-b/_history001/_s0003> <https://semantic-flow.github.io/sflo/ontology/previousHistoricalState> <https://spectacular-voyage.github.io/test-inn-ambush/authority/journals/plan-b/_history001/_s0002> ; <https://semantic-flow.github.io/sflo/ontology/locatedFileForState> <https://spectacular-voyage.github.io/test-inn-ambush/authority/journals/plan-b/_history001/_s0003/ttl/plan-b.ttl> . }",
+              "expectedBoolean": true
+            }
+          ]
+        },
+        {
+          "id": "#context-knop-inventory-rdf",
+          "type": "RdfExpectation",
+          "targetsFileExpectation": "#context-knop-inventory",
+          "hasAskAssertion": [
+            {
+              "id": "#ask-context-latest-history-state",
+              "type": "SparqlAskAssertion",
+              "query": "ASK { <https://spectacular-voyage.github.io/test-inn-ambush/projections/contracts/inn-ambush-contract-context/_history001> <https://semantic-flow.github.io/sflo/ontology/latestHistoricalState> <https://spectacular-voyage.github.io/test-inn-ambush/projections/contracts/inn-ambush-contract-context/_history001/_s0006> . <https://spectacular-voyage.github.io/test-inn-ambush/projections/contracts/inn-ambush-contract-context/_history001/_s0006> <https://semantic-flow.github.io/sflo/ontology/previousHistoricalState> <https://spectacular-voyage.github.io/test-inn-ambush/projections/contracts/inn-ambush-contract-context/_history001/_s0005> ; <https://semantic-flow.github.io/sflo/ontology/locatedFileForState> <https://spectacular-voyage.github.io/test-inn-ambush/projections/contracts/inn-ambush-contract-context/_history001/_s0006/jsonld/inn-ambush-contract.context.jsonld> . }",
+              "expectedBoolean": true
+            }
+          ]
+        },
+        {
+          "id": "#shapes-knop-inventory-rdf",
+          "type": "RdfExpectation",
+          "targetsFileExpectation": "#shapes-knop-inventory",
+          "hasAskAssertion": [
+            {
+              "id": "#ask-shapes-latest-history-state",
+              "type": "SparqlAskAssertion",
+              "query": "ASK { <https://spectacular-voyage.github.io/test-inn-ambush/projections/contracts/inn-ambush-contract-shapes/_history001> <https://semantic-flow.github.io/sflo/ontology/latestHistoricalState> <https://spectacular-voyage.github.io/test-inn-ambush/projections/contracts/inn-ambush-contract-shapes/_history001/_s0007> . <https://spectacular-voyage.github.io/test-inn-ambush/projections/contracts/inn-ambush-contract-shapes/_history001/_s0007> <https://semantic-flow.github.io/sflo/ontology/previousHistoricalState> <https://spectacular-voyage.github.io/test-inn-ambush/projections/contracts/inn-ambush-contract-shapes/_history001/_s0006> ; <https://semantic-flow.github.io/sflo/ontology/locatedFileForState> <https://spectacular-voyage.github.io/test-inn-ambush/projections/contracts/inn-ambush-contract-shapes/_history001/_s0007/ttl/inn-ambush-contract.shapes.ttl> . }",
+              "expectedBoolean": true
+            }
+          ]
+        },
+        {
+          "id": "#world-state-knop-inventory-rdf",
+          "type": "RdfExpectation",
+          "targetsFileExpectation": "#world-state-knop-inventory",
+          "hasAskAssertion": [
+            {
+              "id": "#ask-world-state-latest-history-state",
+              "type": "SparqlAskAssertion",
+              "query": "ASK { <https://spectacular-voyage.github.io/test-inn-ambush/world/states/inn-ambush-plan-b-state/_history001> <https://semantic-flow.github.io/sflo/ontology/latestHistoricalState> <https://spectacular-voyage.github.io/test-inn-ambush/world/states/inn-ambush-plan-b-state/_history001/_s0004> . <https://spectacular-voyage.github.io/test-inn-ambush/world/states/inn-ambush-plan-b-state/_history001/_s0004> <https://semantic-flow.github.io/sflo/ontology/previousHistoricalState> <https://spectacular-voyage.github.io/test-inn-ambush/world/states/inn-ambush-plan-b-state/_history001/_s0003> ; <https://semantic-flow.github.io/sflo/ontology/locatedFileForState> <https://spectacular-voyage.github.io/test-inn-ambush/world/states/inn-ambush-plan-b-state/_history001/_s0004/ttl/inn-ambush-plan-b-state.ttl> . }",
+              "expectedBoolean": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
