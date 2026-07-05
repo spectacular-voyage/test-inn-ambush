@@ -1,0 +1,993 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>test-inn-ambush SRD 5.2.1 condition rules</title>
+  <link rel="canonical" href="https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions">
+  <style>
+    :root { min-height: 100%; color-scheme: light; font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background: #f6f7f4; color: #20231f; }
+    * { box-sizing: border-box; }
+    body { margin: 0; min-height: 100vh; display: flex; flex-direction: column; background: linear-gradient(180deg, #f6f7f4 0%, #ebece7 100%); }
+    a { color: #1f5f85; text-decoration-thickness: 0.08em; text-underline-offset: 0.18em; }
+    main { width: min(1120px, calc(100% - 32px)); margin: 0 auto; padding: 16px 0 42px; flex: 1 0 auto; }
+    .wf-shell { display: grid; gap: 18px; min-width: 0; }
+    .wf-shell > * { min-width: 0; }
+    .wf-masthead { min-width: 0; }
+    .wf-page-header { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-bottom: 4px; min-width: 0; }
+    .wf-eyebrow { margin: 0; color: #5e675d; font-size: 0.82rem; line-height: 1.2; letter-spacing: 0; font-weight: 700; }
+    .wf-breadcrumbs { display: flex; flex-wrap: wrap; gap: 0.35rem; align-items: center; }
+    .wf-breadcrumbs a { color: inherit; text-decoration-color: rgba(94, 103, 93, 0.45); }
+    .wf-mesh-favicon { flex: 0 0 auto; width: 32px; height: 32px; object-fit: contain; }
+    .wf-hero { border-top: 5px solid #435247; padding: 26px 0 12px; }
+    h1 { margin: 0; overflow-wrap: anywhere; font-size: clamp(1.7rem, 4vw, 2.7rem); line-height: 1.04; letter-spacing: 0; }
+    .wf-classes { margin: 8px 0 0; color: #687167; font-style: italic; }
+    .wf-classes a { color: inherit; text-decoration: underline; text-decoration-color: rgba(104, 113, 103, 0.34); text-decoration-thickness: 0.06em; text-underline-offset: 0.18em; }
+    .wf-summary { max-width: 820px; margin: 14px 0 0; color: #3f463f; font-size: 1.05rem; line-height: 1.6; }
+    .wf-metadata { width: 100%; margin-top: 24px; border-collapse: collapse; table-layout: fixed; border-top: 1px solid #cdd2ca; border-bottom: 1px solid #cdd2ca; }
+    .wf-metadata th, .wf-metadata td { padding: 10px 12px; border-top: 1px solid #e0e4dd; text-align: left; vertical-align: top; }
+    .wf-metadata tr:first-child th, .wf-metadata tr:first-child td { border-top: 0; }
+    .wf-metadata th { width: 180px; color: #4f594f; font-size: 0.78rem; line-height: 1.35; text-transform: uppercase; letter-spacing: 0; overflow-wrap: anywhere; word-break: break-word; }
+    .wf-metadata td { min-width: 0; overflow-wrap: anywhere; }
+    .wf-hero-metadata col.wf-metadata-key { width: 180px; }
+    .wf-child-identifiers { display: flex; flex-wrap: wrap; gap: 5px; align-items: baseline; min-width: 0; max-width: 100%; }
+    .wf-child-identifier { display: inline-block; padding: 0.08rem 0.36rem; border: 1px solid #cdd8cf; border-radius: 2px; background: #eef3ef; text-decoration: none; white-space: nowrap; }
+    .wf-child-identifier:hover, .wf-child-identifier:focus { background: #e0ebe4; border-color: #b8c8bc; }
+    .wf-child-identifiers-more { display: inline-block; max-width: 100%; min-width: 0; border: 0; border-radius: 0; background: transparent; }
+    .wf-child-identifiers-more[open] { flex: 1 1 100%; width: 100%; }
+    .wf-child-identifiers-more > summary { flex: 0 0 auto; display: inline-block; padding: 0.08rem 0.36rem; border: 1px solid #cdd8cf; border-radius: 2px; background: #eef3ef; color: #1f5f85; cursor: pointer; line-height: inherit; }
+    .wf-child-identifiers-more[open] > summary { margin-bottom: 5px; }
+    .wf-child-identifiers-overflow { display: flex; flex-wrap: wrap; gap: 5px; align-items: baseline; min-width: 0; max-width: 100%; }
+    .wf-child-identifiers-more > summary::-webkit-details-marker { display: none; }
+    .wf-child-identifiers-more > summary::marker { content: ""; }
+    .wf-source-summary { display: flex; flex-wrap: wrap; gap: 6px 10px; align-items: baseline; min-width: 0; }
+    .wf-source-chain { display: inline-flex; flex-wrap: wrap; align-items: center; gap: 0.28rem; max-width: 100%; padding: 0.16rem 0.22rem 0.16rem 0.5rem; border: 1px solid #c3d1c7; border-radius: 5px; background: #eef3ef; box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.48); }
+    .wf-source-chain a { display: inline-flex; align-items: center; max-width: 100%; min-width: 0; text-decoration: none; white-space: nowrap; border-radius: 3px; }
+    .wf-source-root { font-weight: 750; }
+    .wf-source-version-chain { display: inline-flex; flex-wrap: wrap; align-items: center; gap: 0.22rem; max-width: 100%; min-width: 0; padding: 0.12rem 0.14rem 0.12rem 0.38rem; border: 1px solid #bfd0c4; border-radius: 4px; background: #dfe9e3; box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.36); }
+    .wf-source-version-history { font-weight: 650; }
+    .wf-source-version { padding: 0.06rem 0.34rem; border: 1px solid #bdcec3; background: #f8fbf8; font-weight: 650; }
+    .wf-source-chain a:hover, .wf-source-chain a:focus { background: #d2e0d7; outline: 0; }
+    .wf-source-version:hover, .wf-source-version:focus { background: #edf5ef; }
+    .wf-term { cursor: help; border-bottom: 1px dotted currentColor; }
+    .wf-term-link { color: inherit; border-bottom: 0; text-decoration: underline; text-decoration-color: rgba(79, 89, 79, 0.35); text-decoration-thickness: 0.06em; text-underline-offset: 0.18em; }
+    .wf-term-link:hover, .wf-term-link:focus { text-decoration-color: currentColor; }
+    .wf-date-tip { position: relative; display: inline-block; }
+    .wf-date-tip::after { content: attr(data-tooltip); position: absolute; left: 50%; bottom: calc(100% + 8px); transform: translateX(-50%); opacity: 0; pointer-events: none; background: rgba(27, 32, 27, 0.94); color: #fff; border-radius: 5px; padding: 5px 7px; font-size: 0.78rem; white-space: nowrap; transition: opacity 120ms ease; }
+    .wf-date-tip:hover::after, .wf-date-tip:focus::after { opacity: 1; }
+    .wf-section, .wf-source { margin-top: 24px; min-width: 0; }
+    h2 { margin: 0 0 12px; font-size: 1rem; line-height: 1.25; letter-spacing: 0; color: #2f382f; }
+    ul { margin: 0; padding-left: 1.2rem; }
+    li { margin: 0.45rem 0; line-height: 1.45; }
+    code, pre { font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace; }
+    code { background: #e9ece6; border-radius: 4px; padding: 0.12rem 0.25rem; }
+    details { border: 1px solid #c9cec7; border-radius: 8px; background: #fff; min-width: 0; }
+    details + details { margin-top: 12px; }
+    summary { cursor: pointer; padding: 12px 14px; font-weight: 750; }
+    .wf-children { padding-bottom: 12px; }
+    .wf-children .wf-metadata { margin-top: 0; border-bottom: 0; }
+    .wf-properties { padding-bottom: 12px; }
+    .wf-properties .wf-metadata { margin-top: 0; border-bottom: 0; }
+    .wf-properties .wf-metadata th, .wf-blank-nodes .wf-metadata th { text-transform: none; }
+    .wf-blank-nodes { padding-bottom: 12px; }
+    .wf-blank-nodes .wf-metadata { margin-top: 0; border-bottom: 0; }
+    .wf-blank-node-code { max-height: 24rem; padding: 12px; border: 1px solid #d7dcd4; border-radius: 6px; font-size: 0.82rem; }
+    .wf-references { padding-bottom: 12px; }
+    .wf-reference-groups { display: grid; gap: 8px; padding: 0 14px 4px; }
+    .wf-reference-group { background: #f8faf7; border-color: #d5dbd3; }
+    .wf-reference-group ul { padding: 0 14px 12px 1.6rem; }
+    .wf-history { padding-bottom: 12px; }
+    .wf-history-tree { display: grid; gap: 10px; padding: 0 14px 4px; }
+    .wf-history-node { border: 1px solid #d5dbd3; border-radius: 8px; padding: 10px; }
+    .wf-history-node + .wf-history-node, .wf-history-node .wf-history-node { margin-top: 8px; }
+    .wf-history-node--history { background: #f8faf7; }
+    .wf-history-node--state { background: #eef3ef; }
+    .wf-history-node--manifestation { background: #e7eee9; }
+    .wf-history-node--file { background: #dfe8e2; }
+    .wf-history-node-header { display: flex; flex-wrap: wrap; gap: 8px; align-items: baseline; }
+    .wf-history-node > summary.wf-history-node-header { display: list-item; padding: 0; }
+    .wf-history-class { color: #687167; font-style: italic; font-size: 0.85rem; }
+    .wf-history-file-iri { font-size: 0.82rem; overflow-wrap: anywhere; }
+    .wf-history-gap { display: flex; align-items: center; justify-content: center; min-height: 28px; color: #687167; font-size: 1.15rem; line-height: 1; }
+    .wf-source-meta { display: flex; flex-wrap: wrap; gap: 10px; padding: 0 14px 12px; color: #596259; font-size: 0.88rem; }
+    .wf-source-omitted { margin: 0; padding: 0 14px 14px; color: #596259; line-height: 1.45; }
+    .wf-source-image-preview { display: block; max-width: min(320px, calc(100% - 28px)); max-height: 220px; margin: 0 14px 14px; padding: 12px; border: 1px solid #d7dcd4; border-radius: 6px; background: #f8faf7; object-fit: contain; }
+    pre { margin: 0; width: 100%; max-width: 100%; max-height: 64vh; overflow: auto; border-top: 1px solid #d7dcd4; background: #0d1117; color: #e6edf3; padding: 16px; font-size: 0.86rem; line-height: 1.55; tab-size: 2; white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
+    pre code { display: block; min-width: 0; background: transparent; color: inherit; border-radius: 0; padding: 0; white-space: inherit; overflow-wrap: inherit; word-break: inherit; }
+    pre code span { overflow-wrap: inherit; word-break: inherit; }
+    .wf-generated { width: min(1120px, calc(100% - 32px)); margin: 0 auto; padding: 8px 0 32px; text-align: center; color: rgba(49, 57, 49, 0.42); font-size: 0.78rem; flex: 0 0 auto; }
+    .wf-generated a { color: inherit; font-weight: 700; }
+  </style>
+
+  <script>
+    const canonicalLink = document.querySelector('link[rel="canonical"]');
+    if (canonicalLink && location.pathname.endsWith("/") && !location.search && !location.hash) {
+      const canonicalUrl = new URL(canonicalLink.href);
+      if (canonicalUrl.origin === location.origin && canonicalUrl.pathname === location.pathname.slice(0, -1)) {
+        history.replaceState(null, "", canonicalUrl.pathname);
+      }
+    }
+  </script>
+</head>
+<body>
+  <main>
+    <article class="wf-shell">
+      <header class="wf-masthead">
+        <div class="wf-page-header">
+          <nav class="wf-eyebrow wf-breadcrumbs" aria-label="Breadcrumb">
+<a href="/test-inn-ambush">test-inn-ambush</a> <span aria-hidden="true">/</span> <a href="/test-inn-ambush/rules">rules</a> <span aria-hidden="true">/</span> <a href="/test-inn-ambush/rules/dynamis">dynamis</a> <span aria-hidden="true">/</span> <a href="/test-inn-ambush/rules/dynamis/srd-5-2-1">srd-5-2-1</a> <span aria-hidden="true">/</span> <span aria-current="page">conditions</span>
+          </nav>
+
+        </div>
+        <div class="wf-hero">
+        <h1>SRD 5.2.1 condition rules</h1>
+        <p class="wf-classes">a <a href="http://www.w3.org/ns/dcat#Dataset">dcat:Dataset</a></p>
+        <p class="wf-summary">Curated condition definitions extracted from the CC SRD 5.2.1 PDF. Mask rows name action-family affordances; non-mask mechanical effects remain explicit data.</p>
+        <table class="wf-metadata wf-hero-metadata">
+          <colgroup>
+            <col class="wf-metadata-key">
+            <col>
+            <col class="wf-metadata-key">
+            <col>
+          </colgroup>
+          <tbody>
+          <tr><th scope="row">Canonical IRI</th><td colspan="3"><span>https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions</span></td></tr>
+          <tr><th scope="row">Working File</th><td colspan="3"><a href="/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/conditions.ttl">rules/dynamis/srd-5-2-1/conditions/conditions.ttl</a></td></tr>
+          </tbody>
+        </table>
+
+        </div>
+      </header>
+    <section class="wf-section">
+      <details class="wf-properties" open>
+        <summary>Properties</summary>
+        <table class="wf-metadata">
+          <tbody>
+          <tr><th scope="row"><a class="wf-term wf-term-link" href="http://www.w3.org/ns/dcat#distribution" title="http://www.w3.org/ns/dcat#distribution">dcat:distribution</a></th><td><a href="https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/conditions-csvw">https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/conditions-csvw</a></td></tr>
+          <tr><th scope="row"><a class="wf-term wf-term-link" href="http://www.w3.org/ns/dcat#distribution" title="http://www.w3.org/ns/dcat#distribution">dcat:distribution</a></th><td><a href="https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/conditions-effects-csv">https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/conditions-effects-csv</a></td></tr>
+          <tr><th scope="row"><a class="wf-term wf-term-link" href="http://purl.org/dc/terms/created" title="http://purl.org/dc/terms/created">dcterms:created</a></th><td><span>2026-07-05</span></td></tr>
+          <tr><th scope="row"><a class="wf-term wf-term-link" href="http://purl.org/dc/terms/description" title="http://purl.org/dc/terms/description">dcterms:description</a></th><td><span>Curated condition definitions extracted from the CC SRD 5.2.1 PDF. Mask rows name action-family affordances; non-mask mechanical effects remain explicit data.</span></td></tr>
+          <tr><th scope="row"><a class="wf-term wf-term-link" href="http://purl.org/dc/terms/license" title="http://purl.org/dc/terms/license">dcterms:license</a></th><td><a href="https://creativecommons.org/licenses/by/4.0/">https://creativecommons.org/licenses/by/4.0/</a></td></tr>
+          <tr><th scope="row"><a class="wf-term wf-term-link" href="http://purl.org/dc/terms/rights" title="http://purl.org/dc/terms/rights">dcterms:rights</a></th><td><span>Includes material from System Reference Document 5.2.1 by Wizards of the Coast LLC, available under the Creative Commons Attribution 4.0 International License.</span></td></tr>
+          <tr><th scope="row"><a class="wf-term wf-term-link" href="http://purl.org/dc/terms/source" title="http://purl.org/dc/terms/source">dcterms:source</a></th><td><a href="https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf">https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf</a></td></tr>
+          <tr><th scope="row"><a class="wf-term wf-term-link" href="http://purl.org/dc/terms/title" title="http://purl.org/dc/terms/title">dcterms:title</a></th><td><span>SRD 5.2.1 condition rules</span></td></tr>
+          <tr><th scope="row"><a class="wf-term wf-term-link" href="http://www.w3.org/1999/02/22-rdf-syntax-ns#type" title="http://www.w3.org/1999/02/22-rdf-syntax-ns#type">rdf:type</a></th><td><a href="http://www.w3.org/ns/dcat#Dataset">dcat:Dataset</a></td></tr>
+          </tbody>
+        </table>
+      </details>
+    </section>
+
+    <section class="wf-source">
+      <details open>
+        <summary>Latest historical manifestation file</summary>
+        <div class="wf-source-meta">
+          <span>rules/dynamis/srd-5-2-1/conditions/_history001/_s0001/ttl/conditions.ttl</span>
+          <a href="/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/_history001/_s0001/ttl/conditions.ttl">Raw file</a>
+        </div>
+<pre class="shiki github-dark-default" style="background-color:#0d1117;color:#e6edf3" tabindex="0"><code><span class="line"><span style="color:#FF7B72">@prefix dcat:</span><span style="color:#FFA657"> &#x3C;http://www.w3.org/ns/dcat#></span><span style="color:#E6EDF3"> .</span></span>
+<span class="line"><span style="color:#FF7B72">@prefix dcterms:</span><span style="color:#FFA657"> &#x3C;http://purl.org/dc/terms/></span><span style="color:#E6EDF3"> .</span></span>
+<span class="line"><span style="color:#FF7B72">@prefix dyn:</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/></span><span style="color:#E6EDF3"> .</span></span>
+<span class="line"><span style="color:#FF7B72">@prefix owl:</span><span style="color:#FFA657"> &#x3C;http://www.w3.org/2002/07/owl#></span><span style="color:#E6EDF3"> .</span></span>
+<span class="line"><span style="color:#FF7B72">@prefix rdf:</span><span style="color:#FFA657"> &#x3C;http://www.w3.org/1999/02/22-rdf-syntax-ns#></span><span style="color:#E6EDF3"> .</span></span>
+<span class="line"><span style="color:#FF7B72">@prefix rdfs:</span><span style="color:#FFA657"> &#x3C;http://www.w3.org/2000/01/rdf-schema#></span><span style="color:#E6EDF3"> .</span></span>
+<span class="line"><span style="color:#FF7B72">@prefix skos:</span><span style="color:#FFA657"> &#x3C;http://www.w3.org/2004/02/skos/core#></span><span style="color:#E6EDF3"> .</span></span>
+<span class="line"><span style="color:#FF7B72">@prefix xsd:</span><span style="color:#FFA657"> &#x3C;http://www.w3.org/2001/XMLSchema#></span><span style="color:#E6EDF3"> .</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FFA657">&#x3C;https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions></span></span>
+<span class="line"><span style="color:#FF7B72">  a</span><span style="color:#FF7B72"> dcat:</span><span style="color:#79C0FF">Dataset</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dcterms:</span><span style="color:#79C0FF">title</span><span style="color:#A5D6FF"> "SRD 5.2.1 condition rules"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dcterms:</span><span style="color:#79C0FF">description</span><span style="color:#A5D6FF"> "Curated condition definitions extracted from the CC SRD 5.2.1 PDF. Mask rows name action-family affordances; non-mask mechanical effects remain explicit data."</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dcterms:</span><span style="color:#79C0FF">created</span><span style="color:#A5D6FF"> "2026-07-05"</span><span style="color:#E6EDF3">^^</span><span style="color:#FF7B72">xsd:</span><span style="color:#79C0FF">date</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dcterms:</span><span style="color:#79C0FF">license</span><span style="color:#FFA657"> &#x3C;https://creativecommons.org/licenses/by/4.0/></span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dcterms:</span><span style="color:#79C0FF">source</span><span style="color:#FFA657"> &#x3C;https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf></span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dcterms:</span><span style="color:#79C0FF">rights</span><span style="color:#A5D6FF"> "Includes material from System Reference Document 5.2.1 by Wizards of the Coast LLC, available under the Creative Commons Attribution 4.0 International License."</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dcat:</span><span style="color:#79C0FF">distribution</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/conditions-effects-csv></span><span style="color:#E6EDF3">,</span></span>
+<span class="line"><span style="color:#FFA657">    &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/conditions-csvw></span><span style="color:#E6EDF3"> .</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FFA657">&#x3C;https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/conditions-effects-csv></span></span>
+<span class="line"><span style="color:#FF7B72">  a</span><span style="color:#FF7B72"> dcat:</span><span style="color:#79C0FF">Distribution</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dcterms:</span><span style="color:#79C0FF">title</span><span style="color:#A5D6FF"> "SRD 5.2.1 condition effects curated CSV"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dcat:</span><span style="color:#79C0FF">downloadURL</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/conditions.effects.csv></span><span style="color:#E6EDF3"> .</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FFA657">&#x3C;https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/conditions-csvw></span></span>
+<span class="line"><span style="color:#FF7B72">  a</span><span style="color:#FF7B72"> dcat:</span><span style="color:#79C0FF">Distribution</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dcterms:</span><span style="color:#79C0FF">title</span><span style="color:#A5D6FF"> "SRD 5.2.1 condition CSVW mapping"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dcat:</span><span style="color:#79C0FF">downloadURL</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/conditions.csvw.json></span><span style="color:#E6EDF3"> .</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FF7B72">dyn:</span><span style="color:#79C0FF">ConditionMaskAdjudicatedPreconditionAsk</span></span>
+<span class="line"><span style="color:#FF7B72">  a</span><span style="color:#FF7B72"> dyn:</span><span style="color:#79C0FF">SparqlAskPrecondition</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  rdf:</span><span style="color:#79C0FF">value</span><span style="color:#A5D6FF"> "ASK { # Condition mask family is adjudicated by the condition effect and live mask interval. }"</span><span style="color:#E6EDF3"> .</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FF7B72">dyn:</span><span style="color:#79C0FF">ConditionMaskAdjudicatedConsequenceTemplate</span></span>
+<span class="line"><span style="color:#FF7B72">  a</span><span style="color:#FF7B72"> dyn:</span><span style="color:#79C0FF">ConsequenceTemplate</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  rdf:</span><span style="color:#79C0FF">value</span><span style="color:#A5D6FF"> "No standalone consequence template; this action family exists so source-derived condition masks can name the affordance they suspend."</span><span style="color:#E6EDF3"> .</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FF7B72">dyn:</span><span style="color:#79C0FF">HarmConditionSource</span></span>
+<span class="line"><span style="color:#FF7B72">  a</span><span style="color:#FF7B72"> dyn:</span><span style="color:#79C0FF">ActionType</span><span style="color:#E6EDF3">, </span><span style="color:#FF7B72">owl:</span><span style="color:#79C0FF">Class</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  rdfs:</span><span style="color:#79C0FF">label</span><span style="color:#A5D6FF"> "Harm condition source"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">verbIri</span><span style="color:#FF7B72"> dyn:</span><span style="color:#79C0FF">harm</span><span style="color:#E6EDF3">-condition-source ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">preconditionAsk</span><span style="color:#FF7B72"> dyn:</span><span style="color:#79C0FF">ConditionMaskAdjudicatedPreconditionAsk</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">consequenceTemplate</span><span style="color:#FF7B72"> dyn:</span><span style="color:#79C0FF">ConditionMaskAdjudicatedConsequenceTemplate</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">punningDecision</span><span style="color:#A5D6FF"> "ActionType is an individual rules record and an OWL class for source-derived condition-mask family references."</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">srdReference</span><span style="color:#A5D6FF"> "SRD 5.2.1 condition rules"</span><span style="color:#E6EDF3"> .</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FF7B72">dyn:</span><span style="color:#79C0FF">MaintainConcentration</span></span>
+<span class="line"><span style="color:#FF7B72">  a</span><span style="color:#FF7B72"> dyn:</span><span style="color:#79C0FF">ActionType</span><span style="color:#E6EDF3">, </span><span style="color:#FF7B72">owl:</span><span style="color:#79C0FF">Class</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  rdfs:</span><span style="color:#79C0FF">label</span><span style="color:#A5D6FF"> "Maintain concentration"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">verbIri</span><span style="color:#FF7B72"> dyn:</span><span style="color:#79C0FF">maintain</span><span style="color:#E6EDF3">-concentration ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">preconditionAsk</span><span style="color:#FF7B72"> dyn:</span><span style="color:#79C0FF">ConditionMaskAdjudicatedPreconditionAsk</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">consequenceTemplate</span><span style="color:#FF7B72"> dyn:</span><span style="color:#79C0FF">ConditionMaskAdjudicatedConsequenceTemplate</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">punningDecision</span><span style="color:#A5D6FF"> "ActionType is an individual rules record and an OWL class for source-derived condition-mask family references."</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">srdReference</span><span style="color:#A5D6FF"> "SRD 5.2.1 condition rules"</span><span style="color:#E6EDF3"> .</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FF7B72">dyn:</span><span style="color:#79C0FF">MoveCloserToConditionSource</span></span>
+<span class="line"><span style="color:#FF7B72">  a</span><span style="color:#FF7B72"> dyn:</span><span style="color:#79C0FF">ActionType</span><span style="color:#E6EDF3">, </span><span style="color:#FF7B72">owl:</span><span style="color:#79C0FF">Class</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  rdfs:</span><span style="color:#79C0FF">label</span><span style="color:#A5D6FF"> "Move closer to condition source"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">verbIri</span><span style="color:#FF7B72"> dyn:</span><span style="color:#79C0FF">move</span><span style="color:#E6EDF3">-closer-to-condition-source ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">preconditionAsk</span><span style="color:#FF7B72"> dyn:</span><span style="color:#79C0FF">ConditionMaskAdjudicatedPreconditionAsk</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">consequenceTemplate</span><span style="color:#FF7B72"> dyn:</span><span style="color:#79C0FF">ConditionMaskAdjudicatedConsequenceTemplate</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">punningDecision</span><span style="color:#A5D6FF"> "ActionType is an individual rules record and an OWL class for source-derived condition-mask family references."</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">srdReference</span><span style="color:#A5D6FF"> "SRD 5.2.1 condition rules"</span><span style="color:#E6EDF3"> .</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FF7B72">dyn:</span><span style="color:#79C0FF">TakeAction</span></span>
+<span class="line"><span style="color:#FF7B72">  a</span><span style="color:#FF7B72"> dyn:</span><span style="color:#79C0FF">ActionType</span><span style="color:#E6EDF3">, </span><span style="color:#FF7B72">owl:</span><span style="color:#79C0FF">Class</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  rdfs:</span><span style="color:#79C0FF">label</span><span style="color:#A5D6FF"> "Take action"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">verbIri</span><span style="color:#FF7B72"> dyn:</span><span style="color:#79C0FF">take</span><span style="color:#E6EDF3">-action ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">preconditionAsk</span><span style="color:#FF7B72"> dyn:</span><span style="color:#79C0FF">ConditionMaskAdjudicatedPreconditionAsk</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">consequenceTemplate</span><span style="color:#FF7B72"> dyn:</span><span style="color:#79C0FF">ConditionMaskAdjudicatedConsequenceTemplate</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">punningDecision</span><span style="color:#A5D6FF"> "ActionType is an individual rules record and an OWL class for source-derived condition-mask family references."</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">srdReference</span><span style="color:#A5D6FF"> "SRD 5.2.1 condition rules"</span><span style="color:#E6EDF3"> .</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FF7B72">dyn:</span><span style="color:#79C0FF">TakeBonusAction</span></span>
+<span class="line"><span style="color:#FF7B72">  a</span><span style="color:#FF7B72"> dyn:</span><span style="color:#79C0FF">ActionType</span><span style="color:#E6EDF3">, </span><span style="color:#FF7B72">owl:</span><span style="color:#79C0FF">Class</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  rdfs:</span><span style="color:#79C0FF">label</span><span style="color:#A5D6FF"> "Take bonus action"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">verbIri</span><span style="color:#FF7B72"> dyn:</span><span style="color:#79C0FF">take</span><span style="color:#E6EDF3">-bonus-action ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">preconditionAsk</span><span style="color:#FF7B72"> dyn:</span><span style="color:#79C0FF">ConditionMaskAdjudicatedPreconditionAsk</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">consequenceTemplate</span><span style="color:#FF7B72"> dyn:</span><span style="color:#79C0FF">ConditionMaskAdjudicatedConsequenceTemplate</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">punningDecision</span><span style="color:#A5D6FF"> "ActionType is an individual rules record and an OWL class for source-derived condition-mask family references."</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">srdReference</span><span style="color:#A5D6FF"> "SRD 5.2.1 condition rules"</span><span style="color:#E6EDF3"> .</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FF7B72">dyn:</span><span style="color:#79C0FF">TakeReaction</span></span>
+<span class="line"><span style="color:#FF7B72">  a</span><span style="color:#FF7B72"> dyn:</span><span style="color:#79C0FF">ActionType</span><span style="color:#E6EDF3">, </span><span style="color:#FF7B72">owl:</span><span style="color:#79C0FF">Class</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  rdfs:</span><span style="color:#79C0FF">label</span><span style="color:#A5D6FF"> "Take reaction"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">verbIri</span><span style="color:#FF7B72"> dyn:</span><span style="color:#79C0FF">take</span><span style="color:#E6EDF3">-reaction ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">preconditionAsk</span><span style="color:#FF7B72"> dyn:</span><span style="color:#79C0FF">ConditionMaskAdjudicatedPreconditionAsk</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">consequenceTemplate</span><span style="color:#FF7B72"> dyn:</span><span style="color:#79C0FF">ConditionMaskAdjudicatedConsequenceTemplate</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">punningDecision</span><span style="color:#A5D6FF"> "ActionType is an individual rules record and an OWL class for source-derived condition-mask family references."</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">srdReference</span><span style="color:#A5D6FF"> "SRD 5.2.1 condition rules"</span><span style="color:#E6EDF3"> .</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FF7B72">dyn:</span><span style="color:#79C0FF">UseHearing</span></span>
+<span class="line"><span style="color:#FF7B72">  a</span><span style="color:#FF7B72"> dyn:</span><span style="color:#79C0FF">ActionType</span><span style="color:#E6EDF3">, </span><span style="color:#FF7B72">owl:</span><span style="color:#79C0FF">Class</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  rdfs:</span><span style="color:#79C0FF">label</span><span style="color:#A5D6FF"> "Use hearing"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">verbIri</span><span style="color:#FF7B72"> dyn:</span><span style="color:#79C0FF">use</span><span style="color:#E6EDF3">-hearing ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">preconditionAsk</span><span style="color:#FF7B72"> dyn:</span><span style="color:#79C0FF">ConditionMaskAdjudicatedPreconditionAsk</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">consequenceTemplate</span><span style="color:#FF7B72"> dyn:</span><span style="color:#79C0FF">ConditionMaskAdjudicatedConsequenceTemplate</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">punningDecision</span><span style="color:#A5D6FF"> "ActionType is an individual rules record and an OWL class for source-derived condition-mask family references."</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">srdReference</span><span style="color:#A5D6FF"> "SRD 5.2.1 condition rules"</span><span style="color:#E6EDF3"> .</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FF7B72">dyn:</span><span style="color:#79C0FF">UseSight</span></span>
+<span class="line"><span style="color:#FF7B72">  a</span><span style="color:#FF7B72"> dyn:</span><span style="color:#79C0FF">ActionType</span><span style="color:#E6EDF3">, </span><span style="color:#FF7B72">owl:</span><span style="color:#79C0FF">Class</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  rdfs:</span><span style="color:#79C0FF">label</span><span style="color:#A5D6FF"> "Use sight"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">verbIri</span><span style="color:#FF7B72"> dyn:</span><span style="color:#79C0FF">use</span><span style="color:#E6EDF3">-sight ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">preconditionAsk</span><span style="color:#FF7B72"> dyn:</span><span style="color:#79C0FF">ConditionMaskAdjudicatedPreconditionAsk</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">consequenceTemplate</span><span style="color:#FF7B72"> dyn:</span><span style="color:#79C0FF">ConditionMaskAdjudicatedConsequenceTemplate</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">punningDecision</span><span style="color:#A5D6FF"> "ActionType is an individual rules record and an OWL class for source-derived condition-mask family references."</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">srdReference</span><span style="color:#A5D6FF"> "SRD 5.2.1 condition rules"</span><span style="color:#E6EDF3"> .</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FFA657">&#x3C;https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/blinded></span></span>
+<span class="line"><span style="color:#FF7B72">  a</span><span style="color:#FF7B72"> dyn:</span><span style="color:#79C0FF">ConditionDefinition</span><span style="color:#E6EDF3">, </span><span style="color:#FF7B72">skos:</span><span style="color:#79C0FF">Concept</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dcterms:</span><span style="color:#79C0FF">isPartOf</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions></span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  rdfs:</span><span style="color:#79C0FF">label</span><span style="color:#A5D6FF"> "Blinded"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">conditionKey</span><span style="color:#A5D6FF"> "blinded"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">sourceSection</span><span style="color:#A5D6FF"> "Rules Glossary: Blinded [Condition]"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">hasConditionEffect</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/blinded/effect/cant-see></span><span style="color:#E6EDF3">,</span></span>
+<span class="line"><span style="color:#FFA657">    &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/blinded/effect/attacks-affected></span><span style="color:#E6EDF3"> .</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FFA657">&#x3C;https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/blinded/effect/cant-see></span></span>
+<span class="line"><span style="color:#FF7B72">  a</span><span style="color:#FF7B72"> dyn:</span><span style="color:#79C0FF">ConditionEffect</span><span style="color:#E6EDF3">, </span><span style="color:#FF7B72">dyn:</span><span style="color:#79C0FF">AffordanceMaskDefinition</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dcterms:</span><span style="color:#79C0FF">isPartOf</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/blinded></span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  rdfs:</span><span style="color:#79C0FF">label</span><span style="color:#A5D6FF"> "Can't See"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  rdf:</span><span style="color:#79C0FF">value</span><span style="color:#A5D6FF"> "You can't see and automatically fail any ability check that requires sight."</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">effectKey</span><span style="color:#A5D6FF"> "cant-see"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">effectKind</span><span style="color:#A5D6FF"> "sensory-mask"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">mechanicalStatus</span><span style="color:#A5D6FF"> "codified-mask"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">sourceSection</span><span style="color:#A5D6FF"> "Rules Glossary: Blinded [Condition]"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">adjudicationNote</span><span style="color:#A5D6FF"> "The ability-check auto-failure depends on whether a check requires sight; the mask records the sensory affordance only."</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">masksActionType</span><span style="color:#FF7B72"> dyn:</span><span style="color:#79C0FF">UseSight</span><span style="color:#E6EDF3"> .</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FFA657">&#x3C;https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/blinded/effect/attacks-affected></span></span>
+<span class="line"><span style="color:#FF7B72">  a</span><span style="color:#FF7B72"> dyn:</span><span style="color:#79C0FF">ConditionEffect</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dcterms:</span><span style="color:#79C0FF">isPartOf</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/blinded></span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  rdfs:</span><span style="color:#79C0FF">label</span><span style="color:#A5D6FF"> "Attacks Affected"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  rdf:</span><span style="color:#79C0FF">value</span><span style="color:#A5D6FF"> "Attack rolls against you have Advantage, and your attack rolls have Disadvantage."</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">effectKey</span><span style="color:#A5D6FF"> "attacks-affected"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">effectKind</span><span style="color:#A5D6FF"> "d20-modifier"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">mechanicalStatus</span><span style="color:#A5D6FF"> "structured-not-mask"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">sourceSection</span><span style="color:#A5D6FF"> "Rules Glossary: Blinded [Condition]"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">adjudicationNote</span><span style="color:#A5D6FF"> "Attack-roll advantage and disadvantage are roll modifiers, not action masks."</span><span style="color:#E6EDF3"> .</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FFA657">&#x3C;https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/charmed></span></span>
+<span class="line"><span style="color:#FF7B72">  a</span><span style="color:#FF7B72"> dyn:</span><span style="color:#79C0FF">ConditionDefinition</span><span style="color:#E6EDF3">, </span><span style="color:#FF7B72">skos:</span><span style="color:#79C0FF">Concept</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dcterms:</span><span style="color:#79C0FF">isPartOf</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions></span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  rdfs:</span><span style="color:#79C0FF">label</span><span style="color:#A5D6FF"> "Charmed"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">conditionKey</span><span style="color:#A5D6FF"> "charmed"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">sourceSection</span><span style="color:#A5D6FF"> "Rules Glossary: Charmed [Condition]"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">hasConditionEffect</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/charmed/effect/cant-harm-the-charmer></span><span style="color:#E6EDF3">,</span></span>
+<span class="line"><span style="color:#FFA657">    &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/charmed/effect/social-advantage></span><span style="color:#E6EDF3"> .</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FFA657">&#x3C;https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/charmed/effect/cant-harm-the-charmer></span></span>
+<span class="line"><span style="color:#FF7B72">  a</span><span style="color:#FF7B72"> dyn:</span><span style="color:#79C0FF">ConditionEffect</span><span style="color:#E6EDF3">, </span><span style="color:#FF7B72">dyn:</span><span style="color:#79C0FF">AffordanceMaskDefinition</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dcterms:</span><span style="color:#79C0FF">isPartOf</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/charmed></span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  rdfs:</span><span style="color:#79C0FF">label</span><span style="color:#A5D6FF"> "Can't Harm the Charmer"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  rdf:</span><span style="color:#79C0FF">value</span><span style="color:#A5D6FF"> "You can't attack the charmer or target the charmer with damaging abilities or magical effects."</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">effectKey</span><span style="color:#A5D6FF"> "cant-harm-the-charmer"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">effectKind</span><span style="color:#A5D6FF"> "conditional-affordance-mask"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">mechanicalStatus</span><span style="color:#A5D6FF"> "adjudication-scoped-mask"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">sourceSection</span><span style="color:#A5D6FF"> "Rules Glossary: Charmed [Condition]"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">adjudicationNote</span><span style="color:#A5D6FF"> "The mask is source-scoped to the charmer and does not prohibit harm against others."</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">masksActionType</span><span style="color:#FF7B72"> dyn:</span><span style="color:#79C0FF">HarmConditionSource</span><span style="color:#E6EDF3"> .</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FFA657">&#x3C;https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/charmed/effect/social-advantage></span></span>
+<span class="line"><span style="color:#FF7B72">  a</span><span style="color:#FF7B72"> dyn:</span><span style="color:#79C0FF">ConditionEffect</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dcterms:</span><span style="color:#79C0FF">isPartOf</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/charmed></span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  rdfs:</span><span style="color:#79C0FF">label</span><span style="color:#A5D6FF"> "Social Advantage"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  rdf:</span><span style="color:#79C0FF">value</span><span style="color:#A5D6FF"> "The charmer has Advantage on any ability check to interact with you socially."</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">effectKey</span><span style="color:#A5D6FF"> "social-advantage"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">effectKind</span><span style="color:#A5D6FF"> "d20-modifier"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">mechanicalStatus</span><span style="color:#A5D6FF"> "structured-not-mask"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">sourceSection</span><span style="color:#A5D6FF"> "Rules Glossary: Charmed [Condition]"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">adjudicationNote</span><span style="color:#A5D6FF"> "Social interaction advantage is a roll modifier, not an action mask."</span><span style="color:#E6EDF3"> .</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FFA657">&#x3C;https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/deafened></span></span>
+<span class="line"><span style="color:#FF7B72">  a</span><span style="color:#FF7B72"> dyn:</span><span style="color:#79C0FF">ConditionDefinition</span><span style="color:#E6EDF3">, </span><span style="color:#FF7B72">skos:</span><span style="color:#79C0FF">Concept</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dcterms:</span><span style="color:#79C0FF">isPartOf</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions></span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  rdfs:</span><span style="color:#79C0FF">label</span><span style="color:#A5D6FF"> "Deafened"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">conditionKey</span><span style="color:#A5D6FF"> "deafened"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">sourceSection</span><span style="color:#A5D6FF"> "Rules Glossary: Deafened [Condition]"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">hasConditionEffect</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/deafened/effect/cant-hear></span><span style="color:#E6EDF3"> .</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FFA657">&#x3C;https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/deafened/effect/cant-hear></span></span>
+<span class="line"><span style="color:#FF7B72">  a</span><span style="color:#FF7B72"> dyn:</span><span style="color:#79C0FF">ConditionEffect</span><span style="color:#E6EDF3">, </span><span style="color:#FF7B72">dyn:</span><span style="color:#79C0FF">AffordanceMaskDefinition</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dcterms:</span><span style="color:#79C0FF">isPartOf</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/deafened></span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  rdfs:</span><span style="color:#79C0FF">label</span><span style="color:#A5D6FF"> "Can't Hear"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  rdf:</span><span style="color:#79C0FF">value</span><span style="color:#A5D6FF"> "You can't hear and automatically fail any ability check that requires hearing."</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">effectKey</span><span style="color:#A5D6FF"> "cant-hear"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">effectKind</span><span style="color:#A5D6FF"> "sensory-mask"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">mechanicalStatus</span><span style="color:#A5D6FF"> "codified-mask"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">sourceSection</span><span style="color:#A5D6FF"> "Rules Glossary: Deafened [Condition]"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">adjudicationNote</span><span style="color:#A5D6FF"> "The ability-check auto-failure depends on whether a check requires hearing; the mask records the sensory affordance only."</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">masksActionType</span><span style="color:#FF7B72"> dyn:</span><span style="color:#79C0FF">UseHearing</span><span style="color:#E6EDF3"> .</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FFA657">&#x3C;https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/exhaustion></span></span>
+<span class="line"><span style="color:#FF7B72">  a</span><span style="color:#FF7B72"> dyn:</span><span style="color:#79C0FF">ConditionDefinition</span><span style="color:#E6EDF3">, </span><span style="color:#FF7B72">skos:</span><span style="color:#79C0FF">Concept</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dcterms:</span><span style="color:#79C0FF">isPartOf</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions></span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  rdfs:</span><span style="color:#79C0FF">label</span><span style="color:#A5D6FF"> "Exhaustion"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">conditionKey</span><span style="color:#A5D6FF"> "exhaustion"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">sourceSection</span><span style="color:#A5D6FF"> "Rules Glossary: Exhaustion [Condition]"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">hasConditionEffect</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/exhaustion/effect/exhaustion-levels></span><span style="color:#E6EDF3">,</span></span>
+<span class="line"><span style="color:#FFA657">    &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/exhaustion/effect/d20-tests-affected></span><span style="color:#E6EDF3">,</span></span>
+<span class="line"><span style="color:#FFA657">    &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/exhaustion/effect/speed-reduced></span><span style="color:#E6EDF3">,</span></span>
+<span class="line"><span style="color:#FFA657">    &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/exhaustion/effect/removing-exhaustion-levels></span><span style="color:#E6EDF3"> .</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FFA657">&#x3C;https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/exhaustion/effect/exhaustion-levels></span></span>
+<span class="line"><span style="color:#FF7B72">  a</span><span style="color:#FF7B72"> dyn:</span><span style="color:#79C0FF">ConditionEffect</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dcterms:</span><span style="color:#79C0FF">isPartOf</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/exhaustion></span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  rdfs:</span><span style="color:#79C0FF">label</span><span style="color:#A5D6FF"> "Exhaustion Levels"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  rdf:</span><span style="color:#79C0FF">value</span><span style="color:#A5D6FF"> "This condition is cumulative. Each time you receive it, you gain 1 Exhaustion level. You die if your Exhaustion level is 6."</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">effectKey</span><span style="color:#A5D6FF"> "exhaustion-levels"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">effectKind</span><span style="color:#A5D6FF"> "condition-counter"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">mechanicalStatus</span><span style="color:#A5D6FF"> "structured-not-mask"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">sourceSection</span><span style="color:#A5D6FF"> "Rules Glossary: Exhaustion [Condition]"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">adjudicationNote</span><span style="color:#A5D6FF"> "Exhaustion levels are cumulative condition state, not an affordance mask."</span><span style="color:#E6EDF3"> .</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FFA657">&#x3C;https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/exhaustion/effect/d20-tests-affected></span></span>
+<span class="line"><span style="color:#FF7B72">  a</span><span style="color:#FF7B72"> dyn:</span><span style="color:#79C0FF">ConditionEffect</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dcterms:</span><span style="color:#79C0FF">isPartOf</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/exhaustion></span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  rdfs:</span><span style="color:#79C0FF">label</span><span style="color:#A5D6FF"> "D20 Tests Affected"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  rdf:</span><span style="color:#79C0FF">value</span><span style="color:#A5D6FF"> "When you make a D20 Test, the roll is reduced by 2 times your Exhaustion level."</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">effectKey</span><span style="color:#A5D6FF"> "d20-tests-affected"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">effectKind</span><span style="color:#A5D6FF"> "d20-modifier"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">mechanicalStatus</span><span style="color:#A5D6FF"> "structured-not-mask"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">sourceSection</span><span style="color:#A5D6FF"> "Rules Glossary: Exhaustion [Condition]"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">adjudicationNote</span><span style="color:#A5D6FF"> "The roll reduction is mechanical but is not an action mask."</span><span style="color:#E6EDF3"> .</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FFA657">&#x3C;https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/exhaustion/effect/speed-reduced></span></span>
+<span class="line"><span style="color:#FF7B72">  a</span><span style="color:#FF7B72"> dyn:</span><span style="color:#79C0FF">ConditionEffect</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dcterms:</span><span style="color:#79C0FF">isPartOf</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/exhaustion></span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  rdfs:</span><span style="color:#79C0FF">label</span><span style="color:#A5D6FF"> "Speed Reduced"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  rdf:</span><span style="color:#79C0FF">value</span><span style="color:#A5D6FF"> "Your Speed is reduced by a number of feet equal to 5 times your Exhaustion level."</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">effectKey</span><span style="color:#A5D6FF"> "speed-reduced"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">effectKind</span><span style="color:#A5D6FF"> "movement-modifier"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">mechanicalStatus</span><span style="color:#A5D6FF"> "structured-not-mask"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">sourceSection</span><span style="color:#A5D6FF"> "Rules Glossary: Exhaustion [Condition]"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">adjudicationNote</span><span style="color:#A5D6FF"> "Speed reduction may limit movement distance without masking Move entirely."</span><span style="color:#E6EDF3"> .</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FFA657">&#x3C;https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/exhaustion/effect/removing-exhaustion-levels></span></span>
+<span class="line"><span style="color:#FF7B72">  a</span><span style="color:#FF7B72"> dyn:</span><span style="color:#79C0FF">ConditionEffect</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dcterms:</span><span style="color:#79C0FF">isPartOf</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/exhaustion></span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  rdfs:</span><span style="color:#79C0FF">label</span><span style="color:#A5D6FF"> "Removing Exhaustion Levels"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  rdf:</span><span style="color:#79C0FF">value</span><span style="color:#A5D6FF"> "Finishing a Long Rest removes 1 of your Exhaustion levels. When your Exhaustion level reaches 0, the condition ends."</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">effectKey</span><span style="color:#A5D6FF"> "removing-exhaustion-levels"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">effectKind</span><span style="color:#A5D6FF"> "condition-recovery"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">mechanicalStatus</span><span style="color:#A5D6FF"> "structured-not-mask"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">sourceSection</span><span style="color:#A5D6FF"> "Rules Glossary: Exhaustion [Condition]"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">adjudicationNote</span><span style="color:#A5D6FF"> "Recovery timing is condition lifecycle data, not an action mask."</span><span style="color:#E6EDF3"> .</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FFA657">&#x3C;https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/frightened></span></span>
+<span class="line"><span style="color:#FF7B72">  a</span><span style="color:#FF7B72"> dyn:</span><span style="color:#79C0FF">ConditionDefinition</span><span style="color:#E6EDF3">, </span><span style="color:#FF7B72">skos:</span><span style="color:#79C0FF">Concept</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dcterms:</span><span style="color:#79C0FF">isPartOf</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions></span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  rdfs:</span><span style="color:#79C0FF">label</span><span style="color:#A5D6FF"> "Frightened"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">conditionKey</span><span style="color:#A5D6FF"> "frightened"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">sourceSection</span><span style="color:#A5D6FF"> "Rules Glossary: Frightened [Condition]"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">hasConditionEffect</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/frightened/effect/ability-checks-and-attacks-affected></span><span style="color:#E6EDF3">,</span></span>
+<span class="line"><span style="color:#FFA657">    &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/frightened/effect/cant-approach></span><span style="color:#E6EDF3"> .</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FFA657">&#x3C;https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/frightened/effect/ability-checks-and-attacks-affected></span></span>
+<span class="line"><span style="color:#FF7B72">  a</span><span style="color:#FF7B72"> dyn:</span><span style="color:#79C0FF">ConditionEffect</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dcterms:</span><span style="color:#79C0FF">isPartOf</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/frightened></span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  rdfs:</span><span style="color:#79C0FF">label</span><span style="color:#A5D6FF"> "Ability Checks and Attacks Affected"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  rdf:</span><span style="color:#79C0FF">value</span><span style="color:#A5D6FF"> "You have Disadvantage on ability checks and attack rolls while the source of fear is within line of sight."</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">effectKey</span><span style="color:#A5D6FF"> "ability-checks-and-attacks-affected"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">effectKind</span><span style="color:#A5D6FF"> "d20-modifier"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">mechanicalStatus</span><span style="color:#A5D6FF"> "structured-not-mask"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">sourceSection</span><span style="color:#A5D6FF"> "Rules Glossary: Frightened [Condition]"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">adjudicationNote</span><span style="color:#A5D6FF"> "The line-of-sight roll modifier is not an action mask."</span><span style="color:#E6EDF3"> .</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FFA657">&#x3C;https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/frightened/effect/cant-approach></span></span>
+<span class="line"><span style="color:#FF7B72">  a</span><span style="color:#FF7B72"> dyn:</span><span style="color:#79C0FF">ConditionEffect</span><span style="color:#E6EDF3">, </span><span style="color:#FF7B72">dyn:</span><span style="color:#79C0FF">AffordanceMaskDefinition</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dcterms:</span><span style="color:#79C0FF">isPartOf</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/frightened></span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  rdfs:</span><span style="color:#79C0FF">label</span><span style="color:#A5D6FF"> "Can't Approach"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  rdf:</span><span style="color:#79C0FF">value</span><span style="color:#A5D6FF"> "You can't willingly move closer to the source of fear."</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">effectKey</span><span style="color:#A5D6FF"> "cant-approach"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">effectKind</span><span style="color:#A5D6FF"> "conditional-affordance-mask"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">mechanicalStatus</span><span style="color:#A5D6FF"> "adjudication-scoped-mask"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">sourceSection</span><span style="color:#A5D6FF"> "Rules Glossary: Frightened [Condition]"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">adjudicationNote</span><span style="color:#A5D6FF"> "The mask applies only to willing movement closer to the fear source."</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">masksActionType</span><span style="color:#FF7B72"> dyn:</span><span style="color:#79C0FF">MoveCloserToConditionSource</span><span style="color:#E6EDF3"> .</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FFA657">&#x3C;https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/grappled></span></span>
+<span class="line"><span style="color:#FF7B72">  a</span><span style="color:#FF7B72"> dyn:</span><span style="color:#79C0FF">ConditionDefinition</span><span style="color:#E6EDF3">, </span><span style="color:#FF7B72">skos:</span><span style="color:#79C0FF">Concept</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dcterms:</span><span style="color:#79C0FF">isPartOf</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions></span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  rdfs:</span><span style="color:#79C0FF">label</span><span style="color:#A5D6FF"> "Grappled"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">conditionKey</span><span style="color:#A5D6FF"> "grappled"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">sourceSection</span><span style="color:#A5D6FF"> "Rules Glossary: Grappled [Condition]"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">hasConditionEffect</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/grappled/effect/speed-0></span><span style="color:#E6EDF3">,</span></span>
+<span class="line"><span style="color:#FFA657">    &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/grappled/effect/attacks-affected></span><span style="color:#E6EDF3">,</span></span>
+<span class="line"><span style="color:#FFA657">    &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/grappled/effect/movable></span><span style="color:#E6EDF3"> .</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FFA657">&#x3C;https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/grappled/effect/speed-0></span></span>
+<span class="line"><span style="color:#FF7B72">  a</span><span style="color:#FF7B72"> dyn:</span><span style="color:#79C0FF">ConditionEffect</span><span style="color:#E6EDF3">, </span><span style="color:#FF7B72">dyn:</span><span style="color:#79C0FF">AffordanceMaskDefinition</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dcterms:</span><span style="color:#79C0FF">isPartOf</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/grappled></span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  rdfs:</span><span style="color:#79C0FF">label</span><span style="color:#A5D6FF"> "Speed 0"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  rdf:</span><span style="color:#79C0FF">value</span><span style="color:#A5D6FF"> "Your Speed is 0 and can't increase."</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">effectKey</span><span style="color:#A5D6FF"> "speed-0"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">effectKind</span><span style="color:#A5D6FF"> "affordance-mask"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">mechanicalStatus</span><span style="color:#A5D6FF"> "codified-mask"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">sourceSection</span><span style="color:#A5D6FF"> "Rules Glossary: Grappled [Condition]"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">masksActionType</span><span style="color:#FF7B72"> dyn:</span><span style="color:#79C0FF">Move</span><span style="color:#E6EDF3"> .</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FFA657">&#x3C;https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/grappled/effect/attacks-affected></span></span>
+<span class="line"><span style="color:#FF7B72">  a</span><span style="color:#FF7B72"> dyn:</span><span style="color:#79C0FF">ConditionEffect</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dcterms:</span><span style="color:#79C0FF">isPartOf</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/grappled></span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  rdfs:</span><span style="color:#79C0FF">label</span><span style="color:#A5D6FF"> "Attacks Affected"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  rdf:</span><span style="color:#79C0FF">value</span><span style="color:#A5D6FF"> "You have Disadvantage on attack rolls against any target other than the grappler."</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">effectKey</span><span style="color:#A5D6FF"> "attacks-affected"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">effectKind</span><span style="color:#A5D6FF"> "d20-modifier"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">mechanicalStatus</span><span style="color:#A5D6FF"> "structured-not-mask"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">sourceSection</span><span style="color:#A5D6FF"> "Rules Glossary: Grappled [Condition]"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">adjudicationNote</span><span style="color:#A5D6FF"> "The attack-roll disadvantage is a roll modifier, not an action mask."</span><span style="color:#E6EDF3"> .</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FFA657">&#x3C;https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/grappled/effect/movable></span></span>
+<span class="line"><span style="color:#FF7B72">  a</span><span style="color:#FF7B72"> dyn:</span><span style="color:#79C0FF">ConditionEffect</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dcterms:</span><span style="color:#79C0FF">isPartOf</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/grappled></span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  rdfs:</span><span style="color:#79C0FF">label</span><span style="color:#A5D6FF"> "Movable"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  rdf:</span><span style="color:#79C0FF">value</span><span style="color:#A5D6FF"> "The grappler can drag or carry you when it moves, but every foot of movement costs it 1 extra foot unless you are Tiny or two or more sizes smaller than it."</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">effectKey</span><span style="color:#A5D6FF"> "movable"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">effectKind</span><span style="color:#A5D6FF"> "movement-adjudication"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">mechanicalStatus</span><span style="color:#A5D6FF"> "adjudication-required"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">sourceSection</span><span style="color:#A5D6FF"> "Rules Glossary: Grappled [Condition]"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">adjudicationNote</span><span style="color:#A5D6FF"> "Dragging or carrying the grappled target depends on grappler movement and relative size."</span><span style="color:#E6EDF3"> .</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FFA657">&#x3C;https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/incapacitated></span></span>
+<span class="line"><span style="color:#FF7B72">  a</span><span style="color:#FF7B72"> dyn:</span><span style="color:#79C0FF">ConditionDefinition</span><span style="color:#E6EDF3">, </span><span style="color:#FF7B72">skos:</span><span style="color:#79C0FF">Concept</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dcterms:</span><span style="color:#79C0FF">isPartOf</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions></span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  rdfs:</span><span style="color:#79C0FF">label</span><span style="color:#A5D6FF"> "Incapacitated"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">conditionKey</span><span style="color:#A5D6FF"> "incapacitated"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">sourceSection</span><span style="color:#A5D6FF"> "Rules Glossary: Incapacitated [Condition]"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">hasConditionEffect</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/incapacitated/effect/inactive></span><span style="color:#E6EDF3">,</span></span>
+<span class="line"><span style="color:#FFA657">    &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/incapacitated/effect/no-concentration></span><span style="color:#E6EDF3">,</span></span>
+<span class="line"><span style="color:#FFA657">    &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/incapacitated/effect/speechless></span><span style="color:#E6EDF3">,</span></span>
+<span class="line"><span style="color:#FFA657">    &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/incapacitated/effect/surprised></span><span style="color:#E6EDF3"> .</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FFA657">&#x3C;https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/incapacitated/effect/inactive></span></span>
+<span class="line"><span style="color:#FF7B72">  a</span><span style="color:#FF7B72"> dyn:</span><span style="color:#79C0FF">ConditionEffect</span><span style="color:#E6EDF3">, </span><span style="color:#FF7B72">dyn:</span><span style="color:#79C0FF">AffordanceMaskDefinition</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dcterms:</span><span style="color:#79C0FF">isPartOf</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/incapacitated></span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  rdfs:</span><span style="color:#79C0FF">label</span><span style="color:#A5D6FF"> "Inactive"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  rdf:</span><span style="color:#79C0FF">value</span><span style="color:#A5D6FF"> "You can't take any action, Bonus Action, or Reaction."</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">effectKey</span><span style="color:#A5D6FF"> "inactive"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">effectKind</span><span style="color:#A5D6FF"> "affordance-mask"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">mechanicalStatus</span><span style="color:#A5D6FF"> "codified-mask"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">sourceSection</span><span style="color:#A5D6FF"> "Rules Glossary: Incapacitated [Condition]"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">masksActionType</span><span style="color:#FF7B72"> dyn:</span><span style="color:#79C0FF">TakeAction</span><span style="color:#E6EDF3">, </span><span style="color:#FF7B72">dyn:</span><span style="color:#79C0FF">TakeBonusAction</span><span style="color:#E6EDF3">, </span><span style="color:#FF7B72">dyn:</span><span style="color:#79C0FF">TakeReaction</span><span style="color:#E6EDF3"> .</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FFA657">&#x3C;https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/incapacitated/effect/no-concentration></span></span>
+<span class="line"><span style="color:#FF7B72">  a</span><span style="color:#FF7B72"> dyn:</span><span style="color:#79C0FF">ConditionEffect</span><span style="color:#E6EDF3">, </span><span style="color:#FF7B72">dyn:</span><span style="color:#79C0FF">AffordanceMaskDefinition</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dcterms:</span><span style="color:#79C0FF">isPartOf</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/incapacitated></span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  rdfs:</span><span style="color:#79C0FF">label</span><span style="color:#A5D6FF"> "No Concentration"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  rdf:</span><span style="color:#79C0FF">value</span><span style="color:#A5D6FF"> "Your Concentration is broken."</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">effectKey</span><span style="color:#A5D6FF"> "no-concentration"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">effectKind</span><span style="color:#A5D6FF"> "affordance-mask"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">mechanicalStatus</span><span style="color:#A5D6FF"> "codified-mask"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">sourceSection</span><span style="color:#A5D6FF"> "Rules Glossary: Incapacitated [Condition]"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">masksActionType</span><span style="color:#FF7B72"> dyn:</span><span style="color:#79C0FF">MaintainConcentration</span><span style="color:#E6EDF3"> .</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FFA657">&#x3C;https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/incapacitated/effect/speechless></span></span>
+<span class="line"><span style="color:#FF7B72">  a</span><span style="color:#FF7B72"> dyn:</span><span style="color:#79C0FF">ConditionEffect</span><span style="color:#E6EDF3">, </span><span style="color:#FF7B72">dyn:</span><span style="color:#79C0FF">AffordanceMaskDefinition</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dcterms:</span><span style="color:#79C0FF">isPartOf</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/incapacitated></span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  rdfs:</span><span style="color:#79C0FF">label</span><span style="color:#A5D6FF"> "Speechless"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  rdf:</span><span style="color:#79C0FF">value</span><span style="color:#A5D6FF"> "You can't speak."</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">effectKey</span><span style="color:#A5D6FF"> "speechless"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">effectKind</span><span style="color:#A5D6FF"> "affordance-mask"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">mechanicalStatus</span><span style="color:#A5D6FF"> "codified-mask"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">sourceSection</span><span style="color:#A5D6FF"> "Rules Glossary: Incapacitated [Condition]"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">masksActionType</span><span style="color:#FF7B72"> dyn:</span><span style="color:#79C0FF">Speak</span><span style="color:#E6EDF3"> .</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FFA657">&#x3C;https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/incapacitated/effect/surprised></span></span>
+<span class="line"><span style="color:#FF7B72">  a</span><span style="color:#FF7B72"> dyn:</span><span style="color:#79C0FF">ConditionEffect</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dcterms:</span><span style="color:#79C0FF">isPartOf</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/incapacitated></span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  rdfs:</span><span style="color:#79C0FF">label</span><span style="color:#A5D6FF"> "Surprised"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  rdf:</span><span style="color:#79C0FF">value</span><span style="color:#A5D6FF"> "If you're Incapacitated when you roll Initiative, you have Disadvantage on the roll."</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">effectKey</span><span style="color:#A5D6FF"> "surprised"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">effectKind</span><span style="color:#A5D6FF"> "d20-modifier"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">mechanicalStatus</span><span style="color:#A5D6FF"> "structured-not-mask"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">sourceSection</span><span style="color:#A5D6FF"> "Rules Glossary: Incapacitated [Condition]"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">adjudicationNote</span><span style="color:#A5D6FF"> "Initiative disadvantage is a roll modifier, not an action mask."</span><span style="color:#E6EDF3"> .</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FFA657">&#x3C;https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/invisible></span></span>
+<span class="line"><span style="color:#FF7B72">  a</span><span style="color:#FF7B72"> dyn:</span><span style="color:#79C0FF">ConditionDefinition</span><span style="color:#E6EDF3">, </span><span style="color:#FF7B72">skos:</span><span style="color:#79C0FF">Concept</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dcterms:</span><span style="color:#79C0FF">isPartOf</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions></span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  rdfs:</span><span style="color:#79C0FF">label</span><span style="color:#A5D6FF"> "Invisible"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">conditionKey</span><span style="color:#A5D6FF"> "invisible"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">sourceSection</span><span style="color:#A5D6FF"> "Rules Glossary: Invisible [Condition]"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">hasConditionEffect</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/invisible/effect/surprise></span><span style="color:#E6EDF3">,</span></span>
+<span class="line"><span style="color:#FFA657">    &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/invisible/effect/concealed></span><span style="color:#E6EDF3">,</span></span>
+<span class="line"><span style="color:#FFA657">    &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/invisible/effect/attacks-affected></span><span style="color:#E6EDF3"> .</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FFA657">&#x3C;https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/invisible/effect/surprise></span></span>
+<span class="line"><span style="color:#FF7B72">  a</span><span style="color:#FF7B72"> dyn:</span><span style="color:#79C0FF">ConditionEffect</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dcterms:</span><span style="color:#79C0FF">isPartOf</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/invisible></span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  rdfs:</span><span style="color:#79C0FF">label</span><span style="color:#A5D6FF"> "Surprise"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  rdf:</span><span style="color:#79C0FF">value</span><span style="color:#A5D6FF"> "If you're Invisible when you roll Initiative, you have Advantage on the roll."</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">effectKey</span><span style="color:#A5D6FF"> "surprise"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">effectKind</span><span style="color:#A5D6FF"> "d20-modifier"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">mechanicalStatus</span><span style="color:#A5D6FF"> "structured-not-mask"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">sourceSection</span><span style="color:#A5D6FF"> "Rules Glossary: Invisible [Condition]"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">adjudicationNote</span><span style="color:#A5D6FF"> "Initiative advantage is a roll modifier, not an action mask."</span><span style="color:#E6EDF3"> .</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FFA657">&#x3C;https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/invisible/effect/concealed></span></span>
+<span class="line"><span style="color:#FF7B72">  a</span><span style="color:#FF7B72"> dyn:</span><span style="color:#79C0FF">ConditionEffect</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dcterms:</span><span style="color:#79C0FF">isPartOf</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/invisible></span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  rdfs:</span><span style="color:#79C0FF">label</span><span style="color:#A5D6FF"> "Concealed"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  rdf:</span><span style="color:#79C0FF">value</span><span style="color:#A5D6FF"> "You aren't affected by any effect that requires its target to be seen unless the effect's creator can somehow see you. Any equipment you are wearing or carrying is also concealed."</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">effectKey</span><span style="color:#A5D6FF"> "concealed"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">effectKind</span><span style="color:#A5D6FF"> "targeting-adjudication"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">mechanicalStatus</span><span style="color:#A5D6FF"> "adjudication-required"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">sourceSection</span><span style="color:#A5D6FF"> "Rules Glossary: Invisible [Condition]"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">adjudicationNote</span><span style="color:#A5D6FF"> "Sight-required targeting is source/observer dependent; this package records the prose rather than inventing a targeting engine."</span><span style="color:#E6EDF3"> .</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FFA657">&#x3C;https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/invisible/effect/attacks-affected></span></span>
+<span class="line"><span style="color:#FF7B72">  a</span><span style="color:#FF7B72"> dyn:</span><span style="color:#79C0FF">ConditionEffect</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dcterms:</span><span style="color:#79C0FF">isPartOf</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/invisible></span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  rdfs:</span><span style="color:#79C0FF">label</span><span style="color:#A5D6FF"> "Attacks Affected"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  rdf:</span><span style="color:#79C0FF">value</span><span style="color:#A5D6FF"> "Attack rolls against you have Disadvantage, and your attack rolls have Advantage. If a creature can somehow see you, you don't gain this benefit against that creature."</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">effectKey</span><span style="color:#A5D6FF"> "attacks-affected"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">effectKind</span><span style="color:#A5D6FF"> "d20-modifier"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">mechanicalStatus</span><span style="color:#A5D6FF"> "structured-not-mask"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">sourceSection</span><span style="color:#A5D6FF"> "Rules Glossary: Invisible [Condition]"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">adjudicationNote</span><span style="color:#A5D6FF"> "Attack-roll advantage and disadvantage are roll modifiers, not action masks."</span><span style="color:#E6EDF3"> .</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FFA657">&#x3C;https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/paralyzed></span></span>
+<span class="line"><span style="color:#FF7B72">  a</span><span style="color:#FF7B72"> dyn:</span><span style="color:#79C0FF">ConditionDefinition</span><span style="color:#E6EDF3">, </span><span style="color:#FF7B72">skos:</span><span style="color:#79C0FF">Concept</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dcterms:</span><span style="color:#79C0FF">isPartOf</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions></span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  rdfs:</span><span style="color:#79C0FF">label</span><span style="color:#A5D6FF"> "Paralyzed"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">conditionKey</span><span style="color:#A5D6FF"> "paralyzed"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">sourceSection</span><span style="color:#A5D6FF"> "Rules Glossary: Paralyzed [Condition]"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">hasConditionEffect</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/paralyzed/effect/incapacitated></span><span style="color:#E6EDF3">,</span></span>
+<span class="line"><span style="color:#FFA657">    &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/paralyzed/effect/speed-0></span><span style="color:#E6EDF3">,</span></span>
+<span class="line"><span style="color:#FFA657">    &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/paralyzed/effect/saving-throws-affected></span><span style="color:#E6EDF3">,</span></span>
+<span class="line"><span style="color:#FFA657">    &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/paralyzed/effect/attacks-affected></span><span style="color:#E6EDF3">,</span></span>
+<span class="line"><span style="color:#FFA657">    &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/paralyzed/effect/automatic-critical-hits></span><span style="color:#E6EDF3"> .</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FFA657">&#x3C;https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/paralyzed/effect/incapacitated></span></span>
+<span class="line"><span style="color:#FF7B72">  a</span><span style="color:#FF7B72"> dyn:</span><span style="color:#79C0FF">ConditionEffect</span><span style="color:#E6EDF3">, </span><span style="color:#FF7B72">dyn:</span><span style="color:#79C0FF">AffordanceMaskDefinition</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dcterms:</span><span style="color:#79C0FF">isPartOf</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/paralyzed></span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  rdfs:</span><span style="color:#79C0FF">label</span><span style="color:#A5D6FF"> "Incapacitated"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  rdf:</span><span style="color:#79C0FF">value</span><span style="color:#A5D6FF"> "You have the Incapacitated condition."</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">effectKey</span><span style="color:#A5D6FF"> "incapacitated"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">effectKind</span><span style="color:#A5D6FF"> "condition-reference-mask"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">mechanicalStatus</span><span style="color:#A5D6FF"> "codified-mask"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">sourceSection</span><span style="color:#A5D6FF"> "Rules Glossary: Paralyzed [Condition]"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">adjudicationNote</span><span style="color:#A5D6FF"> "The action masks derive from the embedded Incapacitated condition."</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">masksActionType</span><span style="color:#FF7B72"> dyn:</span><span style="color:#79C0FF">TakeAction</span><span style="color:#E6EDF3">, </span><span style="color:#FF7B72">dyn:</span><span style="color:#79C0FF">TakeBonusAction</span><span style="color:#E6EDF3">, </span><span style="color:#FF7B72">dyn:</span><span style="color:#79C0FF">TakeReaction</span><span style="color:#E6EDF3">, </span><span style="color:#FF7B72">dyn:</span><span style="color:#79C0FF">MaintainConcentration</span><span style="color:#E6EDF3">, </span><span style="color:#FF7B72">dyn:</span><span style="color:#79C0FF">Speak</span><span style="color:#E6EDF3"> .</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FFA657">&#x3C;https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/paralyzed/effect/speed-0></span></span>
+<span class="line"><span style="color:#FF7B72">  a</span><span style="color:#FF7B72"> dyn:</span><span style="color:#79C0FF">ConditionEffect</span><span style="color:#E6EDF3">, </span><span style="color:#FF7B72">dyn:</span><span style="color:#79C0FF">AffordanceMaskDefinition</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dcterms:</span><span style="color:#79C0FF">isPartOf</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/paralyzed></span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  rdfs:</span><span style="color:#79C0FF">label</span><span style="color:#A5D6FF"> "Speed 0"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  rdf:</span><span style="color:#79C0FF">value</span><span style="color:#A5D6FF"> "Your Speed is 0 and can't increase."</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">effectKey</span><span style="color:#A5D6FF"> "speed-0"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">effectKind</span><span style="color:#A5D6FF"> "affordance-mask"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">mechanicalStatus</span><span style="color:#A5D6FF"> "codified-mask"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">sourceSection</span><span style="color:#A5D6FF"> "Rules Glossary: Paralyzed [Condition]"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">masksActionType</span><span style="color:#FF7B72"> dyn:</span><span style="color:#79C0FF">Move</span><span style="color:#E6EDF3"> .</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FFA657">&#x3C;https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/paralyzed/effect/saving-throws-affected></span></span>
+<span class="line"><span style="color:#FF7B72">  a</span><span style="color:#FF7B72"> dyn:</span><span style="color:#79C0FF">ConditionEffect</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dcterms:</span><span style="color:#79C0FF">isPartOf</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/paralyzed></span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  rdfs:</span><span style="color:#79C0FF">label</span><span style="color:#A5D6FF"> "Saving Throws Affected"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  rdf:</span><span style="color:#79C0FF">value</span><span style="color:#A5D6FF"> "You automatically fail Strength and Dexterity saving throws."</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">effectKey</span><span style="color:#A5D6FF"> "saving-throws-affected"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">effectKind</span><span style="color:#A5D6FF"> "automatic-failure"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">mechanicalStatus</span><span style="color:#A5D6FF"> "structured-not-mask"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">sourceSection</span><span style="color:#A5D6FF"> "Rules Glossary: Paralyzed [Condition]"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">adjudicationNote</span><span style="color:#A5D6FF"> "Automatic save failure is mechanical but is not an action mask."</span><span style="color:#E6EDF3"> .</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FFA657">&#x3C;https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/paralyzed/effect/attacks-affected></span></span>
+<span class="line"><span style="color:#FF7B72">  a</span><span style="color:#FF7B72"> dyn:</span><span style="color:#79C0FF">ConditionEffect</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dcterms:</span><span style="color:#79C0FF">isPartOf</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/paralyzed></span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  rdfs:</span><span style="color:#79C0FF">label</span><span style="color:#A5D6FF"> "Attacks Affected"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  rdf:</span><span style="color:#79C0FF">value</span><span style="color:#A5D6FF"> "Attack rolls against you have Advantage."</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">effectKey</span><span style="color:#A5D6FF"> "attacks-affected"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">effectKind</span><span style="color:#A5D6FF"> "d20-modifier"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">mechanicalStatus</span><span style="color:#A5D6FF"> "structured-not-mask"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">sourceSection</span><span style="color:#A5D6FF"> "Rules Glossary: Paralyzed [Condition]"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">adjudicationNote</span><span style="color:#A5D6FF"> "Attack-roll advantage is a roll modifier, not an action mask."</span><span style="color:#E6EDF3"> .</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FFA657">&#x3C;https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/paralyzed/effect/automatic-critical-hits></span></span>
+<span class="line"><span style="color:#FF7B72">  a</span><span style="color:#FF7B72"> dyn:</span><span style="color:#79C0FF">ConditionEffect</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dcterms:</span><span style="color:#79C0FF">isPartOf</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/paralyzed></span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  rdfs:</span><span style="color:#79C0FF">label</span><span style="color:#A5D6FF"> "Automatic Critical Hits"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  rdf:</span><span style="color:#79C0FF">value</span><span style="color:#A5D6FF"> "Any attack roll that hits you is a Critical Hit if the attacker is within 5 feet of you."</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">effectKey</span><span style="color:#A5D6FF"> "automatic-critical-hits"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">effectKind</span><span style="color:#A5D6FF"> "hit-resolution"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">mechanicalStatus</span><span style="color:#A5D6FF"> "structured-not-mask"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">sourceSection</span><span style="color:#A5D6FF"> "Rules Glossary: Paralyzed [Condition]"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">adjudicationNote</span><span style="color:#A5D6FF"> "Critical-hit conversion is attack resolution data, not an action mask."</span><span style="color:#E6EDF3"> .</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FFA657">&#x3C;https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/petrified></span></span>
+<span class="line"><span style="color:#FF7B72">  a</span><span style="color:#FF7B72"> dyn:</span><span style="color:#79C0FF">ConditionDefinition</span><span style="color:#E6EDF3">, </span><span style="color:#FF7B72">skos:</span><span style="color:#79C0FF">Concept</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dcterms:</span><span style="color:#79C0FF">isPartOf</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions></span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  rdfs:</span><span style="color:#79C0FF">label</span><span style="color:#A5D6FF"> "Petrified"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">conditionKey</span><span style="color:#A5D6FF"> "petrified"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">sourceSection</span><span style="color:#A5D6FF"> "Rules Glossary: Petrified [Condition]"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">hasConditionEffect</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/petrified/effect/turned-to-inanimate-substance></span><span style="color:#E6EDF3">,</span></span>
+<span class="line"><span style="color:#FFA657">    &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/petrified/effect/incapacitated></span><span style="color:#E6EDF3">,</span></span>
+<span class="line"><span style="color:#FFA657">    &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/petrified/effect/speed-0></span><span style="color:#E6EDF3">,</span></span>
+<span class="line"><span style="color:#FFA657">    &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/petrified/effect/attacks-affected></span><span style="color:#E6EDF3">,</span></span>
+<span class="line"><span style="color:#FFA657">    &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/petrified/effect/saving-throws-affected></span><span style="color:#E6EDF3">,</span></span>
+<span class="line"><span style="color:#FFA657">    &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/petrified/effect/resist-damage></span><span style="color:#E6EDF3">,</span></span>
+<span class="line"><span style="color:#FFA657">    &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/petrified/effect/poison-immunity></span><span style="color:#E6EDF3"> .</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FFA657">&#x3C;https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/petrified/effect/turned-to-inanimate-substance></span></span>
+<span class="line"><span style="color:#FF7B72">  a</span><span style="color:#FF7B72"> dyn:</span><span style="color:#79C0FF">ConditionEffect</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dcterms:</span><span style="color:#79C0FF">isPartOf</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/petrified></span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  rdfs:</span><span style="color:#79C0FF">label</span><span style="color:#A5D6FF"> "Turned to Inanimate Substance"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  rdf:</span><span style="color:#79C0FF">value</span><span style="color:#A5D6FF"> "You are transformed, along with any nonmagical objects you are wearing and carrying, into a solid inanimate substance (usually stone). Your weight increases by a factor of ten, and you cease aging."</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">effectKey</span><span style="color:#A5D6FF"> "turned-to-inanimate-substance"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">effectKind</span><span style="color:#A5D6FF"> "state-transformation"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">mechanicalStatus</span><span style="color:#A5D6FF"> "adjudication-required"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">sourceSection</span><span style="color:#A5D6FF"> "Rules Glossary: Petrified [Condition]"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">adjudicationNote</span><span style="color:#A5D6FF"> "The transformation affects physical state and carried nonmagical objects; no action mask is invented here."</span><span style="color:#E6EDF3"> .</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FFA657">&#x3C;https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/petrified/effect/incapacitated></span></span>
+<span class="line"><span style="color:#FF7B72">  a</span><span style="color:#FF7B72"> dyn:</span><span style="color:#79C0FF">ConditionEffect</span><span style="color:#E6EDF3">, </span><span style="color:#FF7B72">dyn:</span><span style="color:#79C0FF">AffordanceMaskDefinition</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dcterms:</span><span style="color:#79C0FF">isPartOf</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/petrified></span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  rdfs:</span><span style="color:#79C0FF">label</span><span style="color:#A5D6FF"> "Incapacitated"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  rdf:</span><span style="color:#79C0FF">value</span><span style="color:#A5D6FF"> "You have the Incapacitated condition."</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">effectKey</span><span style="color:#A5D6FF"> "incapacitated"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">effectKind</span><span style="color:#A5D6FF"> "condition-reference-mask"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">mechanicalStatus</span><span style="color:#A5D6FF"> "codified-mask"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">sourceSection</span><span style="color:#A5D6FF"> "Rules Glossary: Petrified [Condition]"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">adjudicationNote</span><span style="color:#A5D6FF"> "The action masks derive from the embedded Incapacitated condition."</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">masksActionType</span><span style="color:#FF7B72"> dyn:</span><span style="color:#79C0FF">TakeAction</span><span style="color:#E6EDF3">, </span><span style="color:#FF7B72">dyn:</span><span style="color:#79C0FF">TakeBonusAction</span><span style="color:#E6EDF3">, </span><span style="color:#FF7B72">dyn:</span><span style="color:#79C0FF">TakeReaction</span><span style="color:#E6EDF3">, </span><span style="color:#FF7B72">dyn:</span><span style="color:#79C0FF">MaintainConcentration</span><span style="color:#E6EDF3">, </span><span style="color:#FF7B72">dyn:</span><span style="color:#79C0FF">Speak</span><span style="color:#E6EDF3"> .</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FFA657">&#x3C;https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/petrified/effect/speed-0></span></span>
+<span class="line"><span style="color:#FF7B72">  a</span><span style="color:#FF7B72"> dyn:</span><span style="color:#79C0FF">ConditionEffect</span><span style="color:#E6EDF3">, </span><span style="color:#FF7B72">dyn:</span><span style="color:#79C0FF">AffordanceMaskDefinition</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dcterms:</span><span style="color:#79C0FF">isPartOf</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/petrified></span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  rdfs:</span><span style="color:#79C0FF">label</span><span style="color:#A5D6FF"> "Speed 0"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  rdf:</span><span style="color:#79C0FF">value</span><span style="color:#A5D6FF"> "Your Speed is 0 and can't increase."</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">effectKey</span><span style="color:#A5D6FF"> "speed-0"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">effectKind</span><span style="color:#A5D6FF"> "affordance-mask"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">mechanicalStatus</span><span style="color:#A5D6FF"> "codified-mask"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">sourceSection</span><span style="color:#A5D6FF"> "Rules Glossary: Petrified [Condition]"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">masksActionType</span><span style="color:#FF7B72"> dyn:</span><span style="color:#79C0FF">Move</span><span style="color:#E6EDF3"> .</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FFA657">&#x3C;https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/petrified/effect/attacks-affected></span></span>
+<span class="line"><span style="color:#FF7B72">  a</span><span style="color:#FF7B72"> dyn:</span><span style="color:#79C0FF">ConditionEffect</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dcterms:</span><span style="color:#79C0FF">isPartOf</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/petrified></span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  rdfs:</span><span style="color:#79C0FF">label</span><span style="color:#A5D6FF"> "Attacks Affected"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  rdf:</span><span style="color:#79C0FF">value</span><span style="color:#A5D6FF"> "Attack rolls against you have Advantage."</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">effectKey</span><span style="color:#A5D6FF"> "attacks-affected"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">effectKind</span><span style="color:#A5D6FF"> "d20-modifier"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">mechanicalStatus</span><span style="color:#A5D6FF"> "structured-not-mask"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">sourceSection</span><span style="color:#A5D6FF"> "Rules Glossary: Petrified [Condition]"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">adjudicationNote</span><span style="color:#A5D6FF"> "Attack-roll advantage is a roll modifier, not an action mask."</span><span style="color:#E6EDF3"> .</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FFA657">&#x3C;https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/petrified/effect/saving-throws-affected></span></span>
+<span class="line"><span style="color:#FF7B72">  a</span><span style="color:#FF7B72"> dyn:</span><span style="color:#79C0FF">ConditionEffect</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dcterms:</span><span style="color:#79C0FF">isPartOf</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/petrified></span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  rdfs:</span><span style="color:#79C0FF">label</span><span style="color:#A5D6FF"> "Saving Throws Affected"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  rdf:</span><span style="color:#79C0FF">value</span><span style="color:#A5D6FF"> "You automatically fail Strength and Dexterity saving throws."</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">effectKey</span><span style="color:#A5D6FF"> "saving-throws-affected"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">effectKind</span><span style="color:#A5D6FF"> "automatic-failure"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">mechanicalStatus</span><span style="color:#A5D6FF"> "structured-not-mask"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">sourceSection</span><span style="color:#A5D6FF"> "Rules Glossary: Petrified [Condition]"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">adjudicationNote</span><span style="color:#A5D6FF"> "Automatic save failure is mechanical but is not an action mask."</span><span style="color:#E6EDF3"> .</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FFA657">&#x3C;https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/petrified/effect/resist-damage></span></span>
+<span class="line"><span style="color:#FF7B72">  a</span><span style="color:#FF7B72"> dyn:</span><span style="color:#79C0FF">ConditionEffect</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dcterms:</span><span style="color:#79C0FF">isPartOf</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/petrified></span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  rdfs:</span><span style="color:#79C0FF">label</span><span style="color:#A5D6FF"> "Resist Damage"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  rdf:</span><span style="color:#79C0FF">value</span><span style="color:#A5D6FF"> "You have Resistance to all damage."</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">effectKey</span><span style="color:#A5D6FF"> "resist-damage"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">effectKind</span><span style="color:#A5D6FF"> "damage-modifier"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">mechanicalStatus</span><span style="color:#A5D6FF"> "structured-not-mask"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">sourceSection</span><span style="color:#A5D6FF"> "Rules Glossary: Petrified [Condition]"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">adjudicationNote</span><span style="color:#A5D6FF"> "Damage resistance is not an action mask."</span><span style="color:#E6EDF3"> .</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FFA657">&#x3C;https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/petrified/effect/poison-immunity></span></span>
+<span class="line"><span style="color:#FF7B72">  a</span><span style="color:#FF7B72"> dyn:</span><span style="color:#79C0FF">ConditionEffect</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dcterms:</span><span style="color:#79C0FF">isPartOf</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/petrified></span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  rdfs:</span><span style="color:#79C0FF">label</span><span style="color:#A5D6FF"> "Poison Immunity"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  rdf:</span><span style="color:#79C0FF">value</span><span style="color:#A5D6FF"> "You have Immunity to the Poisoned condition."</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">effectKey</span><span style="color:#A5D6FF"> "poison-immunity"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">effectKind</span><span style="color:#A5D6FF"> "immunity"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">mechanicalStatus</span><span style="color:#A5D6FF"> "structured-not-mask"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">sourceSection</span><span style="color:#A5D6FF"> "Rules Glossary: Petrified [Condition]"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">adjudicationNote</span><span style="color:#A5D6FF"> "Condition immunity is not an action mask."</span><span style="color:#E6EDF3"> .</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FFA657">&#x3C;https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/poisoned></span></span>
+<span class="line"><span style="color:#FF7B72">  a</span><span style="color:#FF7B72"> dyn:</span><span style="color:#79C0FF">ConditionDefinition</span><span style="color:#E6EDF3">, </span><span style="color:#FF7B72">skos:</span><span style="color:#79C0FF">Concept</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dcterms:</span><span style="color:#79C0FF">isPartOf</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions></span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  rdfs:</span><span style="color:#79C0FF">label</span><span style="color:#A5D6FF"> "Poisoned"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">conditionKey</span><span style="color:#A5D6FF"> "poisoned"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">sourceSection</span><span style="color:#A5D6FF"> "Rules Glossary: Poisoned [Condition]"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">hasConditionEffect</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/poisoned/effect/ability-checks-and-attacks-affected></span><span style="color:#E6EDF3"> .</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FFA657">&#x3C;https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/poisoned/effect/ability-checks-and-attacks-affected></span></span>
+<span class="line"><span style="color:#FF7B72">  a</span><span style="color:#FF7B72"> dyn:</span><span style="color:#79C0FF">ConditionEffect</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dcterms:</span><span style="color:#79C0FF">isPartOf</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/poisoned></span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  rdfs:</span><span style="color:#79C0FF">label</span><span style="color:#A5D6FF"> "Ability Checks and Attacks Affected"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  rdf:</span><span style="color:#79C0FF">value</span><span style="color:#A5D6FF"> "You have Disadvantage on attack rolls and ability checks."</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">effectKey</span><span style="color:#A5D6FF"> "ability-checks-and-attacks-affected"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">effectKind</span><span style="color:#A5D6FF"> "d20-modifier"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">mechanicalStatus</span><span style="color:#A5D6FF"> "structured-not-mask"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">sourceSection</span><span style="color:#A5D6FF"> "Rules Glossary: Poisoned [Condition]"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">adjudicationNote</span><span style="color:#A5D6FF"> "Attack-roll and ability-check disadvantage are roll modifiers, not action masks."</span><span style="color:#E6EDF3"> .</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FFA657">&#x3C;https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/prone></span></span>
+<span class="line"><span style="color:#FF7B72">  a</span><span style="color:#FF7B72"> dyn:</span><span style="color:#79C0FF">ConditionDefinition</span><span style="color:#E6EDF3">, </span><span style="color:#FF7B72">skos:</span><span style="color:#79C0FF">Concept</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dcterms:</span><span style="color:#79C0FF">isPartOf</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions></span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  rdfs:</span><span style="color:#79C0FF">label</span><span style="color:#A5D6FF"> "Prone"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">conditionKey</span><span style="color:#A5D6FF"> "prone"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">sourceSection</span><span style="color:#A5D6FF"> "Rules Glossary: Prone [Condition]"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">hasConditionEffect</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/prone/effect/restricted-movement></span><span style="color:#E6EDF3">,</span></span>
+<span class="line"><span style="color:#FFA657">    &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/prone/effect/attacks-affected></span><span style="color:#E6EDF3"> .</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FFA657">&#x3C;https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/prone/effect/restricted-movement></span></span>
+<span class="line"><span style="color:#FF7B72">  a</span><span style="color:#FF7B72"> dyn:</span><span style="color:#79C0FF">ConditionEffect</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dcterms:</span><span style="color:#79C0FF">isPartOf</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/prone></span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  rdfs:</span><span style="color:#79C0FF">label</span><span style="color:#A5D6FF"> "Restricted Movement"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  rdf:</span><span style="color:#79C0FF">value</span><span style="color:#A5D6FF"> "Your only movement options are to crawl or to spend an amount of movement equal to half your Speed (round down) to right yourself and thereby end the condition. If your Speed is 0, you can't right yourself."</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">effectKey</span><span style="color:#A5D6FF"> "restricted-movement"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">effectKind</span><span style="color:#A5D6FF"> "movement-restriction"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">mechanicalStatus</span><span style="color:#A5D6FF"> "adjudication-required"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">sourceSection</span><span style="color:#A5D6FF"> "Rules Glossary: Prone [Condition]"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">adjudicationNote</span><span style="color:#A5D6FF"> "Prone constrains movement modes and standing cost but does not mask Move entirely."</span><span style="color:#E6EDF3"> .</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FFA657">&#x3C;https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/prone/effect/attacks-affected></span></span>
+<span class="line"><span style="color:#FF7B72">  a</span><span style="color:#FF7B72"> dyn:</span><span style="color:#79C0FF">ConditionEffect</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dcterms:</span><span style="color:#79C0FF">isPartOf</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/prone></span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  rdfs:</span><span style="color:#79C0FF">label</span><span style="color:#A5D6FF"> "Attacks Affected"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  rdf:</span><span style="color:#79C0FF">value</span><span style="color:#A5D6FF"> "You have Disadvantage on attack rolls. An attack roll against you has Advantage if the attacker is within 5 feet of you. Otherwise, that attack roll has Disadvantage."</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">effectKey</span><span style="color:#A5D6FF"> "attacks-affected"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">effectKind</span><span style="color:#A5D6FF"> "d20-modifier"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">mechanicalStatus</span><span style="color:#A5D6FF"> "structured-not-mask"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">sourceSection</span><span style="color:#A5D6FF"> "Rules Glossary: Prone [Condition]"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">adjudicationNote</span><span style="color:#A5D6FF"> "Attack-roll advantage and disadvantage are roll modifiers, not action masks."</span><span style="color:#E6EDF3"> .</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FFA657">&#x3C;https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/restrained></span></span>
+<span class="line"><span style="color:#FF7B72">  a</span><span style="color:#FF7B72"> dyn:</span><span style="color:#79C0FF">ConditionDefinition</span><span style="color:#E6EDF3">, </span><span style="color:#FF7B72">skos:</span><span style="color:#79C0FF">Concept</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dcterms:</span><span style="color:#79C0FF">isPartOf</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions></span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  rdfs:</span><span style="color:#79C0FF">label</span><span style="color:#A5D6FF"> "Restrained"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">conditionKey</span><span style="color:#A5D6FF"> "restrained"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">sourceSection</span><span style="color:#A5D6FF"> "Rules Glossary: Restrained [Condition]"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">hasConditionEffect</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/restrained/effect/speed-0></span><span style="color:#E6EDF3">,</span></span>
+<span class="line"><span style="color:#FFA657">    &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/restrained/effect/attacks-affected></span><span style="color:#E6EDF3">,</span></span>
+<span class="line"><span style="color:#FFA657">    &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/restrained/effect/saving-throws-affected></span><span style="color:#E6EDF3"> .</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FFA657">&#x3C;https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/restrained/effect/speed-0></span></span>
+<span class="line"><span style="color:#FF7B72">  a</span><span style="color:#FF7B72"> dyn:</span><span style="color:#79C0FF">ConditionEffect</span><span style="color:#E6EDF3">, </span><span style="color:#FF7B72">dyn:</span><span style="color:#79C0FF">AffordanceMaskDefinition</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dcterms:</span><span style="color:#79C0FF">isPartOf</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/restrained></span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  rdfs:</span><span style="color:#79C0FF">label</span><span style="color:#A5D6FF"> "Speed 0"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  rdf:</span><span style="color:#79C0FF">value</span><span style="color:#A5D6FF"> "Your Speed is 0 and can't increase."</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">effectKey</span><span style="color:#A5D6FF"> "speed-0"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">effectKind</span><span style="color:#A5D6FF"> "affordance-mask"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">mechanicalStatus</span><span style="color:#A5D6FF"> "codified-mask"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">sourceSection</span><span style="color:#A5D6FF"> "Rules Glossary: Restrained [Condition]"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">masksActionType</span><span style="color:#FF7B72"> dyn:</span><span style="color:#79C0FF">Move</span><span style="color:#E6EDF3"> .</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FFA657">&#x3C;https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/restrained/effect/attacks-affected></span></span>
+<span class="line"><span style="color:#FF7B72">  a</span><span style="color:#FF7B72"> dyn:</span><span style="color:#79C0FF">ConditionEffect</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dcterms:</span><span style="color:#79C0FF">isPartOf</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/restrained></span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  rdfs:</span><span style="color:#79C0FF">label</span><span style="color:#A5D6FF"> "Attacks Affected"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  rdf:</span><span style="color:#79C0FF">value</span><span style="color:#A5D6FF"> "Attack rolls against you have Advantage, and your attack rolls have Disadvantage."</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">effectKey</span><span style="color:#A5D6FF"> "attacks-affected"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">effectKind</span><span style="color:#A5D6FF"> "d20-modifier"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">mechanicalStatus</span><span style="color:#A5D6FF"> "structured-not-mask"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">sourceSection</span><span style="color:#A5D6FF"> "Rules Glossary: Restrained [Condition]"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">adjudicationNote</span><span style="color:#A5D6FF"> "Attack-roll advantage and disadvantage are roll modifiers, not action masks."</span><span style="color:#E6EDF3"> .</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FFA657">&#x3C;https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/restrained/effect/saving-throws-affected></span></span>
+<span class="line"><span style="color:#FF7B72">  a</span><span style="color:#FF7B72"> dyn:</span><span style="color:#79C0FF">ConditionEffect</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dcterms:</span><span style="color:#79C0FF">isPartOf</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/restrained></span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  rdfs:</span><span style="color:#79C0FF">label</span><span style="color:#A5D6FF"> "Saving Throws Affected"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  rdf:</span><span style="color:#79C0FF">value</span><span style="color:#A5D6FF"> "You have Disadvantage on Dexterity saving throws."</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">effectKey</span><span style="color:#A5D6FF"> "saving-throws-affected"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">effectKind</span><span style="color:#A5D6FF"> "d20-modifier"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">mechanicalStatus</span><span style="color:#A5D6FF"> "structured-not-mask"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">sourceSection</span><span style="color:#A5D6FF"> "Rules Glossary: Restrained [Condition]"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">adjudicationNote</span><span style="color:#A5D6FF"> "Dexterity-save disadvantage is a roll modifier, not an action mask."</span><span style="color:#E6EDF3"> .</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FFA657">&#x3C;https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/stunned></span></span>
+<span class="line"><span style="color:#FF7B72">  a</span><span style="color:#FF7B72"> dyn:</span><span style="color:#79C0FF">ConditionDefinition</span><span style="color:#E6EDF3">, </span><span style="color:#FF7B72">skos:</span><span style="color:#79C0FF">Concept</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dcterms:</span><span style="color:#79C0FF">isPartOf</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions></span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  rdfs:</span><span style="color:#79C0FF">label</span><span style="color:#A5D6FF"> "Stunned"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">conditionKey</span><span style="color:#A5D6FF"> "stunned"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">sourceSection</span><span style="color:#A5D6FF"> "Rules Glossary: Stunned [Condition]"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">hasConditionEffect</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/stunned/effect/incapacitated></span><span style="color:#E6EDF3">,</span></span>
+<span class="line"><span style="color:#FFA657">    &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/stunned/effect/saving-throws-affected></span><span style="color:#E6EDF3">,</span></span>
+<span class="line"><span style="color:#FFA657">    &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/stunned/effect/attacks-affected></span><span style="color:#E6EDF3"> .</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FFA657">&#x3C;https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/stunned/effect/incapacitated></span></span>
+<span class="line"><span style="color:#FF7B72">  a</span><span style="color:#FF7B72"> dyn:</span><span style="color:#79C0FF">ConditionEffect</span><span style="color:#E6EDF3">, </span><span style="color:#FF7B72">dyn:</span><span style="color:#79C0FF">AffordanceMaskDefinition</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dcterms:</span><span style="color:#79C0FF">isPartOf</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/stunned></span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  rdfs:</span><span style="color:#79C0FF">label</span><span style="color:#A5D6FF"> "Incapacitated"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  rdf:</span><span style="color:#79C0FF">value</span><span style="color:#A5D6FF"> "You have the Incapacitated condition."</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">effectKey</span><span style="color:#A5D6FF"> "incapacitated"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">effectKind</span><span style="color:#A5D6FF"> "condition-reference-mask"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">mechanicalStatus</span><span style="color:#A5D6FF"> "codified-mask"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">sourceSection</span><span style="color:#A5D6FF"> "Rules Glossary: Stunned [Condition]"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">adjudicationNote</span><span style="color:#A5D6FF"> "The action masks derive from the embedded Incapacitated condition."</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">masksActionType</span><span style="color:#FF7B72"> dyn:</span><span style="color:#79C0FF">TakeAction</span><span style="color:#E6EDF3">, </span><span style="color:#FF7B72">dyn:</span><span style="color:#79C0FF">TakeBonusAction</span><span style="color:#E6EDF3">, </span><span style="color:#FF7B72">dyn:</span><span style="color:#79C0FF">TakeReaction</span><span style="color:#E6EDF3">, </span><span style="color:#FF7B72">dyn:</span><span style="color:#79C0FF">MaintainConcentration</span><span style="color:#E6EDF3">, </span><span style="color:#FF7B72">dyn:</span><span style="color:#79C0FF">Speak</span><span style="color:#E6EDF3"> .</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FFA657">&#x3C;https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/stunned/effect/saving-throws-affected></span></span>
+<span class="line"><span style="color:#FF7B72">  a</span><span style="color:#FF7B72"> dyn:</span><span style="color:#79C0FF">ConditionEffect</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dcterms:</span><span style="color:#79C0FF">isPartOf</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/stunned></span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  rdfs:</span><span style="color:#79C0FF">label</span><span style="color:#A5D6FF"> "Saving Throws Affected"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  rdf:</span><span style="color:#79C0FF">value</span><span style="color:#A5D6FF"> "You automatically fail Strength and Dexterity saving throws."</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">effectKey</span><span style="color:#A5D6FF"> "saving-throws-affected"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">effectKind</span><span style="color:#A5D6FF"> "automatic-failure"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">mechanicalStatus</span><span style="color:#A5D6FF"> "structured-not-mask"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">sourceSection</span><span style="color:#A5D6FF"> "Rules Glossary: Stunned [Condition]"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">adjudicationNote</span><span style="color:#A5D6FF"> "Automatic save failure is mechanical but is not an action mask."</span><span style="color:#E6EDF3"> .</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FFA657">&#x3C;https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/stunned/effect/attacks-affected></span></span>
+<span class="line"><span style="color:#FF7B72">  a</span><span style="color:#FF7B72"> dyn:</span><span style="color:#79C0FF">ConditionEffect</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dcterms:</span><span style="color:#79C0FF">isPartOf</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/stunned></span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  rdfs:</span><span style="color:#79C0FF">label</span><span style="color:#A5D6FF"> "Attacks Affected"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  rdf:</span><span style="color:#79C0FF">value</span><span style="color:#A5D6FF"> "Attack rolls against you have Advantage."</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">effectKey</span><span style="color:#A5D6FF"> "attacks-affected"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">effectKind</span><span style="color:#A5D6FF"> "d20-modifier"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">mechanicalStatus</span><span style="color:#A5D6FF"> "structured-not-mask"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">sourceSection</span><span style="color:#A5D6FF"> "Rules Glossary: Stunned [Condition]"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">adjudicationNote</span><span style="color:#A5D6FF"> "Attack-roll advantage is a roll modifier, not an action mask."</span><span style="color:#E6EDF3"> .</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FFA657">&#x3C;https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/unconscious></span></span>
+<span class="line"><span style="color:#FF7B72">  a</span><span style="color:#FF7B72"> dyn:</span><span style="color:#79C0FF">ConditionDefinition</span><span style="color:#E6EDF3">, </span><span style="color:#FF7B72">skos:</span><span style="color:#79C0FF">Concept</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dcterms:</span><span style="color:#79C0FF">isPartOf</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions></span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  rdfs:</span><span style="color:#79C0FF">label</span><span style="color:#A5D6FF"> "Unconscious"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">conditionKey</span><span style="color:#A5D6FF"> "unconscious"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">sourceSection</span><span style="color:#A5D6FF"> "Rules Glossary: Unconscious [Condition]"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">hasConditionEffect</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/unconscious/effect/inert></span><span style="color:#E6EDF3">,</span></span>
+<span class="line"><span style="color:#FFA657">    &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/unconscious/effect/speed-0></span><span style="color:#E6EDF3">,</span></span>
+<span class="line"><span style="color:#FFA657">    &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/unconscious/effect/attacks-affected></span><span style="color:#E6EDF3">,</span></span>
+<span class="line"><span style="color:#FFA657">    &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/unconscious/effect/saving-throws-affected></span><span style="color:#E6EDF3">,</span></span>
+<span class="line"><span style="color:#FFA657">    &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/unconscious/effect/automatic-critical-hits></span><span style="color:#E6EDF3">,</span></span>
+<span class="line"><span style="color:#FFA657">    &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/unconscious/effect/unaware></span><span style="color:#E6EDF3"> .</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FFA657">&#x3C;https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/unconscious/effect/inert></span></span>
+<span class="line"><span style="color:#FF7B72">  a</span><span style="color:#FF7B72"> dyn:</span><span style="color:#79C0FF">ConditionEffect</span><span style="color:#E6EDF3">, </span><span style="color:#FF7B72">dyn:</span><span style="color:#79C0FF">AffordanceMaskDefinition</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dcterms:</span><span style="color:#79C0FF">isPartOf</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/unconscious></span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  rdfs:</span><span style="color:#79C0FF">label</span><span style="color:#A5D6FF"> "Inert"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  rdf:</span><span style="color:#79C0FF">value</span><span style="color:#A5D6FF"> "You have the Incapacitated and Prone conditions, and you drop whatever you're holding. When this condition ends, you remain Prone."</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">effectKey</span><span style="color:#A5D6FF"> "inert"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">effectKind</span><span style="color:#A5D6FF"> "condition-reference-mask"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">mechanicalStatus</span><span style="color:#A5D6FF"> "codified-mask"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">sourceSection</span><span style="color:#A5D6FF"> "Rules Glossary: Unconscious [Condition]"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">adjudicationNote</span><span style="color:#A5D6FF"> "The action masks derive from the embedded Incapacitated condition; dropping held objects and remaining Prone are recorded as prose."</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">masksActionType</span><span style="color:#FF7B72"> dyn:</span><span style="color:#79C0FF">TakeAction</span><span style="color:#E6EDF3">, </span><span style="color:#FF7B72">dyn:</span><span style="color:#79C0FF">TakeBonusAction</span><span style="color:#E6EDF3">, </span><span style="color:#FF7B72">dyn:</span><span style="color:#79C0FF">TakeReaction</span><span style="color:#E6EDF3">, </span><span style="color:#FF7B72">dyn:</span><span style="color:#79C0FF">MaintainConcentration</span><span style="color:#E6EDF3">, </span><span style="color:#FF7B72">dyn:</span><span style="color:#79C0FF">Speak</span><span style="color:#E6EDF3"> .</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FFA657">&#x3C;https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/unconscious/effect/speed-0></span></span>
+<span class="line"><span style="color:#FF7B72">  a</span><span style="color:#FF7B72"> dyn:</span><span style="color:#79C0FF">ConditionEffect</span><span style="color:#E6EDF3">, </span><span style="color:#FF7B72">dyn:</span><span style="color:#79C0FF">AffordanceMaskDefinition</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dcterms:</span><span style="color:#79C0FF">isPartOf</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/unconscious></span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  rdfs:</span><span style="color:#79C0FF">label</span><span style="color:#A5D6FF"> "Speed 0"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  rdf:</span><span style="color:#79C0FF">value</span><span style="color:#A5D6FF"> "Your Speed is 0 and can't increase."</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">effectKey</span><span style="color:#A5D6FF"> "speed-0"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">effectKind</span><span style="color:#A5D6FF"> "affordance-mask"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">mechanicalStatus</span><span style="color:#A5D6FF"> "codified-mask"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">sourceSection</span><span style="color:#A5D6FF"> "Rules Glossary: Unconscious [Condition]"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">masksActionType</span><span style="color:#FF7B72"> dyn:</span><span style="color:#79C0FF">Move</span><span style="color:#E6EDF3"> .</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FFA657">&#x3C;https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/unconscious/effect/attacks-affected></span></span>
+<span class="line"><span style="color:#FF7B72">  a</span><span style="color:#FF7B72"> dyn:</span><span style="color:#79C0FF">ConditionEffect</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dcterms:</span><span style="color:#79C0FF">isPartOf</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/unconscious></span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  rdfs:</span><span style="color:#79C0FF">label</span><span style="color:#A5D6FF"> "Attacks Affected"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  rdf:</span><span style="color:#79C0FF">value</span><span style="color:#A5D6FF"> "Attack rolls against you have Advantage."</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">effectKey</span><span style="color:#A5D6FF"> "attacks-affected"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">effectKind</span><span style="color:#A5D6FF"> "d20-modifier"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">mechanicalStatus</span><span style="color:#A5D6FF"> "structured-not-mask"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">sourceSection</span><span style="color:#A5D6FF"> "Rules Glossary: Unconscious [Condition]"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">adjudicationNote</span><span style="color:#A5D6FF"> "Attack-roll advantage is a roll modifier, not an action mask."</span><span style="color:#E6EDF3"> .</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FFA657">&#x3C;https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/unconscious/effect/saving-throws-affected></span></span>
+<span class="line"><span style="color:#FF7B72">  a</span><span style="color:#FF7B72"> dyn:</span><span style="color:#79C0FF">ConditionEffect</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dcterms:</span><span style="color:#79C0FF">isPartOf</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/unconscious></span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  rdfs:</span><span style="color:#79C0FF">label</span><span style="color:#A5D6FF"> "Saving Throws Affected"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  rdf:</span><span style="color:#79C0FF">value</span><span style="color:#A5D6FF"> "You automatically fail Strength and Dexterity saving throws."</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">effectKey</span><span style="color:#A5D6FF"> "saving-throws-affected"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">effectKind</span><span style="color:#A5D6FF"> "automatic-failure"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">mechanicalStatus</span><span style="color:#A5D6FF"> "structured-not-mask"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">sourceSection</span><span style="color:#A5D6FF"> "Rules Glossary: Unconscious [Condition]"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">adjudicationNote</span><span style="color:#A5D6FF"> "Automatic save failure is mechanical but is not an action mask."</span><span style="color:#E6EDF3"> .</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FFA657">&#x3C;https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/unconscious/effect/automatic-critical-hits></span></span>
+<span class="line"><span style="color:#FF7B72">  a</span><span style="color:#FF7B72"> dyn:</span><span style="color:#79C0FF">ConditionEffect</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dcterms:</span><span style="color:#79C0FF">isPartOf</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/unconscious></span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  rdfs:</span><span style="color:#79C0FF">label</span><span style="color:#A5D6FF"> "Automatic Critical Hits"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  rdf:</span><span style="color:#79C0FF">value</span><span style="color:#A5D6FF"> "Any attack roll that hits you is a Critical Hit if the attacker is within 5 feet of you."</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">effectKey</span><span style="color:#A5D6FF"> "automatic-critical-hits"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">effectKind</span><span style="color:#A5D6FF"> "hit-resolution"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">mechanicalStatus</span><span style="color:#A5D6FF"> "structured-not-mask"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">sourceSection</span><span style="color:#A5D6FF"> "Rules Glossary: Unconscious [Condition]"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">adjudicationNote</span><span style="color:#A5D6FF"> "Critical-hit conversion is attack resolution data, not an action mask."</span><span style="color:#E6EDF3"> .</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FFA657">&#x3C;https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/unconscious/effect/unaware></span></span>
+<span class="line"><span style="color:#FF7B72">  a</span><span style="color:#FF7B72"> dyn:</span><span style="color:#79C0FF">ConditionEffect</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dcterms:</span><span style="color:#79C0FF">isPartOf</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/unconscious></span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  rdfs:</span><span style="color:#79C0FF">label</span><span style="color:#A5D6FF"> "Unaware"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  rdf:</span><span style="color:#79C0FF">value</span><span style="color:#A5D6FF"> "You're unaware of your surroundings."</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">effectKey</span><span style="color:#A5D6FF"> "unaware"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">effectKind</span><span style="color:#A5D6FF"> "perception-adjudication"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">mechanicalStatus</span><span style="color:#A5D6FF"> "adjudication-required"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">sourceSection</span><span style="color:#A5D6FF"> "Rules Glossary: Unconscious [Condition]"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">adjudicationNote</span><span style="color:#A5D6FF"> "Awareness is observer/context dependent; this package keeps the source prose without inventing a perception engine."</span><span style="color:#E6EDF3"> .</span></span>
+<span class="line"></span></code></pre>
+      </details>
+    </section>    <section class="wf-section">
+      <details class="wf-history">
+        <summary>History</summary>
+        <div class="wf-history-tree">
+          <details class="wf-history-node wf-history-node--history" open>
+            <summary class="wf-history-node-header"><a href="/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/_history001">rules/dynamis/srd-5-2-1/conditions/_history001</a></summary>
+            <details class="wf-history-node wf-history-node--state" open>
+              <summary class="wf-history-node-header"><a href="/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/_history001/_s0001">_s0001</a></summary>
+              <details class="wf-history-node wf-history-node--manifestation" open>
+                <summary class="wf-history-node-header"><a href="/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/_history001/_s0001/ttl">ttl</a></summary>
+                <div class="wf-history-node wf-history-node--file">
+                  <div class="wf-history-node-header"><a href="/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/_history001/_s0001/ttl/conditions.ttl" class="wf-history-file-iri">https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/_history001/_s0001/ttl/conditions.ttl</a></div>
+                </div>
+              </details>
+            </details>
+          </details>
+        </div>
+      </details>
+    </section>
+
+    </article>
+  </main>
+  <footer class="wf-generated">
+    Generated on <span class="wf-term wf-date-tip" tabindex="0" title="2026-07-05T17:50:53.043Z" data-tooltip="2026-07-05T17:50:53.043Z">July 5, 2026</span> by <a href="https://github.com/semantic-flow/weave/">Weave</a>
+  </footer>
+</body>
+</html>

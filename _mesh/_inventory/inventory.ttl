@@ -343,3 +343,43 @@
 <rules/dynamis/srd-starter/index.html> a sflo:ResourcePage, sflo:LocatedFile .
 
 <rules/dynamis/srd-starter/_knop/index.html> a sflo:ResourcePage, sflo:LocatedFile .
+
+<_mesh> sflo:hasKnop <rules/dynamis/srd-5-2-1/conditions/_knop> .
+
+<rules/dynamis/srd-5-2-1/conditions> a sflo:PayloadArtifact, sflo:DigitalArtifact, sflo:RdfDocument ;
+  sflo:hasWorkingLocatedFile <rules/dynamis/srd-5-2-1/conditions/conditions.ttl> .
+
+<rules/dynamis/srd-5-2-1/conditions/_knop> a sflo:Knop ;
+  sflo:hasWorkingKnopInventoryFile <rules/dynamis/srd-5-2-1/conditions/_knop/_inventory/inventory.ttl> .
+
+<rules/dynamis/srd-5-2-1/conditions/_knop/_inventory/inventory.ttl> a sflo:LocatedFile, sflo:RdfDocument .
+
+<rules/dynamis/srd-5-2-1/conditions/conditions.ttl> a sflo:LocatedFile, sflo:RdfDocument .
+
+<_mesh> sflo:hasKnop <rules/dynamis/srd-5-2-1/d20-test/_knop> .
+
+<rules/dynamis/srd-5-2-1/d20-test> a sflo:PayloadArtifact, sflo:DigitalArtifact, sflo:RdfDocument ;
+  sflo:hasWorkingLocatedFile <rules/dynamis/srd-5-2-1/d20-test/d20-test.ttl> .
+
+<rules/dynamis/srd-5-2-1/d20-test/_knop> a sflo:Knop ;
+  sflo:hasWorkingKnopInventoryFile <rules/dynamis/srd-5-2-1/d20-test/_knop/_inventory/inventory.ttl> .
+
+<rules/dynamis/srd-5-2-1/d20-test/_knop/_inventory/inventory.ttl> a sflo:LocatedFile, sflo:RdfDocument .
+
+<rules/dynamis/srd-5-2-1/d20-test/d20-test.ttl> a sflo:LocatedFile, sflo:RdfDocument .
+
+<rules/dynamis/srd-5-2-1/conditions> sflo:hasResourcePage <rules/dynamis/srd-5-2-1/conditions/index.html> .
+
+<rules/dynamis/srd-5-2-1/conditions/_knop> sflo:hasResourcePage <rules/dynamis/srd-5-2-1/conditions/_knop/index.html> .
+
+<rules/dynamis/srd-5-2-1/conditions/index.html> a sflo:ResourcePage, sflo:LocatedFile .
+
+<rules/dynamis/srd-5-2-1/conditions/_knop/index.html> a sflo:ResourcePage, sflo:LocatedFile .
+
+<rules/dynamis/srd-5-2-1/d20-test> sflo:hasResourcePage <rules/dynamis/srd-5-2-1/d20-test/index.html> .
+
+<rules/dynamis/srd-5-2-1/d20-test/_knop> sflo:hasResourcePage <rules/dynamis/srd-5-2-1/d20-test/_knop/index.html> .
+
+<rules/dynamis/srd-5-2-1/d20-test/index.html> a sflo:ResourcePage, sflo:LocatedFile .
+
+<rules/dynamis/srd-5-2-1/d20-test/_knop/index.html> a sflo:ResourcePage, sflo:LocatedFile .

@@ -1,0 +1,19 @@
+skillKey,skillLabel,defaultAbilityKey,exampleUses,actionType,sourceSection
+acrobatics,Acrobatics,dexterity,"Stay on your feet in a tricky situation, or perform an acrobatic stunt.",dyn:AbilityCheck,Playing the Game: Skills
+animal-handling,Animal Handling,wisdom,"Calm or train an animal, or get an animal to behave in a certain way.",dyn:AbilityCheck,Playing the Game: Skills
+arcana,Arcana,intelligence,"Recall lore about spells, magic items, and the planes of existence.",dyn:AbilityCheck,Playing the Game: Skills
+athletics,Athletics,strength,"Jump farther than normal, stay afloat in rough water, or break something.",dyn:AbilityCheck,Playing the Game: Skills
+deception,Deception,charisma,"Tell a convincing lie, or wear a disguise convincingly.",dyn:AbilityCheck,Playing the Game: Skills
+history,History,intelligence,"Recall lore about historical events, people, nations, and cultures.",dyn:AbilityCheck,Playing the Game: Skills
+insight,Insight,wisdom,Discern a person's mood and intentions.,dyn:AbilityCheck,Playing the Game: Skills
+intimidation,Intimidation,charisma,Awe or threaten someone into doing what you want.,dyn:AbilityCheck,Playing the Game: Skills
+investigation,Investigation,intelligence,"Find obscure information in books, or deduce how something works.",dyn:AbilityCheck,Playing the Game: Skills
+medicine,Medicine,wisdom,"Diagnose an illness, or determine what killed the recently slain.",dyn:AbilityCheck,Playing the Game: Skills
+nature,Nature,intelligence,"Recall lore about terrain, plants, animals, and weather.",dyn:AbilityCheck,Playing the Game: Skills
+perception,Perception,wisdom,"Using a combination of senses, notice something that's easy to miss.",dyn:AbilityCheck,Playing the Game: Skills
+performance,Performance,charisma,"Act, tell a story, perform music, or dance.",dyn:AbilityCheck,Playing the Game: Skills
+persuasion,Persuasion,charisma,Honestly and graciously convince someone of something.,dyn:AbilityCheck,Playing the Game: Skills
+religion,Religion,intelligence,"Recall lore about gods, religious rituals, and holy symbols.",dyn:AbilityCheck,Playing the Game: Skills
+sleight-of-hand,Sleight of Hand,dexterity,"Pick a pocket, conceal a handheld object, or perform legerdemain.",dyn:AbilityCheck,Playing the Game: Skills
+stealth,Stealth,dexterity,Escape notice by moving quietly and hiding behind things.,dyn:AbilityCheck,Playing the Game: Skills
+survival,Survival,wisdom,"Follow tracks, forage, find a trail, or avoid natural hazards.",dyn:AbilityCheck,Playing the Game: Skills

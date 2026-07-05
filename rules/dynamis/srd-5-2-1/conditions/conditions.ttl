@@ -1,0 +1,798 @@
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dyn: <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions>
+  a dcat:Dataset ;
+  dcterms:title "SRD 5.2.1 condition rules" ;
+  dcterms:description "Curated condition definitions extracted from the CC SRD 5.2.1 PDF. Mask rows name action-family affordances; non-mask mechanical effects remain explicit data." ;
+  dcterms:created "2026-07-05"^^xsd:date ;
+  dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
+  dcterms:source <https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf> ;
+  dcterms:rights "Includes material from System Reference Document 5.2.1 by Wizards of the Coast LLC, available under the Creative Commons Attribution 4.0 International License." ;
+  dcat:distribution <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/conditions-effects-csv>,
+    <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/conditions-csvw> .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/conditions-effects-csv>
+  a dcat:Distribution ;
+  dcterms:title "SRD 5.2.1 condition effects curated CSV" ;
+  dcat:downloadURL <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/conditions.effects.csv> .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/conditions-csvw>
+  a dcat:Distribution ;
+  dcterms:title "SRD 5.2.1 condition CSVW mapping" ;
+  dcat:downloadURL <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/conditions.csvw.json> .
+
+dyn:ConditionMaskAdjudicatedPreconditionAsk
+  a dyn:SparqlAskPrecondition ;
+  rdf:value "ASK { # Condition mask family is adjudicated by the condition effect and live mask interval. }" .
+
+dyn:ConditionMaskAdjudicatedConsequenceTemplate
+  a dyn:ConsequenceTemplate ;
+  rdf:value "No standalone consequence template; this action family exists so source-derived condition masks can name the affordance they suspend." .
+
+dyn:HarmConditionSource
+  a dyn:ActionType, owl:Class ;
+  rdfs:label "Harm condition source" ;
+  dyn:verbIri dyn:harm-condition-source ;
+  dyn:preconditionAsk dyn:ConditionMaskAdjudicatedPreconditionAsk ;
+  dyn:consequenceTemplate dyn:ConditionMaskAdjudicatedConsequenceTemplate ;
+  dyn:punningDecision "ActionType is an individual rules record and an OWL class for source-derived condition-mask family references." ;
+  dyn:srdReference "SRD 5.2.1 condition rules" .
+
+dyn:MaintainConcentration
+  a dyn:ActionType, owl:Class ;
+  rdfs:label "Maintain concentration" ;
+  dyn:verbIri dyn:maintain-concentration ;
+  dyn:preconditionAsk dyn:ConditionMaskAdjudicatedPreconditionAsk ;
+  dyn:consequenceTemplate dyn:ConditionMaskAdjudicatedConsequenceTemplate ;
+  dyn:punningDecision "ActionType is an individual rules record and an OWL class for source-derived condition-mask family references." ;
+  dyn:srdReference "SRD 5.2.1 condition rules" .
+
+dyn:MoveCloserToConditionSource
+  a dyn:ActionType, owl:Class ;
+  rdfs:label "Move closer to condition source" ;
+  dyn:verbIri dyn:move-closer-to-condition-source ;
+  dyn:preconditionAsk dyn:ConditionMaskAdjudicatedPreconditionAsk ;
+  dyn:consequenceTemplate dyn:ConditionMaskAdjudicatedConsequenceTemplate ;
+  dyn:punningDecision "ActionType is an individual rules record and an OWL class for source-derived condition-mask family references." ;
+  dyn:srdReference "SRD 5.2.1 condition rules" .
+
+dyn:TakeAction
+  a dyn:ActionType, owl:Class ;
+  rdfs:label "Take action" ;
+  dyn:verbIri dyn:take-action ;
+  dyn:preconditionAsk dyn:ConditionMaskAdjudicatedPreconditionAsk ;
+  dyn:consequenceTemplate dyn:ConditionMaskAdjudicatedConsequenceTemplate ;
+  dyn:punningDecision "ActionType is an individual rules record and an OWL class for source-derived condition-mask family references." ;
+  dyn:srdReference "SRD 5.2.1 condition rules" .
+
+dyn:TakeBonusAction
+  a dyn:ActionType, owl:Class ;
+  rdfs:label "Take bonus action" ;
+  dyn:verbIri dyn:take-bonus-action ;
+  dyn:preconditionAsk dyn:ConditionMaskAdjudicatedPreconditionAsk ;
+  dyn:consequenceTemplate dyn:ConditionMaskAdjudicatedConsequenceTemplate ;
+  dyn:punningDecision "ActionType is an individual rules record and an OWL class for source-derived condition-mask family references." ;
+  dyn:srdReference "SRD 5.2.1 condition rules" .
+
+dyn:TakeReaction
+  a dyn:ActionType, owl:Class ;
+  rdfs:label "Take reaction" ;
+  dyn:verbIri dyn:take-reaction ;
+  dyn:preconditionAsk dyn:ConditionMaskAdjudicatedPreconditionAsk ;
+  dyn:consequenceTemplate dyn:ConditionMaskAdjudicatedConsequenceTemplate ;
+  dyn:punningDecision "ActionType is an individual rules record and an OWL class for source-derived condition-mask family references." ;
+  dyn:srdReference "SRD 5.2.1 condition rules" .
+
+dyn:UseHearing
+  a dyn:ActionType, owl:Class ;
+  rdfs:label "Use hearing" ;
+  dyn:verbIri dyn:use-hearing ;
+  dyn:preconditionAsk dyn:ConditionMaskAdjudicatedPreconditionAsk ;
+  dyn:consequenceTemplate dyn:ConditionMaskAdjudicatedConsequenceTemplate ;
+  dyn:punningDecision "ActionType is an individual rules record and an OWL class for source-derived condition-mask family references." ;
+  dyn:srdReference "SRD 5.2.1 condition rules" .
+
+dyn:UseSight
+  a dyn:ActionType, owl:Class ;
+  rdfs:label "Use sight" ;
+  dyn:verbIri dyn:use-sight ;
+  dyn:preconditionAsk dyn:ConditionMaskAdjudicatedPreconditionAsk ;
+  dyn:consequenceTemplate dyn:ConditionMaskAdjudicatedConsequenceTemplate ;
+  dyn:punningDecision "ActionType is an individual rules record and an OWL class for source-derived condition-mask family references." ;
+  dyn:srdReference "SRD 5.2.1 condition rules" .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/blinded>
+  a dyn:ConditionDefinition, skos:Concept ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions> ;
+  rdfs:label "Blinded" ;
+  dyn:conditionKey "blinded" ;
+  dyn:sourceSection "Rules Glossary: Blinded [Condition]" ;
+  dyn:hasConditionEffect <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/blinded/effect/cant-see>,
+    <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/blinded/effect/attacks-affected> .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/blinded/effect/cant-see>
+  a dyn:ConditionEffect, dyn:AffordanceMaskDefinition ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/blinded> ;
+  rdfs:label "Can't See" ;
+  rdf:value "You can't see and automatically fail any ability check that requires sight." ;
+  dyn:effectKey "cant-see" ;
+  dyn:effectKind "sensory-mask" ;
+  dyn:mechanicalStatus "codified-mask" ;
+  dyn:sourceSection "Rules Glossary: Blinded [Condition]" ;
+  dyn:adjudicationNote "The ability-check auto-failure depends on whether a check requires sight; the mask records the sensory affordance only." ;
+  dyn:masksActionType dyn:UseSight .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/blinded/effect/attacks-affected>
+  a dyn:ConditionEffect ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/blinded> ;
+  rdfs:label "Attacks Affected" ;
+  rdf:value "Attack rolls against you have Advantage, and your attack rolls have Disadvantage." ;
+  dyn:effectKey "attacks-affected" ;
+  dyn:effectKind "d20-modifier" ;
+  dyn:mechanicalStatus "structured-not-mask" ;
+  dyn:sourceSection "Rules Glossary: Blinded [Condition]" ;
+  dyn:adjudicationNote "Attack-roll advantage and disadvantage are roll modifiers, not action masks." .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/charmed>
+  a dyn:ConditionDefinition, skos:Concept ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions> ;
+  rdfs:label "Charmed" ;
+  dyn:conditionKey "charmed" ;
+  dyn:sourceSection "Rules Glossary: Charmed [Condition]" ;
+  dyn:hasConditionEffect <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/charmed/effect/cant-harm-the-charmer>,
+    <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/charmed/effect/social-advantage> .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/charmed/effect/cant-harm-the-charmer>
+  a dyn:ConditionEffect, dyn:AffordanceMaskDefinition ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/charmed> ;
+  rdfs:label "Can't Harm the Charmer" ;
+  rdf:value "You can't attack the charmer or target the charmer with damaging abilities or magical effects." ;
+  dyn:effectKey "cant-harm-the-charmer" ;
+  dyn:effectKind "conditional-affordance-mask" ;
+  dyn:mechanicalStatus "adjudication-scoped-mask" ;
+  dyn:sourceSection "Rules Glossary: Charmed [Condition]" ;
+  dyn:adjudicationNote "The mask is source-scoped to the charmer and does not prohibit harm against others." ;
+  dyn:masksActionType dyn:HarmConditionSource .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/charmed/effect/social-advantage>
+  a dyn:ConditionEffect ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/charmed> ;
+  rdfs:label "Social Advantage" ;
+  rdf:value "The charmer has Advantage on any ability check to interact with you socially." ;
+  dyn:effectKey "social-advantage" ;
+  dyn:effectKind "d20-modifier" ;
+  dyn:mechanicalStatus "structured-not-mask" ;
+  dyn:sourceSection "Rules Glossary: Charmed [Condition]" ;
+  dyn:adjudicationNote "Social interaction advantage is a roll modifier, not an action mask." .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/deafened>
+  a dyn:ConditionDefinition, skos:Concept ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions> ;
+  rdfs:label "Deafened" ;
+  dyn:conditionKey "deafened" ;
+  dyn:sourceSection "Rules Glossary: Deafened [Condition]" ;
+  dyn:hasConditionEffect <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/deafened/effect/cant-hear> .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/deafened/effect/cant-hear>
+  a dyn:ConditionEffect, dyn:AffordanceMaskDefinition ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/deafened> ;
+  rdfs:label "Can't Hear" ;
+  rdf:value "You can't hear and automatically fail any ability check that requires hearing." ;
+  dyn:effectKey "cant-hear" ;
+  dyn:effectKind "sensory-mask" ;
+  dyn:mechanicalStatus "codified-mask" ;
+  dyn:sourceSection "Rules Glossary: Deafened [Condition]" ;
+  dyn:adjudicationNote "The ability-check auto-failure depends on whether a check requires hearing; the mask records the sensory affordance only." ;
+  dyn:masksActionType dyn:UseHearing .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/exhaustion>
+  a dyn:ConditionDefinition, skos:Concept ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions> ;
+  rdfs:label "Exhaustion" ;
+  dyn:conditionKey "exhaustion" ;
+  dyn:sourceSection "Rules Glossary: Exhaustion [Condition]" ;
+  dyn:hasConditionEffect <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/exhaustion/effect/exhaustion-levels>,
+    <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/exhaustion/effect/d20-tests-affected>,
+    <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/exhaustion/effect/speed-reduced>,
+    <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/exhaustion/effect/removing-exhaustion-levels> .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/exhaustion/effect/exhaustion-levels>
+  a dyn:ConditionEffect ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/exhaustion> ;
+  rdfs:label "Exhaustion Levels" ;
+  rdf:value "This condition is cumulative. Each time you receive it, you gain 1 Exhaustion level. You die if your Exhaustion level is 6." ;
+  dyn:effectKey "exhaustion-levels" ;
+  dyn:effectKind "condition-counter" ;
+  dyn:mechanicalStatus "structured-not-mask" ;
+  dyn:sourceSection "Rules Glossary: Exhaustion [Condition]" ;
+  dyn:adjudicationNote "Exhaustion levels are cumulative condition state, not an affordance mask." .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/exhaustion/effect/d20-tests-affected>
+  a dyn:ConditionEffect ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/exhaustion> ;
+  rdfs:label "D20 Tests Affected" ;
+  rdf:value "When you make a D20 Test, the roll is reduced by 2 times your Exhaustion level." ;
+  dyn:effectKey "d20-tests-affected" ;
+  dyn:effectKind "d20-modifier" ;
+  dyn:mechanicalStatus "structured-not-mask" ;
+  dyn:sourceSection "Rules Glossary: Exhaustion [Condition]" ;
+  dyn:adjudicationNote "The roll reduction is mechanical but is not an action mask." .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/exhaustion/effect/speed-reduced>
+  a dyn:ConditionEffect ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/exhaustion> ;
+  rdfs:label "Speed Reduced" ;
+  rdf:value "Your Speed is reduced by a number of feet equal to 5 times your Exhaustion level." ;
+  dyn:effectKey "speed-reduced" ;
+  dyn:effectKind "movement-modifier" ;
+  dyn:mechanicalStatus "structured-not-mask" ;
+  dyn:sourceSection "Rules Glossary: Exhaustion [Condition]" ;
+  dyn:adjudicationNote "Speed reduction may limit movement distance without masking Move entirely." .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/exhaustion/effect/removing-exhaustion-levels>
+  a dyn:ConditionEffect ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/exhaustion> ;
+  rdfs:label "Removing Exhaustion Levels" ;
+  rdf:value "Finishing a Long Rest removes 1 of your Exhaustion levels. When your Exhaustion level reaches 0, the condition ends." ;
+  dyn:effectKey "removing-exhaustion-levels" ;
+  dyn:effectKind "condition-recovery" ;
+  dyn:mechanicalStatus "structured-not-mask" ;
+  dyn:sourceSection "Rules Glossary: Exhaustion [Condition]" ;
+  dyn:adjudicationNote "Recovery timing is condition lifecycle data, not an action mask." .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/frightened>
+  a dyn:ConditionDefinition, skos:Concept ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions> ;
+  rdfs:label "Frightened" ;
+  dyn:conditionKey "frightened" ;
+  dyn:sourceSection "Rules Glossary: Frightened [Condition]" ;
+  dyn:hasConditionEffect <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/frightened/effect/ability-checks-and-attacks-affected>,
+    <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/frightened/effect/cant-approach> .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/frightened/effect/ability-checks-and-attacks-affected>
+  a dyn:ConditionEffect ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/frightened> ;
+  rdfs:label "Ability Checks and Attacks Affected" ;
+  rdf:value "You have Disadvantage on ability checks and attack rolls while the source of fear is within line of sight." ;
+  dyn:effectKey "ability-checks-and-attacks-affected" ;
+  dyn:effectKind "d20-modifier" ;
+  dyn:mechanicalStatus "structured-not-mask" ;
+  dyn:sourceSection "Rules Glossary: Frightened [Condition]" ;
+  dyn:adjudicationNote "The line-of-sight roll modifier is not an action mask." .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/frightened/effect/cant-approach>
+  a dyn:ConditionEffect, dyn:AffordanceMaskDefinition ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/frightened> ;
+  rdfs:label "Can't Approach" ;
+  rdf:value "You can't willingly move closer to the source of fear." ;
+  dyn:effectKey "cant-approach" ;
+  dyn:effectKind "conditional-affordance-mask" ;
+  dyn:mechanicalStatus "adjudication-scoped-mask" ;
+  dyn:sourceSection "Rules Glossary: Frightened [Condition]" ;
+  dyn:adjudicationNote "The mask applies only to willing movement closer to the fear source." ;
+  dyn:masksActionType dyn:MoveCloserToConditionSource .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/grappled>
+  a dyn:ConditionDefinition, skos:Concept ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions> ;
+  rdfs:label "Grappled" ;
+  dyn:conditionKey "grappled" ;
+  dyn:sourceSection "Rules Glossary: Grappled [Condition]" ;
+  dyn:hasConditionEffect <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/grappled/effect/speed-0>,
+    <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/grappled/effect/attacks-affected>,
+    <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/grappled/effect/movable> .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/grappled/effect/speed-0>
+  a dyn:ConditionEffect, dyn:AffordanceMaskDefinition ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/grappled> ;
+  rdfs:label "Speed 0" ;
+  rdf:value "Your Speed is 0 and can't increase." ;
+  dyn:effectKey "speed-0" ;
+  dyn:effectKind "affordance-mask" ;
+  dyn:mechanicalStatus "codified-mask" ;
+  dyn:sourceSection "Rules Glossary: Grappled [Condition]" ;
+  dyn:masksActionType dyn:Move .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/grappled/effect/attacks-affected>
+  a dyn:ConditionEffect ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/grappled> ;
+  rdfs:label "Attacks Affected" ;
+  rdf:value "You have Disadvantage on attack rolls against any target other than the grappler." ;
+  dyn:effectKey "attacks-affected" ;
+  dyn:effectKind "d20-modifier" ;
+  dyn:mechanicalStatus "structured-not-mask" ;
+  dyn:sourceSection "Rules Glossary: Grappled [Condition]" ;
+  dyn:adjudicationNote "The attack-roll disadvantage is a roll modifier, not an action mask." .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/grappled/effect/movable>
+  a dyn:ConditionEffect ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/grappled> ;
+  rdfs:label "Movable" ;
+  rdf:value "The grappler can drag or carry you when it moves, but every foot of movement costs it 1 extra foot unless you are Tiny or two or more sizes smaller than it." ;
+  dyn:effectKey "movable" ;
+  dyn:effectKind "movement-adjudication" ;
+  dyn:mechanicalStatus "adjudication-required" ;
+  dyn:sourceSection "Rules Glossary: Grappled [Condition]" ;
+  dyn:adjudicationNote "Dragging or carrying the grappled target depends on grappler movement and relative size." .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/incapacitated>
+  a dyn:ConditionDefinition, skos:Concept ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions> ;
+  rdfs:label "Incapacitated" ;
+  dyn:conditionKey "incapacitated" ;
+  dyn:sourceSection "Rules Glossary: Incapacitated [Condition]" ;
+  dyn:hasConditionEffect <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/incapacitated/effect/inactive>,
+    <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/incapacitated/effect/no-concentration>,
+    <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/incapacitated/effect/speechless>,
+    <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/incapacitated/effect/surprised> .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/incapacitated/effect/inactive>
+  a dyn:ConditionEffect, dyn:AffordanceMaskDefinition ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/incapacitated> ;
+  rdfs:label "Inactive" ;
+  rdf:value "You can't take any action, Bonus Action, or Reaction." ;
+  dyn:effectKey "inactive" ;
+  dyn:effectKind "affordance-mask" ;
+  dyn:mechanicalStatus "codified-mask" ;
+  dyn:sourceSection "Rules Glossary: Incapacitated [Condition]" ;
+  dyn:masksActionType dyn:TakeAction, dyn:TakeBonusAction, dyn:TakeReaction .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/incapacitated/effect/no-concentration>
+  a dyn:ConditionEffect, dyn:AffordanceMaskDefinition ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/incapacitated> ;
+  rdfs:label "No Concentration" ;
+  rdf:value "Your Concentration is broken." ;
+  dyn:effectKey "no-concentration" ;
+  dyn:effectKind "affordance-mask" ;
+  dyn:mechanicalStatus "codified-mask" ;
+  dyn:sourceSection "Rules Glossary: Incapacitated [Condition]" ;
+  dyn:masksActionType dyn:MaintainConcentration .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/incapacitated/effect/speechless>
+  a dyn:ConditionEffect, dyn:AffordanceMaskDefinition ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/incapacitated> ;
+  rdfs:label "Speechless" ;
+  rdf:value "You can't speak." ;
+  dyn:effectKey "speechless" ;
+  dyn:effectKind "affordance-mask" ;
+  dyn:mechanicalStatus "codified-mask" ;
+  dyn:sourceSection "Rules Glossary: Incapacitated [Condition]" ;
+  dyn:masksActionType dyn:Speak .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/incapacitated/effect/surprised>
+  a dyn:ConditionEffect ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/incapacitated> ;
+  rdfs:label "Surprised" ;
+  rdf:value "If you're Incapacitated when you roll Initiative, you have Disadvantage on the roll." ;
+  dyn:effectKey "surprised" ;
+  dyn:effectKind "d20-modifier" ;
+  dyn:mechanicalStatus "structured-not-mask" ;
+  dyn:sourceSection "Rules Glossary: Incapacitated [Condition]" ;
+  dyn:adjudicationNote "Initiative disadvantage is a roll modifier, not an action mask." .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/invisible>
+  a dyn:ConditionDefinition, skos:Concept ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions> ;
+  rdfs:label "Invisible" ;
+  dyn:conditionKey "invisible" ;
+  dyn:sourceSection "Rules Glossary: Invisible [Condition]" ;
+  dyn:hasConditionEffect <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/invisible/effect/surprise>,
+    <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/invisible/effect/concealed>,
+    <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/invisible/effect/attacks-affected> .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/invisible/effect/surprise>
+  a dyn:ConditionEffect ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/invisible> ;
+  rdfs:label "Surprise" ;
+  rdf:value "If you're Invisible when you roll Initiative, you have Advantage on the roll." ;
+  dyn:effectKey "surprise" ;
+  dyn:effectKind "d20-modifier" ;
+  dyn:mechanicalStatus "structured-not-mask" ;
+  dyn:sourceSection "Rules Glossary: Invisible [Condition]" ;
+  dyn:adjudicationNote "Initiative advantage is a roll modifier, not an action mask." .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/invisible/effect/concealed>
+  a dyn:ConditionEffect ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/invisible> ;
+  rdfs:label "Concealed" ;
+  rdf:value "You aren't affected by any effect that requires its target to be seen unless the effect's creator can somehow see you. Any equipment you are wearing or carrying is also concealed." ;
+  dyn:effectKey "concealed" ;
+  dyn:effectKind "targeting-adjudication" ;
+  dyn:mechanicalStatus "adjudication-required" ;
+  dyn:sourceSection "Rules Glossary: Invisible [Condition]" ;
+  dyn:adjudicationNote "Sight-required targeting is source/observer dependent; this package records the prose rather than inventing a targeting engine." .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/invisible/effect/attacks-affected>
+  a dyn:ConditionEffect ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/invisible> ;
+  rdfs:label "Attacks Affected" ;
+  rdf:value "Attack rolls against you have Disadvantage, and your attack rolls have Advantage. If a creature can somehow see you, you don't gain this benefit against that creature." ;
+  dyn:effectKey "attacks-affected" ;
+  dyn:effectKind "d20-modifier" ;
+  dyn:mechanicalStatus "structured-not-mask" ;
+  dyn:sourceSection "Rules Glossary: Invisible [Condition]" ;
+  dyn:adjudicationNote "Attack-roll advantage and disadvantage are roll modifiers, not action masks." .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/paralyzed>
+  a dyn:ConditionDefinition, skos:Concept ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions> ;
+  rdfs:label "Paralyzed" ;
+  dyn:conditionKey "paralyzed" ;
+  dyn:sourceSection "Rules Glossary: Paralyzed [Condition]" ;
+  dyn:hasConditionEffect <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/paralyzed/effect/incapacitated>,
+    <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/paralyzed/effect/speed-0>,
+    <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/paralyzed/effect/saving-throws-affected>,
+    <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/paralyzed/effect/attacks-affected>,
+    <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/paralyzed/effect/automatic-critical-hits> .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/paralyzed/effect/incapacitated>
+  a dyn:ConditionEffect, dyn:AffordanceMaskDefinition ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/paralyzed> ;
+  rdfs:label "Incapacitated" ;
+  rdf:value "You have the Incapacitated condition." ;
+  dyn:effectKey "incapacitated" ;
+  dyn:effectKind "condition-reference-mask" ;
+  dyn:mechanicalStatus "codified-mask" ;
+  dyn:sourceSection "Rules Glossary: Paralyzed [Condition]" ;
+  dyn:adjudicationNote "The action masks derive from the embedded Incapacitated condition." ;
+  dyn:masksActionType dyn:TakeAction, dyn:TakeBonusAction, dyn:TakeReaction, dyn:MaintainConcentration, dyn:Speak .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/paralyzed/effect/speed-0>
+  a dyn:ConditionEffect, dyn:AffordanceMaskDefinition ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/paralyzed> ;
+  rdfs:label "Speed 0" ;
+  rdf:value "Your Speed is 0 and can't increase." ;
+  dyn:effectKey "speed-0" ;
+  dyn:effectKind "affordance-mask" ;
+  dyn:mechanicalStatus "codified-mask" ;
+  dyn:sourceSection "Rules Glossary: Paralyzed [Condition]" ;
+  dyn:masksActionType dyn:Move .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/paralyzed/effect/saving-throws-affected>
+  a dyn:ConditionEffect ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/paralyzed> ;
+  rdfs:label "Saving Throws Affected" ;
+  rdf:value "You automatically fail Strength and Dexterity saving throws." ;
+  dyn:effectKey "saving-throws-affected" ;
+  dyn:effectKind "automatic-failure" ;
+  dyn:mechanicalStatus "structured-not-mask" ;
+  dyn:sourceSection "Rules Glossary: Paralyzed [Condition]" ;
+  dyn:adjudicationNote "Automatic save failure is mechanical but is not an action mask." .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/paralyzed/effect/attacks-affected>
+  a dyn:ConditionEffect ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/paralyzed> ;
+  rdfs:label "Attacks Affected" ;
+  rdf:value "Attack rolls against you have Advantage." ;
+  dyn:effectKey "attacks-affected" ;
+  dyn:effectKind "d20-modifier" ;
+  dyn:mechanicalStatus "structured-not-mask" ;
+  dyn:sourceSection "Rules Glossary: Paralyzed [Condition]" ;
+  dyn:adjudicationNote "Attack-roll advantage is a roll modifier, not an action mask." .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/paralyzed/effect/automatic-critical-hits>
+  a dyn:ConditionEffect ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/paralyzed> ;
+  rdfs:label "Automatic Critical Hits" ;
+  rdf:value "Any attack roll that hits you is a Critical Hit if the attacker is within 5 feet of you." ;
+  dyn:effectKey "automatic-critical-hits" ;
+  dyn:effectKind "hit-resolution" ;
+  dyn:mechanicalStatus "structured-not-mask" ;
+  dyn:sourceSection "Rules Glossary: Paralyzed [Condition]" ;
+  dyn:adjudicationNote "Critical-hit conversion is attack resolution data, not an action mask." .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/petrified>
+  a dyn:ConditionDefinition, skos:Concept ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions> ;
+  rdfs:label "Petrified" ;
+  dyn:conditionKey "petrified" ;
+  dyn:sourceSection "Rules Glossary: Petrified [Condition]" ;
+  dyn:hasConditionEffect <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/petrified/effect/turned-to-inanimate-substance>,
+    <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/petrified/effect/incapacitated>,
+    <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/petrified/effect/speed-0>,
+    <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/petrified/effect/attacks-affected>,
+    <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/petrified/effect/saving-throws-affected>,
+    <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/petrified/effect/resist-damage>,
+    <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/petrified/effect/poison-immunity> .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/petrified/effect/turned-to-inanimate-substance>
+  a dyn:ConditionEffect ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/petrified> ;
+  rdfs:label "Turned to Inanimate Substance" ;
+  rdf:value "You are transformed, along with any nonmagical objects you are wearing and carrying, into a solid inanimate substance (usually stone). Your weight increases by a factor of ten, and you cease aging." ;
+  dyn:effectKey "turned-to-inanimate-substance" ;
+  dyn:effectKind "state-transformation" ;
+  dyn:mechanicalStatus "adjudication-required" ;
+  dyn:sourceSection "Rules Glossary: Petrified [Condition]" ;
+  dyn:adjudicationNote "The transformation affects physical state and carried nonmagical objects; no action mask is invented here." .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/petrified/effect/incapacitated>
+  a dyn:ConditionEffect, dyn:AffordanceMaskDefinition ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/petrified> ;
+  rdfs:label "Incapacitated" ;
+  rdf:value "You have the Incapacitated condition." ;
+  dyn:effectKey "incapacitated" ;
+  dyn:effectKind "condition-reference-mask" ;
+  dyn:mechanicalStatus "codified-mask" ;
+  dyn:sourceSection "Rules Glossary: Petrified [Condition]" ;
+  dyn:adjudicationNote "The action masks derive from the embedded Incapacitated condition." ;
+  dyn:masksActionType dyn:TakeAction, dyn:TakeBonusAction, dyn:TakeReaction, dyn:MaintainConcentration, dyn:Speak .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/petrified/effect/speed-0>
+  a dyn:ConditionEffect, dyn:AffordanceMaskDefinition ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/petrified> ;
+  rdfs:label "Speed 0" ;
+  rdf:value "Your Speed is 0 and can't increase." ;
+  dyn:effectKey "speed-0" ;
+  dyn:effectKind "affordance-mask" ;
+  dyn:mechanicalStatus "codified-mask" ;
+  dyn:sourceSection "Rules Glossary: Petrified [Condition]" ;
+  dyn:masksActionType dyn:Move .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/petrified/effect/attacks-affected>
+  a dyn:ConditionEffect ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/petrified> ;
+  rdfs:label "Attacks Affected" ;
+  rdf:value "Attack rolls against you have Advantage." ;
+  dyn:effectKey "attacks-affected" ;
+  dyn:effectKind "d20-modifier" ;
+  dyn:mechanicalStatus "structured-not-mask" ;
+  dyn:sourceSection "Rules Glossary: Petrified [Condition]" ;
+  dyn:adjudicationNote "Attack-roll advantage is a roll modifier, not an action mask." .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/petrified/effect/saving-throws-affected>
+  a dyn:ConditionEffect ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/petrified> ;
+  rdfs:label "Saving Throws Affected" ;
+  rdf:value "You automatically fail Strength and Dexterity saving throws." ;
+  dyn:effectKey "saving-throws-affected" ;
+  dyn:effectKind "automatic-failure" ;
+  dyn:mechanicalStatus "structured-not-mask" ;
+  dyn:sourceSection "Rules Glossary: Petrified [Condition]" ;
+  dyn:adjudicationNote "Automatic save failure is mechanical but is not an action mask." .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/petrified/effect/resist-damage>
+  a dyn:ConditionEffect ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/petrified> ;
+  rdfs:label "Resist Damage" ;
+  rdf:value "You have Resistance to all damage." ;
+  dyn:effectKey "resist-damage" ;
+  dyn:effectKind "damage-modifier" ;
+  dyn:mechanicalStatus "structured-not-mask" ;
+  dyn:sourceSection "Rules Glossary: Petrified [Condition]" ;
+  dyn:adjudicationNote "Damage resistance is not an action mask." .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/petrified/effect/poison-immunity>
+  a dyn:ConditionEffect ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/petrified> ;
+  rdfs:label "Poison Immunity" ;
+  rdf:value "You have Immunity to the Poisoned condition." ;
+  dyn:effectKey "poison-immunity" ;
+  dyn:effectKind "immunity" ;
+  dyn:mechanicalStatus "structured-not-mask" ;
+  dyn:sourceSection "Rules Glossary: Petrified [Condition]" ;
+  dyn:adjudicationNote "Condition immunity is not an action mask." .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/poisoned>
+  a dyn:ConditionDefinition, skos:Concept ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions> ;
+  rdfs:label "Poisoned" ;
+  dyn:conditionKey "poisoned" ;
+  dyn:sourceSection "Rules Glossary: Poisoned [Condition]" ;
+  dyn:hasConditionEffect <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/poisoned/effect/ability-checks-and-attacks-affected> .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/poisoned/effect/ability-checks-and-attacks-affected>
+  a dyn:ConditionEffect ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/poisoned> ;
+  rdfs:label "Ability Checks and Attacks Affected" ;
+  rdf:value "You have Disadvantage on attack rolls and ability checks." ;
+  dyn:effectKey "ability-checks-and-attacks-affected" ;
+  dyn:effectKind "d20-modifier" ;
+  dyn:mechanicalStatus "structured-not-mask" ;
+  dyn:sourceSection "Rules Glossary: Poisoned [Condition]" ;
+  dyn:adjudicationNote "Attack-roll and ability-check disadvantage are roll modifiers, not action masks." .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/prone>
+  a dyn:ConditionDefinition, skos:Concept ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions> ;
+  rdfs:label "Prone" ;
+  dyn:conditionKey "prone" ;
+  dyn:sourceSection "Rules Glossary: Prone [Condition]" ;
+  dyn:hasConditionEffect <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/prone/effect/restricted-movement>,
+    <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/prone/effect/attacks-affected> .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/prone/effect/restricted-movement>
+  a dyn:ConditionEffect ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/prone> ;
+  rdfs:label "Restricted Movement" ;
+  rdf:value "Your only movement options are to crawl or to spend an amount of movement equal to half your Speed (round down) to right yourself and thereby end the condition. If your Speed is 0, you can't right yourself." ;
+  dyn:effectKey "restricted-movement" ;
+  dyn:effectKind "movement-restriction" ;
+  dyn:mechanicalStatus "adjudication-required" ;
+  dyn:sourceSection "Rules Glossary: Prone [Condition]" ;
+  dyn:adjudicationNote "Prone constrains movement modes and standing cost but does not mask Move entirely." .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/prone/effect/attacks-affected>
+  a dyn:ConditionEffect ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/prone> ;
+  rdfs:label "Attacks Affected" ;
+  rdf:value "You have Disadvantage on attack rolls. An attack roll against you has Advantage if the attacker is within 5 feet of you. Otherwise, that attack roll has Disadvantage." ;
+  dyn:effectKey "attacks-affected" ;
+  dyn:effectKind "d20-modifier" ;
+  dyn:mechanicalStatus "structured-not-mask" ;
+  dyn:sourceSection "Rules Glossary: Prone [Condition]" ;
+  dyn:adjudicationNote "Attack-roll advantage and disadvantage are roll modifiers, not action masks." .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/restrained>
+  a dyn:ConditionDefinition, skos:Concept ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions> ;
+  rdfs:label "Restrained" ;
+  dyn:conditionKey "restrained" ;
+  dyn:sourceSection "Rules Glossary: Restrained [Condition]" ;
+  dyn:hasConditionEffect <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/restrained/effect/speed-0>,
+    <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/restrained/effect/attacks-affected>,
+    <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/restrained/effect/saving-throws-affected> .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/restrained/effect/speed-0>
+  a dyn:ConditionEffect, dyn:AffordanceMaskDefinition ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/restrained> ;
+  rdfs:label "Speed 0" ;
+  rdf:value "Your Speed is 0 and can't increase." ;
+  dyn:effectKey "speed-0" ;
+  dyn:effectKind "affordance-mask" ;
+  dyn:mechanicalStatus "codified-mask" ;
+  dyn:sourceSection "Rules Glossary: Restrained [Condition]" ;
+  dyn:masksActionType dyn:Move .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/restrained/effect/attacks-affected>
+  a dyn:ConditionEffect ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/restrained> ;
+  rdfs:label "Attacks Affected" ;
+  rdf:value "Attack rolls against you have Advantage, and your attack rolls have Disadvantage." ;
+  dyn:effectKey "attacks-affected" ;
+  dyn:effectKind "d20-modifier" ;
+  dyn:mechanicalStatus "structured-not-mask" ;
+  dyn:sourceSection "Rules Glossary: Restrained [Condition]" ;
+  dyn:adjudicationNote "Attack-roll advantage and disadvantage are roll modifiers, not action masks." .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/restrained/effect/saving-throws-affected>
+  a dyn:ConditionEffect ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/restrained> ;
+  rdfs:label "Saving Throws Affected" ;
+  rdf:value "You have Disadvantage on Dexterity saving throws." ;
+  dyn:effectKey "saving-throws-affected" ;
+  dyn:effectKind "d20-modifier" ;
+  dyn:mechanicalStatus "structured-not-mask" ;
+  dyn:sourceSection "Rules Glossary: Restrained [Condition]" ;
+  dyn:adjudicationNote "Dexterity-save disadvantage is a roll modifier, not an action mask." .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/stunned>
+  a dyn:ConditionDefinition, skos:Concept ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions> ;
+  rdfs:label "Stunned" ;
+  dyn:conditionKey "stunned" ;
+  dyn:sourceSection "Rules Glossary: Stunned [Condition]" ;
+  dyn:hasConditionEffect <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/stunned/effect/incapacitated>,
+    <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/stunned/effect/saving-throws-affected>,
+    <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/stunned/effect/attacks-affected> .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/stunned/effect/incapacitated>
+  a dyn:ConditionEffect, dyn:AffordanceMaskDefinition ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/stunned> ;
+  rdfs:label "Incapacitated" ;
+  rdf:value "You have the Incapacitated condition." ;
+  dyn:effectKey "incapacitated" ;
+  dyn:effectKind "condition-reference-mask" ;
+  dyn:mechanicalStatus "codified-mask" ;
+  dyn:sourceSection "Rules Glossary: Stunned [Condition]" ;
+  dyn:adjudicationNote "The action masks derive from the embedded Incapacitated condition." ;
+  dyn:masksActionType dyn:TakeAction, dyn:TakeBonusAction, dyn:TakeReaction, dyn:MaintainConcentration, dyn:Speak .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/stunned/effect/saving-throws-affected>
+  a dyn:ConditionEffect ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/stunned> ;
+  rdfs:label "Saving Throws Affected" ;
+  rdf:value "You automatically fail Strength and Dexterity saving throws." ;
+  dyn:effectKey "saving-throws-affected" ;
+  dyn:effectKind "automatic-failure" ;
+  dyn:mechanicalStatus "structured-not-mask" ;
+  dyn:sourceSection "Rules Glossary: Stunned [Condition]" ;
+  dyn:adjudicationNote "Automatic save failure is mechanical but is not an action mask." .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/stunned/effect/attacks-affected>
+  a dyn:ConditionEffect ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/stunned> ;
+  rdfs:label "Attacks Affected" ;
+  rdf:value "Attack rolls against you have Advantage." ;
+  dyn:effectKey "attacks-affected" ;
+  dyn:effectKind "d20-modifier" ;
+  dyn:mechanicalStatus "structured-not-mask" ;
+  dyn:sourceSection "Rules Glossary: Stunned [Condition]" ;
+  dyn:adjudicationNote "Attack-roll advantage is a roll modifier, not an action mask." .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/unconscious>
+  a dyn:ConditionDefinition, skos:Concept ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions> ;
+  rdfs:label "Unconscious" ;
+  dyn:conditionKey "unconscious" ;
+  dyn:sourceSection "Rules Glossary: Unconscious [Condition]" ;
+  dyn:hasConditionEffect <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/unconscious/effect/inert>,
+    <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/unconscious/effect/speed-0>,
+    <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/unconscious/effect/attacks-affected>,
+    <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/unconscious/effect/saving-throws-affected>,
+    <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/unconscious/effect/automatic-critical-hits>,
+    <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/unconscious/effect/unaware> .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/unconscious/effect/inert>
+  a dyn:ConditionEffect, dyn:AffordanceMaskDefinition ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/unconscious> ;
+  rdfs:label "Inert" ;
+  rdf:value "You have the Incapacitated and Prone conditions, and you drop whatever you're holding. When this condition ends, you remain Prone." ;
+  dyn:effectKey "inert" ;
+  dyn:effectKind "condition-reference-mask" ;
+  dyn:mechanicalStatus "codified-mask" ;
+  dyn:sourceSection "Rules Glossary: Unconscious [Condition]" ;
+  dyn:adjudicationNote "The action masks derive from the embedded Incapacitated condition; dropping held objects and remaining Prone are recorded as prose." ;
+  dyn:masksActionType dyn:TakeAction, dyn:TakeBonusAction, dyn:TakeReaction, dyn:MaintainConcentration, dyn:Speak .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/unconscious/effect/speed-0>
+  a dyn:ConditionEffect, dyn:AffordanceMaskDefinition ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/unconscious> ;
+  rdfs:label "Speed 0" ;
+  rdf:value "Your Speed is 0 and can't increase." ;
+  dyn:effectKey "speed-0" ;
+  dyn:effectKind "affordance-mask" ;
+  dyn:mechanicalStatus "codified-mask" ;
+  dyn:sourceSection "Rules Glossary: Unconscious [Condition]" ;
+  dyn:masksActionType dyn:Move .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/unconscious/effect/attacks-affected>
+  a dyn:ConditionEffect ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/unconscious> ;
+  rdfs:label "Attacks Affected" ;
+  rdf:value "Attack rolls against you have Advantage." ;
+  dyn:effectKey "attacks-affected" ;
+  dyn:effectKind "d20-modifier" ;
+  dyn:mechanicalStatus "structured-not-mask" ;
+  dyn:sourceSection "Rules Glossary: Unconscious [Condition]" ;
+  dyn:adjudicationNote "Attack-roll advantage is a roll modifier, not an action mask." .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/unconscious/effect/saving-throws-affected>
+  a dyn:ConditionEffect ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/unconscious> ;
+  rdfs:label "Saving Throws Affected" ;
+  rdf:value "You automatically fail Strength and Dexterity saving throws." ;
+  dyn:effectKey "saving-throws-affected" ;
+  dyn:effectKind "automatic-failure" ;
+  dyn:mechanicalStatus "structured-not-mask" ;
+  dyn:sourceSection "Rules Glossary: Unconscious [Condition]" ;
+  dyn:adjudicationNote "Automatic save failure is mechanical but is not an action mask." .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/unconscious/effect/automatic-critical-hits>
+  a dyn:ConditionEffect ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/unconscious> ;
+  rdfs:label "Automatic Critical Hits" ;
+  rdf:value "Any attack roll that hits you is a Critical Hit if the attacker is within 5 feet of you." ;
+  dyn:effectKey "automatic-critical-hits" ;
+  dyn:effectKind "hit-resolution" ;
+  dyn:mechanicalStatus "structured-not-mask" ;
+  dyn:sourceSection "Rules Glossary: Unconscious [Condition]" ;
+  dyn:adjudicationNote "Critical-hit conversion is attack resolution data, not an action mask." .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/unconscious/effect/unaware>
+  a dyn:ConditionEffect ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/unconscious> ;
+  rdfs:label "Unaware" ;
+  rdf:value "You're unaware of your surroundings." ;
+  dyn:effectKey "unaware" ;
+  dyn:effectKind "perception-adjudication" ;
+  dyn:mechanicalStatus "adjudication-required" ;
+  dyn:sourceSection "Rules Glossary: Unconscious [Condition]" ;
+  dyn:adjudicationNote "Awareness is observer/context dependent; this package keeps the source prose without inventing a perception engine." .

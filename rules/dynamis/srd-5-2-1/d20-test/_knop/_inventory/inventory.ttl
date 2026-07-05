@@ -1,0 +1,65 @@
+@base <https://spectacular-voyage.github.io/test-inn-ambush/> .
+@prefix sflo: <https://semantic-flow.github.io/sflo/ontology/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<rules/dynamis/srd-5-2-1/d20-test/_knop> a sflo:Knop ;
+  sflo:hasKnopMetadata <rules/dynamis/srd-5-2-1/d20-test/_knop/_meta> ;
+  sflo:hasKnopInventory <rules/dynamis/srd-5-2-1/d20-test/_knop/_inventory> ;
+  sflo:hasWorkingKnopInventoryFile <rules/dynamis/srd-5-2-1/d20-test/_knop/_inventory/inventory.ttl> ;
+  sflo:hasPayloadArtifact <rules/dynamis/srd-5-2-1/d20-test> ;
+  sflo:hasResourcePage <rules/dynamis/srd-5-2-1/d20-test/_knop/index.html> .
+
+<rules/dynamis/srd-5-2-1/d20-test> a sflo:PayloadArtifact, sflo:DigitalArtifact, sflo:RdfDocument ;
+  sflo:hasArtifactHistory <rules/dynamis/srd-5-2-1/d20-test/_history001> ;
+  sflo:currentArtifactHistory <rules/dynamis/srd-5-2-1/d20-test/_history001> ;
+  sflo:nextHistoryOrdinal "2"^^xsd:nonNegativeInteger ;
+  sflo:hasWorkingLocatedFile <rules/dynamis/srd-5-2-1/d20-test/d20-test.ttl> ;
+  sflo:hasResourcePage <rules/dynamis/srd-5-2-1/d20-test/index.html> .
+
+<rules/dynamis/srd-5-2-1/d20-test/_history001> a sflo:ArtifactHistory ;
+  sflo:historyOrdinal "1"^^xsd:nonNegativeInteger ;
+  sflo:hasHistoricalState <rules/dynamis/srd-5-2-1/d20-test/_history001/_s0001> ;
+  sflo:latestHistoricalState <rules/dynamis/srd-5-2-1/d20-test/_history001/_s0001> ;
+  sflo:nextStateOrdinal "2"^^xsd:nonNegativeInteger ;
+  sflo:hasResourcePage <rules/dynamis/srd-5-2-1/d20-test/_history001/index.html> .
+
+<rules/dynamis/srd-5-2-1/d20-test/_history001/_s0001> a sflo:HistoricalState ;
+  sflo:stateOrdinal "1"^^xsd:nonNegativeInteger ;
+  sflo:hasManifestation <rules/dynamis/srd-5-2-1/d20-test/_history001/_s0001/ttl> ;
+  sflo:locatedFileForState <rules/dynamis/srd-5-2-1/d20-test/_history001/_s0001/ttl/d20-test.ttl> ;
+  sflo:hasResourcePage <rules/dynamis/srd-5-2-1/d20-test/_history001/_s0001/index.html> .
+
+<rules/dynamis/srd-5-2-1/d20-test/_history001/_s0001/ttl> a sflo:ArtifactManifestation, sflo:RdfDocument ;
+  sflo:locatedFileForManifestation <rules/dynamis/srd-5-2-1/d20-test/_history001/_s0001/ttl/d20-test.ttl> ;
+  sflo:hasResourcePage <rules/dynamis/srd-5-2-1/d20-test/_history001/_s0001/ttl/index.html> .
+
+<rules/dynamis/srd-5-2-1/d20-test/_knop/_meta> a sflo:KnopMetadata, sflo:DigitalArtifact, sflo:RdfDocument ;
+  sflo:hasWorkingLocatedFile <rules/dynamis/srd-5-2-1/d20-test/_knop/_meta/meta.ttl> ;
+  sflo:hasResourcePage <rules/dynamis/srd-5-2-1/d20-test/_knop/_meta/index.html> .
+
+<rules/dynamis/srd-5-2-1/d20-test/_knop/_inventory> a sflo:KnopInventory, sflo:DigitalArtifact, sflo:RdfDocument ;
+  sflo:hasWorkingLocatedFile <rules/dynamis/srd-5-2-1/d20-test/_knop/_inventory/inventory.ttl> ;
+  sflo:hasResourcePage <rules/dynamis/srd-5-2-1/d20-test/_knop/_inventory/index.html> .
+
+<rules/dynamis/srd-5-2-1/d20-test/_knop/_meta/meta.ttl> a sflo:LocatedFile, sflo:RdfDocument .
+
+<rules/dynamis/srd-5-2-1/d20-test/_knop/_inventory/inventory.ttl> a sflo:LocatedFile, sflo:RdfDocument .
+
+<rules/dynamis/srd-5-2-1/d20-test/d20-test.ttl> a sflo:LocatedFile, sflo:RdfDocument .
+
+<rules/dynamis/srd-5-2-1/d20-test/_history001/_s0001/ttl/d20-test.ttl> a sflo:LocatedFile, sflo:RdfDocument .
+
+<rules/dynamis/srd-5-2-1/d20-test/index.html> a sflo:ResourcePage, sflo:LocatedFile .
+
+<rules/dynamis/srd-5-2-1/d20-test/_history001/index.html> a sflo:ResourcePage, sflo:LocatedFile .
+
+<rules/dynamis/srd-5-2-1/d20-test/_history001/_s0001/index.html> a sflo:ResourcePage, sflo:LocatedFile .
+
+<rules/dynamis/srd-5-2-1/d20-test/_history001/_s0001/ttl/index.html> a sflo:ResourcePage, sflo:LocatedFile .
+
+<rules/dynamis/srd-5-2-1/d20-test/_knop/index.html> a sflo:ResourcePage, sflo:LocatedFile .
+
+<rules/dynamis/srd-5-2-1/d20-test/_knop/_meta/index.html> a sflo:ResourcePage, sflo:LocatedFile .
+
+<rules/dynamis/srd-5-2-1/d20-test/_knop/_inventory/index.html> a sflo:ResourcePage, sflo:LocatedFile .
+
