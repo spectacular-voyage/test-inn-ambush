@@ -1,0 +1,6 @@
+@base <https://spectacular-voyage.github.io/test-inn-ambush/> .
+@prefix sflo: <https://semantic-flow.github.io/sflo/ontology/> .
+
+<rules/dynamis/srd-5-2-1/d20-test/_knop> a sflo:Knop ;
+  sflo:designatorPath "rules/dynamis/srd-5-2-1/d20-test" ;
+  sflo:hasWorkingKnopInventoryFile <rules/dynamis/srd-5-2-1/d20-test/_knop/_inventory/inventory.ttl> .

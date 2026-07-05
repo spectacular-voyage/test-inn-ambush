@@ -1,0 +1,466 @@
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dyn: <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/d20-test>
+  a dcat:Dataset ;
+  dcterms:title "SRD 5.2.1 D20 test rules" ;
+  dcterms:description "Curated ability, skill, check, save, and attack-roll family data extracted from the CC SRD 5.2.1 PDF." ;
+  dcterms:created "2026-07-05"^^xsd:date ;
+  dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
+  dcterms:source <https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf> ;
+  dcterms:rights "Includes material from System Reference Document 5.2.1 by Wizards of the Coast LLC, available under the Creative Commons Attribution 4.0 International License." ;
+  dcat:distribution <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/d20-test/abilities-csv>,
+    <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/d20-test/skills-csv>,
+    <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/d20-test/test-types-csv>,
+    <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/d20-test/d20-csvw> .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/d20-test/abilities-csv>
+  a dcat:Distribution ;
+  dcterms:title "SRD 5.2.1 abilities curated CSV" ;
+  dcat:downloadURL <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/d20-test/d20-test.abilities.csv> .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/d20-test/skills-csv>
+  a dcat:Distribution ;
+  dcterms:title "SRD 5.2.1 skills curated CSV" ;
+  dcat:downloadURL <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/d20-test/d20-test.skills.csv> .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/d20-test/test-types-csv>
+  a dcat:Distribution ;
+  dcterms:title "SRD 5.2.1 D20 test types curated CSV" ;
+  dcat:downloadURL <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/d20-test/d20-test.test-types.csv> .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/d20-test/d20-csvw>
+  a dcat:Distribution ;
+  dcterms:title "SRD 5.2.1 D20 CSVW mapping" ;
+  dcat:downloadURL <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/d20-test/d20-test.csvw.json> .
+
+dyn:D20TestWarrantedPreconditionAsk
+  a dyn:SparqlAskPrecondition ;
+  rdf:value "ASK { # Authority or a rule has warranted a D20 Test in the current circumstance. }" .
+
+dyn:D20RollResultTemplate
+  a dyn:ConsequenceTemplate ;
+  rdf:value "Roll 1d20, apply the relevant ability modifier, proficiency if applicable, and circumstantial modifiers, then compare against the target number." .
+
+dyn:AbilityCheck
+  a dyn:D20TestType, dyn:ActionType, owl:Class ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/d20-test> ;
+  rdfs:label "Ability check" ;
+  dyn:testTypeKey "ability-check" ;
+  dyn:verbIri dyn:ability-check ;
+  dyn:preconditionAsk dyn:D20TestWarrantedPreconditionAsk ;
+  dyn:consequenceTemplate dyn:D20RollResultTemplate ;
+  dyn:targetNumberName "Difficulty Class" ;
+  dyn:mechanicalStatus "actiontype-family" ;
+  dyn:sourceSection "Playing the Game: Ability Checks" ;
+  dcterms:description "A creature uses talent and training to try to overcome a challenge when the outcome is uncertain and meaningful." .
+
+dyn:SavingThrow
+  a dyn:D20TestType, dyn:ActionType, owl:Class ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/d20-test> ;
+  rdfs:label "Saving throw" ;
+  dyn:testTypeKey "saving-throw" ;
+  dyn:verbIri dyn:saving-throw ;
+  dyn:preconditionAsk dyn:D20TestWarrantedPreconditionAsk ;
+  dyn:consequenceTemplate dyn:D20RollResultTemplate ;
+  dyn:targetNumberName "Difficulty Class" ;
+  dyn:mechanicalStatus "actiontype-family" ;
+  dyn:sourceSection "Playing the Game: Saving Throws" ;
+  dcterms:description "A creature attempts to evade or resist a threat when a rule requires a save." .
+
+dyn:AttackRoll
+  a dyn:D20TestType, dyn:ActionType, owl:Class ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/d20-test> ;
+  rdfs:label "Attack roll" ;
+  dyn:testTypeKey "attack-roll" ;
+  dyn:verbIri dyn:attack-roll ;
+  dyn:preconditionAsk dyn:D20TestWarrantedPreconditionAsk ;
+  dyn:consequenceTemplate dyn:D20RollResultTemplate ;
+  dyn:targetNumberName "Armor Class" ;
+  dyn:mechanicalStatus "actiontype-family" ;
+  dyn:sourceSection "Playing the Game: Attack Rolls" ;
+  dcterms:description "A roll determines whether an attack hits by comparing the total to Armor Class." .
+
+dyn:Strength
+  a dyn:AbilityScore, skos:Concept ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/d20-test> ;
+  rdfs:label "Strength" ;
+  dyn:abilityKey "strength" ;
+  dyn:abilityCheckExample "Lift, push, pull, or break something" ;
+  dyn:savingThrowExample "Physically resist direct force" ;
+  dyn:sourceSection "Playing the Game: D20 Tests" .
+
+dyn:Dexterity
+  a dyn:AbilityScore, skos:Concept ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/d20-test> ;
+  rdfs:label "Dexterity" ;
+  dyn:abilityKey "dexterity" ;
+  dyn:abilityCheckExample "Move nimbly, quickly, or quietly" ;
+  dyn:savingThrowExample "Dodge out of harm's way" ;
+  dyn:sourceSection "Playing the Game: D20 Tests" .
+
+dyn:Constitution
+  a dyn:AbilityScore, skos:Concept ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/d20-test> ;
+  rdfs:label "Constitution" ;
+  dyn:abilityKey "constitution" ;
+  dyn:abilityCheckExample "Push your body beyond normal limits" ;
+  dyn:savingThrowExample "Endure a toxic hazard" ;
+  dyn:sourceSection "Playing the Game: D20 Tests" .
+
+dyn:Intelligence
+  a dyn:AbilityScore, skos:Concept ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/d20-test> ;
+  rdfs:label "Intelligence" ;
+  dyn:abilityKey "intelligence" ;
+  dyn:abilityCheckExample "Reason or remember" ;
+  dyn:savingThrowExample "Recognize an illusion as fake" ;
+  dyn:sourceSection "Playing the Game: D20 Tests" .
+
+dyn:Wisdom
+  a dyn:AbilityScore, skos:Concept ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/d20-test> ;
+  rdfs:label "Wisdom" ;
+  dyn:abilityKey "wisdom" ;
+  dyn:abilityCheckExample "Notice things in the environment or in creatures' behavior" ;
+  dyn:savingThrowExample "Resist a mental assault" ;
+  dyn:sourceSection "Playing the Game: D20 Tests" .
+
+dyn:Charisma
+  a dyn:AbilityScore, skos:Concept ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/d20-test> ;
+  rdfs:label "Charisma" ;
+  dyn:abilityKey "charisma" ;
+  dyn:abilityCheckExample "Influence, entertain, or deceive" ;
+  dyn:savingThrowExample "Assert your identity" ;
+  dyn:sourceSection "Playing the Game: D20 Tests" .
+
+dyn:Acrobatics
+  a dyn:Skill, skos:Concept ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/d20-test> ;
+  rdfs:label "Acrobatics" ;
+  dyn:skillKey "acrobatics" ;
+  dyn:defaultAbility dyn:Dexterity ;
+  dyn:exampleUses "Stay on your feet in a tricky situation, or perform an acrobatic stunt." ;
+  dyn:sourceSection "Playing the Game: Skills" .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/d20-test/skill-rule/acrobatics>
+  a dyn:D20SkillRule ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/d20-test> ;
+  dyn:csvRuleId "skill-acrobatics" ;
+  dyn:usesSkill dyn:Acrobatics ;
+  dyn:usesAbility dyn:Dexterity ;
+  dyn:actionType dyn:AbilityCheck ;
+  dyn:sourceSection "Playing the Game: Skills" .
+
+dyn:AnimalHandling
+  a dyn:Skill, skos:Concept ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/d20-test> ;
+  rdfs:label "Animal Handling" ;
+  dyn:skillKey "animal-handling" ;
+  dyn:defaultAbility dyn:Wisdom ;
+  dyn:exampleUses "Calm or train an animal, or get an animal to behave in a certain way." ;
+  dyn:sourceSection "Playing the Game: Skills" .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/d20-test/skill-rule/animal-handling>
+  a dyn:D20SkillRule ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/d20-test> ;
+  dyn:csvRuleId "skill-animal-handling" ;
+  dyn:usesSkill dyn:AnimalHandling ;
+  dyn:usesAbility dyn:Wisdom ;
+  dyn:actionType dyn:AbilityCheck ;
+  dyn:sourceSection "Playing the Game: Skills" .
+
+dyn:Arcana
+  a dyn:Skill, skos:Concept ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/d20-test> ;
+  rdfs:label "Arcana" ;
+  dyn:skillKey "arcana" ;
+  dyn:defaultAbility dyn:Intelligence ;
+  dyn:exampleUses "Recall lore about spells, magic items, and the planes of existence." ;
+  dyn:sourceSection "Playing the Game: Skills" .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/d20-test/skill-rule/arcana>
+  a dyn:D20SkillRule ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/d20-test> ;
+  dyn:csvRuleId "skill-arcana" ;
+  dyn:usesSkill dyn:Arcana ;
+  dyn:usesAbility dyn:Intelligence ;
+  dyn:actionType dyn:AbilityCheck ;
+  dyn:sourceSection "Playing the Game: Skills" .
+
+dyn:Athletics
+  a dyn:Skill, skos:Concept ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/d20-test> ;
+  rdfs:label "Athletics" ;
+  dyn:skillKey "athletics" ;
+  dyn:defaultAbility dyn:Strength ;
+  dyn:exampleUses "Jump farther than normal, stay afloat in rough water, or break something." ;
+  dyn:sourceSection "Playing the Game: Skills" .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/d20-test/skill-rule/athletics>
+  a dyn:D20SkillRule ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/d20-test> ;
+  dyn:csvRuleId "skill-athletics" ;
+  dyn:usesSkill dyn:Athletics ;
+  dyn:usesAbility dyn:Strength ;
+  dyn:actionType dyn:AbilityCheck ;
+  dyn:sourceSection "Playing the Game: Skills" .
+
+dyn:Deception
+  a dyn:Skill, skos:Concept ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/d20-test> ;
+  rdfs:label "Deception" ;
+  dyn:skillKey "deception" ;
+  dyn:defaultAbility dyn:Charisma ;
+  dyn:exampleUses "Tell a convincing lie, or wear a disguise convincingly." ;
+  dyn:sourceSection "Playing the Game: Skills" .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/d20-test/skill-rule/deception>
+  a dyn:D20SkillRule ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/d20-test> ;
+  dyn:csvRuleId "skill-deception" ;
+  dyn:usesSkill dyn:Deception ;
+  dyn:usesAbility dyn:Charisma ;
+  dyn:actionType dyn:AbilityCheck ;
+  dyn:sourceSection "Playing the Game: Skills" .
+
+dyn:History
+  a dyn:Skill, skos:Concept ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/d20-test> ;
+  rdfs:label "History" ;
+  dyn:skillKey "history" ;
+  dyn:defaultAbility dyn:Intelligence ;
+  dyn:exampleUses "Recall lore about historical events, people, nations, and cultures." ;
+  dyn:sourceSection "Playing the Game: Skills" .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/d20-test/skill-rule/history>
+  a dyn:D20SkillRule ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/d20-test> ;
+  dyn:csvRuleId "skill-history" ;
+  dyn:usesSkill dyn:History ;
+  dyn:usesAbility dyn:Intelligence ;
+  dyn:actionType dyn:AbilityCheck ;
+  dyn:sourceSection "Playing the Game: Skills" .
+
+dyn:Insight
+  a dyn:Skill, skos:Concept ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/d20-test> ;
+  rdfs:label "Insight" ;
+  dyn:skillKey "insight" ;
+  dyn:defaultAbility dyn:Wisdom ;
+  dyn:exampleUses "Discern a person's mood and intentions." ;
+  dyn:sourceSection "Playing the Game: Skills" .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/d20-test/skill-rule/insight>
+  a dyn:D20SkillRule ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/d20-test> ;
+  dyn:csvRuleId "skill-insight" ;
+  dyn:usesSkill dyn:Insight ;
+  dyn:usesAbility dyn:Wisdom ;
+  dyn:actionType dyn:AbilityCheck ;
+  dyn:sourceSection "Playing the Game: Skills" .
+
+dyn:Intimidation
+  a dyn:Skill, skos:Concept ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/d20-test> ;
+  rdfs:label "Intimidation" ;
+  dyn:skillKey "intimidation" ;
+  dyn:defaultAbility dyn:Charisma ;
+  dyn:exampleUses "Awe or threaten someone into doing what you want." ;
+  dyn:sourceSection "Playing the Game: Skills" .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/d20-test/skill-rule/intimidation>
+  a dyn:D20SkillRule ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/d20-test> ;
+  dyn:csvRuleId "skill-intimidation" ;
+  dyn:usesSkill dyn:Intimidation ;
+  dyn:usesAbility dyn:Charisma ;
+  dyn:actionType dyn:AbilityCheck ;
+  dyn:sourceSection "Playing the Game: Skills" .
+
+dyn:Investigation
+  a dyn:Skill, skos:Concept ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/d20-test> ;
+  rdfs:label "Investigation" ;
+  dyn:skillKey "investigation" ;
+  dyn:defaultAbility dyn:Intelligence ;
+  dyn:exampleUses "Find obscure information in books, or deduce how something works." ;
+  dyn:sourceSection "Playing the Game: Skills" .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/d20-test/skill-rule/investigation>
+  a dyn:D20SkillRule ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/d20-test> ;
+  dyn:csvRuleId "skill-investigation" ;
+  dyn:usesSkill dyn:Investigation ;
+  dyn:usesAbility dyn:Intelligence ;
+  dyn:actionType dyn:AbilityCheck ;
+  dyn:sourceSection "Playing the Game: Skills" .
+
+dyn:Medicine
+  a dyn:Skill, skos:Concept ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/d20-test> ;
+  rdfs:label "Medicine" ;
+  dyn:skillKey "medicine" ;
+  dyn:defaultAbility dyn:Wisdom ;
+  dyn:exampleUses "Diagnose an illness, or determine what killed the recently slain." ;
+  dyn:sourceSection "Playing the Game: Skills" .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/d20-test/skill-rule/medicine>
+  a dyn:D20SkillRule ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/d20-test> ;
+  dyn:csvRuleId "skill-medicine" ;
+  dyn:usesSkill dyn:Medicine ;
+  dyn:usesAbility dyn:Wisdom ;
+  dyn:actionType dyn:AbilityCheck ;
+  dyn:sourceSection "Playing the Game: Skills" .
+
+dyn:Nature
+  a dyn:Skill, skos:Concept ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/d20-test> ;
+  rdfs:label "Nature" ;
+  dyn:skillKey "nature" ;
+  dyn:defaultAbility dyn:Intelligence ;
+  dyn:exampleUses "Recall lore about terrain, plants, animals, and weather." ;
+  dyn:sourceSection "Playing the Game: Skills" .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/d20-test/skill-rule/nature>
+  a dyn:D20SkillRule ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/d20-test> ;
+  dyn:csvRuleId "skill-nature" ;
+  dyn:usesSkill dyn:Nature ;
+  dyn:usesAbility dyn:Intelligence ;
+  dyn:actionType dyn:AbilityCheck ;
+  dyn:sourceSection "Playing the Game: Skills" .
+
+dyn:Perception
+  a dyn:Skill, skos:Concept ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/d20-test> ;
+  rdfs:label "Perception" ;
+  dyn:skillKey "perception" ;
+  dyn:defaultAbility dyn:Wisdom ;
+  dyn:exampleUses "Using a combination of senses, notice something that's easy to miss." ;
+  dyn:sourceSection "Playing the Game: Skills" .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/d20-test/skill-rule/perception>
+  a dyn:D20SkillRule ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/d20-test> ;
+  dyn:csvRuleId "skill-perception" ;
+  dyn:usesSkill dyn:Perception ;
+  dyn:usesAbility dyn:Wisdom ;
+  dyn:actionType dyn:AbilityCheck ;
+  dyn:sourceSection "Playing the Game: Skills" .
+
+dyn:Performance
+  a dyn:Skill, skos:Concept ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/d20-test> ;
+  rdfs:label "Performance" ;
+  dyn:skillKey "performance" ;
+  dyn:defaultAbility dyn:Charisma ;
+  dyn:exampleUses "Act, tell a story, perform music, or dance." ;
+  dyn:sourceSection "Playing the Game: Skills" .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/d20-test/skill-rule/performance>
+  a dyn:D20SkillRule ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/d20-test> ;
+  dyn:csvRuleId "skill-performance" ;
+  dyn:usesSkill dyn:Performance ;
+  dyn:usesAbility dyn:Charisma ;
+  dyn:actionType dyn:AbilityCheck ;
+  dyn:sourceSection "Playing the Game: Skills" .
+
+dyn:Persuasion
+  a dyn:Skill, skos:Concept ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/d20-test> ;
+  rdfs:label "Persuasion" ;
+  dyn:skillKey "persuasion" ;
+  dyn:defaultAbility dyn:Charisma ;
+  dyn:exampleUses "Honestly and graciously convince someone of something." ;
+  dyn:sourceSection "Playing the Game: Skills" .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/d20-test/skill-rule/persuasion>
+  a dyn:D20SkillRule ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/d20-test> ;
+  dyn:csvRuleId "skill-persuasion" ;
+  dyn:usesSkill dyn:Persuasion ;
+  dyn:usesAbility dyn:Charisma ;
+  dyn:actionType dyn:AbilityCheck ;
+  dyn:sourceSection "Playing the Game: Skills" .
+
+dyn:Religion
+  a dyn:Skill, skos:Concept ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/d20-test> ;
+  rdfs:label "Religion" ;
+  dyn:skillKey "religion" ;
+  dyn:defaultAbility dyn:Intelligence ;
+  dyn:exampleUses "Recall lore about gods, religious rituals, and holy symbols." ;
+  dyn:sourceSection "Playing the Game: Skills" .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/d20-test/skill-rule/religion>
+  a dyn:D20SkillRule ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/d20-test> ;
+  dyn:csvRuleId "skill-religion" ;
+  dyn:usesSkill dyn:Religion ;
+  dyn:usesAbility dyn:Intelligence ;
+  dyn:actionType dyn:AbilityCheck ;
+  dyn:sourceSection "Playing the Game: Skills" .
+
+dyn:SleightOfHand
+  a dyn:Skill, skos:Concept ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/d20-test> ;
+  rdfs:label "Sleight of Hand" ;
+  dyn:skillKey "sleight-of-hand" ;
+  dyn:defaultAbility dyn:Dexterity ;
+  dyn:exampleUses "Pick a pocket, conceal a handheld object, or perform legerdemain." ;
+  dyn:sourceSection "Playing the Game: Skills" .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/d20-test/skill-rule/sleight-of-hand>
+  a dyn:D20SkillRule ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/d20-test> ;
+  dyn:csvRuleId "skill-sleight-of-hand" ;
+  dyn:usesSkill dyn:SleightOfHand ;
+  dyn:usesAbility dyn:Dexterity ;
+  dyn:actionType dyn:AbilityCheck ;
+  dyn:sourceSection "Playing the Game: Skills" .
+
+dyn:Stealth
+  a dyn:Skill, skos:Concept ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/d20-test> ;
+  rdfs:label "Stealth" ;
+  dyn:skillKey "stealth" ;
+  dyn:defaultAbility dyn:Dexterity ;
+  dyn:exampleUses "Escape notice by moving quietly and hiding behind things." ;
+  dyn:sourceSection "Playing the Game: Skills" .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/d20-test/skill-rule/stealth>
+  a dyn:D20SkillRule ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/d20-test> ;
+  dyn:csvRuleId "skill-stealth" ;
+  dyn:usesSkill dyn:Stealth ;
+  dyn:usesAbility dyn:Dexterity ;
+  dyn:actionType dyn:AbilityCheck ;
+  dyn:sourceSection "Playing the Game: Skills" .
+
+dyn:Survival
+  a dyn:Skill, skos:Concept ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/d20-test> ;
+  rdfs:label "Survival" ;
+  dyn:skillKey "survival" ;
+  dyn:defaultAbility dyn:Wisdom ;
+  dyn:exampleUses "Follow tracks, forage, find a trail, or avoid natural hazards." ;
+  dyn:sourceSection "Playing the Game: Skills" .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/d20-test/skill-rule/survival>
+  a dyn:D20SkillRule ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/d20-test> ;
+  dyn:csvRuleId "skill-survival" ;
+  dyn:usesSkill dyn:Survival ;
+  dyn:usesAbility dyn:Wisdom ;
+  dyn:actionType dyn:AbilityCheck ;
+  dyn:sourceSection "Playing the Game: Skills" .
