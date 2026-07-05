@@ -323,3 +323,23 @@
 <projections/responses/participant-projection-response-gm/index.html> a sflo:ResourcePage, sflo:LocatedFile .
 
 <projections/responses/participant-projection-response-gm/_knop/index.html> a sflo:ResourcePage, sflo:LocatedFile .
+
+<_mesh> sflo:hasKnop <rules/dynamis/srd-starter/_knop> .
+
+<rules/dynamis/srd-starter> a sflo:PayloadArtifact, sflo:DigitalArtifact, sflo:RdfDocument ;
+  sflo:hasWorkingLocatedFile <rules/dynamis/srd-starter/dynamis-srd-starter.ttl> .
+
+<rules/dynamis/srd-starter/_knop> a sflo:Knop ;
+  sflo:hasWorkingKnopInventoryFile <rules/dynamis/srd-starter/_knop/_inventory/inventory.ttl> .
+
+<rules/dynamis/srd-starter/_knop/_inventory/inventory.ttl> a sflo:LocatedFile, sflo:RdfDocument .
+
+<rules/dynamis/srd-starter/dynamis-srd-starter.ttl> a sflo:LocatedFile, sflo:RdfDocument .
+
+<rules/dynamis/srd-starter> sflo:hasResourcePage <rules/dynamis/srd-starter/index.html> .
+
+<rules/dynamis/srd-starter/_knop> sflo:hasResourcePage <rules/dynamis/srd-starter/_knop/index.html> .
+
+<rules/dynamis/srd-starter/index.html> a sflo:ResourcePage, sflo:LocatedFile .
+
+<rules/dynamis/srd-starter/_knop/index.html> a sflo:ResourcePage, sflo:LocatedFile .

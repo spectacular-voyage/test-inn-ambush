@@ -141,8 +141,8 @@
       <details open>
         <summary>Latest historical manifestation file</summary>
         <div class="wf-source-meta">
-          <span>projections/contracts/inn-ambush-contract-shapes/_history001/_s0006/ttl/inn-ambush-contract.shapes.ttl</span>
-          <a href="/test-inn-ambush/projections/contracts/inn-ambush-contract-shapes/_history001/_s0006/ttl/inn-ambush-contract.shapes.ttl">Raw file</a>
+          <span>projections/contracts/inn-ambush-contract-shapes/_history001/_s0007/ttl/inn-ambush-contract.shapes.ttl</span>
+          <a href="/test-inn-ambush/projections/contracts/inn-ambush-contract-shapes/_history001/_s0007/ttl/inn-ambush-contract.shapes.ttl">Raw file</a>
         </div>
 <pre class="shiki github-dark-default" style="background-color:#0d1117;color:#e6edf3" tabindex="0"><code><span class="line"><span style="color:#FF7B72">@prefix sc:</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/stagecraft/ontology/></span><span style="color:#E6EDF3"> .</span></span>
 <span class="line"><span style="color:#FF7B72">@prefix </span><span style="color:#E6EDF3">sc-</span><span style="color:#FF7B72">sh:</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/stagecraft/shacl/></span><span style="color:#E6EDF3"> .</span></span>
@@ -1177,6 +1177,220 @@
 <span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">class</span><span style="color:#FF7B72"> time:</span><span style="color:#79C0FF">Instant</span><span style="color:#E6EDF3"> ;</span></span>
 <span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">minCount</span><span style="color:#79C0FF"> 0</span><span style="color:#E6EDF3"> ;</span></span>
 <span class="line"><span style="color:#E6EDF3">  ] .</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E6EDF3">sc-</span><span style="color:#FF7B72">sh:</span><span style="color:#79C0FF">ClockAnchorShape</span></span>
+<span class="line"><span style="color:#FF7B72">  a</span><span style="color:#FF7B72"> sh:</span><span style="color:#79C0FF">NodeShape</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sh:</span><span style="color:#79C0FF">targetClass</span><span style="color:#FF7B72"> sc:</span><span style="color:#79C0FF">ClockAnchor</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sh:</span><span style="color:#79C0FF">property</span><span style="color:#E6EDF3"> [</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">path</span><span style="color:#FF7B72"> sc:</span><span style="color:#79C0FF">onWorldTimeAxis</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">nodeKind</span><span style="color:#FF7B72"> sh:</span><span style="color:#79C0FF">IRI</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">class</span><span style="color:#FF7B72"> sc:</span><span style="color:#79C0FF">WorldTimeAxis</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">minCount</span><span style="color:#79C0FF"> 1</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">maxCount</span><span style="color:#79C0FF"> 1</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#E6EDF3">  ] ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sh:</span><span style="color:#79C0FF">property</span><span style="color:#E6EDF3"> [</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">path</span><span style="color:#FF7B72"> sc:</span><span style="color:#79C0FF">clockOffsetSeconds</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">datatype</span><span style="color:#FF7B72"> xsd:</span><span style="color:#79C0FF">decimal</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">minCount</span><span style="color:#79C0FF"> 1</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">maxCount</span><span style="color:#79C0FF"> 1</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#E6EDF3">  ] ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sh:</span><span style="color:#79C0FF">property</span><span style="color:#E6EDF3"> [</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">path</span><span style="color:#FF7B72"> sc:</span><span style="color:#79C0FF">clockPrecision</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">in</span><span style="color:#E6EDF3"> (</span></span>
+<span class="line"><span style="color:#A5D6FF">      "second"</span></span>
+<span class="line"><span style="color:#A5D6FF">      "minute"</span></span>
+<span class="line"><span style="color:#A5D6FF">      "scene"</span></span>
+<span class="line"><span style="color:#A5D6FF">      "unknown"</span></span>
+<span class="line"><span style="color:#E6EDF3">    ) ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">minCount</span><span style="color:#79C0FF"> 1</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">maxCount</span><span style="color:#79C0FF"> 1</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#E6EDF3">  ] .</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E6EDF3">sc-</span><span style="color:#FF7B72">sh:</span><span style="color:#79C0FF">WorldTimePolicyShape</span></span>
+<span class="line"><span style="color:#FF7B72">  a</span><span style="color:#FF7B72"> sh:</span><span style="color:#79C0FF">NodeShape</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sh:</span><span style="color:#79C0FF">targetClass</span><span style="color:#FF7B72"> sc:</span><span style="color:#79C0FF">WorldTimePolicy</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sh:</span><span style="color:#79C0FF">property</span><span style="color:#E6EDF3"> [</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">path</span><span style="color:#FF7B72"> sc:</span><span style="color:#79C0FF">usesWorldTimeAxis</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">nodeKind</span><span style="color:#FF7B72"> sh:</span><span style="color:#79C0FF">IRI</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">class</span><span style="color:#FF7B72"> sc:</span><span style="color:#79C0FF">WorldTimeAxis</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">minCount</span><span style="color:#79C0FF"> 0</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">maxCount</span><span style="color:#79C0FF"> 1</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#E6EDF3">  ] ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sh:</span><span style="color:#79C0FF">property</span><span style="color:#E6EDF3"> [</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">path</span><span style="color:#FF7B72"> sc:</span><span style="color:#79C0FF">startsAtClockAnchor</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">nodeKind</span><span style="color:#FF7B72"> sh:</span><span style="color:#79C0FF">IRI</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">class</span><span style="color:#FF7B72"> sc:</span><span style="color:#79C0FF">ClockAnchor</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">minCount</span><span style="color:#79C0FF"> 0</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">maxCount</span><span style="color:#79C0FF"> 1</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#E6EDF3">  ] .</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E6EDF3">sc-</span><span style="color:#FF7B72">sh:</span><span style="color:#79C0FF">FlowingWorldTimeShape</span></span>
+<span class="line"><span style="color:#FF7B72">  a</span><span style="color:#FF7B72"> sh:</span><span style="color:#79C0FF">NodeShape</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sh:</span><span style="color:#79C0FF">targetClass</span><span style="color:#FF7B72"> sc:</span><span style="color:#79C0FF">FlowingWorldTime</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sh:</span><span style="color:#79C0FF">property</span><span style="color:#E6EDF3"> [</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">path</span><span style="color:#FF7B72"> sc:</span><span style="color:#79C0FF">usesWorldTimeAxis</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">nodeKind</span><span style="color:#FF7B72"> sh:</span><span style="color:#79C0FF">IRI</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">class</span><span style="color:#FF7B72"> sc:</span><span style="color:#79C0FF">WorldTimeAxis</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">minCount</span><span style="color:#79C0FF"> 1</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">maxCount</span><span style="color:#79C0FF"> 1</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#E6EDF3">  ] ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sh:</span><span style="color:#79C0FF">property</span><span style="color:#E6EDF3"> [</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">path</span><span style="color:#FF7B72"> sc:</span><span style="color:#79C0FF">startsAtClockAnchor</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">nodeKind</span><span style="color:#FF7B72"> sh:</span><span style="color:#79C0FF">IRI</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">class</span><span style="color:#FF7B72"> sc:</span><span style="color:#79C0FF">ClockAnchor</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">minCount</span><span style="color:#79C0FF"> 1</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">maxCount</span><span style="color:#79C0FF"> 1</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#E6EDF3">  ] .</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E6EDF3">sc-</span><span style="color:#FF7B72">sh:</span><span style="color:#79C0FF">TemporalGroundingShape</span></span>
+<span class="line"><span style="color:#FF7B72">  a</span><span style="color:#FF7B72"> sh:</span><span style="color:#79C0FF">NodeShape</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sh:</span><span style="color:#79C0FF">targetClass</span><span style="color:#FF7B72"> sc:</span><span style="color:#79C0FF">TemporalGrounding</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sh:</span><span style="color:#79C0FF">property</span><span style="color:#E6EDF3"> [</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">path</span><span style="color:#FF7B72"> sc:</span><span style="color:#79C0FF">groundsTemporalAnchor</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">nodeKind</span><span style="color:#FF7B72"> sh:</span><span style="color:#79C0FF">IRI</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">class</span><span style="color:#FF7B72"> sc:</span><span style="color:#79C0FF">TemporalAnchor</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">minCount</span><span style="color:#79C0FF"> 1</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">maxCount</span><span style="color:#79C0FF"> 1</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#E6EDF3">  ] ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sh:</span><span style="color:#79C0FF">property</span><span style="color:#E6EDF3"> [</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">path</span><span style="color:#FF7B72"> sc:</span><span style="color:#79C0FF">groundedToClockAnchor</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">nodeKind</span><span style="color:#FF7B72"> sh:</span><span style="color:#79C0FF">IRI</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">class</span><span style="color:#FF7B72"> sc:</span><span style="color:#79C0FF">ClockAnchor</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">minCount</span><span style="color:#79C0FF"> 1</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">maxCount</span><span style="color:#79C0FF"> 1</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#E6EDF3">  ] ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sh:</span><span style="color:#79C0FF">property</span><span style="color:#E6EDF3"> [</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">path</span><span style="color:#FF7B72"> sc:</span><span style="color:#79C0FF">acceptedFrom</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">datatype</span><span style="color:#FF7B72"> xsd:</span><span style="color:#79C0FF">dateTime</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">minCount</span><span style="color:#79C0FF"> 1</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">maxCount</span><span style="color:#79C0FF"> 1</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#E6EDF3">  ] ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sh:</span><span style="color:#79C0FF">property</span><span style="color:#E6EDF3"> [</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">path</span><span style="color:#FF7B72"> sc:</span><span style="color:#79C0FF">basedOnAuthorityRecord</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">nodeKind</span><span style="color:#FF7B72"> sh:</span><span style="color:#79C0FF">IRI</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">minCount</span><span style="color:#79C0FF"> 1</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">maxCount</span><span style="color:#79C0FF"> 1</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#E6EDF3">  ] ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sh:</span><span style="color:#79C0FF">property</span><span style="color:#E6EDF3"> [</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">path</span><span style="color:#FF7B72"> dcterms:</span><span style="color:#79C0FF">created</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">maxCount</span><span style="color:#79C0FF"> 0</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">message</span><span style="color:#A5D6FF"> "TemporalGrounding commit instants live on authority journal records."</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#E6EDF3">  ] .</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E6EDF3">sc-</span><span style="color:#FF7B72">sh:</span><span style="color:#79C0FF">TimeAdvancedShape</span></span>
+<span class="line"><span style="color:#FF7B72">  a</span><span style="color:#FF7B72"> sh:</span><span style="color:#79C0FF">NodeShape</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sh:</span><span style="color:#79C0FF">targetClass</span><span style="color:#FF7B72"> sc:</span><span style="color:#79C0FF">TimeAdvanced</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sh:</span><span style="color:#79C0FF">property</span><span style="color:#E6EDF3"> [</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">path</span><span style="color:#FF7B72"> dcterms:</span><span style="color:#79C0FF">created</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">datatype</span><span style="color:#FF7B72"> xsd:</span><span style="color:#79C0FF">dateTime</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">minCount</span><span style="color:#79C0FF"> 1</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">maxCount</span><span style="color:#79C0FF"> 1</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#E6EDF3">  ] ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sh:</span><span style="color:#79C0FF">property</span><span style="color:#E6EDF3"> [</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">path</span><span style="color:#FF7B72"> sc:</span><span style="color:#79C0FF">committedEvent</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">nodeKind</span><span style="color:#FF7B72"> sh:</span><span style="color:#79C0FF">IRI</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">minCount</span><span style="color:#79C0FF"> 1</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">maxCount</span><span style="color:#79C0FF"> 1</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#E6EDF3">  ] ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sh:</span><span style="color:#79C0FF">property</span><span style="color:#E6EDF3"> [</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">path</span><span style="color:#FF7B72"> sc:</span><span style="color:#79C0FF">advancesWorldTimeTo</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">nodeKind</span><span style="color:#FF7B72"> sh:</span><span style="color:#79C0FF">IRI</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">class</span><span style="color:#FF7B72"> sc:</span><span style="color:#79C0FF">ClockAnchor</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">minCount</span><span style="color:#79C0FF"> 1</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">maxCount</span><span style="color:#79C0FF"> 1</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#E6EDF3">  ] .</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E6EDF3">sc-</span><span style="color:#FF7B72">sh:</span><span style="color:#79C0FF">PlaceShape</span></span>
+<span class="line"><span style="color:#FF7B72">  a</span><span style="color:#FF7B72"> sh:</span><span style="color:#79C0FF">NodeShape</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sh:</span><span style="color:#79C0FF">targetClass</span><span style="color:#FF7B72"> sc:</span><span style="color:#79C0FF">Place</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sh:</span><span style="color:#79C0FF">property</span><span style="color:#E6EDF3"> [</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">path</span><span style="color:#FF7B72"> sc:</span><span style="color:#79C0FF">containedIn</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">nodeKind</span><span style="color:#FF7B72"> sh:</span><span style="color:#79C0FF">IRI</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">class</span><span style="color:#FF7B72"> sc:</span><span style="color:#79C0FF">Place</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">minCount</span><span style="color:#79C0FF"> 0</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#E6EDF3">  ] ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sh:</span><span style="color:#79C0FF">property</span><span style="color:#E6EDF3"> [</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">path</span><span style="color:#FF7B72"> sc:</span><span style="color:#79C0FF">adjacentTo</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">nodeKind</span><span style="color:#FF7B72"> sh:</span><span style="color:#79C0FF">IRI</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">class</span><span style="color:#FF7B72"> sc:</span><span style="color:#79C0FF">Place</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">minCount</span><span style="color:#79C0FF"> 0</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#E6EDF3">  ] .</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E6EDF3">sc-</span><span style="color:#FF7B72">sh:</span><span style="color:#79C0FF">LocatedInRelatorShape</span></span>
+<span class="line"><span style="color:#FF7B72">  a</span><span style="color:#FF7B72"> sh:</span><span style="color:#79C0FF">NodeShape</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sh:</span><span style="color:#79C0FF">targetClass</span><span style="color:#FF7B72"> sc:</span><span style="color:#79C0FF">LocatedInRelator</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sh:</span><span style="color:#79C0FF">property</span><span style="color:#E6EDF3"> [</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">path</span><span style="color:#FF7B72"> sc:</span><span style="color:#79C0FF">subject</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">nodeKind</span><span style="color:#FF7B72"> sh:</span><span style="color:#79C0FF">IRI</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">minCount</span><span style="color:#79C0FF"> 1</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">maxCount</span><span style="color:#79C0FF"> 1</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#E6EDF3">  ] ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sh:</span><span style="color:#79C0FF">property</span><span style="color:#E6EDF3"> [</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">path</span><span style="color:#FF7B72"> sc:</span><span style="color:#79C0FF">predicate</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">hasValue</span><span style="color:#FF7B72"> sc:</span><span style="color:#79C0FF">locatedIn</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">minCount</span><span style="color:#79C0FF"> 1</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">maxCount</span><span style="color:#79C0FF"> 1</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#E6EDF3">  ] ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sh:</span><span style="color:#79C0FF">property</span><span style="color:#E6EDF3"> [</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">path</span><span style="color:#FF7B72"> sc:</span><span style="color:#79C0FF">object</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">nodeKind</span><span style="color:#FF7B72"> sh:</span><span style="color:#79C0FF">IRI</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">class</span><span style="color:#FF7B72"> sc:</span><span style="color:#79C0FF">Place</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">minCount</span><span style="color:#79C0FF"> 1</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">maxCount</span><span style="color:#79C0FF"> 1</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#E6EDF3">  ] ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sh:</span><span style="color:#79C0FF">property</span><span style="color:#E6EDF3"> [</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">path</span><span style="color:#FF7B72"> sc:</span><span style="color:#79C0FF">acceptedFrom</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">datatype</span><span style="color:#FF7B72"> xsd:</span><span style="color:#79C0FF">dateTime</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">minCount</span><span style="color:#79C0FF"> 1</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">maxCount</span><span style="color:#79C0FF"> 1</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#E6EDF3">  ] ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sh:</span><span style="color:#79C0FF">property</span><span style="color:#E6EDF3"> [</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">path</span><span style="color:#FF7B72"> sc:</span><span style="color:#79C0FF">acceptedUntil</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">datatype</span><span style="color:#FF7B72"> xsd:</span><span style="color:#79C0FF">dateTime</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">minCount</span><span style="color:#79C0FF"> 0</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">maxCount</span><span style="color:#79C0FF"> 1</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#E6EDF3">  ] ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sh:</span><span style="color:#79C0FF">property</span><span style="color:#E6EDF3"> [</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">path</span><span style="color:#FF7B72"> sc:</span><span style="color:#79C0FF">basedOnAuthorityRecord</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">nodeKind</span><span style="color:#FF7B72"> sh:</span><span style="color:#79C0FF">IRI</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">minCount</span><span style="color:#79C0FF"> 1</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">maxCount</span><span style="color:#79C0FF"> 1</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#E6EDF3">  ] .</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E6EDF3">sc-</span><span style="color:#FF7B72">sh:</span><span style="color:#79C0FF">MovementEventShape</span></span>
+<span class="line"><span style="color:#FF7B72">  a</span><span style="color:#FF7B72"> sh:</span><span style="color:#79C0FF">NodeShape</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sh:</span><span style="color:#79C0FF">targetClass</span><span style="color:#FF7B72"> sc:</span><span style="color:#79C0FF">MovementEvent</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sh:</span><span style="color:#79C0FF">property</span><span style="color:#E6EDF3"> [</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">path</span><span style="color:#FF7B72"> sc:</span><span style="color:#79C0FF">authorizedByAuthorityRecord</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">nodeKind</span><span style="color:#FF7B72"> sh:</span><span style="color:#79C0FF">IRI</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">minCount</span><span style="color:#79C0FF"> 1</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">maxCount</span><span style="color:#79C0FF"> 1</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#E6EDF3">  ] ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sh:</span><span style="color:#79C0FF">property</span><span style="color:#E6EDF3"> [</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">path</span><span style="color:#FF7B72"> sc:</span><span style="color:#79C0FF">movesActant</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">nodeKind</span><span style="color:#FF7B72"> sh:</span><span style="color:#79C0FF">IRI</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">minCount</span><span style="color:#79C0FF"> 1</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">maxCount</span><span style="color:#79C0FF"> 1</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#E6EDF3">  ] ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sh:</span><span style="color:#79C0FF">property</span><span style="color:#E6EDF3"> [</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">path</span><span style="color:#FF7B72"> sc:</span><span style="color:#79C0FF">fromPlace</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">nodeKind</span><span style="color:#FF7B72"> sh:</span><span style="color:#79C0FF">IRI</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">class</span><span style="color:#FF7B72"> sc:</span><span style="color:#79C0FF">Place</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">minCount</span><span style="color:#79C0FF"> 1</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">maxCount</span><span style="color:#79C0FF"> 1</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#E6EDF3">  ] ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sh:</span><span style="color:#79C0FF">property</span><span style="color:#E6EDF3"> [</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">path</span><span style="color:#FF7B72"> sc:</span><span style="color:#79C0FF">toPlace</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">nodeKind</span><span style="color:#FF7B72"> sh:</span><span style="color:#79C0FF">IRI</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">class</span><span style="color:#FF7B72"> sc:</span><span style="color:#79C0FF">Place</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">minCount</span><span style="color:#79C0FF"> 1</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">maxCount</span><span style="color:#79C0FF"> 1</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#E6EDF3">  ] ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sh:</span><span style="color:#79C0FF">property</span><span style="color:#E6EDF3"> [</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">path</span><span style="color:#FF7B72"> dcterms:</span><span style="color:#79C0FF">created</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">maxCount</span><span style="color:#79C0FF"> 0</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">    sh:</span><span style="color:#79C0FF">message</span><span style="color:#A5D6FF"> "MovementEvent commit instants live on authority journal records."</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#E6EDF3">  ] .</span></span>
 <span class="line"></span></code></pre>
       </details>
     </section>    <section class="wf-section">
@@ -1239,6 +1453,15 @@
                 </div>
               </details>
             </details>
+            <details class="wf-history-node wf-history-node--state" open>
+              <summary class="wf-history-node-header"><a href="/test-inn-ambush/projections/contracts/inn-ambush-contract-shapes/_history001/_s0007">_s0007</a></summary>
+              <details class="wf-history-node wf-history-node--manifestation" open>
+                <summary class="wf-history-node-header"><a href="/test-inn-ambush/projections/contracts/inn-ambush-contract-shapes/_history001/_s0007/ttl">ttl</a></summary>
+                <div class="wf-history-node wf-history-node--file">
+                  <div class="wf-history-node-header"><a href="/test-inn-ambush/projections/contracts/inn-ambush-contract-shapes/_history001/_s0007/ttl/inn-ambush-contract.shapes.ttl" class="wf-history-file-iri">https://spectacular-voyage.github.io/test-inn-ambush/projections/contracts/inn-ambush-contract-shapes/_history001/_s0007/ttl/inn-ambush-contract.shapes.ttl</a></div>
+                </div>
+              </details>
+            </details>
           </details>
         </div>
       </details>
@@ -1247,7 +1470,7 @@
     </article>
   </main>
   <footer class="wf-generated">
-    Generated on <span class="wf-term wf-date-tip" tabindex="0" title="2026-07-05T03:05:05.830Z" data-tooltip="2026-07-05T03:05:05.830Z">July 5, 2026</span> by <a href="https://github.com/semantic-flow/weave/">Weave</a>
+    Generated on <span class="wf-term wf-date-tip" tabindex="0" title="2026-07-05T16:29:33.692Z" data-tooltip="2026-07-05T16:29:33.692Z">July 5, 2026</span> by <a href="https://github.com/semantic-flow/weave/">Weave</a>
   </footer>
 </body>
 </html>

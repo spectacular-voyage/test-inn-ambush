@@ -1,0 +1,157 @@
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dyn: <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sc: <https://spectacular-voyage.github.io/stagecraft/ontology/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-starter>
+  a dcat:Dataset ;
+  dcterms:title "Inn Ambush Dynamis SRD starter rules" ;
+  dcterms:description "A small fixture rules package proving Dynamis ActionType, affordance-mask, and decision-table data shapes. It is not a full SRD extraction." ;
+  dcterms:created "2026-07-05"^^xsd:date ;
+  dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
+  dcterms:source <https://dnd.wizards.com/resources/systems-reference-document> ;
+  dcterms:rights "Includes material taken from System Reference Document 5.1 by Wizards of the Coast LLC, available under the Creative Commons Attribution 4.0 International License." ;
+  dcat:distribution <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-starter/decision-table-csv> .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-starter/decision-table-csv>
+  a dcat:Distribution ;
+  dcterms:title "Dynamis SRD starter decision table CSV" ;
+  dcat:downloadURL <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-starter/dynamis-srd-starter.decision-table.csv> .
+
+dyn:SrdStarterActionTable
+  a dyn:DecisionTable ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-starter> ;
+  dyn:hitPolicy "first" ;
+  dyn:csvProjection <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-starter/dynamis-srd-starter.decision-table.csv> ;
+  dyn:hasDecisionRule dyn:MovementDecisionRule, dyn:SpeakDecisionRule, dyn:AttuneDecisionRule .
+
+dyn:Move
+  a dyn:ActionType, owl:Class ;
+  rdfs:label "Movement" ;
+  dyn:verbIri dyn:move ;
+  dyn:preconditionAsk dyn:MovePreconditionAsk ;
+  dyn:consequenceTemplate dyn:MoveConsequenceTemplate ;
+  dyn:punningDecision "ActionType is an individual rules record and an OWL class for move attempts in this starter package." ;
+  dyn:srdReference "SRD 5.1 movement rules" .
+
+dyn:MovePreconditionAsk
+  a dyn:SparqlAskPrecondition ;
+  rdf:value """ASK {
+  GRAPH ?stateGraph {
+    VALUES (?actant ?fromPlace ?toPlace ?asOf) { (?actantValue ?fromPlaceValue ?toPlaceValue ?asOfValue) }
+    ?fromPlace sc:adjacentTo ?toPlace .
+    ?location a sc:LocatedInRelator ;
+      sc:subject ?actant ;
+      sc:predicate sc:locatedIn ;
+      sc:object ?fromPlace ;
+      sc:acceptedFrom ?acceptedFrom .
+    FILTER(?acceptedFrom <= ?asOf)
+    FILTER NOT EXISTS {
+      ?location sc:acceptedUntil ?acceptedUntil .
+      FILTER(?acceptedUntil <= ?asOf)
+    }
+  }
+}""" .
+
+dyn:MoveConsequenceTemplate
+  a dyn:ConsequenceTemplate ;
+  rdf:value "Close the current sc:locatedIn relator for the actant and open a new sc:LocatedInRelator at the destination place, carrying authority and committed-event provenance." .
+
+dyn:MovementDecisionRule
+  a dyn:DecisionRule ;
+  dyn:csvRuleId "movement" ;
+  dyn:actionType dyn:Move ;
+  dyn:verbIri dyn:move ;
+  dyn:preconditionAsk dyn:MovePreconditionAsk ;
+  dyn:consequenceTemplate dyn:MoveConsequenceTemplate ;
+  dyn:srdReference "SRD 5.1 movement rules" ;
+  dyn:starterStatus "starter" .
+
+dyn:Speak
+  a dyn:ActionType, owl:Class ;
+  rdfs:label "Speak" ;
+  dyn:verbIri dyn:speak ;
+  dyn:preconditionAsk dyn:SpeakPreconditionAsk ;
+  dyn:consequenceTemplate dyn:SpeechEventTemplate ;
+  dyn:punningDecision "ActionType is an individual rules record and an OWL class for speak attempts in this starter package." ;
+  dyn:srdReference "Stagecraft dialogue doctrine plus SRD 5.1 silence mask pattern" .
+
+dyn:SpeakPreconditionAsk
+  a dyn:SparqlAskPrecondition ;
+  rdf:value """ASK {
+  GRAPH ?stateGraph {
+    VALUES (?actant ?actionType ?asOf) { (?actantValue dyn:Speak ?asOfValue) }
+    FILTER NOT EXISTS {
+      ?mask a dyn:AffordanceMask ;
+        dyn:masksActionType ?actionType ;
+        dyn:maskedActant ?actant ;
+        sc:acceptedFrom ?acceptedFrom .
+      FILTER(?acceptedFrom <= ?asOf)
+      FILTER NOT EXISTS {
+        ?mask sc:acceptedUntil ?acceptedUntil .
+        FILTER(?acceptedUntil <= ?asOf)
+      }
+    }
+  }
+}""" .
+
+dyn:SpeechEventTemplate
+  a dyn:ConsequenceTemplate ;
+  rdf:value "Commit a speech event without a state mutation; any founded effect is a separate tier-2 or tier-3 record." .
+
+dyn:SpeakDecisionRule
+  a dyn:DecisionRule ;
+  dyn:csvRuleId "speak" ;
+  dyn:actionType dyn:Speak ;
+  dyn:verbIri dyn:speak ;
+  dyn:preconditionAsk dyn:SpeakPreconditionAsk ;
+  dyn:consequenceTemplate dyn:SpeechEventTemplate ;
+  dyn:srdReference "Stagecraft dialogue doctrine plus SRD 5.1 silence mask pattern" ;
+  dyn:starterStatus "starter" .
+
+dyn:Attune
+  a dyn:ActionType, owl:Class ;
+  rdfs:label "Attune" ;
+  dyn:verbIri dyn:attune ;
+  dyn:preconditionAsk dyn:AttunePreconditionAsk ;
+  dyn:consequenceTemplate dyn:AttuneConsequenceTemplate ;
+  dyn:punningDecision "ActionType is an individual rules record and an OWL class for attune attempts in this starter package." ;
+  dyn:srdReference "SRD 5.1 attunement rules" .
+
+dyn:AttunePreconditionAsk
+  a dyn:SparqlAskPrecondition ;
+  rdf:value """ASK {
+  GRAPH ?stateGraph {
+    VALUES (?actant ?item ?asOf) { (?actantValue ?itemValue ?asOfValue) }
+    ?item dyn:affords dyn:Attune .
+    FILTER NOT EXISTS {
+      ?mask a dyn:AffordanceMask ;
+        dyn:masksActionType dyn:Attune ;
+        dyn:maskedActant ?actant ;
+        sc:acceptedFrom ?acceptedFrom .
+      FILTER(?acceptedFrom <= ?asOf)
+      FILTER NOT EXISTS {
+        ?mask sc:acceptedUntil ?acceptedUntil .
+        FILTER(?acceptedUntil <= ?asOf)
+      }
+    }
+  }
+}""" .
+
+dyn:AttuneConsequenceTemplate
+  a dyn:ConsequenceTemplate ;
+  rdf:value "Open an interval-qualified attunement relator between the actant and item when authority accepts the completed action." .
+
+dyn:AttuneDecisionRule
+  a dyn:DecisionRule ;
+  dyn:csvRuleId "attune" ;
+  dyn:actionType dyn:Attune ;
+  dyn:verbIri dyn:attune ;
+  dyn:preconditionAsk dyn:AttunePreconditionAsk ;
+  dyn:consequenceTemplate dyn:AttuneConsequenceTemplate ;
+  dyn:srdReference "SRD 5.1 attunement rules" ;
+  dyn:starterStatus "stretch" .
