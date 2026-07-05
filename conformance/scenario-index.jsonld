@@ -444,6 +444,27 @@
           }
         }
       ]
+    },
+    {
+      "id": "#19-dynamis-rules-framework-records",
+      "type": "ScenarioStep",
+      "manifestPath": "19-dynamis-rules-framework-records.jsonld",
+      "hasLaneBinding": [
+        {
+          "type": "LaneStateBinding",
+          "lane": "#fixture-lane",
+          "fromLaneState": {
+            "type": "StateLocator",
+            "locatorKind": "gitRefState",
+            "ref": "6f601b6bb24475f7afc5e951af9acc8d7399b154"
+          },
+          "toLaneState": {
+            "type": "StateLocator",
+            "locatorKind": "gitRefState",
+            "ref": "a.19-dynamis-rules-framework-records"
+          }
+        }
+      ]
     }
   ]
 }

@@ -1,0 +1,128 @@
+{
+  "@context": {
+    "@vocab": "https://spectacular-voyage.github.io/accord/ontology/",
+    "dcterms": "http://purl.org/dc/terms/",
+    "id": "@id",
+    "type": "@type",
+    "changeType": {
+      "@type": "@vocab"
+    },
+    "compareMode": {
+      "@type": "@vocab"
+    },
+    "targetsFileExpectation": {
+      "@type": "@id"
+    },
+    "locatorKind": {
+      "@type": "@vocab"
+    }
+  },
+  "type": "Manifest",
+  "id": "urn:accord:stagecraft:test-inn-ambush:19-dynamis-rules-framework-records",
+  "dcterms:title": "Inn Ambush 19 Dynamis rules framework records",
+  "hasCase": [
+    {
+      "type": "TransitionCase",
+      "id": "#dynamis-rules-framework-records",
+      "fixtureRepo": "github.com/spectacular-voyage/test-inn-ambush",
+      "operationId": "stagecraft.fixture.addDynamisRulesFrameworkRecords",
+      "fromRef": "6f601b6bb24475f7afc5e951af9acc8d7399b154",
+      "toRef": "a.19-dynamis-rules-framework-records",
+      "fromState": {
+        "type": "StateLocator",
+        "locatorKind": "gitRefState",
+        "ref": "6f601b6bb24475f7afc5e951af9acc8d7399b154"
+      },
+      "toState": {
+        "type": "StateLocator",
+        "locatorKind": "gitRefState",
+        "ref": "a.19-dynamis-rules-framework-records"
+      },
+      "hasFileExpectation": [
+        {
+          "id": "#fixture-readme",
+          "type": "FileExpectation",
+          "path": "README.md",
+          "changeType": "updated",
+          "compareMode": "text"
+        },
+        {
+          "id": "#authority-journal",
+          "type": "FileExpectation",
+          "path": "authority/journals/plan-b/plan-b.ttl",
+          "changeType": "updated",
+          "compareMode": "rdfCanonical"
+        },
+        {
+          "id": "#world-state",
+          "type": "FileExpectation",
+          "path": "world/states/inn-ambush-plan-b-state/inn-ambush-plan-b-state.ttl",
+          "changeType": "updated",
+          "compareMode": "rdfCanonical"
+        },
+        {
+          "id": "#rules-readme",
+          "type": "FileExpectation",
+          "path": "rules/dynamis/srd-starter/README.md",
+          "changeType": "added",
+          "compareMode": "text"
+        },
+        {
+          "id": "#rules-rdf",
+          "type": "FileExpectation",
+          "path": "rules/dynamis/srd-starter/dynamis-srd-starter.ttl",
+          "changeType": "added",
+          "compareMode": "rdfCanonical"
+        },
+        {
+          "id": "#rules-csv",
+          "type": "FileExpectation",
+          "path": "rules/dynamis/srd-starter/dynamis-srd-starter.decision-table.csv",
+          "changeType": "added",
+          "compareMode": "text"
+        }
+      ],
+      "hasRdfExpectation": [
+        {
+          "id": "#rules-rdf-expectation",
+          "type": "RdfExpectation",
+          "targetsFileExpectation": "#rules-rdf",
+          "hasAskAssertion": [
+            {
+              "id": "#ask-rules-package-action-types-and-attribution",
+              "type": "SparqlAskAssertion",
+              "query": "ASK { <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-starter> a <http://www.w3.org/ns/dcat#Dataset> ; <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/4.0/> ; <http://purl.org/dc/terms/source> <https://dnd.wizards.com/resources/systems-reference-document> . <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/SrdStarterActionTable> a <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/DecisionTable> ; <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/hasDecisionRule> <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/MovementDecisionRule>, <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/SpeakDecisionRule>, <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/AttuneDecisionRule> . <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/Move> a <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/ActionType> ; <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/preconditionAsk> <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/MovePreconditionAsk> ; <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/consequenceTemplate> <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/MoveConsequenceTemplate> . <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/Speak> a <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/ActionType> ; <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/preconditionAsk> <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/SpeakPreconditionAsk> . <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/Attune> a <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/ActionType> . <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/AttuneDecisionRule> <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/starterStatus> \"stretch\" . }",
+              "expectedBoolean": true
+            }
+          ]
+        },
+        {
+          "id": "#world-state-rdf-expectation",
+          "type": "RdfExpectation",
+          "targetsFileExpectation": "#world-state",
+          "hasAskAssertion": [
+            {
+              "id": "#ask-silence-affordance-mask-interval",
+              "type": "SparqlAskAssertion",
+              "query": "ASK { <https://spectacular-voyage.github.io/test-inn-ambush/affordance-mask/silence-elara-001> a <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/AffordanceMask> ; <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/masksActionType> <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/Speak> ; <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/maskedActant> <https://spectacular-voyage.github.io/test-inn-ambush/actant/elara> ; <https://spectacular-voyage.github.io/stagecraft/ontology/acceptedFrom> \"2026-06-29T13:39:00Z\"^^<http://www.w3.org/2001/XMLSchema#dateTime> ; <https://spectacular-voyage.github.io/stagecraft/ontology/acceptedUntil> \"2026-06-29T13:40:00Z\"^^<http://www.w3.org/2001/XMLSchema#dateTime> ; <https://spectacular-voyage.github.io/stagecraft/ontology/basedOnAuthorityRecord> <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/outcome-committed/silence-elara-001> . }",
+              "expectedBoolean": true
+            }
+          ]
+        },
+        {
+          "id": "#authority-journal-rdf-expectation",
+          "type": "RdfExpectation",
+          "targetsFileExpectation": "#authority-journal",
+          "hasAskAssertion": [
+            {
+              "id": "#ask-silence-authority-record",
+              "type": "SparqlAskAssertion",
+              "query": "ASK { <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/outcome-committed/silence-elara-001> a <https://spectacular-voyage.github.io/stagecraft/ontology/OutcomeCommitted> ; <http://purl.org/dc/terms/references> <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-starter> ; <https://spectacular-voyage.github.io/stagecraft/ontology/committedEvent> <https://spectacular-voyage.github.io/test-inn-ambush/committed-event/silence-elara-001> ; <https://spectacular-voyage.github.io/stagecraft/ontology/hasCommitCertificate> <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/commit-certificate/silence-elara-001> . <https://spectacular-voyage.github.io/test-inn-ambush/committed-event/silence-elara-001> <https://spectacular-voyage.github.io/stagecraft/ontology/authorizedByAuthorityRecord> <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/outcome-committed/silence-elara-001> . }",
+              "expectedBoolean": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
