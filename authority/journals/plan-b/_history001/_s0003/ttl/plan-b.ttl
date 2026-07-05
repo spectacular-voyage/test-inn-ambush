@@ -1,0 +1,150 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix sc: <https://spectacular-voyage.github.io/stagecraft/ontology/> .
+@prefix sflo: <https://semantic-flow.github.io/sflo/ontology/> .
+@prefix stage: <https://spectacular-voyage.github.io/test-inn-ambush/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# SC-4 provisional vocabulary fixture.
+# The sc: classes and properties used here are provisional Stagecraft terms
+# until enough usage exists to promote or split them into later ontology modules.
+
+<https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/suggestion-made/plan-b-001>
+  a sc:SuggestionMade ;
+  dcterms:created "2026-06-29T13:30:00Z"^^xsd:dateTime ;
+  sc:suggestedBy <https://spectacular-voyage.github.io/test-inn-ambush/participant/bob> ;
+  sc:suggestedTo <https://spectacular-voyage.github.io/test-inn-ambush/participant/alice> ;
+  sc:basedOnHistory <https://spectacular-voyage.github.io/test-inn-ambush/history/main> .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/declared-intent/elara-plan-b-001>
+  a sc:DeclaredIntent ;
+  dcterms:created "2026-06-29T13:31:00Z"^^xsd:dateTime ;
+  sc:declaredBy <https://spectacular-voyage.github.io/test-inn-ambush/participant/alice> ;
+  sc:intentForActant <https://spectacular-voyage.github.io/test-inn-ambush/actant/elara> ;
+  sc:referencesSuggestion <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/suggestion-made/plan-b-001> ;
+  sc:basedOnHistory <https://spectacular-voyage.github.io/test-inn-ambush/history/main> .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/intent-accepted/elara-plan-b-001>
+  a sc:IntentAccepted ;
+  dcterms:created "2026-06-29T13:32:00Z"^^xsd:dateTime ;
+  sc:acceptedBy <https://spectacular-voyage.github.io/test-inn-ambush/gm/alex> ;
+  sc:declaredBy <https://spectacular-voyage.github.io/test-inn-ambush/participant/alice> ;
+  sc:intentForActant <https://spectacular-voyage.github.io/test-inn-ambush/actant/elara> ;
+  sc:referencesSuggestion <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/suggestion-made/plan-b-001> ;
+  sc:basedOnHistory <https://spectacular-voyage.github.io/test-inn-ambush/history/main> .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/outcome-proposed/plan-b-001>
+  a sc:OutcomeProposed ;
+  dcterms:created "2026-06-29T13:33:00Z"^^xsd:dateTime ;
+  sc:referencesSuggestion <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/suggestion-made/plan-b-001> ;
+  sc:affectsEntity <https://spectacular-voyage.github.io/test-inn-ambush/target/door> ;
+  sc:appliesConsequence <https://spectacular-voyage.github.io/test-inn-ambush/consequence/door-barred> ;
+  sc:basedOnHistory <https://spectacular-voyage.github.io/test-inn-ambush/history/main> .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/commit-certificate/plan-b-001>
+  a sc:CommitCertificate ;
+  dcterms:created "2026-06-29T13:34:00Z"^^xsd:dateTime ;
+  sc:committedBy <https://spectacular-voyage.github.io/test-inn-ambush/gm/alex> ;
+  sc:committedEvent <https://spectacular-voyage.github.io/test-inn-ambush/committed-event/plan-b-001> ;
+  sc:basedOnHistory <https://spectacular-voyage.github.io/test-inn-ambush/history/main> ;
+  sc:idempotencyKey "inn-ambush-plan-b-001" .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/commit-certificate/speech-hello-barkeep-001>
+  a sc:CommitCertificate ;
+  dcterms:created "2026-06-29T13:36:00Z"^^xsd:dateTime ;
+  sc:committedBy <https://spectacular-voyage.github.io/test-inn-ambush/authority-policy/speech-always-commit> ;
+  sc:committedEvent <https://spectacular-voyage.github.io/test-inn-ambush/speech-event/hello-barkeep-001> ;
+  sc:basedOnHistory <https://spectacular-voyage.github.io/test-inn-ambush/history/main> ;
+  sc:idempotencyKey "chatcontrib-hello-barkeep-001" .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/speech-committed/hello-barkeep-001>
+  a sc:SpeechCommitted ;
+  dcterms:created "2026-06-29T13:36:00Z"^^xsd:dateTime ;
+  sc:committedBy <https://spectacular-voyage.github.io/test-inn-ambush/authority-policy/speech-always-commit> ;
+  sc:committedEvent <https://spectacular-voyage.github.io/test-inn-ambush/speech-event/hello-barkeep-001> ;
+  sc:hasCommitCertificate <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/commit-certificate/speech-hello-barkeep-001> ;
+  dcterms:references <https://spectacular-voyage.github.io/test-inn-ambush/sessions/contributions/chat-contribution-hello-barkeep> ;
+  sc:basedOnHistory <https://spectacular-voyage.github.io/test-inn-ambush/history/main> .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/world-seeded/inn-ambush-001>
+  a sc:WorldSeeded ;
+  dcterms:created "2026-06-29T13:29:00Z"^^xsd:dateTime ;
+  sc:basedOnHistory <https://spectacular-voyage.github.io/test-inn-ambush/history/main> ;
+  dcterms:references <https://spectacular-voyage.github.io/test-inn-ambush/scenario/inn-ambush> .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/commit-certificate/time-advanced-inn-clock-001>
+  a sc:CommitCertificate ;
+  dcterms:created "2026-06-29T13:37:00Z"^^xsd:dateTime ;
+  sc:committedBy <https://spectacular-voyage.github.io/test-inn-ambush/authority-policy/world-clock-loop> ;
+  sc:committedEvent <https://spectacular-voyage.github.io/test-inn-ambush/committed-event/time-advanced-inn-clock-001> ;
+  sc:basedOnHistory <https://spectacular-voyage.github.io/test-inn-ambush/history/main> ;
+  sc:idempotencyKey "time-advanced-inn-clock-001" .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/time-advanced/inn-clock-001>
+  a sc:TimeAdvanced ;
+  dcterms:created "2026-06-29T13:37:00Z"^^xsd:dateTime ;
+  sc:advancesWorldTimeTo <https://spectacular-voyage.github.io/test-inn-ambush/clock-anchor/inn-clock-001> ;
+  sc:committedBy <https://spectacular-voyage.github.io/test-inn-ambush/authority-policy/world-clock-loop> ;
+  sc:committedEvent <https://spectacular-voyage.github.io/test-inn-ambush/committed-event/time-advanced-inn-clock-001> ;
+  sc:hasCommitCertificate <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/commit-certificate/time-advanced-inn-clock-001> ;
+  sc:basedOnHistory <https://spectacular-voyage.github.io/test-inn-ambush/history/main> .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/committed-event/time-advanced-inn-clock-001>
+  a sc:CommittedEvent, sc:TimeAdvancedEvent ;
+  sc:advancesWorldTimeTo <https://spectacular-voyage.github.io/test-inn-ambush/clock-anchor/inn-clock-001> ;
+  sc:authorizedByAuthorityRecord <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/time-advanced/inn-clock-001> ;
+  sc:basedOnHistory <https://spectacular-voyage.github.io/test-inn-ambush/history/main> ;
+  sc:branchContext <https://spectacular-voyage.github.io/test-inn-ambush/branch/plan-b> .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/commit-certificate/movement-nera-to-old-road-001>
+  a sc:CommitCertificate ;
+  dcterms:created "2026-06-29T13:38:00Z"^^xsd:dateTime ;
+  sc:committedBy <https://spectacular-voyage.github.io/test-inn-ambush/gm/alex> ;
+  sc:committedEvent <https://spectacular-voyage.github.io/test-inn-ambush/movement/nera-to-old-road-001> ;
+  sc:basedOnHistory <https://spectacular-voyage.github.io/test-inn-ambush/history/main> ;
+  sc:idempotencyKey "movement-nera-to-old-road-001" .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/movement-committed/nera-to-old-road-001>
+  a sc:MovementCommitted ;
+  dcterms:created "2026-06-29T13:38:00Z"^^xsd:dateTime ;
+  sc:committedBy <https://spectacular-voyage.github.io/test-inn-ambush/gm/alex> ;
+  sc:committedEvent <https://spectacular-voyage.github.io/test-inn-ambush/movement/nera-to-old-road-001> ;
+  sc:fromPlace <https://spectacular-voyage.github.io/test-inn-ambush/place/common-room> ;
+  sc:hasCommitCertificate <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/commit-certificate/movement-nera-to-old-road-001> ;
+  sc:movesActant <https://spectacular-voyage.github.io/test-inn-ambush/actant/nera> ;
+  sc:toPlace <https://spectacular-voyage.github.io/test-inn-ambush/place/old-road> ;
+  sc:basedOnHistory <https://spectacular-voyage.github.io/test-inn-ambush/history/main> .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/movement/nera-to-old-road-001>
+  a sc:CommittedEvent, sc:MovementEvent ;
+  sc:authorizedByAuthorityRecord <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/movement-committed/nera-to-old-road-001> ;
+  sc:basedOnHistory <https://spectacular-voyage.github.io/test-inn-ambush/history/main> ;
+  sc:branchContext <https://spectacular-voyage.github.io/test-inn-ambush/branch/plan-b> ;
+  sc:fromPlace <https://spectacular-voyage.github.io/test-inn-ambush/place/common-room> ;
+  sc:movesActant <https://spectacular-voyage.github.io/test-inn-ambush/actant/nera> ;
+  sc:producesStateMutation <https://spectacular-voyage.github.io/test-inn-ambush/state-mutation/location-nera-to-old-road-001> ;
+  sc:toPlace <https://spectacular-voyage.github.io/test-inn-ambush/place/old-road> .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/outcome-committed/plan-b-001>
+  a sc:OutcomeCommitted ;
+  dcterms:created "2026-06-29T13:34:00Z"^^xsd:dateTime ;
+  sc:committedBy <https://spectacular-voyage.github.io/test-inn-ambush/gm/alex> ;
+  sc:causedByAcceptedIntent <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/intent-accepted/elara-plan-b-001> ;
+  sc:committedEvent <https://spectacular-voyage.github.io/test-inn-ambush/committed-event/plan-b-001> ;
+  sc:commitsProposedOutcome <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/outcome-proposed/plan-b-001> ;
+  sc:affectsEntity <https://spectacular-voyage.github.io/test-inn-ambush/target/door> ;
+  sc:appliesConsequence <https://spectacular-voyage.github.io/test-inn-ambush/consequence/door-barred> ;
+  sc:hasCommitCertificate <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/commit-certificate/plan-b-001> ;
+  sc:basedOnHistory <https://spectacular-voyage.github.io/test-inn-ambush/history/main> .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/committed-event/plan-b-001>
+  a sc:CommittedEvent ;
+  dcterms:created "2026-06-29T13:34:00Z"^^xsd:dateTime ;
+  sc:authorizedByAuthorityRecord <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/outcome-committed/plan-b-001> ;
+  sc:causedByAcceptedIntent <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/intent-accepted/elara-plan-b-001> ;
+  sc:affectsEntity <https://spectacular-voyage.github.io/test-inn-ambush/target/door> ;
+  sc:appliesConsequence <https://spectacular-voyage.github.io/test-inn-ambush/consequence/door-barred> ;
+  sc:basedOnHistory <https://spectacular-voyage.github.io/test-inn-ambush/history/main> ;
+  sc:branchContext <https://spectacular-voyage.github.io/test-inn-ambush/branch/plan-b> ;
+  sc:hasSceneLocalTime <https://spectacular-voyage.github.io/test-inn-ambush/scene-local-time/inn-scene-plan-b> ;
+  sc:inTemporalScope <https://spectacular-voyage.github.io/test-inn-ambush/temporal-scope/inn-scene> ;
+  sc:producesStateMutation <https://spectacular-voyage.github.io/test-inn-ambush/state-mutation/door-barred-plan-b-001> .

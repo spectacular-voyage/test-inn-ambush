@@ -23,8 +23,9 @@
   sflo:hasHistoricalState <projections/contracts/inn-ambush-contract-context/_history001/_s0003> ;
   sflo:hasHistoricalState <projections/contracts/inn-ambush-contract-context/_history001/_s0004> ;
   sflo:hasHistoricalState <projections/contracts/inn-ambush-contract-context/_history001/_s0005> ;
-  sflo:latestHistoricalState <projections/contracts/inn-ambush-contract-context/_history001/_s0005> ;
-  sflo:nextStateOrdinal "6"^^xsd:nonNegativeInteger ;
+  sflo:hasHistoricalState <projections/contracts/inn-ambush-contract-context/_history001/_s0006> ;
+  sflo:latestHistoricalState <projections/contracts/inn-ambush-contract-context/_history001/_s0006> ;
+  sflo:nextStateOrdinal "7"^^xsd:nonNegativeInteger ;
   sflo:hasResourcePage <projections/contracts/inn-ambush-contract-context/_history001/index.html> .
 
 <projections/contracts/inn-ambush-contract-context/_history001/_s0001> a sflo:HistoricalState ;
@@ -81,6 +82,17 @@
   sflo:locatedFileForManifestation <projections/contracts/inn-ambush-contract-context/_history001/_s0005/jsonld/inn-ambush-contract.context.jsonld> ;
   sflo:hasResourcePage <projections/contracts/inn-ambush-contract-context/_history001/_s0005/jsonld/index.html> .
 
+<projections/contracts/inn-ambush-contract-context/_history001/_s0006> a sflo:HistoricalState ;
+  sflo:stateOrdinal "6"^^xsd:nonNegativeInteger ;
+  sflo:previousHistoricalState <projections/contracts/inn-ambush-contract-context/_history001/_s0005> ;
+  sflo:hasManifestation <projections/contracts/inn-ambush-contract-context/_history001/_s0006/jsonld> ;
+  sflo:locatedFileForState <projections/contracts/inn-ambush-contract-context/_history001/_s0006/jsonld/inn-ambush-contract.context.jsonld> ;
+  sflo:hasResourcePage <projections/contracts/inn-ambush-contract-context/_history001/_s0006/index.html> .
+
+<projections/contracts/inn-ambush-contract-context/_history001/_s0006/jsonld> a sflo:ArtifactManifestation, sflo:RdfDocument ;
+  sflo:locatedFileForManifestation <projections/contracts/inn-ambush-contract-context/_history001/_s0006/jsonld/inn-ambush-contract.context.jsonld> ;
+  sflo:hasResourcePage <projections/contracts/inn-ambush-contract-context/_history001/_s0006/jsonld/index.html> .
+
 <projections/contracts/inn-ambush-contract-context/_knop/_meta> a sflo:KnopMetadata, sflo:DigitalArtifact, sflo:RdfDocument ;
   sflo:hasWorkingLocatedFile <projections/contracts/inn-ambush-contract-context/_knop/_meta/meta.ttl> ;
   sflo:hasResourcePage <projections/contracts/inn-ambush-contract-context/_knop/_meta/index.html> .
@@ -134,3 +146,9 @@
 <projections/contracts/inn-ambush-contract-context/_knop/_meta/index.html> a sflo:ResourcePage, sflo:LocatedFile .
 
 <projections/contracts/inn-ambush-contract-context/_knop/_inventory/index.html> a sflo:ResourcePage, sflo:LocatedFile .
+
+<projections/contracts/inn-ambush-contract-context/_history001/_s0006/jsonld/inn-ambush-contract.context.jsonld> a sflo:LocatedFile, sflo:RdfDocument .
+
+<projections/contracts/inn-ambush-contract-context/_history001/_s0006/index.html> a sflo:ResourcePage, sflo:LocatedFile .
+
+<projections/contracts/inn-ambush-contract-context/_history001/_s0006/jsonld/index.html> a sflo:ResourcePage, sflo:LocatedFile .
