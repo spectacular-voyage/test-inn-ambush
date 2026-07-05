@@ -1,0 +1,4 @@
+testTypeKey,testTypeLabel,actionType,description,targetNumberName,sourceSection,mechanicalStatus
+ability-check,Ability check,dyn:AbilityCheck,A creature uses talent and training to try to overcome a challenge when the outcome is uncertain and meaningful.,Difficulty Class,Playing the Game: Ability Checks,actiontype-family
+saving-throw,Saving throw,dyn:SavingThrow,A creature attempts to evade or resist a threat when a rule requires a save.,Difficulty Class,Playing the Game: Saving Throws,actiontype-family
+attack-roll,Attack roll,dyn:AttackRoll,A roll determines whether an attack hits by comparing the total to Armor Class.,Armor Class,Playing the Game: Attack Rolls,actiontype-family

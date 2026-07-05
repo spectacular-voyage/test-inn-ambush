@@ -1,0 +1,62 @@
+{
+  "@context": "http://www.w3.org/ns/csvw",
+  "dc:title": "SRD 5.2.1 D20 test CSVW mapping",
+  "dc:license": "https://creativecommons.org/licenses/by/4.0/",
+  "dc:source": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf",
+  "tables": [
+    {
+      "url": "d20-test.abilities.csv",
+      "tableSchema": {
+        "columns": [
+          { "name": "abilityKey", "datatype": "string", "required": true },
+          { "name": "abilityLabel", "datatype": "string", "required": true },
+          { "name": "abilityCheckExample", "datatype": "string", "required": true },
+          { "name": "savingThrowExample", "datatype": "string", "required": true },
+          { "name": "sourceSection", "datatype": "string", "required": true }
+        ],
+        "primaryKey": "abilityKey",
+        "aboutUrl": "https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/{abilityLabel}"
+      }
+    },
+    {
+      "url": "d20-test.skills.csv",
+      "tableSchema": {
+        "columns": [
+          { "name": "skillKey", "datatype": "string", "required": true },
+          { "name": "skillLabel", "datatype": "string", "required": true },
+          { "name": "defaultAbilityKey", "datatype": "string", "required": true },
+          { "name": "exampleUses", "datatype": "string", "required": true },
+          { "name": "actionType", "datatype": "string", "required": true },
+          { "name": "sourceSection", "datatype": "string", "required": true }
+        ],
+        "primaryKey": "skillKey",
+        "foreignKeys": [
+          {
+            "columnReference": "defaultAbilityKey",
+            "reference": {
+              "resource": "d20-test.abilities.csv",
+              "columnReference": "abilityKey"
+            }
+          }
+        ],
+        "aboutUrl": "https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/{skillLabel}"
+      }
+    },
+    {
+      "url": "d20-test.test-types.csv",
+      "tableSchema": {
+        "columns": [
+          { "name": "testTypeKey", "datatype": "string", "required": true },
+          { "name": "testTypeLabel", "datatype": "string", "required": true },
+          { "name": "actionType", "datatype": "string", "required": true },
+          { "name": "description", "datatype": "string", "required": true },
+          { "name": "targetNumberName", "datatype": "string", "required": true },
+          { "name": "sourceSection", "datatype": "string", "required": true },
+          { "name": "mechanicalStatus", "datatype": "string", "required": true }
+        ],
+        "primaryKey": "testTypeKey",
+        "aboutUrl": "{actionType}"
+      }
+    }
+  ]
+}

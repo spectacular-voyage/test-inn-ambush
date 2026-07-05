@@ -1,0 +1,23 @@
+{
+  "@context": "http://www.w3.org/ns/csvw",
+  "url": "conditions.effects.csv",
+  "dc:title": "SRD 5.2.1 condition effects curated CSV",
+  "dc:license": "https://creativecommons.org/licenses/by/4.0/",
+  "dc:source": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf",
+  "tableSchema": {
+    "columns": [
+      { "name": "conditionKey", "datatype": "string", "required": true },
+      { "name": "conditionLabel", "datatype": "string", "required": true },
+      { "name": "effectKey", "datatype": "string", "required": true },
+      { "name": "effectLabel", "datatype": "string", "required": true },
+      { "name": "effectText", "datatype": "string", "required": true },
+      { "name": "maskActionTypes", "datatype": "string", "separator": ";" },
+      { "name": "effectKind", "datatype": "string", "required": true },
+      { "name": "mechanicalStatus", "datatype": "string", "required": true },
+      { "name": "adjudicationNote", "datatype": "string" },
+      { "name": "sourceSection", "datatype": "string", "required": true }
+    ],
+    "primaryKey": ["conditionKey", "effectKey"],
+    "aboutUrl": "https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/{conditionKey}/effect/{effectKey}"
+  }
+}

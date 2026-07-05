@@ -489,6 +489,7 @@
   sc:basedOnAuthorityRecord <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/outcome-committed/restraint-nera-001> ;
   sc:branchContext <https://spectacular-voyage.github.io/test-inn-ambush/branch/plan-b> ;
   sc:causedByCommittedEvent <https://spectacular-voyage.github.io/test-inn-ambush/committed-event/restraint-nera-001> ;
+  dcterms:references <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/restrained/effect/speed-0> ;
   sc:producedStateMutation <https://spectacular-voyage.github.io/test-inn-ambush/state-mutation/restraint-nera-001> ;
   dyn:masksActionType dyn:Move ;
   dyn:maskedActant <https://spectacular-voyage.github.io/test-inn-ambush/actant/nera> .

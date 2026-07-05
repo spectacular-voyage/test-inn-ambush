@@ -193,7 +193,7 @@
 <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/commit-certificate/restraint-nera-001>
   a sc:CommitCertificate ;
   dcterms:created "2026-06-29T13:39:00Z"^^xsd:dateTime ;
-  sc:committedBy <https://spectacular-voyage.github.io/test-inn-ambush/authority-policy/srd-starter-restraint-mask> ;
+  sc:committedBy <https://spectacular-voyage.github.io/test-inn-ambush/authority-policy/srd-conditions-restraint-mask> ;
   sc:committedEvent <https://spectacular-voyage.github.io/test-inn-ambush/committed-event/restraint-nera-001> ;
   sc:basedOnHistory <https://spectacular-voyage.github.io/test-inn-ambush/history/main> ;
   sc:idempotencyKey "restraint-nera-001" .
@@ -201,8 +201,9 @@
 <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/outcome-committed/restraint-nera-001>
   a sc:OutcomeCommitted ;
   dcterms:created "2026-06-29T13:39:00Z"^^xsd:dateTime ;
-  dcterms:references <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-starter> ;
-  sc:committedBy <https://spectacular-voyage.github.io/test-inn-ambush/authority-policy/srd-starter-restraint-mask> ;
+  dcterms:references <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions>,
+    <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/restrained/effect/speed-0> ;
+  sc:committedBy <https://spectacular-voyage.github.io/test-inn-ambush/authority-policy/srd-conditions-restraint-mask> ;
   sc:committedEvent <https://spectacular-voyage.github.io/test-inn-ambush/committed-event/restraint-nera-001> ;
   sc:hasCommitCertificate <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/commit-certificate/restraint-nera-001> ;
   sc:affectsEntity <https://spectacular-voyage.github.io/test-inn-ambush/actant/nera> ;
