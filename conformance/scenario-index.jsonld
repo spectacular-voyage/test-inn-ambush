@@ -801,6 +801,27 @@
           }
         }
       ]
+    },
+    {
+      "id": "#39-srd-weapons-range-property-repair",
+      "type": "ScenarioStep",
+      "manifestPath": "39-srd-weapons-range-property-repair.jsonld",
+      "hasLaneBinding": [
+        {
+          "type": "LaneStateBinding",
+          "lane": "#fixture-lane",
+          "fromLaneState": {
+            "type": "StateLocator",
+            "locatorKind": "gitRefState",
+            "ref": "fa69dc74b18a573dca93ac119c99c0c19d2e5dd0"
+          },
+          "toLaneState": {
+            "type": "StateLocator",
+            "locatorKind": "gitRefState",
+            "ref": "a.39-srd-weapons-range-property-repair"
+          }
+        }
+      ]
     }
   ]
 }

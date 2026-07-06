@@ -1,0 +1,80 @@
+{
+  "@context": {
+    "@vocab": "https://spectacular-voyage.github.io/accord/ontology/",
+    "dcterms": "http://purl.org/dc/terms/",
+    "id": "@id",
+    "type": "@type",
+    "changeType": {
+      "@type": "@vocab"
+    },
+    "compareMode": {
+      "@type": "@vocab"
+    },
+    "targetsFileExpectation": {
+      "@type": "@id"
+    },
+    "locatorKind": {
+      "@type": "@vocab"
+    }
+  },
+  "type": "Manifest",
+  "id": "urn:accord:stagecraft:test-inn-ambush:39-srd-weapons-range-property-repair",
+  "dcterms:title": "Inn Ambush 39 SRD weapons range property repair",
+  "hasCase": [
+    {
+      "type": "TransitionCase",
+      "id": "#srd-weapons-range-property-repair",
+      "fixtureRepo": "github.com/spectacular-voyage/test-inn-ambush",
+      "operationId": "stagecraft.fixture.repairSrdWeaponRangeProperties",
+      "fromRef": "fa69dc74b18a573dca93ac119c99c0c19d2e5dd0",
+      "toRef": "a.39-srd-weapons-range-property-repair",
+      "fromState": {
+        "type": "StateLocator",
+        "locatorKind": "gitRefState",
+        "ref": "fa69dc74b18a573dca93ac119c99c0c19d2e5dd0"
+      },
+      "toState": {
+        "type": "StateLocator",
+        "locatorKind": "gitRefState",
+        "ref": "a.39-srd-weapons-range-property-repair"
+      },
+      "hasFileExpectation": [
+        {
+          "id": "#weapons-csv",
+          "type": "FileExpectation",
+          "path": "rules/dynamis/srd-5-2-1/weapons/weapons.csv",
+          "changeType": "updated",
+          "compareMode": "text"
+        },
+        {
+          "id": "#weapons-rdf",
+          "type": "FileExpectation",
+          "path": "rules/dynamis/srd-5-2-1/weapons/weapons.ttl",
+          "changeType": "updated",
+          "compareMode": "rdfCanonical"
+        }
+      ],
+      "hasRdfExpectation": [
+        {
+          "id": "#weapons-rdf-expectation",
+          "type": "RdfExpectation",
+          "targetsFileExpectation": "#weapons-rdf",
+          "hasAskAssertion": [
+            {
+              "id": "#ask-range-definition-and-action-distances",
+              "type": "SparqlAskAssertion",
+              "query": "ASK { <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/property/range> a <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/WeaponPropertyDefinition> ; <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/propertyKey> \"range\" . <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/item-action/handaxe-thrown> <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/normalRangeFeet> 20 ; <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/longRangeFeet> 60 . <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/item-action/light-crossbow-ranged> <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/normalRangeFeet> 80 ; <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/longRangeFeet> 320 . }",
+              "expectedBoolean": true
+            },
+            {
+              "id": "#ask-no-polluted-range-property-assignments",
+              "type": "SparqlAskAssertion",
+              "query": "ASK { ?weapon <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/hasWeaponProperty> <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/property/range> . }",
+              "expectedBoolean": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
