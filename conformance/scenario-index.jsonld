@@ -633,6 +633,27 @@
           }
         }
       ]
+    },
+    {
+      "id": "#28-d20-roll-evidence-woven",
+      "type": "ScenarioStep",
+      "manifestPath": "28-d20-roll-evidence-woven.jsonld",
+      "hasLaneBinding": [
+        {
+          "type": "LaneStateBinding",
+          "lane": "#fixture-lane",
+          "fromLaneState": {
+            "type": "StateLocator",
+            "locatorKind": "gitRefState",
+            "ref": "a.27-d20-roll-evidence-records"
+          },
+          "toLaneState": {
+            "type": "StateLocator",
+            "locatorKind": "gitRefState",
+            "ref": "a.28-d20-roll-evidence-woven"
+          }
+        }
+      ]
     }
   ]
 }
