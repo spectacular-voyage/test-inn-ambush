@@ -591,6 +591,27 @@
           }
         }
       ]
+    },
+    {
+      "id": "#26-prose-clock-calendar-woven",
+      "type": "ScenarioStep",
+      "manifestPath": "26-prose-clock-calendar-woven.jsonld",
+      "hasLaneBinding": [
+        {
+          "type": "LaneStateBinding",
+          "lane": "#fixture-lane",
+          "fromLaneState": {
+            "type": "StateLocator",
+            "locatorKind": "gitRefState",
+            "ref": "a.25-prose-clock-calendar"
+          },
+          "toLaneState": {
+            "type": "StateLocator",
+            "locatorKind": "gitRefState",
+            "ref": "a.26-prose-clock-calendar-woven"
+          }
+        }
+      ]
     }
   ]
 }
