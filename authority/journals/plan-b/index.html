@@ -141,10 +141,11 @@
       <details open>
         <summary>Latest historical manifestation file</summary>
         <div class="wf-source-meta">
-          <span>authority/journals/plan-b/_history001/_s0003/ttl/plan-b.ttl</span>
-          <a href="/test-inn-ambush/authority/journals/plan-b/_history001/_s0003/ttl/plan-b.ttl">Raw file</a>
+          <span>authority/journals/plan-b/_history001/_s0004/ttl/plan-b.ttl</span>
+          <a href="/test-inn-ambush/authority/journals/plan-b/_history001/_s0004/ttl/plan-b.ttl">Raw file</a>
         </div>
 <pre class="shiki github-dark-default" style="background-color:#0d1117;color:#e6edf3" tabindex="0"><code><span class="line"><span style="color:#FF7B72">@prefix dcterms:</span><span style="color:#FFA657"> &#x3C;http://purl.org/dc/terms/></span><span style="color:#E6EDF3"> .</span></span>
+<span class="line"><span style="color:#FF7B72">@prefix dyn:</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/></span><span style="color:#E6EDF3"> .</span></span>
 <span class="line"><span style="color:#FF7B72">@prefix sc:</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/stagecraft/ontology/></span><span style="color:#E6EDF3"> .</span></span>
 <span class="line"><span style="color:#FF7B72">@prefix sflo:</span><span style="color:#FFA657"> &#x3C;https://semantic-flow.github.io/sflo/ontology/></span><span style="color:#E6EDF3"> .</span></span>
 <span class="line"><span style="color:#FF7B72">@prefix stage:</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/></span><span style="color:#E6EDF3"> .</span></span>
@@ -241,6 +242,30 @@
 <span class="line"><span style="color:#FF7B72">  sc:</span><span style="color:#79C0FF">basedOnHistory</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/history/main></span><span style="color:#E6EDF3"> ;</span></span>
 <span class="line"><span style="color:#FF7B72">  sc:</span><span style="color:#79C0FF">branchContext</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/branch/plan-b></span><span style="color:#E6EDF3"> .</span></span>
 <span class="line"></span>
+<span class="line"><span style="color:#FFA657">&#x3C;https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/commit-certificate/world-clock/offset-960s></span></span>
+<span class="line"><span style="color:#FF7B72">  a</span><span style="color:#FF7B72"> sc:</span><span style="color:#79C0FF">CommitCertificate</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dcterms:</span><span style="color:#79C0FF">created</span><span style="color:#A5D6FF"> "2026-06-29T13:37:05Z"</span><span style="color:#E6EDF3">^^</span><span style="color:#FF7B72">xsd:</span><span style="color:#79C0FF">dateTime</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sc:</span><span style="color:#79C0FF">committedBy</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/authority-policy/world-clock-loop></span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sc:</span><span style="color:#79C0FF">committedEvent</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/committed-event/time-advanced/world-clock/offset-960s></span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sc:</span><span style="color:#79C0FF">basedOnHistory</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/history/main></span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sc:</span><span style="color:#79C0FF">idempotencyKey</span><span style="color:#A5D6FF"> "world-clock-offset-960s"</span><span style="color:#E6EDF3"> .</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FFA657">&#x3C;https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/time-advanced/world-clock/offset-960s></span></span>
+<span class="line"><span style="color:#FF7B72">  a</span><span style="color:#FF7B72"> sc:</span><span style="color:#79C0FF">TimeAdvanced</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dcterms:</span><span style="color:#79C0FF">created</span><span style="color:#A5D6FF"> "2026-06-29T13:37:05Z"</span><span style="color:#E6EDF3">^^</span><span style="color:#FF7B72">xsd:</span><span style="color:#79C0FF">dateTime</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sc:</span><span style="color:#79C0FF">advancesWorldTimeTo</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/clock-anchor/world-clock/offset-960s></span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sc:</span><span style="color:#79C0FF">committedBy</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/authority-policy/world-clock-loop></span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sc:</span><span style="color:#79C0FF">committedEvent</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/committed-event/time-advanced/world-clock/offset-960s></span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sc:</span><span style="color:#79C0FF">hasCommitCertificate</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/commit-certificate/world-clock/offset-960s></span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sc:</span><span style="color:#79C0FF">basedOnHistory</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/history/main></span><span style="color:#E6EDF3"> .</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FFA657">&#x3C;https://spectacular-voyage.github.io/test-inn-ambush/committed-event/time-advanced/world-clock/offset-960s></span></span>
+<span class="line"><span style="color:#FF7B72">  a</span><span style="color:#FF7B72"> sc:</span><span style="color:#79C0FF">CommittedEvent</span><span style="color:#E6EDF3">, </span><span style="color:#FF7B72">sc:</span><span style="color:#79C0FF">TimeAdvancedEvent</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sc:</span><span style="color:#79C0FF">advancesWorldTimeTo</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/clock-anchor/world-clock/offset-960s></span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sc:</span><span style="color:#79C0FF">authorizedByAuthorityRecord</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/time-advanced/world-clock/offset-960s></span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sc:</span><span style="color:#79C0FF">basedOnHistory</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/history/main></span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sc:</span><span style="color:#79C0FF">branchContext</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/branch/plan-b></span><span style="color:#E6EDF3"> .</span></span>
+<span class="line"></span>
 <span class="line"><span style="color:#FFA657">&#x3C;https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/commit-certificate/movement-nera-to-old-road-001></span></span>
 <span class="line"><span style="color:#FF7B72">  a</span><span style="color:#FF7B72"> sc:</span><span style="color:#79C0FF">CommitCertificate</span><span style="color:#E6EDF3"> ;</span></span>
 <span class="line"><span style="color:#FF7B72">  dcterms:</span><span style="color:#79C0FF">created</span><span style="color:#A5D6FF"> "2026-06-29T13:38:00Z"</span><span style="color:#E6EDF3">^^</span><span style="color:#FF7B72">xsd:</span><span style="color:#79C0FF">dateTime</span><span style="color:#E6EDF3"> ;</span></span>
@@ -294,6 +319,148 @@
 <span class="line"><span style="color:#FF7B72">  sc:</span><span style="color:#79C0FF">hasSceneLocalTime</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/scene-local-time/inn-scene-plan-b></span><span style="color:#E6EDF3"> ;</span></span>
 <span class="line"><span style="color:#FF7B72">  sc:</span><span style="color:#79C0FF">inTemporalScope</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/temporal-scope/inn-scene></span><span style="color:#E6EDF3"> ;</span></span>
 <span class="line"><span style="color:#FF7B72">  sc:</span><span style="color:#79C0FF">producesStateMutation</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/state-mutation/door-barred-plan-b-001></span><span style="color:#E6EDF3"> .</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FFA657">&#x3C;https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/commit-certificate/silence-elara-001></span></span>
+<span class="line"><span style="color:#FF7B72">  a</span><span style="color:#FF7B72"> sc:</span><span style="color:#79C0FF">CommitCertificate</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dcterms:</span><span style="color:#79C0FF">created</span><span style="color:#A5D6FF"> "2026-06-29T13:39:00Z"</span><span style="color:#E6EDF3">^^</span><span style="color:#FF7B72">xsd:</span><span style="color:#79C0FF">dateTime</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sc:</span><span style="color:#79C0FF">committedBy</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/authority-policy/srd-starter-silence-mask></span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sc:</span><span style="color:#79C0FF">committedEvent</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/committed-event/silence-elara-001></span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sc:</span><span style="color:#79C0FF">basedOnHistory</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/history/main></span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sc:</span><span style="color:#79C0FF">idempotencyKey</span><span style="color:#A5D6FF"> "silence-elara-001"</span><span style="color:#E6EDF3"> .</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FFA657">&#x3C;https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/outcome-committed/silence-elara-001></span></span>
+<span class="line"><span style="color:#FF7B72">  a</span><span style="color:#FF7B72"> sc:</span><span style="color:#79C0FF">OutcomeCommitted</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dcterms:</span><span style="color:#79C0FF">created</span><span style="color:#A5D6FF"> "2026-06-29T13:39:00Z"</span><span style="color:#E6EDF3">^^</span><span style="color:#FF7B72">xsd:</span><span style="color:#79C0FF">dateTime</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dcterms:</span><span style="color:#79C0FF">references</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-starter></span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sc:</span><span style="color:#79C0FF">committedBy</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/authority-policy/srd-starter-silence-mask></span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sc:</span><span style="color:#79C0FF">committedEvent</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/committed-event/silence-elara-001></span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sc:</span><span style="color:#79C0FF">hasCommitCertificate</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/commit-certificate/silence-elara-001></span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sc:</span><span style="color:#79C0FF">affectsEntity</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/actant/elara></span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sc:</span><span style="color:#79C0FF">appliesConsequence</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/consequence/silence-mask-elara-001></span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sc:</span><span style="color:#79C0FF">basedOnHistory</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/history/main></span><span style="color:#E6EDF3"> .</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FFA657">&#x3C;https://spectacular-voyage.github.io/test-inn-ambush/committed-event/silence-elara-001></span></span>
+<span class="line"><span style="color:#FF7B72">  a</span><span style="color:#FF7B72"> sc:</span><span style="color:#79C0FF">CommittedEvent</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sc:</span><span style="color:#79C0FF">authorizedByAuthorityRecord</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/outcome-committed/silence-elara-001></span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sc:</span><span style="color:#79C0FF">affectsEntity</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/actant/elara></span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sc:</span><span style="color:#79C0FF">appliesConsequence</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/consequence/silence-mask-elara-001></span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sc:</span><span style="color:#79C0FF">basedOnHistory</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/history/main></span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sc:</span><span style="color:#79C0FF">branchContext</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/branch/plan-b></span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sc:</span><span style="color:#79C0FF">hasSceneLocalTime</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/scene-local-time/inn-scene-plan-b></span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sc:</span><span style="color:#79C0FF">inTemporalScope</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/temporal-scope/inn-scene></span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sc:</span><span style="color:#79C0FF">producesStateMutation</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/state-mutation/silence-elara-001></span><span style="color:#E6EDF3"> .</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FFA657">&#x3C;https://spectacular-voyage.github.io/test-inn-ambush/state-mutation/silence-elara-001></span></span>
+<span class="line"><span style="color:#FF7B72">  a</span><span style="color:#FF7B72"> sc:</span><span style="color:#79C0FF">StateMutation</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sc:</span><span style="color:#79C0FF">authorizedByAuthorityRecord</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/outcome-committed/silence-elara-001></span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sc:</span><span style="color:#79C0FF">causedByCommittedEvent</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/committed-event/silence-elara-001></span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sc:</span><span style="color:#79C0FF">affectsEntity</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/actant/elara></span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sc:</span><span style="color:#79C0FF">appliesConsequence</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/consequence/silence-mask-elara-001></span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sc:</span><span style="color:#79C0FF">branchContext</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/branch/plan-b></span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sc:</span><span style="color:#79C0FF">hasSceneLocalTime</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/scene-local-time/inn-scene-plan-b></span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sc:</span><span style="color:#79C0FF">inHistory</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/history/main></span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sc:</span><span style="color:#79C0FF">inTemporalScope</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/temporal-scope/inn-scene></span><span style="color:#E6EDF3"> .</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FFA657">&#x3C;https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/commit-certificate/restraint-nera-001></span></span>
+<span class="line"><span style="color:#FF7B72">  a</span><span style="color:#FF7B72"> sc:</span><span style="color:#79C0FF">CommitCertificate</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dcterms:</span><span style="color:#79C0FF">created</span><span style="color:#A5D6FF"> "2026-06-29T13:39:00Z"</span><span style="color:#E6EDF3">^^</span><span style="color:#FF7B72">xsd:</span><span style="color:#79C0FF">dateTime</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sc:</span><span style="color:#79C0FF">committedBy</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/authority-policy/srd-conditions-restraint-mask></span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sc:</span><span style="color:#79C0FF">committedEvent</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/committed-event/restraint-nera-001></span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sc:</span><span style="color:#79C0FF">basedOnHistory</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/history/main></span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sc:</span><span style="color:#79C0FF">idempotencyKey</span><span style="color:#A5D6FF"> "restraint-nera-001"</span><span style="color:#E6EDF3"> .</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FFA657">&#x3C;https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/outcome-committed/restraint-nera-001></span></span>
+<span class="line"><span style="color:#FF7B72">  a</span><span style="color:#FF7B72"> sc:</span><span style="color:#79C0FF">OutcomeCommitted</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dcterms:</span><span style="color:#79C0FF">created</span><span style="color:#A5D6FF"> "2026-06-29T13:39:00Z"</span><span style="color:#E6EDF3">^^</span><span style="color:#FF7B72">xsd:</span><span style="color:#79C0FF">dateTime</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dcterms:</span><span style="color:#79C0FF">references</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions></span><span style="color:#E6EDF3">,</span></span>
+<span class="line"><span style="color:#FFA657">    &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/conditions/condition/restrained/effect/speed-0></span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sc:</span><span style="color:#79C0FF">committedBy</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/authority-policy/srd-conditions-restraint-mask></span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sc:</span><span style="color:#79C0FF">committedEvent</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/committed-event/restraint-nera-001></span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sc:</span><span style="color:#79C0FF">hasCommitCertificate</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/commit-certificate/restraint-nera-001></span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sc:</span><span style="color:#79C0FF">affectsEntity</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/actant/nera></span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sc:</span><span style="color:#79C0FF">appliesConsequence</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/consequence/restraint-mask-nera-001></span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sc:</span><span style="color:#79C0FF">basedOnHistory</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/history/main></span><span style="color:#E6EDF3"> .</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FFA657">&#x3C;https://spectacular-voyage.github.io/test-inn-ambush/committed-event/restraint-nera-001></span></span>
+<span class="line"><span style="color:#FF7B72">  a</span><span style="color:#FF7B72"> sc:</span><span style="color:#79C0FF">CommittedEvent</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sc:</span><span style="color:#79C0FF">authorizedByAuthorityRecord</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/outcome-committed/restraint-nera-001></span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sc:</span><span style="color:#79C0FF">affectsEntity</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/actant/nera></span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sc:</span><span style="color:#79C0FF">appliesConsequence</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/consequence/restraint-mask-nera-001></span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sc:</span><span style="color:#79C0FF">basedOnHistory</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/history/main></span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sc:</span><span style="color:#79C0FF">branchContext</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/branch/plan-b></span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sc:</span><span style="color:#79C0FF">hasSceneLocalTime</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/scene-local-time/inn-scene-plan-b></span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sc:</span><span style="color:#79C0FF">inTemporalScope</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/temporal-scope/inn-scene></span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sc:</span><span style="color:#79C0FF">producesStateMutation</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/state-mutation/restraint-nera-001></span><span style="color:#E6EDF3"> .</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FFA657">&#x3C;https://spectacular-voyage.github.io/test-inn-ambush/state-mutation/restraint-nera-001></span></span>
+<span class="line"><span style="color:#FF7B72">  a</span><span style="color:#FF7B72"> sc:</span><span style="color:#79C0FF">StateMutation</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sc:</span><span style="color:#79C0FF">authorizedByAuthorityRecord</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/outcome-committed/restraint-nera-001></span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sc:</span><span style="color:#79C0FF">causedByCommittedEvent</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/committed-event/restraint-nera-001></span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sc:</span><span style="color:#79C0FF">affectsEntity</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/actant/nera></span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sc:</span><span style="color:#79C0FF">appliesConsequence</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/consequence/restraint-mask-nera-001></span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sc:</span><span style="color:#79C0FF">branchContext</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/branch/plan-b></span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sc:</span><span style="color:#79C0FF">hasSceneLocalTime</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/scene-local-time/inn-scene-plan-b></span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sc:</span><span style="color:#79C0FF">inHistory</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/history/main></span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sc:</span><span style="color:#79C0FF">inTemporalScope</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/temporal-scope/inn-scene></span><span style="color:#E6EDF3"> .</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FFA657">&#x3C;https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/d20-test-warrant/perception-check-001></span></span>
+<span class="line"><span style="color:#FF7B72">  a</span><span style="color:#FF7B72"> dyn:</span><span style="color:#79C0FF">D20TestWarrant</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dcterms:</span><span style="color:#79C0FF">created</span><span style="color:#A5D6FF"> "2026-06-29T13:40:00Z"</span><span style="color:#E6EDF3">^^</span><span style="color:#FF7B72">xsd:</span><span style="color:#79C0FF">dateTime</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dcterms:</span><span style="color:#79C0FF">references</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/d20-test></span><span style="color:#E6EDF3">,</span></span>
+<span class="line"><span style="color:#FFA657">    &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/d20-test/skill-rule/perception></span><span style="color:#E6EDF3">,</span></span>
+<span class="line"><span style="color:#FF7B72">    dyn:</span><span style="color:#79C0FF">Perception</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sc:</span><span style="color:#79C0FF">basedOnHistory</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/history/main></span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sc:</span><span style="color:#79C0FF">committedBy</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/gm/alex></span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">warrantedActor</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/actant/elara></span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">warrantedTestType</span><span style="color:#FF7B72"> dyn:</span><span style="color:#79C0FF">AbilityCheck</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">targetNumber</span><span style="color:#79C0FF"> 15</span><span style="color:#E6EDF3"> .</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FFA657">&#x3C;https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/d20-roll/perception-check-001></span></span>
+<span class="line"><span style="color:#FF7B72">  a</span><span style="color:#FF7B72"> dyn:</span><span style="color:#79C0FF">D20RollEvidence</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dcterms:</span><span style="color:#79C0FF">created</span><span style="color:#A5D6FF"> "2026-06-29T13:40:05Z"</span><span style="color:#E6EDF3">^^</span><span style="color:#FF7B72">xsd:</span><span style="color:#79C0FF">dateTime</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dcterms:</span><span style="color:#79C0FF">references</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/d20-test></span><span style="color:#E6EDF3">,</span></span>
+<span class="line"><span style="color:#FF7B72">    dyn:</span><span style="color:#79C0FF">Perception</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sc:</span><span style="color:#79C0FF">basedOnHistory</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/history/main></span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sc:</span><span style="color:#79C0FF">committedBy</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/authority-policy/d20-generated-rolls></span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">diceExpression</span><span style="color:#A5D6FF"> "1d20+3+2"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">provenanceKind</span><span style="color:#A5D6FF"> "generated"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">rawDieFace</span><span style="color:#79C0FF"> 8</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">resolvesWarrant</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/d20-test-warrant/perception-check-001></span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">rollModifier</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/d20-roll/perception-check-001/modifier/wisdom></span><span style="color:#E6EDF3">,</span></span>
+<span class="line"><span style="color:#FFA657">    &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/d20-roll/perception-check-001/modifier/perception-proficiency></span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">rollTotal</span><span style="color:#79C0FF"> 13</span><span style="color:#E6EDF3"> .</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FFA657">&#x3C;https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/d20-roll/perception-check-001/modifier/wisdom></span></span>
+<span class="line"><span style="color:#FF7B72">  a</span><span style="color:#FF7B72"> dyn:</span><span style="color:#79C0FF">D20RollModifier</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">modifierKind</span><span style="color:#A5D6FF"> "ability"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">modifierSource</span><span style="color:#FF7B72"> dyn:</span><span style="color:#79C0FF">Wisdom</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">modifierValue</span><span style="color:#79C0FF"> 3</span><span style="color:#E6EDF3"> .</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FFA657">&#x3C;https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/d20-roll/perception-check-001/modifier/perception-proficiency></span></span>
+<span class="line"><span style="color:#FF7B72">  a</span><span style="color:#FF7B72"> dyn:</span><span style="color:#79C0FF">D20RollModifier</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">modifierKind</span><span style="color:#A5D6FF"> "proficiency"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">modifierSource</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/d20-test/skill-rule/perception></span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">modifierValue</span><span style="color:#79C0FF"> 2</span><span style="color:#E6EDF3"> .</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FFA657">&#x3C;https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/d20-test-outcome/perception-check-001></span></span>
+<span class="line"><span style="color:#FF7B72">  a</span><span style="color:#FF7B72"> dyn:</span><span style="color:#79C0FF">D20TestOutcome</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dcterms:</span><span style="color:#79C0FF">created</span><span style="color:#A5D6FF"> "2026-06-29T13:40:06Z"</span><span style="color:#E6EDF3">^^</span><span style="color:#FF7B72">xsd:</span><span style="color:#79C0FF">dateTime</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sc:</span><span style="color:#79C0FF">basedOnHistory</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/history/main></span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sc:</span><span style="color:#79C0FF">committedBy</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/gm/alex></span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">adjudicatedResult</span><span style="color:#A5D6FF"> "success"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">adjudicationNote</span><span style="color:#A5D6FF"> "GM override: Elara spots the scuffed threshold because the earlier door-bar plan put her attention on the entryway."</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">mechanicalResult</span><span style="color:#A5D6FF"> "failure"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">resolvesWarrant</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/d20-test-warrant/perception-check-001></span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">rollEvidence</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/d20-roll/perception-check-001></span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">targetNumber</span><span style="color:#79C0FF"> 15</span><span style="color:#E6EDF3"> .</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FFA657">&#x3C;https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/d20-test-consequence/perception-check-001></span></span>
+<span class="line"><span style="color:#FF7B72">  a</span><span style="color:#FF7B72"> dyn:</span><span style="color:#79C0FF">D20TestConsequence</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dcterms:</span><span style="color:#79C0FF">created</span><span style="color:#A5D6FF"> "2026-06-29T13:40:07Z"</span><span style="color:#E6EDF3">^^</span><span style="color:#FF7B72">xsd:</span><span style="color:#79C0FF">dateTime</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dcterms:</span><span style="color:#79C0FF">description</span><span style="color:#A5D6FF"> "Elara notices scuffed dust at the threshold and can warn the table before anyone steps through."</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sc:</span><span style="color:#79C0FF">basedOnHistory</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/history/main></span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sc:</span><span style="color:#79C0FF">committedBy</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/gm/alex></span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dyn:</span><span style="color:#79C0FF">consequenceOfOutcome</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/d20-test-outcome/perception-check-001></span><span style="color:#E6EDF3"> .</span></span>
 <span class="line"></span></code></pre>
       </details>
     </section>    <section class="wf-section">
@@ -329,6 +496,15 @@
                 </div>
               </details>
             </details>
+            <details class="wf-history-node wf-history-node--state" open>
+              <summary class="wf-history-node-header"><a href="/test-inn-ambush/authority/journals/plan-b/_history001/_s0004">_s0004</a></summary>
+              <details class="wf-history-node wf-history-node--manifestation" open>
+                <summary class="wf-history-node-header"><a href="/test-inn-ambush/authority/journals/plan-b/_history001/_s0004/ttl">ttl</a></summary>
+                <div class="wf-history-node wf-history-node--file">
+                  <div class="wf-history-node-header"><a href="/test-inn-ambush/authority/journals/plan-b/_history001/_s0004/ttl/plan-b.ttl" class="wf-history-file-iri">https://spectacular-voyage.github.io/test-inn-ambush/authority/journals/plan-b/_history001/_s0004/ttl/plan-b.ttl</a></div>
+                </div>
+              </details>
+            </details>
           </details>
         </div>
       </details>
@@ -337,7 +513,7 @@
     </article>
   </main>
   <footer class="wf-generated">
-    Generated on <span class="wf-term wf-date-tip" tabindex="0" title="2026-07-05T16:29:33.692Z" data-tooltip="2026-07-05T16:29:33.692Z">July 5, 2026</span> by <a href="https://github.com/semantic-flow/weave/">Weave</a>
+    Generated on <span class="wf-term wf-date-tip" tabindex="0" title="2026-07-06T01:44:39.064Z" data-tooltip="2026-07-06T01:44:39.064Z">July 6, 2026</span> by <a href="https://github.com/semantic-flow/weave/">Weave</a>
   </footer>
 </body>
 </html>
