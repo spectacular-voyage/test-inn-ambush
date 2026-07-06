@@ -1,0 +1,115 @@
+{
+  "@context": {
+    "@vocab": "https://spectacular-voyage.github.io/accord/ontology/",
+    "dcterms": "http://purl.org/dc/terms/",
+    "id": "@id",
+    "type": "@type",
+    "changeType": {
+      "@type": "@vocab"
+    },
+    "compareMode": {
+      "@type": "@vocab"
+    },
+    "targetsFileExpectation": {
+      "@type": "@id"
+    },
+    "locatorKind": {
+      "@type": "@vocab"
+    }
+  },
+  "type": "Manifest",
+  "id": "urn:accord:stagecraft:test-inn-ambush:33-srd-weapons-records",
+  "dcterms:title": "Inn Ambush 33 SRD weapons records",
+  "hasCase": [
+    {
+      "type": "TransitionCase",
+      "id": "#srd-weapons-records",
+      "fixtureRepo": "github.com/spectacular-voyage/test-inn-ambush",
+      "operationId": "stagecraft.fixture.addSrdWeaponsRecords",
+      "fromRef": "6ee33cce5ebe158571f4931922ada03cca138f14",
+      "toRef": "a.33-srd-weapons-records",
+      "fromState": {
+        "type": "StateLocator",
+        "locatorKind": "gitRefState",
+        "ref": "6ee33cce5ebe158571f4931922ada03cca138f14"
+      },
+      "toState": {
+        "type": "StateLocator",
+        "locatorKind": "gitRefState",
+        "ref": "a.33-srd-weapons-records"
+      },
+      "hasFileExpectation": [
+        {
+          "id": "#weapons-readme",
+          "type": "FileExpectation",
+          "path": "rules/dynamis/srd-5-2-1/weapons/README.md",
+          "changeType": "added",
+          "compareMode": "text"
+        },
+        {
+          "id": "#weapons-csv",
+          "type": "FileExpectation",
+          "path": "rules/dynamis/srd-5-2-1/weapons/weapons.csv",
+          "changeType": "added",
+          "compareMode": "text"
+        },
+        {
+          "id": "#properties-csv",
+          "type": "FileExpectation",
+          "path": "rules/dynamis/srd-5-2-1/weapons/properties.csv",
+          "changeType": "added",
+          "compareMode": "text"
+        },
+        {
+          "id": "#damage-types-csv",
+          "type": "FileExpectation",
+          "path": "rules/dynamis/srd-5-2-1/weapons/damage-types.csv",
+          "changeType": "added",
+          "compareMode": "text"
+        },
+        {
+          "id": "#item-actions-csv",
+          "type": "FileExpectation",
+          "path": "rules/dynamis/srd-5-2-1/weapons/item-actions.csv",
+          "changeType": "added",
+          "compareMode": "text"
+        },
+        {
+          "id": "#weapons-csvw",
+          "type": "FileExpectation",
+          "path": "rules/dynamis/srd-5-2-1/weapons/weapons.csvw.json",
+          "changeType": "added",
+          "compareMode": "json"
+        },
+        {
+          "id": "#weapons-rdf",
+          "type": "FileExpectation",
+          "path": "rules/dynamis/srd-5-2-1/weapons/weapons.ttl",
+          "changeType": "added",
+          "compareMode": "rdfCanonical"
+        }
+      ],
+      "hasRdfExpectation": [
+        {
+          "id": "#weapons-rdf-expectation",
+          "type": "RdfExpectation",
+          "targetsFileExpectation": "#weapons-rdf",
+          "hasAskAssertion": [
+            {
+              "id": "#ask-weapons-package-attribution-and-damage-types",
+              "type": "SparqlAskAssertion",
+              "query": "ASK { <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons> a <http://www.w3.org/ns/dcat#Dataset> ; <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/4.0/> ; <http://purl.org/dc/terms/source> <https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf> . <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/damage-type/acid> a <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/DamageType> . <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/damage-type/bludgeoning> a <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/DamageType> . <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/damage-type/cold> a <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/DamageType> . <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/damage-type/fire> a <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/DamageType> . <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/damage-type/force> a <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/DamageType> . <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/damage-type/lightning> a <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/DamageType> . <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/damage-type/necrotic> a <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/DamageType> . <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/damage-type/piercing> a <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/DamageType> . <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/damage-type/poison> a <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/DamageType> . <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/damage-type/psychic> a <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/DamageType> . <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/damage-type/radiant> a <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/DamageType> . <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/damage-type/slashing> a <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/DamageType> . <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/damage-type/thunder> a <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/DamageType> . }",
+              "expectedBoolean": true
+            },
+            {
+              "id": "#ask-one-item-n-actions-and-static-damage",
+              "type": "SparqlAskAssertion",
+              "query": "ASK { <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/weapon/handaxe> a <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/WeaponDefinition> ; <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/damageExpression> \"1d6\" ; <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/damageType> <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/damage-type/slashing> . <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/item-action/handaxe-melee> <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/forItem> <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/weapon/handaxe> ; <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/itemActionTestType> <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/AttackRoll> ; <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/attackMode> \"melee\" . <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/item-action/handaxe-thrown> <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/forItem> <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/weapon/handaxe> ; <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/itemActionTestType> <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/AttackRoll> ; <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/attackMode> \"thrown\" ; <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/normalRangeFeet> 20 ; <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/longRangeFeet> 60 . <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/item-action/quarterstaff-melee-1h> <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/forItem> <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/weapon/quarterstaff> ; <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/damageExpression> \"1d6\" ; <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/handsRequired> 1 . <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/item-action/quarterstaff-melee-2h> <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/forItem> <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/weapon/quarterstaff> ; <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/damageExpression> \"1d8\" ; <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/handsRequired> 2 . <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/weapon/blowgun> <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/staticDamage> 1 ; <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/damageType> <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/damage-type/piercing> . <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/item-action/blowgun-ranged> <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/staticDamage> 1 ; <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/itemActionTestType> <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/AttackRoll> . FILTER NOT EXISTS { <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/weapon/blowgun> <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/damageExpression> ?blowgunDice . } }",
+              "expectedBoolean": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

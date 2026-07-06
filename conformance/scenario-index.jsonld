@@ -740,6 +740,27 @@
       ]
     },
     {
+      "id": "#33-srd-weapons-records",
+      "type": "ScenarioStep",
+      "manifestPath": "33-srd-weapons-records.jsonld",
+      "hasLaneBinding": [
+        {
+          "type": "LaneStateBinding",
+          "lane": "#fixture-lane",
+          "fromLaneState": {
+            "type": "StateLocator",
+            "locatorKind": "gitRefState",
+            "ref": "6ee33cce5ebe158571f4931922ada03cca138f14"
+          },
+          "toLaneState": {
+            "type": "StateLocator",
+            "locatorKind": "gitRefState",
+            "ref": "a.33-srd-weapons-records"
+          }
+        }
+      ]
+    },
+    {
       "id": "#35-fabric-audience-routing-contract",
       "type": "ScenarioStep",
       "manifestPath": "35-fabric-audience-routing-contract.jsonld",
