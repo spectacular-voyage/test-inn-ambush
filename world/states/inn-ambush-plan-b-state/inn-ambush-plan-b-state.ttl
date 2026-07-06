@@ -415,41 +415,41 @@
     <https://spectacular-voyage.github.io/test-inn-ambush/participant/bob> ;
   sc:acceptedFrom "2026-06-29T13:35:00Z"^^xsd:dateTime .
 
-<https://spectacular-voyage.github.io/test-inn-ambush/relator/visibility/calendar/weekday-hearthday/players-current>
+<https://spectacular-voyage.github.io/test-inn-ambush/relator/visibility/calendar/weekday-ashday/players-current>
   a sc:TemporalRelator ;
-  sc:subject <https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/weekday/hearthday> ;
+  sc:subject <https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/weekday/ashday> ;
   sc:predicate sc:visibleTo ;
   sc:object <https://spectacular-voyage.github.io/test-inn-ambush/participant/alice>,
     <https://spectacular-voyage.github.io/test-inn-ambush/participant/bob> ;
   sc:acceptedFrom "2026-06-29T13:35:00Z"^^xsd:dateTime .
 
-<https://spectacular-voyage.github.io/test-inn-ambush/relator/visibility/calendar/weekday-toilday/players-current>
+<https://spectacular-voyage.github.io/test-inn-ambush/relator/visibility/calendar/weekday-barrowday/players-current>
   a sc:TemporalRelator ;
-  sc:subject <https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/weekday/toilday> ;
+  sc:subject <https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/weekday/barrowday> ;
   sc:predicate sc:visibleTo ;
   sc:object <https://spectacular-voyage.github.io/test-inn-ambush/participant/alice>,
     <https://spectacular-voyage.github.io/test-inn-ambush/participant/bob> ;
   sc:acceptedFrom "2026-06-29T13:35:00Z"^^xsd:dateTime .
 
-<https://spectacular-voyage.github.io/test-inn-ambush/relator/visibility/calendar/weekday-marketday/players-current>
+<https://spectacular-voyage.github.io/test-inn-ambush/relator/visibility/calendar/weekday-coinday/players-current>
   a sc:TemporalRelator ;
-  sc:subject <https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/weekday/marketday> ;
+  sc:subject <https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/weekday/coinday> ;
   sc:predicate sc:visibleTo ;
   sc:object <https://spectacular-voyage.github.io/test-inn-ambush/participant/alice>,
     <https://spectacular-voyage.github.io/test-inn-ambush/participant/bob> ;
   sc:acceptedFrom "2026-06-29T13:35:00Z"^^xsd:dateTime .
 
-<https://spectacular-voyage.github.io/test-inn-ambush/relator/visibility/calendar/weekday-restday/players-current>
+<https://spectacular-voyage.github.io/test-inn-ambush/relator/visibility/calendar/weekday-driftday/players-current>
   a sc:TemporalRelator ;
-  sc:subject <https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/weekday/restday> ;
+  sc:subject <https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/weekday/driftday> ;
   sc:predicate sc:visibleTo ;
   sc:object <https://spectacular-voyage.github.io/test-inn-ambush/participant/alice>,
     <https://spectacular-voyage.github.io/test-inn-ambush/participant/bob> ;
   sc:acceptedFrom "2026-06-29T13:35:00Z"^^xsd:dateTime .
 
-<https://spectacular-voyage.github.io/test-inn-ambush/relator/visibility/calendar/weekday-starday/players-current>
+<https://spectacular-voyage.github.io/test-inn-ambush/relator/visibility/calendar/weekday-eveday/players-current>
   a sc:TemporalRelator ;
-  sc:subject <https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/weekday/starday> ;
+  sc:subject <https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/weekday/eveday> ;
   sc:predicate sc:visibleTo ;
   sc:object <https://spectacular-voyage.github.io/test-inn-ambush/participant/alice>,
     <https://spectacular-voyage.github.io/test-inn-ambush/participant/bob> ;
