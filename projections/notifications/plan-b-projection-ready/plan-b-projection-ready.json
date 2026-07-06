@@ -1,6 +1,7 @@
 {
   "specversion": "1.0",
   "type": "stagecraft.projection.ready.v1",
+  "eventKind": "projection-ready",
   "source": "stagecraft/experiments/inn-ambush",
   "id": "inn-ambush-plan-b-001-projection-ready",
   "time": "2026-06-29T13:35:01Z",
