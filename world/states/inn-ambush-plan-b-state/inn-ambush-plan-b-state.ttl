@@ -1,6 +1,7 @@
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix dyn: <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sc: <https://spectacular-voyage.github.io/stagecraft/ontology/> .
 @prefix schema: <https://schema.org/> .
 @prefix sflo: <https://semantic-flow.github.io/sflo/ontology/> .
@@ -43,6 +44,7 @@
     <https://spectacular-voyage.github.io/test-inn-ambush/world-time-policy/flowing-server>,
     <https://spectacular-voyage.github.io/test-inn-ambush/world-time-axis/main>,
     <https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar>,
+    <https://spectacular-voyage.github.io/test-inn-ambush/frame/ambush-night>,
     <https://spectacular-voyage.github.io/test-inn-ambush/clock-anchor/inn-clock-001>,
     <https://spectacular-voyage.github.io/test-inn-ambush/temporal-grounding/inn-scene-plan-b-to-clock-001>,
     <https://spectacular-voyage.github.io/test-inn-ambush/duration/inn-scene-elastic-window>,
@@ -90,7 +92,8 @@
   sc:hasBranch <https://spectacular-voyage.github.io/test-inn-ambush/branch/plan-b> ;
   sc:hasWorldTimePolicy <https://spectacular-voyage.github.io/test-inn-ambush/world-time-policy/held-elastic>,
     <https://spectacular-voyage.github.io/test-inn-ambush/world-time-policy/flowing-server> ;
-  temp:hasCalendar <https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar> .
+  temp:hasCalendar <https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar> ;
+  temp:hasActiveFrame <https://spectacular-voyage.github.io/test-inn-ambush/frame/ambush-night> .
 
 <https://spectacular-voyage.github.io/test-inn-ambush/history/main>
   a sc:History .
@@ -118,7 +121,16 @@
   a sc:WorldTimeAxis ;
   dcterms:description "Monotonic server-advanced world time axis for the live-world preview." ;
   sc:inScenario <https://spectacular-voyage.github.io/test-inn-ambush/scenario/inn-ambush> ;
-  temp:hasCalendar <https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar> .
+  temp:hasCalendar <https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar> ;
+  temp:hasActiveFrame <https://spectacular-voyage.github.io/test-inn-ambush/frame/ambush-night> .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/frame/ambush-night>
+  a temp:Frame ;
+  dcterms:title "Ambush night frame" ;
+  dcterms:description "Narrative frame for prose-clock rendering during the inn ambush night." ;
+  rdfs:label "ambush night" ;
+  temp:frameAnchorOffsetSeconds 900.0 ;
+  temp:frameCloseOffsetSeconds 11820.0 .
 
 <https://spectacular-voyage.github.io/test-inn-ambush/world-time-policy/flowing-server>
   a sc:WorldTimePolicy, sc:FlowingWorldTime ;
@@ -410,6 +422,15 @@
 <https://spectacular-voyage.github.io/test-inn-ambush/relator/visibility/calendar/package/players-current>
   a sc:TemporalRelator ;
   sc:subject <https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar> ;
+  sc:predicate sc:visibleTo ;
+  sc:object <https://spectacular-voyage.github.io/test-inn-ambush/participant/alice>,
+    <https://spectacular-voyage.github.io/test-inn-ambush/participant/bob> ;
+  sc:acceptedFrom "2026-06-29T13:35:00Z"^^xsd:dateTime .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/relator/visibility/world-time/frame/players-current>
+  a sc:TemporalRelator ;
+  sc:subject <https://spectacular-voyage.github.io/test-inn-ambush/world-time-axis/main>,
+    <https://spectacular-voyage.github.io/test-inn-ambush/frame/ambush-night> ;
   sc:predicate sc:visibleTo ;
   sc:object <https://spectacular-voyage.github.io/test-inn-ambush/participant/alice>,
     <https://spectacular-voyage.github.io/test-inn-ambush/participant/bob> ;
