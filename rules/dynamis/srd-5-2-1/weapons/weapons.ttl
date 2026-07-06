@@ -1,0 +1,1634 @@
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dyn: <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons>
+  a dcat:Dataset ;
+  dcterms:title "SRD 5.2.1 weapon rules" ;
+  dcterms:description "Curated weapon, weapon property, damage type, and item-to-attack-option data extracted from the CC SRD 5.2.1 PDF. Attack rows link to the D20 attack-roll family as data only." ;
+  dcterms:created "2026-07-05"^^xsd:date ;
+  dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
+  dcterms:source <https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf> ;
+  dcterms:rights "Includes material from System Reference Document 5.2.1 by Wizards of the Coast LLC, available under the Creative Commons Attribution 4.0 International License." ;
+  dcat:distribution <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/weapons-csv>,
+    <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/properties-csv>,
+    <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/damage-types-csv>,
+    <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/item-actions-csv>,
+    <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/weapons-csvw> .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/weapons-csv>
+  a dcat:Distribution ;
+  dcterms:title "SRD 5.2.1 weapons curated CSV" ;
+  dcat:downloadURL <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/weapons.csv> .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/properties-csv>
+  a dcat:Distribution ;
+  dcterms:title "SRD 5.2.1 weapon properties curated CSV" ;
+  dcat:downloadURL <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/properties.csv> .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/damage-types-csv>
+  a dcat:Distribution ;
+  dcterms:title "SRD 5.2.1 damage types curated CSV" ;
+  dcat:downloadURL <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/damage-types.csv> .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/item-actions-csv>
+  a dcat:Distribution ;
+  dcterms:title "SRD 5.2.1 item action options curated CSV" ;
+  dcat:downloadURL <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/item-actions.csv> .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/weapons-csvw>
+  a dcat:Distribution ;
+  dcterms:title "SRD 5.2.1 weapons CSVW mapping" ;
+  dcat:downloadURL <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/weapons.csvw.json> .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/property/ammunition>
+  a dyn:WeaponPropertyDefinition, skos:Concept ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons> ;
+  rdfs:label "Ammunition" ;
+  dyn:propertyKey "ammunition" ;
+  rdf:value "You can use a weapon that has the Ammunition property to make a ranged attack only if you have ammunition to fire from it. The type of ammunition required is specified with the weapon's range. Each attack expends one piece of ammunition. Drawing the ammunition is part of the attack (you need a free hand to load a one-handed weapon). After a fight, you can spend 1 minute to recover half the ammunition (round down) you used in the fight; the rest is lost." ;
+  dyn:sourceSection "Equipment: Weapon Properties: Ammunition" .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/property/finesse>
+  a dyn:WeaponPropertyDefinition, skos:Concept ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons> ;
+  rdfs:label "Finesse" ;
+  dyn:propertyKey "finesse" ;
+  rdf:value "When making an attack with a Finesse weapon, use your choice of your Strength or Dexterity modifier for the attack and damage rolls. You must use the same modifier for both rolls." ;
+  dyn:sourceSection "Equipment: Weapon Properties: Finesse" .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/property/heavy>
+  a dyn:WeaponPropertyDefinition, skos:Concept ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons> ;
+  rdfs:label "Heavy" ;
+  dyn:propertyKey "heavy" ;
+  rdf:value "You have Disadvantage on attack rolls with a Heavy weapon if it's a Melee weapon and your Strength score isn't at least 13 or if it's a Ranged weapon and your Dexterity score isn't at least 13." ;
+  dyn:sourceSection "Equipment: Weapon Properties: Heavy" .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/property/light>
+  a dyn:WeaponPropertyDefinition, skos:Concept ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons> ;
+  rdfs:label "Light" ;
+  dyn:propertyKey "light" ;
+  rdf:value "When you take the Attack action on your turn and attack with a Light weapon, you can make one extra attack as a Bonus Action later on the same turn. That extra attack must be made with a different Light weapon, and you don't add your ability modifier to the extra attack's damage unless that modifier is negative. For example, you can attack with a Shortsword in one hand and a Dagger in the other using the Attack action and a Bonus Action, but you don't add your Strength or Dexterity modifier to the damage roll of the Bonus Action unless that modifier is negative." ;
+  dyn:sourceSection "Equipment: Weapon Properties: Light" .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/property/loading>
+  a dyn:WeaponPropertyDefinition, skos:Concept ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons> ;
+  rdfs:label "Loading" ;
+  dyn:propertyKey "loading" ;
+  rdf:value "You can fire only one piece of ammunition from a Loading weapon when you use an action, a Bonus Action, or a Reaction to fire it, regardless of the number of attacks you can normally make." ;
+  dyn:sourceSection "Equipment: Weapon Properties: Loading" .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/property/range>
+  a dyn:WeaponPropertyDefinition, skos:Concept ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons> ;
+  rdfs:label "Range" ;
+  dyn:propertyKey "range" ;
+  rdf:value "A Range weapon has a range in parentheses after the Ammunition or Thrown property. The range lists two numbers. The first is the weapon's normal range in feet, and the second is the weapon's long range. When attacking a target beyond normal range, you have Disadvantage on the attack roll. You can't attack a target beyond the long range." ;
+  dyn:sourceSection "Equipment: Weapon Properties: Range" .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/property/reach>
+  a dyn:WeaponPropertyDefinition, skos:Concept ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons> ;
+  rdfs:label "Reach" ;
+  dyn:propertyKey "reach" ;
+  rdf:value "A Reach weapon adds 5 feet to your reach when you attack with it, as well as when determining your reach for Opportunity Attacks with it." ;
+  dyn:sourceSection "Equipment: Weapon Properties: Reach" .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/property/thrown>
+  a dyn:WeaponPropertyDefinition, skos:Concept ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons> ;
+  rdfs:label "Thrown" ;
+  dyn:propertyKey "thrown" ;
+  rdf:value "If a weapon has the Thrown property, you can throw the weapon to make a ranged attack, and you can draw that weapon as part of the attack. If the weapon is a Melee weapon, use the same ability modifier for the attack and damage rolls that you use for a melee attack with that weapon." ;
+  dyn:sourceSection "Equipment: Weapon Properties: Thrown" .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/property/two-handed>
+  a dyn:WeaponPropertyDefinition, skos:Concept ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons> ;
+  rdfs:label "Two-Handed" ;
+  dyn:propertyKey "two-handed" ;
+  rdf:value "A Two-Handed weapon requires two hands when you attack with it." ;
+  dyn:sourceSection "Equipment: Weapon Properties: Two-Handed" .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/property/versatile>
+  a dyn:WeaponPropertyDefinition, skos:Concept ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons> ;
+  rdfs:label "Versatile" ;
+  dyn:propertyKey "versatile" ;
+  rdf:value "A Versatile weapon can be used with one or two hands. A damage value in parentheses appears with the property. The weapon deals that damage when used with two hands to make a melee attack." ;
+  dyn:sourceSection "Equipment: Weapon Properties: Versatile" .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/damage-type/acid>
+  a dyn:DamageType, skos:Concept ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons> ;
+  rdfs:label "Acid" ;
+  dyn:damageTypeKey "acid" ;
+  dyn:exampleUses "Corrosive liquids, digestive enzymes" ;
+  dyn:sourceSection "Rules Glossary: Damage Types" .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/damage-type/bludgeoning>
+  a dyn:DamageType, skos:Concept ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons> ;
+  rdfs:label "Bludgeoning" ;
+  dyn:damageTypeKey "bludgeoning" ;
+  dyn:exampleUses "Blunt objects, constriction, falling" ;
+  dyn:sourceSection "Rules Glossary: Damage Types" .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/damage-type/cold>
+  a dyn:DamageType, skos:Concept ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons> ;
+  rdfs:label "Cold" ;
+  dyn:damageTypeKey "cold" ;
+  dyn:exampleUses "Freezing water, icy blasts" ;
+  dyn:sourceSection "Rules Glossary: Damage Types" .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/damage-type/fire>
+  a dyn:DamageType, skos:Concept ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons> ;
+  rdfs:label "Fire" ;
+  dyn:damageTypeKey "fire" ;
+  dyn:exampleUses "Flames, unbearable heat" ;
+  dyn:sourceSection "Rules Glossary: Damage Types" .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/damage-type/force>
+  a dyn:DamageType, skos:Concept ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons> ;
+  rdfs:label "Force" ;
+  dyn:damageTypeKey "force" ;
+  dyn:exampleUses "Pure magical energy" ;
+  dyn:sourceSection "Rules Glossary: Damage Types" .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/damage-type/lightning>
+  a dyn:DamageType, skos:Concept ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons> ;
+  rdfs:label "Lightning" ;
+  dyn:damageTypeKey "lightning" ;
+  dyn:exampleUses "Electricity" ;
+  dyn:sourceSection "Rules Glossary: Damage Types" .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/damage-type/necrotic>
+  a dyn:DamageType, skos:Concept ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons> ;
+  rdfs:label "Necrotic" ;
+  dyn:damageTypeKey "necrotic" ;
+  dyn:exampleUses "Life-draining energy" ;
+  dyn:sourceSection "Rules Glossary: Damage Types" .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/damage-type/piercing>
+  a dyn:DamageType, skos:Concept ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons> ;
+  rdfs:label "Piercing" ;
+  dyn:damageTypeKey "piercing" ;
+  dyn:exampleUses "Fangs, puncturing objects" ;
+  dyn:sourceSection "Rules Glossary: Damage Types" .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/damage-type/poison>
+  a dyn:DamageType, skos:Concept ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons> ;
+  rdfs:label "Poison" ;
+  dyn:damageTypeKey "poison" ;
+  dyn:exampleUses "Toxic gas, venom" ;
+  dyn:sourceSection "Rules Glossary: Damage Types" .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/damage-type/psychic>
+  a dyn:DamageType, skos:Concept ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons> ;
+  rdfs:label "Psychic" ;
+  dyn:damageTypeKey "psychic" ;
+  dyn:exampleUses "Mind-rending energy" ;
+  dyn:sourceSection "Rules Glossary: Damage Types" .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/damage-type/radiant>
+  a dyn:DamageType, skos:Concept ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons> ;
+  rdfs:label "Radiant" ;
+  dyn:damageTypeKey "radiant" ;
+  dyn:exampleUses "Holy energy, searing radiation" ;
+  dyn:sourceSection "Rules Glossary: Damage Types" .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/damage-type/slashing>
+  a dyn:DamageType, skos:Concept ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons> ;
+  rdfs:label "Slashing" ;
+  dyn:damageTypeKey "slashing" ;
+  dyn:exampleUses "Claws, cutting objects" ;
+  dyn:sourceSection "Rules Glossary: Damage Types" .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/damage-type/thunder>
+  a dyn:DamageType, skos:Concept ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons> ;
+  rdfs:label "Thunder" ;
+  dyn:damageTypeKey "thunder" ;
+  dyn:exampleUses "Concussive sound" ;
+  dyn:sourceSection "Rules Glossary: Damage Types" .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/weapon/club>
+  a dyn:WeaponDefinition, skos:Concept ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons> ;
+  rdfs:label "Club" ;
+  dyn:weaponKey "club" ;
+  dyn:weaponCategory "simple" ;
+  dyn:weaponRangeKind "melee" ;
+  dyn:costText "1 SP" ;
+  dyn:damageType <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/damage-type/bludgeoning> ;
+  dyn:damageExpression "1d4" ;
+  dyn:weaponWeight "2 lb." ;
+  dyn:weaponMastery "slow" ;
+  dyn:sourceProperties "Light" ;
+  dyn:sourceSection "Equipment: Weapons table" ;
+  dyn:hasWeaponProperty <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/property/light> .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/weapon/dagger>
+  a dyn:WeaponDefinition, skos:Concept ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons> ;
+  rdfs:label "Dagger" ;
+  dyn:weaponKey "dagger" ;
+  dyn:weaponCategory "simple" ;
+  dyn:weaponRangeKind "melee" ;
+  dyn:costText "2 GP" ;
+  dyn:damageType <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/damage-type/piercing> ;
+  dyn:damageExpression "1d4" ;
+  dyn:weaponWeight "1 lb." ;
+  dyn:weaponMastery "nick" ;
+  dyn:sourceProperties "Finesse, Light, Thrown (Range 20/60)" ;
+  dyn:sourceSection "Equipment: Weapons table" ;
+  dyn:hasWeaponProperty <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/property/finesse>, <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/property/light>, <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/property/range>, <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/property/thrown> .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/weapon/greatclub>
+  a dyn:WeaponDefinition, skos:Concept ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons> ;
+  rdfs:label "Greatclub" ;
+  dyn:weaponKey "greatclub" ;
+  dyn:weaponCategory "simple" ;
+  dyn:weaponRangeKind "melee" ;
+  dyn:costText "2 SP" ;
+  dyn:damageType <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/damage-type/bludgeoning> ;
+  dyn:damageExpression "1d8" ;
+  dyn:weaponWeight "10 lb." ;
+  dyn:weaponMastery "push" ;
+  dyn:sourceProperties "Two-Handed" ;
+  dyn:sourceSection "Equipment: Weapons table" ;
+  dyn:hasWeaponProperty <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/property/two-handed> .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/weapon/handaxe>
+  a dyn:WeaponDefinition, skos:Concept ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons> ;
+  rdfs:label "Handaxe" ;
+  dyn:weaponKey "handaxe" ;
+  dyn:weaponCategory "simple" ;
+  dyn:weaponRangeKind "melee" ;
+  dyn:costText "5 GP" ;
+  dyn:damageType <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/damage-type/slashing> ;
+  dyn:damageExpression "1d6" ;
+  dyn:weaponWeight "2 lb." ;
+  dyn:weaponMastery "vex" ;
+  dyn:sourceProperties "Light, Thrown (Range 20/60)" ;
+  dyn:sourceSection "Equipment: Weapons table" ;
+  dyn:hasWeaponProperty <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/property/light>, <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/property/range>, <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/property/thrown> .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/weapon/javelin>
+  a dyn:WeaponDefinition, skos:Concept ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons> ;
+  rdfs:label "Javelin" ;
+  dyn:weaponKey "javelin" ;
+  dyn:weaponCategory "simple" ;
+  dyn:weaponRangeKind "melee" ;
+  dyn:costText "5 SP" ;
+  dyn:damageType <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/damage-type/piercing> ;
+  dyn:damageExpression "1d6" ;
+  dyn:weaponWeight "2 lb." ;
+  dyn:weaponMastery "slow" ;
+  dyn:sourceProperties "Thrown (Range 30/120)" ;
+  dyn:sourceSection "Equipment: Weapons table" ;
+  dyn:hasWeaponProperty <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/property/range>, <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/property/thrown> .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/weapon/light-hammer>
+  a dyn:WeaponDefinition, skos:Concept ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons> ;
+  rdfs:label "Light Hammer" ;
+  dyn:weaponKey "light-hammer" ;
+  dyn:weaponCategory "simple" ;
+  dyn:weaponRangeKind "melee" ;
+  dyn:costText "2 GP" ;
+  dyn:damageType <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/damage-type/bludgeoning> ;
+  dyn:damageExpression "1d4" ;
+  dyn:weaponWeight "2 lb." ;
+  dyn:weaponMastery "nick" ;
+  dyn:sourceProperties "Light, Thrown (Range 20/60)" ;
+  dyn:sourceSection "Equipment: Weapons table" ;
+  dyn:hasWeaponProperty <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/property/light>, <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/property/range>, <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/property/thrown> .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/weapon/mace>
+  a dyn:WeaponDefinition, skos:Concept ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons> ;
+  rdfs:label "Mace" ;
+  dyn:weaponKey "mace" ;
+  dyn:weaponCategory "simple" ;
+  dyn:weaponRangeKind "melee" ;
+  dyn:costText "5 GP" ;
+  dyn:damageType <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/damage-type/bludgeoning> ;
+  dyn:damageExpression "1d6" ;
+  dyn:weaponWeight "4 lb." ;
+  dyn:weaponMastery "sap" ;
+  dyn:sourceProperties "" ;
+  dyn:sourceSection "Equipment: Weapons table" .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/weapon/quarterstaff>
+  a dyn:WeaponDefinition, skos:Concept ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons> ;
+  rdfs:label "Quarterstaff" ;
+  dyn:weaponKey "quarterstaff" ;
+  dyn:weaponCategory "simple" ;
+  dyn:weaponRangeKind "melee" ;
+  dyn:costText "2 SP" ;
+  dyn:damageType <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/damage-type/bludgeoning> ;
+  dyn:damageExpression "1d6" ;
+  dyn:weaponWeight "4 lb." ;
+  dyn:weaponMastery "topple" ;
+  dyn:sourceProperties "Versatile (1d8)" ;
+  dyn:sourceSection "Equipment: Weapons table" ;
+  dyn:hasWeaponProperty <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/property/versatile> .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/weapon/sickle>
+  a dyn:WeaponDefinition, skos:Concept ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons> ;
+  rdfs:label "Sickle" ;
+  dyn:weaponKey "sickle" ;
+  dyn:weaponCategory "simple" ;
+  dyn:weaponRangeKind "melee" ;
+  dyn:costText "1 GP" ;
+  dyn:damageType <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/damage-type/slashing> ;
+  dyn:damageExpression "1d4" ;
+  dyn:weaponWeight "2 lb." ;
+  dyn:weaponMastery "nick" ;
+  dyn:sourceProperties "Light" ;
+  dyn:sourceSection "Equipment: Weapons table" ;
+  dyn:hasWeaponProperty <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/property/light> .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/weapon/spear>
+  a dyn:WeaponDefinition, skos:Concept ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons> ;
+  rdfs:label "Spear" ;
+  dyn:weaponKey "spear" ;
+  dyn:weaponCategory "simple" ;
+  dyn:weaponRangeKind "melee" ;
+  dyn:costText "1 GP" ;
+  dyn:damageType <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/damage-type/piercing> ;
+  dyn:damageExpression "1d6" ;
+  dyn:weaponWeight "3 lb." ;
+  dyn:weaponMastery "sap" ;
+  dyn:sourceProperties "Thrown (Range 20/60), Versatile (1d8)" ;
+  dyn:sourceSection "Equipment: Weapons table" ;
+  dyn:hasWeaponProperty <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/property/range>, <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/property/thrown>, <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/property/versatile> .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/weapon/dart>
+  a dyn:WeaponDefinition, skos:Concept ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons> ;
+  rdfs:label "Dart" ;
+  dyn:weaponKey "dart" ;
+  dyn:weaponCategory "simple" ;
+  dyn:weaponRangeKind "ranged" ;
+  dyn:costText "5 CP" ;
+  dyn:damageType <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/damage-type/piercing> ;
+  dyn:damageExpression "1d4" ;
+  dyn:weaponWeight "1/4 lb." ;
+  dyn:weaponMastery "vex" ;
+  dyn:sourceProperties "Finesse, Thrown (Range 20/60)" ;
+  dyn:sourceSection "Equipment: Weapons table" ;
+  dyn:hasWeaponProperty <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/property/finesse>, <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/property/range>, <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/property/thrown> .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/weapon/light-crossbow>
+  a dyn:WeaponDefinition, skos:Concept ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons> ;
+  rdfs:label "Light Crossbow" ;
+  dyn:weaponKey "light-crossbow" ;
+  dyn:weaponCategory "simple" ;
+  dyn:weaponRangeKind "ranged" ;
+  dyn:costText "25 GP" ;
+  dyn:damageType <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/damage-type/piercing> ;
+  dyn:damageExpression "1d8" ;
+  dyn:weaponWeight "5 lb." ;
+  dyn:weaponMastery "slow" ;
+  dyn:sourceProperties "Ammunition (Range 80/320; Bolt), Loading, Two-Handed" ;
+  dyn:sourceSection "Equipment: Weapons table" ;
+  dyn:hasWeaponProperty <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/property/ammunition>, <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/property/range>, <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/property/loading>, <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/property/two-handed> .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/weapon/shortbow>
+  a dyn:WeaponDefinition, skos:Concept ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons> ;
+  rdfs:label "Shortbow" ;
+  dyn:weaponKey "shortbow" ;
+  dyn:weaponCategory "simple" ;
+  dyn:weaponRangeKind "ranged" ;
+  dyn:costText "25 GP" ;
+  dyn:damageType <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/damage-type/piercing> ;
+  dyn:damageExpression "1d6" ;
+  dyn:weaponWeight "2 lb." ;
+  dyn:weaponMastery "vex" ;
+  dyn:sourceProperties "Ammunition (Range 80/320; Arrow), Two-Handed" ;
+  dyn:sourceSection "Equipment: Weapons table" ;
+  dyn:hasWeaponProperty <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/property/ammunition>, <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/property/range>, <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/property/two-handed> .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/weapon/sling>
+  a dyn:WeaponDefinition, skos:Concept ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons> ;
+  rdfs:label "Sling" ;
+  dyn:weaponKey "sling" ;
+  dyn:weaponCategory "simple" ;
+  dyn:weaponRangeKind "ranged" ;
+  dyn:costText "1 SP" ;
+  dyn:damageType <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/damage-type/bludgeoning> ;
+  dyn:damageExpression "1d4" ;
+  dyn:weaponWeight "" ;
+  dyn:weaponMastery "slow" ;
+  dyn:sourceProperties "Ammunition (Range 30/120; Bullet)" ;
+  dyn:sourceSection "Equipment: Weapons table" ;
+  dyn:hasWeaponProperty <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/property/ammunition>, <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/property/range> .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/weapon/battleaxe>
+  a dyn:WeaponDefinition, skos:Concept ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons> ;
+  rdfs:label "Battleaxe" ;
+  dyn:weaponKey "battleaxe" ;
+  dyn:weaponCategory "martial" ;
+  dyn:weaponRangeKind "melee" ;
+  dyn:costText "10 GP" ;
+  dyn:damageType <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/damage-type/slashing> ;
+  dyn:damageExpression "1d8" ;
+  dyn:weaponWeight "4 lb." ;
+  dyn:weaponMastery "topple" ;
+  dyn:sourceProperties "Versatile (1d10)" ;
+  dyn:sourceSection "Equipment: Weapons table" ;
+  dyn:hasWeaponProperty <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/property/versatile> .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/weapon/flail>
+  a dyn:WeaponDefinition, skos:Concept ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons> ;
+  rdfs:label "Flail" ;
+  dyn:weaponKey "flail" ;
+  dyn:weaponCategory "martial" ;
+  dyn:weaponRangeKind "melee" ;
+  dyn:costText "10 GP" ;
+  dyn:damageType <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/damage-type/bludgeoning> ;
+  dyn:damageExpression "1d8" ;
+  dyn:weaponWeight "2 lb." ;
+  dyn:weaponMastery "sap" ;
+  dyn:sourceProperties "" ;
+  dyn:sourceSection "Equipment: Weapons table" .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/weapon/glaive>
+  a dyn:WeaponDefinition, skos:Concept ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons> ;
+  rdfs:label "Glaive" ;
+  dyn:weaponKey "glaive" ;
+  dyn:weaponCategory "martial" ;
+  dyn:weaponRangeKind "melee" ;
+  dyn:costText "20 GP" ;
+  dyn:damageType <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/damage-type/slashing> ;
+  dyn:damageExpression "1d10" ;
+  dyn:weaponWeight "6 lb." ;
+  dyn:weaponMastery "graze" ;
+  dyn:sourceProperties "Heavy, Reach, Two-Handed" ;
+  dyn:sourceSection "Equipment: Weapons table" ;
+  dyn:hasWeaponProperty <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/property/heavy>, <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/property/reach>, <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/property/two-handed> .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/weapon/greataxe>
+  a dyn:WeaponDefinition, skos:Concept ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons> ;
+  rdfs:label "Greataxe" ;
+  dyn:weaponKey "greataxe" ;
+  dyn:weaponCategory "martial" ;
+  dyn:weaponRangeKind "melee" ;
+  dyn:costText "30 GP" ;
+  dyn:damageType <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/damage-type/slashing> ;
+  dyn:damageExpression "1d12" ;
+  dyn:weaponWeight "7 lb." ;
+  dyn:weaponMastery "cleave" ;
+  dyn:sourceProperties "Heavy, Two-Handed" ;
+  dyn:sourceSection "Equipment: Weapons table" ;
+  dyn:hasWeaponProperty <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/property/heavy>, <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/property/two-handed> .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/weapon/greatsword>
+  a dyn:WeaponDefinition, skos:Concept ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons> ;
+  rdfs:label "Greatsword" ;
+  dyn:weaponKey "greatsword" ;
+  dyn:weaponCategory "martial" ;
+  dyn:weaponRangeKind "melee" ;
+  dyn:costText "50 GP" ;
+  dyn:damageType <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/damage-type/slashing> ;
+  dyn:damageExpression "2d6" ;
+  dyn:weaponWeight "6 lb." ;
+  dyn:weaponMastery "graze" ;
+  dyn:sourceProperties "Heavy, Two-Handed" ;
+  dyn:sourceSection "Equipment: Weapons table" ;
+  dyn:hasWeaponProperty <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/property/heavy>, <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/property/two-handed> .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/weapon/halberd>
+  a dyn:WeaponDefinition, skos:Concept ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons> ;
+  rdfs:label "Halberd" ;
+  dyn:weaponKey "halberd" ;
+  dyn:weaponCategory "martial" ;
+  dyn:weaponRangeKind "melee" ;
+  dyn:costText "20 GP" ;
+  dyn:damageType <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/damage-type/slashing> ;
+  dyn:damageExpression "1d10" ;
+  dyn:weaponWeight "6 lb." ;
+  dyn:weaponMastery "cleave" ;
+  dyn:sourceProperties "Heavy, Reach, Two-Handed" ;
+  dyn:sourceSection "Equipment: Weapons table" ;
+  dyn:hasWeaponProperty <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/property/heavy>, <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/property/reach>, <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/property/two-handed> .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/weapon/lance>
+  a dyn:WeaponDefinition, skos:Concept ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons> ;
+  rdfs:label "Lance" ;
+  dyn:weaponKey "lance" ;
+  dyn:weaponCategory "martial" ;
+  dyn:weaponRangeKind "melee" ;
+  dyn:costText "10 GP" ;
+  dyn:damageType <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/damage-type/piercing> ;
+  dyn:damageExpression "1d10" ;
+  dyn:weaponWeight "6 lb." ;
+  dyn:weaponMastery "topple" ;
+  dyn:sourceProperties "Heavy, Reach, Two-Handed (unless mounted)" ;
+  dyn:sourceSection "Equipment: Weapons table" ;
+  dyn:hasWeaponProperty <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/property/heavy>, <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/property/reach>, <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/property/two-handed> .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/weapon/longsword>
+  a dyn:WeaponDefinition, skos:Concept ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons> ;
+  rdfs:label "Longsword" ;
+  dyn:weaponKey "longsword" ;
+  dyn:weaponCategory "martial" ;
+  dyn:weaponRangeKind "melee" ;
+  dyn:costText "15 GP" ;
+  dyn:damageType <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/damage-type/slashing> ;
+  dyn:damageExpression "1d8" ;
+  dyn:weaponWeight "3 lb." ;
+  dyn:weaponMastery "sap" ;
+  dyn:sourceProperties "Versatile (1d10)" ;
+  dyn:sourceSection "Equipment: Weapons table" ;
+  dyn:hasWeaponProperty <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/property/versatile> .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/weapon/maul>
+  a dyn:WeaponDefinition, skos:Concept ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons> ;
+  rdfs:label "Maul" ;
+  dyn:weaponKey "maul" ;
+  dyn:weaponCategory "martial" ;
+  dyn:weaponRangeKind "melee" ;
+  dyn:costText "10 GP" ;
+  dyn:damageType <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/damage-type/bludgeoning> ;
+  dyn:damageExpression "2d6" ;
+  dyn:weaponWeight "10 lb." ;
+  dyn:weaponMastery "topple" ;
+  dyn:sourceProperties "Heavy, Two-Handed" ;
+  dyn:sourceSection "Equipment: Weapons table" ;
+  dyn:hasWeaponProperty <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/property/heavy>, <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/property/two-handed> .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/weapon/morningstar>
+  a dyn:WeaponDefinition, skos:Concept ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons> ;
+  rdfs:label "Morningstar" ;
+  dyn:weaponKey "morningstar" ;
+  dyn:weaponCategory "martial" ;
+  dyn:weaponRangeKind "melee" ;
+  dyn:costText "15 GP" ;
+  dyn:damageType <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/damage-type/piercing> ;
+  dyn:damageExpression "1d8" ;
+  dyn:weaponWeight "4 lb." ;
+  dyn:weaponMastery "sap" ;
+  dyn:sourceProperties "" ;
+  dyn:sourceSection "Equipment: Weapons table" .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/weapon/pike>
+  a dyn:WeaponDefinition, skos:Concept ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons> ;
+  rdfs:label "Pike" ;
+  dyn:weaponKey "pike" ;
+  dyn:weaponCategory "martial" ;
+  dyn:weaponRangeKind "melee" ;
+  dyn:costText "5 GP" ;
+  dyn:damageType <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/damage-type/piercing> ;
+  dyn:damageExpression "1d10" ;
+  dyn:weaponWeight "18 lb." ;
+  dyn:weaponMastery "push" ;
+  dyn:sourceProperties "Heavy, Reach, Two-Handed" ;
+  dyn:sourceSection "Equipment: Weapons table" ;
+  dyn:hasWeaponProperty <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/property/heavy>, <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/property/reach>, <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/property/two-handed> .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/weapon/rapier>
+  a dyn:WeaponDefinition, skos:Concept ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons> ;
+  rdfs:label "Rapier" ;
+  dyn:weaponKey "rapier" ;
+  dyn:weaponCategory "martial" ;
+  dyn:weaponRangeKind "melee" ;
+  dyn:costText "25 GP" ;
+  dyn:damageType <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/damage-type/piercing> ;
+  dyn:damageExpression "1d8" ;
+  dyn:weaponWeight "2 lb." ;
+  dyn:weaponMastery "vex" ;
+  dyn:sourceProperties "Finesse" ;
+  dyn:sourceSection "Equipment: Weapons table" ;
+  dyn:hasWeaponProperty <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/property/finesse> .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/weapon/scimitar>
+  a dyn:WeaponDefinition, skos:Concept ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons> ;
+  rdfs:label "Scimitar" ;
+  dyn:weaponKey "scimitar" ;
+  dyn:weaponCategory "martial" ;
+  dyn:weaponRangeKind "melee" ;
+  dyn:costText "25 GP" ;
+  dyn:damageType <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/damage-type/slashing> ;
+  dyn:damageExpression "1d6" ;
+  dyn:weaponWeight "3 lb." ;
+  dyn:weaponMastery "nick" ;
+  dyn:sourceProperties "Finesse, Light" ;
+  dyn:sourceSection "Equipment: Weapons table" ;
+  dyn:hasWeaponProperty <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/property/finesse>, <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/property/light> .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/weapon/shortsword>
+  a dyn:WeaponDefinition, skos:Concept ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons> ;
+  rdfs:label "Shortsword" ;
+  dyn:weaponKey "shortsword" ;
+  dyn:weaponCategory "martial" ;
+  dyn:weaponRangeKind "melee" ;
+  dyn:costText "10 GP" ;
+  dyn:damageType <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/damage-type/piercing> ;
+  dyn:damageExpression "1d6" ;
+  dyn:weaponWeight "2 lb." ;
+  dyn:weaponMastery "vex" ;
+  dyn:sourceProperties "Finesse, Light" ;
+  dyn:sourceSection "Equipment: Weapons table" ;
+  dyn:hasWeaponProperty <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/property/finesse>, <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/property/light> .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/weapon/trident>
+  a dyn:WeaponDefinition, skos:Concept ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons> ;
+  rdfs:label "Trident" ;
+  dyn:weaponKey "trident" ;
+  dyn:weaponCategory "martial" ;
+  dyn:weaponRangeKind "melee" ;
+  dyn:costText "5 GP" ;
+  dyn:damageType <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/damage-type/piercing> ;
+  dyn:damageExpression "1d8" ;
+  dyn:weaponWeight "4 lb." ;
+  dyn:weaponMastery "topple" ;
+  dyn:sourceProperties "Thrown (Range 20/60), Versatile (1d10)" ;
+  dyn:sourceSection "Equipment: Weapons table" ;
+  dyn:hasWeaponProperty <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/property/range>, <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/property/thrown>, <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/property/versatile> .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/weapon/warhammer>
+  a dyn:WeaponDefinition, skos:Concept ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons> ;
+  rdfs:label "Warhammer" ;
+  dyn:weaponKey "warhammer" ;
+  dyn:weaponCategory "martial" ;
+  dyn:weaponRangeKind "melee" ;
+  dyn:costText "15 GP" ;
+  dyn:damageType <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/damage-type/bludgeoning> ;
+  dyn:damageExpression "1d8" ;
+  dyn:weaponWeight "5 lb." ;
+  dyn:weaponMastery "push" ;
+  dyn:sourceProperties "Versatile (1d10)" ;
+  dyn:sourceSection "Equipment: Weapons table" ;
+  dyn:hasWeaponProperty <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/property/versatile> .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/weapon/war-pick>
+  a dyn:WeaponDefinition, skos:Concept ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons> ;
+  rdfs:label "War Pick" ;
+  dyn:weaponKey "war-pick" ;
+  dyn:weaponCategory "martial" ;
+  dyn:weaponRangeKind "melee" ;
+  dyn:costText "5 GP" ;
+  dyn:damageType <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/damage-type/piercing> ;
+  dyn:damageExpression "1d8" ;
+  dyn:weaponWeight "2 lb." ;
+  dyn:weaponMastery "sap" ;
+  dyn:sourceProperties "Versatile (1d10)" ;
+  dyn:sourceSection "Equipment: Weapons table" ;
+  dyn:hasWeaponProperty <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/property/versatile> .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/weapon/whip>
+  a dyn:WeaponDefinition, skos:Concept ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons> ;
+  rdfs:label "Whip" ;
+  dyn:weaponKey "whip" ;
+  dyn:weaponCategory "martial" ;
+  dyn:weaponRangeKind "melee" ;
+  dyn:costText "2 GP" ;
+  dyn:damageType <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/damage-type/slashing> ;
+  dyn:damageExpression "1d4" ;
+  dyn:weaponWeight "3 lb." ;
+  dyn:weaponMastery "slow" ;
+  dyn:sourceProperties "Finesse, Reach" ;
+  dyn:sourceSection "Equipment: Weapons table" ;
+  dyn:hasWeaponProperty <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/property/finesse>, <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/property/reach> .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/weapon/blowgun>
+  a dyn:WeaponDefinition, skos:Concept ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons> ;
+  rdfs:label "Blowgun" ;
+  dyn:weaponKey "blowgun" ;
+  dyn:weaponCategory "martial" ;
+  dyn:weaponRangeKind "ranged" ;
+  dyn:costText "10 GP" ;
+  dyn:damageType <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/damage-type/piercing> ;
+  dyn:staticDamage 1 ;
+  dyn:weaponWeight "1 lb." ;
+  dyn:weaponMastery "vex" ;
+  dyn:sourceProperties "Ammunition (Range 25/100; Needle), Loading" ;
+  dyn:sourceSection "Equipment: Weapons table" ;
+  dyn:hasWeaponProperty <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/property/ammunition>, <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/property/range>, <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/property/loading> .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/weapon/hand-crossbow>
+  a dyn:WeaponDefinition, skos:Concept ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons> ;
+  rdfs:label "Hand Crossbow" ;
+  dyn:weaponKey "hand-crossbow" ;
+  dyn:weaponCategory "martial" ;
+  dyn:weaponRangeKind "ranged" ;
+  dyn:costText "75 GP" ;
+  dyn:damageType <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/damage-type/piercing> ;
+  dyn:damageExpression "1d6" ;
+  dyn:weaponWeight "3 lb." ;
+  dyn:weaponMastery "vex" ;
+  dyn:sourceProperties "Ammunition (Range 30/120; Bolt), Light, Loading" ;
+  dyn:sourceSection "Equipment: Weapons table" ;
+  dyn:hasWeaponProperty <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/property/ammunition>, <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/property/range>, <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/property/light>, <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/property/loading> .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/weapon/heavy-crossbow>
+  a dyn:WeaponDefinition, skos:Concept ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons> ;
+  rdfs:label "Heavy Crossbow" ;
+  dyn:weaponKey "heavy-crossbow" ;
+  dyn:weaponCategory "martial" ;
+  dyn:weaponRangeKind "ranged" ;
+  dyn:costText "50 GP" ;
+  dyn:damageType <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/damage-type/piercing> ;
+  dyn:damageExpression "1d10" ;
+  dyn:weaponWeight "18 lb." ;
+  dyn:weaponMastery "push" ;
+  dyn:sourceProperties "Ammunition (Range 100/400; Bolt), Heavy, Loading, Two-Handed" ;
+  dyn:sourceSection "Equipment: Weapons table" ;
+  dyn:hasWeaponProperty <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/property/ammunition>, <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/property/range>, <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/property/heavy>, <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/property/loading>, <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/property/two-handed> .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/weapon/longbow>
+  a dyn:WeaponDefinition, skos:Concept ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons> ;
+  rdfs:label "Longbow" ;
+  dyn:weaponKey "longbow" ;
+  dyn:weaponCategory "martial" ;
+  dyn:weaponRangeKind "ranged" ;
+  dyn:costText "50 GP" ;
+  dyn:damageType <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/damage-type/piercing> ;
+  dyn:damageExpression "1d8" ;
+  dyn:weaponWeight "2 lb." ;
+  dyn:weaponMastery "slow" ;
+  dyn:sourceProperties "Ammunition (Range 150/600; Arrow), Heavy, Two-Handed" ;
+  dyn:sourceSection "Equipment: Weapons table" ;
+  dyn:hasWeaponProperty <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/property/ammunition>, <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/property/range>, <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/property/heavy>, <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/property/two-handed> .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/weapon/musket>
+  a dyn:WeaponDefinition, skos:Concept ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons> ;
+  rdfs:label "Musket" ;
+  dyn:weaponKey "musket" ;
+  dyn:weaponCategory "martial" ;
+  dyn:weaponRangeKind "ranged" ;
+  dyn:costText "500 GP" ;
+  dyn:damageType <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/damage-type/piercing> ;
+  dyn:damageExpression "1d12" ;
+  dyn:weaponWeight "10 lb." ;
+  dyn:weaponMastery "slow" ;
+  dyn:sourceProperties "Ammunition (Range 40/120; Bullet), Loading, Two-Handed" ;
+  dyn:sourceSection "Equipment: Weapons table" ;
+  dyn:hasWeaponProperty <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/property/ammunition>, <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/property/range>, <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/property/loading>, <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/property/two-handed> .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/weapon/pistol>
+  a dyn:WeaponDefinition, skos:Concept ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons> ;
+  rdfs:label "Pistol" ;
+  dyn:weaponKey "pistol" ;
+  dyn:weaponCategory "martial" ;
+  dyn:weaponRangeKind "ranged" ;
+  dyn:costText "250 GP" ;
+  dyn:damageType <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/damage-type/piercing> ;
+  dyn:damageExpression "1d10" ;
+  dyn:weaponWeight "3 lb." ;
+  dyn:weaponMastery "vex" ;
+  dyn:sourceProperties "Ammunition (Range 30/90; Bullet), Loading" ;
+  dyn:sourceSection "Equipment: Weapons table" ;
+  dyn:hasWeaponProperty <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/property/ammunition>, <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/property/range>, <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/property/loading> .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/item-action/club-melee>
+  a dyn:ItemActionOption ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons> ;
+  rdfs:label "Club melee attack" ;
+  dyn:itemActionKey "club-melee" ;
+  dyn:forItem <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/weapon/club> ;
+  dyn:itemActionTestType dyn:AttackRoll ;
+  dyn:attackMode "melee" ;
+  dyn:weaponRangeKind "melee" ;
+  dyn:handsRequired 1 ;
+  dyn:damageType <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/damage-type/bludgeoning> ;
+  dyn:damageExpression "1d4" ;
+  dyn:sourceProperties "Light" ;
+  dyn:sourceSection "Equipment: Weapons table" .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/item-action/dagger-melee>
+  a dyn:ItemActionOption ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons> ;
+  rdfs:label "Dagger melee attack" ;
+  dyn:itemActionKey "dagger-melee" ;
+  dyn:forItem <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/weapon/dagger> ;
+  dyn:itemActionTestType dyn:AttackRoll ;
+  dyn:attackMode "melee" ;
+  dyn:weaponRangeKind "melee" ;
+  dyn:handsRequired 1 ;
+  dyn:damageType <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/damage-type/piercing> ;
+  dyn:damageExpression "1d4" ;
+  dyn:sourceProperties "Finesse, Light, Thrown (Range 20/60)" ;
+  dyn:sourceSection "Equipment: Weapons table" .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/item-action/dagger-thrown>
+  a dyn:ItemActionOption ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons> ;
+  rdfs:label "Dagger thrown attack" ;
+  dyn:itemActionKey "dagger-thrown" ;
+  dyn:forItem <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/weapon/dagger> ;
+  dyn:itemActionTestType dyn:AttackRoll ;
+  dyn:attackMode "thrown" ;
+  dyn:weaponRangeKind "melee" ;
+  dyn:handsRequired 1 ;
+  dyn:damageType <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/damage-type/piercing> ;
+  dyn:damageExpression "1d4" ;
+  dyn:normalRangeFeet 20 ;
+  dyn:longRangeFeet 60 ;
+  dyn:sourceProperties "Finesse, Light, Thrown (Range 20/60)" ;
+  dyn:sourceSection "Equipment: Weapons table" .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/item-action/greatclub-melee>
+  a dyn:ItemActionOption ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons> ;
+  rdfs:label "Greatclub melee attack" ;
+  dyn:itemActionKey "greatclub-melee" ;
+  dyn:forItem <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/weapon/greatclub> ;
+  dyn:itemActionTestType dyn:AttackRoll ;
+  dyn:attackMode "melee" ;
+  dyn:weaponRangeKind "melee" ;
+  dyn:handsRequired 2 ;
+  dyn:damageType <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/damage-type/bludgeoning> ;
+  dyn:damageExpression "1d8" ;
+  dyn:sourceProperties "Two-Handed" ;
+  dyn:sourceSection "Equipment: Weapons table" .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/item-action/handaxe-melee>
+  a dyn:ItemActionOption ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons> ;
+  rdfs:label "Handaxe melee attack" ;
+  dyn:itemActionKey "handaxe-melee" ;
+  dyn:forItem <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/weapon/handaxe> ;
+  dyn:itemActionTestType dyn:AttackRoll ;
+  dyn:attackMode "melee" ;
+  dyn:weaponRangeKind "melee" ;
+  dyn:handsRequired 1 ;
+  dyn:damageType <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/damage-type/slashing> ;
+  dyn:damageExpression "1d6" ;
+  dyn:sourceProperties "Light, Thrown (Range 20/60)" ;
+  dyn:sourceSection "Equipment: Weapons table" .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/item-action/handaxe-thrown>
+  a dyn:ItemActionOption ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons> ;
+  rdfs:label "Handaxe thrown attack" ;
+  dyn:itemActionKey "handaxe-thrown" ;
+  dyn:forItem <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/weapon/handaxe> ;
+  dyn:itemActionTestType dyn:AttackRoll ;
+  dyn:attackMode "thrown" ;
+  dyn:weaponRangeKind "melee" ;
+  dyn:handsRequired 1 ;
+  dyn:damageType <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/damage-type/slashing> ;
+  dyn:damageExpression "1d6" ;
+  dyn:normalRangeFeet 20 ;
+  dyn:longRangeFeet 60 ;
+  dyn:sourceProperties "Light, Thrown (Range 20/60)" ;
+  dyn:sourceSection "Equipment: Weapons table" .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/item-action/javelin-melee>
+  a dyn:ItemActionOption ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons> ;
+  rdfs:label "Javelin melee attack" ;
+  dyn:itemActionKey "javelin-melee" ;
+  dyn:forItem <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/weapon/javelin> ;
+  dyn:itemActionTestType dyn:AttackRoll ;
+  dyn:attackMode "melee" ;
+  dyn:weaponRangeKind "melee" ;
+  dyn:handsRequired 1 ;
+  dyn:damageType <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/damage-type/piercing> ;
+  dyn:damageExpression "1d6" ;
+  dyn:sourceProperties "Thrown (Range 30/120)" ;
+  dyn:sourceSection "Equipment: Weapons table" .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/item-action/javelin-thrown>
+  a dyn:ItemActionOption ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons> ;
+  rdfs:label "Javelin thrown attack" ;
+  dyn:itemActionKey "javelin-thrown" ;
+  dyn:forItem <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/weapon/javelin> ;
+  dyn:itemActionTestType dyn:AttackRoll ;
+  dyn:attackMode "thrown" ;
+  dyn:weaponRangeKind "melee" ;
+  dyn:handsRequired 1 ;
+  dyn:damageType <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/damage-type/piercing> ;
+  dyn:damageExpression "1d6" ;
+  dyn:normalRangeFeet 30 ;
+  dyn:longRangeFeet 120 ;
+  dyn:sourceProperties "Thrown (Range 30/120)" ;
+  dyn:sourceSection "Equipment: Weapons table" .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/item-action/light-hammer-melee>
+  a dyn:ItemActionOption ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons> ;
+  rdfs:label "Light Hammer melee attack" ;
+  dyn:itemActionKey "light-hammer-melee" ;
+  dyn:forItem <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/weapon/light-hammer> ;
+  dyn:itemActionTestType dyn:AttackRoll ;
+  dyn:attackMode "melee" ;
+  dyn:weaponRangeKind "melee" ;
+  dyn:handsRequired 1 ;
+  dyn:damageType <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/damage-type/bludgeoning> ;
+  dyn:damageExpression "1d4" ;
+  dyn:sourceProperties "Light, Thrown (Range 20/60)" ;
+  dyn:sourceSection "Equipment: Weapons table" .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/item-action/light-hammer-thrown>
+  a dyn:ItemActionOption ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons> ;
+  rdfs:label "Light Hammer thrown attack" ;
+  dyn:itemActionKey "light-hammer-thrown" ;
+  dyn:forItem <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/weapon/light-hammer> ;
+  dyn:itemActionTestType dyn:AttackRoll ;
+  dyn:attackMode "thrown" ;
+  dyn:weaponRangeKind "melee" ;
+  dyn:handsRequired 1 ;
+  dyn:damageType <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/damage-type/bludgeoning> ;
+  dyn:damageExpression "1d4" ;
+  dyn:normalRangeFeet 20 ;
+  dyn:longRangeFeet 60 ;
+  dyn:sourceProperties "Light, Thrown (Range 20/60)" ;
+  dyn:sourceSection "Equipment: Weapons table" .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/item-action/mace-melee>
+  a dyn:ItemActionOption ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons> ;
+  rdfs:label "Mace melee attack" ;
+  dyn:itemActionKey "mace-melee" ;
+  dyn:forItem <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/weapon/mace> ;
+  dyn:itemActionTestType dyn:AttackRoll ;
+  dyn:attackMode "melee" ;
+  dyn:weaponRangeKind "melee" ;
+  dyn:handsRequired 1 ;
+  dyn:damageType <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/damage-type/bludgeoning> ;
+  dyn:damageExpression "1d6" ;
+  dyn:sourceProperties "" ;
+  dyn:sourceSection "Equipment: Weapons table" .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/item-action/quarterstaff-melee-1h>
+  a dyn:ItemActionOption ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons> ;
+  rdfs:label "Quarterstaff melee attack (one hand)" ;
+  dyn:itemActionKey "quarterstaff-melee-1h" ;
+  dyn:forItem <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/weapon/quarterstaff> ;
+  dyn:itemActionTestType dyn:AttackRoll ;
+  dyn:attackMode "melee" ;
+  dyn:weaponRangeKind "melee" ;
+  dyn:handsRequired 1 ;
+  dyn:damageType <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/damage-type/bludgeoning> ;
+  dyn:damageExpression "1d6" ;
+  dyn:sourceProperties "Versatile (1d8)" ;
+  dyn:sourceSection "Equipment: Weapons table" .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/item-action/quarterstaff-melee-2h>
+  a dyn:ItemActionOption ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons> ;
+  rdfs:label "Quarterstaff melee attack (two hands)" ;
+  dyn:itemActionKey "quarterstaff-melee-2h" ;
+  dyn:forItem <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/weapon/quarterstaff> ;
+  dyn:itemActionTestType dyn:AttackRoll ;
+  dyn:attackMode "melee" ;
+  dyn:weaponRangeKind "melee" ;
+  dyn:handsRequired 2 ;
+  dyn:damageType <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/damage-type/bludgeoning> ;
+  dyn:damageExpression "1d8" ;
+  dyn:sourceProperties "Versatile (1d8)" ;
+  dyn:sourceSection "Equipment: Weapons table" .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/item-action/sickle-melee>
+  a dyn:ItemActionOption ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons> ;
+  rdfs:label "Sickle melee attack" ;
+  dyn:itemActionKey "sickle-melee" ;
+  dyn:forItem <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/weapon/sickle> ;
+  dyn:itemActionTestType dyn:AttackRoll ;
+  dyn:attackMode "melee" ;
+  dyn:weaponRangeKind "melee" ;
+  dyn:handsRequired 1 ;
+  dyn:damageType <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/damage-type/slashing> ;
+  dyn:damageExpression "1d4" ;
+  dyn:sourceProperties "Light" ;
+  dyn:sourceSection "Equipment: Weapons table" .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/item-action/spear-melee-1h>
+  a dyn:ItemActionOption ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons> ;
+  rdfs:label "Spear melee attack (one hand)" ;
+  dyn:itemActionKey "spear-melee-1h" ;
+  dyn:forItem <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/weapon/spear> ;
+  dyn:itemActionTestType dyn:AttackRoll ;
+  dyn:attackMode "melee" ;
+  dyn:weaponRangeKind "melee" ;
+  dyn:handsRequired 1 ;
+  dyn:damageType <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/damage-type/piercing> ;
+  dyn:damageExpression "1d6" ;
+  dyn:sourceProperties "Thrown (Range 20/60), Versatile (1d8)" ;
+  dyn:sourceSection "Equipment: Weapons table" .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/item-action/spear-melee-2h>
+  a dyn:ItemActionOption ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons> ;
+  rdfs:label "Spear melee attack (two hands)" ;
+  dyn:itemActionKey "spear-melee-2h" ;
+  dyn:forItem <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/weapon/spear> ;
+  dyn:itemActionTestType dyn:AttackRoll ;
+  dyn:attackMode "melee" ;
+  dyn:weaponRangeKind "melee" ;
+  dyn:handsRequired 2 ;
+  dyn:damageType <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/damage-type/piercing> ;
+  dyn:damageExpression "1d8" ;
+  dyn:sourceProperties "Thrown (Range 20/60), Versatile (1d8)" ;
+  dyn:sourceSection "Equipment: Weapons table" .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/item-action/spear-thrown>
+  a dyn:ItemActionOption ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons> ;
+  rdfs:label "Spear thrown attack" ;
+  dyn:itemActionKey "spear-thrown" ;
+  dyn:forItem <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/weapon/spear> ;
+  dyn:itemActionTestType dyn:AttackRoll ;
+  dyn:attackMode "thrown" ;
+  dyn:weaponRangeKind "melee" ;
+  dyn:handsRequired 1 ;
+  dyn:damageType <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/damage-type/piercing> ;
+  dyn:damageExpression "1d6" ;
+  dyn:normalRangeFeet 20 ;
+  dyn:longRangeFeet 60 ;
+  dyn:sourceProperties "Thrown (Range 20/60), Versatile (1d8)" ;
+  dyn:sourceSection "Equipment: Weapons table" .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/item-action/dart-thrown>
+  a dyn:ItemActionOption ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons> ;
+  rdfs:label "Dart thrown attack" ;
+  dyn:itemActionKey "dart-thrown" ;
+  dyn:forItem <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/weapon/dart> ;
+  dyn:itemActionTestType dyn:AttackRoll ;
+  dyn:attackMode "thrown" ;
+  dyn:weaponRangeKind "ranged" ;
+  dyn:handsRequired 1 ;
+  dyn:damageType <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/damage-type/piercing> ;
+  dyn:damageExpression "1d4" ;
+  dyn:normalRangeFeet 20 ;
+  dyn:longRangeFeet 60 ;
+  dyn:sourceProperties "Finesse, Thrown (Range 20/60)" ;
+  dyn:sourceSection "Equipment: Weapons table" .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/item-action/light-crossbow-ranged>
+  a dyn:ItemActionOption ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons> ;
+  rdfs:label "Light Crossbow ranged attack" ;
+  dyn:itemActionKey "light-crossbow-ranged" ;
+  dyn:forItem <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/weapon/light-crossbow> ;
+  dyn:itemActionTestType dyn:AttackRoll ;
+  dyn:attackMode "ranged" ;
+  dyn:weaponRangeKind "ranged" ;
+  dyn:handsRequired 2 ;
+  dyn:damageType <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/damage-type/piercing> ;
+  dyn:damageExpression "1d8" ;
+  dyn:normalRangeFeet 80 ;
+  dyn:longRangeFeet 320 ;
+  dyn:sourceProperties "Ammunition (Range 80/320; Bolt), Loading, Two-Handed" ;
+  dyn:sourceSection "Equipment: Weapons table" .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/item-action/shortbow-ranged>
+  a dyn:ItemActionOption ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons> ;
+  rdfs:label "Shortbow ranged attack" ;
+  dyn:itemActionKey "shortbow-ranged" ;
+  dyn:forItem <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/weapon/shortbow> ;
+  dyn:itemActionTestType dyn:AttackRoll ;
+  dyn:attackMode "ranged" ;
+  dyn:weaponRangeKind "ranged" ;
+  dyn:handsRequired 2 ;
+  dyn:damageType <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/damage-type/piercing> ;
+  dyn:damageExpression "1d6" ;
+  dyn:normalRangeFeet 80 ;
+  dyn:longRangeFeet 320 ;
+  dyn:sourceProperties "Ammunition (Range 80/320; Arrow), Two-Handed" ;
+  dyn:sourceSection "Equipment: Weapons table" .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/item-action/sling-ranged>
+  a dyn:ItemActionOption ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons> ;
+  rdfs:label "Sling ranged attack" ;
+  dyn:itemActionKey "sling-ranged" ;
+  dyn:forItem <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/weapon/sling> ;
+  dyn:itemActionTestType dyn:AttackRoll ;
+  dyn:attackMode "ranged" ;
+  dyn:weaponRangeKind "ranged" ;
+  dyn:handsRequired 1 ;
+  dyn:damageType <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/damage-type/bludgeoning> ;
+  dyn:damageExpression "1d4" ;
+  dyn:normalRangeFeet 30 ;
+  dyn:longRangeFeet 120 ;
+  dyn:sourceProperties "Ammunition (Range 30/120; Bullet)" ;
+  dyn:sourceSection "Equipment: Weapons table" .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/item-action/battleaxe-melee-1h>
+  a dyn:ItemActionOption ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons> ;
+  rdfs:label "Battleaxe melee attack (one hand)" ;
+  dyn:itemActionKey "battleaxe-melee-1h" ;
+  dyn:forItem <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/weapon/battleaxe> ;
+  dyn:itemActionTestType dyn:AttackRoll ;
+  dyn:attackMode "melee" ;
+  dyn:weaponRangeKind "melee" ;
+  dyn:handsRequired 1 ;
+  dyn:damageType <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/damage-type/slashing> ;
+  dyn:damageExpression "1d8" ;
+  dyn:sourceProperties "Versatile (1d10)" ;
+  dyn:sourceSection "Equipment: Weapons table" .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/item-action/battleaxe-melee-2h>
+  a dyn:ItemActionOption ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons> ;
+  rdfs:label "Battleaxe melee attack (two hands)" ;
+  dyn:itemActionKey "battleaxe-melee-2h" ;
+  dyn:forItem <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/weapon/battleaxe> ;
+  dyn:itemActionTestType dyn:AttackRoll ;
+  dyn:attackMode "melee" ;
+  dyn:weaponRangeKind "melee" ;
+  dyn:handsRequired 2 ;
+  dyn:damageType <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/damage-type/slashing> ;
+  dyn:damageExpression "1d10" ;
+  dyn:sourceProperties "Versatile (1d10)" ;
+  dyn:sourceSection "Equipment: Weapons table" .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/item-action/flail-melee>
+  a dyn:ItemActionOption ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons> ;
+  rdfs:label "Flail melee attack" ;
+  dyn:itemActionKey "flail-melee" ;
+  dyn:forItem <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/weapon/flail> ;
+  dyn:itemActionTestType dyn:AttackRoll ;
+  dyn:attackMode "melee" ;
+  dyn:weaponRangeKind "melee" ;
+  dyn:handsRequired 1 ;
+  dyn:damageType <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/damage-type/bludgeoning> ;
+  dyn:damageExpression "1d8" ;
+  dyn:sourceProperties "" ;
+  dyn:sourceSection "Equipment: Weapons table" .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/item-action/glaive-melee>
+  a dyn:ItemActionOption ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons> ;
+  rdfs:label "Glaive melee attack" ;
+  dyn:itemActionKey "glaive-melee" ;
+  dyn:forItem <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/weapon/glaive> ;
+  dyn:itemActionTestType dyn:AttackRoll ;
+  dyn:attackMode "melee" ;
+  dyn:weaponRangeKind "melee" ;
+  dyn:handsRequired 2 ;
+  dyn:damageType <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/damage-type/slashing> ;
+  dyn:damageExpression "1d10" ;
+  dyn:sourceProperties "Heavy, Reach, Two-Handed" ;
+  dyn:sourceSection "Equipment: Weapons table" .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/item-action/greataxe-melee>
+  a dyn:ItemActionOption ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons> ;
+  rdfs:label "Greataxe melee attack" ;
+  dyn:itemActionKey "greataxe-melee" ;
+  dyn:forItem <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/weapon/greataxe> ;
+  dyn:itemActionTestType dyn:AttackRoll ;
+  dyn:attackMode "melee" ;
+  dyn:weaponRangeKind "melee" ;
+  dyn:handsRequired 2 ;
+  dyn:damageType <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/damage-type/slashing> ;
+  dyn:damageExpression "1d12" ;
+  dyn:sourceProperties "Heavy, Two-Handed" ;
+  dyn:sourceSection "Equipment: Weapons table" .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/item-action/greatsword-melee>
+  a dyn:ItemActionOption ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons> ;
+  rdfs:label "Greatsword melee attack" ;
+  dyn:itemActionKey "greatsword-melee" ;
+  dyn:forItem <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/weapon/greatsword> ;
+  dyn:itemActionTestType dyn:AttackRoll ;
+  dyn:attackMode "melee" ;
+  dyn:weaponRangeKind "melee" ;
+  dyn:handsRequired 2 ;
+  dyn:damageType <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/damage-type/slashing> ;
+  dyn:damageExpression "2d6" ;
+  dyn:sourceProperties "Heavy, Two-Handed" ;
+  dyn:sourceSection "Equipment: Weapons table" .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/item-action/halberd-melee>
+  a dyn:ItemActionOption ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons> ;
+  rdfs:label "Halberd melee attack" ;
+  dyn:itemActionKey "halberd-melee" ;
+  dyn:forItem <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/weapon/halberd> ;
+  dyn:itemActionTestType dyn:AttackRoll ;
+  dyn:attackMode "melee" ;
+  dyn:weaponRangeKind "melee" ;
+  dyn:handsRequired 2 ;
+  dyn:damageType <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/damage-type/slashing> ;
+  dyn:damageExpression "1d10" ;
+  dyn:sourceProperties "Heavy, Reach, Two-Handed" ;
+  dyn:sourceSection "Equipment: Weapons table" .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/item-action/lance-melee>
+  a dyn:ItemActionOption ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons> ;
+  rdfs:label "Lance melee attack" ;
+  dyn:itemActionKey "lance-melee" ;
+  dyn:forItem <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/weapon/lance> ;
+  dyn:itemActionTestType dyn:AttackRoll ;
+  dyn:attackMode "melee" ;
+  dyn:weaponRangeKind "melee" ;
+  dyn:handsRequired 2 ;
+  dyn:damageType <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/damage-type/piercing> ;
+  dyn:damageExpression "1d10" ;
+  dyn:sourceProperties "Heavy, Reach, Two-Handed (unless mounted)" ;
+  dyn:sourceSection "Equipment: Weapons table" ;
+  dyn:handsNote "unless mounted" .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/item-action/longsword-melee-1h>
+  a dyn:ItemActionOption ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons> ;
+  rdfs:label "Longsword melee attack (one hand)" ;
+  dyn:itemActionKey "longsword-melee-1h" ;
+  dyn:forItem <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/weapon/longsword> ;
+  dyn:itemActionTestType dyn:AttackRoll ;
+  dyn:attackMode "melee" ;
+  dyn:weaponRangeKind "melee" ;
+  dyn:handsRequired 1 ;
+  dyn:damageType <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/damage-type/slashing> ;
+  dyn:damageExpression "1d8" ;
+  dyn:sourceProperties "Versatile (1d10)" ;
+  dyn:sourceSection "Equipment: Weapons table" .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/item-action/longsword-melee-2h>
+  a dyn:ItemActionOption ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons> ;
+  rdfs:label "Longsword melee attack (two hands)" ;
+  dyn:itemActionKey "longsword-melee-2h" ;
+  dyn:forItem <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/weapon/longsword> ;
+  dyn:itemActionTestType dyn:AttackRoll ;
+  dyn:attackMode "melee" ;
+  dyn:weaponRangeKind "melee" ;
+  dyn:handsRequired 2 ;
+  dyn:damageType <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/damage-type/slashing> ;
+  dyn:damageExpression "1d10" ;
+  dyn:sourceProperties "Versatile (1d10)" ;
+  dyn:sourceSection "Equipment: Weapons table" .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/item-action/maul-melee>
+  a dyn:ItemActionOption ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons> ;
+  rdfs:label "Maul melee attack" ;
+  dyn:itemActionKey "maul-melee" ;
+  dyn:forItem <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/weapon/maul> ;
+  dyn:itemActionTestType dyn:AttackRoll ;
+  dyn:attackMode "melee" ;
+  dyn:weaponRangeKind "melee" ;
+  dyn:handsRequired 2 ;
+  dyn:damageType <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/damage-type/bludgeoning> ;
+  dyn:damageExpression "2d6" ;
+  dyn:sourceProperties "Heavy, Two-Handed" ;
+  dyn:sourceSection "Equipment: Weapons table" .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/item-action/morningstar-melee>
+  a dyn:ItemActionOption ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons> ;
+  rdfs:label "Morningstar melee attack" ;
+  dyn:itemActionKey "morningstar-melee" ;
+  dyn:forItem <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/weapon/morningstar> ;
+  dyn:itemActionTestType dyn:AttackRoll ;
+  dyn:attackMode "melee" ;
+  dyn:weaponRangeKind "melee" ;
+  dyn:handsRequired 1 ;
+  dyn:damageType <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/damage-type/piercing> ;
+  dyn:damageExpression "1d8" ;
+  dyn:sourceProperties "" ;
+  dyn:sourceSection "Equipment: Weapons table" .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/item-action/pike-melee>
+  a dyn:ItemActionOption ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons> ;
+  rdfs:label "Pike melee attack" ;
+  dyn:itemActionKey "pike-melee" ;
+  dyn:forItem <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/weapon/pike> ;
+  dyn:itemActionTestType dyn:AttackRoll ;
+  dyn:attackMode "melee" ;
+  dyn:weaponRangeKind "melee" ;
+  dyn:handsRequired 2 ;
+  dyn:damageType <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/damage-type/piercing> ;
+  dyn:damageExpression "1d10" ;
+  dyn:sourceProperties "Heavy, Reach, Two-Handed" ;
+  dyn:sourceSection "Equipment: Weapons table" .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/item-action/rapier-melee>
+  a dyn:ItemActionOption ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons> ;
+  rdfs:label "Rapier melee attack" ;
+  dyn:itemActionKey "rapier-melee" ;
+  dyn:forItem <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/weapon/rapier> ;
+  dyn:itemActionTestType dyn:AttackRoll ;
+  dyn:attackMode "melee" ;
+  dyn:weaponRangeKind "melee" ;
+  dyn:handsRequired 1 ;
+  dyn:damageType <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/damage-type/piercing> ;
+  dyn:damageExpression "1d8" ;
+  dyn:sourceProperties "Finesse" ;
+  dyn:sourceSection "Equipment: Weapons table" .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/item-action/scimitar-melee>
+  a dyn:ItemActionOption ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons> ;
+  rdfs:label "Scimitar melee attack" ;
+  dyn:itemActionKey "scimitar-melee" ;
+  dyn:forItem <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/weapon/scimitar> ;
+  dyn:itemActionTestType dyn:AttackRoll ;
+  dyn:attackMode "melee" ;
+  dyn:weaponRangeKind "melee" ;
+  dyn:handsRequired 1 ;
+  dyn:damageType <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/damage-type/slashing> ;
+  dyn:damageExpression "1d6" ;
+  dyn:sourceProperties "Finesse, Light" ;
+  dyn:sourceSection "Equipment: Weapons table" .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/item-action/shortsword-melee>
+  a dyn:ItemActionOption ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons> ;
+  rdfs:label "Shortsword melee attack" ;
+  dyn:itemActionKey "shortsword-melee" ;
+  dyn:forItem <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/weapon/shortsword> ;
+  dyn:itemActionTestType dyn:AttackRoll ;
+  dyn:attackMode "melee" ;
+  dyn:weaponRangeKind "melee" ;
+  dyn:handsRequired 1 ;
+  dyn:damageType <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/damage-type/piercing> ;
+  dyn:damageExpression "1d6" ;
+  dyn:sourceProperties "Finesse, Light" ;
+  dyn:sourceSection "Equipment: Weapons table" .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/item-action/trident-melee-1h>
+  a dyn:ItemActionOption ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons> ;
+  rdfs:label "Trident melee attack (one hand)" ;
+  dyn:itemActionKey "trident-melee-1h" ;
+  dyn:forItem <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/weapon/trident> ;
+  dyn:itemActionTestType dyn:AttackRoll ;
+  dyn:attackMode "melee" ;
+  dyn:weaponRangeKind "melee" ;
+  dyn:handsRequired 1 ;
+  dyn:damageType <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/damage-type/piercing> ;
+  dyn:damageExpression "1d8" ;
+  dyn:sourceProperties "Thrown (Range 20/60), Versatile (1d10)" ;
+  dyn:sourceSection "Equipment: Weapons table" .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/item-action/trident-melee-2h>
+  a dyn:ItemActionOption ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons> ;
+  rdfs:label "Trident melee attack (two hands)" ;
+  dyn:itemActionKey "trident-melee-2h" ;
+  dyn:forItem <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/weapon/trident> ;
+  dyn:itemActionTestType dyn:AttackRoll ;
+  dyn:attackMode "melee" ;
+  dyn:weaponRangeKind "melee" ;
+  dyn:handsRequired 2 ;
+  dyn:damageType <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/damage-type/piercing> ;
+  dyn:damageExpression "1d10" ;
+  dyn:sourceProperties "Thrown (Range 20/60), Versatile (1d10)" ;
+  dyn:sourceSection "Equipment: Weapons table" .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/item-action/trident-thrown>
+  a dyn:ItemActionOption ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons> ;
+  rdfs:label "Trident thrown attack" ;
+  dyn:itemActionKey "trident-thrown" ;
+  dyn:forItem <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/weapon/trident> ;
+  dyn:itemActionTestType dyn:AttackRoll ;
+  dyn:attackMode "thrown" ;
+  dyn:weaponRangeKind "melee" ;
+  dyn:handsRequired 1 ;
+  dyn:damageType <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/damage-type/piercing> ;
+  dyn:damageExpression "1d8" ;
+  dyn:normalRangeFeet 20 ;
+  dyn:longRangeFeet 60 ;
+  dyn:sourceProperties "Thrown (Range 20/60), Versatile (1d10)" ;
+  dyn:sourceSection "Equipment: Weapons table" .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/item-action/warhammer-melee-1h>
+  a dyn:ItemActionOption ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons> ;
+  rdfs:label "Warhammer melee attack (one hand)" ;
+  dyn:itemActionKey "warhammer-melee-1h" ;
+  dyn:forItem <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/weapon/warhammer> ;
+  dyn:itemActionTestType dyn:AttackRoll ;
+  dyn:attackMode "melee" ;
+  dyn:weaponRangeKind "melee" ;
+  dyn:handsRequired 1 ;
+  dyn:damageType <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/damage-type/bludgeoning> ;
+  dyn:damageExpression "1d8" ;
+  dyn:sourceProperties "Versatile (1d10)" ;
+  dyn:sourceSection "Equipment: Weapons table" .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/item-action/warhammer-melee-2h>
+  a dyn:ItemActionOption ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons> ;
+  rdfs:label "Warhammer melee attack (two hands)" ;
+  dyn:itemActionKey "warhammer-melee-2h" ;
+  dyn:forItem <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/weapon/warhammer> ;
+  dyn:itemActionTestType dyn:AttackRoll ;
+  dyn:attackMode "melee" ;
+  dyn:weaponRangeKind "melee" ;
+  dyn:handsRequired 2 ;
+  dyn:damageType <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/damage-type/bludgeoning> ;
+  dyn:damageExpression "1d10" ;
+  dyn:sourceProperties "Versatile (1d10)" ;
+  dyn:sourceSection "Equipment: Weapons table" .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/item-action/war-pick-melee-1h>
+  a dyn:ItemActionOption ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons> ;
+  rdfs:label "War Pick melee attack (one hand)" ;
+  dyn:itemActionKey "war-pick-melee-1h" ;
+  dyn:forItem <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/weapon/war-pick> ;
+  dyn:itemActionTestType dyn:AttackRoll ;
+  dyn:attackMode "melee" ;
+  dyn:weaponRangeKind "melee" ;
+  dyn:handsRequired 1 ;
+  dyn:damageType <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/damage-type/piercing> ;
+  dyn:damageExpression "1d8" ;
+  dyn:sourceProperties "Versatile (1d10)" ;
+  dyn:sourceSection "Equipment: Weapons table" .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/item-action/war-pick-melee-2h>
+  a dyn:ItemActionOption ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons> ;
+  rdfs:label "War Pick melee attack (two hands)" ;
+  dyn:itemActionKey "war-pick-melee-2h" ;
+  dyn:forItem <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/weapon/war-pick> ;
+  dyn:itemActionTestType dyn:AttackRoll ;
+  dyn:attackMode "melee" ;
+  dyn:weaponRangeKind "melee" ;
+  dyn:handsRequired 2 ;
+  dyn:damageType <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/damage-type/piercing> ;
+  dyn:damageExpression "1d10" ;
+  dyn:sourceProperties "Versatile (1d10)" ;
+  dyn:sourceSection "Equipment: Weapons table" .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/item-action/whip-melee>
+  a dyn:ItemActionOption ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons> ;
+  rdfs:label "Whip melee attack" ;
+  dyn:itemActionKey "whip-melee" ;
+  dyn:forItem <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/weapon/whip> ;
+  dyn:itemActionTestType dyn:AttackRoll ;
+  dyn:attackMode "melee" ;
+  dyn:weaponRangeKind "melee" ;
+  dyn:handsRequired 1 ;
+  dyn:damageType <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/damage-type/slashing> ;
+  dyn:damageExpression "1d4" ;
+  dyn:sourceProperties "Finesse, Reach" ;
+  dyn:sourceSection "Equipment: Weapons table" .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/item-action/blowgun-ranged>
+  a dyn:ItemActionOption ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons> ;
+  rdfs:label "Blowgun ranged attack" ;
+  dyn:itemActionKey "blowgun-ranged" ;
+  dyn:forItem <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/weapon/blowgun> ;
+  dyn:itemActionTestType dyn:AttackRoll ;
+  dyn:attackMode "ranged" ;
+  dyn:weaponRangeKind "ranged" ;
+  dyn:handsRequired 1 ;
+  dyn:damageType <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/damage-type/piercing> ;
+  dyn:staticDamage 1 ;
+  dyn:normalRangeFeet 25 ;
+  dyn:longRangeFeet 100 ;
+  dyn:sourceProperties "Ammunition (Range 25/100; Needle), Loading" ;
+  dyn:sourceSection "Equipment: Weapons table" .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/item-action/hand-crossbow-ranged>
+  a dyn:ItemActionOption ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons> ;
+  rdfs:label "Hand Crossbow ranged attack" ;
+  dyn:itemActionKey "hand-crossbow-ranged" ;
+  dyn:forItem <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/weapon/hand-crossbow> ;
+  dyn:itemActionTestType dyn:AttackRoll ;
+  dyn:attackMode "ranged" ;
+  dyn:weaponRangeKind "ranged" ;
+  dyn:handsRequired 1 ;
+  dyn:damageType <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/damage-type/piercing> ;
+  dyn:damageExpression "1d6" ;
+  dyn:normalRangeFeet 30 ;
+  dyn:longRangeFeet 120 ;
+  dyn:sourceProperties "Ammunition (Range 30/120; Bolt), Light, Loading" ;
+  dyn:sourceSection "Equipment: Weapons table" .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/item-action/heavy-crossbow-ranged>
+  a dyn:ItemActionOption ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons> ;
+  rdfs:label "Heavy Crossbow ranged attack" ;
+  dyn:itemActionKey "heavy-crossbow-ranged" ;
+  dyn:forItem <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/weapon/heavy-crossbow> ;
+  dyn:itemActionTestType dyn:AttackRoll ;
+  dyn:attackMode "ranged" ;
+  dyn:weaponRangeKind "ranged" ;
+  dyn:handsRequired 2 ;
+  dyn:damageType <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/damage-type/piercing> ;
+  dyn:damageExpression "1d10" ;
+  dyn:normalRangeFeet 100 ;
+  dyn:longRangeFeet 400 ;
+  dyn:sourceProperties "Ammunition (Range 100/400; Bolt), Heavy, Loading, Two-Handed" ;
+  dyn:sourceSection "Equipment: Weapons table" .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/item-action/longbow-ranged>
+  a dyn:ItemActionOption ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons> ;
+  rdfs:label "Longbow ranged attack" ;
+  dyn:itemActionKey "longbow-ranged" ;
+  dyn:forItem <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/weapon/longbow> ;
+  dyn:itemActionTestType dyn:AttackRoll ;
+  dyn:attackMode "ranged" ;
+  dyn:weaponRangeKind "ranged" ;
+  dyn:handsRequired 2 ;
+  dyn:damageType <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/damage-type/piercing> ;
+  dyn:damageExpression "1d8" ;
+  dyn:normalRangeFeet 150 ;
+  dyn:longRangeFeet 600 ;
+  dyn:sourceProperties "Ammunition (Range 150/600; Arrow), Heavy, Two-Handed" ;
+  dyn:sourceSection "Equipment: Weapons table" .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/item-action/musket-ranged>
+  a dyn:ItemActionOption ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons> ;
+  rdfs:label "Musket ranged attack" ;
+  dyn:itemActionKey "musket-ranged" ;
+  dyn:forItem <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/weapon/musket> ;
+  dyn:itemActionTestType dyn:AttackRoll ;
+  dyn:attackMode "ranged" ;
+  dyn:weaponRangeKind "ranged" ;
+  dyn:handsRequired 2 ;
+  dyn:damageType <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/damage-type/piercing> ;
+  dyn:damageExpression "1d12" ;
+  dyn:normalRangeFeet 40 ;
+  dyn:longRangeFeet 120 ;
+  dyn:sourceProperties "Ammunition (Range 40/120; Bullet), Loading, Two-Handed" ;
+  dyn:sourceSection "Equipment: Weapons table" .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/item-action/pistol-ranged>
+  a dyn:ItemActionOption ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons> ;
+  rdfs:label "Pistol ranged attack" ;
+  dyn:itemActionKey "pistol-ranged" ;
+  dyn:forItem <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/weapon/pistol> ;
+  dyn:itemActionTestType dyn:AttackRoll ;
+  dyn:attackMode "ranged" ;
+  dyn:weaponRangeKind "ranged" ;
+  dyn:handsRequired 1 ;
+  dyn:damageType <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/damage-type/piercing> ;
+  dyn:damageExpression "1d10" ;
+  dyn:normalRangeFeet 30 ;
+  dyn:longRangeFeet 90 ;
+  dyn:sourceProperties "Ammunition (Range 30/90; Bullet), Loading" ;
+  dyn:sourceSection "Equipment: Weapons table" .

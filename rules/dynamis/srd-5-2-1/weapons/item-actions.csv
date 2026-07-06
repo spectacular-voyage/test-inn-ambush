@@ -1,0 +1,52 @@
+itemActionKey,weaponKey,itemActionLabel,attackMode,sourceWeaponRangeKind,handsRequired,handsNote,testType,damageExpression,staticDamage,damageTypeKey,normalRange,longRange,sourceProperties,sourceSection
+club-melee,club,Club melee attack,melee,melee,1,,dyn:AttackRoll,1d4,,bludgeoning,,,Light,Equipment: Weapons table
+dagger-melee,dagger,Dagger melee attack,melee,melee,1,,dyn:AttackRoll,1d4,,piercing,,,"Finesse, Light, Thrown (Range 20/60)",Equipment: Weapons table
+dagger-thrown,dagger,Dagger thrown attack,thrown,melee,1,,dyn:AttackRoll,1d4,,piercing,20,60,"Finesse, Light, Thrown (Range 20/60)",Equipment: Weapons table
+greatclub-melee,greatclub,Greatclub melee attack,melee,melee,2,,dyn:AttackRoll,1d8,,bludgeoning,,,Two-Handed,Equipment: Weapons table
+handaxe-melee,handaxe,Handaxe melee attack,melee,melee,1,,dyn:AttackRoll,1d6,,slashing,,,"Light, Thrown (Range 20/60)",Equipment: Weapons table
+handaxe-thrown,handaxe,Handaxe thrown attack,thrown,melee,1,,dyn:AttackRoll,1d6,,slashing,20,60,"Light, Thrown (Range 20/60)",Equipment: Weapons table
+javelin-melee,javelin,Javelin melee attack,melee,melee,1,,dyn:AttackRoll,1d6,,piercing,,,Thrown (Range 30/120),Equipment: Weapons table
+javelin-thrown,javelin,Javelin thrown attack,thrown,melee,1,,dyn:AttackRoll,1d6,,piercing,30,120,Thrown (Range 30/120),Equipment: Weapons table
+light-hammer-melee,light-hammer,Light Hammer melee attack,melee,melee,1,,dyn:AttackRoll,1d4,,bludgeoning,,,"Light, Thrown (Range 20/60)",Equipment: Weapons table
+light-hammer-thrown,light-hammer,Light Hammer thrown attack,thrown,melee,1,,dyn:AttackRoll,1d4,,bludgeoning,20,60,"Light, Thrown (Range 20/60)",Equipment: Weapons table
+mace-melee,mace,Mace melee attack,melee,melee,1,,dyn:AttackRoll,1d6,,bludgeoning,,,,Equipment: Weapons table
+quarterstaff-melee-1h,quarterstaff,Quarterstaff melee attack (one hand),melee,melee,1,,dyn:AttackRoll,1d6,,bludgeoning,,,Versatile (1d8),Equipment: Weapons table
+quarterstaff-melee-2h,quarterstaff,Quarterstaff melee attack (two hands),melee,melee,2,,dyn:AttackRoll,1d8,,bludgeoning,,,Versatile (1d8),Equipment: Weapons table
+sickle-melee,sickle,Sickle melee attack,melee,melee,1,,dyn:AttackRoll,1d4,,slashing,,,Light,Equipment: Weapons table
+spear-melee-1h,spear,Spear melee attack (one hand),melee,melee,1,,dyn:AttackRoll,1d6,,piercing,,,"Thrown (Range 20/60), Versatile (1d8)",Equipment: Weapons table
+spear-melee-2h,spear,Spear melee attack (two hands),melee,melee,2,,dyn:AttackRoll,1d8,,piercing,,,"Thrown (Range 20/60), Versatile (1d8)",Equipment: Weapons table
+spear-thrown,spear,Spear thrown attack,thrown,melee,1,,dyn:AttackRoll,1d6,,piercing,20,60,"Thrown (Range 20/60), Versatile (1d8)",Equipment: Weapons table
+dart-thrown,dart,Dart thrown attack,thrown,ranged,1,,dyn:AttackRoll,1d4,,piercing,20,60,"Finesse, Thrown (Range 20/60)",Equipment: Weapons table
+light-crossbow-ranged,light-crossbow,Light Crossbow ranged attack,ranged,ranged,2,,dyn:AttackRoll,1d8,,piercing,80,320,"Ammunition (Range 80/320; Bolt), Loading, Two-Handed",Equipment: Weapons table
+shortbow-ranged,shortbow,Shortbow ranged attack,ranged,ranged,2,,dyn:AttackRoll,1d6,,piercing,80,320,"Ammunition (Range 80/320; Arrow), Two-Handed",Equipment: Weapons table
+sling-ranged,sling,Sling ranged attack,ranged,ranged,1,,dyn:AttackRoll,1d4,,bludgeoning,30,120,Ammunition (Range 30/120; Bullet),Equipment: Weapons table
+battleaxe-melee-1h,battleaxe,Battleaxe melee attack (one hand),melee,melee,1,,dyn:AttackRoll,1d8,,slashing,,,Versatile (1d10),Equipment: Weapons table
+battleaxe-melee-2h,battleaxe,Battleaxe melee attack (two hands),melee,melee,2,,dyn:AttackRoll,1d10,,slashing,,,Versatile (1d10),Equipment: Weapons table
+flail-melee,flail,Flail melee attack,melee,melee,1,,dyn:AttackRoll,1d8,,bludgeoning,,,,Equipment: Weapons table
+glaive-melee,glaive,Glaive melee attack,melee,melee,2,,dyn:AttackRoll,1d10,,slashing,,,"Heavy, Reach, Two-Handed",Equipment: Weapons table
+greataxe-melee,greataxe,Greataxe melee attack,melee,melee,2,,dyn:AttackRoll,1d12,,slashing,,,"Heavy, Two-Handed",Equipment: Weapons table
+greatsword-melee,greatsword,Greatsword melee attack,melee,melee,2,,dyn:AttackRoll,2d6,,slashing,,,"Heavy, Two-Handed",Equipment: Weapons table
+halberd-melee,halberd,Halberd melee attack,melee,melee,2,,dyn:AttackRoll,1d10,,slashing,,,"Heavy, Reach, Two-Handed",Equipment: Weapons table
+lance-melee,lance,Lance melee attack,melee,melee,2,unless mounted,dyn:AttackRoll,1d10,,piercing,,,"Heavy, Reach, Two-Handed (unless mounted)",Equipment: Weapons table
+longsword-melee-1h,longsword,Longsword melee attack (one hand),melee,melee,1,,dyn:AttackRoll,1d8,,slashing,,,Versatile (1d10),Equipment: Weapons table
+longsword-melee-2h,longsword,Longsword melee attack (two hands),melee,melee,2,,dyn:AttackRoll,1d10,,slashing,,,Versatile (1d10),Equipment: Weapons table
+maul-melee,maul,Maul melee attack,melee,melee,2,,dyn:AttackRoll,2d6,,bludgeoning,,,"Heavy, Two-Handed",Equipment: Weapons table
+morningstar-melee,morningstar,Morningstar melee attack,melee,melee,1,,dyn:AttackRoll,1d8,,piercing,,,,Equipment: Weapons table
+pike-melee,pike,Pike melee attack,melee,melee,2,,dyn:AttackRoll,1d10,,piercing,,,"Heavy, Reach, Two-Handed",Equipment: Weapons table
+rapier-melee,rapier,Rapier melee attack,melee,melee,1,,dyn:AttackRoll,1d8,,piercing,,,Finesse,Equipment: Weapons table
+scimitar-melee,scimitar,Scimitar melee attack,melee,melee,1,,dyn:AttackRoll,1d6,,slashing,,,"Finesse, Light",Equipment: Weapons table
+shortsword-melee,shortsword,Shortsword melee attack,melee,melee,1,,dyn:AttackRoll,1d6,,piercing,,,"Finesse, Light",Equipment: Weapons table
+trident-melee-1h,trident,Trident melee attack (one hand),melee,melee,1,,dyn:AttackRoll,1d8,,piercing,,,"Thrown (Range 20/60), Versatile (1d10)",Equipment: Weapons table
+trident-melee-2h,trident,Trident melee attack (two hands),melee,melee,2,,dyn:AttackRoll,1d10,,piercing,,,"Thrown (Range 20/60), Versatile (1d10)",Equipment: Weapons table
+trident-thrown,trident,Trident thrown attack,thrown,melee,1,,dyn:AttackRoll,1d8,,piercing,20,60,"Thrown (Range 20/60), Versatile (1d10)",Equipment: Weapons table
+warhammer-melee-1h,warhammer,Warhammer melee attack (one hand),melee,melee,1,,dyn:AttackRoll,1d8,,bludgeoning,,,Versatile (1d10),Equipment: Weapons table
+warhammer-melee-2h,warhammer,Warhammer melee attack (two hands),melee,melee,2,,dyn:AttackRoll,1d10,,bludgeoning,,,Versatile (1d10),Equipment: Weapons table
+war-pick-melee-1h,war-pick,War Pick melee attack (one hand),melee,melee,1,,dyn:AttackRoll,1d8,,piercing,,,Versatile (1d10),Equipment: Weapons table
+war-pick-melee-2h,war-pick,War Pick melee attack (two hands),melee,melee,2,,dyn:AttackRoll,1d10,,piercing,,,Versatile (1d10),Equipment: Weapons table
+whip-melee,whip,Whip melee attack,melee,melee,1,,dyn:AttackRoll,1d4,,slashing,,,"Finesse, Reach",Equipment: Weapons table
+blowgun-ranged,blowgun,Blowgun ranged attack,ranged,ranged,1,,dyn:AttackRoll,,1,piercing,25,100,"Ammunition (Range 25/100; Needle), Loading",Equipment: Weapons table
+hand-crossbow-ranged,hand-crossbow,Hand Crossbow ranged attack,ranged,ranged,1,,dyn:AttackRoll,1d6,,piercing,30,120,"Ammunition (Range 30/120; Bolt), Light, Loading",Equipment: Weapons table
+heavy-crossbow-ranged,heavy-crossbow,Heavy Crossbow ranged attack,ranged,ranged,2,,dyn:AttackRoll,1d10,,piercing,100,400,"Ammunition (Range 100/400; Bolt), Heavy, Loading, Two-Handed",Equipment: Weapons table
+longbow-ranged,longbow,Longbow ranged attack,ranged,ranged,2,,dyn:AttackRoll,1d8,,piercing,150,600,"Ammunition (Range 150/600; Arrow), Heavy, Two-Handed",Equipment: Weapons table
+musket-ranged,musket,Musket ranged attack,ranged,ranged,2,,dyn:AttackRoll,1d12,,piercing,40,120,"Ammunition (Range 40/120; Bullet), Loading, Two-Handed",Equipment: Weapons table
+pistol-ranged,pistol,Pistol ranged attack,ranged,ranged,1,,dyn:AttackRoll,1d10,,piercing,30,90,"Ammunition (Range 30/90; Bullet), Loading",Equipment: Weapons table
