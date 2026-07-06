@@ -141,12 +141,13 @@
       <details open>
         <summary>Latest historical manifestation file</summary>
         <div class="wf-source-meta">
-          <span>world/states/inn-ambush-plan-b-state/_history001/_s0006/ttl/inn-ambush-plan-b-state.ttl</span>
-          <a href="/test-inn-ambush/world/states/inn-ambush-plan-b-state/_history001/_s0006/ttl/inn-ambush-plan-b-state.ttl">Raw file</a>
+          <span>world/states/inn-ambush-plan-b-state/_history001/_s0007/ttl/inn-ambush-plan-b-state.ttl</span>
+          <a href="/test-inn-ambush/world/states/inn-ambush-plan-b-state/_history001/_s0007/ttl/inn-ambush-plan-b-state.ttl">Raw file</a>
         </div>
 <pre class="shiki github-dark-default" style="background-color:#0d1117;color:#e6edf3" tabindex="0"><code><span class="line"><span style="color:#FF7B72">@prefix dcat:</span><span style="color:#FFA657"> &#x3C;http://www.w3.org/ns/dcat#></span><span style="color:#E6EDF3"> .</span></span>
 <span class="line"><span style="color:#FF7B72">@prefix dcterms:</span><span style="color:#FFA657"> &#x3C;http://purl.org/dc/terms/></span><span style="color:#E6EDF3"> .</span></span>
 <span class="line"><span style="color:#FF7B72">@prefix dyn:</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/></span><span style="color:#E6EDF3"> .</span></span>
+<span class="line"><span style="color:#FF7B72">@prefix rdfs:</span><span style="color:#FFA657"> &#x3C;http://www.w3.org/2000/01/rdf-schema#></span><span style="color:#E6EDF3"> .</span></span>
 <span class="line"><span style="color:#FF7B72">@prefix sc:</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/stagecraft/ontology/></span><span style="color:#E6EDF3"> .</span></span>
 <span class="line"><span style="color:#FF7B72">@prefix schema:</span><span style="color:#FFA657"> &#x3C;https://schema.org/></span><span style="color:#E6EDF3"> .</span></span>
 <span class="line"><span style="color:#FF7B72">@prefix sflo:</span><span style="color:#FFA657"> &#x3C;https://semantic-flow.github.io/sflo/ontology/></span><span style="color:#E6EDF3"> .</span></span>
@@ -189,6 +190,7 @@
 <span class="line"><span style="color:#FFA657">    &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/world-time-policy/flowing-server></span><span style="color:#E6EDF3">,</span></span>
 <span class="line"><span style="color:#FFA657">    &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/world-time-axis/main></span><span style="color:#E6EDF3">,</span></span>
 <span class="line"><span style="color:#FFA657">    &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar></span><span style="color:#E6EDF3">,</span></span>
+<span class="line"><span style="color:#FFA657">    &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/frame/ambush-night></span><span style="color:#E6EDF3">,</span></span>
 <span class="line"><span style="color:#FFA657">    &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/clock-anchor/inn-clock-001></span><span style="color:#E6EDF3">,</span></span>
 <span class="line"><span style="color:#FFA657">    &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/temporal-grounding/inn-scene-plan-b-to-clock-001></span><span style="color:#E6EDF3">,</span></span>
 <span class="line"><span style="color:#FFA657">    &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/duration/inn-scene-elastic-window></span><span style="color:#E6EDF3">,</span></span>
@@ -236,7 +238,8 @@
 <span class="line"><span style="color:#FF7B72">  sc:</span><span style="color:#79C0FF">hasBranch</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/branch/plan-b></span><span style="color:#E6EDF3"> ;</span></span>
 <span class="line"><span style="color:#FF7B72">  sc:</span><span style="color:#79C0FF">hasWorldTimePolicy</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/world-time-policy/held-elastic></span><span style="color:#E6EDF3">,</span></span>
 <span class="line"><span style="color:#FFA657">    &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/world-time-policy/flowing-server></span><span style="color:#E6EDF3"> ;</span></span>
-<span class="line"><span style="color:#FF7B72">  temp:</span><span style="color:#79C0FF">hasCalendar</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar></span><span style="color:#E6EDF3"> .</span></span>
+<span class="line"><span style="color:#FF7B72">  temp:</span><span style="color:#79C0FF">hasCalendar</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar></span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  temp:</span><span style="color:#79C0FF">hasActiveFrame</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/frame/ambush-night></span><span style="color:#E6EDF3"> .</span></span>
 <span class="line"></span>
 <span class="line"><span style="color:#FFA657">&#x3C;https://spectacular-voyage.github.io/test-inn-ambush/history/main></span></span>
 <span class="line"><span style="color:#FF7B72">  a</span><span style="color:#FF7B72"> sc:</span><span style="color:#79C0FF">History</span><span style="color:#E6EDF3"> .</span></span>
@@ -264,7 +267,16 @@
 <span class="line"><span style="color:#FF7B72">  a</span><span style="color:#FF7B72"> sc:</span><span style="color:#79C0FF">WorldTimeAxis</span><span style="color:#E6EDF3"> ;</span></span>
 <span class="line"><span style="color:#FF7B72">  dcterms:</span><span style="color:#79C0FF">description</span><span style="color:#A5D6FF"> "Monotonic server-advanced world time axis for the live-world preview."</span><span style="color:#E6EDF3"> ;</span></span>
 <span class="line"><span style="color:#FF7B72">  sc:</span><span style="color:#79C0FF">inScenario</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/scenario/inn-ambush></span><span style="color:#E6EDF3"> ;</span></span>
-<span class="line"><span style="color:#FF7B72">  temp:</span><span style="color:#79C0FF">hasCalendar</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar></span><span style="color:#E6EDF3"> .</span></span>
+<span class="line"><span style="color:#FF7B72">  temp:</span><span style="color:#79C0FF">hasCalendar</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar></span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  temp:</span><span style="color:#79C0FF">hasActiveFrame</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/frame/ambush-night></span><span style="color:#E6EDF3"> .</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FFA657">&#x3C;https://spectacular-voyage.github.io/test-inn-ambush/frame/ambush-night></span></span>
+<span class="line"><span style="color:#FF7B72">  a</span><span style="color:#FF7B72"> temp:</span><span style="color:#79C0FF">Frame</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dcterms:</span><span style="color:#79C0FF">title</span><span style="color:#A5D6FF"> "Ambush night frame"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dcterms:</span><span style="color:#79C0FF">description</span><span style="color:#A5D6FF"> "Narrative frame for prose-clock rendering during the inn ambush night."</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  rdfs:</span><span style="color:#79C0FF">label</span><span style="color:#A5D6FF"> "ambush night"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  temp:</span><span style="color:#79C0FF">frameAnchorOffsetSeconds</span><span style="color:#79C0FF"> 900.0</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  temp:</span><span style="color:#79C0FF">frameCloseOffsetSeconds</span><span style="color:#79C0FF"> 11820.0</span><span style="color:#E6EDF3"> .</span></span>
 <span class="line"></span>
 <span class="line"><span style="color:#FFA657">&#x3C;https://spectacular-voyage.github.io/test-inn-ambush/world-time-policy/flowing-server></span></span>
 <span class="line"><span style="color:#FF7B72">  a</span><span style="color:#FF7B72"> sc:</span><span style="color:#79C0FF">WorldTimePolicy</span><span style="color:#E6EDF3">, </span><span style="color:#FF7B72">sc:</span><span style="color:#79C0FF">FlowingWorldTime</span><span style="color:#E6EDF3"> ;</span></span>
@@ -556,6 +568,15 @@
 <span class="line"><span style="color:#FFA657">&#x3C;https://spectacular-voyage.github.io/test-inn-ambush/relator/visibility/calendar/package/players-current></span></span>
 <span class="line"><span style="color:#FF7B72">  a</span><span style="color:#FF7B72"> sc:</span><span style="color:#79C0FF">TemporalRelator</span><span style="color:#E6EDF3"> ;</span></span>
 <span class="line"><span style="color:#FF7B72">  sc:</span><span style="color:#79C0FF">subject</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar></span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sc:</span><span style="color:#79C0FF">predicate</span><span style="color:#FF7B72"> sc:</span><span style="color:#79C0FF">visibleTo</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sc:</span><span style="color:#79C0FF">object</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/participant/alice></span><span style="color:#E6EDF3">,</span></span>
+<span class="line"><span style="color:#FFA657">    &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/participant/bob></span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sc:</span><span style="color:#79C0FF">acceptedFrom</span><span style="color:#A5D6FF"> "2026-06-29T13:35:00Z"</span><span style="color:#E6EDF3">^^</span><span style="color:#FF7B72">xsd:</span><span style="color:#79C0FF">dateTime</span><span style="color:#E6EDF3"> .</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FFA657">&#x3C;https://spectacular-voyage.github.io/test-inn-ambush/relator/visibility/world-time/frame/players-current></span></span>
+<span class="line"><span style="color:#FF7B72">  a</span><span style="color:#FF7B72"> sc:</span><span style="color:#79C0FF">TemporalRelator</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  sc:</span><span style="color:#79C0FF">subject</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/world-time-axis/main></span><span style="color:#E6EDF3">,</span></span>
+<span class="line"><span style="color:#FFA657">    &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/frame/ambush-night></span><span style="color:#E6EDF3"> ;</span></span>
 <span class="line"><span style="color:#FF7B72">  sc:</span><span style="color:#79C0FF">predicate</span><span style="color:#FF7B72"> sc:</span><span style="color:#79C0FF">visibleTo</span><span style="color:#E6EDF3"> ;</span></span>
 <span class="line"><span style="color:#FF7B72">  sc:</span><span style="color:#79C0FF">object</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/participant/alice></span><span style="color:#E6EDF3">,</span></span>
 <span class="line"><span style="color:#FFA657">    &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/participant/bob></span><span style="color:#E6EDF3"> ;</span></span>
@@ -1042,6 +1063,15 @@
                 </div>
               </details>
             </details>
+            <details class="wf-history-node wf-history-node--state" open>
+              <summary class="wf-history-node-header"><a href="/test-inn-ambush/world/states/inn-ambush-plan-b-state/_history001/_s0007">_s0007</a></summary>
+              <details class="wf-history-node wf-history-node--manifestation" open>
+                <summary class="wf-history-node-header"><a href="/test-inn-ambush/world/states/inn-ambush-plan-b-state/_history001/_s0007/ttl">ttl</a></summary>
+                <div class="wf-history-node wf-history-node--file">
+                  <div class="wf-history-node-header"><a href="/test-inn-ambush/world/states/inn-ambush-plan-b-state/_history001/_s0007/ttl/inn-ambush-plan-b-state.ttl" class="wf-history-file-iri">https://spectacular-voyage.github.io/test-inn-ambush/world/states/inn-ambush-plan-b-state/_history001/_s0007/ttl/inn-ambush-plan-b-state.ttl</a></div>
+                </div>
+              </details>
+            </details>
           </details>
         </div>
       </details>
@@ -1050,7 +1080,7 @@
     </article>
   </main>
   <footer class="wf-generated">
-    Generated on <span class="wf-term wf-date-tip" tabindex="0" title="2026-07-06T02:10:18.336Z" data-tooltip="2026-07-06T02:10:18.336Z">July 6, 2026</span> by <a href="https://github.com/semantic-flow/weave/">Weave</a>
+    Generated on <span class="wf-term wf-date-tip" tabindex="0" title="2026-07-06T16:41:00.000Z" data-tooltip="2026-07-06T16:41:00.000Z">July 6, 2026</span> by <a href="https://github.com/semantic-flow/weave/">Weave</a>
   </footer>
 </body>
 </html>
