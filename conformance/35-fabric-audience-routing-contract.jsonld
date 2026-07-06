@@ -1,0 +1,81 @@
+{
+  "@context": {
+    "@vocab": "https://spectacular-voyage.github.io/accord/ontology/",
+    "dcterms": "http://purl.org/dc/terms/",
+    "id": "@id",
+    "type": "@type",
+    "changeType": {
+      "@type": "@vocab"
+    },
+    "compareMode": {
+      "@type": "@vocab"
+    },
+    "targetsFileExpectation": {
+      "@type": "@id"
+    },
+    "locatorKind": {
+      "@type": "@vocab"
+    }
+  },
+  "type": "Manifest",
+  "id": "urn:accord:stagecraft:test-inn-ambush:35-fabric-audience-routing-contract",
+  "dcterms:title": "Inn Ambush 35 fabric audience routing contract",
+  "hasCase": [
+    {
+      "type": "TransitionCase",
+      "id": "#fabric-audience-routing-contract",
+      "fixtureRepo": "github.com/spectacular-voyage/test-inn-ambush",
+      "operationId": "stagecraft.fixture.addFabricAudienceRoutingEventKind",
+      "fromRef": "6ee33cce5ebe158571f4931922ada03cca138f14",
+      "toRef": "a.35-fabric-audience-routing-contract",
+      "fromState": {
+        "type": "StateLocator",
+        "locatorKind": "gitRefState",
+        "ref": "6ee33cce5ebe158571f4931922ada03cca138f14"
+      },
+      "toState": {
+        "type": "StateLocator",
+        "locatorKind": "gitRefState",
+        "ref": "a.35-fabric-audience-routing-contract"
+      },
+      "hasFileExpectation": [
+        {
+          "id": "#contract-context",
+          "type": "FileExpectation",
+          "path": "projections/contracts/inn-ambush-contract.context.jsonld",
+          "changeType": "updated",
+          "compareMode": "json"
+        },
+        {
+          "id": "#contract-shapes",
+          "type": "FileExpectation",
+          "path": "projections/contracts/inn-ambush-contract.shapes.ttl",
+          "changeType": "updated",
+          "compareMode": "rdfCanonical"
+        },
+        {
+          "id": "#projection-notification",
+          "type": "FileExpectation",
+          "path": "projections/notifications/plan-b-projection-ready/plan-b-projection-ready.json",
+          "changeType": "updated",
+          "compareMode": "json"
+        }
+      ],
+      "hasRdfExpectation": [
+        {
+          "id": "#contract-shapes-rdf",
+          "type": "RdfExpectation",
+          "targetsFileExpectation": "#contract-shapes",
+          "hasAskAssertion": [
+            {
+              "id": "#ask-event-kind-envelope-shape",
+              "type": "SparqlAskAssertion",
+              "query": "ASK { <https://spectacular-voyage.github.io/stagecraft/shacl/ProjectionNotificationEnvelopeShape> a <http://www.w3.org/ns/shacl#NodeShape> ; <http://www.w3.org/ns/shacl#targetSubjectsOf> <https://spectacular-voyage.github.io/stagecraft/ontology/eventKind> ; <http://www.w3.org/ns/shacl#property> ?eventKindProperty . ?eventKindProperty <http://www.w3.org/ns/shacl#path> <https://spectacular-voyage.github.io/stagecraft/ontology/eventKind> ; <http://www.w3.org/ns/shacl#minCount> \"1\"^^<http://www.w3.org/2001/XMLSchema#integer> ; <http://www.w3.org/ns/shacl#maxCount> \"1\"^^<http://www.w3.org/2001/XMLSchema#integer> ; <http://www.w3.org/ns/shacl#in> ?allowedKinds . ?allowedKinds <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> \"projection-ready\" . }",
+              "expectedBoolean": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "@context": {
+    "@vocab": "https://spectacular-voyage.github.io/accord/ontology/",
+    "dcterms": "http://purl.org/dc/terms/",
+    "id": "@id",
+    "type": "@type",
+    "changeType": {
+      "@type": "@vocab"
+    },
+    "compareMode": {
+      "@type": "@vocab"
+    },
+    "targetsFileExpectation": {
+      "@type": "@id"
+    },
+    "locatorKind": {
+      "@type": "@vocab"
+    }
+  },
+  "type": "Manifest",
+  "id": "urn:accord:stagecraft:test-inn-ambush:36-fabric-audience-routing-contract-woven",
+  "dcterms:title": "Inn Ambush 36 fabric audience routing contract woven",
+  "hasCase": [
+    {
+      "type": "TransitionCase",
+      "id": "#weave-fabric-audience-routing-contract",
+      "fixtureRepo": "github.com/spectacular-voyage/test-inn-ambush",
+      "operationId": "stagecraft.fixture.weaveFabricAudienceRoutingContractNoop",
+      "fromRef": "a.35-fabric-audience-routing-contract",
+      "toRef": "a.36-fabric-audience-routing-contract-woven",
+      "fromState": {
+        "type": "StateLocator",
+        "locatorKind": "gitRefState",
+        "ref": "a.35-fabric-audience-routing-contract"
+      },
+      "toState": {
+        "type": "StateLocator",
+        "locatorKind": "gitRefState",
+        "ref": "a.36-fabric-audience-routing-contract-woven"
+      }
+    }
+  ]
+}
