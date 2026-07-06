@@ -1,0 +1,81 @@
+{
+  "@context": {
+    "@vocab": "https://spectacular-voyage.github.io/accord/ontology/",
+    "dcterms": "http://purl.org/dc/terms/",
+    "id": "@id",
+    "type": "@type",
+    "changeType": {
+      "@type": "@vocab"
+    },
+    "compareMode": {
+      "@type": "@vocab"
+    },
+    "targetsFileExpectation": {
+      "@type": "@id"
+    },
+    "locatorKind": {
+      "@type": "@vocab"
+    }
+  },
+  "type": "Manifest",
+  "id": "urn:accord:stagecraft:test-inn-ambush:31-d20-roll-evidence-commit-provenance",
+  "dcterms:title": "Inn Ambush 31 D20 roll evidence commit provenance",
+  "hasCase": [
+    {
+      "type": "TransitionCase",
+      "id": "#d20-roll-evidence-commit-provenance",
+      "fixtureRepo": "github.com/spectacular-voyage/test-inn-ambush",
+      "operationId": "stagecraft.fixture.addD20RollEvidenceCommitProvenance",
+      "fromRef": "a500aa39153d970f21f1073a28b6d8443627222d",
+      "toRef": "a.31-d20-roll-evidence-commit-provenance",
+      "fromState": {
+        "type": "StateLocator",
+        "locatorKind": "gitRefState",
+        "ref": "a500aa39153d970f21f1073a28b6d8443627222d"
+      },
+      "toState": {
+        "type": "StateLocator",
+        "locatorKind": "gitRefState",
+        "ref": "a.31-d20-roll-evidence-commit-provenance"
+      },
+      "hasFileExpectation": [
+        {
+          "id": "#authority-journal",
+          "type": "FileExpectation",
+          "path": "authority/journals/plan-b/plan-b.ttl",
+          "changeType": "updated",
+          "compareMode": "rdfCanonical"
+        },
+        {
+          "id": "#manifest",
+          "type": "FileExpectation",
+          "path": "conformance/31-d20-roll-evidence-commit-provenance.jsonld",
+          "changeType": "added",
+          "compareMode": "json"
+        },
+        {
+          "id": "#scenario-index",
+          "type": "FileExpectation",
+          "path": "conformance/scenario-index.jsonld",
+          "changeType": "updated",
+          "compareMode": "json"
+        }
+      ],
+      "hasRdfExpectation": [
+        {
+          "id": "#authority-journal-rdf",
+          "type": "RdfExpectation",
+          "targetsFileExpectation": "#authority-journal",
+          "hasAskAssertion": [
+            {
+              "id": "#ask-d20-chain-has-commit-provenance",
+              "type": "SparqlAskAssertion",
+              "query": "ASK { <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/d20-test-warrant/perception-check-001> <https://spectacular-voyage.github.io/stagecraft/ontology/committedEvent> <https://spectacular-voyage.github.io/test-inn-ambush/committed-event/d20-test-warrant/perception-check-001> ; <https://spectacular-voyage.github.io/stagecraft/ontology/hasCommitCertificate> <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/commit-certificate/d20-test-warrant/perception-check-001> . <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/d20-roll/perception-check-001> <https://spectacular-voyage.github.io/stagecraft/ontology/committedEvent> <https://spectacular-voyage.github.io/test-inn-ambush/committed-event/d20-roll/perception-check-001> ; <https://spectacular-voyage.github.io/stagecraft/ontology/hasCommitCertificate> <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/commit-certificate/d20-roll/perception-check-001> . <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/d20-test-outcome/perception-check-001> <https://spectacular-voyage.github.io/stagecraft/ontology/committedEvent> <https://spectacular-voyage.github.io/test-inn-ambush/committed-event/d20-test-outcome/perception-check-001> ; <https://spectacular-voyage.github.io/stagecraft/ontology/hasCommitCertificate> <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/commit-certificate/d20-test-outcome/perception-check-001> . <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/d20-test-consequence/perception-check-001> <https://spectacular-voyage.github.io/stagecraft/ontology/committedEvent> <https://spectacular-voyage.github.io/test-inn-ambush/committed-event/d20-test-consequence/perception-check-001> ; <https://spectacular-voyage.github.io/stagecraft/ontology/hasCommitCertificate> <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/commit-certificate/d20-test-consequence/perception-check-001> . <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/commit-certificate/d20-test-warrant/perception-check-001> a <https://spectacular-voyage.github.io/stagecraft/ontology/CommitCertificate> ; <https://spectacular-voyage.github.io/stagecraft/ontology/idempotencyKey> \"fixture-d20-perception-check-001:warrant\" ; <https://spectacular-voyage.github.io/stagecraft/ontology/committedEvent> <https://spectacular-voyage.github.io/test-inn-ambush/committed-event/d20-test-warrant/perception-check-001> . <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/commit-certificate/d20-roll/perception-check-001> a <https://spectacular-voyage.github.io/stagecraft/ontology/CommitCertificate> ; <https://spectacular-voyage.github.io/stagecraft/ontology/idempotencyKey> \"fixture-d20-perception-check-001:roll\" ; <https://spectacular-voyage.github.io/stagecraft/ontology/committedEvent> <https://spectacular-voyage.github.io/test-inn-ambush/committed-event/d20-roll/perception-check-001> . <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/commit-certificate/d20-test-outcome/perception-check-001> a <https://spectacular-voyage.github.io/stagecraft/ontology/CommitCertificate> ; <https://spectacular-voyage.github.io/stagecraft/ontology/idempotencyKey> \"fixture-d20-perception-check-001:outcome\" ; <https://spectacular-voyage.github.io/stagecraft/ontology/committedEvent> <https://spectacular-voyage.github.io/test-inn-ambush/committed-event/d20-test-outcome/perception-check-001> . <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/commit-certificate/d20-test-consequence/perception-check-001> a <https://spectacular-voyage.github.io/stagecraft/ontology/CommitCertificate> ; <https://spectacular-voyage.github.io/stagecraft/ontology/idempotencyKey> \"fixture-d20-perception-check-001\" ; <https://spectacular-voyage.github.io/stagecraft/ontology/committedEvent> <https://spectacular-voyage.github.io/test-inn-ambush/committed-event/d20-test-consequence/perception-check-001> . <https://spectacular-voyage.github.io/test-inn-ambush/committed-event/d20-test-warrant/perception-check-001> a <https://spectacular-voyage.github.io/stagecraft/ontology/CommittedEvent> ; <https://spectacular-voyage.github.io/stagecraft/ontology/authorizedByAuthorityRecord> <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/d20-test-warrant/perception-check-001> . <https://spectacular-voyage.github.io/test-inn-ambush/committed-event/d20-roll/perception-check-001> a <https://spectacular-voyage.github.io/stagecraft/ontology/CommittedEvent> ; <https://spectacular-voyage.github.io/stagecraft/ontology/authorizedByAuthorityRecord> <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/d20-roll/perception-check-001> . <https://spectacular-voyage.github.io/test-inn-ambush/committed-event/d20-test-outcome/perception-check-001> a <https://spectacular-voyage.github.io/stagecraft/ontology/CommittedEvent> ; <https://spectacular-voyage.github.io/stagecraft/ontology/authorizedByAuthorityRecord> <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/d20-test-outcome/perception-check-001> . <https://spectacular-voyage.github.io/test-inn-ambush/committed-event/d20-test-consequence/perception-check-001> a <https://spectacular-voyage.github.io/stagecraft/ontology/CommittedEvent> ; <https://spectacular-voyage.github.io/stagecraft/ontology/authorizedByAuthorityRecord> <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/d20-test-consequence/perception-check-001> . FILTER NOT EXISTS { <https://spectacular-voyage.github.io/test-inn-ambush/committed-event/d20-test-warrant/perception-check-001> <http://purl.org/dc/terms/created> ?warrantEventCreated . } FILTER NOT EXISTS { <https://spectacular-voyage.github.io/test-inn-ambush/committed-event/d20-roll/perception-check-001> <http://purl.org/dc/terms/created> ?rollEventCreated . } FILTER NOT EXISTS { <https://spectacular-voyage.github.io/test-inn-ambush/committed-event/d20-test-outcome/perception-check-001> <http://purl.org/dc/terms/created> ?outcomeEventCreated . } FILTER NOT EXISTS { <https://spectacular-voyage.github.io/test-inn-ambush/committed-event/d20-test-consequence/perception-check-001> <http://purl.org/dc/terms/created> ?consequenceEventCreated . } }",
+              "expectedBoolean": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

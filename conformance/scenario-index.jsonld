@@ -696,6 +696,27 @@
           }
         }
       ]
+    },
+    {
+      "id": "#31-d20-roll-evidence-commit-provenance",
+      "type": "ScenarioStep",
+      "manifestPath": "31-d20-roll-evidence-commit-provenance.jsonld",
+      "hasLaneBinding": [
+        {
+          "type": "LaneStateBinding",
+          "lane": "#fixture-lane",
+          "fromLaneState": {
+            "type": "StateLocator",
+            "locatorKind": "gitRefState",
+            "ref": "a500aa39153d970f21f1073a28b6d8443627222d"
+          },
+          "toLaneState": {
+            "type": "StateLocator",
+            "locatorKind": "gitRefState",
+            "ref": "a.31-d20-roll-evidence-commit-provenance"
+          }
+        }
+      ]
     }
   ]
 }

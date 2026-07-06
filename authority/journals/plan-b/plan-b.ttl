@@ -257,6 +257,22 @@
   sc:inHistory <https://spectacular-voyage.github.io/test-inn-ambush/history/main> ;
   sc:inTemporalScope <https://spectacular-voyage.github.io/test-inn-ambush/temporal-scope/inn-scene> .
 
+<https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/commit-certificate/d20-test-warrant/perception-check-001>
+  a sc:CommitCertificate ;
+  dcterms:created "2026-06-29T13:40:00Z"^^xsd:dateTime ;
+  sc:committedBy <https://spectacular-voyage.github.io/test-inn-ambush/gm/alex> ;
+  sc:committedEvent <https://spectacular-voyage.github.io/test-inn-ambush/committed-event/d20-test-warrant/perception-check-001> ;
+  sc:basedOnHistory <https://spectacular-voyage.github.io/test-inn-ambush/history/main> ;
+  sc:idempotencyKey "fixture-d20-perception-check-001:warrant" .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/committed-event/d20-test-warrant/perception-check-001>
+  a sc:CommittedEvent ;
+  sc:authorizedByAuthorityRecord <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/d20-test-warrant/perception-check-001> ;
+  sc:basedOnHistory <https://spectacular-voyage.github.io/test-inn-ambush/history/main> ;
+  sc:branchContext <https://spectacular-voyage.github.io/test-inn-ambush/branch/plan-b> ;
+  sc:hasSceneLocalTime <https://spectacular-voyage.github.io/test-inn-ambush/scene-local-time/inn-scene-plan-b> ;
+  sc:inTemporalScope <https://spectacular-voyage.github.io/test-inn-ambush/temporal-scope/inn-scene> .
+
 <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/d20-test-warrant/perception-check-001>
   a dyn:D20TestWarrant ;
   dcterms:created "2026-06-29T13:40:00Z"^^xsd:dateTime ;
@@ -265,9 +281,27 @@
     dyn:Perception ;
   sc:basedOnHistory <https://spectacular-voyage.github.io/test-inn-ambush/history/main> ;
   sc:committedBy <https://spectacular-voyage.github.io/test-inn-ambush/gm/alex> ;
+  sc:committedEvent <https://spectacular-voyage.github.io/test-inn-ambush/committed-event/d20-test-warrant/perception-check-001> ;
+  sc:hasCommitCertificate <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/commit-certificate/d20-test-warrant/perception-check-001> ;
   dyn:warrantedActor <https://spectacular-voyage.github.io/test-inn-ambush/actant/elara> ;
   dyn:warrantedTestType dyn:AbilityCheck ;
   dyn:targetNumber 15 .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/commit-certificate/d20-roll/perception-check-001>
+  a sc:CommitCertificate ;
+  dcterms:created "2026-06-29T13:40:05Z"^^xsd:dateTime ;
+  sc:committedBy <https://spectacular-voyage.github.io/test-inn-ambush/authority-policy/d20-generated-rolls> ;
+  sc:committedEvent <https://spectacular-voyage.github.io/test-inn-ambush/committed-event/d20-roll/perception-check-001> ;
+  sc:basedOnHistory <https://spectacular-voyage.github.io/test-inn-ambush/history/main> ;
+  sc:idempotencyKey "fixture-d20-perception-check-001:roll" .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/committed-event/d20-roll/perception-check-001>
+  a sc:CommittedEvent ;
+  sc:authorizedByAuthorityRecord <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/d20-roll/perception-check-001> ;
+  sc:basedOnHistory <https://spectacular-voyage.github.io/test-inn-ambush/history/main> ;
+  sc:branchContext <https://spectacular-voyage.github.io/test-inn-ambush/branch/plan-b> ;
+  sc:hasSceneLocalTime <https://spectacular-voyage.github.io/test-inn-ambush/scene-local-time/inn-scene-plan-b> ;
+  sc:inTemporalScope <https://spectacular-voyage.github.io/test-inn-ambush/temporal-scope/inn-scene> .
 
 <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/d20-roll/perception-check-001>
   a dyn:D20RollEvidence ;
@@ -276,6 +310,8 @@
     dyn:Perception ;
   sc:basedOnHistory <https://spectacular-voyage.github.io/test-inn-ambush/history/main> ;
   sc:committedBy <https://spectacular-voyage.github.io/test-inn-ambush/authority-policy/d20-generated-rolls> ;
+  sc:committedEvent <https://spectacular-voyage.github.io/test-inn-ambush/committed-event/d20-roll/perception-check-001> ;
+  sc:hasCommitCertificate <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/commit-certificate/d20-roll/perception-check-001> ;
   dyn:diceExpression "1d20+3+2" ;
   dyn:provenanceKind "generated" ;
   dyn:rawDieFace 8 ;
@@ -296,11 +332,29 @@
   dyn:modifierSource <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/d20-test/skill-rule/perception> ;
   dyn:modifierValue 2 .
 
+<https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/commit-certificate/d20-test-outcome/perception-check-001>
+  a sc:CommitCertificate ;
+  dcterms:created "2026-06-29T13:40:06Z"^^xsd:dateTime ;
+  sc:committedBy <https://spectacular-voyage.github.io/test-inn-ambush/gm/alex> ;
+  sc:committedEvent <https://spectacular-voyage.github.io/test-inn-ambush/committed-event/d20-test-outcome/perception-check-001> ;
+  sc:basedOnHistory <https://spectacular-voyage.github.io/test-inn-ambush/history/main> ;
+  sc:idempotencyKey "fixture-d20-perception-check-001:outcome" .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/committed-event/d20-test-outcome/perception-check-001>
+  a sc:CommittedEvent ;
+  sc:authorizedByAuthorityRecord <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/d20-test-outcome/perception-check-001> ;
+  sc:basedOnHistory <https://spectacular-voyage.github.io/test-inn-ambush/history/main> ;
+  sc:branchContext <https://spectacular-voyage.github.io/test-inn-ambush/branch/plan-b> ;
+  sc:hasSceneLocalTime <https://spectacular-voyage.github.io/test-inn-ambush/scene-local-time/inn-scene-plan-b> ;
+  sc:inTemporalScope <https://spectacular-voyage.github.io/test-inn-ambush/temporal-scope/inn-scene> .
+
 <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/d20-test-outcome/perception-check-001>
   a dyn:D20TestOutcome ;
   dcterms:created "2026-06-29T13:40:06Z"^^xsd:dateTime ;
   sc:basedOnHistory <https://spectacular-voyage.github.io/test-inn-ambush/history/main> ;
   sc:committedBy <https://spectacular-voyage.github.io/test-inn-ambush/gm/alex> ;
+  sc:committedEvent <https://spectacular-voyage.github.io/test-inn-ambush/committed-event/d20-test-outcome/perception-check-001> ;
+  sc:hasCommitCertificate <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/commit-certificate/d20-test-outcome/perception-check-001> ;
   dyn:adjudicatedResult "success" ;
   dyn:adjudicationNote "GM override: Elara spots the scuffed threshold because the earlier door-bar plan put her attention on the entryway." ;
   dyn:mechanicalResult "failure" ;
@@ -308,10 +362,28 @@
   dyn:rollEvidence <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/d20-roll/perception-check-001> ;
   dyn:targetNumber 15 .
 
+<https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/commit-certificate/d20-test-consequence/perception-check-001>
+  a sc:CommitCertificate ;
+  dcterms:created "2026-06-29T13:40:07Z"^^xsd:dateTime ;
+  sc:committedBy <https://spectacular-voyage.github.io/test-inn-ambush/gm/alex> ;
+  sc:committedEvent <https://spectacular-voyage.github.io/test-inn-ambush/committed-event/d20-test-consequence/perception-check-001> ;
+  sc:basedOnHistory <https://spectacular-voyage.github.io/test-inn-ambush/history/main> ;
+  sc:idempotencyKey "fixture-d20-perception-check-001" .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/committed-event/d20-test-consequence/perception-check-001>
+  a sc:CommittedEvent ;
+  sc:authorizedByAuthorityRecord <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/d20-test-consequence/perception-check-001> ;
+  sc:basedOnHistory <https://spectacular-voyage.github.io/test-inn-ambush/history/main> ;
+  sc:branchContext <https://spectacular-voyage.github.io/test-inn-ambush/branch/plan-b> ;
+  sc:hasSceneLocalTime <https://spectacular-voyage.github.io/test-inn-ambush/scene-local-time/inn-scene-plan-b> ;
+  sc:inTemporalScope <https://spectacular-voyage.github.io/test-inn-ambush/temporal-scope/inn-scene> .
+
 <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/d20-test-consequence/perception-check-001>
   a dyn:D20TestConsequence ;
   dcterms:created "2026-06-29T13:40:07Z"^^xsd:dateTime ;
   dcterms:description "Elara notices scuffed dust at the threshold and can warn the table before anyone steps through." ;
   sc:basedOnHistory <https://spectacular-voyage.github.io/test-inn-ambush/history/main> ;
   sc:committedBy <https://spectacular-voyage.github.io/test-inn-ambush/gm/alex> ;
+  sc:committedEvent <https://spectacular-voyage.github.io/test-inn-ambush/committed-event/d20-test-consequence/perception-check-001> ;
+  sc:hasCommitCertificate <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/commit-certificate/d20-test-consequence/perception-check-001> ;
   dyn:consequenceOfOutcome <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/d20-test-outcome/perception-check-001> .
