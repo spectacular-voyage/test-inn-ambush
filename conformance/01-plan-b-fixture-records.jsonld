@@ -57,13 +57,15 @@
           "id": "#authority-operation-request",
           "type": "FileExpectation",
           "path": "authority/operations/authority-operation-request-plan-b-commit/authority-operation-request-plan-b-commit.json",
-          "changeType": "added"
+          "changeType": "added",
+          "compareMode": "text"
         },
         {
           "id": "#projection-context",
           "type": "FileExpectation",
           "path": "projections/contracts/inn-ambush-contract.context.jsonld",
-          "changeType": "added"
+          "changeType": "added",
+          "compareMode": "text"
         },
         {
           "id": "#projection-shapes",
@@ -76,19 +78,22 @@
           "id": "#projection-ready",
           "type": "FileExpectation",
           "path": "projections/notifications/plan-b-projection-ready/plan-b-projection-ready.json",
-          "changeType": "added"
+          "changeType": "added",
+          "compareMode": "text"
         },
         {
           "id": "#projection-request-alice",
           "type": "FileExpectation",
           "path": "projections/requests/participant-projection-request-alice/participant-projection-request-alice.json",
-          "changeType": "added"
+          "changeType": "added",
+          "compareMode": "text"
         },
         {
           "id": "#chat-contribution",
           "type": "FileExpectation",
           "path": "sessions/contributions/chat-contribution-plan-b-suggestion/chat-contribution-plan-b-suggestion.json",
-          "changeType": "added"
+          "changeType": "added",
+          "compareMode": "text"
         },
         {
           "id": "#world-state-plan-b",

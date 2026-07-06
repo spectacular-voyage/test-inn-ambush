@@ -50,13 +50,15 @@
           "id": "#authority-journals-plan-b-history001-s0001-index",
           "type": "FileExpectation",
           "path": "authority/journals/plan-b/_history001/_s0001/index.html",
-          "changeType": "added"
+          "changeType": "added",
+          "compareMode": "text"
         },
         {
           "id": "#authority-journals-plan-b-history001-s0001-ttl-index",
           "type": "FileExpectation",
           "path": "authority/journals/plan-b/_history001/_s0001/ttl/index.html",
-          "changeType": "added"
+          "changeType": "added",
+          "compareMode": "text"
         },
         {
           "id": "#authority-journal-history-payload",
@@ -69,13 +71,15 @@
           "id": "#authority-journals-plan-b-history001-index",
           "type": "FileExpectation",
           "path": "authority/journals/plan-b/_history001/index.html",
-          "changeType": "added"
+          "changeType": "added",
+          "compareMode": "text"
         },
         {
           "id": "#authority-journals-plan-b-knop-inventory-index",
           "type": "FileExpectation",
           "path": "authority/journals/plan-b/_knop/_inventory/index.html",
-          "changeType": "added"
+          "changeType": "added",
+          "compareMode": "text"
         },
         {
           "id": "#authority-journal-knop-inventory",
@@ -88,7 +92,8 @@
           "id": "#authority-journals-plan-b-knop-meta-index",
           "type": "FileExpectation",
           "path": "authority/journals/plan-b/_knop/_meta/index.html",
-          "changeType": "added"
+          "changeType": "added",
+          "compareMode": "text"
         },
         {
           "id": "#authority-journals-plan-b-knop-meta-meta",
@@ -101,43 +106,50 @@
           "id": "#authority-journals-plan-b-knop-index",
           "type": "FileExpectation",
           "path": "authority/journals/plan-b/_knop/index.html",
-          "changeType": "added"
+          "changeType": "added",
+          "compareMode": "text"
         },
         {
           "id": "#authority-journals-plan-b-index",
           "type": "FileExpectation",
           "path": "authority/journals/plan-b/index.html",
-          "changeType": "added"
+          "changeType": "added",
+          "compareMode": "text"
         },
         {
           "id": "#authority-operations-authority-operation-request-plan-b-commit-history001-s0001-index",
           "type": "FileExpectation",
           "path": "authority/operations/authority-operation-request-plan-b-commit/_history001/_s0001/index.html",
-          "changeType": "added"
+          "changeType": "added",
+          "compareMode": "text"
         },
         {
           "id": "#authority-operations-authority-operation-request-plan-b-commit-history001-s0001-json-authority-operation-request-plan-b-commit",
           "type": "FileExpectation",
           "path": "authority/operations/authority-operation-request-plan-b-commit/_history001/_s0001/json/authority-operation-request-plan-b-commit.json",
-          "changeType": "added"
+          "changeType": "added",
+          "compareMode": "text"
         },
         {
           "id": "#authority-operations-authority-operation-request-plan-b-commit-history001-s0001-json-index",
           "type": "FileExpectation",
           "path": "authority/operations/authority-operation-request-plan-b-commit/_history001/_s0001/json/index.html",
-          "changeType": "added"
+          "changeType": "added",
+          "compareMode": "text"
         },
         {
           "id": "#authority-operations-authority-operation-request-plan-b-commit-history001-index",
           "type": "FileExpectation",
           "path": "authority/operations/authority-operation-request-plan-b-commit/_history001/index.html",
-          "changeType": "added"
+          "changeType": "added",
+          "compareMode": "text"
         },
         {
           "id": "#authority-operations-authority-operation-request-plan-b-commit-knop-inventory-index",
           "type": "FileExpectation",
           "path": "authority/operations/authority-operation-request-plan-b-commit/_knop/_inventory/index.html",
-          "changeType": "added"
+          "changeType": "added",
+          "compareMode": "text"
         },
         {
           "id": "#authority-operations-authority-operation-request-plan-b-commit-knop-inventory-inventory",
@@ -150,7 +162,8 @@
           "id": "#authority-operations-authority-operation-request-plan-b-commit-knop-meta-index",
           "type": "FileExpectation",
           "path": "authority/operations/authority-operation-request-plan-b-commit/_knop/_meta/index.html",
-          "changeType": "added"
+          "changeType": "added",
+          "compareMode": "text"
         },
         {
           "id": "#authority-operations-authority-operation-request-plan-b-commit-knop-meta-meta",
@@ -163,43 +176,50 @@
           "id": "#authority-operations-authority-operation-request-plan-b-commit-knop-index",
           "type": "FileExpectation",
           "path": "authority/operations/authority-operation-request-plan-b-commit/_knop/index.html",
-          "changeType": "added"
+          "changeType": "added",
+          "compareMode": "text"
         },
         {
           "id": "#authority-operations-authority-operation-request-plan-b-commit-index",
           "type": "FileExpectation",
           "path": "authority/operations/authority-operation-request-plan-b-commit/index.html",
-          "changeType": "added"
+          "changeType": "added",
+          "compareMode": "text"
         },
         {
           "id": "#projections-contracts-inn-ambush-contract-context-history001-s0001-index",
           "type": "FileExpectation",
           "path": "projections/contracts/inn-ambush-contract-context/_history001/_s0001/index.html",
-          "changeType": "added"
+          "changeType": "added",
+          "compareMode": "text"
         },
         {
           "id": "#projections-contracts-inn-ambush-contract-context-history001-s0001-jsonld-index",
           "type": "FileExpectation",
           "path": "projections/contracts/inn-ambush-contract-context/_history001/_s0001/jsonld/index.html",
-          "changeType": "added"
+          "changeType": "added",
+          "compareMode": "text"
         },
         {
           "id": "#projections-contracts-inn-ambush-contract-context-history001-s0001-jsonld-inn-ambush-contract-context",
           "type": "FileExpectation",
           "path": "projections/contracts/inn-ambush-contract-context/_history001/_s0001/jsonld/inn-ambush-contract.context.jsonld",
-          "changeType": "added"
+          "changeType": "added",
+          "compareMode": "text"
         },
         {
           "id": "#projections-contracts-inn-ambush-contract-context-history001-index",
           "type": "FileExpectation",
           "path": "projections/contracts/inn-ambush-contract-context/_history001/index.html",
-          "changeType": "added"
+          "changeType": "added",
+          "compareMode": "text"
         },
         {
           "id": "#projections-contracts-inn-ambush-contract-context-knop-inventory-index",
           "type": "FileExpectation",
           "path": "projections/contracts/inn-ambush-contract-context/_knop/_inventory/index.html",
-          "changeType": "added"
+          "changeType": "added",
+          "compareMode": "text"
         },
         {
           "id": "#projections-contracts-inn-ambush-contract-context-knop-inventory-inventory",
@@ -212,7 +232,8 @@
           "id": "#projections-contracts-inn-ambush-contract-context-knop-meta-index",
           "type": "FileExpectation",
           "path": "projections/contracts/inn-ambush-contract-context/_knop/_meta/index.html",
-          "changeType": "added"
+          "changeType": "added",
+          "compareMode": "text"
         },
         {
           "id": "#projections-contracts-inn-ambush-contract-context-knop-meta-meta",
@@ -225,25 +246,29 @@
           "id": "#projections-contracts-inn-ambush-contract-context-knop-index",
           "type": "FileExpectation",
           "path": "projections/contracts/inn-ambush-contract-context/_knop/index.html",
-          "changeType": "added"
+          "changeType": "added",
+          "compareMode": "text"
         },
         {
           "id": "#projections-contracts-inn-ambush-contract-context-index",
           "type": "FileExpectation",
           "path": "projections/contracts/inn-ambush-contract-context/index.html",
-          "changeType": "added"
+          "changeType": "added",
+          "compareMode": "text"
         },
         {
           "id": "#projections-contracts-inn-ambush-contract-shapes-history001-s0001-index",
           "type": "FileExpectation",
           "path": "projections/contracts/inn-ambush-contract-shapes/_history001/_s0001/index.html",
-          "changeType": "added"
+          "changeType": "added",
+          "compareMode": "text"
         },
         {
           "id": "#projections-contracts-inn-ambush-contract-shapes-history001-s0001-ttl-index",
           "type": "FileExpectation",
           "path": "projections/contracts/inn-ambush-contract-shapes/_history001/_s0001/ttl/index.html",
-          "changeType": "added"
+          "changeType": "added",
+          "compareMode": "text"
         },
         {
           "id": "#projections-contracts-inn-ambush-contract-shapes-history001-s0001-ttl-inn-ambush-contract-shapes",
@@ -256,13 +281,15 @@
           "id": "#projections-contracts-inn-ambush-contract-shapes-history001-index",
           "type": "FileExpectation",
           "path": "projections/contracts/inn-ambush-contract-shapes/_history001/index.html",
-          "changeType": "added"
+          "changeType": "added",
+          "compareMode": "text"
         },
         {
           "id": "#projections-contracts-inn-ambush-contract-shapes-knop-inventory-index",
           "type": "FileExpectation",
           "path": "projections/contracts/inn-ambush-contract-shapes/_knop/_inventory/index.html",
-          "changeType": "added"
+          "changeType": "added",
+          "compareMode": "text"
         },
         {
           "id": "#projections-contracts-inn-ambush-contract-shapes-knop-inventory-inventory",
@@ -275,7 +302,8 @@
           "id": "#projections-contracts-inn-ambush-contract-shapes-knop-meta-index",
           "type": "FileExpectation",
           "path": "projections/contracts/inn-ambush-contract-shapes/_knop/_meta/index.html",
-          "changeType": "added"
+          "changeType": "added",
+          "compareMode": "text"
         },
         {
           "id": "#projections-contracts-inn-ambush-contract-shapes-knop-meta-meta",
@@ -288,43 +316,50 @@
           "id": "#projections-contracts-inn-ambush-contract-shapes-knop-index",
           "type": "FileExpectation",
           "path": "projections/contracts/inn-ambush-contract-shapes/_knop/index.html",
-          "changeType": "added"
+          "changeType": "added",
+          "compareMode": "text"
         },
         {
           "id": "#projections-contracts-inn-ambush-contract-shapes-index",
           "type": "FileExpectation",
           "path": "projections/contracts/inn-ambush-contract-shapes/index.html",
-          "changeType": "added"
+          "changeType": "added",
+          "compareMode": "text"
         },
         {
           "id": "#projections-notifications-plan-b-projection-ready-history001-s0001-index",
           "type": "FileExpectation",
           "path": "projections/notifications/plan-b-projection-ready/_history001/_s0001/index.html",
-          "changeType": "added"
+          "changeType": "added",
+          "compareMode": "text"
         },
         {
           "id": "#projections-notifications-plan-b-projection-ready-history001-s0001-json-index",
           "type": "FileExpectation",
           "path": "projections/notifications/plan-b-projection-ready/_history001/_s0001/json/index.html",
-          "changeType": "added"
+          "changeType": "added",
+          "compareMode": "text"
         },
         {
           "id": "#projections-notifications-plan-b-projection-ready-history001-s0001-json-plan-b-projection-ready",
           "type": "FileExpectation",
           "path": "projections/notifications/plan-b-projection-ready/_history001/_s0001/json/plan-b-projection-ready.json",
-          "changeType": "added"
+          "changeType": "added",
+          "compareMode": "text"
         },
         {
           "id": "#projections-notifications-plan-b-projection-ready-history001-index",
           "type": "FileExpectation",
           "path": "projections/notifications/plan-b-projection-ready/_history001/index.html",
-          "changeType": "added"
+          "changeType": "added",
+          "compareMode": "text"
         },
         {
           "id": "#projections-notifications-plan-b-projection-ready-knop-inventory-index",
           "type": "FileExpectation",
           "path": "projections/notifications/plan-b-projection-ready/_knop/_inventory/index.html",
-          "changeType": "added"
+          "changeType": "added",
+          "compareMode": "text"
         },
         {
           "id": "#projection-ready-knop-inventory",
@@ -337,7 +372,8 @@
           "id": "#projections-notifications-plan-b-projection-ready-knop-meta-index",
           "type": "FileExpectation",
           "path": "projections/notifications/plan-b-projection-ready/_knop/_meta/index.html",
-          "changeType": "added"
+          "changeType": "added",
+          "compareMode": "text"
         },
         {
           "id": "#projections-notifications-plan-b-projection-ready-knop-meta-meta",
@@ -350,43 +386,50 @@
           "id": "#projections-notifications-plan-b-projection-ready-knop-index",
           "type": "FileExpectation",
           "path": "projections/notifications/plan-b-projection-ready/_knop/index.html",
-          "changeType": "added"
+          "changeType": "added",
+          "compareMode": "text"
         },
         {
           "id": "#projections-notifications-plan-b-projection-ready-index",
           "type": "FileExpectation",
           "path": "projections/notifications/plan-b-projection-ready/index.html",
-          "changeType": "added"
+          "changeType": "added",
+          "compareMode": "text"
         },
         {
           "id": "#projections-requests-participant-projection-request-alice-history001-s0001-index",
           "type": "FileExpectation",
           "path": "projections/requests/participant-projection-request-alice/_history001/_s0001/index.html",
-          "changeType": "added"
+          "changeType": "added",
+          "compareMode": "text"
         },
         {
           "id": "#projections-requests-participant-projection-request-alice-history001-s0001-json-index",
           "type": "FileExpectation",
           "path": "projections/requests/participant-projection-request-alice/_history001/_s0001/json/index.html",
-          "changeType": "added"
+          "changeType": "added",
+          "compareMode": "text"
         },
         {
           "id": "#projections-requests-participant-projection-request-alice-history001-s0001-json-participant-projection-request-alice",
           "type": "FileExpectation",
           "path": "projections/requests/participant-projection-request-alice/_history001/_s0001/json/participant-projection-request-alice.json",
-          "changeType": "added"
+          "changeType": "added",
+          "compareMode": "text"
         },
         {
           "id": "#projections-requests-participant-projection-request-alice-history001-index",
           "type": "FileExpectation",
           "path": "projections/requests/participant-projection-request-alice/_history001/index.html",
-          "changeType": "added"
+          "changeType": "added",
+          "compareMode": "text"
         },
         {
           "id": "#projections-requests-participant-projection-request-alice-knop-inventory-index",
           "type": "FileExpectation",
           "path": "projections/requests/participant-projection-request-alice/_knop/_inventory/index.html",
-          "changeType": "added"
+          "changeType": "added",
+          "compareMode": "text"
         },
         {
           "id": "#projections-requests-participant-projection-request-alice-knop-inventory-inventory",
@@ -399,7 +442,8 @@
           "id": "#projections-requests-participant-projection-request-alice-knop-meta-index",
           "type": "FileExpectation",
           "path": "projections/requests/participant-projection-request-alice/_knop/_meta/index.html",
-          "changeType": "added"
+          "changeType": "added",
+          "compareMode": "text"
         },
         {
           "id": "#projections-requests-participant-projection-request-alice-knop-meta-meta",
@@ -412,43 +456,50 @@
           "id": "#projections-requests-participant-projection-request-alice-knop-index",
           "type": "FileExpectation",
           "path": "projections/requests/participant-projection-request-alice/_knop/index.html",
-          "changeType": "added"
+          "changeType": "added",
+          "compareMode": "text"
         },
         {
           "id": "#projections-requests-participant-projection-request-alice-index",
           "type": "FileExpectation",
           "path": "projections/requests/participant-projection-request-alice/index.html",
-          "changeType": "added"
+          "changeType": "added",
+          "compareMode": "text"
         },
         {
           "id": "#sessions-contributions-chat-contribution-plan-b-suggestion-history001-s0001-index",
           "type": "FileExpectation",
           "path": "sessions/contributions/chat-contribution-plan-b-suggestion/_history001/_s0001/index.html",
-          "changeType": "added"
+          "changeType": "added",
+          "compareMode": "text"
         },
         {
           "id": "#sessions-contributions-chat-contribution-plan-b-suggestion-history001-s0001-json-chat-contribution-plan-b-suggestion",
           "type": "FileExpectation",
           "path": "sessions/contributions/chat-contribution-plan-b-suggestion/_history001/_s0001/json/chat-contribution-plan-b-suggestion.json",
-          "changeType": "added"
+          "changeType": "added",
+          "compareMode": "text"
         },
         {
           "id": "#sessions-contributions-chat-contribution-plan-b-suggestion-history001-s0001-json-index",
           "type": "FileExpectation",
           "path": "sessions/contributions/chat-contribution-plan-b-suggestion/_history001/_s0001/json/index.html",
-          "changeType": "added"
+          "changeType": "added",
+          "compareMode": "text"
         },
         {
           "id": "#sessions-contributions-chat-contribution-plan-b-suggestion-history001-index",
           "type": "FileExpectation",
           "path": "sessions/contributions/chat-contribution-plan-b-suggestion/_history001/index.html",
-          "changeType": "added"
+          "changeType": "added",
+          "compareMode": "text"
         },
         {
           "id": "#sessions-contributions-chat-contribution-plan-b-suggestion-knop-inventory-index",
           "type": "FileExpectation",
           "path": "sessions/contributions/chat-contribution-plan-b-suggestion/_knop/_inventory/index.html",
-          "changeType": "added"
+          "changeType": "added",
+          "compareMode": "text"
         },
         {
           "id": "#sessions-contributions-chat-contribution-plan-b-suggestion-knop-inventory-inventory",
@@ -461,7 +512,8 @@
           "id": "#sessions-contributions-chat-contribution-plan-b-suggestion-knop-meta-index",
           "type": "FileExpectation",
           "path": "sessions/contributions/chat-contribution-plan-b-suggestion/_knop/_meta/index.html",
-          "changeType": "added"
+          "changeType": "added",
+          "compareMode": "text"
         },
         {
           "id": "#sessions-contributions-chat-contribution-plan-b-suggestion-knop-meta-meta",
@@ -474,25 +526,29 @@
           "id": "#sessions-contributions-chat-contribution-plan-b-suggestion-knop-index",
           "type": "FileExpectation",
           "path": "sessions/contributions/chat-contribution-plan-b-suggestion/_knop/index.html",
-          "changeType": "added"
+          "changeType": "added",
+          "compareMode": "text"
         },
         {
           "id": "#sessions-contributions-chat-contribution-plan-b-suggestion-index",
           "type": "FileExpectation",
           "path": "sessions/contributions/chat-contribution-plan-b-suggestion/index.html",
-          "changeType": "added"
+          "changeType": "added",
+          "compareMode": "text"
         },
         {
           "id": "#world-states-inn-ambush-plan-b-state-history001-s0001-index",
           "type": "FileExpectation",
           "path": "world/states/inn-ambush-plan-b-state/_history001/_s0001/index.html",
-          "changeType": "added"
+          "changeType": "added",
+          "compareMode": "text"
         },
         {
           "id": "#world-states-inn-ambush-plan-b-state-history001-s0001-ttl-index",
           "type": "FileExpectation",
           "path": "world/states/inn-ambush-plan-b-state/_history001/_s0001/ttl/index.html",
-          "changeType": "added"
+          "changeType": "added",
+          "compareMode": "text"
         },
         {
           "id": "#world-state-history-payload",
@@ -505,13 +561,15 @@
           "id": "#world-states-inn-ambush-plan-b-state-history001-index",
           "type": "FileExpectation",
           "path": "world/states/inn-ambush-plan-b-state/_history001/index.html",
-          "changeType": "added"
+          "changeType": "added",
+          "compareMode": "text"
         },
         {
           "id": "#world-states-inn-ambush-plan-b-state-knop-inventory-index",
           "type": "FileExpectation",
           "path": "world/states/inn-ambush-plan-b-state/_knop/_inventory/index.html",
-          "changeType": "added"
+          "changeType": "added",
+          "compareMode": "text"
         },
         {
           "id": "#world-states-inn-ambush-plan-b-state-knop-inventory-inventory",
@@ -524,7 +582,8 @@
           "id": "#world-states-inn-ambush-plan-b-state-knop-meta-index",
           "type": "FileExpectation",
           "path": "world/states/inn-ambush-plan-b-state/_knop/_meta/index.html",
-          "changeType": "added"
+          "changeType": "added",
+          "compareMode": "text"
         },
         {
           "id": "#world-states-inn-ambush-plan-b-state-knop-meta-meta",
@@ -537,13 +596,15 @@
           "id": "#world-states-inn-ambush-plan-b-state-knop-index",
           "type": "FileExpectation",
           "path": "world/states/inn-ambush-plan-b-state/_knop/index.html",
-          "changeType": "added"
+          "changeType": "added",
+          "compareMode": "text"
         },
         {
           "id": "#world-states-inn-ambush-plan-b-state-index",
           "type": "FileExpectation",
           "path": "world/states/inn-ambush-plan-b-state/index.html",
-          "changeType": "added"
+          "changeType": "added",
+          "compareMode": "text"
         }
       ],
       "hasRdfExpectation": [

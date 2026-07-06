@@ -43,13 +43,15 @@
           "id": "#journal-history-state-page",
           "type": "FileExpectation",
           "path": "authority/journals/plan-b/_history001/_s0004/index.html",
-          "changeType": "added"
+          "changeType": "added",
+          "compareMode": "text"
         },
         {
           "id": "#journal-history-state-manifestation-page",
           "type": "FileExpectation",
           "path": "authority/journals/plan-b/_history001/_s0004/ttl/index.html",
-          "changeType": "added"
+          "changeType": "added",
+          "compareMode": "text"
         },
         {
           "id": "#journal-history-payload",
@@ -62,13 +64,15 @@
           "id": "#journal-history-index",
           "type": "FileExpectation",
           "path": "authority/journals/plan-b/_history001/index.html",
-          "changeType": "updated"
+          "changeType": "updated",
+          "compareMode": "text"
         },
         {
           "id": "#journal-knop-inventory-page",
           "type": "FileExpectation",
           "path": "authority/journals/plan-b/_knop/_inventory/index.html",
-          "changeType": "updated"
+          "changeType": "updated",
+          "compareMode": "text"
         },
         {
           "id": "#journal-knop-inventory",
@@ -81,7 +85,8 @@
           "id": "#journal-page",
           "type": "FileExpectation",
           "path": "authority/journals/plan-b/index.html",
-          "changeType": "updated"
+          "changeType": "updated",
+          "compareMode": "text"
         }
       ],
       "hasRdfExpectation": [

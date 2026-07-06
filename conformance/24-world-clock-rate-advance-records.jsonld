@@ -26,6 +26,9 @@
       "id": "#world-clock-rate-advance-records",
       "fixtureRepo": "github.com/spectacular-voyage/test-inn-ambush",
       "operationId": "stagecraft.fixture.addWorldClockRateAdvanceRecords",
+      "ignorePaths": [
+        "conformance/**"
+      ],
       "fromRef": "f4e946947da4985ffb461c8d253a5870ed6f9b8e",
       "toRef": "a.24-world-clock-rate-advance-records",
       "fromState": {

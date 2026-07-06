@@ -43,7 +43,8 @@
           "id": "#mesh-config-history-s0001-index",
           "type": "FileExpectation",
           "path": "_mesh/_config/_history001/_s0001/index.html",
-          "changeType": "added"
+          "changeType": "added",
+          "compareMode": "text"
         },
         {
           "id": "#mesh-config-history-s0001-payload",
@@ -56,25 +57,29 @@
           "id": "#mesh-config-history-s0001-ttl-index",
           "type": "FileExpectation",
           "path": "_mesh/_config/_history001/_s0001/ttl/index.html",
-          "changeType": "added"
+          "changeType": "added",
+          "compareMode": "text"
         },
         {
           "id": "#mesh-config-history-index",
           "type": "FileExpectation",
           "path": "_mesh/_config/_history001/index.html",
-          "changeType": "added"
+          "changeType": "added",
+          "compareMode": "text"
         },
         {
           "id": "#mesh-config-index",
           "type": "FileExpectation",
           "path": "_mesh/_config/index.html",
-          "changeType": "added"
+          "changeType": "added",
+          "compareMode": "text"
         },
         {
           "id": "#mesh-inventory-index",
           "type": "FileExpectation",
           "path": "_mesh/_inventory/index.html",
-          "changeType": "added"
+          "changeType": "added",
+          "compareMode": "text"
         },
         {
           "id": "#mesh-inventory",
@@ -87,43 +92,50 @@
           "id": "#mesh-meta-index",
           "type": "FileExpectation",
           "path": "_mesh/_meta/index.html",
-          "changeType": "added"
+          "changeType": "added",
+          "compareMode": "text"
         },
         {
           "id": "#mesh-index",
           "type": "FileExpectation",
           "path": "_mesh/index.html",
-          "changeType": "added"
+          "changeType": "added",
+          "compareMode": "text"
         },
         {
           "id": "#contract-context-history-s0003-index",
           "type": "FileExpectation",
           "path": "projections/contracts/inn-ambush-contract-context/_history001/_s0003/index.html",
-          "changeType": "added"
+          "changeType": "added",
+          "compareMode": "text"
         },
         {
           "id": "#contract-context-history-s0003-jsonld-index",
           "type": "FileExpectation",
           "path": "projections/contracts/inn-ambush-contract-context/_history001/_s0003/jsonld/index.html",
-          "changeType": "added"
+          "changeType": "added",
+          "compareMode": "text"
         },
         {
           "id": "#contract-context-history-s0003-payload",
           "type": "FileExpectation",
           "path": "projections/contracts/inn-ambush-contract-context/_history001/_s0003/jsonld/inn-ambush-contract.context.jsonld",
-          "changeType": "added"
+          "changeType": "added",
+          "compareMode": "text"
         },
         {
           "id": "#contract-context-history-index",
           "type": "FileExpectation",
           "path": "projections/contracts/inn-ambush-contract-context/_history001/index.html",
-          "changeType": "updated"
+          "changeType": "updated",
+          "compareMode": "text"
         },
         {
           "id": "#contract-context-knop-inventory-index",
           "type": "FileExpectation",
           "path": "projections/contracts/inn-ambush-contract-context/_knop/_inventory/index.html",
-          "changeType": "updated"
+          "changeType": "updated",
+          "compareMode": "text"
         },
         {
           "id": "#contract-context-knop-inventory",
@@ -136,19 +148,22 @@
           "id": "#contract-context-index",
           "type": "FileExpectation",
           "path": "projections/contracts/inn-ambush-contract-context/index.html",
-          "changeType": "updated"
+          "changeType": "updated",
+          "compareMode": "text"
         },
         {
           "id": "#contract-shapes-history-s0003-index",
           "type": "FileExpectation",
           "path": "projections/contracts/inn-ambush-contract-shapes/_history001/_s0003/index.html",
-          "changeType": "added"
+          "changeType": "added",
+          "compareMode": "text"
         },
         {
           "id": "#contract-shapes-history-s0003-ttl-index",
           "type": "FileExpectation",
           "path": "projections/contracts/inn-ambush-contract-shapes/_history001/_s0003/ttl/index.html",
-          "changeType": "added"
+          "changeType": "added",
+          "compareMode": "text"
         },
         {
           "id": "#contract-shapes-history-s0003-payload",
@@ -161,13 +176,15 @@
           "id": "#contract-shapes-history-index",
           "type": "FileExpectation",
           "path": "projections/contracts/inn-ambush-contract-shapes/_history001/index.html",
-          "changeType": "updated"
+          "changeType": "updated",
+          "compareMode": "text"
         },
         {
           "id": "#contract-shapes-knop-inventory-index",
           "type": "FileExpectation",
           "path": "projections/contracts/inn-ambush-contract-shapes/_knop/_inventory/index.html",
-          "changeType": "updated"
+          "changeType": "updated",
+          "compareMode": "text"
         },
         {
           "id": "#contract-shapes-knop-inventory",
@@ -180,37 +197,43 @@
           "id": "#contract-shapes-index",
           "type": "FileExpectation",
           "path": "projections/contracts/inn-ambush-contract-shapes/index.html",
-          "changeType": "updated"
+          "changeType": "updated",
+          "compareMode": "text"
         },
         {
           "id": "#recommendation-request-history-s0002-index",
           "type": "FileExpectation",
           "path": "recommendations/actant-intent/plan-b-review-request/_history001/_s0002/index.html",
-          "changeType": "added"
+          "changeType": "added",
+          "compareMode": "text"
         },
         {
           "id": "#recommendation-request-history-s0002-payload",
           "type": "FileExpectation",
           "path": "recommendations/actant-intent/plan-b-review-request/_history001/_s0002/json/actant-intent-recommendation-request-plan-b-review.json",
-          "changeType": "added"
+          "changeType": "added",
+          "compareMode": "text"
         },
         {
           "id": "#recommendation-request-history-s0002-json-index",
           "type": "FileExpectation",
           "path": "recommendations/actant-intent/plan-b-review-request/_history001/_s0002/json/index.html",
-          "changeType": "added"
+          "changeType": "added",
+          "compareMode": "text"
         },
         {
           "id": "#recommendation-request-history-index",
           "type": "FileExpectation",
           "path": "recommendations/actant-intent/plan-b-review-request/_history001/index.html",
-          "changeType": "updated"
+          "changeType": "updated",
+          "compareMode": "text"
         },
         {
           "id": "#recommendation-request-knop-inventory-index",
           "type": "FileExpectation",
           "path": "recommendations/actant-intent/plan-b-review-request/_knop/_inventory/index.html",
-          "changeType": "updated"
+          "changeType": "updated",
+          "compareMode": "text"
         },
         {
           "id": "#recommendation-request-knop-inventory",
@@ -223,37 +246,43 @@
           "id": "#recommendation-request-index",
           "type": "FileExpectation",
           "path": "recommendations/actant-intent/plan-b-review-request/index.html",
-          "changeType": "updated"
+          "changeType": "updated",
+          "compareMode": "text"
         },
         {
           "id": "#alice-declaration-history-s0002-index",
           "type": "FileExpectation",
           "path": "sessions/contributions/chat-contribution-plan-b-declaration/_history001/_s0002/index.html",
-          "changeType": "added"
+          "changeType": "added",
+          "compareMode": "text"
         },
         {
           "id": "#alice-declaration-history-s0002-payload",
           "type": "FileExpectation",
           "path": "sessions/contributions/chat-contribution-plan-b-declaration/_history001/_s0002/json/chat-contribution-plan-b-declaration.json",
-          "changeType": "added"
+          "changeType": "added",
+          "compareMode": "text"
         },
         {
           "id": "#alice-declaration-history-s0002-json-index",
           "type": "FileExpectation",
           "path": "sessions/contributions/chat-contribution-plan-b-declaration/_history001/_s0002/json/index.html",
-          "changeType": "added"
+          "changeType": "added",
+          "compareMode": "text"
         },
         {
           "id": "#alice-declaration-history-index",
           "type": "FileExpectation",
           "path": "sessions/contributions/chat-contribution-plan-b-declaration/_history001/index.html",
-          "changeType": "updated"
+          "changeType": "updated",
+          "compareMode": "text"
         },
         {
           "id": "#alice-declaration-knop-inventory-index",
           "type": "FileExpectation",
           "path": "sessions/contributions/chat-contribution-plan-b-declaration/_knop/_inventory/index.html",
-          "changeType": "updated"
+          "changeType": "updated",
+          "compareMode": "text"
         },
         {
           "id": "#alice-declaration-knop-inventory",
@@ -266,37 +295,43 @@
           "id": "#alice-declaration-index",
           "type": "FileExpectation",
           "path": "sessions/contributions/chat-contribution-plan-b-declaration/index.html",
-          "changeType": "updated"
+          "changeType": "updated",
+          "compareMode": "text"
         },
         {
           "id": "#alice-suggestion-history-s0002-index",
           "type": "FileExpectation",
           "path": "sessions/contributions/chat-contribution-plan-b-suggestion/_history001/_s0002/index.html",
-          "changeType": "added"
+          "changeType": "added",
+          "compareMode": "text"
         },
         {
           "id": "#alice-suggestion-history-s0002-payload",
           "type": "FileExpectation",
           "path": "sessions/contributions/chat-contribution-plan-b-suggestion/_history001/_s0002/json/chat-contribution-plan-b-suggestion.json",
-          "changeType": "added"
+          "changeType": "added",
+          "compareMode": "text"
         },
         {
           "id": "#alice-suggestion-history-s0002-json-index",
           "type": "FileExpectation",
           "path": "sessions/contributions/chat-contribution-plan-b-suggestion/_history001/_s0002/json/index.html",
-          "changeType": "added"
+          "changeType": "added",
+          "compareMode": "text"
         },
         {
           "id": "#alice-suggestion-history-index",
           "type": "FileExpectation",
           "path": "sessions/contributions/chat-contribution-plan-b-suggestion/_history001/index.html",
-          "changeType": "updated"
+          "changeType": "updated",
+          "compareMode": "text"
         },
         {
           "id": "#alice-suggestion-knop-inventory-index",
           "type": "FileExpectation",
           "path": "sessions/contributions/chat-contribution-plan-b-suggestion/_knop/_inventory/index.html",
-          "changeType": "updated"
+          "changeType": "updated",
+          "compareMode": "text"
         },
         {
           "id": "#alice-suggestion-knop-inventory",
@@ -309,7 +344,8 @@
           "id": "#alice-suggestion-index",
           "type": "FileExpectation",
           "path": "sessions/contributions/chat-contribution-plan-b-suggestion/index.html",
-          "changeType": "updated"
+          "changeType": "updated",
+          "compareMode": "text"
         }
       ],
       "hasRdfExpectation": [

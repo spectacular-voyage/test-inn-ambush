@@ -43,13 +43,15 @@
           "id": "#context-history-state-index",
           "type": "FileExpectation",
           "path": "projections/contracts/inn-ambush-contract-context/_history001/_s0004/index.html",
-          "changeType": "added"
+          "changeType": "added",
+          "compareMode": "text"
         },
         {
           "id": "#context-history-jsonld-index",
           "type": "FileExpectation",
           "path": "projections/contracts/inn-ambush-contract-context/_history001/_s0004/jsonld/index.html",
-          "changeType": "added"
+          "changeType": "added",
+          "compareMode": "text"
         },
         {
           "id": "#context-history-payload",
@@ -62,13 +64,15 @@
           "id": "#context-history-index",
           "type": "FileExpectation",
           "path": "projections/contracts/inn-ambush-contract-context/_history001/index.html",
-          "changeType": "updated"
+          "changeType": "updated",
+          "compareMode": "text"
         },
         {
           "id": "#context-knop-inventory-index",
           "type": "FileExpectation",
           "path": "projections/contracts/inn-ambush-contract-context/_knop/_inventory/index.html",
-          "changeType": "updated"
+          "changeType": "updated",
+          "compareMode": "text"
         },
         {
           "id": "#context-knop-inventory",
@@ -81,19 +85,22 @@
           "id": "#context-index",
           "type": "FileExpectation",
           "path": "projections/contracts/inn-ambush-contract-context/index.html",
-          "changeType": "updated"
+          "changeType": "updated",
+          "compareMode": "text"
         },
         {
           "id": "#shapes-history-state-index",
           "type": "FileExpectation",
           "path": "projections/contracts/inn-ambush-contract-shapes/_history001/_s0004/index.html",
-          "changeType": "added"
+          "changeType": "added",
+          "compareMode": "text"
         },
         {
           "id": "#shapes-history-ttl-index",
           "type": "FileExpectation",
           "path": "projections/contracts/inn-ambush-contract-shapes/_history001/_s0004/ttl/index.html",
-          "changeType": "added"
+          "changeType": "added",
+          "compareMode": "text"
         },
         {
           "id": "#shapes-history-payload",
@@ -106,13 +113,15 @@
           "id": "#shapes-history-index",
           "type": "FileExpectation",
           "path": "projections/contracts/inn-ambush-contract-shapes/_history001/index.html",
-          "changeType": "updated"
+          "changeType": "updated",
+          "compareMode": "text"
         },
         {
           "id": "#shapes-knop-inventory-index",
           "type": "FileExpectation",
           "path": "projections/contracts/inn-ambush-contract-shapes/_knop/_inventory/index.html",
-          "changeType": "updated"
+          "changeType": "updated",
+          "compareMode": "text"
         },
         {
           "id": "#shapes-knop-inventory",
@@ -125,19 +134,22 @@
           "id": "#shapes-index",
           "type": "FileExpectation",
           "path": "projections/contracts/inn-ambush-contract-shapes/index.html",
-          "changeType": "updated"
+          "changeType": "updated",
+          "compareMode": "text"
         },
         {
           "id": "#world-state-history-state-index",
           "type": "FileExpectation",
           "path": "world/states/inn-ambush-plan-b-state/_history001/_s0003/index.html",
-          "changeType": "added"
+          "changeType": "added",
+          "compareMode": "text"
         },
         {
           "id": "#world-state-history-ttl-index",
           "type": "FileExpectation",
           "path": "world/states/inn-ambush-plan-b-state/_history001/_s0003/ttl/index.html",
-          "changeType": "added"
+          "changeType": "added",
+          "compareMode": "text"
         },
         {
           "id": "#world-state-history-payload",
@@ -150,13 +162,15 @@
           "id": "#world-state-history-index",
           "type": "FileExpectation",
           "path": "world/states/inn-ambush-plan-b-state/_history001/index.html",
-          "changeType": "updated"
+          "changeType": "updated",
+          "compareMode": "text"
         },
         {
           "id": "#world-state-knop-inventory-index",
           "type": "FileExpectation",
           "path": "world/states/inn-ambush-plan-b-state/_knop/_inventory/index.html",
-          "changeType": "updated"
+          "changeType": "updated",
+          "compareMode": "text"
         },
         {
           "id": "#world-state-knop-inventory",
@@ -169,7 +183,8 @@
           "id": "#world-state-index",
           "type": "FileExpectation",
           "path": "world/states/inn-ambush-plan-b-state/index.html",
-          "changeType": "updated"
+          "changeType": "updated",
+          "compareMode": "text"
         }
       ],
       "hasRdfExpectation": [

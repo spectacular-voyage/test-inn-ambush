@@ -47,6 +47,20 @@
           "compareMode": "rdfCanonical"
         },
         {
+          "id": "#authority-journal-history-page",
+          "type": "FileExpectation",
+          "path": "authority/journals/plan-b/_history001/_s0003/index.html",
+          "changeType": "added",
+          "compareMode": "text"
+        },
+        {
+          "id": "#authority-journal-history-ttl-page",
+          "type": "FileExpectation",
+          "path": "authority/journals/plan-b/_history001/_s0003/ttl/index.html",
+          "changeType": "added",
+          "compareMode": "text"
+        },
+        {
           "id": "#authority-journal-knop-inventory",
           "type": "FileExpectation",
           "path": "authority/journals/plan-b/_knop/_inventory/inventory.ttl",
@@ -57,6 +71,20 @@
           "id": "#context-history-payload",
           "type": "FileExpectation",
           "path": "projections/contracts/inn-ambush-contract-context/_history001/_s0006/jsonld/inn-ambush-contract.context.jsonld",
+          "changeType": "added",
+          "compareMode": "text"
+        },
+        {
+          "id": "#context-history-page",
+          "type": "FileExpectation",
+          "path": "projections/contracts/inn-ambush-contract-context/_history001/_s0006/index.html",
+          "changeType": "added",
+          "compareMode": "text"
+        },
+        {
+          "id": "#context-history-jsonld-page",
+          "type": "FileExpectation",
+          "path": "projections/contracts/inn-ambush-contract-context/_history001/_s0006/jsonld/index.html",
           "changeType": "added",
           "compareMode": "text"
         },
@@ -75,6 +103,20 @@
           "compareMode": "rdfCanonical"
         },
         {
+          "id": "#shapes-history-page",
+          "type": "FileExpectation",
+          "path": "projections/contracts/inn-ambush-contract-shapes/_history001/_s0007/index.html",
+          "changeType": "added",
+          "compareMode": "text"
+        },
+        {
+          "id": "#shapes-history-ttl-page",
+          "type": "FileExpectation",
+          "path": "projections/contracts/inn-ambush-contract-shapes/_history001/_s0007/ttl/index.html",
+          "changeType": "added",
+          "compareMode": "text"
+        },
+        {
           "id": "#shapes-knop-inventory",
           "type": "FileExpectation",
           "path": "projections/contracts/inn-ambush-contract-shapes/_knop/_inventory/inventory.ttl",
@@ -87,6 +129,20 @@
           "path": "world/states/inn-ambush-plan-b-state/_history001/_s0004/ttl/inn-ambush-plan-b-state.ttl",
           "changeType": "added",
           "compareMode": "rdfCanonical"
+        },
+        {
+          "id": "#world-state-history-page",
+          "type": "FileExpectation",
+          "path": "world/states/inn-ambush-plan-b-state/_history001/_s0004/index.html",
+          "changeType": "added",
+          "compareMode": "text"
+        },
+        {
+          "id": "#world-state-history-ttl-page",
+          "type": "FileExpectation",
+          "path": "world/states/inn-ambush-plan-b-state/_history001/_s0004/ttl/index.html",
+          "changeType": "added",
+          "compareMode": "text"
         },
         {
           "id": "#world-state-knop-inventory",

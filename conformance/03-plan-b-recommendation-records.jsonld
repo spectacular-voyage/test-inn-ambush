@@ -50,7 +50,8 @@
           "id": "#projection-context",
           "type": "FileExpectation",
           "path": "projections/contracts/inn-ambush-contract.context.jsonld",
-          "changeType": "updated"
+          "changeType": "updated",
+          "compareMode": "text"
         },
         {
           "id": "#projection-shapes",
@@ -63,25 +64,29 @@
           "id": "#recommendations-readme",
           "type": "FileExpectation",
           "path": "recommendations/README.md",
-          "changeType": "added"
+          "changeType": "added",
+          "compareMode": "text"
         },
         {
           "id": "#actant-intent-recommendation-request",
           "type": "FileExpectation",
           "path": "recommendations/actant-intent/plan-b-review-request/actant-intent-recommendation-request-plan-b-review.json",
-          "changeType": "added"
+          "changeType": "added",
+          "compareMode": "text"
         },
         {
           "id": "#actant-intent-recommendation",
           "type": "FileExpectation",
           "path": "recommendations/actant-intent/plan-b-review-response/actant-intent-recommendation-plan-b-review.json",
-          "changeType": "added"
+          "changeType": "added",
+          "compareMode": "text"
         },
         {
           "id": "#alice-plan-b-declaration-contribution",
           "type": "FileExpectation",
           "path": "sessions/contributions/chat-contribution-plan-b-declaration/chat-contribution-plan-b-declaration.json",
-          "changeType": "added"
+          "changeType": "added",
+          "compareMode": "text"
         }
       ],
       "hasRdfExpectation": [

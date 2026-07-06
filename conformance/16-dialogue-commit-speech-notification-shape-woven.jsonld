@@ -43,13 +43,15 @@
           "id": "#shapes-history-state-index",
           "type": "FileExpectation",
           "path": "projections/contracts/inn-ambush-contract-shapes/_history001/_s0006/index.html",
-          "changeType": "added"
+          "changeType": "added",
+          "compareMode": "text"
         },
         {
           "id": "#shapes-history-ttl-index",
           "type": "FileExpectation",
           "path": "projections/contracts/inn-ambush-contract-shapes/_history001/_s0006/ttl/index.html",
-          "changeType": "added"
+          "changeType": "added",
+          "compareMode": "text"
         },
         {
           "id": "#shapes-history-payload",
@@ -62,13 +64,15 @@
           "id": "#shapes-history-index",
           "type": "FileExpectation",
           "path": "projections/contracts/inn-ambush-contract-shapes/_history001/index.html",
-          "changeType": "updated"
+          "changeType": "updated",
+          "compareMode": "text"
         },
         {
           "id": "#shapes-knop-inventory-index",
           "type": "FileExpectation",
           "path": "projections/contracts/inn-ambush-contract-shapes/_knop/_inventory/index.html",
-          "changeType": "updated"
+          "changeType": "updated",
+          "compareMode": "text"
         },
         {
           "id": "#shapes-knop-inventory",
@@ -81,7 +85,8 @@
           "id": "#shapes-index",
           "type": "FileExpectation",
           "path": "projections/contracts/inn-ambush-contract-shapes/index.html",
-          "changeType": "updated"
+          "changeType": "updated",
+          "compareMode": "text"
         }
       ],
       "hasRdfExpectation": [
