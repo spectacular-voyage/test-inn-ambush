@@ -1,0 +1,269 @@
+{
+  "@context": {
+    "@vocab": "https://spectacular-voyage.github.io/accord/ontology/",
+    "dcterms": "http://purl.org/dc/terms/",
+    "id": "@id",
+    "type": "@type",
+    "changeType": {
+      "@type": "@vocab"
+    },
+    "compareMode": {
+      "@type": "@vocab"
+    },
+    "targetsFileExpectation": {
+      "@type": "@id"
+    },
+    "locatorKind": {
+      "@type": "@vocab"
+    }
+  },
+  "type": "Manifest",
+  "id": "urn:accord:stagecraft:test-inn-ambush:46-narrative-frames-woven",
+  "dcterms:title": "Inn Ambush 46 narrative frames woven",
+  "hasCase": [
+    {
+      "type": "TransitionCase",
+      "id": "#weave-narrative-frames",
+      "fixtureRepo": "github.com/spectacular-voyage/test-inn-ambush",
+      "operationId": "stagecraft.fixture.weaveNarrativeFrames",
+      "fromRef": "a.45-narrative-frames-records",
+      "toRef": "a.46-narrative-frames-woven",
+      "fromState": {
+        "type": "StateLocator",
+        "locatorKind": "gitRefState",
+        "ref": "a.45-narrative-frames-records"
+      },
+      "toState": {
+        "type": "StateLocator",
+        "locatorKind": "gitRefState",
+        "ref": "a.46-narrative-frames-woven"
+      },
+      "hasFileExpectation": [
+        {
+          "id": "#mesh-config-history-state-page",
+          "type": "FileExpectation",
+          "path": "_mesh/_config/_history001/_s0001/index.html",
+          "changeType": "updated",
+          "compareMode": "text"
+        },
+        {
+          "id": "#mesh-config-history-manifestation-page",
+          "type": "FileExpectation",
+          "path": "_mesh/_config/_history001/_s0001/ttl/index.html",
+          "changeType": "updated",
+          "compareMode": "text"
+        },
+        {
+          "id": "#mesh-config-history-page",
+          "type": "FileExpectation",
+          "path": "_mesh/_config/_history001/index.html",
+          "changeType": "updated",
+          "compareMode": "text"
+        },
+        {
+          "id": "#mesh-config-page",
+          "type": "FileExpectation",
+          "path": "_mesh/_config/index.html",
+          "changeType": "updated",
+          "compareMode": "text"
+        },
+        {
+          "id": "#mesh-inventory-page",
+          "type": "FileExpectation",
+          "path": "_mesh/_inventory/index.html",
+          "changeType": "updated",
+          "compareMode": "text"
+        },
+        {
+          "id": "#mesh-meta-page",
+          "type": "FileExpectation",
+          "path": "_mesh/_meta/index.html",
+          "changeType": "updated",
+          "compareMode": "text"
+        },
+        {
+          "id": "#mesh-page",
+          "type": "FileExpectation",
+          "path": "_mesh/index.html",
+          "changeType": "updated",
+          "compareMode": "text"
+        },
+        {
+          "id": "#world-state-inventory",
+          "type": "FileExpectation",
+          "path": "world/states/inn-ambush-plan-b-state/_knop/_inventory/inventory.ttl",
+          "changeType": "updated",
+          "compareMode": "rdfCanonical"
+        },
+        {
+          "id": "#world-state-inventory-page",
+          "type": "FileExpectation",
+          "path": "world/states/inn-ambush-plan-b-state/_knop/_inventory/index.html",
+          "changeType": "updated",
+          "compareMode": "text"
+        },
+        {
+          "id": "#world-state-page",
+          "type": "FileExpectation",
+          "path": "world/states/inn-ambush-plan-b-state/index.html",
+          "changeType": "updated",
+          "compareMode": "text"
+        },
+        {
+          "id": "#world-state-history-page",
+          "type": "FileExpectation",
+          "path": "world/states/inn-ambush-plan-b-state/_history001/index.html",
+          "changeType": "updated",
+          "compareMode": "text"
+        },
+        {
+          "id": "#world-state-history-s0001-page",
+          "type": "FileExpectation",
+          "path": "world/states/inn-ambush-plan-b-state/_history001/_s0001/index.html",
+          "changeType": "updated",
+          "compareMode": "text"
+        },
+        {
+          "id": "#world-state-history-s0001-manifestation-page",
+          "type": "FileExpectation",
+          "path": "world/states/inn-ambush-plan-b-state/_history001/_s0001/ttl/index.html",
+          "changeType": "updated",
+          "compareMode": "text"
+        },
+        {
+          "id": "#world-state-history-s0002-page",
+          "type": "FileExpectation",
+          "path": "world/states/inn-ambush-plan-b-state/_history001/_s0002/index.html",
+          "changeType": "updated",
+          "compareMode": "text"
+        },
+        {
+          "id": "#world-state-history-s0002-manifestation-page",
+          "type": "FileExpectation",
+          "path": "world/states/inn-ambush-plan-b-state/_history001/_s0002/ttl/index.html",
+          "changeType": "updated",
+          "compareMode": "text"
+        },
+        {
+          "id": "#world-state-history-s0003-page",
+          "type": "FileExpectation",
+          "path": "world/states/inn-ambush-plan-b-state/_history001/_s0003/index.html",
+          "changeType": "updated",
+          "compareMode": "text"
+        },
+        {
+          "id": "#world-state-history-s0003-manifestation-page",
+          "type": "FileExpectation",
+          "path": "world/states/inn-ambush-plan-b-state/_history001/_s0003/ttl/index.html",
+          "changeType": "updated",
+          "compareMode": "text"
+        },
+        {
+          "id": "#world-state-history-s0004-page",
+          "type": "FileExpectation",
+          "path": "world/states/inn-ambush-plan-b-state/_history001/_s0004/index.html",
+          "changeType": "updated",
+          "compareMode": "text"
+        },
+        {
+          "id": "#world-state-history-s0004-manifestation-page",
+          "type": "FileExpectation",
+          "path": "world/states/inn-ambush-plan-b-state/_history001/_s0004/ttl/index.html",
+          "changeType": "updated",
+          "compareMode": "text"
+        },
+        {
+          "id": "#world-state-history-s0005-page",
+          "type": "FileExpectation",
+          "path": "world/states/inn-ambush-plan-b-state/_history001/_s0005/index.html",
+          "changeType": "updated",
+          "compareMode": "text"
+        },
+        {
+          "id": "#world-state-history-s0005-manifestation-page",
+          "type": "FileExpectation",
+          "path": "world/states/inn-ambush-plan-b-state/_history001/_s0005/ttl/index.html",
+          "changeType": "updated",
+          "compareMode": "text"
+        },
+        {
+          "id": "#world-state-history-s0006-page",
+          "type": "FileExpectation",
+          "path": "world/states/inn-ambush-plan-b-state/_history001/_s0006/index.html",
+          "changeType": "updated",
+          "compareMode": "text"
+        },
+        {
+          "id": "#world-state-history-s0006-manifestation-page",
+          "type": "FileExpectation",
+          "path": "world/states/inn-ambush-plan-b-state/_history001/_s0006/ttl/index.html",
+          "changeType": "updated",
+          "compareMode": "text"
+        },
+        {
+          "id": "#world-state-history-state",
+          "type": "FileExpectation",
+          "path": "world/states/inn-ambush-plan-b-state/_history001/_s0007/ttl/inn-ambush-plan-b-state.ttl",
+          "changeType": "added",
+          "compareMode": "rdfCanonical"
+        },
+        {
+          "id": "#world-state-history-state-page",
+          "type": "FileExpectation",
+          "path": "world/states/inn-ambush-plan-b-state/_history001/_s0007/index.html",
+          "changeType": "added",
+          "compareMode": "text"
+        },
+        {
+          "id": "#world-state-history-manifestation-page",
+          "type": "FileExpectation",
+          "path": "world/states/inn-ambush-plan-b-state/_history001/_s0007/ttl/index.html",
+          "changeType": "added",
+          "compareMode": "text"
+        },
+        {
+          "id": "#world-state-knop-meta-page",
+          "type": "FileExpectation",
+          "path": "world/states/inn-ambush-plan-b-state/_knop/_meta/index.html",
+          "changeType": "updated",
+          "compareMode": "text"
+        },
+        {
+          "id": "#world-state-knop-page",
+          "type": "FileExpectation",
+          "path": "world/states/inn-ambush-plan-b-state/_knop/index.html",
+          "changeType": "updated",
+          "compareMode": "text"
+        }
+      ],
+      "hasRdfExpectation": [
+        {
+          "id": "#world-state-inventory-rdf",
+          "type": "RdfExpectation",
+          "targetsFileExpectation": "#world-state-inventory",
+          "hasAskAssertion": [
+            {
+              "id": "#ask-s0007-latest-state",
+              "type": "SparqlAskAssertion",
+              "query": "ASK { <https://spectacular-voyage.github.io/test-inn-ambush/world/states/inn-ambush-plan-b-state/_history001> <https://semantic-flow.github.io/sflo/ontology/latestHistoricalState> <https://spectacular-voyage.github.io/test-inn-ambush/world/states/inn-ambush-plan-b-state/_history001/_s0007> ; <https://semantic-flow.github.io/sflo/ontology/nextStateOrdinal> \"8\"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> . <https://spectacular-voyage.github.io/test-inn-ambush/world/states/inn-ambush-plan-b-state/_history001/_s0007> a <https://semantic-flow.github.io/sflo/ontology/HistoricalState> ; <https://semantic-flow.github.io/sflo/ontology/previousHistoricalState> <https://spectacular-voyage.github.io/test-inn-ambush/world/states/inn-ambush-plan-b-state/_history001/_s0006> ; <https://semantic-flow.github.io/sflo/ontology/hasResourcePage> <https://spectacular-voyage.github.io/test-inn-ambush/world/states/inn-ambush-plan-b-state/_history001/_s0007/index.html> . }",
+              "expectedBoolean": true
+            }
+          ]
+        },
+        {
+          "id": "#world-state-history-rdf",
+          "type": "RdfExpectation",
+          "targetsFileExpectation": "#world-state-history-state",
+          "hasAskAssertion": [
+            {
+              "id": "#ask-active-frame-snapshot",
+              "type": "SparqlAskAssertion",
+              "query": "ASK { <https://spectacular-voyage.github.io/test-inn-ambush/scenario/inn-ambush> <https://spectacular-voyage.github.io/stagecraft/ontology/temporaenum/hasActiveFrame> <https://spectacular-voyage.github.io/test-inn-ambush/frame/ambush-night> . <https://spectacular-voyage.github.io/test-inn-ambush/world-time-axis/main> <https://spectacular-voyage.github.io/stagecraft/ontology/temporaenum/hasActiveFrame> <https://spectacular-voyage.github.io/test-inn-ambush/frame/ambush-night> . <https://spectacular-voyage.github.io/test-inn-ambush/frame/ambush-night> a <https://spectacular-voyage.github.io/stagecraft/ontology/temporaenum/Frame> ; <http://www.w3.org/2000/01/rdf-schema#label> \"ambush night\" ; <https://spectacular-voyage.github.io/stagecraft/ontology/temporaenum/frameAnchorOffsetSeconds> 900.0 ; <https://spectacular-voyage.github.io/stagecraft/ontology/temporaenum/frameCloseOffsetSeconds> 11820.0 . }",
+              "expectedBoolean": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

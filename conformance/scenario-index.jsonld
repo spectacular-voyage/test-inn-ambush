@@ -822,6 +822,48 @@
           }
         }
       ]
+    },
+    {
+      "id": "#45-narrative-frames-records",
+      "type": "ScenarioStep",
+      "manifestPath": "45-narrative-frames-records.jsonld",
+      "hasLaneBinding": [
+        {
+          "type": "LaneStateBinding",
+          "lane": "#fixture-lane",
+          "fromLaneState": {
+            "type": "StateLocator",
+            "locatorKind": "gitRefState",
+            "ref": "b4918a0cea109c2603fa9d9b4c387fd36009356b"
+          },
+          "toLaneState": {
+            "type": "StateLocator",
+            "locatorKind": "gitRefState",
+            "ref": "a.45-narrative-frames-records"
+          }
+        }
+      ]
+    },
+    {
+      "id": "#46-narrative-frames-woven",
+      "type": "ScenarioStep",
+      "manifestPath": "46-narrative-frames-woven.jsonld",
+      "hasLaneBinding": [
+        {
+          "type": "LaneStateBinding",
+          "lane": "#fixture-lane",
+          "fromLaneState": {
+            "type": "StateLocator",
+            "locatorKind": "gitRefState",
+            "ref": "a.45-narrative-frames-records"
+          },
+          "toLaneState": {
+            "type": "StateLocator",
+            "locatorKind": "gitRefState",
+            "ref": "a.46-narrative-frames-woven"
+          }
+        }
+      ]
     }
   ]
 }

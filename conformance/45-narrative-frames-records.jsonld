@@ -1,0 +1,67 @@
+{
+  "@context": {
+    "@vocab": "https://spectacular-voyage.github.io/accord/ontology/",
+    "dcterms": "http://purl.org/dc/terms/",
+    "id": "@id",
+    "type": "@type",
+    "changeType": {
+      "@type": "@vocab"
+    },
+    "compareMode": {
+      "@type": "@vocab"
+    },
+    "targetsFileExpectation": {
+      "@type": "@id"
+    },
+    "locatorKind": {
+      "@type": "@vocab"
+    }
+  },
+  "type": "Manifest",
+  "id": "urn:accord:stagecraft:test-inn-ambush:45-narrative-frames-records",
+  "dcterms:title": "Inn Ambush 45 narrative frames records",
+  "hasCase": [
+    {
+      "type": "TransitionCase",
+      "id": "#narrative-frames-records",
+      "fixtureRepo": "github.com/spectacular-voyage/test-inn-ambush",
+      "operationId": "stagecraft.fixture.addNarrativeFrameRecords",
+      "fromRef": "b4918a0cea109c2603fa9d9b4c387fd36009356b",
+      "toRef": "a.45-narrative-frames-records",
+      "fromState": {
+        "type": "StateLocator",
+        "locatorKind": "gitRefState",
+        "ref": "b4918a0cea109c2603fa9d9b4c387fd36009356b"
+      },
+      "toState": {
+        "type": "StateLocator",
+        "locatorKind": "gitRefState",
+        "ref": "a.45-narrative-frames-records"
+      },
+      "hasFileExpectation": [
+        {
+          "id": "#world-state",
+          "type": "FileExpectation",
+          "path": "world/states/inn-ambush-plan-b-state/inn-ambush-plan-b-state.ttl",
+          "changeType": "updated",
+          "compareMode": "rdfCanonical"
+        }
+      ],
+      "hasRdfExpectation": [
+        {
+          "id": "#world-state-rdf-assertions",
+          "type": "RdfExpectation",
+          "targetsFileExpectation": "#world-state",
+          "hasAskAssertion": [
+            {
+              "id": "#ask-active-frame-records",
+              "type": "SparqlAskAssertion",
+              "query": "ASK { <https://spectacular-voyage.github.io/test-inn-ambush/scenario/inn-ambush> <https://spectacular-voyage.github.io/stagecraft/ontology/temporaenum/hasActiveFrame> <https://spectacular-voyage.github.io/test-inn-ambush/frame/ambush-night> . <https://spectacular-voyage.github.io/test-inn-ambush/world-time-axis/main> <https://spectacular-voyage.github.io/stagecraft/ontology/temporaenum/hasActiveFrame> <https://spectacular-voyage.github.io/test-inn-ambush/frame/ambush-night> . <https://spectacular-voyage.github.io/test-inn-ambush/frame/ambush-night> a <https://spectacular-voyage.github.io/stagecraft/ontology/temporaenum/Frame> ; <http://www.w3.org/2000/01/rdf-schema#label> \"ambush night\" ; <https://spectacular-voyage.github.io/stagecraft/ontology/temporaenum/frameAnchorOffsetSeconds> 900.0 ; <https://spectacular-voyage.github.io/stagecraft/ontology/temporaenum/frameCloseOffsetSeconds> 11820.0 . <https://spectacular-voyage.github.io/test-inn-ambush/relator/visibility/world-time/frame/players-current> <https://spectacular-voyage.github.io/stagecraft/ontology/subject> <https://spectacular-voyage.github.io/test-inn-ambush/world-time-axis/main>, <https://spectacular-voyage.github.io/test-inn-ambush/frame/ambush-night> ; <https://spectacular-voyage.github.io/stagecraft/ontology/object> <https://spectacular-voyage.github.io/test-inn-ambush/participant/alice>, <https://spectacular-voyage.github.io/test-inn-ambush/participant/bob> . }",
+              "expectedBoolean": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
