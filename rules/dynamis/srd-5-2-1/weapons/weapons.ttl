@@ -260,7 +260,7 @@
   dyn:weaponMastery "nick" ;
   dyn:sourceProperties "Finesse, Light, Thrown (Range 20/60)" ;
   dyn:sourceSection "Equipment: Weapons table" ;
-  dyn:hasWeaponProperty <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/property/finesse>, <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/property/light>, <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/property/range>, <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/property/thrown> .
+  dyn:hasWeaponProperty <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/property/finesse>, <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/property/light>, <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/property/thrown> .
 
 <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/weapon/greatclub>
   a dyn:WeaponDefinition, skos:Concept ;
@@ -292,7 +292,7 @@
   dyn:weaponMastery "vex" ;
   dyn:sourceProperties "Light, Thrown (Range 20/60)" ;
   dyn:sourceSection "Equipment: Weapons table" ;
-  dyn:hasWeaponProperty <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/property/light>, <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/property/range>, <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/property/thrown> .
+  dyn:hasWeaponProperty <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/property/light>, <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/property/thrown> .
 
 <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/weapon/javelin>
   a dyn:WeaponDefinition, skos:Concept ;
@@ -308,7 +308,7 @@
   dyn:weaponMastery "slow" ;
   dyn:sourceProperties "Thrown (Range 30/120)" ;
   dyn:sourceSection "Equipment: Weapons table" ;
-  dyn:hasWeaponProperty <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/property/range>, <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/property/thrown> .
+  dyn:hasWeaponProperty <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/property/thrown> .
 
 <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/weapon/light-hammer>
   a dyn:WeaponDefinition, skos:Concept ;
@@ -324,7 +324,7 @@
   dyn:weaponMastery "nick" ;
   dyn:sourceProperties "Light, Thrown (Range 20/60)" ;
   dyn:sourceSection "Equipment: Weapons table" ;
-  dyn:hasWeaponProperty <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/property/light>, <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/property/range>, <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/property/thrown> .
+  dyn:hasWeaponProperty <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/property/light>, <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/property/thrown> .
 
 <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/weapon/mace>
   a dyn:WeaponDefinition, skos:Concept ;
@@ -387,7 +387,7 @@
   dyn:weaponMastery "sap" ;
   dyn:sourceProperties "Thrown (Range 20/60), Versatile (1d8)" ;
   dyn:sourceSection "Equipment: Weapons table" ;
-  dyn:hasWeaponProperty <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/property/range>, <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/property/thrown>, <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/property/versatile> .
+  dyn:hasWeaponProperty <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/property/thrown>, <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/property/versatile> .
 
 <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/weapon/dart>
   a dyn:WeaponDefinition, skos:Concept ;
@@ -403,7 +403,7 @@
   dyn:weaponMastery "vex" ;
   dyn:sourceProperties "Finesse, Thrown (Range 20/60)" ;
   dyn:sourceSection "Equipment: Weapons table" ;
-  dyn:hasWeaponProperty <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/property/finesse>, <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/property/range>, <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/property/thrown> .
+  dyn:hasWeaponProperty <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/property/finesse>, <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/property/thrown> .
 
 <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/weapon/light-crossbow>
   a dyn:WeaponDefinition, skos:Concept ;
@@ -419,7 +419,7 @@
   dyn:weaponMastery "slow" ;
   dyn:sourceProperties "Ammunition (Range 80/320; Bolt), Loading, Two-Handed" ;
   dyn:sourceSection "Equipment: Weapons table" ;
-  dyn:hasWeaponProperty <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/property/ammunition>, <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/property/range>, <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/property/loading>, <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/property/two-handed> .
+  dyn:hasWeaponProperty <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/property/ammunition>, <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/property/loading>, <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/property/two-handed> .
 
 <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/weapon/shortbow>
   a dyn:WeaponDefinition, skos:Concept ;
@@ -435,7 +435,7 @@
   dyn:weaponMastery "vex" ;
   dyn:sourceProperties "Ammunition (Range 80/320; Arrow), Two-Handed" ;
   dyn:sourceSection "Equipment: Weapons table" ;
-  dyn:hasWeaponProperty <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/property/ammunition>, <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/property/range>, <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/property/two-handed> .
+  dyn:hasWeaponProperty <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/property/ammunition>, <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/property/two-handed> .
 
 <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/weapon/sling>
   a dyn:WeaponDefinition, skos:Concept ;
@@ -451,7 +451,7 @@
   dyn:weaponMastery "slow" ;
   dyn:sourceProperties "Ammunition (Range 30/120; Bullet)" ;
   dyn:sourceSection "Equipment: Weapons table" ;
-  dyn:hasWeaponProperty <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/property/ammunition>, <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/property/range> .
+  dyn:hasWeaponProperty <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/property/ammunition> .
 
 <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/weapon/battleaxe>
   a dyn:WeaponDefinition, skos:Concept ;
@@ -689,7 +689,7 @@
   dyn:weaponMastery "topple" ;
   dyn:sourceProperties "Thrown (Range 20/60), Versatile (1d10)" ;
   dyn:sourceSection "Equipment: Weapons table" ;
-  dyn:hasWeaponProperty <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/property/range>, <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/property/thrown>, <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/property/versatile> .
+  dyn:hasWeaponProperty <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/property/thrown>, <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/property/versatile> .
 
 <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/weapon/warhammer>
   a dyn:WeaponDefinition, skos:Concept ;
@@ -753,7 +753,7 @@
   dyn:weaponMastery "vex" ;
   dyn:sourceProperties "Ammunition (Range 25/100; Needle), Loading" ;
   dyn:sourceSection "Equipment: Weapons table" ;
-  dyn:hasWeaponProperty <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/property/ammunition>, <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/property/range>, <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/property/loading> .
+  dyn:hasWeaponProperty <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/property/ammunition>, <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/property/loading> .
 
 <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/weapon/hand-crossbow>
   a dyn:WeaponDefinition, skos:Concept ;
@@ -769,7 +769,7 @@
   dyn:weaponMastery "vex" ;
   dyn:sourceProperties "Ammunition (Range 30/120; Bolt), Light, Loading" ;
   dyn:sourceSection "Equipment: Weapons table" ;
-  dyn:hasWeaponProperty <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/property/ammunition>, <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/property/range>, <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/property/light>, <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/property/loading> .
+  dyn:hasWeaponProperty <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/property/ammunition>, <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/property/light>, <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/property/loading> .
 
 <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/weapon/heavy-crossbow>
   a dyn:WeaponDefinition, skos:Concept ;
@@ -785,7 +785,7 @@
   dyn:weaponMastery "push" ;
   dyn:sourceProperties "Ammunition (Range 100/400; Bolt), Heavy, Loading, Two-Handed" ;
   dyn:sourceSection "Equipment: Weapons table" ;
-  dyn:hasWeaponProperty <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/property/ammunition>, <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/property/range>, <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/property/heavy>, <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/property/loading>, <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/property/two-handed> .
+  dyn:hasWeaponProperty <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/property/ammunition>, <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/property/heavy>, <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/property/loading>, <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/property/two-handed> .
 
 <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/weapon/longbow>
   a dyn:WeaponDefinition, skos:Concept ;
@@ -801,7 +801,7 @@
   dyn:weaponMastery "slow" ;
   dyn:sourceProperties "Ammunition (Range 150/600; Arrow), Heavy, Two-Handed" ;
   dyn:sourceSection "Equipment: Weapons table" ;
-  dyn:hasWeaponProperty <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/property/ammunition>, <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/property/range>, <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/property/heavy>, <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/property/two-handed> .
+  dyn:hasWeaponProperty <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/property/ammunition>, <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/property/heavy>, <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/property/two-handed> .
 
 <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/weapon/musket>
   a dyn:WeaponDefinition, skos:Concept ;
@@ -817,7 +817,7 @@
   dyn:weaponMastery "slow" ;
   dyn:sourceProperties "Ammunition (Range 40/120; Bullet), Loading, Two-Handed" ;
   dyn:sourceSection "Equipment: Weapons table" ;
-  dyn:hasWeaponProperty <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/property/ammunition>, <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/property/range>, <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/property/loading>, <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/property/two-handed> .
+  dyn:hasWeaponProperty <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/property/ammunition>, <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/property/loading>, <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/property/two-handed> .
 
 <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/weapon/pistol>
   a dyn:WeaponDefinition, skos:Concept ;
@@ -833,7 +833,7 @@
   dyn:weaponMastery "vex" ;
   dyn:sourceProperties "Ammunition (Range 30/90; Bullet), Loading" ;
   dyn:sourceSection "Equipment: Weapons table" ;
-  dyn:hasWeaponProperty <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/property/ammunition>, <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/property/range>, <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/property/loading> .
+  dyn:hasWeaponProperty <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/property/ammunition>, <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/property/loading> .
 
 <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/item-action/club-melee>
   a dyn:ItemActionOption ;

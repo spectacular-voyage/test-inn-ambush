@@ -1,18 +1,18 @@
 weaponKey,weaponLabel,category,rangeKind,cost,damageExpression,staticDamage,damageTypeKey,weight,properties,masteryKey,sourceProperties,sourceSection
 club,Club,simple,melee,1 SP,1d4,,bludgeoning,2 lb.,light,slow,Light,Equipment: Weapons table
-dagger,Dagger,simple,melee,2 GP,1d4,,piercing,1 lb.,finesse;light;range;thrown,nick,"Finesse, Light, Thrown (Range 20/60)",Equipment: Weapons table
+dagger,Dagger,simple,melee,2 GP,1d4,,piercing,1 lb.,finesse;light;thrown,nick,"Finesse, Light, Thrown (Range 20/60)",Equipment: Weapons table
 greatclub,Greatclub,simple,melee,2 SP,1d8,,bludgeoning,10 lb.,two-handed,push,Two-Handed,Equipment: Weapons table
-handaxe,Handaxe,simple,melee,5 GP,1d6,,slashing,2 lb.,light;range;thrown,vex,"Light, Thrown (Range 20/60)",Equipment: Weapons table
-javelin,Javelin,simple,melee,5 SP,1d6,,piercing,2 lb.,range;thrown,slow,Thrown (Range 30/120),Equipment: Weapons table
-light-hammer,Light Hammer,simple,melee,2 GP,1d4,,bludgeoning,2 lb.,light;range;thrown,nick,"Light, Thrown (Range 20/60)",Equipment: Weapons table
+handaxe,Handaxe,simple,melee,5 GP,1d6,,slashing,2 lb.,light;thrown,vex,"Light, Thrown (Range 20/60)",Equipment: Weapons table
+javelin,Javelin,simple,melee,5 SP,1d6,,piercing,2 lb.,thrown,slow,Thrown (Range 30/120),Equipment: Weapons table
+light-hammer,Light Hammer,simple,melee,2 GP,1d4,,bludgeoning,2 lb.,light;thrown,nick,"Light, Thrown (Range 20/60)",Equipment: Weapons table
 mace,Mace,simple,melee,5 GP,1d6,,bludgeoning,4 lb.,,sap,,Equipment: Weapons table
 quarterstaff,Quarterstaff,simple,melee,2 SP,1d6,,bludgeoning,4 lb.,versatile,topple,Versatile (1d8),Equipment: Weapons table
 sickle,Sickle,simple,melee,1 GP,1d4,,slashing,2 lb.,light,nick,Light,Equipment: Weapons table
-spear,Spear,simple,melee,1 GP,1d6,,piercing,3 lb.,range;thrown;versatile,sap,"Thrown (Range 20/60), Versatile (1d8)",Equipment: Weapons table
-dart,Dart,simple,ranged,5 CP,1d4,,piercing,1/4 lb.,finesse;range;thrown,vex,"Finesse, Thrown (Range 20/60)",Equipment: Weapons table
-light-crossbow,Light Crossbow,simple,ranged,25 GP,1d8,,piercing,5 lb.,ammunition;range;loading;two-handed,slow,"Ammunition (Range 80/320; Bolt), Loading, Two-Handed",Equipment: Weapons table
-shortbow,Shortbow,simple,ranged,25 GP,1d6,,piercing,2 lb.,ammunition;range;two-handed,vex,"Ammunition (Range 80/320; Arrow), Two-Handed",Equipment: Weapons table
-sling,Sling,simple,ranged,1 SP,1d4,,bludgeoning,,ammunition;range,slow,Ammunition (Range 30/120; Bullet),Equipment: Weapons table
+spear,Spear,simple,melee,1 GP,1d6,,piercing,3 lb.,thrown;versatile,sap,"Thrown (Range 20/60), Versatile (1d8)",Equipment: Weapons table
+dart,Dart,simple,ranged,5 CP,1d4,,piercing,1/4 lb.,finesse;thrown,vex,"Finesse, Thrown (Range 20/60)",Equipment: Weapons table
+light-crossbow,Light Crossbow,simple,ranged,25 GP,1d8,,piercing,5 lb.,ammunition;loading;two-handed,slow,"Ammunition (Range 80/320; Bolt), Loading, Two-Handed",Equipment: Weapons table
+shortbow,Shortbow,simple,ranged,25 GP,1d6,,piercing,2 lb.,ammunition;two-handed,vex,"Ammunition (Range 80/320; Arrow), Two-Handed",Equipment: Weapons table
+sling,Sling,simple,ranged,1 SP,1d4,,bludgeoning,,ammunition,slow,Ammunition (Range 30/120; Bullet),Equipment: Weapons table
 battleaxe,Battleaxe,martial,melee,10 GP,1d8,,slashing,4 lb.,versatile,topple,Versatile (1d10),Equipment: Weapons table
 flail,Flail,martial,melee,10 GP,1d8,,bludgeoning,2 lb.,,sap,,Equipment: Weapons table
 glaive,Glaive,martial,melee,20 GP,1d10,,slashing,6 lb.,heavy;reach;two-handed,graze,"Heavy, Reach, Two-Handed",Equipment: Weapons table
@@ -27,13 +27,13 @@ pike,Pike,martial,melee,5 GP,1d10,,piercing,18 lb.,heavy;reach;two-handed,push,"
 rapier,Rapier,martial,melee,25 GP,1d8,,piercing,2 lb.,finesse,vex,Finesse,Equipment: Weapons table
 scimitar,Scimitar,martial,melee,25 GP,1d6,,slashing,3 lb.,finesse;light,nick,"Finesse, Light",Equipment: Weapons table
 shortsword,Shortsword,martial,melee,10 GP,1d6,,piercing,2 lb.,finesse;light,vex,"Finesse, Light",Equipment: Weapons table
-trident,Trident,martial,melee,5 GP,1d8,,piercing,4 lb.,range;thrown;versatile,topple,"Thrown (Range 20/60), Versatile (1d10)",Equipment: Weapons table
+trident,Trident,martial,melee,5 GP,1d8,,piercing,4 lb.,thrown;versatile,topple,"Thrown (Range 20/60), Versatile (1d10)",Equipment: Weapons table
 warhammer,Warhammer,martial,melee,15 GP,1d8,,bludgeoning,5 lb.,versatile,push,Versatile (1d10),Equipment: Weapons table
 war-pick,War Pick,martial,melee,5 GP,1d8,,piercing,2 lb.,versatile,sap,Versatile (1d10),Equipment: Weapons table
 whip,Whip,martial,melee,2 GP,1d4,,slashing,3 lb.,finesse;reach,slow,"Finesse, Reach",Equipment: Weapons table
-blowgun,Blowgun,martial,ranged,10 GP,,1,piercing,1 lb.,ammunition;range;loading,vex,"Ammunition (Range 25/100; Needle), Loading",Equipment: Weapons table
-hand-crossbow,Hand Crossbow,martial,ranged,75 GP,1d6,,piercing,3 lb.,ammunition;range;light;loading,vex,"Ammunition (Range 30/120; Bolt), Light, Loading",Equipment: Weapons table
-heavy-crossbow,Heavy Crossbow,martial,ranged,50 GP,1d10,,piercing,18 lb.,ammunition;range;heavy;loading;two-handed,push,"Ammunition (Range 100/400; Bolt), Heavy, Loading, Two-Handed",Equipment: Weapons table
-longbow,Longbow,martial,ranged,50 GP,1d8,,piercing,2 lb.,ammunition;range;heavy;two-handed,slow,"Ammunition (Range 150/600; Arrow), Heavy, Two-Handed",Equipment: Weapons table
-musket,Musket,martial,ranged,500 GP,1d12,,piercing,10 lb.,ammunition;range;loading;two-handed,slow,"Ammunition (Range 40/120; Bullet), Loading, Two-Handed",Equipment: Weapons table
-pistol,Pistol,martial,ranged,250 GP,1d10,,piercing,3 lb.,ammunition;range;loading,vex,"Ammunition (Range 30/90; Bullet), Loading",Equipment: Weapons table
+blowgun,Blowgun,martial,ranged,10 GP,,1,piercing,1 lb.,ammunition;loading,vex,"Ammunition (Range 25/100; Needle), Loading",Equipment: Weapons table
+hand-crossbow,Hand Crossbow,martial,ranged,75 GP,1d6,,piercing,3 lb.,ammunition;light;loading,vex,"Ammunition (Range 30/120; Bolt), Light, Loading",Equipment: Weapons table
+heavy-crossbow,Heavy Crossbow,martial,ranged,50 GP,1d10,,piercing,18 lb.,ammunition;heavy;loading;two-handed,push,"Ammunition (Range 100/400; Bolt), Heavy, Loading, Two-Handed",Equipment: Weapons table
+longbow,Longbow,martial,ranged,50 GP,1d8,,piercing,2 lb.,ammunition;heavy;two-handed,slow,"Ammunition (Range 150/600; Arrow), Heavy, Two-Handed",Equipment: Weapons table
+musket,Musket,martial,ranged,500 GP,1d12,,piercing,10 lb.,ammunition;loading;two-handed,slow,"Ammunition (Range 40/120; Bullet), Loading, Two-Handed",Equipment: Weapons table
+pistol,Pistol,martial,ranged,250 GP,1d10,,piercing,3 lb.,ammunition;loading,vex,"Ammunition (Range 30/90; Bullet), Loading",Equipment: Weapons table
