@@ -1,0 +1,50 @@
+{
+  "@context": {
+    "@vocab": "https://spectacular-voyage.github.io/accord/ontology/",
+    "dcterms": "http://purl.org/dc/terms/",
+    "id": "@id",
+    "type": "@type",
+    "lane": {
+      "@type": "@id"
+    },
+    "locatorKind": {
+      "@type": "@vocab"
+    }
+  },
+  "type": "ScenarioIndex",
+  "id": "urn:accord:stagecraft:test-inn-ambush:12-temporal-vocabulary-woven-scenario",
+  "dcterms:title": "Inn Ambush 12 temporal vocabulary woven scenario",
+  "defaultFixtureRepo": "github.com/spectacular-voyage/test-inn-ambush",
+  "branchPrefix": "a.",
+  "hasStateLane": [
+    {
+      "id": "#fixture-lane",
+      "type": "StateLane",
+      "laneKey": "fixture",
+      "branchPrefix": "a."
+    }
+  ],
+  "hasStep": [
+    {
+      "id": "#12-temporal-vocabulary-woven",
+      "type": "ScenarioStep",
+      "manifestPath": "12-temporal-vocabulary-woven.jsonld",
+      "hasLaneBinding": [
+        {
+          "type": "LaneStateBinding",
+          "lane": "#fixture-lane",
+          "fromLaneState": {
+            "type": "StateLocator",
+            "locatorKind": "gitRefState",
+            "ref": "a.11-temporal-vocabulary-records"
+          },
+          "toLaneState": {
+            "type": "StateLocator",
+            "locatorKind": "gitRefState",
+            "ref": "a.12-temporal-vocabulary-woven"
+          }
+        }
+      ]
+    }
+  ]
+}
