@@ -22,8 +22,9 @@
   sflo:hasHistoricalState <authority/journals/plan-b/_history001/_s0002> ;
   sflo:hasHistoricalState <authority/journals/plan-b/_history001/_s0003> ;
   sflo:hasHistoricalState <authority/journals/plan-b/_history001/_s0004> ;
-  sflo:latestHistoricalState <authority/journals/plan-b/_history001/_s0004> ;
-  sflo:nextStateOrdinal "5"^^xsd:nonNegativeInteger ;
+  sflo:hasHistoricalState <authority/journals/plan-b/_history001/_s0005> ;
+  sflo:latestHistoricalState <authority/journals/plan-b/_history001/_s0005> ;
+  sflo:nextStateOrdinal "6"^^xsd:nonNegativeInteger ;
   sflo:hasResourcePage <authority/journals/plan-b/_history001/index.html> .
 
 <authority/journals/plan-b/_history001/_s0001> a sflo:HistoricalState ;
@@ -69,6 +70,17 @@
   sflo:locatedFileForManifestation <authority/journals/plan-b/_history001/_s0004/ttl/plan-b.ttl> ;
   sflo:hasResourcePage <authority/journals/plan-b/_history001/_s0004/ttl/index.html> .
 
+<authority/journals/plan-b/_history001/_s0005> a sflo:HistoricalState ;
+  sflo:stateOrdinal "5"^^xsd:nonNegativeInteger ;
+  sflo:previousHistoricalState <authority/journals/plan-b/_history001/_s0004> ;
+  sflo:hasManifestation <authority/journals/plan-b/_history001/_s0005/ttl> ;
+  sflo:locatedFileForState <authority/journals/plan-b/_history001/_s0005/ttl/plan-b.ttl> ;
+  sflo:hasResourcePage <authority/journals/plan-b/_history001/_s0005/index.html> .
+
+<authority/journals/plan-b/_history001/_s0005/ttl> a sflo:ArtifactManifestation, sflo:RdfDocument ;
+  sflo:locatedFileForManifestation <authority/journals/plan-b/_history001/_s0005/ttl/plan-b.ttl> ;
+  sflo:hasResourcePage <authority/journals/plan-b/_history001/_s0005/ttl/index.html> .
+
 <authority/journals/plan-b/_knop/_meta> a sflo:KnopMetadata, sflo:DigitalArtifact, sflo:RdfDocument ;
   sflo:hasWorkingLocatedFile <authority/journals/plan-b/_knop/_meta/meta.ttl> ;
   sflo:hasResourcePage <authority/journals/plan-b/_knop/_meta/index.html> .
@@ -91,6 +103,8 @@
 
 <authority/journals/plan-b/_history001/_s0004/ttl/plan-b.ttl> a sflo:LocatedFile, sflo:RdfDocument .
 
+<authority/journals/plan-b/_history001/_s0005/ttl/plan-b.ttl> a sflo:LocatedFile, sflo:RdfDocument .
+
 <authority/journals/plan-b/index.html> a sflo:ResourcePage, sflo:LocatedFile .
 
 <authority/journals/plan-b/_history001/index.html> a sflo:ResourcePage, sflo:LocatedFile .
@@ -110,6 +124,10 @@
 <authority/journals/plan-b/_history001/_s0004/index.html> a sflo:ResourcePage, sflo:LocatedFile .
 
 <authority/journals/plan-b/_history001/_s0004/ttl/index.html> a sflo:ResourcePage, sflo:LocatedFile .
+
+<authority/journals/plan-b/_history001/_s0005/index.html> a sflo:ResourcePage, sflo:LocatedFile .
+
+<authority/journals/plan-b/_history001/_s0005/ttl/index.html> a sflo:ResourcePage, sflo:LocatedFile .
 
 <authority/journals/plan-b/_knop/index.html> a sflo:ResourcePage, sflo:LocatedFile .
 
