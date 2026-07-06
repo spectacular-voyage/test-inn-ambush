@@ -22,8 +22,9 @@
   sflo:hasHistoricalState <world/states/inn-ambush-plan-b-state/_history001/_s0002> ;
   sflo:hasHistoricalState <world/states/inn-ambush-plan-b-state/_history001/_s0003> ;
   sflo:hasHistoricalState <world/states/inn-ambush-plan-b-state/_history001/_s0004> ;
-  sflo:latestHistoricalState <world/states/inn-ambush-plan-b-state/_history001/_s0004> ;
-  sflo:nextStateOrdinal "5"^^xsd:nonNegativeInteger ;
+  sflo:hasHistoricalState <world/states/inn-ambush-plan-b-state/_history001/_s0005> ;
+  sflo:latestHistoricalState <world/states/inn-ambush-plan-b-state/_history001/_s0005> ;
+  sflo:nextStateOrdinal "6"^^xsd:nonNegativeInteger ;
   sflo:hasResourcePage <world/states/inn-ambush-plan-b-state/_history001/index.html> .
 
 <world/states/inn-ambush-plan-b-state/_history001/_s0001> a sflo:HistoricalState ;
@@ -32,20 +33,12 @@
   sflo:locatedFileForState <world/states/inn-ambush-plan-b-state/_history001/_s0001/ttl/inn-ambush-plan-b-state.ttl> ;
   sflo:hasResourcePage <world/states/inn-ambush-plan-b-state/_history001/_s0001/index.html> .
 
-<world/states/inn-ambush-plan-b-state/_history001/_s0001/ttl> a sflo:ArtifactManifestation, sflo:RdfDocument ;
-  sflo:locatedFileForManifestation <world/states/inn-ambush-plan-b-state/_history001/_s0001/ttl/inn-ambush-plan-b-state.ttl> ;
-  sflo:hasResourcePage <world/states/inn-ambush-plan-b-state/_history001/_s0001/ttl/index.html> .
-
 <world/states/inn-ambush-plan-b-state/_history001/_s0002> a sflo:HistoricalState ;
   sflo:stateOrdinal "2"^^xsd:nonNegativeInteger ;
   sflo:previousHistoricalState <world/states/inn-ambush-plan-b-state/_history001/_s0001> ;
   sflo:hasManifestation <world/states/inn-ambush-plan-b-state/_history001/_s0002/ttl> ;
   sflo:locatedFileForState <world/states/inn-ambush-plan-b-state/_history001/_s0002/ttl/inn-ambush-plan-b-state.ttl> ;
   sflo:hasResourcePage <world/states/inn-ambush-plan-b-state/_history001/_s0002/index.html> .
-
-<world/states/inn-ambush-plan-b-state/_history001/_s0002/ttl> a sflo:ArtifactManifestation, sflo:RdfDocument ;
-  sflo:locatedFileForManifestation <world/states/inn-ambush-plan-b-state/_history001/_s0002/ttl/inn-ambush-plan-b-state.ttl> ;
-  sflo:hasResourcePage <world/states/inn-ambush-plan-b-state/_history001/_s0002/ttl/index.html> .
 
 <world/states/inn-ambush-plan-b-state/_history001/_s0003> a sflo:HistoricalState ;
   sflo:stateOrdinal "3"^^xsd:nonNegativeInteger ;
@@ -54,10 +47,6 @@
   sflo:locatedFileForState <world/states/inn-ambush-plan-b-state/_history001/_s0003/ttl/inn-ambush-plan-b-state.ttl> ;
   sflo:hasResourcePage <world/states/inn-ambush-plan-b-state/_history001/_s0003/index.html> .
 
-<world/states/inn-ambush-plan-b-state/_history001/_s0003/ttl> a sflo:ArtifactManifestation, sflo:RdfDocument ;
-  sflo:locatedFileForManifestation <world/states/inn-ambush-plan-b-state/_history001/_s0003/ttl/inn-ambush-plan-b-state.ttl> ;
-  sflo:hasResourcePage <world/states/inn-ambush-plan-b-state/_history001/_s0003/ttl/index.html> .
-
 <world/states/inn-ambush-plan-b-state/_history001/_s0004> a sflo:HistoricalState ;
   sflo:stateOrdinal "4"^^xsd:nonNegativeInteger ;
   sflo:previousHistoricalState <world/states/inn-ambush-plan-b-state/_history001/_s0003> ;
@@ -65,9 +54,32 @@
   sflo:locatedFileForState <world/states/inn-ambush-plan-b-state/_history001/_s0004/ttl/inn-ambush-plan-b-state.ttl> ;
   sflo:hasResourcePage <world/states/inn-ambush-plan-b-state/_history001/_s0004/index.html> .
 
+<world/states/inn-ambush-plan-b-state/_history001/_s0005> a sflo:HistoricalState ;
+  sflo:stateOrdinal "5"^^xsd:nonNegativeInteger ;
+  sflo:previousHistoricalState <world/states/inn-ambush-plan-b-state/_history001/_s0004> ;
+  sflo:hasManifestation <world/states/inn-ambush-plan-b-state/_history001/_s0005/ttl> ;
+  sflo:locatedFileForState <world/states/inn-ambush-plan-b-state/_history001/_s0005/ttl/inn-ambush-plan-b-state.ttl> ;
+  sflo:hasResourcePage <world/states/inn-ambush-plan-b-state/_history001/_s0005/index.html> .
+
+<world/states/inn-ambush-plan-b-state/_history001/_s0001/ttl> a sflo:ArtifactManifestation, sflo:RdfDocument ;
+  sflo:locatedFileForManifestation <world/states/inn-ambush-plan-b-state/_history001/_s0001/ttl/inn-ambush-plan-b-state.ttl> ;
+  sflo:hasResourcePage <world/states/inn-ambush-plan-b-state/_history001/_s0001/ttl/index.html> .
+
+<world/states/inn-ambush-plan-b-state/_history001/_s0002/ttl> a sflo:ArtifactManifestation, sflo:RdfDocument ;
+  sflo:locatedFileForManifestation <world/states/inn-ambush-plan-b-state/_history001/_s0002/ttl/inn-ambush-plan-b-state.ttl> ;
+  sflo:hasResourcePage <world/states/inn-ambush-plan-b-state/_history001/_s0002/ttl/index.html> .
+
+<world/states/inn-ambush-plan-b-state/_history001/_s0003/ttl> a sflo:ArtifactManifestation, sflo:RdfDocument ;
+  sflo:locatedFileForManifestation <world/states/inn-ambush-plan-b-state/_history001/_s0003/ttl/inn-ambush-plan-b-state.ttl> ;
+  sflo:hasResourcePage <world/states/inn-ambush-plan-b-state/_history001/_s0003/ttl/index.html> .
+
 <world/states/inn-ambush-plan-b-state/_history001/_s0004/ttl> a sflo:ArtifactManifestation, sflo:RdfDocument ;
   sflo:locatedFileForManifestation <world/states/inn-ambush-plan-b-state/_history001/_s0004/ttl/inn-ambush-plan-b-state.ttl> ;
   sflo:hasResourcePage <world/states/inn-ambush-plan-b-state/_history001/_s0004/ttl/index.html> .
+
+<world/states/inn-ambush-plan-b-state/_history001/_s0005/ttl> a sflo:ArtifactManifestation, sflo:RdfDocument ;
+  sflo:locatedFileForManifestation <world/states/inn-ambush-plan-b-state/_history001/_s0005/ttl/inn-ambush-plan-b-state.ttl> ;
+  sflo:hasResourcePage <world/states/inn-ambush-plan-b-state/_history001/_s0005/ttl/index.html> .
 
 <world/states/inn-ambush-plan-b-state/_knop/_meta> a sflo:KnopMetadata, sflo:DigitalArtifact, sflo:RdfDocument ;
   sflo:hasWorkingLocatedFile <world/states/inn-ambush-plan-b-state/_knop/_meta/meta.ttl> ;
@@ -76,6 +88,12 @@
 <world/states/inn-ambush-plan-b-state/_knop/_inventory> a sflo:KnopInventory, sflo:DigitalArtifact, sflo:RdfDocument ;
   sflo:hasWorkingLocatedFile <world/states/inn-ambush-plan-b-state/_knop/_inventory/inventory.ttl> ;
   sflo:hasResourcePage <world/states/inn-ambush-plan-b-state/_knop/_inventory/index.html> .
+
+
+
+
+
+
 
 <world/states/inn-ambush-plan-b-state/_knop/_meta/meta.ttl> a sflo:LocatedFile, sflo:RdfDocument .
 
@@ -88,6 +106,12 @@
 <world/states/inn-ambush-plan-b-state/_history001/_s0002/ttl/inn-ambush-plan-b-state.ttl> a sflo:LocatedFile, sflo:RdfDocument .
 
 <world/states/inn-ambush-plan-b-state/_history001/_s0003/ttl/inn-ambush-plan-b-state.ttl> a sflo:LocatedFile, sflo:RdfDocument .
+
+<world/states/inn-ambush-plan-b-state/_history001/_s0004/ttl/inn-ambush-plan-b-state.ttl> a sflo:LocatedFile, sflo:RdfDocument .
+
+<world/states/inn-ambush-plan-b-state/_history001/_s0005/ttl/inn-ambush-plan-b-state.ttl> a sflo:LocatedFile, sflo:RdfDocument .
+
+
 
 <world/states/inn-ambush-plan-b-state/index.html> a sflo:ResourcePage, sflo:LocatedFile .
 
@@ -105,14 +129,16 @@
 
 <world/states/inn-ambush-plan-b-state/_history001/_s0003/ttl/index.html> a sflo:ResourcePage, sflo:LocatedFile .
 
+<world/states/inn-ambush-plan-b-state/_history001/_s0004/index.html> a sflo:ResourcePage, sflo:LocatedFile .
+
+<world/states/inn-ambush-plan-b-state/_history001/_s0004/ttl/index.html> a sflo:ResourcePage, sflo:LocatedFile .
+
+<world/states/inn-ambush-plan-b-state/_history001/_s0005/index.html> a sflo:ResourcePage, sflo:LocatedFile .
+
+<world/states/inn-ambush-plan-b-state/_history001/_s0005/ttl/index.html> a sflo:ResourcePage, sflo:LocatedFile .
+
 <world/states/inn-ambush-plan-b-state/_knop/index.html> a sflo:ResourcePage, sflo:LocatedFile .
 
 <world/states/inn-ambush-plan-b-state/_knop/_meta/index.html> a sflo:ResourcePage, sflo:LocatedFile .
 
 <world/states/inn-ambush-plan-b-state/_knop/_inventory/index.html> a sflo:ResourcePage, sflo:LocatedFile .
-
-<world/states/inn-ambush-plan-b-state/_history001/_s0004/ttl/inn-ambush-plan-b-state.ttl> a sflo:LocatedFile, sflo:RdfDocument .
-
-<world/states/inn-ambush-plan-b-state/_history001/_s0004/index.html> a sflo:ResourcePage, sflo:LocatedFile .
-
-<world/states/inn-ambush-plan-b-state/_history001/_s0004/ttl/index.html> a sflo:ResourcePage, sflo:LocatedFile .
