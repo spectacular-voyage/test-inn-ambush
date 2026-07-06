@@ -1,0 +1,113 @@
+{
+  "@context": {
+    "@vocab": "https://spectacular-voyage.github.io/accord/ontology/",
+    "dcterms": "http://purl.org/dc/terms/",
+    "id": "@id",
+    "type": "@type",
+    "changeType": {
+      "@type": "@vocab"
+    },
+    "compareMode": {
+      "@type": "@vocab"
+    },
+    "targetsFileExpectation": {
+      "@type": "@id"
+    },
+    "locatorKind": {
+      "@type": "@vocab"
+    }
+  },
+  "type": "Manifest",
+  "id": "urn:accord:stagecraft:test-inn-ambush:27-d20-roll-evidence-records",
+  "dcterms:title": "Inn Ambush 27 D20 roll evidence records",
+  "hasCase": [
+    {
+      "type": "TransitionCase",
+      "id": "#d20-roll-evidence-records",
+      "fixtureRepo": "github.com/spectacular-voyage/test-inn-ambush",
+      "operationId": "stagecraft.fixture.addD20RollEvidenceRecords",
+      "fromRef": "1e24564b83fd4234cc91d8ee018c1be8070270b9",
+      "toRef": "a.27-d20-roll-evidence-records",
+      "fromState": {
+        "type": "StateLocator",
+        "locatorKind": "gitRefState",
+        "ref": "1e24564b83fd4234cc91d8ee018c1be8070270b9"
+      },
+      "toState": {
+        "type": "StateLocator",
+        "locatorKind": "gitRefState",
+        "ref": "a.27-d20-roll-evidence-records"
+      },
+      "hasFileExpectation": [
+        {
+          "id": "#authority-journal",
+          "type": "FileExpectation",
+          "path": "authority/journals/plan-b/plan-b.ttl",
+          "changeType": "updated",
+          "compareMode": "rdfCanonical"
+        },
+        {
+          "id": "#d20-rdf",
+          "type": "FileExpectation",
+          "path": "rules/dynamis/srd-5-2-1/d20-test/d20-test.ttl",
+          "changeType": "unchanged",
+          "compareMode": "rdfCanonical"
+        },
+        {
+          "id": "#manifest",
+          "type": "FileExpectation",
+          "path": "conformance/27-d20-roll-evidence-records.jsonld",
+          "changeType": "added",
+          "compareMode": "json"
+        },
+        {
+          "id": "#scenario-index",
+          "type": "FileExpectation",
+          "path": "conformance/scenario-index.jsonld",
+          "changeType": "updated",
+          "compareMode": "json"
+        }
+      ],
+      "hasRdfExpectation": [
+        {
+          "id": "#authority-journal-rdf-expectation",
+          "type": "RdfExpectation",
+          "targetsFileExpectation": "#authority-journal",
+          "hasAskAssertion": [
+            {
+              "id": "#ask-four-record-chain",
+              "type": "SparqlAskAssertion",
+              "query": "ASK { <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/d20-test-warrant/perception-check-001> a <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/D20TestWarrant> ; <http://purl.org/dc/terms/created> \"2026-06-29T13:40:00Z\"^^<http://www.w3.org/2001/XMLSchema#dateTime> ; <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/warrantedActor> <https://spectacular-voyage.github.io/test-inn-ambush/actant/elara> ; <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/warrantedTestType> <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/AbilityCheck> ; <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/targetNumber> 15 . <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/d20-roll/perception-check-001> a <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/D20RollEvidence> ; <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/resolvesWarrant> <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/d20-test-warrant/perception-check-001> ; <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/diceExpression> \"1d20+3+2\" ; <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/provenanceKind> \"generated\" ; <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/rollModifier> <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/d20-roll/perception-check-001/modifier/wisdom>, <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/d20-roll/perception-check-001/modifier/perception-proficiency> . <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/d20-test-outcome/perception-check-001> a <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/D20TestOutcome> ; <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/resolvesWarrant> <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/d20-test-warrant/perception-check-001> ; <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/rollEvidence> <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/d20-roll/perception-check-001> ; <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/targetNumber> 15 ; <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/mechanicalResult> \"failure\" ; <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/adjudicatedResult> \"success\" . <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/d20-test-consequence/perception-check-001> a <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/D20TestConsequence> ; <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/consequenceOfOutcome> <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/d20-test-outcome/perception-check-001> . }",
+              "expectedBoolean": true
+            },
+            {
+              "id": "#ask-roll-arithmetic-and-bounds",
+              "type": "SparqlAskAssertion",
+              "query": "ASK { <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/d20-roll/perception-check-001> <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/rawDieFace> 8 ; <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/rollTotal> 13 . <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/d20-roll/perception-check-001/modifier/wisdom> <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/modifierValue> 3 ; <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/modifierSource> <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/Wisdom> ; <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/modifierKind> \"ability\" . <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/d20-roll/perception-check-001/modifier/perception-proficiency> <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/modifierValue> 2 ; <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/modifierSource> <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/d20-test/skill-rule/perception> ; <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/modifierKind> \"proficiency\" . }",
+              "expectedBoolean": true
+            },
+            {
+              "id": "#ask-outcome-diverges-from-roll-evidence",
+              "type": "SparqlAskAssertion",
+              "query": "ASK { <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/d20-roll/perception-check-001> <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/rollTotal> 13 . <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/d20-test-outcome/perception-check-001> <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/mechanicalResult> \"failure\" ; <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/adjudicatedResult> \"success\" ; <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/adjudicationNote> \"GM override: Elara spots the scuffed threshold because the earlier door-bar plan put her attention on the entryway.\" . }",
+              "expectedBoolean": true
+            }
+          ]
+        },
+        {
+          "id": "#d20-rdf-expectation",
+          "type": "RdfExpectation",
+          "targetsFileExpectation": "#d20-rdf",
+          "hasAskAssertion": [
+            {
+              "id": "#ask-modifier-sources-resolve",
+              "type": "SparqlAskAssertion",
+              "query": "ASK { <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/Wisdom> a <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/AbilityScore> . <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/Perception> a <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/Skill> ; <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/defaultAbility> <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/Wisdom> . <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/d20-test/skill-rule/perception> a <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/D20SkillRule> ; <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/usesSkill> <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/Perception> ; <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/usesAbility> <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/Wisdom> . }",
+              "expectedBoolean": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

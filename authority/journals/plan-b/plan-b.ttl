@@ -1,4 +1,5 @@
 @prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dyn: <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/> .
 @prefix sc: <https://spectacular-voyage.github.io/stagecraft/ontology/> .
 @prefix sflo: <https://semantic-flow.github.io/sflo/ontology/> .
 @prefix stage: <https://spectacular-voyage.github.io/test-inn-ambush/> .
@@ -255,3 +256,62 @@
   sc:hasSceneLocalTime <https://spectacular-voyage.github.io/test-inn-ambush/scene-local-time/inn-scene-plan-b> ;
   sc:inHistory <https://spectacular-voyage.github.io/test-inn-ambush/history/main> ;
   sc:inTemporalScope <https://spectacular-voyage.github.io/test-inn-ambush/temporal-scope/inn-scene> .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/d20-test-warrant/perception-check-001>
+  a dyn:D20TestWarrant ;
+  dcterms:created "2026-06-29T13:40:00Z"^^xsd:dateTime ;
+  dcterms:references <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/d20-test>,
+    <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/d20-test/skill-rule/perception>,
+    dyn:Perception ;
+  sc:basedOnHistory <https://spectacular-voyage.github.io/test-inn-ambush/history/main> ;
+  sc:committedBy <https://spectacular-voyage.github.io/test-inn-ambush/gm/alex> ;
+  dyn:warrantedActor <https://spectacular-voyage.github.io/test-inn-ambush/actant/elara> ;
+  dyn:warrantedTestType dyn:AbilityCheck ;
+  dyn:targetNumber 15 .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/d20-roll/perception-check-001>
+  a dyn:D20RollEvidence ;
+  dcterms:created "2026-06-29T13:40:05Z"^^xsd:dateTime ;
+  dcterms:references <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/d20-test>,
+    dyn:Perception ;
+  sc:basedOnHistory <https://spectacular-voyage.github.io/test-inn-ambush/history/main> ;
+  sc:committedBy <https://spectacular-voyage.github.io/test-inn-ambush/authority-policy/d20-generated-rolls> ;
+  dyn:diceExpression "1d20+3+2" ;
+  dyn:provenanceKind "generated" ;
+  dyn:rawDieFace 8 ;
+  dyn:resolvesWarrant <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/d20-test-warrant/perception-check-001> ;
+  dyn:rollModifier <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/d20-roll/perception-check-001/modifier/wisdom>,
+    <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/d20-roll/perception-check-001/modifier/perception-proficiency> ;
+  dyn:rollTotal 13 .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/d20-roll/perception-check-001/modifier/wisdom>
+  a dyn:D20RollModifier ;
+  dyn:modifierKind "ability" ;
+  dyn:modifierSource dyn:Wisdom ;
+  dyn:modifierValue 3 .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/d20-roll/perception-check-001/modifier/perception-proficiency>
+  a dyn:D20RollModifier ;
+  dyn:modifierKind "proficiency" ;
+  dyn:modifierSource <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/d20-test/skill-rule/perception> ;
+  dyn:modifierValue 2 .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/d20-test-outcome/perception-check-001>
+  a dyn:D20TestOutcome ;
+  dcterms:created "2026-06-29T13:40:06Z"^^xsd:dateTime ;
+  sc:basedOnHistory <https://spectacular-voyage.github.io/test-inn-ambush/history/main> ;
+  sc:committedBy <https://spectacular-voyage.github.io/test-inn-ambush/gm/alex> ;
+  dyn:adjudicatedResult "success" ;
+  dyn:adjudicationNote "GM override: Elara spots the scuffed threshold because the earlier door-bar plan put her attention on the entryway." ;
+  dyn:mechanicalResult "failure" ;
+  dyn:resolvesWarrant <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/d20-test-warrant/perception-check-001> ;
+  dyn:rollEvidence <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/d20-roll/perception-check-001> ;
+  dyn:targetNumber 15 .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/d20-test-consequence/perception-check-001>
+  a dyn:D20TestConsequence ;
+  dcterms:created "2026-06-29T13:40:07Z"^^xsd:dateTime ;
+  dcterms:description "Elara notices scuffed dust at the threshold and can warn the table before anyone steps through." ;
+  sc:basedOnHistory <https://spectacular-voyage.github.io/test-inn-ambush/history/main> ;
+  sc:committedBy <https://spectacular-voyage.github.io/test-inn-ambush/gm/alex> ;
+  dyn:consequenceOfOutcome <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/d20-test-outcome/perception-check-001> .

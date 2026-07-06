@@ -612,6 +612,27 @@
           }
         }
       ]
+    },
+    {
+      "id": "#27-d20-roll-evidence-records",
+      "type": "ScenarioStep",
+      "manifestPath": "27-d20-roll-evidence-records.jsonld",
+      "hasLaneBinding": [
+        {
+          "type": "LaneStateBinding",
+          "lane": "#fixture-lane",
+          "fromLaneState": {
+            "type": "StateLocator",
+            "locatorKind": "gitRefState",
+            "ref": "1e24564b83fd4234cc91d8ee018c1be8070270b9"
+          },
+          "toLaneState": {
+            "type": "StateLocator",
+            "locatorKind": "gitRefState",
+            "ref": "a.27-d20-roll-evidence-records"
+          }
+        }
+      ]
     }
   ]
 }
