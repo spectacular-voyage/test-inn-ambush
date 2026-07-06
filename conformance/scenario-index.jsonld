@@ -885,6 +885,27 @@
           }
         }
       ]
+    },
+    {
+      "id": "#47-unanchored-narrative-frame",
+      "type": "ScenarioStep",
+      "manifestPath": "47-unanchored-narrative-frame.jsonld",
+      "hasLaneBinding": [
+        {
+          "type": "LaneStateBinding",
+          "lane": "#fixture-lane",
+          "fromLaneState": {
+            "type": "StateLocator",
+            "locatorKind": "gitRefState",
+            "ref": "6a7691f39cbb14baa6ec308e8c8ac0b0152215d7"
+          },
+          "toLaneState": {
+            "type": "StateLocator",
+            "locatorKind": "gitRefState",
+            "ref": "a.47-unanchored-narrative-frame"
+          }
+        }
+      ]
     }
   ]
 }
