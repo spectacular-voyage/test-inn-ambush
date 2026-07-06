@@ -1,0 +1,123 @@
+{
+  "@context": "http://www.w3.org/ns/csvw",
+  "dc:title": "SRD 5.2.1 spell rules CSVW mapping",
+  "dc:license": "https://creativecommons.org/licenses/by/4.0/",
+  "dc:source": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf",
+  "tables": [
+    {
+      "url": "spells.csv",
+      "tableSchema": {
+        "columns": [
+          { "name": "spellKey", "datatype": "string", "required": true },
+          { "name": "spellLabel", "datatype": "string", "required": true },
+          { "name": "level", "datatype": "integer", "required": true },
+          { "name": "schoolKey", "datatype": "string", "required": true },
+          { "name": "castingTime", "datatype": "string", "required": true },
+          { "name": "actionEconomyTag", "datatype": "string", "required": true },
+          { "name": "rangeText", "datatype": "string", "required": true },
+          { "name": "rangeKind", "datatype": "string", "required": true },
+          { "name": "rangeDistanceFeet", "datatype": "integer" },
+          { "name": "rangeAreaText", "datatype": "string" },
+          { "name": "componentVerbal", "datatype": "boolean", "required": true },
+          { "name": "componentSomatic", "datatype": "boolean", "required": true },
+          { "name": "componentMaterial", "datatype": "boolean", "required": true },
+          { "name": "materialText", "datatype": "string" },
+          { "name": "duration", "datatype": "string", "required": true },
+          { "name": "concentration", "datatype": "boolean", "required": true },
+          { "name": "ritual", "datatype": "boolean", "required": true },
+          { "name": "requiresSavingThrow", "datatype": "boolean", "required": true },
+          { "name": "saveAbilityKeys", "datatype": "string", "separator": ";" },
+          { "name": "requiresAttackRoll", "datatype": "boolean", "required": true },
+          { "name": "attackRollKind", "datatype": "string" },
+          { "name": "atHigherLevelsText", "datatype": "string" },
+          { "name": "sourceSection", "datatype": "string", "required": true }
+        ],
+        "primaryKey": "spellKey",
+        "foreignKeys": [
+          {
+            "columnReference": "schoolKey",
+            "reference": {
+              "resource": "schools.csv",
+              "columnReference": "schoolKey"
+            }
+          }
+        ],
+        "aboutUrl": "https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/spells/spell/{spellKey}"
+      }
+    },
+    {
+      "url": "schools.csv",
+      "tableSchema": {
+        "columns": [
+          { "name": "schoolKey", "datatype": "string", "required": true },
+          { "name": "schoolLabel", "datatype": "string", "required": true },
+          { "name": "typicalEffects", "datatype": "string", "required": true },
+          { "name": "sourceSection", "datatype": "string", "required": true }
+        ],
+        "primaryKey": "schoolKey",
+        "aboutUrl": "https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/spells/school/{schoolKey}"
+      }
+    },
+    {
+      "url": "spell-classes.csv",
+      "tableSchema": {
+        "columns": [
+          { "name": "spellClassKey", "datatype": "string", "required": true },
+          { "name": "spellKey", "datatype": "string", "required": true },
+          { "name": "spellLabel", "datatype": "string", "required": true },
+          { "name": "classKey", "datatype": "string", "required": true },
+          { "name": "classLabel", "datatype": "string", "required": true },
+          { "name": "level", "datatype": "integer", "required": true },
+          { "name": "schoolKey", "datatype": "string", "required": true },
+          { "name": "sourceSection", "datatype": "string", "required": true }
+        ],
+        "primaryKey": "spellClassKey",
+        "foreignKeys": [
+          {
+            "columnReference": "spellKey",
+            "reference": {
+              "resource": "spells.csv",
+              "columnReference": "spellKey"
+            }
+          },
+          {
+            "columnReference": "schoolKey",
+            "reference": {
+              "resource": "schools.csv",
+              "columnReference": "schoolKey"
+            }
+          }
+        ],
+        "aboutUrl": "https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/spells/spell-class/{spellClassKey}"
+      }
+    },
+    {
+      "url": "spell-expressions.csv",
+      "tableSchema": {
+        "columns": [
+          { "name": "expressionKey", "datatype": "string", "required": true },
+          { "name": "spellKey", "datatype": "string", "required": true },
+          { "name": "spellLabel", "datatype": "string", "required": true },
+          { "name": "expressionKind", "datatype": "string", "required": true },
+          { "name": "diceExpression", "datatype": "string" },
+          { "name": "staticAmount", "datatype": "integer" },
+          { "name": "damageTypeKeys", "datatype": "string", "separator": ";" },
+          { "name": "healingKind", "datatype": "string" },
+          { "name": "context", "datatype": "string", "required": true },
+          { "name": "sourceSection", "datatype": "string", "required": true }
+        ],
+        "primaryKey": "expressionKey",
+        "foreignKeys": [
+          {
+            "columnReference": "spellKey",
+            "reference": {
+              "resource": "spells.csv",
+              "columnReference": "spellKey"
+            }
+          }
+        ],
+        "aboutUrl": "https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/spells/spell-expression/{expressionKey}"
+      }
+    }
+  ]
+}

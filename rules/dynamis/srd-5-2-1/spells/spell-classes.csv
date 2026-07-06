@@ -1,0 +1,876 @@
+spellClassKey,spellKey,spellLabel,classKey,classLabel,level,schoolKey,sourceSection
+dancing-lights-bard,dancing-lights,Dancing Lights,bard,Bard,0,illusion,Class Spell Lists: Bard level 0
+light-bard,light,Light,bard,Bard,0,evocation,Class Spell Lists: Bard level 0
+mage-hand-bard,mage-hand,Mage Hand,bard,Bard,0,conjuration,Class Spell Lists: Bard level 0
+mending-bard,mending,Mending,bard,Bard,0,transmutation,Class Spell Lists: Bard level 0
+message-bard,message,Message,bard,Bard,0,transmutation,Class Spell Lists: Bard level 0
+minor-illusion-bard,minor-illusion,Minor Illusion,bard,Bard,0,illusion,Class Spell Lists: Bard level 0
+prestidigitation-bard,prestidigitation,Prestidigitation,bard,Bard,0,transmutation,Class Spell Lists: Bard level 0
+starry-wisp-bard,starry-wisp,Starry Wisp,bard,Bard,0,evocation,Class Spell Lists: Bard level 0
+true-strike-bard,true-strike,True Strike,bard,Bard,0,divination,Class Spell Lists: Bard level 0
+vicious-mockery-bard,vicious-mockery,Vicious Mockery,bard,Bard,0,enchantment,Class Spell Lists: Bard level 0
+animal-friendship-bard,animal-friendship,Animal Friendship,bard,Bard,1,enchantment,Class Spell Lists: Bard level 1
+bane-bard,bane,Bane,bard,Bard,1,enchantment,Class Spell Lists: Bard level 1
+charm-person-bard,charm-person,Charm Person,bard,Bard,1,enchantment,Class Spell Lists: Bard level 1
+color-spray-bard,color-spray,Color Spray,bard,Bard,1,illusion,Class Spell Lists: Bard level 1
+command-bard,command,Command,bard,Bard,1,enchantment,Class Spell Lists: Bard level 1
+comprehend-languages-bard,comprehend-languages,Comprehend Languages,bard,Bard,1,divination,Class Spell Lists: Bard level 1
+cure-wounds-bard,cure-wounds,Cure Wounds,bard,Bard,1,abjuration,Class Spell Lists: Bard level 1
+detect-magic-bard,detect-magic,Detect Magic,bard,Bard,1,divination,Class Spell Lists: Bard level 1
+disguise-self-bard,disguise-self,Disguise Self,bard,Bard,1,illusion,Class Spell Lists: Bard level 1
+dissonant-whispers-bard,dissonant-whispers,Dissonant Whispers,bard,Bard,1,enchantment,Class Spell Lists: Bard level 1
+faerie-fire-bard,faerie-fire,Faerie Fire,bard,Bard,1,evocation,Class Spell Lists: Bard level 1
+feather-fall-bard,feather-fall,Feather Fall,bard,Bard,1,transmutation,Class Spell Lists: Bard level 1
+healing-word-bard,healing-word,Healing Word,bard,Bard,1,abjuration,Class Spell Lists: Bard level 1
+heroism-bard,heroism,Heroism,bard,Bard,1,enchantment,Class Spell Lists: Bard level 1
+hideous-laughter-bard,hideous-laughter,Hideous Laughter,bard,Bard,1,enchantment,Class Spell Lists: Bard level 1
+identify-bard,identify,Identify,bard,Bard,1,divination,Class Spell Lists: Bard level 1
+illusory-script-bard,illusory-script,Illusory Script,bard,Bard,1,illusion,Class Spell Lists: Bard level 1
+longstrider-bard,longstrider,Longstrider,bard,Bard,1,transmutation,Class Spell Lists: Bard level 1
+silent-image-bard,silent-image,Silent Image,bard,Bard,1,illusion,Class Spell Lists: Bard level 1
+sleep-bard,sleep,Sleep,bard,Bard,1,enchantment,Class Spell Lists: Bard level 1
+speak-with-animals-bard,speak-with-animals,Speak with Animals,bard,Bard,1,divination,Class Spell Lists: Bard level 1
+thunderwave-bard,thunderwave,Thunderwave,bard,Bard,1,evocation,Class Spell Lists: Bard level 1
+unseen-servant-bard,unseen-servant,Unseen Servant,bard,Bard,1,conjuration,Class Spell Lists: Bard level 1
+aid-bard,aid,Aid,bard,Bard,2,abjuration,Class Spell Lists: Bard level 2
+animal-messenger-bard,animal-messenger,Animal Messenger,bard,Bard,2,enchantment,Class Spell Lists: Bard level 2
+blindness-deafness-bard,blindness-deafness,Blindness/Deafness,bard,Bard,2,transmutation,Class Spell Lists: Bard level 2
+calm-emotions-bard,calm-emotions,Calm Emotions,bard,Bard,2,enchantment,Class Spell Lists: Bard level 2
+detect-thoughts-bard,detect-thoughts,Detect Thoughts,bard,Bard,2,divination,Class Spell Lists: Bard level 2
+enhance-ability-bard,enhance-ability,Enhance Ability,bard,Bard,2,transmutation,Class Spell Lists: Bard level 2
+enlarge-reduce-bard,enlarge-reduce,Enlarge/Reduce,bard,Bard,2,transmutation,Class Spell Lists: Bard level 2
+enthrall-bard,enthrall,Enthrall,bard,Bard,2,enchantment,Class Spell Lists: Bard level 2
+heat-metal-bard,heat-metal,Heat Metal,bard,Bard,2,transmutation,Class Spell Lists: Bard level 2
+hold-person-bard,hold-person,Hold Person,bard,Bard,2,enchantment,Class Spell Lists: Bard level 2
+invisibility-bard,invisibility,Invisibility,bard,Bard,2,illusion,Class Spell Lists: Bard level 2
+knock-bard,knock,Knock,bard,Bard,2,transmutation,Class Spell Lists: Bard level 2
+lesser-restoration-bard,lesser-restoration,Lesser Restoration,bard,Bard,2,abjuration,Class Spell Lists: Bard level 2
+locate-animals-or-plants-bard,locate-animals-or-plants,Locate Animals or Plants,bard,Bard,2,divination,Class Spell Lists: Bard level 2
+locate-object-bard,locate-object,Locate Object,bard,Bard,2,divination,Class Spell Lists: Bard level 2
+magic-mouth-bard,magic-mouth,Magic Mouth,bard,Bard,2,illusion,Class Spell Lists: Bard level 2
+mirror-image-bard,mirror-image,Mirror Image,bard,Bard,2,illusion,Class Spell Lists: Bard level 2
+see-invisibility-bard,see-invisibility,See Invisibility,bard,Bard,2,divination,Class Spell Lists: Bard level 2
+shatter-bard,shatter,Shatter,bard,Bard,2,evocation,Class Spell Lists: Bard level 2
+silence-bard,silence,Silence,bard,Bard,2,illusion,Class Spell Lists: Bard level 2
+suggestion-bard,suggestion,Suggestion,bard,Bard,2,enchantment,Class Spell Lists: Bard level 2
+zone-of-truth-bard,zone-of-truth,Zone of Truth,bard,Bard,2,enchantment,Class Spell Lists: Bard level 2
+bestow-curse-bard,bestow-curse,Bestow Curse,bard,Bard,3,necromancy,Class Spell Lists: Bard level 3
+clairvoyance-bard,clairvoyance,Clairvoyance,bard,Bard,3,divination,Class Spell Lists: Bard level 3
+dispel-magic-bard,dispel-magic,Dispel Magic,bard,Bard,3,abjuration,Class Spell Lists: Bard level 3
+fear-bard,fear,Fear,bard,Bard,3,illusion,Class Spell Lists: Bard level 3
+glyph-of-warding-bard,glyph-of-warding,Glyph of Warding,bard,Bard,3,abjuration,Class Spell Lists: Bard level 3
+hypnotic-pattern-bard,hypnotic-pattern,Hypnotic Pattern,bard,Bard,3,illusion,Class Spell Lists: Bard level 3
+major-image-bard,major-image,Major Image,bard,Bard,3,illusion,Class Spell Lists: Bard level 3
+mass-healing-word-bard,mass-healing-word,Mass Healing Word,bard,Bard,3,abjuration,Class Spell Lists: Bard level 3
+nondetection-bard,nondetection,Nondetection,bard,Bard,3,abjuration,Class Spell Lists: Bard level 3
+plant-growth-bard,plant-growth,Plant Growth,bard,Bard,3,transmutation,Class Spell Lists: Bard level 3
+sending-bard,sending,Sending,bard,Bard,3,divination,Class Spell Lists: Bard level 3
+slow-bard,slow,Slow,bard,Bard,3,transmutation,Class Spell Lists: Bard level 3
+speak-with-dead-bard,speak-with-dead,Speak with Dead,bard,Bard,3,necromancy,Class Spell Lists: Bard level 3
+speak-with-plants-bard,speak-with-plants,Speak with Plants,bard,Bard,3,transmutation,Class Spell Lists: Bard level 3
+stinking-cloud-bard,stinking-cloud,Stinking Cloud,bard,Bard,3,conjuration,Class Spell Lists: Bard level 3
+tiny-hut-bard,tiny-hut,Tiny Hut,bard,Bard,3,evocation,Class Spell Lists: Bard level 3
+tongues-bard,tongues,Tongues,bard,Bard,3,divination,Class Spell Lists: Bard level 3
+charm-monster-bard,charm-monster,Charm Monster,bard,Bard,4,enchantment,Class Spell Lists: Bard level 4
+compulsion-bard,compulsion,Compulsion,bard,Bard,4,enchantment,Class Spell Lists: Bard level 4
+confusion-bard,confusion,Confusion,bard,Bard,4,enchantment,Class Spell Lists: Bard level 4
+dimension-door-bard,dimension-door,Dimension Door,bard,Bard,4,conjuration,Class Spell Lists: Bard level 4
+freedom-of-movement-bard,freedom-of-movement,Freedom of Movement,bard,Bard,4,abjuration,Class Spell Lists: Bard level 4
+greater-invisibility-bard,greater-invisibility,Greater Invisibility,bard,Bard,4,illusion,Class Spell Lists: Bard level 4
+hallucinatory-terrain-bard,hallucinatory-terrain,Hallucinatory Terrain,bard,Bard,4,illusion,Class Spell Lists: Bard level 4
+locate-creature-bard,locate-creature,Locate Creature,bard,Bard,4,divination,Class Spell Lists: Bard level 4
+phantasmal-killer-bard,phantasmal-killer,Phantasmal Killer,bard,Bard,4,illusion,Class Spell Lists: Bard level 4
+polymorph-bard,polymorph,Polymorph,bard,Bard,4,transmutation,Class Spell Lists: Bard level 4
+animate-objects-bard,animate-objects,Animate Objects,bard,Bard,5,transmutation,Class Spell Lists: Bard level 5
+awaken-bard,awaken,Awaken,bard,Bard,5,transmutation,Class Spell Lists: Bard level 5
+dominate-person-bard,dominate-person,Dominate Person,bard,Bard,5,enchantment,Class Spell Lists: Bard level 5
+dream-bard,dream,Dream,bard,Bard,5,illusion,Class Spell Lists: Bard level 5
+geas-bard,geas,Geas,bard,Bard,5,enchantment,Class Spell Lists: Bard level 5
+greater-restoration-bard,greater-restoration,Greater Restoration,bard,Bard,5,abjuration,Class Spell Lists: Bard level 5
+hold-monster-bard,hold-monster,Hold Monster,bard,Bard,5,enchantment,Class Spell Lists: Bard level 5
+legend-lore-bard,legend-lore,Legend Lore,bard,Bard,5,divination,Class Spell Lists: Bard level 5
+mass-cure-wounds-bard,mass-cure-wounds,Mass Cure Wounds,bard,Bard,5,abjuration,Class Spell Lists: Bard level 5
+mislead-bard,mislead,Mislead,bard,Bard,5,illusion,Class Spell Lists: Bard level 5
+modify-memory-bard,modify-memory,Modify Memory,bard,Bard,5,enchantment,Class Spell Lists: Bard level 5
+planar-binding-bard,planar-binding,Planar Binding,bard,Bard,5,abjuration,Class Spell Lists: Bard level 5
+raise-dead-bard,raise-dead,Raise Dead,bard,Bard,5,necromancy,Class Spell Lists: Bard level 5
+scrying-bard,scrying,Scrying,bard,Bard,5,divination,Class Spell Lists: Bard level 5
+seeming-bard,seeming,Seeming,bard,Bard,5,illusion,Class Spell Lists: Bard level 5
+telepathic-bond-bard,telepathic-bond,Telepathic Bond,bard,Bard,5,divination,Class Spell Lists: Bard level 5
+teleportation-circle-bard,teleportation-circle,Teleportation Circle,bard,Bard,5,conjuration,Class Spell Lists: Bard level 5
+eyebite-bard,eyebite,Eyebite,bard,Bard,6,necromancy,Class Spell Lists: Bard level 6
+find-the-path-bard,find-the-path,Find the Path,bard,Bard,6,divination,Class Spell Lists: Bard level 6
+guards-and-wards-bard,guards-and-wards,Guards and Wards,bard,Bard,6,abjuration,Class Spell Lists: Bard level 6
+heroes-feast-bard,heroes-feast,Heroes' Feast,bard,Bard,6,conjuration,Class Spell Lists: Bard level 6
+irresistible-dance-bard,irresistible-dance,Irresistible Dance,bard,Bard,6,enchantment,Class Spell Lists: Bard level 6
+mass-suggestion-bard,mass-suggestion,Mass Suggestion,bard,Bard,6,enchantment,Class Spell Lists: Bard level 6
+programmed-illusion-bard,programmed-illusion,Programmed Illusion,bard,Bard,6,illusion,Class Spell Lists: Bard level 6
+true-seeing-bard,true-seeing,True Seeing,bard,Bard,6,divination,Class Spell Lists: Bard level 6
+arcane-sword-bard,arcane-sword,Arcane Sword,bard,Bard,7,evocation,Class Spell Lists: Bard level 7
+etherealness-bard,etherealness,Etherealness,bard,Bard,7,conjuration,Class Spell Lists: Bard level 7
+forcecage-bard,forcecage,Forcecage,bard,Bard,7,evocation,Class Spell Lists: Bard level 7
+magnificent-mansion-bard,magnificent-mansion,Magnificent Mansion,bard,Bard,7,conjuration,Class Spell Lists: Bard level 7
+mirage-arcane-bard,mirage-arcane,Mirage Arcane,bard,Bard,7,illusion,Class Spell Lists: Bard level 7
+prismatic-spray-bard,prismatic-spray,Prismatic Spray,bard,Bard,7,evocation,Class Spell Lists: Bard level 7
+project-image-bard,project-image,Project Image,bard,Bard,7,illusion,Class Spell Lists: Bard level 7
+regenerate-bard,regenerate,Regenerate,bard,Bard,7,transmutation,Class Spell Lists: Bard level 7
+resurrection-bard,resurrection,Resurrection,bard,Bard,7,necromancy,Class Spell Lists: Bard level 7
+symbol-bard,symbol,Symbol,bard,Bard,7,abjuration,Class Spell Lists: Bard level 7
+teleport-bard,teleport,Teleport,bard,Bard,7,conjuration,Class Spell Lists: Bard level 7
+antipathy-sympathy-bard,antipathy-sympathy,Antipathy/Sympathy,bard,Bard,8,enchantment,Class Spell Lists: Bard level 8
+befuddlement-bard,befuddlement,Befuddlement,bard,Bard,8,enchantment,Class Spell Lists: Bard level 8
+dominate-monster-bard,dominate-monster,Dominate Monster,bard,Bard,8,enchantment,Class Spell Lists: Bard level 8
+glibness-bard,glibness,Glibness,bard,Bard,8,enchantment,Class Spell Lists: Bard level 8
+mind-blank-bard,mind-blank,Mind Blank,bard,Bard,8,abjuration,Class Spell Lists: Bard level 8
+power-word-stun-bard,power-word-stun,Power Word Stun,bard,Bard,8,enchantment,Class Spell Lists: Bard level 8
+foresight-bard,foresight,Foresight,bard,Bard,9,divination,Class Spell Lists: Bard level 9
+power-word-heal-bard,power-word-heal,Power Word Heal,bard,Bard,9,enchantment,Class Spell Lists: Bard level 9
+power-word-kill-bard,power-word-kill,Power Word Kill,bard,Bard,9,enchantment,Class Spell Lists: Bard level 9
+prismatic-wall-bard,prismatic-wall,Prismatic Wall,bard,Bard,9,abjuration,Class Spell Lists: Bard level 9
+true-polymorph-bard,true-polymorph,True Polymorph,bard,Bard,9,transmutation,Class Spell Lists: Bard level 9
+guidance-cleric,guidance,Guidance,cleric,Cleric,0,divination,Class Spell Lists: Cleric level 0
+light-cleric,light,Light,cleric,Cleric,0,evocation,Class Spell Lists: Cleric level 0
+mending-cleric,mending,Mending,cleric,Cleric,0,transmutation,Class Spell Lists: Cleric level 0
+resistance-cleric,resistance,Resistance,cleric,Cleric,0,abjuration,Class Spell Lists: Cleric level 0
+sacred-flame-cleric,sacred-flame,Sacred Flame,cleric,Cleric,0,evocation,Class Spell Lists: Cleric level 0
+spare-the-dying-cleric,spare-the-dying,Spare the Dying,cleric,Cleric,0,necromancy,Class Spell Lists: Cleric level 0
+thaumaturgy-cleric,thaumaturgy,Thaumaturgy,cleric,Cleric,0,transmutation,Class Spell Lists: Cleric level 0
+bane-cleric,bane,Bane,cleric,Cleric,1,enchantment,Class Spell Lists: Cleric level 1
+bless-cleric,bless,Bless,cleric,Cleric,1,enchantment,Class Spell Lists: Cleric level 1
+command-cleric,command,Command,cleric,Cleric,1,enchantment,Class Spell Lists: Cleric level 1
+create-or-destroy-water-cleric,create-or-destroy-water,Create or Destroy Water,cleric,Cleric,1,transmutation,Class Spell Lists: Cleric level 1
+cure-wounds-cleric,cure-wounds,Cure Wounds,cleric,Cleric,1,abjuration,Class Spell Lists: Cleric level 1
+detect-evil-and-good-cleric,detect-evil-and-good,Detect Evil and Good,cleric,Cleric,1,divination,Class Spell Lists: Cleric level 1
+detect-magic-cleric,detect-magic,Detect Magic,cleric,Cleric,1,divination,Class Spell Lists: Cleric level 1
+detect-poison-and-disease-cleric,detect-poison-and-disease,Detect Poison and Disease,cleric,Cleric,1,divination,Class Spell Lists: Cleric level 1
+guiding-bolt-cleric,guiding-bolt,Guiding Bolt,cleric,Cleric,1,evocation,Class Spell Lists: Cleric level 1
+healing-word-cleric,healing-word,Healing Word,cleric,Cleric,1,abjuration,Class Spell Lists: Cleric level 1
+inflict-wounds-cleric,inflict-wounds,Inflict Wounds,cleric,Cleric,1,necromancy,Class Spell Lists: Cleric level 1
+protection-from-evil-and-good-cleric,protection-from-evil-and-good,Protection from Evil and Good,cleric,Cleric,1,abjuration,Class Spell Lists: Cleric level 1
+purify-food-and-drink-cleric,purify-food-and-drink,Purify Food and Drink,cleric,Cleric,1,transmutation,Class Spell Lists: Cleric level 1
+sanctuary-cleric,sanctuary,Sanctuary,cleric,Cleric,1,abjuration,Class Spell Lists: Cleric level 1
+shield-of-faith-cleric,shield-of-faith,Shield of Faith,cleric,Cleric,1,abjuration,Class Spell Lists: Cleric level 1
+aid-cleric,aid,Aid,cleric,Cleric,2,abjuration,Class Spell Lists: Cleric level 2
+augury-cleric,augury,Augury,cleric,Cleric,2,divination,Class Spell Lists: Cleric level 2
+blindness-deafness-cleric,blindness-deafness,Blindness/Deafness,cleric,Cleric,2,transmutation,Class Spell Lists: Cleric level 2
+calm-emotions-cleric,calm-emotions,Calm Emotions,cleric,Cleric,2,enchantment,Class Spell Lists: Cleric level 2
+continual-flame-cleric,continual-flame,Continual Flame,cleric,Cleric,2,evocation,Class Spell Lists: Cleric level 2
+enhance-ability-cleric,enhance-ability,Enhance Ability,cleric,Cleric,2,transmutation,Class Spell Lists: Cleric level 2
+find-traps-cleric,find-traps,Find Traps,cleric,Cleric,2,divination,Class Spell Lists: Cleric level 2
+gentle-repose-cleric,gentle-repose,Gentle Repose,cleric,Cleric,2,necromancy,Class Spell Lists: Cleric level 2
+hold-person-cleric,hold-person,Hold Person,cleric,Cleric,2,enchantment,Class Spell Lists: Cleric level 2
+lesser-restoration-cleric,lesser-restoration,Lesser Restoration,cleric,Cleric,2,abjuration,Class Spell Lists: Cleric level 2
+locate-object-cleric,locate-object,Locate Object,cleric,Cleric,2,divination,Class Spell Lists: Cleric level 2
+prayer-of-healing-cleric,prayer-of-healing,Prayer of Healing,cleric,Cleric,2,abjuration,Class Spell Lists: Cleric level 2
+protection-from-poison-cleric,protection-from-poison,Protection from Poison,cleric,Cleric,2,abjuration,Class Spell Lists: Cleric level 2
+silence-cleric,silence,Silence,cleric,Cleric,2,illusion,Class Spell Lists: Cleric level 2
+spiritual-weapon-cleric,spiritual-weapon,Spiritual Weapon,cleric,Cleric,2,evocation,Class Spell Lists: Cleric level 2
+warding-bond-cleric,warding-bond,Warding Bond,cleric,Cleric,2,abjuration,Class Spell Lists: Cleric level 2
+zone-of-truth-cleric,zone-of-truth,Zone of Truth,cleric,Cleric,2,enchantment,Class Spell Lists: Cleric level 2
+animate-dead-cleric,animate-dead,Animate Dead,cleric,Cleric,3,necromancy,Class Spell Lists: Cleric level 3
+beacon-of-hope-cleric,beacon-of-hope,Beacon of Hope,cleric,Cleric,3,abjuration,Class Spell Lists: Cleric level 3
+bestow-curse-cleric,bestow-curse,Bestow Curse,cleric,Cleric,3,necromancy,Class Spell Lists: Cleric level 3
+clairvoyance-cleric,clairvoyance,Clairvoyance,cleric,Cleric,3,divination,Class Spell Lists: Cleric level 3
+create-food-and-water-cleric,create-food-and-water,Create Food and Water,cleric,Cleric,3,conjuration,Class Spell Lists: Cleric level 3
+daylight-cleric,daylight,Daylight,cleric,Cleric,3,evocation,Class Spell Lists: Cleric level 3
+dispel-magic-cleric,dispel-magic,Dispel Magic,cleric,Cleric,3,abjuration,Class Spell Lists: Cleric level 3
+glyph-of-warding-cleric,glyph-of-warding,Glyph of Warding,cleric,Cleric,3,abjuration,Class Spell Lists: Cleric level 3
+magic-circle-cleric,magic-circle,Magic Circle,cleric,Cleric,3,abjuration,Class Spell Lists: Cleric level 3
+mass-healing-word-cleric,mass-healing-word,Mass Healing Word,cleric,Cleric,3,abjuration,Class Spell Lists: Cleric level 3
+meld-into-stone-cleric,meld-into-stone,Meld into Stone,cleric,Cleric,3,transmutation,Class Spell Lists: Cleric level 3
+protection-from-energy-cleric,protection-from-energy,Protection from Energy,cleric,Cleric,3,abjuration,Class Spell Lists: Cleric level 3
+remove-curse-cleric,remove-curse,Remove Curse,cleric,Cleric,3,abjuration,Class Spell Lists: Cleric level 3
+revivify-cleric,revivify,Revivify,cleric,Cleric,3,necromancy,Class Spell Lists: Cleric level 3
+sending-cleric,sending,Sending,cleric,Cleric,3,divination,Class Spell Lists: Cleric level 3
+speak-with-dead-cleric,speak-with-dead,Speak with Dead,cleric,Cleric,3,necromancy,Class Spell Lists: Cleric level 3
+spirit-guardians-cleric,spirit-guardians,Spirit Guardians,cleric,Cleric,3,conjuration,Class Spell Lists: Cleric level 3
+tongues-cleric,tongues,Tongues,cleric,Cleric,3,divination,Class Spell Lists: Cleric level 3
+water-walk-cleric,water-walk,Water Walk,cleric,Cleric,3,transmutation,Class Spell Lists: Cleric level 3
+aura-of-life-cleric,aura-of-life,Aura of Life,cleric,Cleric,4,abjuration,Class Spell Lists: Cleric level 4
+banishment-cleric,banishment,Banishment,cleric,Cleric,4,abjuration,Class Spell Lists: Cleric level 4
+control-water-cleric,control-water,Control Water,cleric,Cleric,4,transmutation,Class Spell Lists: Cleric level 4
+death-ward-cleric,death-ward,Death Ward,cleric,Cleric,4,abjuration,Class Spell Lists: Cleric level 4
+divination-cleric,divination,Divination,cleric,Cleric,4,divination,Class Spell Lists: Cleric level 4
+freedom-of-movement-cleric,freedom-of-movement,Freedom of Movement,cleric,Cleric,4,abjuration,Class Spell Lists: Cleric level 4
+guardian-of-faith-cleric,guardian-of-faith,Guardian of Faith,cleric,Cleric,4,conjuration,Class Spell Lists: Cleric level 4
+locate-creature-cleric,locate-creature,Locate Creature,cleric,Cleric,4,divination,Class Spell Lists: Cleric level 4
+stone-shape-cleric,stone-shape,Stone Shape,cleric,Cleric,4,transmutation,Class Spell Lists: Cleric level 4
+commune-cleric,commune,Commune,cleric,Cleric,5,divination,Class Spell Lists: Cleric level 5
+contagion-cleric,contagion,Contagion,cleric,Cleric,5,necromancy,Class Spell Lists: Cleric level 5
+dispel-evil-and-good-cleric,dispel-evil-and-good,Dispel Evil and Good,cleric,Cleric,5,abjuration,Class Spell Lists: Cleric level 5
+flame-strike-cleric,flame-strike,Flame Strike,cleric,Cleric,5,evocation,Class Spell Lists: Cleric level 5
+geas-cleric,geas,Geas,cleric,Cleric,5,enchantment,Class Spell Lists: Cleric level 5
+greater-restoration-cleric,greater-restoration,Greater Restoration,cleric,Cleric,5,abjuration,Class Spell Lists: Cleric level 5
+hallow-cleric,hallow,Hallow,cleric,Cleric,5,abjuration,Class Spell Lists: Cleric level 5
+insect-plague-cleric,insect-plague,Insect Plague,cleric,Cleric,5,conjuration,Class Spell Lists: Cleric level 5
+legend-lore-cleric,legend-lore,Legend Lore,cleric,Cleric,5,divination,Class Spell Lists: Cleric level 5
+mass-cure-wounds-cleric,mass-cure-wounds,Mass Cure Wounds,cleric,Cleric,5,abjuration,Class Spell Lists: Cleric level 5
+planar-binding-cleric,planar-binding,Planar Binding,cleric,Cleric,5,abjuration,Class Spell Lists: Cleric level 5
+raise-dead-cleric,raise-dead,Raise Dead,cleric,Cleric,5,necromancy,Class Spell Lists: Cleric level 5
+scrying-cleric,scrying,Scrying,cleric,Cleric,5,divination,Class Spell Lists: Cleric level 5
+blade-barrier-cleric,blade-barrier,Blade Barrier,cleric,Cleric,6,evocation,Class Spell Lists: Cleric level 6
+create-undead-cleric,create-undead,Create Undead,cleric,Cleric,6,necromancy,Class Spell Lists: Cleric level 6
+find-the-path-cleric,find-the-path,Find the Path,cleric,Cleric,6,divination,Class Spell Lists: Cleric level 6
+forbiddance-cleric,forbiddance,Forbiddance,cleric,Cleric,6,abjuration,Class Spell Lists: Cleric level 6
+harm-cleric,harm,Harm,cleric,Cleric,6,necromancy,Class Spell Lists: Cleric level 6
+heal-cleric,heal,Heal,cleric,Cleric,6,abjuration,Class Spell Lists: Cleric level 6
+heroes-feast-cleric,heroes-feast,Heroes' Feast,cleric,Cleric,6,conjuration,Class Spell Lists: Cleric level 6
+planar-ally-cleric,planar-ally,Planar Ally,cleric,Cleric,6,conjuration,Class Spell Lists: Cleric level 6
+sunbeam-cleric,sunbeam,Sunbeam,cleric,Cleric,6,evocation,Class Spell Lists: Cleric level 6
+true-seeing-cleric,true-seeing,True Seeing,cleric,Cleric,6,divination,Class Spell Lists: Cleric level 6
+word-of-recall-cleric,word-of-recall,Word of Recall,cleric,Cleric,6,conjuration,Class Spell Lists: Cleric level 6
+conjure-celestial-cleric,conjure-celestial,Conjure Celestial,cleric,Cleric,7,conjuration,Class Spell Lists: Cleric level 7
+divine-word-cleric,divine-word,Divine Word,cleric,Cleric,7,evocation,Class Spell Lists: Cleric level 7
+etherealness-cleric,etherealness,Etherealness,cleric,Cleric,7,conjuration,Class Spell Lists: Cleric level 7
+fire-storm-cleric,fire-storm,Fire Storm,cleric,Cleric,7,evocation,Class Spell Lists: Cleric level 7
+plane-shift-cleric,plane-shift,Plane Shift,cleric,Cleric,7,conjuration,Class Spell Lists: Cleric level 7
+regenerate-cleric,regenerate,Regenerate,cleric,Cleric,7,transmutation,Class Spell Lists: Cleric level 7
+resurrection-cleric,resurrection,Resurrection,cleric,Cleric,7,necromancy,Class Spell Lists: Cleric level 7
+symbol-cleric,symbol,Symbol,cleric,Cleric,7,abjuration,Class Spell Lists: Cleric level 7
+antimagic-field-cleric,antimagic-field,Antimagic Field,cleric,Cleric,8,abjuration,Class Spell Lists: Cleric level 8
+control-weather-cleric,control-weather,Control Weather,cleric,Cleric,8,transmutation,Class Spell Lists: Cleric level 8
+earthquake-cleric,earthquake,Earthquake,cleric,Cleric,8,transmutation,Class Spell Lists: Cleric level 8
+holy-aura-cleric,holy-aura,Holy Aura,cleric,Cleric,8,abjuration,Class Spell Lists: Cleric level 8
+sunburst-cleric,sunburst,Sunburst,cleric,Cleric,8,evocation,Class Spell Lists: Cleric level 8
+astral-projection-cleric,astral-projection,Astral Projection,cleric,Cleric,9,necromancy,Class Spell Lists: Cleric level 9
+gate-cleric,gate,Gate,cleric,Cleric,9,conjuration,Class Spell Lists: Cleric level 9
+mass-heal-cleric,mass-heal,Mass Heal,cleric,Cleric,9,abjuration,Class Spell Lists: Cleric level 9
+power-word-heal-cleric,power-word-heal,Power Word Heal,cleric,Cleric,9,enchantment,Class Spell Lists: Cleric level 9
+true-resurrection-cleric,true-resurrection,True Resurrection,cleric,Cleric,9,necromancy,Class Spell Lists: Cleric level 9
+druidcraft-druid,druidcraft,Druidcraft,druid,Druid,0,transmutation,Class Spell Lists: Druid level 0
+elementalism-druid,elementalism,Elementalism,druid,Druid,0,transmutation,Class Spell Lists: Druid level 0
+guidance-druid,guidance,Guidance,druid,Druid,0,divination,Class Spell Lists: Druid level 0
+mending-druid,mending,Mending,druid,Druid,0,transmutation,Class Spell Lists: Druid level 0
+message-druid,message,Message,druid,Druid,0,transmutation,Class Spell Lists: Druid level 0
+poison-spray-druid,poison-spray,Poison Spray,druid,Druid,0,necromancy,Class Spell Lists: Druid level 0
+produce-flame-druid,produce-flame,Produce Flame,druid,Druid,0,conjuration,Class Spell Lists: Druid level 0
+resistance-druid,resistance,Resistance,druid,Druid,0,abjuration,Class Spell Lists: Druid level 0
+shillelagh-druid,shillelagh,Shillelagh,druid,Druid,0,transmutation,Class Spell Lists: Druid level 0
+spare-the-dying-druid,spare-the-dying,Spare the Dying,druid,Druid,0,necromancy,Class Spell Lists: Druid level 0
+starry-wisp-druid,starry-wisp,Starry Wisp,druid,Druid,0,evocation,Class Spell Lists: Druid level 0
+animal-friendship-druid,animal-friendship,Animal Friendship,druid,Druid,1,enchantment,Class Spell Lists: Druid level 1
+charm-person-druid,charm-person,Charm Person,druid,Druid,1,enchantment,Class Spell Lists: Druid level 1
+create-or-destroy-water-druid,create-or-destroy-water,Create or Destroy Water,druid,Druid,1,transmutation,Class Spell Lists: Druid level 1
+cure-wounds-druid,cure-wounds,Cure Wounds,druid,Druid,1,abjuration,Class Spell Lists: Druid level 1
+detect-magic-druid,detect-magic,Detect Magic,druid,Druid,1,divination,Class Spell Lists: Druid level 1
+detect-poison-and-disease-druid,detect-poison-and-disease,Detect Poison and Disease,druid,Druid,1,divination,Class Spell Lists: Druid level 1
+entangle-druid,entangle,Entangle,druid,Druid,1,conjuration,Class Spell Lists: Druid level 1
+faerie-fire-druid,faerie-fire,Faerie Fire,druid,Druid,1,evocation,Class Spell Lists: Druid level 1
+fog-cloud-druid,fog-cloud,Fog Cloud,druid,Druid,1,conjuration,Class Spell Lists: Druid level 1
+goodberry-druid,goodberry,Goodberry,druid,Druid,1,conjuration,Class Spell Lists: Druid level 1
+healing-word-druid,healing-word,Healing Word,druid,Druid,1,abjuration,Class Spell Lists: Druid level 1
+ice-knife-druid,ice-knife,Ice Knife,druid,Druid,1,conjuration,Class Spell Lists: Druid level 1
+jump-druid,jump,Jump,druid,Druid,1,transmutation,Class Spell Lists: Druid level 1
+longstrider-druid,longstrider,Longstrider,druid,Druid,1,transmutation,Class Spell Lists: Druid level 1
+protection-from-evil-and-good-druid,protection-from-evil-and-good,Protection from Evil and Good,druid,Druid,1,abjuration,Class Spell Lists: Druid level 1
+purify-food-and-drink-druid,purify-food-and-drink,Purify Food and Drink,druid,Druid,1,transmutation,Class Spell Lists: Druid level 1
+speak-with-animals-druid,speak-with-animals,Speak with Animals,druid,Druid,1,divination,Class Spell Lists: Druid level 1
+thunderwave-druid,thunderwave,Thunderwave,druid,Druid,1,evocation,Class Spell Lists: Druid level 1
+aid-druid,aid,Aid,druid,Druid,2,abjuration,Class Spell Lists: Druid level 2
+animal-messenger-druid,animal-messenger,Animal Messenger,druid,Druid,2,enchantment,Class Spell Lists: Druid level 2
+augury-druid,augury,Augury,druid,Druid,2,divination,Class Spell Lists: Druid level 2
+barkskin-druid,barkskin,Barkskin,druid,Druid,2,transmutation,Class Spell Lists: Druid level 2
+continual-flame-druid,continual-flame,Continual Flame,druid,Druid,2,evocation,Class Spell Lists: Druid level 2
+darkvision-druid,darkvision,Darkvision,druid,Druid,2,transmutation,Class Spell Lists: Druid level 2
+enhance-ability-druid,enhance-ability,Enhance Ability,druid,Druid,2,transmutation,Class Spell Lists: Druid level 2
+enlarge-reduce-druid,enlarge-reduce,Enlarge/Reduce,druid,Druid,2,transmutation,Class Spell Lists: Druid level 2
+find-traps-druid,find-traps,Find Traps,druid,Druid,2,divination,Class Spell Lists: Druid level 2
+flame-blade-druid,flame-blade,Flame Blade,druid,Druid,2,evocation,Class Spell Lists: Druid level 2
+flaming-sphere-druid,flaming-sphere,Flaming Sphere,druid,Druid,2,conjuration,Class Spell Lists: Druid level 2
+gust-of-wind-druid,gust-of-wind,Gust of Wind,druid,Druid,2,evocation,Class Spell Lists: Druid level 2
+heat-metal-druid,heat-metal,Heat Metal,druid,Druid,2,transmutation,Class Spell Lists: Druid level 2
+hold-person-druid,hold-person,Hold Person,druid,Druid,2,enchantment,Class Spell Lists: Druid level 2
+lesser-restoration-druid,lesser-restoration,Lesser Restoration,druid,Druid,2,abjuration,Class Spell Lists: Druid level 2
+locate-animals-or-plants-druid,locate-animals-or-plants,Locate Animals or Plants,druid,Druid,2,divination,Class Spell Lists: Druid level 2
+locate-object-druid,locate-object,Locate Object,druid,Druid,2,divination,Class Spell Lists: Druid level 2
+moonbeam-druid,moonbeam,Moonbeam,druid,Druid,2,evocation,Class Spell Lists: Druid level 2
+pass-without-trace-druid,pass-without-trace,Pass without Trace,druid,Druid,2,abjuration,Class Spell Lists: Druid level 2
+protection-from-poison-druid,protection-from-poison,Protection from Poison,druid,Druid,2,abjuration,Class Spell Lists: Druid level 2
+spike-growth-druid,spike-growth,Spike Growth,druid,Druid,2,transmutation,Class Spell Lists: Druid level 2
+call-lightning-druid,call-lightning,Call Lightning,druid,Druid,3,conjuration,Class Spell Lists: Druid level 3
+conjure-animals-druid,conjure-animals,Conjure Animals,druid,Druid,3,conjuration,Class Spell Lists: Druid level 3
+daylight-druid,daylight,Daylight,druid,Druid,3,evocation,Class Spell Lists: Druid level 3
+dispel-magic-druid,dispel-magic,Dispel Magic,druid,Druid,3,abjuration,Class Spell Lists: Druid level 3
+meld-into-stone-druid,meld-into-stone,Meld into Stone,druid,Druid,3,transmutation,Class Spell Lists: Druid level 3
+plant-growth-druid,plant-growth,Plant Growth,druid,Druid,3,transmutation,Class Spell Lists: Druid level 3
+protection-from-energy-druid,protection-from-energy,Protection from Energy,druid,Druid,3,abjuration,Class Spell Lists: Druid level 3
+revivify-druid,revivify,Revivify,druid,Druid,3,necromancy,Class Spell Lists: Druid level 3
+sleet-storm-druid,sleet-storm,Sleet Storm,druid,Druid,3,conjuration,Class Spell Lists: Druid level 3
+speak-with-plants-druid,speak-with-plants,Speak with Plants,druid,Druid,3,transmutation,Class Spell Lists: Druid level 3
+water-breathing-druid,water-breathing,Water Breathing,druid,Druid,3,transmutation,Class Spell Lists: Druid level 3
+water-walk-druid,water-walk,Water Walk,druid,Druid,3,transmutation,Class Spell Lists: Druid level 3
+wind-wall-druid,wind-wall,Wind Wall,druid,Druid,3,evocation,Class Spell Lists: Druid level 3
+blight-druid,blight,Blight,druid,Druid,4,necromancy,Class Spell Lists: Druid level 4
+charm-monster-druid,charm-monster,Charm Monster,druid,Druid,4,enchantment,Class Spell Lists: Druid level 4
+confusion-druid,confusion,Confusion,druid,Druid,4,enchantment,Class Spell Lists: Druid level 4
+conjure-minor-elementals-druid,conjure-minor-elementals,Conjure Minor Elementals,druid,Druid,4,conjuration,Class Spell Lists: Druid level 4
+conjure-woodland-beings-druid,conjure-woodland-beings,Conjure Woodland Beings,druid,Druid,4,conjuration,Class Spell Lists: Druid level 4
+control-water-druid,control-water,Control Water,druid,Druid,4,transmutation,Class Spell Lists: Druid level 4
+divination-druid,divination,Divination,druid,Druid,4,divination,Class Spell Lists: Druid level 4
+dominate-beast-druid,dominate-beast,Dominate Beast,druid,Druid,4,enchantment,Class Spell Lists: Druid level 4
+fire-shield-druid,fire-shield,Fire Shield,druid,Druid,4,evocation,Class Spell Lists: Druid level 4
+freedom-of-movement-druid,freedom-of-movement,Freedom of Movement,druid,Druid,4,abjuration,Class Spell Lists: Druid level 4
+giant-insect-druid,giant-insect,Giant Insect,druid,Druid,4,conjuration,Class Spell Lists: Druid level 4
+hallucinatory-terrain-druid,hallucinatory-terrain,Hallucinatory Terrain,druid,Druid,4,illusion,Class Spell Lists: Druid level 4
+ice-storm-druid,ice-storm,Ice Storm,druid,Druid,4,evocation,Class Spell Lists: Druid level 4
+locate-creature-druid,locate-creature,Locate Creature,druid,Druid,4,divination,Class Spell Lists: Druid level 4
+polymorph-druid,polymorph,Polymorph,druid,Druid,4,transmutation,Class Spell Lists: Druid level 4
+stone-shape-druid,stone-shape,Stone Shape,druid,Druid,4,transmutation,Class Spell Lists: Druid level 4
+stoneskin-druid,stoneskin,Stoneskin,druid,Druid,4,transmutation,Class Spell Lists: Druid level 4
+wall-of-fire-druid,wall-of-fire,Wall of Fire,druid,Druid,4,evocation,Class Spell Lists: Druid level 4
+antilife-shell-druid,antilife-shell,Antilife Shell,druid,Druid,5,abjuration,Class Spell Lists: Druid level 5
+awaken-druid,awaken,Awaken,druid,Druid,5,transmutation,Class Spell Lists: Druid level 5
+commune-with-nature-druid,commune-with-nature,Commune with Nature,druid,Druid,5,divination,Class Spell Lists: Druid level 5
+cone-of-cold-druid,cone-of-cold,Cone of Cold,druid,Druid,5,evocation,Class Spell Lists: Druid level 5
+conjure-elemental-druid,conjure-elemental,Conjure Elemental,druid,Druid,5,conjuration,Class Spell Lists: Druid level 5
+contagion-druid,contagion,Contagion,druid,Druid,5,necromancy,Class Spell Lists: Druid level 5
+geas-druid,geas,Geas,druid,Druid,5,enchantment,Class Spell Lists: Druid level 5
+greater-restoration-druid,greater-restoration,Greater Restoration,druid,Druid,5,abjuration,Class Spell Lists: Druid level 5
+insect-plague-druid,insect-plague,Insect Plague,druid,Druid,5,conjuration,Class Spell Lists: Druid level 5
+mass-cure-wounds-druid,mass-cure-wounds,Mass Cure Wounds,druid,Druid,5,abjuration,Class Spell Lists: Druid level 5
+planar-binding-druid,planar-binding,Planar Binding,druid,Druid,5,abjuration,Class Spell Lists: Druid level 5
+reincarnate-druid,reincarnate,Reincarnate,druid,Druid,5,necromancy,Class Spell Lists: Druid level 5
+scrying-druid,scrying,Scrying,druid,Druid,5,divination,Class Spell Lists: Druid level 5
+tree-stride-druid,tree-stride,Tree Stride,druid,Druid,5,conjuration,Class Spell Lists: Druid level 5
+wall-of-stone-druid,wall-of-stone,Wall of Stone,druid,Druid,5,evocation,Class Spell Lists: Druid level 5
+conjure-fey-druid,conjure-fey,Conjure Fey,druid,Druid,6,conjuration,Class Spell Lists: Druid level 6
+find-the-path-druid,find-the-path,Find the Path,druid,Druid,6,divination,Class Spell Lists: Druid level 6
+flesh-to-stone-druid,flesh-to-stone,Flesh to Stone,druid,Druid,6,transmutation,Class Spell Lists: Druid level 6
+heal-druid,heal,Heal,druid,Druid,6,abjuration,Class Spell Lists: Druid level 6
+heroes-feast-druid,heroes-feast,Heroes' Feast,druid,Druid,6,conjuration,Class Spell Lists: Druid level 6
+move-earth-druid,move-earth,Move Earth,druid,Druid,6,transmutation,Class Spell Lists: Druid level 6
+sunbeam-druid,sunbeam,Sunbeam,druid,Druid,6,evocation,Class Spell Lists: Druid level 6
+transport-via-plants-druid,transport-via-plants,Transport via Plants,druid,Druid,6,conjuration,Class Spell Lists: Druid level 6
+wall-of-thorns-druid,wall-of-thorns,Wall of Thorns,druid,Druid,6,conjuration,Class Spell Lists: Druid level 6
+wind-walk-druid,wind-walk,Wind Walk,druid,Druid,6,transmutation,Class Spell Lists: Druid level 6
+fire-storm-druid,fire-storm,Fire Storm,druid,Druid,7,evocation,Class Spell Lists: Druid level 7
+mirage-arcane-druid,mirage-arcane,Mirage Arcane,druid,Druid,7,illusion,Class Spell Lists: Druid level 7
+plane-shift-druid,plane-shift,Plane Shift,druid,Druid,7,conjuration,Class Spell Lists: Druid level 7
+regenerate-druid,regenerate,Regenerate,druid,Druid,7,transmutation,Class Spell Lists: Druid level 7
+reverse-gravity-druid,reverse-gravity,Reverse Gravity,druid,Druid,7,transmutation,Class Spell Lists: Druid level 7
+symbol-druid,symbol,Symbol,druid,Druid,7,abjuration,Class Spell Lists: Druid level 7
+animal-shapes-druid,animal-shapes,Animal Shapes,druid,Druid,8,transmutation,Class Spell Lists: Druid level 8
+antipathy-sympathy-druid,antipathy-sympathy,Antipathy/Sympathy,druid,Druid,8,enchantment,Class Spell Lists: Druid level 8
+befuddlement-druid,befuddlement,Befuddlement,druid,Druid,8,enchantment,Class Spell Lists: Druid level 8
+control-weather-druid,control-weather,Control Weather,druid,Druid,8,transmutation,Class Spell Lists: Druid level 8
+earthquake-druid,earthquake,Earthquake,druid,Druid,8,transmutation,Class Spell Lists: Druid level 8
+incendiary-cloud-druid,incendiary-cloud,Incendiary Cloud,druid,Druid,8,conjuration,Class Spell Lists: Druid level 8
+sunburst-druid,sunburst,Sunburst,druid,Druid,8,evocation,Class Spell Lists: Druid level 8
+tsunami-druid,tsunami,Tsunami,druid,Druid,8,conjuration,Class Spell Lists: Druid level 8
+foresight-druid,foresight,Foresight,druid,Druid,9,divination,Class Spell Lists: Druid level 9
+shapechange-druid,shapechange,Shapechange,druid,Druid,9,transmutation,Class Spell Lists: Druid level 9
+storm-of-vengeance-druid,storm-of-vengeance,Storm of Vengeance,druid,Druid,9,conjuration,Class Spell Lists: Druid level 9
+true-resurrection-druid,true-resurrection,True Resurrection,druid,Druid,9,necromancy,Class Spell Lists: Druid level 9
+bless-paladin,bless,Bless,paladin,Paladin,1,enchantment,Class Spell Lists: Paladin level 1
+command-paladin,command,Command,paladin,Paladin,1,enchantment,Class Spell Lists: Paladin level 1
+cure-wounds-paladin,cure-wounds,Cure Wounds,paladin,Paladin,1,abjuration,Class Spell Lists: Paladin level 1
+detect-evil-and-good-paladin,detect-evil-and-good,Detect Evil and Good,paladin,Paladin,1,divination,Class Spell Lists: Paladin level 1
+detect-magic-paladin,detect-magic,Detect Magic,paladin,Paladin,1,divination,Class Spell Lists: Paladin level 1
+detect-poison-and-disease-paladin,detect-poison-and-disease,Detect Poison and Disease,paladin,Paladin,1,divination,Class Spell Lists: Paladin level 1
+divine-favor-paladin,divine-favor,Divine Favor,paladin,Paladin,1,transmutation,Class Spell Lists: Paladin level 1
+divine-smite-paladin,divine-smite,Divine Smite,paladin,Paladin,1,evocation,Class Spell Lists: Paladin level 1
+heroism-paladin,heroism,Heroism,paladin,Paladin,1,enchantment,Class Spell Lists: Paladin level 1
+protection-from-evil-and-good-paladin,protection-from-evil-and-good,Protection from Evil and Good,paladin,Paladin,1,abjuration,Class Spell Lists: Paladin level 1
+purify-food-and-drink-paladin,purify-food-and-drink,Purify Food and Drink,paladin,Paladin,1,transmutation,Class Spell Lists: Paladin level 1
+searing-smite-paladin,searing-smite,Searing Smite,paladin,Paladin,1,evocation,Class Spell Lists: Paladin level 1
+shield-of-faith-paladin,shield-of-faith,Shield of Faith,paladin,Paladin,1,abjuration,Class Spell Lists: Paladin level 1
+aid-paladin,aid,Aid,paladin,Paladin,2,abjuration,Class Spell Lists: Paladin level 2
+find-steed-paladin,find-steed,Find Steed,paladin,Paladin,2,conjuration,Class Spell Lists: Paladin level 2
+gentle-repose-paladin,gentle-repose,Gentle Repose,paladin,Paladin,2,necromancy,Class Spell Lists: Paladin level 2
+lesser-restoration-paladin,lesser-restoration,Lesser Restoration,paladin,Paladin,2,abjuration,Class Spell Lists: Paladin level 2
+locate-object-paladin,locate-object,Locate Object,paladin,Paladin,2,divination,Class Spell Lists: Paladin level 2
+magic-weapon-paladin,magic-weapon,Magic Weapon,paladin,Paladin,2,transmutation,Class Spell Lists: Paladin level 2
+prayer-of-healing-paladin,prayer-of-healing,Prayer of Healing,paladin,Paladin,2,abjuration,Class Spell Lists: Paladin level 2
+protection-from-poison-paladin,protection-from-poison,Protection from Poison,paladin,Paladin,2,abjuration,Class Spell Lists: Paladin level 2
+shining-smite-paladin,shining-smite,Shining Smite,paladin,Paladin,2,transmutation,Class Spell Lists: Paladin level 2
+warding-bond-paladin,warding-bond,Warding Bond,paladin,Paladin,2,abjuration,Class Spell Lists: Paladin level 2
+zone-of-truth-paladin,zone-of-truth,Zone of Truth,paladin,Paladin,2,enchantment,Class Spell Lists: Paladin level 2
+create-food-and-water-paladin,create-food-and-water,Create Food and Water,paladin,Paladin,3,conjuration,Class Spell Lists: Paladin level 3
+daylight-paladin,daylight,Daylight,paladin,Paladin,3,evocation,Class Spell Lists: Paladin level 3
+dispel-magic-paladin,dispel-magic,Dispel Magic,paladin,Paladin,3,abjuration,Class Spell Lists: Paladin level 3
+magic-circle-paladin,magic-circle,Magic Circle,paladin,Paladin,3,abjuration,Class Spell Lists: Paladin level 3
+remove-curse-paladin,remove-curse,Remove Curse,paladin,Paladin,3,abjuration,Class Spell Lists: Paladin level 3
+revivify-paladin,revivify,Revivify,paladin,Paladin,3,necromancy,Class Spell Lists: Paladin level 3
+aura-of-life-paladin,aura-of-life,Aura of Life,paladin,Paladin,4,abjuration,Class Spell Lists: Paladin level 4
+banishment-paladin,banishment,Banishment,paladin,Paladin,4,abjuration,Class Spell Lists: Paladin level 4
+death-ward-paladin,death-ward,Death Ward,paladin,Paladin,4,abjuration,Class Spell Lists: Paladin level 4
+locate-creature-paladin,locate-creature,Locate Creature,paladin,Paladin,4,divination,Class Spell Lists: Paladin level 4
+dispel-evil-and-good-paladin,dispel-evil-and-good,Dispel Evil and Good,paladin,Paladin,5,abjuration,Class Spell Lists: Paladin level 5
+geas-paladin,geas,Geas,paladin,Paladin,5,enchantment,Class Spell Lists: Paladin level 5
+greater-restoration-paladin,greater-restoration,Greater Restoration,paladin,Paladin,5,abjuration,Class Spell Lists: Paladin level 5
+raise-dead-paladin,raise-dead,Raise Dead,paladin,Paladin,5,necromancy,Class Spell Lists: Paladin level 5
+alarm-ranger,alarm,Alarm,ranger,Ranger,1,abjuration,Class Spell Lists: Ranger level 1
+animal-friendship-ranger,animal-friendship,Animal Friendship,ranger,Ranger,1,enchantment,Class Spell Lists: Ranger level 1
+cure-wounds-ranger,cure-wounds,Cure Wounds,ranger,Ranger,1,abjuration,Class Spell Lists: Ranger level 1
+detect-magic-ranger,detect-magic,Detect Magic,ranger,Ranger,1,divination,Class Spell Lists: Ranger level 1
+detect-poison-and-disease-ranger,detect-poison-and-disease,Detect Poison and Disease,ranger,Ranger,1,divination,Class Spell Lists: Ranger level 1
+ensnaring-strike-ranger,ensnaring-strike,Ensnaring Strike,ranger,Ranger,1,conjuration,Class Spell Lists: Ranger level 1
+entangle-ranger,entangle,Entangle,ranger,Ranger,1,conjuration,Class Spell Lists: Ranger level 1
+fog-cloud-ranger,fog-cloud,Fog Cloud,ranger,Ranger,1,conjuration,Class Spell Lists: Ranger level 1
+goodberry-ranger,goodberry,Goodberry,ranger,Ranger,1,conjuration,Class Spell Lists: Ranger level 1
+hunters-mark-ranger,hunters-mark,Hunter's Mark,ranger,Ranger,1,divination,Class Spell Lists: Ranger level 1
+jump-ranger,jump,Jump,ranger,Ranger,1,transmutation,Class Spell Lists: Ranger level 1
+longstrider-ranger,longstrider,Longstrider,ranger,Ranger,1,transmutation,Class Spell Lists: Ranger level 1
+speak-with-animals-ranger,speak-with-animals,Speak with Animals,ranger,Ranger,1,divination,Class Spell Lists: Ranger level 1
+aid-ranger,aid,Aid,ranger,Ranger,2,abjuration,Class Spell Lists: Ranger level 2
+animal-messenger-ranger,animal-messenger,Animal Messenger,ranger,Ranger,2,enchantment,Class Spell Lists: Ranger level 2
+barkskin-ranger,barkskin,Barkskin,ranger,Ranger,2,transmutation,Class Spell Lists: Ranger level 2
+darkvision-ranger,darkvision,Darkvision,ranger,Ranger,2,transmutation,Class Spell Lists: Ranger level 2
+enhance-ability-ranger,enhance-ability,Enhance Ability,ranger,Ranger,2,transmutation,Class Spell Lists: Ranger level 2
+find-traps-ranger,find-traps,Find Traps,ranger,Ranger,2,divination,Class Spell Lists: Ranger level 2
+gust-of-wind-ranger,gust-of-wind,Gust of Wind,ranger,Ranger,2,evocation,Class Spell Lists: Ranger level 2
+lesser-restoration-ranger,lesser-restoration,Lesser Restoration,ranger,Ranger,2,abjuration,Class Spell Lists: Ranger level 2
+locate-animals-or-plants-ranger,locate-animals-or-plants,Locate Animals or Plants,ranger,Ranger,2,divination,Class Spell Lists: Ranger level 2
+locate-object-ranger,locate-object,Locate Object,ranger,Ranger,2,divination,Class Spell Lists: Ranger level 2
+magic-weapon-ranger,magic-weapon,Magic Weapon,ranger,Ranger,2,transmutation,Class Spell Lists: Ranger level 2
+pass-without-trace-ranger,pass-without-trace,Pass without Trace,ranger,Ranger,2,abjuration,Class Spell Lists: Ranger level 2
+protection-from-poison-ranger,protection-from-poison,Protection from Poison,ranger,Ranger,2,abjuration,Class Spell Lists: Ranger level 2
+silence-ranger,silence,Silence,ranger,Ranger,2,illusion,Class Spell Lists: Ranger level 2
+spike-growth-ranger,spike-growth,Spike Growth,ranger,Ranger,2,transmutation,Class Spell Lists: Ranger level 2
+conjure-animals-ranger,conjure-animals,Conjure Animals,ranger,Ranger,3,conjuration,Class Spell Lists: Ranger level 3
+daylight-ranger,daylight,Daylight,ranger,Ranger,3,evocation,Class Spell Lists: Ranger level 3
+dispel-magic-ranger,dispel-magic,Dispel Magic,ranger,Ranger,3,abjuration,Class Spell Lists: Ranger level 3
+meld-into-stone-ranger,meld-into-stone,Meld into Stone,ranger,Ranger,3,transmutation,Class Spell Lists: Ranger level 3
+nondetection-ranger,nondetection,Nondetection,ranger,Ranger,3,abjuration,Class Spell Lists: Ranger level 3
+plant-growth-ranger,plant-growth,Plant Growth,ranger,Ranger,3,transmutation,Class Spell Lists: Ranger level 3
+protection-from-energy-ranger,protection-from-energy,Protection from Energy,ranger,Ranger,3,abjuration,Class Spell Lists: Ranger level 3
+revivify-ranger,revivify,Revivify,ranger,Ranger,3,necromancy,Class Spell Lists: Ranger level 3
+speak-with-plants-ranger,speak-with-plants,Speak with Plants,ranger,Ranger,3,transmutation,Class Spell Lists: Ranger level 3
+water-breathing-ranger,water-breathing,Water Breathing,ranger,Ranger,3,transmutation,Class Spell Lists: Ranger level 3
+water-walk-ranger,water-walk,Water Walk,ranger,Ranger,3,transmutation,Class Spell Lists: Ranger level 3
+wind-wall-ranger,wind-wall,Wind Wall,ranger,Ranger,3,evocation,Class Spell Lists: Ranger level 3
+conjure-woodland-beings-ranger,conjure-woodland-beings,Conjure Woodland Beings,ranger,Ranger,4,conjuration,Class Spell Lists: Ranger level 4
+dominate-beast-ranger,dominate-beast,Dominate Beast,ranger,Ranger,4,enchantment,Class Spell Lists: Ranger level 4
+freedom-of-movement-ranger,freedom-of-movement,Freedom of Movement,ranger,Ranger,4,abjuration,Class Spell Lists: Ranger level 4
+locate-creature-ranger,locate-creature,Locate Creature,ranger,Ranger,4,divination,Class Spell Lists: Ranger level 4
+stoneskin-ranger,stoneskin,Stoneskin,ranger,Ranger,4,transmutation,Class Spell Lists: Ranger level 4
+commune-with-nature-ranger,commune-with-nature,Commune with Nature,ranger,Ranger,5,divination,Class Spell Lists: Ranger level 5
+greater-restoration-ranger,greater-restoration,Greater Restoration,ranger,Ranger,5,abjuration,Class Spell Lists: Ranger level 5
+tree-stride-ranger,tree-stride,Tree Stride,ranger,Ranger,5,conjuration,Class Spell Lists: Ranger level 5
+acid-splash-sorcerer,acid-splash,Acid Splash,sorcerer,Sorcerer,0,evocation,Class Spell Lists: Sorcerer level 0
+chill-touch-sorcerer,chill-touch,Chill Touch,sorcerer,Sorcerer,0,necromancy,Class Spell Lists: Sorcerer level 0
+dancing-lights-sorcerer,dancing-lights,Dancing Lights,sorcerer,Sorcerer,0,illusion,Class Spell Lists: Sorcerer level 0
+elementalism-sorcerer,elementalism,Elementalism,sorcerer,Sorcerer,0,transmutation,Class Spell Lists: Sorcerer level 0
+fire-bolt-sorcerer,fire-bolt,Fire Bolt,sorcerer,Sorcerer,0,evocation,Class Spell Lists: Sorcerer level 0
+light-sorcerer,light,Light,sorcerer,Sorcerer,0,evocation,Class Spell Lists: Sorcerer level 0
+mage-hand-sorcerer,mage-hand,Mage Hand,sorcerer,Sorcerer,0,conjuration,Class Spell Lists: Sorcerer level 0
+mending-sorcerer,mending,Mending,sorcerer,Sorcerer,0,transmutation,Class Spell Lists: Sorcerer level 0
+message-sorcerer,message,Message,sorcerer,Sorcerer,0,transmutation,Class Spell Lists: Sorcerer level 0
+minor-illusion-sorcerer,minor-illusion,Minor Illusion,sorcerer,Sorcerer,0,illusion,Class Spell Lists: Sorcerer level 0
+poison-spray-sorcerer,poison-spray,Poison Spray,sorcerer,Sorcerer,0,necromancy,Class Spell Lists: Sorcerer level 0
+prestidigitation-sorcerer,prestidigitation,Prestidigitation,sorcerer,Sorcerer,0,transmutation,Class Spell Lists: Sorcerer level 0
+ray-of-frost-sorcerer,ray-of-frost,Ray of Frost,sorcerer,Sorcerer,0,evocation,Class Spell Lists: Sorcerer level 0
+shocking-grasp-sorcerer,shocking-grasp,Shocking Grasp,sorcerer,Sorcerer,0,evocation,Class Spell Lists: Sorcerer level 0
+sorcerous-burst-sorcerer,sorcerous-burst,Sorcerous Burst,sorcerer,Sorcerer,0,evocation,Class Spell Lists: Sorcerer level 0
+true-strike-sorcerer,true-strike,True Strike,sorcerer,Sorcerer,0,divination,Class Spell Lists: Sorcerer level 0
+burning-hands-sorcerer,burning-hands,Burning Hands,sorcerer,Sorcerer,1,evocation,Class Spell Lists: Sorcerer level 1
+charm-person-sorcerer,charm-person,Charm Person,sorcerer,Sorcerer,1,enchantment,Class Spell Lists: Sorcerer level 1
+chromatic-orb-sorcerer,chromatic-orb,Chromatic Orb,sorcerer,Sorcerer,1,evocation,Class Spell Lists: Sorcerer level 1
+color-spray-sorcerer,color-spray,Color Spray,sorcerer,Sorcerer,1,illusion,Class Spell Lists: Sorcerer level 1
+comprehend-languages-sorcerer,comprehend-languages,Comprehend Languages,sorcerer,Sorcerer,1,divination,Class Spell Lists: Sorcerer level 1
+detect-magic-sorcerer,detect-magic,Detect Magic,sorcerer,Sorcerer,1,divination,Class Spell Lists: Sorcerer level 1
+disguise-self-sorcerer,disguise-self,Disguise Self,sorcerer,Sorcerer,1,illusion,Class Spell Lists: Sorcerer level 1
+expeditious-retreat-sorcerer,expeditious-retreat,Expeditious Retreat,sorcerer,Sorcerer,1,transmutation,Class Spell Lists: Sorcerer level 1
+false-life-sorcerer,false-life,False Life,sorcerer,Sorcerer,1,necromancy,Class Spell Lists: Sorcerer level 1
+feather-fall-sorcerer,feather-fall,Feather Fall,sorcerer,Sorcerer,1,transmutation,Class Spell Lists: Sorcerer level 1
+fog-cloud-sorcerer,fog-cloud,Fog Cloud,sorcerer,Sorcerer,1,conjuration,Class Spell Lists: Sorcerer level 1
+grease-sorcerer,grease,Grease,sorcerer,Sorcerer,1,conjuration,Class Spell Lists: Sorcerer level 1
+ice-knife-sorcerer,ice-knife,Ice Knife,sorcerer,Sorcerer,1,conjuration,Class Spell Lists: Sorcerer level 1
+jump-sorcerer,jump,Jump,sorcerer,Sorcerer,1,transmutation,Class Spell Lists: Sorcerer level 1
+mage-armor-sorcerer,mage-armor,Mage Armor,sorcerer,Sorcerer,1,abjuration,Class Spell Lists: Sorcerer level 1
+magic-missile-sorcerer,magic-missile,Magic Missile,sorcerer,Sorcerer,1,evocation,Class Spell Lists: Sorcerer level 1
+ray-of-sickness-sorcerer,ray-of-sickness,Ray of Sickness,sorcerer,Sorcerer,1,necromancy,Class Spell Lists: Sorcerer level 1
+shield-sorcerer,shield,Shield,sorcerer,Sorcerer,1,abjuration,Class Spell Lists: Sorcerer level 1
+silent-image-sorcerer,silent-image,Silent Image,sorcerer,Sorcerer,1,illusion,Class Spell Lists: Sorcerer level 1
+sleep-sorcerer,sleep,Sleep,sorcerer,Sorcerer,1,enchantment,Class Spell Lists: Sorcerer level 1
+thunderwave-sorcerer,thunderwave,Thunderwave,sorcerer,Sorcerer,1,evocation,Class Spell Lists: Sorcerer level 1
+alter-self-sorcerer,alter-self,Alter Self,sorcerer,Sorcerer,2,transmutation,Class Spell Lists: Sorcerer level 2
+blindness-deafness-sorcerer,blindness-deafness,Blindness/Deafness,sorcerer,Sorcerer,2,transmutation,Class Spell Lists: Sorcerer level 2
+blur-sorcerer,blur,Blur,sorcerer,Sorcerer,2,illusion,Class Spell Lists: Sorcerer level 2
+darkness-sorcerer,darkness,Darkness,sorcerer,Sorcerer,2,evocation,Class Spell Lists: Sorcerer level 2
+darkvision-sorcerer,darkvision,Darkvision,sorcerer,Sorcerer,2,transmutation,Class Spell Lists: Sorcerer level 2
+detect-thoughts-sorcerer,detect-thoughts,Detect Thoughts,sorcerer,Sorcerer,2,divination,Class Spell Lists: Sorcerer level 2
+dragons-breath-sorcerer,dragons-breath,Dragon's Breath,sorcerer,Sorcerer,2,transmutation,Class Spell Lists: Sorcerer level 2
+enhance-ability-sorcerer,enhance-ability,Enhance Ability,sorcerer,Sorcerer,2,transmutation,Class Spell Lists: Sorcerer level 2
+enlarge-reduce-sorcerer,enlarge-reduce,Enlarge/Reduce,sorcerer,Sorcerer,2,transmutation,Class Spell Lists: Sorcerer level 2
+flame-blade-sorcerer,flame-blade,Flame Blade,sorcerer,Sorcerer,2,evocation,Class Spell Lists: Sorcerer level 2
+flaming-sphere-sorcerer,flaming-sphere,Flaming Sphere,sorcerer,Sorcerer,2,conjuration,Class Spell Lists: Sorcerer level 2
+gust-of-wind-sorcerer,gust-of-wind,Gust of Wind,sorcerer,Sorcerer,2,evocation,Class Spell Lists: Sorcerer level 2
+hold-person-sorcerer,hold-person,Hold Person,sorcerer,Sorcerer,2,enchantment,Class Spell Lists: Sorcerer level 2
+invisibility-sorcerer,invisibility,Invisibility,sorcerer,Sorcerer,2,illusion,Class Spell Lists: Sorcerer level 2
+knock-sorcerer,knock,Knock,sorcerer,Sorcerer,2,transmutation,Class Spell Lists: Sorcerer level 2
+levitate-sorcerer,levitate,Levitate,sorcerer,Sorcerer,2,transmutation,Class Spell Lists: Sorcerer level 2
+magic-weapon-sorcerer,magic-weapon,Magic Weapon,sorcerer,Sorcerer,2,transmutation,Class Spell Lists: Sorcerer level 2
+mirror-image-sorcerer,mirror-image,Mirror Image,sorcerer,Sorcerer,2,illusion,Class Spell Lists: Sorcerer level 2
+misty-step-sorcerer,misty-step,Misty Step,sorcerer,Sorcerer,2,conjuration,Class Spell Lists: Sorcerer level 2
+scorching-ray-sorcerer,scorching-ray,Scorching Ray,sorcerer,Sorcerer,2,evocation,Class Spell Lists: Sorcerer level 2
+see-invisibility-sorcerer,see-invisibility,See Invisibility,sorcerer,Sorcerer,2,divination,Class Spell Lists: Sorcerer level 2
+shatter-sorcerer,shatter,Shatter,sorcerer,Sorcerer,2,evocation,Class Spell Lists: Sorcerer level 2
+spider-climb-sorcerer,spider-climb,Spider Climb,sorcerer,Sorcerer,2,transmutation,Class Spell Lists: Sorcerer level 2
+suggestion-sorcerer,suggestion,Suggestion,sorcerer,Sorcerer,2,enchantment,Class Spell Lists: Sorcerer level 2
+web-sorcerer,web,Web,sorcerer,Sorcerer,2,conjuration,Class Spell Lists: Sorcerer level 2
+blink-sorcerer,blink,Blink,sorcerer,Sorcerer,3,transmutation,Class Spell Lists: Sorcerer level 3
+clairvoyance-sorcerer,clairvoyance,Clairvoyance,sorcerer,Sorcerer,3,divination,Class Spell Lists: Sorcerer level 3
+counterspell-sorcerer,counterspell,Counterspell,sorcerer,Sorcerer,3,abjuration,Class Spell Lists: Sorcerer level 3
+daylight-sorcerer,daylight,Daylight,sorcerer,Sorcerer,3,evocation,Class Spell Lists: Sorcerer level 3
+dispel-magic-sorcerer,dispel-magic,Dispel Magic,sorcerer,Sorcerer,3,abjuration,Class Spell Lists: Sorcerer level 3
+fear-sorcerer,fear,Fear,sorcerer,Sorcerer,3,illusion,Class Spell Lists: Sorcerer level 3
+fireball-sorcerer,fireball,Fireball,sorcerer,Sorcerer,3,evocation,Class Spell Lists: Sorcerer level 3
+fly-sorcerer,fly,Fly,sorcerer,Sorcerer,3,transmutation,Class Spell Lists: Sorcerer level 3
+gaseous-form-sorcerer,gaseous-form,Gaseous Form,sorcerer,Sorcerer,3,transmutation,Class Spell Lists: Sorcerer level 3
+haste-sorcerer,haste,Haste,sorcerer,Sorcerer,3,transmutation,Class Spell Lists: Sorcerer level 3
+hypnotic-pattern-sorcerer,hypnotic-pattern,Hypnotic Pattern,sorcerer,Sorcerer,3,illusion,Class Spell Lists: Sorcerer level 3
+lightning-bolt-sorcerer,lightning-bolt,Lightning Bolt,sorcerer,Sorcerer,3,evocation,Class Spell Lists: Sorcerer level 3
+major-image-sorcerer,major-image,Major Image,sorcerer,Sorcerer,3,illusion,Class Spell Lists: Sorcerer level 3
+protection-from-energy-sorcerer,protection-from-energy,Protection from Energy,sorcerer,Sorcerer,3,abjuration,Class Spell Lists: Sorcerer level 3
+sleet-storm-sorcerer,sleet-storm,Sleet Storm,sorcerer,Sorcerer,3,conjuration,Class Spell Lists: Sorcerer level 3
+slow-sorcerer,slow,Slow,sorcerer,Sorcerer,3,transmutation,Class Spell Lists: Sorcerer level 3
+stinking-cloud-sorcerer,stinking-cloud,Stinking Cloud,sorcerer,Sorcerer,3,conjuration,Class Spell Lists: Sorcerer level 3
+tongues-sorcerer,tongues,Tongues,sorcerer,Sorcerer,3,divination,Class Spell Lists: Sorcerer level 3
+vampiric-touch-sorcerer,vampiric-touch,Vampiric Touch,sorcerer,Sorcerer,3,necromancy,Class Spell Lists: Sorcerer level 3
+water-breathing-sorcerer,water-breathing,Water Breathing,sorcerer,Sorcerer,3,transmutation,Class Spell Lists: Sorcerer level 3
+water-walk-sorcerer,water-walk,Water Walk,sorcerer,Sorcerer,3,transmutation,Class Spell Lists: Sorcerer level 3
+banishment-sorcerer,banishment,Banishment,sorcerer,Sorcerer,4,abjuration,Class Spell Lists: Sorcerer level 4
+blight-sorcerer,blight,Blight,sorcerer,Sorcerer,4,necromancy,Class Spell Lists: Sorcerer level 4
+charm-monster-sorcerer,charm-monster,Charm Monster,sorcerer,Sorcerer,4,enchantment,Class Spell Lists: Sorcerer level 4
+confusion-sorcerer,confusion,Confusion,sorcerer,Sorcerer,4,enchantment,Class Spell Lists: Sorcerer level 4
+dimension-door-sorcerer,dimension-door,Dimension Door,sorcerer,Sorcerer,4,conjuration,Class Spell Lists: Sorcerer level 4
+dominate-beast-sorcerer,dominate-beast,Dominate Beast,sorcerer,Sorcerer,4,enchantment,Class Spell Lists: Sorcerer level 4
+fire-shield-sorcerer,fire-shield,Fire Shield,sorcerer,Sorcerer,4,evocation,Class Spell Lists: Sorcerer level 4
+greater-invisibility-sorcerer,greater-invisibility,Greater Invisibility,sorcerer,Sorcerer,4,illusion,Class Spell Lists: Sorcerer level 4
+ice-storm-sorcerer,ice-storm,Ice Storm,sorcerer,Sorcerer,4,evocation,Class Spell Lists: Sorcerer level 4
+polymorph-sorcerer,polymorph,Polymorph,sorcerer,Sorcerer,4,transmutation,Class Spell Lists: Sorcerer level 4
+stoneskin-sorcerer,stoneskin,Stoneskin,sorcerer,Sorcerer,4,transmutation,Class Spell Lists: Sorcerer level 4
+vitriolic-sphere-sorcerer,vitriolic-sphere,Vitriolic Sphere,sorcerer,Sorcerer,4,evocation,Class Spell Lists: Sorcerer level 4
+wall-of-fire-sorcerer,wall-of-fire,Wall of Fire,sorcerer,Sorcerer,4,evocation,Class Spell Lists: Sorcerer level 4
+animate-objects-sorcerer,animate-objects,Animate Objects,sorcerer,Sorcerer,5,transmutation,Class Spell Lists: Sorcerer level 5
+arcane-hand-sorcerer,arcane-hand,Arcane Hand,sorcerer,Sorcerer,5,evocation,Class Spell Lists: Sorcerer level 5
+cloudkill-sorcerer,cloudkill,Cloudkill,sorcerer,Sorcerer,5,conjuration,Class Spell Lists: Sorcerer level 5
+cone-of-cold-sorcerer,cone-of-cold,Cone of Cold,sorcerer,Sorcerer,5,evocation,Class Spell Lists: Sorcerer level 5
+creation-sorcerer,creation,Creation,sorcerer,Sorcerer,5,illusion,Class Spell Lists: Sorcerer level 5
+dominate-person-sorcerer,dominate-person,Dominate Person,sorcerer,Sorcerer,5,enchantment,Class Spell Lists: Sorcerer level 5
+hold-monster-sorcerer,hold-monster,Hold Monster,sorcerer,Sorcerer,5,enchantment,Class Spell Lists: Sorcerer level 5
+insect-plague-sorcerer,insect-plague,Insect Plague,sorcerer,Sorcerer,5,conjuration,Class Spell Lists: Sorcerer level 5
+seeming-sorcerer,seeming,Seeming,sorcerer,Sorcerer,5,illusion,Class Spell Lists: Sorcerer level 5
+telekinesis-sorcerer,telekinesis,Telekinesis,sorcerer,Sorcerer,5,transmutation,Class Spell Lists: Sorcerer level 5
+teleportation-circle-sorcerer,teleportation-circle,Teleportation Circle,sorcerer,Sorcerer,5,conjuration,Class Spell Lists: Sorcerer level 5
+wall-of-stone-sorcerer,wall-of-stone,Wall of Stone,sorcerer,Sorcerer,5,evocation,Class Spell Lists: Sorcerer level 5
+chain-lightning-sorcerer,chain-lightning,Chain Lightning,sorcerer,Sorcerer,6,evocation,Class Spell Lists: Sorcerer level 6
+circle-of-death-sorcerer,circle-of-death,Circle of Death,sorcerer,Sorcerer,6,necromancy,Class Spell Lists: Sorcerer level 6
+disintegrate-sorcerer,disintegrate,Disintegrate,sorcerer,Sorcerer,6,transmutation,Class Spell Lists: Sorcerer level 6
+eyebite-sorcerer,eyebite,Eyebite,sorcerer,Sorcerer,6,necromancy,Class Spell Lists: Sorcerer level 6
+flesh-to-stone-sorcerer,flesh-to-stone,Flesh to Stone,sorcerer,Sorcerer,6,transmutation,Class Spell Lists: Sorcerer level 6
+freezing-sphere-sorcerer,freezing-sphere,Freezing Sphere,sorcerer,Sorcerer,6,evocation,Class Spell Lists: Sorcerer level 6
+globe-of-invulnerability-sorcerer,globe-of-invulnerability,Globe of Invulnerability,sorcerer,Sorcerer,6,abjuration,Class Spell Lists: Sorcerer level 6
+mass-suggestion-sorcerer,mass-suggestion,Mass Suggestion,sorcerer,Sorcerer,6,enchantment,Class Spell Lists: Sorcerer level 6
+move-earth-sorcerer,move-earth,Move Earth,sorcerer,Sorcerer,6,transmutation,Class Spell Lists: Sorcerer level 6
+sunbeam-sorcerer,sunbeam,Sunbeam,sorcerer,Sorcerer,6,evocation,Class Spell Lists: Sorcerer level 6
+true-seeing-sorcerer,true-seeing,True Seeing,sorcerer,Sorcerer,6,divination,Class Spell Lists: Sorcerer level 6
+delayed-blast-fireball-sorcerer,delayed-blast-fireball,Delayed Blast Fireball,sorcerer,Sorcerer,7,evocation,Class Spell Lists: Sorcerer level 7
+etherealness-sorcerer,etherealness,Etherealness,sorcerer,Sorcerer,7,conjuration,Class Spell Lists: Sorcerer level 7
+finger-of-death-sorcerer,finger-of-death,Finger of Death,sorcerer,Sorcerer,7,necromancy,Class Spell Lists: Sorcerer level 7
+fire-storm-sorcerer,fire-storm,Fire Storm,sorcerer,Sorcerer,7,evocation,Class Spell Lists: Sorcerer level 7
+plane-shift-sorcerer,plane-shift,Plane Shift,sorcerer,Sorcerer,7,conjuration,Class Spell Lists: Sorcerer level 7
+prismatic-spray-sorcerer,prismatic-spray,Prismatic Spray,sorcerer,Sorcerer,7,evocation,Class Spell Lists: Sorcerer level 7
+reverse-gravity-sorcerer,reverse-gravity,Reverse Gravity,sorcerer,Sorcerer,7,transmutation,Class Spell Lists: Sorcerer level 7
+teleport-sorcerer,teleport,Teleport,sorcerer,Sorcerer,7,conjuration,Class Spell Lists: Sorcerer level 7
+demiplane-sorcerer,demiplane,Demiplane,sorcerer,Sorcerer,8,conjuration,Class Spell Lists: Sorcerer level 8
+dominate-monster-sorcerer,dominate-monster,Dominate Monster,sorcerer,Sorcerer,8,enchantment,Class Spell Lists: Sorcerer level 8
+earthquake-sorcerer,earthquake,Earthquake,sorcerer,Sorcerer,8,transmutation,Class Spell Lists: Sorcerer level 8
+incendiary-cloud-sorcerer,incendiary-cloud,Incendiary Cloud,sorcerer,Sorcerer,8,conjuration,Class Spell Lists: Sorcerer level 8
+power-word-stun-sorcerer,power-word-stun,Power Word Stun,sorcerer,Sorcerer,8,enchantment,Class Spell Lists: Sorcerer level 8
+sunburst-sorcerer,sunburst,Sunburst,sorcerer,Sorcerer,8,evocation,Class Spell Lists: Sorcerer level 8
+gate-sorcerer,gate,Gate,sorcerer,Sorcerer,9,conjuration,Class Spell Lists: Sorcerer level 9
+meteor-swarm-sorcerer,meteor-swarm,Meteor Swarm,sorcerer,Sorcerer,9,evocation,Class Spell Lists: Sorcerer level 9
+power-word-kill-sorcerer,power-word-kill,Power Word Kill,sorcerer,Sorcerer,9,enchantment,Class Spell Lists: Sorcerer level 9
+time-stop-sorcerer,time-stop,Time Stop,sorcerer,Sorcerer,9,transmutation,Class Spell Lists: Sorcerer level 9
+wish-sorcerer,wish,Wish,sorcerer,Sorcerer,9,conjuration,Class Spell Lists: Sorcerer level 9
+chill-touch-warlock,chill-touch,Chill Touch,warlock,Warlock,0,necromancy,Class Spell Lists: Warlock level 0
+eldritch-blast-warlock,eldritch-blast,Eldritch Blast,warlock,Warlock,0,evocation,Class Spell Lists: Warlock level 0
+mage-hand-warlock,mage-hand,Mage Hand,warlock,Warlock,0,conjuration,Class Spell Lists: Warlock level 0
+minor-illusion-warlock,minor-illusion,Minor Illusion,warlock,Warlock,0,illusion,Class Spell Lists: Warlock level 0
+poison-spray-warlock,poison-spray,Poison Spray,warlock,Warlock,0,necromancy,Class Spell Lists: Warlock level 0
+prestidigitation-warlock,prestidigitation,Prestidigitation,warlock,Warlock,0,transmutation,Class Spell Lists: Warlock level 0
+true-strike-warlock,true-strike,True Strike,warlock,Warlock,0,divination,Class Spell Lists: Warlock level 0
+bane-warlock,bane,Bane,warlock,Warlock,1,enchantment,Class Spell Lists: Warlock level 1
+charm-person-warlock,charm-person,Charm Person,warlock,Warlock,1,enchantment,Class Spell Lists: Warlock level 1
+comprehend-languages-warlock,comprehend-languages,Comprehend Languages,warlock,Warlock,1,divination,Class Spell Lists: Warlock level 1
+detect-magic-warlock,detect-magic,Detect Magic,warlock,Warlock,1,divination,Class Spell Lists: Warlock level 1
+expeditious-retreat-warlock,expeditious-retreat,Expeditious Retreat,warlock,Warlock,1,transmutation,Class Spell Lists: Warlock level 1
+hellish-rebuke-warlock,hellish-rebuke,Hellish Rebuke,warlock,Warlock,1,evocation,Class Spell Lists: Warlock level 1
+hex-warlock,hex,Hex,warlock,Warlock,1,enchantment,Class Spell Lists: Warlock level 1
+hideous-laughter-warlock,hideous-laughter,Hideous Laughter,warlock,Warlock,1,enchantment,Class Spell Lists: Warlock level 1
+illusory-script-warlock,illusory-script,Illusory Script,warlock,Warlock,1,illusion,Class Spell Lists: Warlock level 1
+protection-from-evil-and-good-warlock,protection-from-evil-and-good,Protection from Evil and Good,warlock,Warlock,1,abjuration,Class Spell Lists: Warlock level 1
+speak-with-animals-warlock,speak-with-animals,Speak with Animals,warlock,Warlock,1,divination,Class Spell Lists: Warlock level 1
+unseen-servant-warlock,unseen-servant,Unseen Servant,warlock,Warlock,1,conjuration,Class Spell Lists: Warlock level 1
+darkness-warlock,darkness,Darkness,warlock,Warlock,2,evocation,Class Spell Lists: Warlock level 2
+enthrall-warlock,enthrall,Enthrall,warlock,Warlock,2,enchantment,Class Spell Lists: Warlock level 2
+hold-person-warlock,hold-person,Hold Person,warlock,Warlock,2,enchantment,Class Spell Lists: Warlock level 2
+invisibility-warlock,invisibility,Invisibility,warlock,Warlock,2,illusion,Class Spell Lists: Warlock level 2
+mind-spike-warlock,mind-spike,Mind Spike,warlock,Warlock,2,divination,Class Spell Lists: Warlock level 2
+mirror-image-warlock,mirror-image,Mirror Image,warlock,Warlock,2,illusion,Class Spell Lists: Warlock level 2
+misty-step-warlock,misty-step,Misty Step,warlock,Warlock,2,conjuration,Class Spell Lists: Warlock level 2
+ray-of-enfeeblement-warlock,ray-of-enfeeblement,Ray of Enfeeblement,warlock,Warlock,2,necromancy,Class Spell Lists: Warlock level 2
+spider-climb-warlock,spider-climb,Spider Climb,warlock,Warlock,2,transmutation,Class Spell Lists: Warlock level 2
+suggestion-warlock,suggestion,Suggestion,warlock,Warlock,2,enchantment,Class Spell Lists: Warlock level 2
+counterspell-warlock,counterspell,Counterspell,warlock,Warlock,3,abjuration,Class Spell Lists: Warlock level 3
+dispel-magic-warlock,dispel-magic,Dispel Magic,warlock,Warlock,3,abjuration,Class Spell Lists: Warlock level 3
+fear-warlock,fear,Fear,warlock,Warlock,3,illusion,Class Spell Lists: Warlock level 3
+fly-warlock,fly,Fly,warlock,Warlock,3,transmutation,Class Spell Lists: Warlock level 3
+gaseous-form-warlock,gaseous-form,Gaseous Form,warlock,Warlock,3,transmutation,Class Spell Lists: Warlock level 3
+hypnotic-pattern-warlock,hypnotic-pattern,Hypnotic Pattern,warlock,Warlock,3,illusion,Class Spell Lists: Warlock level 3
+magic-circle-warlock,magic-circle,Magic Circle,warlock,Warlock,3,abjuration,Class Spell Lists: Warlock level 3
+major-image-warlock,major-image,Major Image,warlock,Warlock,3,illusion,Class Spell Lists: Warlock level 3
+remove-curse-warlock,remove-curse,Remove Curse,warlock,Warlock,3,abjuration,Class Spell Lists: Warlock level 3
+tongues-warlock,tongues,Tongues,warlock,Warlock,3,divination,Class Spell Lists: Warlock level 3
+vampiric-touch-warlock,vampiric-touch,Vampiric Touch,warlock,Warlock,3,necromancy,Class Spell Lists: Warlock level 3
+banishment-warlock,banishment,Banishment,warlock,Warlock,4,abjuration,Class Spell Lists: Warlock level 4
+blight-warlock,blight,Blight,warlock,Warlock,4,necromancy,Class Spell Lists: Warlock level 4
+charm-monster-warlock,charm-monster,Charm Monster,warlock,Warlock,4,enchantment,Class Spell Lists: Warlock level 4
+dimension-door-warlock,dimension-door,Dimension Door,warlock,Warlock,4,conjuration,Class Spell Lists: Warlock level 4
+hallucinatory-terrain-warlock,hallucinatory-terrain,Hallucinatory Terrain,warlock,Warlock,4,illusion,Class Spell Lists: Warlock level 4
+contact-other-plane-warlock,contact-other-plane,Contact Other Plane,warlock,Warlock,5,divination,Class Spell Lists: Warlock level 5
+dream-warlock,dream,Dream,warlock,Warlock,5,illusion,Class Spell Lists: Warlock level 5
+hold-monster-warlock,hold-monster,Hold Monster,warlock,Warlock,5,enchantment,Class Spell Lists: Warlock level 5
+mislead-warlock,mislead,Mislead,warlock,Warlock,5,illusion,Class Spell Lists: Warlock level 5
+planar-binding-warlock,planar-binding,Planar Binding,warlock,Warlock,5,abjuration,Class Spell Lists: Warlock level 5
+scrying-warlock,scrying,Scrying,warlock,Warlock,5,divination,Class Spell Lists: Warlock level 5
+teleportation-circle-warlock,teleportation-circle,Teleportation Circle,warlock,Warlock,5,conjuration,Class Spell Lists: Warlock level 5
+circle-of-death-warlock,circle-of-death,Circle of Death,warlock,Warlock,6,necromancy,Class Spell Lists: Warlock level 6
+create-undead-warlock,create-undead,Create Undead,warlock,Warlock,6,necromancy,Class Spell Lists: Warlock level 6
+eyebite-warlock,eyebite,Eyebite,warlock,Warlock,6,necromancy,Class Spell Lists: Warlock level 6
+true-seeing-warlock,true-seeing,True Seeing,warlock,Warlock,6,divination,Class Spell Lists: Warlock level 6
+etherealness-warlock,etherealness,Etherealness,warlock,Warlock,7,conjuration,Class Spell Lists: Warlock level 7
+finger-of-death-warlock,finger-of-death,Finger of Death,warlock,Warlock,7,necromancy,Class Spell Lists: Warlock level 7
+forcecage-warlock,forcecage,Forcecage,warlock,Warlock,7,evocation,Class Spell Lists: Warlock level 7
+plane-shift-warlock,plane-shift,Plane Shift,warlock,Warlock,7,conjuration,Class Spell Lists: Warlock level 7
+befuddlement-warlock,befuddlement,Befuddlement,warlock,Warlock,8,enchantment,Class Spell Lists: Warlock level 8
+demiplane-warlock,demiplane,Demiplane,warlock,Warlock,8,conjuration,Class Spell Lists: Warlock level 8
+dominate-monster-warlock,dominate-monster,Dominate Monster,warlock,Warlock,8,enchantment,Class Spell Lists: Warlock level 8
+glibness-warlock,glibness,Glibness,warlock,Warlock,8,enchantment,Class Spell Lists: Warlock level 8
+power-word-stun-warlock,power-word-stun,Power Word Stun,warlock,Warlock,8,enchantment,Class Spell Lists: Warlock level 8
+astral-projection-warlock,astral-projection,Astral Projection,warlock,Warlock,9,necromancy,Class Spell Lists: Warlock level 9
+foresight-warlock,foresight,Foresight,warlock,Warlock,9,divination,Class Spell Lists: Warlock level 9
+gate-warlock,gate,Gate,warlock,Warlock,9,conjuration,Class Spell Lists: Warlock level 9
+imprisonment-warlock,imprisonment,Imprisonment,warlock,Warlock,9,abjuration,Class Spell Lists: Warlock level 9
+power-word-kill-warlock,power-word-kill,Power Word Kill,warlock,Warlock,9,enchantment,Class Spell Lists: Warlock level 9
+true-polymorph-warlock,true-polymorph,True Polymorph,warlock,Warlock,9,transmutation,Class Spell Lists: Warlock level 9
+weird-warlock,weird,Weird,warlock,Warlock,9,illusion,Class Spell Lists: Warlock level 9
+acid-splash-wizard,acid-splash,Acid Splash,wizard,Wizard,0,evocation,Class Spell Lists: Wizard level 0
+chill-touch-wizard,chill-touch,Chill Touch,wizard,Wizard,0,necromancy,Class Spell Lists: Wizard level 0
+dancing-lights-wizard,dancing-lights,Dancing Lights,wizard,Wizard,0,illusion,Class Spell Lists: Wizard level 0
+elementalism-wizard,elementalism,Elementalism,wizard,Wizard,0,transmutation,Class Spell Lists: Wizard level 0
+fire-bolt-wizard,fire-bolt,Fire Bolt,wizard,Wizard,0,evocation,Class Spell Lists: Wizard level 0
+light-wizard,light,Light,wizard,Wizard,0,evocation,Class Spell Lists: Wizard level 0
+mage-hand-wizard,mage-hand,Mage Hand,wizard,Wizard,0,conjuration,Class Spell Lists: Wizard level 0
+mending-wizard,mending,Mending,wizard,Wizard,0,transmutation,Class Spell Lists: Wizard level 0
+message-wizard,message,Message,wizard,Wizard,0,transmutation,Class Spell Lists: Wizard level 0
+minor-illusion-wizard,minor-illusion,Minor Illusion,wizard,Wizard,0,illusion,Class Spell Lists: Wizard level 0
+poison-spray-wizard,poison-spray,Poison Spray,wizard,Wizard,0,necromancy,Class Spell Lists: Wizard level 0
+prestidigitation-wizard,prestidigitation,Prestidigitation,wizard,Wizard,0,transmutation,Class Spell Lists: Wizard level 0
+ray-of-frost-wizard,ray-of-frost,Ray of Frost,wizard,Wizard,0,evocation,Class Spell Lists: Wizard level 0
+shocking-grasp-wizard,shocking-grasp,Shocking Grasp,wizard,Wizard,0,evocation,Class Spell Lists: Wizard level 0
+true-strike-wizard,true-strike,True Strike,wizard,Wizard,0,divination,Class Spell Lists: Wizard level 0
+alarm-wizard,alarm,Alarm,wizard,Wizard,1,abjuration,Class Spell Lists: Wizard level 1
+burning-hands-wizard,burning-hands,Burning Hands,wizard,Wizard,1,evocation,Class Spell Lists: Wizard level 1
+charm-person-wizard,charm-person,Charm Person,wizard,Wizard,1,enchantment,Class Spell Lists: Wizard level 1
+chromatic-orb-wizard,chromatic-orb,Chromatic Orb,wizard,Wizard,1,evocation,Class Spell Lists: Wizard level 1
+color-spray-wizard,color-spray,Color Spray,wizard,Wizard,1,illusion,Class Spell Lists: Wizard level 1
+comprehend-languages-wizard,comprehend-languages,Comprehend Languages,wizard,Wizard,1,divination,Class Spell Lists: Wizard level 1
+detect-magic-wizard,detect-magic,Detect Magic,wizard,Wizard,1,divination,Class Spell Lists: Wizard level 1
+disguise-self-wizard,disguise-self,Disguise Self,wizard,Wizard,1,illusion,Class Spell Lists: Wizard level 1
+expeditious-retreat-wizard,expeditious-retreat,Expeditious Retreat,wizard,Wizard,1,transmutation,Class Spell Lists: Wizard level 1
+false-life-wizard,false-life,False Life,wizard,Wizard,1,necromancy,Class Spell Lists: Wizard level 1
+feather-fall-wizard,feather-fall,Feather Fall,wizard,Wizard,1,transmutation,Class Spell Lists: Wizard level 1
+find-familiar-wizard,find-familiar,Find Familiar,wizard,Wizard,1,conjuration,Class Spell Lists: Wizard level 1
+floating-disk-wizard,floating-disk,Floating Disk,wizard,Wizard,1,conjuration,Class Spell Lists: Wizard level 1
+fog-cloud-wizard,fog-cloud,Fog Cloud,wizard,Wizard,1,conjuration,Class Spell Lists: Wizard level 1
+grease-wizard,grease,Grease,wizard,Wizard,1,conjuration,Class Spell Lists: Wizard level 1
+hideous-laughter-wizard,hideous-laughter,Hideous Laughter,wizard,Wizard,1,enchantment,Class Spell Lists: Wizard level 1
+ice-knife-wizard,ice-knife,Ice Knife,wizard,Wizard,1,conjuration,Class Spell Lists: Wizard level 1
+identify-wizard,identify,Identify,wizard,Wizard,1,divination,Class Spell Lists: Wizard level 1
+illusory-script-wizard,illusory-script,Illusory Script,wizard,Wizard,1,illusion,Class Spell Lists: Wizard level 1
+jump-wizard,jump,Jump,wizard,Wizard,1,transmutation,Class Spell Lists: Wizard level 1
+longstrider-wizard,longstrider,Longstrider,wizard,Wizard,1,transmutation,Class Spell Lists: Wizard level 1
+mage-armor-wizard,mage-armor,Mage Armor,wizard,Wizard,1,abjuration,Class Spell Lists: Wizard level 1
+magic-missile-wizard,magic-missile,Magic Missile,wizard,Wizard,1,evocation,Class Spell Lists: Wizard level 1
+protection-from-evil-and-good-wizard,protection-from-evil-and-good,Protection from Evil and Good,wizard,Wizard,1,abjuration,Class Spell Lists: Wizard level 1
+ray-of-sickness-wizard,ray-of-sickness,Ray of Sickness,wizard,Wizard,1,necromancy,Class Spell Lists: Wizard level 1
+shield-wizard,shield,Shield,wizard,Wizard,1,abjuration,Class Spell Lists: Wizard level 1
+silent-image-wizard,silent-image,Silent Image,wizard,Wizard,1,illusion,Class Spell Lists: Wizard level 1
+sleep-wizard,sleep,Sleep,wizard,Wizard,1,enchantment,Class Spell Lists: Wizard level 1
+thunderwave-wizard,thunderwave,Thunderwave,wizard,Wizard,1,evocation,Class Spell Lists: Wizard level 1
+unseen-servant-wizard,unseen-servant,Unseen Servant,wizard,Wizard,1,conjuration,Class Spell Lists: Wizard level 1
+acid-arrow-wizard,acid-arrow,Acid Arrow,wizard,Wizard,2,evocation,Class Spell Lists: Wizard level 2
+alter-self-wizard,alter-self,Alter Self,wizard,Wizard,2,transmutation,Class Spell Lists: Wizard level 2
+arcane-lock-wizard,arcane-lock,Arcane Lock,wizard,Wizard,2,abjuration,Class Spell Lists: Wizard level 2
+arcanists-magic-aura-wizard,arcanists-magic-aura,Arcanist's Magic Aura,wizard,Wizard,2,illusion,Class Spell Lists: Wizard level 2
+augury-wizard,augury,Augury,wizard,Wizard,2,divination,Class Spell Lists: Wizard level 2
+blindness-deafness-wizard,blindness-deafness,Blindness/Deafness,wizard,Wizard,2,transmutation,Class Spell Lists: Wizard level 2
+blur-wizard,blur,Blur,wizard,Wizard,2,illusion,Class Spell Lists: Wizard level 2
+continual-flame-wizard,continual-flame,Continual Flame,wizard,Wizard,2,evocation,Class Spell Lists: Wizard level 2
+darkness-wizard,darkness,Darkness,wizard,Wizard,2,evocation,Class Spell Lists: Wizard level 2
+darkvision-wizard,darkvision,Darkvision,wizard,Wizard,2,transmutation,Class Spell Lists: Wizard level 2
+detect-thoughts-wizard,detect-thoughts,Detect Thoughts,wizard,Wizard,2,divination,Class Spell Lists: Wizard level 2
+dragons-breath-wizard,dragons-breath,Dragon's Breath,wizard,Wizard,2,transmutation,Class Spell Lists: Wizard level 2
+enhance-ability-wizard,enhance-ability,Enhance Ability,wizard,Wizard,2,transmutation,Class Spell Lists: Wizard level 2
+enlarge-reduce-wizard,enlarge-reduce,Enlarge/Reduce,wizard,Wizard,2,transmutation,Class Spell Lists: Wizard level 2
+flaming-sphere-wizard,flaming-sphere,Flaming Sphere,wizard,Wizard,2,conjuration,Class Spell Lists: Wizard level 2
+gentle-repose-wizard,gentle-repose,Gentle Repose,wizard,Wizard,2,necromancy,Class Spell Lists: Wizard level 2
+gust-of-wind-wizard,gust-of-wind,Gust of Wind,wizard,Wizard,2,evocation,Class Spell Lists: Wizard level 2
+hold-person-wizard,hold-person,Hold Person,wizard,Wizard,2,enchantment,Class Spell Lists: Wizard level 2
+invisibility-wizard,invisibility,Invisibility,wizard,Wizard,2,illusion,Class Spell Lists: Wizard level 2
+knock-wizard,knock,Knock,wizard,Wizard,2,transmutation,Class Spell Lists: Wizard level 2
+levitate-wizard,levitate,Levitate,wizard,Wizard,2,transmutation,Class Spell Lists: Wizard level 2
+locate-object-wizard,locate-object,Locate Object,wizard,Wizard,2,divination,Class Spell Lists: Wizard level 2
+magic-mouth-wizard,magic-mouth,Magic Mouth,wizard,Wizard,2,illusion,Class Spell Lists: Wizard level 2
+magic-weapon-wizard,magic-weapon,Magic Weapon,wizard,Wizard,2,transmutation,Class Spell Lists: Wizard level 2
+mind-spike-wizard,mind-spike,Mind Spike,wizard,Wizard,2,divination,Class Spell Lists: Wizard level 2
+mirror-image-wizard,mirror-image,Mirror Image,wizard,Wizard,2,illusion,Class Spell Lists: Wizard level 2
+misty-step-wizard,misty-step,Misty Step,wizard,Wizard,2,conjuration,Class Spell Lists: Wizard level 2
+ray-of-enfeeblement-wizard,ray-of-enfeeblement,Ray of Enfeeblement,wizard,Wizard,2,necromancy,Class Spell Lists: Wizard level 2
+rope-trick-wizard,rope-trick,Rope Trick,wizard,Wizard,2,transmutation,Class Spell Lists: Wizard level 2
+scorching-ray-wizard,scorching-ray,Scorching Ray,wizard,Wizard,2,evocation,Class Spell Lists: Wizard level 2
+see-invisibility-wizard,see-invisibility,See Invisibility,wizard,Wizard,2,divination,Class Spell Lists: Wizard level 2
+shatter-wizard,shatter,Shatter,wizard,Wizard,2,evocation,Class Spell Lists: Wizard level 2
+spider-climb-wizard,spider-climb,Spider Climb,wizard,Wizard,2,transmutation,Class Spell Lists: Wizard level 2
+suggestion-wizard,suggestion,Suggestion,wizard,Wizard,2,enchantment,Class Spell Lists: Wizard level 2
+web-wizard,web,Web,wizard,Wizard,2,conjuration,Class Spell Lists: Wizard level 2
+animate-dead-wizard,animate-dead,Animate Dead,wizard,Wizard,3,necromancy,Class Spell Lists: Wizard level 3
+bestow-curse-wizard,bestow-curse,Bestow Curse,wizard,Wizard,3,necromancy,Class Spell Lists: Wizard level 3
+blink-wizard,blink,Blink,wizard,Wizard,3,transmutation,Class Spell Lists: Wizard level 3
+clairvoyance-wizard,clairvoyance,Clairvoyance,wizard,Wizard,3,divination,Class Spell Lists: Wizard level 3
+counterspell-wizard,counterspell,Counterspell,wizard,Wizard,3,abjuration,Class Spell Lists: Wizard level 3
+dispel-magic-wizard,dispel-magic,Dispel Magic,wizard,Wizard,3,abjuration,Class Spell Lists: Wizard level 3
+fear-wizard,fear,Fear,wizard,Wizard,3,illusion,Class Spell Lists: Wizard level 3
+fireball-wizard,fireball,Fireball,wizard,Wizard,3,evocation,Class Spell Lists: Wizard level 3
+fly-wizard,fly,Fly,wizard,Wizard,3,transmutation,Class Spell Lists: Wizard level 3
+gaseous-form-wizard,gaseous-form,Gaseous Form,wizard,Wizard,3,transmutation,Class Spell Lists: Wizard level 3
+glyph-of-warding-wizard,glyph-of-warding,Glyph of Warding,wizard,Wizard,3,abjuration,Class Spell Lists: Wizard level 3
+haste-wizard,haste,Haste,wizard,Wizard,3,transmutation,Class Spell Lists: Wizard level 3
+hypnotic-pattern-wizard,hypnotic-pattern,Hypnotic Pattern,wizard,Wizard,3,illusion,Class Spell Lists: Wizard level 3
+lightning-bolt-wizard,lightning-bolt,Lightning Bolt,wizard,Wizard,3,evocation,Class Spell Lists: Wizard level 3
+magic-circle-wizard,magic-circle,Magic Circle,wizard,Wizard,3,abjuration,Class Spell Lists: Wizard level 3
+major-image-wizard,major-image,Major Image,wizard,Wizard,3,illusion,Class Spell Lists: Wizard level 3
+nondetection-wizard,nondetection,Nondetection,wizard,Wizard,3,abjuration,Class Spell Lists: Wizard level 3
+phantom-steed-wizard,phantom-steed,Phantom Steed,wizard,Wizard,3,illusion,Class Spell Lists: Wizard level 3
+protection-from-energy-wizard,protection-from-energy,Protection from Energy,wizard,Wizard,3,abjuration,Class Spell Lists: Wizard level 3
+remove-curse-wizard,remove-curse,Remove Curse,wizard,Wizard,3,abjuration,Class Spell Lists: Wizard level 3
+sending-wizard,sending,Sending,wizard,Wizard,3,divination,Class Spell Lists: Wizard level 3
+sleet-storm-wizard,sleet-storm,Sleet Storm,wizard,Wizard,3,conjuration,Class Spell Lists: Wizard level 3
+slow-wizard,slow,Slow,wizard,Wizard,3,transmutation,Class Spell Lists: Wizard level 3
+speak-with-dead-wizard,speak-with-dead,Speak with Dead,wizard,Wizard,3,necromancy,Class Spell Lists: Wizard level 3
+stinking-cloud-wizard,stinking-cloud,Stinking Cloud,wizard,Wizard,3,conjuration,Class Spell Lists: Wizard level 3
+tiny-hut-wizard,tiny-hut,Tiny Hut,wizard,Wizard,3,evocation,Class Spell Lists: Wizard level 3
+tongues-wizard,tongues,Tongues,wizard,Wizard,3,divination,Class Spell Lists: Wizard level 3
+vampiric-touch-wizard,vampiric-touch,Vampiric Touch,wizard,Wizard,3,necromancy,Class Spell Lists: Wizard level 3
+water-breathing-wizard,water-breathing,Water Breathing,wizard,Wizard,3,transmutation,Class Spell Lists: Wizard level 3
+arcane-eye-wizard,arcane-eye,Arcane Eye,wizard,Wizard,4,divination,Class Spell Lists: Wizard level 4
+banishment-wizard,banishment,Banishment,wizard,Wizard,4,abjuration,Class Spell Lists: Wizard level 4
+black-tentacles-wizard,black-tentacles,Black Tentacles,wizard,Wizard,4,conjuration,Class Spell Lists: Wizard level 4
+blight-wizard,blight,Blight,wizard,Wizard,4,necromancy,Class Spell Lists: Wizard level 4
+charm-monster-wizard,charm-monster,Charm Monster,wizard,Wizard,4,enchantment,Class Spell Lists: Wizard level 4
+confusion-wizard,confusion,Confusion,wizard,Wizard,4,enchantment,Class Spell Lists: Wizard level 4
+conjure-minor-elementals-wizard,conjure-minor-elementals,Conjure Minor Elementals,wizard,Wizard,4,conjuration,Class Spell Lists: Wizard level 4
+control-water-wizard,control-water,Control Water,wizard,Wizard,4,transmutation,Class Spell Lists: Wizard level 4
+dimension-door-wizard,dimension-door,Dimension Door,wizard,Wizard,4,conjuration,Class Spell Lists: Wizard level 4
+divination-wizard,divination,Divination,wizard,Wizard,4,divination,Class Spell Lists: Wizard level 4
+fabricate-wizard,fabricate,Fabricate,wizard,Wizard,4,transmutation,Class Spell Lists: Wizard level 4
+faithful-hound-wizard,faithful-hound,Faithful Hound,wizard,Wizard,4,conjuration,Class Spell Lists: Wizard level 4
+fire-shield-wizard,fire-shield,Fire Shield,wizard,Wizard,4,evocation,Class Spell Lists: Wizard level 4
+greater-invisibility-wizard,greater-invisibility,Greater Invisibility,wizard,Wizard,4,illusion,Class Spell Lists: Wizard level 4
+hallucinatory-terrain-wizard,hallucinatory-terrain,Hallucinatory Terrain,wizard,Wizard,4,illusion,Class Spell Lists: Wizard level 4
+ice-storm-wizard,ice-storm,Ice Storm,wizard,Wizard,4,evocation,Class Spell Lists: Wizard level 4
+locate-creature-wizard,locate-creature,Locate Creature,wizard,Wizard,4,divination,Class Spell Lists: Wizard level 4
+phantasmal-killer-wizard,phantasmal-killer,Phantasmal Killer,wizard,Wizard,4,illusion,Class Spell Lists: Wizard level 4
+polymorph-wizard,polymorph,Polymorph,wizard,Wizard,4,transmutation,Class Spell Lists: Wizard level 4
+private-sanctum-wizard,private-sanctum,Private Sanctum,wizard,Wizard,4,abjuration,Class Spell Lists: Wizard level 4
+resilient-sphere-wizard,resilient-sphere,Resilient Sphere,wizard,Wizard,4,abjuration,Class Spell Lists: Wizard level 4
+secret-chest-wizard,secret-chest,Secret Chest,wizard,Wizard,4,conjuration,Class Spell Lists: Wizard level 4
+stone-shape-wizard,stone-shape,Stone Shape,wizard,Wizard,4,transmutation,Class Spell Lists: Wizard level 4
+stoneskin-wizard,stoneskin,Stoneskin,wizard,Wizard,4,transmutation,Class Spell Lists: Wizard level 4
+vitriolic-sphere-wizard,vitriolic-sphere,Vitriolic Sphere,wizard,Wizard,4,evocation,Class Spell Lists: Wizard level 4
+wall-of-fire-wizard,wall-of-fire,Wall of Fire,wizard,Wizard,4,evocation,Class Spell Lists: Wizard level 4
+animate-objects-wizard,animate-objects,Animate Objects,wizard,Wizard,5,transmutation,Class Spell Lists: Wizard level 5
+arcane-hand-wizard,arcane-hand,Arcane Hand,wizard,Wizard,5,evocation,Class Spell Lists: Wizard level 5
+cloudkill-wizard,cloudkill,Cloudkill,wizard,Wizard,5,conjuration,Class Spell Lists: Wizard level 5
+cone-of-cold-wizard,cone-of-cold,Cone of Cold,wizard,Wizard,5,evocation,Class Spell Lists: Wizard level 5
+conjure-elemental-wizard,conjure-elemental,Conjure Elemental,wizard,Wizard,5,conjuration,Class Spell Lists: Wizard level 5
+contact-other-plane-wizard,contact-other-plane,Contact Other Plane,wizard,Wizard,5,divination,Class Spell Lists: Wizard level 5
+creation-wizard,creation,Creation,wizard,Wizard,5,illusion,Class Spell Lists: Wizard level 5
+dominate-person-wizard,dominate-person,Dominate Person,wizard,Wizard,5,enchantment,Class Spell Lists: Wizard level 5
+dream-wizard,dream,Dream,wizard,Wizard,5,illusion,Class Spell Lists: Wizard level 5
+geas-wizard,geas,Geas,wizard,Wizard,5,enchantment,Class Spell Lists: Wizard level 5
+hold-monster-wizard,hold-monster,Hold Monster,wizard,Wizard,5,enchantment,Class Spell Lists: Wizard level 5
+legend-lore-wizard,legend-lore,Legend Lore,wizard,Wizard,5,divination,Class Spell Lists: Wizard level 5
+mislead-wizard,mislead,Mislead,wizard,Wizard,5,illusion,Class Spell Lists: Wizard level 5
+modify-memory-wizard,modify-memory,Modify Memory,wizard,Wizard,5,enchantment,Class Spell Lists: Wizard level 5
+passwall-wizard,passwall,Passwall,wizard,Wizard,5,transmutation,Class Spell Lists: Wizard level 5
+planar-binding-wizard,planar-binding,Planar Binding,wizard,Wizard,5,abjuration,Class Spell Lists: Wizard level 5
+scrying-wizard,scrying,Scrying,wizard,Wizard,5,divination,Class Spell Lists: Wizard level 5
+seeming-wizard,seeming,Seeming,wizard,Wizard,5,illusion,Class Spell Lists: Wizard level 5
+summon-dragon-wizard,summon-dragon,Summon Dragon,wizard,Wizard,5,conjuration,Class Spell Lists: Wizard level 5
+telekinesis-wizard,telekinesis,Telekinesis,wizard,Wizard,5,transmutation,Class Spell Lists: Wizard level 5
+telepathic-bond-wizard,telepathic-bond,Telepathic Bond,wizard,Wizard,5,divination,Class Spell Lists: Wizard level 5
+teleportation-circle-wizard,teleportation-circle,Teleportation Circle,wizard,Wizard,5,conjuration,Class Spell Lists: Wizard level 5
+wall-of-force-wizard,wall-of-force,Wall of Force,wizard,Wizard,5,evocation,Class Spell Lists: Wizard level 5
+wall-of-stone-wizard,wall-of-stone,Wall of Stone,wizard,Wizard,5,evocation,Class Spell Lists: Wizard level 5
+chain-lightning-wizard,chain-lightning,Chain Lightning,wizard,Wizard,6,evocation,Class Spell Lists: Wizard level 6
+circle-of-death-wizard,circle-of-death,Circle of Death,wizard,Wizard,6,necromancy,Class Spell Lists: Wizard level 6
+contingency-wizard,contingency,Contingency,wizard,Wizard,6,abjuration,Class Spell Lists: Wizard level 6
+create-undead-wizard,create-undead,Create Undead,wizard,Wizard,6,necromancy,Class Spell Lists: Wizard level 6
+disintegrate-wizard,disintegrate,Disintegrate,wizard,Wizard,6,transmutation,Class Spell Lists: Wizard level 6
+eyebite-wizard,eyebite,Eyebite,wizard,Wizard,6,necromancy,Class Spell Lists: Wizard level 6
+flesh-to-stone-wizard,flesh-to-stone,Flesh to Stone,wizard,Wizard,6,transmutation,Class Spell Lists: Wizard level 6
+freezing-sphere-wizard,freezing-sphere,Freezing Sphere,wizard,Wizard,6,evocation,Class Spell Lists: Wizard level 6
+globe-of-invulnerability-wizard,globe-of-invulnerability,Globe of Invulnerability,wizard,Wizard,6,abjuration,Class Spell Lists: Wizard level 6
+guards-and-wards-wizard,guards-and-wards,Guards and Wards,wizard,Wizard,6,abjuration,Class Spell Lists: Wizard level 6
+instant-summons-wizard,instant-summons,Instant Summons,wizard,Wizard,6,conjuration,Class Spell Lists: Wizard level 6
+irresistible-dance-wizard,irresistible-dance,Irresistible Dance,wizard,Wizard,6,enchantment,Class Spell Lists: Wizard level 6
+magic-jar-wizard,magic-jar,Magic Jar,wizard,Wizard,6,necromancy,Class Spell Lists: Wizard level 6
+mass-suggestion-wizard,mass-suggestion,Mass Suggestion,wizard,Wizard,6,enchantment,Class Spell Lists: Wizard level 6
+move-earth-wizard,move-earth,Move Earth,wizard,Wizard,6,transmutation,Class Spell Lists: Wizard level 6
+programmed-illusion-wizard,programmed-illusion,Programmed Illusion,wizard,Wizard,6,illusion,Class Spell Lists: Wizard level 6
+sunbeam-wizard,sunbeam,Sunbeam,wizard,Wizard,6,evocation,Class Spell Lists: Wizard level 6
+true-seeing-wizard,true-seeing,True Seeing,wizard,Wizard,6,divination,Class Spell Lists: Wizard level 6
+wall-of-ice-wizard,wall-of-ice,Wall of Ice,wizard,Wizard,6,evocation,Class Spell Lists: Wizard level 6
+arcane-sword-wizard,arcane-sword,Arcane Sword,wizard,Wizard,7,evocation,Class Spell Lists: Wizard level 7
+delayed-blast-fireball-wizard,delayed-blast-fireball,Delayed Blast Fireball,wizard,Wizard,7,evocation,Class Spell Lists: Wizard level 7
+etherealness-wizard,etherealness,Etherealness,wizard,Wizard,7,conjuration,Class Spell Lists: Wizard level 7
+finger-of-death-wizard,finger-of-death,Finger of Death,wizard,Wizard,7,necromancy,Class Spell Lists: Wizard level 7
+forcecage-wizard,forcecage,Forcecage,wizard,Wizard,7,evocation,Class Spell Lists: Wizard level 7
+magnificent-mansion-wizard,magnificent-mansion,Magnificent Mansion,wizard,Wizard,7,conjuration,Class Spell Lists: Wizard level 7
+mirage-arcane-wizard,mirage-arcane,Mirage Arcane,wizard,Wizard,7,illusion,Class Spell Lists: Wizard level 7
+plane-shift-wizard,plane-shift,Plane Shift,wizard,Wizard,7,conjuration,Class Spell Lists: Wizard level 7
+prismatic-spray-wizard,prismatic-spray,Prismatic Spray,wizard,Wizard,7,evocation,Class Spell Lists: Wizard level 7
+project-image-wizard,project-image,Project Image,wizard,Wizard,7,illusion,Class Spell Lists: Wizard level 7
+reverse-gravity-wizard,reverse-gravity,Reverse Gravity,wizard,Wizard,7,transmutation,Class Spell Lists: Wizard level 7
+sequester-wizard,sequester,Sequester,wizard,Wizard,7,transmutation,Class Spell Lists: Wizard level 7
+simulacrum-wizard,simulacrum,Simulacrum,wizard,Wizard,7,illusion,Class Spell Lists: Wizard level 7
+symbol-wizard,symbol,Symbol,wizard,Wizard,7,abjuration,Class Spell Lists: Wizard level 7
+teleport-wizard,teleport,Teleport,wizard,Wizard,7,conjuration,Class Spell Lists: Wizard level 7
+antimagic-field-wizard,antimagic-field,Antimagic Field,wizard,Wizard,8,abjuration,Class Spell Lists: Wizard level 8
+antipathy-sympathy-wizard,antipathy-sympathy,Antipathy/Sympathy,wizard,Wizard,8,enchantment,Class Spell Lists: Wizard level 8
+befuddlement-wizard,befuddlement,Befuddlement,wizard,Wizard,8,enchantment,Class Spell Lists: Wizard level 8
+clone-wizard,clone,Clone,wizard,Wizard,8,necromancy,Class Spell Lists: Wizard level 8
+control-weather-wizard,control-weather,Control Weather,wizard,Wizard,8,transmutation,Class Spell Lists: Wizard level 8
+demiplane-wizard,demiplane,Demiplane,wizard,Wizard,8,conjuration,Class Spell Lists: Wizard level 8
+dominate-monster-wizard,dominate-monster,Dominate Monster,wizard,Wizard,8,enchantment,Class Spell Lists: Wizard level 8
+incendiary-cloud-wizard,incendiary-cloud,Incendiary Cloud,wizard,Wizard,8,conjuration,Class Spell Lists: Wizard level 8
+maze-wizard,maze,Maze,wizard,Wizard,8,conjuration,Class Spell Lists: Wizard level 8
+mind-blank-wizard,mind-blank,Mind Blank,wizard,Wizard,8,abjuration,Class Spell Lists: Wizard level 8
+power-word-stun-wizard,power-word-stun,Power Word Stun,wizard,Wizard,8,enchantment,Class Spell Lists: Wizard level 8
+sunburst-wizard,sunburst,Sunburst,wizard,Wizard,8,evocation,Class Spell Lists: Wizard level 8
+astral-projection-wizard,astral-projection,Astral Projection,wizard,Wizard,9,necromancy,Class Spell Lists: Wizard level 9
+foresight-wizard,foresight,Foresight,wizard,Wizard,9,divination,Class Spell Lists: Wizard level 9
+gate-wizard,gate,Gate,wizard,Wizard,9,conjuration,Class Spell Lists: Wizard level 9
+imprisonment-wizard,imprisonment,Imprisonment,wizard,Wizard,9,abjuration,Class Spell Lists: Wizard level 9
+meteor-swarm-wizard,meteor-swarm,Meteor Swarm,wizard,Wizard,9,evocation,Class Spell Lists: Wizard level 9
+power-word-kill-wizard,power-word-kill,Power Word Kill,wizard,Wizard,9,enchantment,Class Spell Lists: Wizard level 9
+prismatic-wall-wizard,prismatic-wall,Prismatic Wall,wizard,Wizard,9,abjuration,Class Spell Lists: Wizard level 9
+shapechange-wizard,shapechange,Shapechange,wizard,Wizard,9,transmutation,Class Spell Lists: Wizard level 9
+time-stop-wizard,time-stop,Time Stop,wizard,Wizard,9,transmutation,Class Spell Lists: Wizard level 9
+true-polymorph-wizard,true-polymorph,True Polymorph,wizard,Wizard,9,transmutation,Class Spell Lists: Wizard level 9
+weird-wizard,weird,Weird,wizard,Wizard,9,illusion,Class Spell Lists: Wizard level 9
+wish-wizard,wish,Wish,wizard,Wizard,9,conjuration,Class Spell Lists: Wizard level 9
