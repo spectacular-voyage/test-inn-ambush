@@ -1,0 +1,9 @@
+schoolKey,schoolLabel,typicalEffects,sourceSection
+abjuration,Abjuration,Prevents or reverses harmful effects,Spells: Schools of Magic
+conjuration,Conjuration,Transports creatures or objects,Spells: Schools of Magic
+divination,Divination,Reveals information,Spells: Schools of Magic
+enchantment,Enchantment,Influences minds,Spells: Schools of Magic
+evocation,Evocation,Channels energy to create effects that are often destructive,Spells: Schools of Magic
+illusion,Illusion,Deceives the mind or senses,Spells: Schools of Magic
+necromancy,Necromancy,Manipulates life and death,Spells: Schools of Magic
+transmutation,Transmutation,Transforms creatures or objects,Spells: Schools of Magic
