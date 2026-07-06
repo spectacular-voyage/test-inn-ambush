@@ -1,6 +1,6 @@
 weekdayKey,ordinal,label
-hearthday,0,Hearthday
-toilday,1,Toilday
-marketday,2,Marketday
-restday,3,Restday
-starday,4,Starday
+ashday,0,Ashday
+barrowday,1,Barrowday
+coinday,2,Coinday
+driftday,3,Driftday
+eveday,4,Eveday

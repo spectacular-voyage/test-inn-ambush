@@ -16,11 +16,11 @@
   temp:epochSecondOfDay 74580.0 ;
   temp:epochWeekdayOrdinal 0 ;
   temp:hasWeekday
-    <https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/weekday/hearthday>,
-    <https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/weekday/toilday>,
-    <https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/weekday/marketday>,
-    <https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/weekday/restday>,
-    <https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/weekday/starday> ;
+    <https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/weekday/ashday>,
+    <https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/weekday/barrowday>,
+    <https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/weekday/coinday>,
+    <https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/weekday/driftday>,
+    <https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/weekday/eveday> ;
   temp:hasMonth
     <https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/month/emberwane>,
     <https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/month/rainmoot>,
@@ -79,34 +79,34 @@
   dcterms:title "Inn Ambush calendar CSVW mapping" ;
   dcat:downloadURL <https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/calendar.csvw.json> .
 
-<https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/weekday/hearthday>
+<https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/weekday/ashday>
   a temp:CalendarWeekday ;
-  rdfs:label "Hearthday" ;
-  temp:calendarKey "hearthday" ;
+  rdfs:label "Ashday" ;
+  temp:calendarKey "ashday" ;
   temp:ordinal 0 .
 
-<https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/weekday/toilday>
+<https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/weekday/barrowday>
   a temp:CalendarWeekday ;
-  rdfs:label "Toilday" ;
-  temp:calendarKey "toilday" ;
+  rdfs:label "Barrowday" ;
+  temp:calendarKey "barrowday" ;
   temp:ordinal 1 .
 
-<https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/weekday/marketday>
+<https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/weekday/coinday>
   a temp:CalendarWeekday ;
-  rdfs:label "Marketday" ;
-  temp:calendarKey "marketday" ;
+  rdfs:label "Coinday" ;
+  temp:calendarKey "coinday" ;
   temp:ordinal 2 .
 
-<https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/weekday/restday>
+<https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/weekday/driftday>
   a temp:CalendarWeekday ;
-  rdfs:label "Restday" ;
-  temp:calendarKey "restday" ;
+  rdfs:label "Driftday" ;
+  temp:calendarKey "driftday" ;
   temp:ordinal 3 .
 
-<https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/weekday/starday>
+<https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/weekday/eveday>
   a temp:CalendarWeekday ;
-  rdfs:label "Starday" ;
-  temp:calendarKey "starday" ;
+  rdfs:label "Eveday" ;
+  temp:calendarKey "eveday" ;
   temp:ordinal 4 .
 
 <https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/month/emberwane>
