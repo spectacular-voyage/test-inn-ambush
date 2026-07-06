@@ -1,0 +1,117 @@
+{
+  "@context": {
+    "@vocab": "https://spectacular-voyage.github.io/accord/ontology/",
+    "dcterms": "http://purl.org/dc/terms/",
+    "id": "@id",
+    "type": "@type",
+    "changeType": {
+      "@type": "@vocab"
+    },
+    "compareMode": {
+      "@type": "@vocab"
+    },
+    "targetsFileExpectation": {
+      "@type": "@id"
+    },
+    "locatorKind": {
+      "@type": "@vocab"
+    }
+  },
+  "type": "Manifest",
+  "id": "urn:accord:stagecraft:test-inn-ambush:32-d20-roll-evidence-commit-provenance-woven",
+  "dcterms:title": "Inn Ambush 32 D20 roll evidence commit provenance woven",
+  "hasCase": [
+    {
+      "type": "TransitionCase",
+      "id": "#weave-d20-roll-evidence-commit-provenance",
+      "fixtureRepo": "github.com/spectacular-voyage/test-inn-ambush",
+      "operationId": "stagecraft.fixture.weaveD20RollEvidenceCommitProvenance",
+      "fromRef": "a.31-d20-roll-evidence-commit-provenance",
+      "toRef": "a.32-d20-roll-evidence-commit-provenance-woven",
+      "fromState": {
+        "type": "StateLocator",
+        "locatorKind": "gitRefState",
+        "ref": "a.31-d20-roll-evidence-commit-provenance"
+      },
+      "toState": {
+        "type": "StateLocator",
+        "locatorKind": "gitRefState",
+        "ref": "a.32-d20-roll-evidence-commit-provenance-woven"
+      },
+      "hasFileExpectation": [
+        {
+          "id": "#journal-history-state-page",
+          "type": "FileExpectation",
+          "path": "authority/journals/plan-b/_history001/_s0005/index.html",
+          "changeType": "added"
+        },
+        {
+          "id": "#journal-history-state-manifestation-page",
+          "type": "FileExpectation",
+          "path": "authority/journals/plan-b/_history001/_s0005/ttl/index.html",
+          "changeType": "added"
+        },
+        {
+          "id": "#journal-history-payload",
+          "type": "FileExpectation",
+          "path": "authority/journals/plan-b/_history001/_s0005/ttl/plan-b.ttl",
+          "changeType": "added",
+          "compareMode": "rdfCanonical"
+        },
+        {
+          "id": "#journal-history-index",
+          "type": "FileExpectation",
+          "path": "authority/journals/plan-b/_history001/index.html",
+          "changeType": "updated"
+        },
+        {
+          "id": "#journal-knop-inventory-page",
+          "type": "FileExpectation",
+          "path": "authority/journals/plan-b/_knop/_inventory/index.html",
+          "changeType": "updated"
+        },
+        {
+          "id": "#journal-knop-inventory",
+          "type": "FileExpectation",
+          "path": "authority/journals/plan-b/_knop/_inventory/inventory.ttl",
+          "changeType": "updated",
+          "compareMode": "rdfCanonical"
+        },
+        {
+          "id": "#journal-page",
+          "type": "FileExpectation",
+          "path": "authority/journals/plan-b/index.html",
+          "changeType": "updated"
+        }
+      ],
+      "hasRdfExpectation": [
+        {
+          "id": "#journal-knop-inventory-rdf",
+          "type": "RdfExpectation",
+          "targetsFileExpectation": "#journal-knop-inventory",
+          "hasAskAssertion": [
+            {
+              "id": "#ask-s0005-latest-state",
+              "type": "SparqlAskAssertion",
+              "query": "ASK { <https://spectacular-voyage.github.io/test-inn-ambush/authority/journals/plan-b/_history001> <https://semantic-flow.github.io/sflo/ontology/latestHistoricalState> <https://spectacular-voyage.github.io/test-inn-ambush/authority/journals/plan-b/_history001/_s0005> ; <https://semantic-flow.github.io/sflo/ontology/nextStateOrdinal> \"6\"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> . <https://spectacular-voyage.github.io/test-inn-ambush/authority/journals/plan-b/_history001/_s0005> a <https://semantic-flow.github.io/sflo/ontology/HistoricalState> ; <https://semantic-flow.github.io/sflo/ontology/previousHistoricalState> <https://spectacular-voyage.github.io/test-inn-ambush/authority/journals/plan-b/_history001/_s0004> ; <https://semantic-flow.github.io/sflo/ontology/locatedFileForState> <https://spectacular-voyage.github.io/test-inn-ambush/authority/journals/plan-b/_history001/_s0005/ttl/plan-b.ttl> ; <https://semantic-flow.github.io/sflo/ontology/hasResourcePage> <https://spectacular-voyage.github.io/test-inn-ambush/authority/journals/plan-b/_history001/_s0005/index.html> . }",
+              "expectedBoolean": true
+            }
+          ]
+        },
+        {
+          "id": "#journal-history-payload-rdf",
+          "type": "RdfExpectation",
+          "targetsFileExpectation": "#journal-history-payload",
+          "hasAskAssertion": [
+            {
+              "id": "#ask-woven-payload-carries-d20-commit-provenance",
+              "type": "SparqlAskAssertion",
+              "query": "ASK { <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/d20-roll/perception-check-001> <https://spectacular-voyage.github.io/stagecraft/ontology/committedEvent> <https://spectacular-voyage.github.io/test-inn-ambush/committed-event/d20-roll/perception-check-001> ; <https://spectacular-voyage.github.io/stagecraft/ontology/hasCommitCertificate> <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/commit-certificate/d20-roll/perception-check-001> ; <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/rollTotal> 13 . <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/d20-test-consequence/perception-check-001> <https://spectacular-voyage.github.io/stagecraft/ontology/committedEvent> <https://spectacular-voyage.github.io/test-inn-ambush/committed-event/d20-test-consequence/perception-check-001> ; <https://spectacular-voyage.github.io/stagecraft/ontology/hasCommitCertificate> <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/commit-certificate/d20-test-consequence/perception-check-001> . <https://spectacular-voyage.github.io/test-inn-ambush/committed-event/d20-test-consequence/perception-check-001> a <https://spectacular-voyage.github.io/stagecraft/ontology/CommittedEvent> ; <https://spectacular-voyage.github.io/stagecraft/ontology/authorizedByAuthorityRecord> <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/d20-test-consequence/perception-check-001> . }",
+              "expectedBoolean": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
