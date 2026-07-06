@@ -1,0 +1,127 @@
+{
+  "@context": {
+    "@vocab": "https://spectacular-voyage.github.io/accord/ontology/",
+    "dcterms": "http://purl.org/dc/terms/",
+    "id": "@id",
+    "type": "@type",
+    "changeType": {
+      "@type": "@vocab"
+    },
+    "compareMode": {
+      "@type": "@vocab"
+    },
+    "targetsFileExpectation": {
+      "@type": "@id"
+    },
+    "locatorKind": {
+      "@type": "@vocab"
+    }
+  },
+  "type": "Manifest",
+  "id": "urn:accord:stagecraft:test-inn-ambush:40-srd-spells-records",
+  "dcterms:title": "Inn Ambush 40 SRD spells records",
+  "hasCase": [
+    {
+      "type": "TransitionCase",
+      "id": "#srd-spells-records",
+      "fixtureRepo": "github.com/spectacular-voyage/test-inn-ambush",
+      "operationId": "stagecraft.fixture.addSrdSpellsRecords",
+      "fromRef": "7e06954de9e258bbe3a245cf0265fb6888cc416a",
+      "toRef": "a.40-srd-spells-records",
+      "fromState": {
+        "type": "StateLocator",
+        "locatorKind": "gitRefState",
+        "ref": "7e06954de9e258bbe3a245cf0265fb6888cc416a"
+      },
+      "toState": {
+        "type": "StateLocator",
+        "locatorKind": "gitRefState",
+        "ref": "a.40-srd-spells-records"
+      },
+      "hasFileExpectation": [
+        {
+          "id": "#spells-readme",
+          "type": "FileExpectation",
+          "path": "rules/dynamis/srd-5-2-1/spells/README.md",
+          "changeType": "added",
+          "compareMode": "text"
+        },
+        {
+          "id": "#spells-csv",
+          "type": "FileExpectation",
+          "path": "rules/dynamis/srd-5-2-1/spells/spells.csv",
+          "changeType": "added",
+          "compareMode": "text"
+        },
+        {
+          "id": "#schools-csv",
+          "type": "FileExpectation",
+          "path": "rules/dynamis/srd-5-2-1/spells/schools.csv",
+          "changeType": "added",
+          "compareMode": "text"
+        },
+        {
+          "id": "#spell-classes-csv",
+          "type": "FileExpectation",
+          "path": "rules/dynamis/srd-5-2-1/spells/spell-classes.csv",
+          "changeType": "added",
+          "compareMode": "text"
+        },
+        {
+          "id": "#spell-expressions-csv",
+          "type": "FileExpectation",
+          "path": "rules/dynamis/srd-5-2-1/spells/spell-expressions.csv",
+          "changeType": "added",
+          "compareMode": "text"
+        },
+        {
+          "id": "#spells-csvw",
+          "type": "FileExpectation",
+          "path": "rules/dynamis/srd-5-2-1/spells/spells.csvw.json",
+          "changeType": "added",
+          "compareMode": "json"
+        },
+        {
+          "id": "#spells-rdf",
+          "type": "FileExpectation",
+          "path": "rules/dynamis/srd-5-2-1/spells/spells.ttl",
+          "changeType": "added",
+          "compareMode": "rdfCanonical"
+        }
+      ],
+      "hasRdfExpectation": [
+        {
+          "id": "#spells-rdf-expectation",
+          "type": "RdfExpectation",
+          "targetsFileExpectation": "#spells-rdf",
+          "hasAskAssertion": [
+            {
+              "id": "#ask-spell-attribution-and-schools",
+              "type": "SparqlAskAssertion",
+              "query": "ASK { <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/spells> a <http://www.w3.org/ns/dcat#Dataset> ; <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/4.0/> ; <http://purl.org/dc/terms/source> <https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf> . <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/spells/school/abjuration> a <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/SpellSchool> . <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/spells/school/conjuration> a <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/SpellSchool> . <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/spells/school/divination> a <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/SpellSchool> . <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/spells/school/enchantment> a <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/SpellSchool> . <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/spells/school/evocation> a <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/SpellSchool> . <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/spells/school/illusion> a <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/SpellSchool> . <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/spells/school/necromancy> a <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/SpellSchool> . <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/spells/school/transmutation> a <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/SpellSchool> . }",
+              "expectedBoolean": true
+            },
+            {
+              "id": "#ask-fireball-save-and-damage",
+              "type": "SparqlAskAssertion",
+              "query": "ASK { <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/spells/spell/fireball> a <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/SpellDefinition> ; <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/spellLevel> 3 ; <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/spellSchool> <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/spells/school/evocation> ; <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/requiresSavingThrow> true ; <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/saveAbility> <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/Dexterity> ; <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/requiresAttackRoll> false . <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/spells/spell-expression/fireball-damage-1> <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/forSpell> <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/spells/spell/fireball> ; <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/damageExpression> \"8d6\" ; <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/damageType> <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/damage-type/fire> . }",
+              "expectedBoolean": true
+            },
+            {
+              "id": "#ask-acid-arrow-and-cure-wounds-expressions",
+              "type": "SparqlAskAssertion",
+              "query": "ASK { <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/spells/spell/acid-arrow> <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/requiresAttackRoll> true ; <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/attackRollKind> \"ranged\" . <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/spells/spell-expression/acid-arrow-damage-1> <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/damageExpression> \"4d4\" . <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/spells/spell-expression/acid-arrow-damage-2> <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/damageExpression> \"2d4\" . <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/spells/spell-expression/cure-wounds-healing-1> <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/spellExpressionKind> \"healing\" ; <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/damageExpression> \"2d8\" . }",
+              "expectedBoolean": true
+            },
+            {
+              "id": "#ask-phantasmal-force-not-in-class-list",
+              "type": "SparqlAskAssertion",
+              "query": "ASK { ?availability a <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/SpellClassAvailability> ; <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/forSpell> <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/spells/spell/phantasmal-force> . }",
+              "expectedBoolean": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

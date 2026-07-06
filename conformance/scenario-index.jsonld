@@ -824,6 +824,27 @@
       ]
     },
     {
+      "id": "#40-srd-spells-records",
+      "type": "ScenarioStep",
+      "manifestPath": "40-srd-spells-records.jsonld",
+      "hasLaneBinding": [
+        {
+          "type": "LaneStateBinding",
+          "lane": "#fixture-lane",
+          "fromLaneState": {
+            "type": "StateLocator",
+            "locatorKind": "gitRefState",
+            "ref": "7e06954de9e258bbe3a245cf0265fb6888cc416a"
+          },
+          "toLaneState": {
+            "type": "StateLocator",
+            "locatorKind": "gitRefState",
+            "ref": "a.40-srd-spells-records"
+          }
+        }
+      ]
+    },
+    {
       "id": "#45-narrative-frames-records",
       "type": "ScenarioStep",
       "manifestPath": "45-narrative-frames-records.jsonld",
