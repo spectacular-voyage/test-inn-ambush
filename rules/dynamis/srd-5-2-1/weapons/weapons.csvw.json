@@ -1,0 +1,105 @@
+{
+  "@context": "http://www.w3.org/ns/csvw",
+  "dc:title": "SRD 5.2.1 weapon rules CSVW mapping",
+  "dc:license": "https://creativecommons.org/licenses/by/4.0/",
+  "dc:source": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf",
+  "tables": [
+    {
+      "url": "weapons.csv",
+      "tableSchema": {
+        "columns": [
+          { "name": "weaponKey", "datatype": "string", "required": true },
+          { "name": "weaponLabel", "datatype": "string", "required": true },
+          { "name": "category", "datatype": "string", "required": true },
+          { "name": "rangeKind", "datatype": "string", "required": true },
+          { "name": "cost", "datatype": "string", "required": true },
+          { "name": "damageExpression", "datatype": "string" },
+          { "name": "staticDamage", "datatype": "integer" },
+          { "name": "damageTypeKey", "datatype": "string", "required": true },
+          { "name": "weight", "datatype": "string" },
+          { "name": "properties", "datatype": "string", "separator": ";" },
+          { "name": "masteryKey", "datatype": "string", "required": true },
+          { "name": "sourceProperties", "datatype": "string" },
+          { "name": "sourceSection", "datatype": "string", "required": true }
+        ],
+        "primaryKey": "weaponKey",
+        "foreignKeys": [
+          {
+            "columnReference": "damageTypeKey",
+            "reference": {
+              "resource": "damage-types.csv",
+              "columnReference": "damageTypeKey"
+            }
+          }
+        ],
+        "aboutUrl": "https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/weapon/{weaponKey}"
+      }
+    },
+    {
+      "url": "properties.csv",
+      "tableSchema": {
+        "columns": [
+          { "name": "propertyKey", "datatype": "string", "required": true },
+          { "name": "propertyLabel", "datatype": "string", "required": true },
+          { "name": "meaning", "datatype": "string", "required": true },
+          { "name": "sourceSection", "datatype": "string", "required": true }
+        ],
+        "primaryKey": "propertyKey",
+        "aboutUrl": "https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/property/{propertyKey}"
+      }
+    },
+    {
+      "url": "damage-types.csv",
+      "tableSchema": {
+        "columns": [
+          { "name": "damageTypeKey", "datatype": "string", "required": true },
+          { "name": "damageTypeLabel", "datatype": "string", "required": true },
+          { "name": "examples", "datatype": "string", "required": true },
+          { "name": "sourceSection", "datatype": "string", "required": true }
+        ],
+        "primaryKey": "damageTypeKey",
+        "aboutUrl": "https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/damage-type/{damageTypeKey}"
+      }
+    },
+    {
+      "url": "item-actions.csv",
+      "tableSchema": {
+        "columns": [
+          { "name": "itemActionKey", "datatype": "string", "required": true },
+          { "name": "weaponKey", "datatype": "string", "required": true },
+          { "name": "itemActionLabel", "datatype": "string", "required": true },
+          { "name": "attackMode", "datatype": "string", "required": true },
+          { "name": "sourceWeaponRangeKind", "datatype": "string", "required": true },
+          { "name": "handsRequired", "datatype": "integer", "required": true },
+          { "name": "handsNote", "datatype": "string" },
+          { "name": "testType", "datatype": "string", "required": true },
+          { "name": "damageExpression", "datatype": "string" },
+          { "name": "staticDamage", "datatype": "integer" },
+          { "name": "damageTypeKey", "datatype": "string", "required": true },
+          { "name": "normalRange", "datatype": "integer" },
+          { "name": "longRange", "datatype": "integer" },
+          { "name": "sourceProperties", "datatype": "string" },
+          { "name": "sourceSection", "datatype": "string", "required": true }
+        ],
+        "primaryKey": "itemActionKey",
+        "foreignKeys": [
+          {
+            "columnReference": "weaponKey",
+            "reference": {
+              "resource": "weapons.csv",
+              "columnReference": "weaponKey"
+            }
+          },
+          {
+            "columnReference": "damageTypeKey",
+            "reference": {
+              "resource": "damage-types.csv",
+              "columnReference": "damageTypeKey"
+            }
+          }
+        ],
+        "aboutUrl": "https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/weapons/item-action/{itemActionKey}"
+      }
+    }
+  ]
+}
