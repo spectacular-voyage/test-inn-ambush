@@ -654,6 +654,48 @@
           }
         }
       ]
+    },
+    {
+      "id": "#29-prose-clock-weekday-rename-records",
+      "type": "ScenarioStep",
+      "manifestPath": "29-prose-clock-weekday-rename-records.jsonld",
+      "hasLaneBinding": [
+        {
+          "type": "LaneStateBinding",
+          "lane": "#fixture-lane",
+          "fromLaneState": {
+            "type": "StateLocator",
+            "locatorKind": "gitRefState",
+            "ref": "4839dba0c483f962aed26f85918665d714798d89"
+          },
+          "toLaneState": {
+            "type": "StateLocator",
+            "locatorKind": "gitRefState",
+            "ref": "a.29-prose-clock-weekday-rename-records"
+          }
+        }
+      ]
+    },
+    {
+      "id": "#30-prose-clock-weekday-rename-woven",
+      "type": "ScenarioStep",
+      "manifestPath": "30-prose-clock-weekday-rename-woven.jsonld",
+      "hasLaneBinding": [
+        {
+          "type": "LaneStateBinding",
+          "lane": "#fixture-lane",
+          "fromLaneState": {
+            "type": "StateLocator",
+            "locatorKind": "gitRefState",
+            "ref": "a.29-prose-clock-weekday-rename-records"
+          },
+          "toLaneState": {
+            "type": "StateLocator",
+            "locatorKind": "gitRefState",
+            "ref": "a.30-prose-clock-weekday-rename-woven"
+          }
+        }
+      ]
     }
   ]
 }

@@ -1,0 +1,94 @@
+{
+  "@context": {
+    "@vocab": "https://spectacular-voyage.github.io/accord/ontology/",
+    "dcterms": "http://purl.org/dc/terms/",
+    "id": "@id",
+    "type": "@type",
+    "changeType": {
+      "@type": "@vocab"
+    },
+    "compareMode": {
+      "@type": "@vocab"
+    },
+    "targetsFileExpectation": {
+      "@type": "@id"
+    },
+    "locatorKind": {
+      "@type": "@vocab"
+    }
+  },
+  "type": "Manifest",
+  "id": "urn:accord:stagecraft:test-inn-ambush:29-prose-clock-weekday-rename-records",
+  "dcterms:title": "Inn Ambush 29 prose clock weekday rename records",
+  "hasCase": [
+    {
+      "type": "TransitionCase",
+      "id": "#prose-clock-weekday-rename-records",
+      "fixtureRepo": "github.com/spectacular-voyage/test-inn-ambush",
+      "operationId": "stagecraft.fixture.renameProseClockWeekdays",
+      "fromRef": "4839dba0c483f962aed26f85918665d714798d89",
+      "toRef": "a.29-prose-clock-weekday-rename-records",
+      "fromState": {
+        "type": "StateLocator",
+        "locatorKind": "gitRefState",
+        "ref": "4839dba0c483f962aed26f85918665d714798d89"
+      },
+      "toState": {
+        "type": "StateLocator",
+        "locatorKind": "gitRefState",
+        "ref": "a.29-prose-clock-weekday-rename-records"
+      },
+      "hasFileExpectation": [
+        {
+          "id": "#weekdays-csv",
+          "type": "FileExpectation",
+          "path": "world/calendars/inn-ambush-calendar/weekdays.csv",
+          "changeType": "updated",
+          "compareMode": "text"
+        },
+        {
+          "id": "#calendar-rdf",
+          "type": "FileExpectation",
+          "path": "world/calendars/inn-ambush-calendar/calendar.ttl",
+          "changeType": "updated",
+          "compareMode": "rdfCanonical"
+        },
+        {
+          "id": "#world-state",
+          "type": "FileExpectation",
+          "path": "world/states/inn-ambush-plan-b-state/inn-ambush-plan-b-state.ttl",
+          "changeType": "updated",
+          "compareMode": "rdfCanonical"
+        }
+      ],
+      "hasRdfExpectation": [
+        {
+          "id": "#calendar-rdf-assertions",
+          "type": "RdfExpectation",
+          "targetsFileExpectation": "#calendar-rdf",
+          "hasAskAssertion": [
+            {
+              "id": "#ask-alphabetical-weekdays",
+              "type": "SparqlAskAssertion",
+              "query": "ASK { <https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar> <https://spectacular-voyage.github.io/stagecraft/ontology/temporaenum/hasWeekday> <https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/weekday/ashday>, <https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/weekday/barrowday>, <https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/weekday/coinday>, <https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/weekday/driftday>, <https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/weekday/eveday> . <https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/weekday/ashday> <http://www.w3.org/2000/01/rdf-schema#label> \"Ashday\" ; <https://spectacular-voyage.github.io/stagecraft/ontology/temporaenum/calendarKey> \"ashday\" ; <https://spectacular-voyage.github.io/stagecraft/ontology/temporaenum/ordinal> 0 . <https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/weekday/barrowday> <http://www.w3.org/2000/01/rdf-schema#label> \"Barrowday\" ; <https://spectacular-voyage.github.io/stagecraft/ontology/temporaenum/calendarKey> \"barrowday\" ; <https://spectacular-voyage.github.io/stagecraft/ontology/temporaenum/ordinal> 1 . <https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/weekday/eveday> <http://www.w3.org/2000/01/rdf-schema#label> \"Eveday\" ; <https://spectacular-voyage.github.io/stagecraft/ontology/temporaenum/calendarKey> \"eveday\" ; <https://spectacular-voyage.github.io/stagecraft/ontology/temporaenum/ordinal> 4 . FILTER NOT EXISTS { <https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/weekday/toilday> ?oldToilPredicate ?oldToilObject . } FILTER NOT EXISTS { <https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/weekday/starday> ?oldStarPredicate ?oldStarObject . } }",
+              "expectedBoolean": true
+            }
+          ]
+        },
+        {
+          "id": "#world-state-rdf-assertions",
+          "type": "RdfExpectation",
+          "targetsFileExpectation": "#world-state",
+          "hasAskAssertion": [
+            {
+              "id": "#ask-renamed-weekday-visibility",
+              "type": "SparqlAskAssertion",
+              "query": "ASK { <https://spectacular-voyage.github.io/test-inn-ambush/relator/visibility/calendar/weekday-ashday/players-current> <https://spectacular-voyage.github.io/stagecraft/ontology/subject> <https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/weekday/ashday> ; <https://spectacular-voyage.github.io/stagecraft/ontology/object> <https://spectacular-voyage.github.io/test-inn-ambush/participant/alice>, <https://spectacular-voyage.github.io/test-inn-ambush/participant/bob> . <https://spectacular-voyage.github.io/test-inn-ambush/relator/visibility/calendar/weekday-barrowday/players-current> <https://spectacular-voyage.github.io/stagecraft/ontology/subject> <https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/weekday/barrowday> ; <https://spectacular-voyage.github.io/stagecraft/ontology/object> <https://spectacular-voyage.github.io/test-inn-ambush/participant/alice>, <https://spectacular-voyage.github.io/test-inn-ambush/participant/bob> . <https://spectacular-voyage.github.io/test-inn-ambush/relator/visibility/calendar/weekday-eveday/players-current> <https://spectacular-voyage.github.io/stagecraft/ontology/subject> <https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/weekday/eveday> ; <https://spectacular-voyage.github.io/stagecraft/ontology/object> <https://spectacular-voyage.github.io/test-inn-ambush/participant/alice>, <https://spectacular-voyage.github.io/test-inn-ambush/participant/bob> . FILTER NOT EXISTS { <https://spectacular-voyage.github.io/test-inn-ambush/relator/visibility/calendar/weekday-toilday/players-current> ?oldToilPredicate ?oldToilObject . } FILTER NOT EXISTS { <https://spectacular-voyage.github.io/test-inn-ambush/relator/visibility/calendar/weekday-starday/players-current> ?oldStarPredicate ?oldStarObject . } }",
+              "expectedBoolean": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,122 @@
+{
+  "@context": {
+    "@vocab": "https://spectacular-voyage.github.io/accord/ontology/",
+    "dcterms": "http://purl.org/dc/terms/",
+    "id": "@id",
+    "type": "@type",
+    "changeType": {
+      "@type": "@vocab"
+    },
+    "compareMode": {
+      "@type": "@vocab"
+    },
+    "targetsFileExpectation": {
+      "@type": "@id"
+    },
+    "locatorKind": {
+      "@type": "@vocab"
+    }
+  },
+  "type": "Manifest",
+  "id": "urn:accord:stagecraft:test-inn-ambush:30-prose-clock-weekday-rename-woven",
+  "dcterms:title": "Inn Ambush 30 prose clock weekday rename woven",
+  "hasCase": [
+    {
+      "type": "TransitionCase",
+      "id": "#weave-prose-clock-weekday-rename",
+      "fixtureRepo": "github.com/spectacular-voyage/test-inn-ambush",
+      "operationId": "stagecraft.fixture.weaveProseClockWeekdayRename",
+      "fromRef": "a.29-prose-clock-weekday-rename-records",
+      "toRef": "a.30-prose-clock-weekday-rename-woven",
+      "fromState": {
+        "type": "StateLocator",
+        "locatorKind": "gitRefState",
+        "ref": "a.29-prose-clock-weekday-rename-records"
+      },
+      "toState": {
+        "type": "StateLocator",
+        "locatorKind": "gitRefState",
+        "ref": "a.30-prose-clock-weekday-rename-woven"
+      },
+      "hasFileExpectation": [
+        {
+          "id": "#world-state-inventory",
+          "type": "FileExpectation",
+          "path": "world/states/inn-ambush-plan-b-state/_knop/_inventory/inventory.ttl",
+          "changeType": "updated",
+          "compareMode": "rdfCanonical"
+        },
+        {
+          "id": "#world-state-inventory-page",
+          "type": "FileExpectation",
+          "path": "world/states/inn-ambush-plan-b-state/_knop/_inventory/index.html",
+          "changeType": "updated",
+          "compareMode": "text"
+        },
+        {
+          "id": "#world-state-page",
+          "type": "FileExpectation",
+          "path": "world/states/inn-ambush-plan-b-state/index.html",
+          "changeType": "updated",
+          "compareMode": "text"
+        },
+        {
+          "id": "#world-state-history-page",
+          "type": "FileExpectation",
+          "path": "world/states/inn-ambush-plan-b-state/_history001/index.html",
+          "changeType": "updated",
+          "compareMode": "text"
+        },
+        {
+          "id": "#world-state-history-state",
+          "type": "FileExpectation",
+          "path": "world/states/inn-ambush-plan-b-state/_history001/_s0006/ttl/inn-ambush-plan-b-state.ttl",
+          "changeType": "added",
+          "compareMode": "rdfCanonical"
+        },
+        {
+          "id": "#world-state-history-state-page",
+          "type": "FileExpectation",
+          "path": "world/states/inn-ambush-plan-b-state/_history001/_s0006/index.html",
+          "changeType": "added",
+          "compareMode": "text"
+        },
+        {
+          "id": "#world-state-history-manifestation-page",
+          "type": "FileExpectation",
+          "path": "world/states/inn-ambush-plan-b-state/_history001/_s0006/ttl/index.html",
+          "changeType": "added",
+          "compareMode": "text"
+        }
+      ],
+      "hasRdfExpectation": [
+        {
+          "id": "#world-state-inventory-rdf",
+          "type": "RdfExpectation",
+          "targetsFileExpectation": "#world-state-inventory",
+          "hasAskAssertion": [
+            {
+              "id": "#ask-s0006-latest-state",
+              "type": "SparqlAskAssertion",
+              "query": "ASK { <https://spectacular-voyage.github.io/test-inn-ambush/world/states/inn-ambush-plan-b-state/_history001> <https://semantic-flow.github.io/sflo/ontology/latestHistoricalState> <https://spectacular-voyage.github.io/test-inn-ambush/world/states/inn-ambush-plan-b-state/_history001/_s0006> ; <https://semantic-flow.github.io/sflo/ontology/nextStateOrdinal> \"7\"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> . <https://spectacular-voyage.github.io/test-inn-ambush/world/states/inn-ambush-plan-b-state/_history001/_s0006> a <https://semantic-flow.github.io/sflo/ontology/HistoricalState> ; <https://semantic-flow.github.io/sflo/ontology/previousHistoricalState> <https://spectacular-voyage.github.io/test-inn-ambush/world/states/inn-ambush-plan-b-state/_history001/_s0005> ; <https://semantic-flow.github.io/sflo/ontology/hasResourcePage> <https://spectacular-voyage.github.io/test-inn-ambush/world/states/inn-ambush-plan-b-state/_history001/_s0006/index.html> . }",
+              "expectedBoolean": true
+            }
+          ]
+        },
+        {
+          "id": "#world-state-history-rdf",
+          "type": "RdfExpectation",
+          "targetsFileExpectation": "#world-state-history-state",
+          "hasAskAssertion": [
+            {
+              "id": "#ask-renamed-weekday-visibility-snapshot",
+              "type": "SparqlAskAssertion",
+              "query": "ASK { <https://spectacular-voyage.github.io/test-inn-ambush/relator/visibility/calendar/weekday-ashday/players-current> <https://spectacular-voyage.github.io/stagecraft/ontology/subject> <https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/weekday/ashday> . <https://spectacular-voyage.github.io/test-inn-ambush/relator/visibility/calendar/weekday-barrowday/players-current> <https://spectacular-voyage.github.io/stagecraft/ontology/subject> <https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/weekday/barrowday> . <https://spectacular-voyage.github.io/test-inn-ambush/relator/visibility/calendar/weekday-eveday/players-current> <https://spectacular-voyage.github.io/stagecraft/ontology/subject> <https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/weekday/eveday> . FILTER NOT EXISTS { <https://spectacular-voyage.github.io/test-inn-ambush/relator/visibility/calendar/weekday-toilday/players-current> ?oldToilPredicate ?oldToilObject . } FILTER NOT EXISTS { <https://spectacular-voyage.github.io/test-inn-ambush/relator/visibility/calendar/weekday-starday/players-current> ?oldStarPredicate ?oldStarObject . } }",
+              "expectedBoolean": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
