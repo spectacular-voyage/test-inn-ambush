@@ -127,10 +127,8 @@
 <https://spectacular-voyage.github.io/test-inn-ambush/frame/ambush-night>
   a temp:Frame ;
   dcterms:title "Ambush night frame" ;
-  dcterms:description "Narrative frame for prose-clock rendering during the inn ambush night." ;
-  rdfs:label "ambush night" ;
-  temp:frameAnchorOffsetSeconds 900.0 ;
-  temp:frameCloseOffsetSeconds 11820.0 .
+  dcterms:description "Unanchored dramatic frame for prose-clock rendering during the inn ambush night." ;
+  rdfs:label "ambush night" .
 
 <https://spectacular-voyage.github.io/test-inn-ambush/world-time-policy/flowing-server>
   a sc:WorldTimePolicy, sc:FlowingWorldTime ;
