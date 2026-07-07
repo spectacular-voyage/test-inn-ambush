@@ -28,6 +28,12 @@
       "type": "StateLane",
       "laneKey": "fixture-b",
       "branchPrefix": "b."
+    },
+    {
+      "id": "#play-lane",
+      "type": "StateLane",
+      "laneKey": "play",
+      "branchPrefix": "c."
     }
   ],
   "hasStep": [
@@ -1077,6 +1083,27 @@
             "type": "StateLocator",
             "locatorKind": "gitRefState",
             "ref": "b.04-standing-d20-warrant-contract"
+          }
+        }
+      ]
+    },
+    {
+      "id": "#56-curtain-up-baseline",
+      "type": "ScenarioStep",
+      "manifestPath": "56-curtain-up-baseline.jsonld",
+      "hasLaneBinding": [
+        {
+          "type": "LaneStateBinding",
+          "lane": "#fixture-b-lane",
+          "fromLaneState": {
+            "type": "StateLocator",
+            "locatorKind": "gitRefState",
+            "ref": "b.04-standing-d20-warrant-contract"
+          },
+          "toLaneState": {
+            "type": "StateLocator",
+            "locatorKind": "gitRefState",
+            "ref": "b.05-curtain-up"
           }
         }
       ]

@@ -1,0 +1,87 @@
+{
+  "@context": {
+    "@vocab": "https://spectacular-voyage.github.io/accord/ontology/",
+    "dcterms": "http://purl.org/dc/terms/",
+    "id": "@id",
+    "type": "@type",
+    "changeType": {
+      "@type": "@vocab"
+    },
+    "compareMode": {
+      "@type": "@vocab"
+    },
+    "targetsFileExpectation": {
+      "@type": "@id"
+    },
+    "locatorKind": {
+      "@type": "@vocab"
+    }
+  },
+  "type": "Manifest",
+  "id": "urn:accord:stagecraft:test-inn-ambush:56-curtain-up-baseline",
+  "dcterms:title": "Inn Ambush 56 curtain-up baseline",
+  "hasCase": [
+    {
+      "type": "TransitionCase",
+      "id": "#curtain-up-baseline",
+      "fixtureRepo": "github.com/spectacular-voyage/test-inn-ambush",
+      "operationId": "stagecraft.fixture.addCurtainUpBaseline",
+      "fromRef": "b.04-standing-d20-warrant-contract",
+      "toRef": "b.05-curtain-up",
+      "fromState": {
+        "type": "StateLocator",
+        "locatorKind": "gitRefState",
+        "ref": "b.04-standing-d20-warrant-contract"
+      },
+      "toState": {
+        "type": "StateLocator",
+        "locatorKind": "gitRefState",
+        "ref": "b.05-curtain-up"
+      },
+      "hasFileExpectation": [
+        {
+          "id": "#authority-journal",
+          "type": "FileExpectation",
+          "path": "authority/journals/plan-b/plan-b.ttl",
+          "changeType": "updated",
+          "compareMode": "rdfCanonical"
+        },
+        {
+          "id": "#world-state",
+          "type": "FileExpectation",
+          "path": "world/states/inn-ambush-plan-b-state/inn-ambush-plan-b-state.ttl",
+          "changeType": "updated",
+          "compareMode": "rdfCanonical"
+        }
+      ],
+      "hasRdfExpectation": [
+        {
+          "id": "#authority-journal-rdf",
+          "type": "RdfExpectation",
+          "targetsFileExpectation": "#authority-journal",
+          "hasAskAssertion": [
+            {
+              "id": "#ask-curtain-up-authority-record",
+              "type": "SparqlAskAssertion",
+              "query": "ASK { <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/world-seeded/curtain-up-001> a <https://spectacular-voyage.github.io/stagecraft/ontology/WorldSeeded> ; <http://purl.org/dc/terms/created> \"2026-07-07T19:26:44Z\"^^<http://www.w3.org/2001/XMLSchema#dateTime> ; <http://purl.org/dc/terms/description> ?description ; <https://spectacular-voyage.github.io/stagecraft/ontology/basedOnHistory> <https://spectacular-voyage.github.io/test-inn-ambush/history/main> ; <http://purl.org/dc/terms/references> <https://spectacular-voyage.github.io/test-inn-ambush/scenario/inn-ambush>, <https://spectacular-voyage.github.io/test-inn-ambush/staged-attack/enemy-ambush> . FILTER(CONTAINS(STR(?description), \"door unbarred\")) }",
+              "expectedBoolean": true
+            }
+          ]
+        },
+        {
+          "id": "#world-state-rdf",
+          "type": "RdfExpectation",
+          "targetsFileExpectation": "#world-state",
+          "hasAskAssertion": [
+            {
+              "id": "#ask-curtain-up-current-state",
+              "type": "SparqlAskAssertion",
+              "query": "ASK { <https://spectacular-voyage.github.io/test-inn-ambush/relator/door-barred/plan-b-001-current> <https://spectacular-voyage.github.io/stagecraft/ontology/acceptedUntil> \"2026-07-07T19:26:44Z\"^^<http://www.w3.org/2001/XMLSchema#dateTime> . <https://spectacular-voyage.github.io/test-inn-ambush/relator/door-barred/curtain-up-unbarred-current> a <https://spectacular-voyage.github.io/stagecraft/ontology/TemporalRelator> ; <https://spectacular-voyage.github.io/stagecraft/ontology/subject> <https://spectacular-voyage.github.io/test-inn-ambush/target/door> ; <https://spectacular-voyage.github.io/stagecraft/ontology/predicate> <https://spectacular-voyage.github.io/stagecraft/ontology/barred> ; <https://spectacular-voyage.github.io/stagecraft/ontology/object> \"false\"^^<http://www.w3.org/2001/XMLSchema#boolean> ; <https://spectacular-voyage.github.io/stagecraft/ontology/acceptedFrom> \"2026-07-07T19:26:44Z\"^^<http://www.w3.org/2001/XMLSchema#dateTime> ; <https://spectacular-voyage.github.io/stagecraft/ontology/basedOnAuthorityRecord> <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/world-seeded/curtain-up-001> . <https://spectacular-voyage.github.io/test-inn-ambush/relator/location/nera/old-road-current> <https://spectacular-voyage.github.io/stagecraft/ontology/acceptedUntil> \"2026-07-07T19:26:44Z\"^^<http://www.w3.org/2001/XMLSchema#dateTime> . <https://spectacular-voyage.github.io/test-inn-ambush/relator/location/nera/common-room-curtain-up-current> a <https://spectacular-voyage.github.io/stagecraft/ontology/TemporalRelator>, <https://spectacular-voyage.github.io/stagecraft/ontology/LocatedInRelator> ; <https://spectacular-voyage.github.io/stagecraft/ontology/subject> <https://spectacular-voyage.github.io/test-inn-ambush/actant/nera> ; <https://spectacular-voyage.github.io/stagecraft/ontology/predicate> <https://spectacular-voyage.github.io/stagecraft/ontology/locatedIn> ; <https://spectacular-voyage.github.io/stagecraft/ontology/object> <https://spectacular-voyage.github.io/test-inn-ambush/place/common-room> ; <https://spectacular-voyage.github.io/stagecraft/ontology/acceptedFrom> \"2026-07-07T19:26:44Z\"^^<http://www.w3.org/2001/XMLSchema#dateTime> ; <https://spectacular-voyage.github.io/stagecraft/ontology/basedOnAuthorityRecord> <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/world-seeded/curtain-up-001> . <https://spectacular-voyage.github.io/test-inn-ambush/staged-attack/enemy-ambush> a <https://spectacular-voyage.github.io/stagecraft/ontology/StagedAttack> ; <https://spectacular-voyage.github.io/stagecraft/ontology/hasContinuityDebt> <https://spectacular-voyage.github.io/test-inn-ambush/continuity-debt/plan-b-door-barred-before-attack> ; <https://spectacular-voyage.github.io/stagecraft/ontology/basedOnAuthorityRecord> <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/world-seeded/curtain-up-001> . FILTER NOT EXISTS { ?barred <https://spectacular-voyage.github.io/stagecraft/ontology/subject> <https://spectacular-voyage.github.io/test-inn-ambush/target/door> ; <https://spectacular-voyage.github.io/stagecraft/ontology/predicate> <https://spectacular-voyage.github.io/stagecraft/ontology/barred> ; <https://spectacular-voyage.github.io/stagecraft/ontology/object> \"true\"^^<http://www.w3.org/2001/XMLSchema#boolean> . FILTER NOT EXISTS { ?barred <https://spectacular-voyage.github.io/stagecraft/ontology/acceptedUntil> ?barredUntil . } } FILTER NOT EXISTS { ?oldRoad <https://spectacular-voyage.github.io/stagecraft/ontology/subject> <https://spectacular-voyage.github.io/test-inn-ambush/actant/nera> ; <https://spectacular-voyage.github.io/stagecraft/ontology/predicate> <https://spectacular-voyage.github.io/stagecraft/ontology/locatedIn> ; <https://spectacular-voyage.github.io/stagecraft/ontology/object> <https://spectacular-voyage.github.io/test-inn-ambush/place/old-road> . FILTER NOT EXISTS { ?oldRoad <https://spectacular-voyage.github.io/stagecraft/ontology/acceptedUntil> ?oldRoadUntil . } } }",
+              "expectedBoolean": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
