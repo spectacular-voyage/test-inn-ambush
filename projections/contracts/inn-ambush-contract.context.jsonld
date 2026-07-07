@@ -188,6 +188,59 @@
       "@id": "sc:projectionStateOrdinal",
       "@type": "xsd:nonNegativeInteger"
     },
+    "capturePolicy": "sc:capturePolicy",
+    "states": {
+      "@id": "sc:projectionTimelineStates"
+    },
+    "checkpoint": {
+      "@id": "sc:checkpoint",
+      "@type": "@id"
+    },
+    "label": "sc:label",
+    "previousProjectionState": {
+      "@id": "sc:previousProjectionState",
+      "@type": "@id"
+    },
+    "nextProjectionState": {
+      "@id": "sc:nextProjectionState",
+      "@type": "@id"
+    },
+    "projectionTimeline": {
+      "@id": "sc:projectionTimeline",
+      "@context": {
+        "capturePolicy": "sc:capturePolicy",
+        "projectionHistory": {
+          "@id": "sc:projectionHistory",
+          "@type": "@id"
+        },
+        "states": {
+          "@id": "sc:projectionTimelineStates",
+          "@context": {
+            "checkpoint": {
+              "@id": "sc:checkpoint",
+              "@type": "@id"
+            },
+            "label": "sc:label",
+            "projectionState": {
+              "@id": "sc:projectionState",
+              "@type": "@id"
+            },
+            "projectionStateOrdinal": {
+              "@id": "sc:projectionStateOrdinal",
+              "@type": "xsd:nonNegativeInteger"
+            },
+            "previousProjectionState": {
+              "@id": "sc:previousProjectionState",
+              "@type": "@id"
+            },
+            "nextProjectionState": {
+              "@id": "sc:nextProjectionState",
+              "@type": "@id"
+            }
+          }
+        }
+      }
+    },
     "observedProjectionState": {
       "@type": "@id"
     },

@@ -189,6 +189,12 @@ sc-sh:ParticipantProjectionResponseShape
     sh:maxCount 1 ;
   ] ;
   sh:property [
+    sh:path sc:projectionTimeline ;
+    sh:node sc-sh:ProjectionTimelineShape ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
     sh:path sc:sourceProjection ;
     sh:node sc-sh:SourceProjectionShape ;
     sh:minCount 1 ;
@@ -834,6 +840,63 @@ sc-sh:SpeakingContextShape
     sh:path sc:speaker ;
     sh:nodeKind sh:IRI ;
     sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] .
+
+sc-sh:ProjectionTimelineShape
+  a sh:NodeShape ;
+  sh:property [
+    sh:path sc:capturePolicy ;
+    sh:hasValue "in-memory-session-only" ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path sc:projectionHistory ;
+    sh:nodeKind sh:IRI ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path sc:projectionTimelineStates ;
+    sh:node sc-sh:ProjectionTimelineStateShape ;
+    sh:minCount 1 ;
+  ] .
+
+sc-sh:ProjectionTimelineStateShape
+  a sh:NodeShape ;
+  sh:property [
+    sh:path sc:checkpoint ;
+    sh:nodeKind sh:IRI ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path sc:label ;
+    sh:datatype xsd:string ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path sc:projectionState ;
+    sh:nodeKind sh:IRI ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path sc:projectionStateOrdinal ;
+    sh:datatype xsd:nonNegativeInteger ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path sc:previousProjectionState ;
+    sh:nodeKind sh:IRI ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path sc:nextProjectionState ;
+    sh:nodeKind sh:IRI ;
     sh:maxCount 1 ;
   ] .
 
