@@ -33,7 +33,8 @@
 
 <world/states/inn-ambush-plan-b-state/rdf-export.inn-ambush-plan-b.history.main> a sflo:ArtifactHistory ;
   sflo:hasHistoricalState <world/states/inn-ambush-plan-b-state/rdf-export.inn-ambush-plan-b.history.main/rdf-export.inn-ambush-plan-b.state.s0002> ;
-  sflo:latestHistoricalState <world/states/inn-ambush-plan-b-state/rdf-export.inn-ambush-plan-b.history.main/rdf-export.inn-ambush-plan-b.state.s0002> ;
+  sflo:hasHistoricalState <world/states/inn-ambush-plan-b-state/rdf-export.inn-ambush-plan-b.history.main/rdf-export.inn-ambush-plan-b.state.s0003> ;
+  sflo:latestHistoricalState <world/states/inn-ambush-plan-b-state/rdf-export.inn-ambush-plan-b.history.main/rdf-export.inn-ambush-plan-b.state.s0003> ;
   sflo:nextStateOrdinal "1"^^xsd:nonNegativeInteger ;
   sflo:hasResourcePage <world/states/inn-ambush-plan-b-state/rdf-export.inn-ambush-plan-b.history.main/index.html> .
 
@@ -133,6 +134,16 @@
   sflo:locatedFileForManifestation <world/states/inn-ambush-plan-b-state/rdf-export.inn-ambush-plan-b.history.main/rdf-export.inn-ambush-plan-b.state.s0002/ttl/inn-ambush-plan-b-state.ttl> ;
   sflo:hasResourcePage <world/states/inn-ambush-plan-b-state/rdf-export.inn-ambush-plan-b.history.main/rdf-export.inn-ambush-plan-b.state.s0002/ttl/index.html> .
 
+<world/states/inn-ambush-plan-b-state/rdf-export.inn-ambush-plan-b.history.main/rdf-export.inn-ambush-plan-b.state.s0003> a sflo:HistoricalState ;
+  sflo:previousHistoricalState <world/states/inn-ambush-plan-b-state/rdf-export.inn-ambush-plan-b.history.main/rdf-export.inn-ambush-plan-b.state.s0002> ;
+  sflo:hasManifestation <world/states/inn-ambush-plan-b-state/rdf-export.inn-ambush-plan-b.history.main/rdf-export.inn-ambush-plan-b.state.s0003/ttl> ;
+  sflo:locatedFileForState <world/states/inn-ambush-plan-b-state/rdf-export.inn-ambush-plan-b.history.main/rdf-export.inn-ambush-plan-b.state.s0003/ttl/inn-ambush-plan-b-state.ttl> ;
+  sflo:hasResourcePage <world/states/inn-ambush-plan-b-state/rdf-export.inn-ambush-plan-b.history.main/rdf-export.inn-ambush-plan-b.state.s0003/index.html> .
+
+<world/states/inn-ambush-plan-b-state/rdf-export.inn-ambush-plan-b.history.main/rdf-export.inn-ambush-plan-b.state.s0003/ttl> a sflo:ArtifactManifestation, sflo:RdfDocument ;
+  sflo:locatedFileForManifestation <world/states/inn-ambush-plan-b-state/rdf-export.inn-ambush-plan-b.history.main/rdf-export.inn-ambush-plan-b.state.s0003/ttl/inn-ambush-plan-b-state.ttl> ;
+  sflo:hasResourcePage <world/states/inn-ambush-plan-b-state/rdf-export.inn-ambush-plan-b.history.main/rdf-export.inn-ambush-plan-b.state.s0003/ttl/index.html> .
+
 <world/states/inn-ambush-plan-b-state/_knop/_meta> a sflo:KnopMetadata, sflo:DigitalArtifact, sflo:RdfDocument ;
   sflo:hasWorkingLocatedFile <world/states/inn-ambush-plan-b-state/_knop/_meta/meta.ttl> ;
   sflo:hasResourcePage <world/states/inn-ambush-plan-b-state/_knop/_meta/index.html> .
@@ -164,6 +175,8 @@
 <world/states/inn-ambush-plan-b-state/_history001/_s0008/ttl/inn-ambush-plan-b-state.ttl> a sflo:LocatedFile, sflo:RdfDocument .
 
 <world/states/inn-ambush-plan-b-state/rdf-export.inn-ambush-plan-b.history.main/rdf-export.inn-ambush-plan-b.state.s0002/ttl/inn-ambush-plan-b-state.ttl> a sflo:LocatedFile, sflo:RdfDocument .
+
+<world/states/inn-ambush-plan-b-state/rdf-export.inn-ambush-plan-b.history.main/rdf-export.inn-ambush-plan-b.state.s0003/ttl/inn-ambush-plan-b-state.ttl> a sflo:LocatedFile, sflo:RdfDocument .
 
 <world/states/inn-ambush-plan-b-state/index.html> a sflo:ResourcePage, sflo:LocatedFile .
 
@@ -206,6 +219,10 @@
 <world/states/inn-ambush-plan-b-state/rdf-export.inn-ambush-plan-b.history.main/rdf-export.inn-ambush-plan-b.state.s0002/index.html> a sflo:ResourcePage, sflo:LocatedFile .
 
 <world/states/inn-ambush-plan-b-state/rdf-export.inn-ambush-plan-b.history.main/rdf-export.inn-ambush-plan-b.state.s0002/ttl/index.html> a sflo:ResourcePage, sflo:LocatedFile .
+
+<world/states/inn-ambush-plan-b-state/rdf-export.inn-ambush-plan-b.history.main/rdf-export.inn-ambush-plan-b.state.s0003/index.html> a sflo:ResourcePage, sflo:LocatedFile .
+
+<world/states/inn-ambush-plan-b-state/rdf-export.inn-ambush-plan-b.history.main/rdf-export.inn-ambush-plan-b.state.s0003/ttl/index.html> a sflo:ResourcePage, sflo:LocatedFile .
 
 <world/states/inn-ambush-plan-b-state/_knop/index.html> a sflo:ResourcePage, sflo:LocatedFile .
 
