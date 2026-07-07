@@ -1,0 +1,22 @@
+{
+  "@context": "https://spectacular-voyage.github.io/test-inn-ambush/projections/contracts/inn-ambush-contract.context.jsonld",
+  "@type": "D20TestRequest",
+  "type": "stagecraft.d20-test.request.v1",
+  "id": "d20-roll-request-live-bare-fixture",
+  "requestedByParticipant": "https://spectacular-voyage.github.io/test-inn-ambush/participant/alice",
+  "speakingContext": {
+    "type": "VoiceForActant",
+    "speaker": "https://spectacular-voyage.github.io/test-inn-ambush/participant/alice",
+    "actant": "https://spectacular-voyage.github.io/test-inn-ambush/actant/elara"
+  },
+  "actor": "https://spectacular-voyage.github.io/test-inn-ambush/actant/elara",
+  "testType": "https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/AbilityCheck",
+  "diceExpression": "1d20",
+  "modifiers": [],
+  "consequenceDescription": "Elara rolls 1d20.",
+  "sourceProjection": {
+    "observedProjectionState": "https://spectacular-voyage.github.io/test-inn-ambush/branch/plan-b",
+    "participantProjection": "https://spectacular-voyage.github.io/test-inn-ambush/projection/alice/inn-ambush-plan-b"
+  },
+  "createdAt": "2026-07-07T17:51:30Z"
+}
