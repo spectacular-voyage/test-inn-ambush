@@ -1,0 +1,23 @@
+{
+  "@context": "https://spectacular-voyage.github.io/test-inn-ambush/projections/contracts/inn-ambush-contract.context.jsonld",
+  "@type": "D20TestRequest",
+  "type": "stagecraft.d20-test.request.v1",
+  "id": "d20-roll-request-resolves-warrant-fixture",
+  "requestedByParticipant": "https://spectacular-voyage.github.io/test-inn-ambush/participant/alice",
+  "speakingContext": {
+    "type": "VoiceForActant",
+    "speaker": "https://spectacular-voyage.github.io/test-inn-ambush/participant/alice",
+    "actant": "https://spectacular-voyage.github.io/test-inn-ambush/actant/elara"
+  },
+  "actor": "https://spectacular-voyage.github.io/test-inn-ambush/actant/elara",
+  "testType": "https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/Stealth",
+  "warrant": "https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/d20-test-warrant/session-authority/d20-test-warrant-request-hidden-result-fixture",
+  "diceExpression": "1d20",
+  "modifiers": [],
+  "consequenceDescription": "Elara rolls 1d20 for the hidden stealth warrant.",
+  "sourceProjection": {
+    "observedProjectionState": "https://spectacular-voyage.github.io/test-inn-ambush/branch/plan-b",
+    "participantProjection": "https://spectacular-voyage.github.io/test-inn-ambush/projection/alice/inn-ambush-plan-b"
+  },
+  "createdAt": "2026-07-07T19:51:00Z"
+}
