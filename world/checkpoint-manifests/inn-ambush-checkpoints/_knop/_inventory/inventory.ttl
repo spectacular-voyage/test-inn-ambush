@@ -1,81 +1,23 @@
 @base <https://spectacular-voyage.github.io/test-inn-ambush/> .
 @prefix sflo: <https://semantic-flow.github.io/sflo/ontology/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <world/checkpoint-manifests/inn-ambush-checkpoints/_knop> a sflo:Knop ;
   sflo:hasKnopMetadata <world/checkpoint-manifests/inn-ambush-checkpoints/_knop/_meta> ;
   sflo:hasKnopInventory <world/checkpoint-manifests/inn-ambush-checkpoints/_knop/_inventory> ;
   sflo:hasWorkingKnopInventoryFile <world/checkpoint-manifests/inn-ambush-checkpoints/_knop/_inventory/inventory.ttl> ;
-  sflo:hasPayloadArtifact <world/checkpoint-manifests/inn-ambush-checkpoints> ;
-  sflo:hasResourcePage <world/checkpoint-manifests/inn-ambush-checkpoints/_knop/index.html> .
+  sflo:hasPayloadArtifact <world/checkpoint-manifests/inn-ambush-checkpoints> .
 
 <world/checkpoint-manifests/inn-ambush-checkpoints> a sflo:PayloadArtifact, sflo:DigitalArtifact, sflo:RdfDocument ;
-  sflo:hasArtifactHistory <world/checkpoint-manifests/inn-ambush-checkpoints/rdf-export.inn-ambush-checkpoint-manifest.history.main> ;
-  sflo:currentArtifactHistory <world/checkpoint-manifests/inn-ambush-checkpoints/rdf-export.inn-ambush-checkpoint-manifest.history.main> ;
-  sflo:nextHistoryOrdinal "2"^^xsd:nonNegativeInteger ;
-  sflo:hasWorkingLocatedFile <world/checkpoint-manifests/inn-ambush-checkpoints/checkpoint-manifest.ttl> ;
-  sflo:hasResourcePage <world/checkpoint-manifests/inn-ambush-checkpoints/index.html> .
-
-<world/checkpoint-manifests/inn-ambush-checkpoints/rdf-export.inn-ambush-checkpoint-manifest.history.main> a sflo:ArtifactHistory ;
-  sflo:historyOrdinal "1"^^xsd:nonNegativeInteger ;
-  sflo:hasHistoricalState <world/checkpoint-manifests/inn-ambush-checkpoints/rdf-export.inn-ambush-checkpoint-manifest.history.main/rdf-export.inn-ambush-checkpoint-manifest.state.s0002> ;
-  sflo:hasHistoricalState <world/checkpoint-manifests/inn-ambush-checkpoints/rdf-export.inn-ambush-checkpoint-manifest.history.main/rdf-export.inn-ambush-checkpoint-manifest.state.s0003> ;
-  sflo:latestHistoricalState <world/checkpoint-manifests/inn-ambush-checkpoints/rdf-export.inn-ambush-checkpoint-manifest.history.main/rdf-export.inn-ambush-checkpoint-manifest.state.s0003> ;
-  sflo:nextStateOrdinal "2"^^xsd:nonNegativeInteger ;
-  sflo:hasResourcePage <world/checkpoint-manifests/inn-ambush-checkpoints/rdf-export.inn-ambush-checkpoint-manifest.history.main/index.html> .
-
-<world/checkpoint-manifests/inn-ambush-checkpoints/rdf-export.inn-ambush-checkpoint-manifest.history.main/rdf-export.inn-ambush-checkpoint-manifest.state.s0002> a sflo:HistoricalState ;
-  sflo:stateOrdinal "1"^^xsd:nonNegativeInteger ;
-  sflo:hasManifestation <world/checkpoint-manifests/inn-ambush-checkpoints/rdf-export.inn-ambush-checkpoint-manifest.history.main/rdf-export.inn-ambush-checkpoint-manifest.state.s0002/ttl> ;
-  sflo:locatedFileForState <world/checkpoint-manifests/inn-ambush-checkpoints/rdf-export.inn-ambush-checkpoint-manifest.history.main/rdf-export.inn-ambush-checkpoint-manifest.state.s0002/ttl/checkpoint-manifest.ttl> ;
-  sflo:hasResourcePage <world/checkpoint-manifests/inn-ambush-checkpoints/rdf-export.inn-ambush-checkpoint-manifest.history.main/rdf-export.inn-ambush-checkpoint-manifest.state.s0002/index.html> .
-
-<world/checkpoint-manifests/inn-ambush-checkpoints/rdf-export.inn-ambush-checkpoint-manifest.history.main/rdf-export.inn-ambush-checkpoint-manifest.state.s0002/ttl> a sflo:ArtifactManifestation, sflo:RdfDocument ;
-  sflo:locatedFileForManifestation <world/checkpoint-manifests/inn-ambush-checkpoints/rdf-export.inn-ambush-checkpoint-manifest.history.main/rdf-export.inn-ambush-checkpoint-manifest.state.s0002/ttl/checkpoint-manifest.ttl> ;
-  sflo:hasResourcePage <world/checkpoint-manifests/inn-ambush-checkpoints/rdf-export.inn-ambush-checkpoint-manifest.history.main/rdf-export.inn-ambush-checkpoint-manifest.state.s0002/ttl/index.html> .
-
-<world/checkpoint-manifests/inn-ambush-checkpoints/rdf-export.inn-ambush-checkpoint-manifest.history.main/rdf-export.inn-ambush-checkpoint-manifest.state.s0003> a sflo:HistoricalState ;
-  sflo:previousHistoricalState <world/checkpoint-manifests/inn-ambush-checkpoints/rdf-export.inn-ambush-checkpoint-manifest.history.main/rdf-export.inn-ambush-checkpoint-manifest.state.s0002> ;
-  sflo:hasManifestation <world/checkpoint-manifests/inn-ambush-checkpoints/rdf-export.inn-ambush-checkpoint-manifest.history.main/rdf-export.inn-ambush-checkpoint-manifest.state.s0003/ttl> ;
-  sflo:locatedFileForState <world/checkpoint-manifests/inn-ambush-checkpoints/rdf-export.inn-ambush-checkpoint-manifest.history.main/rdf-export.inn-ambush-checkpoint-manifest.state.s0003/ttl/checkpoint-manifest.ttl> ;
-  sflo:hasResourcePage <world/checkpoint-manifests/inn-ambush-checkpoints/rdf-export.inn-ambush-checkpoint-manifest.history.main/rdf-export.inn-ambush-checkpoint-manifest.state.s0003/index.html> .
-
-<world/checkpoint-manifests/inn-ambush-checkpoints/rdf-export.inn-ambush-checkpoint-manifest.history.main/rdf-export.inn-ambush-checkpoint-manifest.state.s0003/ttl> a sflo:ArtifactManifestation, sflo:RdfDocument ;
-  sflo:locatedFileForManifestation <world/checkpoint-manifests/inn-ambush-checkpoints/rdf-export.inn-ambush-checkpoint-manifest.history.main/rdf-export.inn-ambush-checkpoint-manifest.state.s0003/ttl/checkpoint-manifest.ttl> ;
-  sflo:hasResourcePage <world/checkpoint-manifests/inn-ambush-checkpoints/rdf-export.inn-ambush-checkpoint-manifest.history.main/rdf-export.inn-ambush-checkpoint-manifest.state.s0003/ttl/index.html> .
+  sflo:hasWorkingLocatedFile <world/checkpoint-manifests/inn-ambush-checkpoints/checkpoint-manifest.ttl> .
 
 <world/checkpoint-manifests/inn-ambush-checkpoints/_knop/_meta> a sflo:KnopMetadata, sflo:DigitalArtifact, sflo:RdfDocument ;
-  sflo:hasWorkingLocatedFile <world/checkpoint-manifests/inn-ambush-checkpoints/_knop/_meta/meta.ttl> ;
-  sflo:hasResourcePage <world/checkpoint-manifests/inn-ambush-checkpoints/_knop/_meta/index.html> .
+  sflo:hasWorkingLocatedFile <world/checkpoint-manifests/inn-ambush-checkpoints/_knop/_meta/meta.ttl> .
 
 <world/checkpoint-manifests/inn-ambush-checkpoints/_knop/_inventory> a sflo:KnopInventory, sflo:DigitalArtifact, sflo:RdfDocument ;
-  sflo:hasWorkingLocatedFile <world/checkpoint-manifests/inn-ambush-checkpoints/_knop/_inventory/inventory.ttl> ;
-  sflo:hasResourcePage <world/checkpoint-manifests/inn-ambush-checkpoints/_knop/_inventory/index.html> .
+  sflo:hasWorkingLocatedFile <world/checkpoint-manifests/inn-ambush-checkpoints/_knop/_inventory/inventory.ttl> .
 
 <world/checkpoint-manifests/inn-ambush-checkpoints/_knop/_meta/meta.ttl> a sflo:LocatedFile, sflo:RdfDocument .
 
 <world/checkpoint-manifests/inn-ambush-checkpoints/_knop/_inventory/inventory.ttl> a sflo:LocatedFile, sflo:RdfDocument .
 
 <world/checkpoint-manifests/inn-ambush-checkpoints/checkpoint-manifest.ttl> a sflo:LocatedFile, sflo:RdfDocument .
-
-<world/checkpoint-manifests/inn-ambush-checkpoints/rdf-export.inn-ambush-checkpoint-manifest.history.main/rdf-export.inn-ambush-checkpoint-manifest.state.s0002/ttl/checkpoint-manifest.ttl> a sflo:LocatedFile, sflo:RdfDocument .
-
-<world/checkpoint-manifests/inn-ambush-checkpoints/rdf-export.inn-ambush-checkpoint-manifest.history.main/rdf-export.inn-ambush-checkpoint-manifest.state.s0003/ttl/checkpoint-manifest.ttl> a sflo:LocatedFile, sflo:RdfDocument .
-
-<world/checkpoint-manifests/inn-ambush-checkpoints/index.html> a sflo:ResourcePage, sflo:LocatedFile .
-
-<world/checkpoint-manifests/inn-ambush-checkpoints/rdf-export.inn-ambush-checkpoint-manifest.history.main/index.html> a sflo:ResourcePage, sflo:LocatedFile .
-
-<world/checkpoint-manifests/inn-ambush-checkpoints/rdf-export.inn-ambush-checkpoint-manifest.history.main/rdf-export.inn-ambush-checkpoint-manifest.state.s0002/index.html> a sflo:ResourcePage, sflo:LocatedFile .
-
-<world/checkpoint-manifests/inn-ambush-checkpoints/rdf-export.inn-ambush-checkpoint-manifest.history.main/rdf-export.inn-ambush-checkpoint-manifest.state.s0002/ttl/index.html> a sflo:ResourcePage, sflo:LocatedFile .
-
-<world/checkpoint-manifests/inn-ambush-checkpoints/rdf-export.inn-ambush-checkpoint-manifest.history.main/rdf-export.inn-ambush-checkpoint-manifest.state.s0003/index.html> a sflo:ResourcePage, sflo:LocatedFile .
-
-<world/checkpoint-manifests/inn-ambush-checkpoints/rdf-export.inn-ambush-checkpoint-manifest.history.main/rdf-export.inn-ambush-checkpoint-manifest.state.s0003/ttl/index.html> a sflo:ResourcePage, sflo:LocatedFile .
-
-<world/checkpoint-manifests/inn-ambush-checkpoints/_knop/index.html> a sflo:ResourcePage, sflo:LocatedFile .
-
-<world/checkpoint-manifests/inn-ambush-checkpoints/_knop/_meta/index.html> a sflo:ResourcePage, sflo:LocatedFile .
-
-<world/checkpoint-manifests/inn-ambush-checkpoints/_knop/_inventory/index.html> a sflo:ResourcePage, sflo:LocatedFile .

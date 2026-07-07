@@ -76,18 +76,6 @@
 
 <authority/journals/plan-b/plan-b.ttl> a sflo:LocatedFile, sflo:RdfDocument .
 
-<_mesh> sflo:hasKnop <world/states/inn-ambush-plan-b-state/_knop> .
-
-<world/states/inn-ambush-plan-b-state> a sflo:PayloadArtifact, sflo:DigitalArtifact, sflo:RdfDocument ;
-  sflo:hasWorkingLocatedFile <world/states/inn-ambush-plan-b-state/inn-ambush-plan-b-state.ttl> .
-
-<world/states/inn-ambush-plan-b-state/_knop> a sflo:Knop ;
-  sflo:hasWorkingKnopInventoryFile <world/states/inn-ambush-plan-b-state/_knop/_inventory/inventory.ttl> .
-
-<world/states/inn-ambush-plan-b-state/_knop/_inventory/inventory.ttl> a sflo:LocatedFile, sflo:RdfDocument .
-
-<world/states/inn-ambush-plan-b-state/inn-ambush-plan-b-state.ttl> a sflo:LocatedFile, sflo:RdfDocument .
-
 <_mesh> sflo:hasKnop <projections/contracts/inn-ambush-contract-context/_knop> .
 
 <projections/contracts/inn-ambush-contract-context> a sflo:PayloadArtifact, sflo:DigitalArtifact, sflo:RdfDocument ;
@@ -215,14 +203,6 @@
 <sessions/contributions/chat-contribution-plan-b-suggestion/index.html> a sflo:ResourcePage, sflo:LocatedFile .
 
 <sessions/contributions/chat-contribution-plan-b-suggestion/_knop/index.html> a sflo:ResourcePage, sflo:LocatedFile .
-
-<world/states/inn-ambush-plan-b-state> sflo:hasResourcePage <world/states/inn-ambush-plan-b-state/index.html> .
-
-<world/states/inn-ambush-plan-b-state/_knop> sflo:hasResourcePage <world/states/inn-ambush-plan-b-state/_knop/index.html> .
-
-<world/states/inn-ambush-plan-b-state/index.html> a sflo:ResourcePage, sflo:LocatedFile .
-
-<world/states/inn-ambush-plan-b-state/_knop/index.html> a sflo:ResourcePage, sflo:LocatedFile .
 
 <_mesh> sflo:hasKnop <sessions/contributions/chat-contribution-plan-b-declaration/_knop> .
 
@@ -424,6 +404,18 @@
 
 <rules/dynamis/srd-5-2-1/weapons/_knop/index.html> a sflo:ResourcePage, sflo:LocatedFile .
 
+<_mesh> sflo:hasKnop <world/states/inn-ambush-plan-b-state/_knop> .
+
+<world/states/inn-ambush-plan-b-state> a sflo:PayloadArtifact, sflo:DigitalArtifact, sflo:RdfDocument ;
+  sflo:hasWorkingLocatedFile <world/states/inn-ambush-plan-b-state/inn-ambush-plan-b-state.ttl> .
+
+<world/states/inn-ambush-plan-b-state/_knop> a sflo:Knop ;
+  sflo:hasWorkingKnopInventoryFile <world/states/inn-ambush-plan-b-state/_knop/_inventory/inventory.ttl> .
+
+<world/states/inn-ambush-plan-b-state/_knop/_inventory/inventory.ttl> a sflo:LocatedFile, sflo:RdfDocument .
+
+<world/states/inn-ambush-plan-b-state/inn-ambush-plan-b-state.ttl> a sflo:LocatedFile, sflo:RdfDocument .
+
 <_mesh> sflo:hasKnop <world/checkpoint-manifests/inn-ambush-checkpoints/_knop> .
 
 <world/checkpoint-manifests/inn-ambush-checkpoints> a sflo:PayloadArtifact, sflo:DigitalArtifact, sflo:RdfDocument ;
@@ -435,11 +427,3 @@
 <world/checkpoint-manifests/inn-ambush-checkpoints/_knop/_inventory/inventory.ttl> a sflo:LocatedFile, sflo:RdfDocument .
 
 <world/checkpoint-manifests/inn-ambush-checkpoints/checkpoint-manifest.ttl> a sflo:LocatedFile, sflo:RdfDocument .
-
-<world/checkpoint-manifests/inn-ambush-checkpoints> sflo:hasResourcePage <world/checkpoint-manifests/inn-ambush-checkpoints/index.html> .
-
-<world/checkpoint-manifests/inn-ambush-checkpoints/_knop> sflo:hasResourcePage <world/checkpoint-manifests/inn-ambush-checkpoints/_knop/index.html> .
-
-<world/checkpoint-manifests/inn-ambush-checkpoints/index.html> a sflo:ResourcePage, sflo:LocatedFile .
-
-<world/checkpoint-manifests/inn-ambush-checkpoints/_knop/index.html> a sflo:ResourcePage, sflo:LocatedFile .

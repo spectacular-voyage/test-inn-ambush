@@ -26,7 +26,7 @@
 	<https://spectacular-voyage.github.io/stagecraft/ontology/committedEvent> <https://spectacular-voyage.github.io/test-inn-ambush/committed-event/plan-b-001> ;
 	<https://spectacular-voyage.github.io/stagecraft/ontology/committedBy> <https://spectacular-voyage.github.io/test-inn-ambush/gm/alex> ;
 	a <https://spectacular-voyage.github.io/stagecraft/ontology/CommitCertificate> .
-<https://spectacular-voyage.github.io/test-inn-ambush/state-mutation/door-barred-plan-b-001> <http://purl.org/dc/terms/isReferencedBy> <https://spectacular-voyage.github.io/test-inn-ambush/rdf-export/inn-ambush-plan-b/state/s0001> , <https://spectacular-voyage.github.io/test-inn-ambush/target/door> ;
+<https://spectacular-voyage.github.io/test-inn-ambush/state-mutation/door-barred-plan-b-001> <http://purl.org/dc/terms/isReferencedBy> <https://spectacular-voyage.github.io/test-inn-ambush/world/states/inn-ambush-plan-b-state/main/s0001> , <https://spectacular-voyage.github.io/test-inn-ambush/target/door> ;
 	<https://spectacular-voyage.github.io/stagecraft/ontology/inTemporalScope> <https://spectacular-voyage.github.io/test-inn-ambush/temporal-scope/inn-scene> ;
 	<https://spectacular-voyage.github.io/stagecraft/ontology/inHistory> <https://spectacular-voyage.github.io/test-inn-ambush/history/main> ;
 	<https://spectacular-voyage.github.io/stagecraft/ontology/hasSceneLocalTime> <https://spectacular-voyage.github.io/test-inn-ambush/scene-local-time/inn-scene-plan-b> ;
@@ -36,7 +36,7 @@
 	<https://spectacular-voyage.github.io/stagecraft/ontology/appliesConsequence> <https://spectacular-voyage.github.io/test-inn-ambush/consequence/door-barred> ;
 	<https://spectacular-voyage.github.io/stagecraft/ontology/affectsEntity> <https://spectacular-voyage.github.io/test-inn-ambush/target/door> ;
 	a <https://spectacular-voyage.github.io/stagecraft/ontology/StateMutation> .
-<https://spectacular-voyage.github.io/test-inn-ambush/committed-event/plan-b-001> <http://purl.org/dc/terms/isReferencedBy> <https://spectacular-voyage.github.io/test-inn-ambush/rdf-export/inn-ambush-plan-b/state/s0001> ;
+<https://spectacular-voyage.github.io/test-inn-ambush/committed-event/plan-b-001> <http://purl.org/dc/terms/isReferencedBy> <https://spectacular-voyage.github.io/test-inn-ambush/world/states/inn-ambush-plan-b-state/main/s0001> ;
 	<https://spectacular-voyage.github.io/stagecraft/ontology/producesStateMutation> <https://spectacular-voyage.github.io/test-inn-ambush/state-mutation/door-barred-plan-b-001> ;
 	<https://spectacular-voyage.github.io/stagecraft/ontology/inTemporalScope> <https://spectacular-voyage.github.io/test-inn-ambush/temporal-scope/inn-scene> ;
 	<https://spectacular-voyage.github.io/stagecraft/ontology/inHistory> <https://spectacular-voyage.github.io/test-inn-ambush/history/main> ;
@@ -47,7 +47,7 @@
 	<https://spectacular-voyage.github.io/stagecraft/ontology/appliesConsequence> <https://spectacular-voyage.github.io/test-inn-ambush/consequence/door-barred> ;
 	<https://spectacular-voyage.github.io/stagecraft/ontology/affectsEntity> <https://spectacular-voyage.github.io/test-inn-ambush/target/door> ;
 	a <https://spectacular-voyage.github.io/stagecraft/ontology/CommittedEvent> .
-<https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/outcome-committed/plan-b-001> <http://purl.org/dc/terms/isReferencedBy> <https://spectacular-voyage.github.io/test-inn-ambush/rdf-export/inn-ambush-plan-b/state/s0001> ;
+<https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/outcome-committed/plan-b-001> <http://purl.org/dc/terms/isReferencedBy> <https://spectacular-voyage.github.io/test-inn-ambush/world/states/inn-ambush-plan-b-state/main/s0001> ;
 	<https://spectacular-voyage.github.io/stagecraft/ontology/hasCommitCertificate> <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/commit-certificate/plan-b-001> ;
 	<https://spectacular-voyage.github.io/stagecraft/ontology/commitsProposedOutcome> <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/outcome-proposed/plan-b-001> ;
 	<https://spectacular-voyage.github.io/stagecraft/ontology/committedEvent> <https://spectacular-voyage.github.io/test-inn-ambush/committed-event/plan-b-001> ;
@@ -564,55 +564,25 @@
 	a <https://spectacular-voyage.github.io/stagecraft/ontology/Scenario> .
 <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/plan-b-ttl> <https://schema.org/contentUrl> "dependencies/github.com/spectacular-voyage/test-inn-ambush/authority/journals/plan-b/plan-b.ttl" ;
 	a <https://semantic-flow.github.io/sflo/ontology/RdfDocument> .
-<https://spectacular-voyage.github.io/test-inn-ambush/rdf-export/inn-ambush-plan-b> a <https://semantic-flow.github.io/sflo/ontology/DigitalArtifact> , <https://semantic-flow.github.io/sflo/ontology/RdfDocument> ;
-	<https://semantic-flow.github.io/sflo/ontology/defaultArtifactHistory> <https://spectacular-voyage.github.io/test-inn-ambush/rdf-export/inn-ambush-plan-b/history/main> ;
-	<https://semantic-flow.github.io/sflo/ontology/hasArtifactHistory> <https://spectacular-voyage.github.io/test-inn-ambush/rdf-export/inn-ambush-plan-b/history/main> ;
-	<https://semantic-flow.github.io/sflo/ontology/currentArtifactHistory> <https://spectacular-voyage.github.io/test-inn-ambush/rdf-export/inn-ambush-plan-b/history/main> .
-<https://spectacular-voyage.github.io/test-inn-ambush/rdf-export/inn-ambush-plan-b/history/main> a <https://semantic-flow.github.io/sflo/ontology/ArtifactHistory> ;
+<https://spectacular-voyage.github.io/test-inn-ambush/world/states/inn-ambush-plan-b-state> a <https://semantic-flow.github.io/sflo/ontology/DigitalArtifact> , <https://semantic-flow.github.io/sflo/ontology/RdfDocument> ;
+	<https://semantic-flow.github.io/sflo/ontology/defaultArtifactHistory> <https://spectacular-voyage.github.io/test-inn-ambush/world/states/inn-ambush-plan-b-state/main> ;
+	<https://semantic-flow.github.io/sflo/ontology/hasArtifactHistory> <https://spectacular-voyage.github.io/test-inn-ambush/world/states/inn-ambush-plan-b-state/main> ;
+	<https://semantic-flow.github.io/sflo/ontology/currentArtifactHistory> <https://spectacular-voyage.github.io/test-inn-ambush/world/states/inn-ambush-plan-b-state/main> .
+<https://spectacular-voyage.github.io/test-inn-ambush/world/states/inn-ambush-plan-b-state/main> a <https://semantic-flow.github.io/sflo/ontology/ArtifactHistory> ;
 	<https://semantic-flow.github.io/sflo/ontology/historyOrdinal> 0 .
-<https://spectacular-voyage.github.io/test-inn-ambush/rdf-export/inn-ambush-plan-b> <https://semantic-flow.github.io/sflo/ontology/workingLocalRelativePath> "dependencies/github.com/spectacular-voyage/test-inn-ambush/world/states/inn-ambush-plan-b-state/inn-ambush-plan-b-state.ttl" .
-<https://spectacular-voyage.github.io/test-inn-ambush/rdf-export/inn-ambush-plan-b/history/main> <https://semantic-flow.github.io/sflo/ontology/hasHistoricalState> <https://spectacular-voyage.github.io/test-inn-ambush/rdf-export/inn-ambush-plan-b/state/s0001> , <https://spectacular-voyage.github.io/test-inn-ambush/rdf-export/inn-ambush-plan-b/state/s0002> , <https://spectacular-voyage.github.io/test-inn-ambush/rdf-export/inn-ambush-plan-b/state/s0003> .
-<https://spectacular-voyage.github.io/test-inn-ambush/rdf-export/inn-ambush-plan-b/state/s0001> a <https://semantic-flow.github.io/sflo/ontology/HistoricalState> , <https://spectacular-voyage.github.io/stagecraft/ontology/ProjectionState> ;
+<https://spectacular-voyage.github.io/test-inn-ambush/world/states/inn-ambush-plan-b-state> <https://semantic-flow.github.io/sflo/ontology/workingLocalRelativePath> "dependencies/github.com/spectacular-voyage/test-inn-ambush/world/states/inn-ambush-plan-b-state/inn-ambush-plan-b-state.ttl" .
+<https://spectacular-voyage.github.io/test-inn-ambush/world/states/inn-ambush-plan-b-state/main> <https://semantic-flow.github.io/sflo/ontology/hasHistoricalState> <https://spectacular-voyage.github.io/test-inn-ambush/world/states/inn-ambush-plan-b-state/main/s0001> .
+<https://spectacular-voyage.github.io/test-inn-ambush/world/states/inn-ambush-plan-b-state/main/s0001> a <https://semantic-flow.github.io/sflo/ontology/HistoricalState> , <https://spectacular-voyage.github.io/stagecraft/ontology/ProjectionState> ;
 	<http://purl.org/dc/terms/created> "2026-06-29T13:37:05Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
 	<https://semantic-flow.github.io/sflo/ontology/stateOrdinal> 1 ;
-	<https://semantic-flow.github.io/sflo/ontology/hasManifestation> <https://spectacular-voyage.github.io/test-inn-ambush/rdf-export/inn-ambush-plan-b/manifestation/s0001/ttl> ;
-	<https://semantic-flow.github.io/sflo/ontology/locatedFileForState> <https://spectacular-voyage.github.io/test-inn-ambush/rdf-export/inn-ambush-plan-b/file/s0001/ttl> ;
+	<https://semantic-flow.github.io/sflo/ontology/hasManifestation> <https://spectacular-voyage.github.io/test-inn-ambush/world/states/inn-ambush-plan-b-state/main/s0001/ttl> ;
+	<https://semantic-flow.github.io/sflo/ontology/locatedFileForState> <https://spectacular-voyage.github.io/test-inn-ambush/world/states/inn-ambush-plan-b-state/main/s0001/ttl/inn-ambush-plan-b-state.ttl> ;
 	<https://spectacular-voyage.github.io/stagecraft/ontology/capturesCheckpoint> <https://spectacular-voyage.github.io/test-inn-ambush/checkpoint/session-start> ;
 	<http://purl.org/dc/terms/references> <https://spectacular-voyage.github.io/test-inn-ambush/checkpoint/session-start> .
-<https://spectacular-voyage.github.io/test-inn-ambush/rdf-export/inn-ambush-plan-b/manifestation/s0001/ttl> a <https://semantic-flow.github.io/sflo/ontology/ArtifactManifestation> , <https://semantic-flow.github.io/sflo/ontology/RdfDocument> ;
+<https://spectacular-voyage.github.io/test-inn-ambush/world/states/inn-ambush-plan-b-state/main/s0001/ttl> a <https://semantic-flow.github.io/sflo/ontology/ArtifactManifestation> , <https://semantic-flow.github.io/sflo/ontology/RdfDocument> ;
 	<http://purl.org/dc/terms/format> "text/turtle" ;
-	<https://semantic-flow.github.io/sflo/ontology/locatedFileForManifestation> <https://spectacular-voyage.github.io/test-inn-ambush/rdf-export/inn-ambush-plan-b/file/s0001/ttl> .
-<https://spectacular-voyage.github.io/test-inn-ambush/rdf-export/inn-ambush-plan-b/file/s0001/ttl> a <https://semantic-flow.github.io/sflo/ontology/LocatedFile> , <https://semantic-flow.github.io/sflo/ontology/RdfDocument> ;
+	<https://semantic-flow.github.io/sflo/ontology/locatedFileForManifestation> <https://spectacular-voyage.github.io/test-inn-ambush/world/states/inn-ambush-plan-b-state/main/s0001/ttl/inn-ambush-plan-b-state.ttl> .
+<https://spectacular-voyage.github.io/test-inn-ambush/world/states/inn-ambush-plan-b-state/main/s0001/ttl/inn-ambush-plan-b-state.ttl> a <https://semantic-flow.github.io/sflo/ontology/LocatedFile> , <https://semantic-flow.github.io/sflo/ontology/RdfDocument> ;
 	<http://purl.org/dc/terms/format> "text/turtle" ;
-	<https://schema.org/contentUrl> "memory:https://spectacular-voyage.github.io/test-inn-ambush/rdf-export/inn-ambush-plan-b/state/s0001" .
-<https://spectacular-voyage.github.io/test-inn-ambush/rdf-export/inn-ambush-plan-b/state/s0001> <http://purl.org/dc/terms/references> <https://spectacular-voyage.github.io/test-inn-ambush/clock-anchor/world-clock/offset-960s> , <https://spectacular-voyage.github.io/test-inn-ambush/frame/ambush-night> .
-<https://spectacular-voyage.github.io/test-inn-ambush/rdf-export/inn-ambush-plan-b/state/s0002> a <https://semantic-flow.github.io/sflo/ontology/HistoricalState> , <https://spectacular-voyage.github.io/stagecraft/ontology/ProjectionState> ;
-	<http://purl.org/dc/terms/created> "2026-07-06T23:59:00Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
-	<https://semantic-flow.github.io/sflo/ontology/stateOrdinal> 2 ;
-	<https://semantic-flow.github.io/sflo/ontology/hasManifestation> <https://spectacular-voyage.github.io/test-inn-ambush/rdf-export/inn-ambush-plan-b/manifestation/s0002/ttl> ;
-	<https://semantic-flow.github.io/sflo/ontology/locatedFileForState> <https://spectacular-voyage.github.io/test-inn-ambush/rdf-export/inn-ambush-plan-b/file/s0002/ttl> ;
-	<https://spectacular-voyage.github.io/stagecraft/ontology/capturesCheckpoint> <https://spectacular-voyage.github.io/test-inn-ambush/checkpoint/checkpoint-fixture-serialization-flush> ;
-	<http://purl.org/dc/terms/references> <https://spectacular-voyage.github.io/test-inn-ambush/checkpoint/checkpoint-fixture-serialization-flush> .
-<https://spectacular-voyage.github.io/test-inn-ambush/rdf-export/inn-ambush-plan-b/manifestation/s0002/ttl> a <https://semantic-flow.github.io/sflo/ontology/ArtifactManifestation> , <https://semantic-flow.github.io/sflo/ontology/RdfDocument> ;
-	<http://purl.org/dc/terms/format> "text/turtle" ;
-	<https://semantic-flow.github.io/sflo/ontology/locatedFileForManifestation> <https://spectacular-voyage.github.io/test-inn-ambush/rdf-export/inn-ambush-plan-b/file/s0002/ttl> .
-<https://spectacular-voyage.github.io/test-inn-ambush/rdf-export/inn-ambush-plan-b/file/s0002/ttl> a <https://semantic-flow.github.io/sflo/ontology/LocatedFile> , <https://semantic-flow.github.io/sflo/ontology/RdfDocument> ;
-	<http://purl.org/dc/terms/format> "text/turtle" ;
-	<https://schema.org/contentUrl> "world/states/inn-ambush-plan-b-state/rdf-export.inn-ambush-plan-b.history.main/rdf-export.inn-ambush-plan-b.state.s0002/ttl/inn-ambush-plan-b-state.ttl" .
-<https://spectacular-voyage.github.io/test-inn-ambush/rdf-export/inn-ambush-plan-b/state/s0002> <http://purl.org/dc/terms/references> <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/checkpoint-committed/session-authority/checkpoint-fixture-serialization-flush> , <https://spectacular-voyage.github.io/test-inn-ambush/committed-event/checkpoint/session-authority/checkpoint-fixture-serialization-flush> , <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/commit-certificate/checkpoint/session-authority/checkpoint-fixture-serialization-flush> , <https://spectacular-voyage.github.io/test-inn-ambush/clock-anchor/world-clock/offset-960s> , <https://spectacular-voyage.github.io/test-inn-ambush/frame/ambush-night> ;
-	<https://semantic-flow.github.io/sflo/ontology/previousHistoricalState> <https://spectacular-voyage.github.io/test-inn-ambush/rdf-export/inn-ambush-plan-b/state/s0001> .
-<https://spectacular-voyage.github.io/test-inn-ambush/rdf-export/inn-ambush-plan-b/state/s0003> a <https://semantic-flow.github.io/sflo/ontology/HistoricalState> , <https://spectacular-voyage.github.io/stagecraft/ontology/ProjectionState> ;
-	<http://purl.org/dc/terms/created> "2026-07-07T07:06:00Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
-	<https://semantic-flow.github.io/sflo/ontology/stateOrdinal> 3 ;
-	<https://semantic-flow.github.io/sflo/ontology/hasManifestation> <https://spectacular-voyage.github.io/test-inn-ambush/rdf-export/inn-ambush-plan-b/manifestation/s0003/ttl> ;
-	<https://semantic-flow.github.io/sflo/ontology/locatedFileForState> <https://spectacular-voyage.github.io/test-inn-ambush/rdf-export/inn-ambush-plan-b/file/s0003/ttl> ;
-	<https://spectacular-voyage.github.io/stagecraft/ontology/capturesCheckpoint> <https://spectacular-voyage.github.io/test-inn-ambush/checkpoint/checkpoint-fixture-payload-boundary-flush> ;
-	<http://purl.org/dc/terms/references> <https://spectacular-voyage.github.io/test-inn-ambush/checkpoint/checkpoint-fixture-payload-boundary-flush> .
-<https://spectacular-voyage.github.io/test-inn-ambush/rdf-export/inn-ambush-plan-b/manifestation/s0003/ttl> a <https://semantic-flow.github.io/sflo/ontology/ArtifactManifestation> , <https://semantic-flow.github.io/sflo/ontology/RdfDocument> ;
-	<http://purl.org/dc/terms/format> "text/turtle" ;
-	<https://semantic-flow.github.io/sflo/ontology/locatedFileForManifestation> <https://spectacular-voyage.github.io/test-inn-ambush/rdf-export/inn-ambush-plan-b/file/s0003/ttl> .
-<https://spectacular-voyage.github.io/test-inn-ambush/rdf-export/inn-ambush-plan-b/file/s0003/ttl> a <https://semantic-flow.github.io/sflo/ontology/LocatedFile> , <https://semantic-flow.github.io/sflo/ontology/RdfDocument> ;
-	<http://purl.org/dc/terms/format> "text/turtle" .
-<https://spectacular-voyage.github.io/test-inn-ambush/rdf-export/inn-ambush-plan-b/state/s0003> <http://purl.org/dc/terms/references> <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/checkpoint-committed/session-authority/checkpoint-fixture-payload-boundary-flush> , <https://spectacular-voyage.github.io/test-inn-ambush/committed-event/checkpoint/session-authority/checkpoint-fixture-payload-boundary-flush> , <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/commit-certificate/checkpoint/session-authority/checkpoint-fixture-payload-boundary-flush> , <https://spectacular-voyage.github.io/test-inn-ambush/clock-anchor/world-clock/offset-960s> , <https://spectacular-voyage.github.io/test-inn-ambush/frame/ambush-night> ;
-	<https://semantic-flow.github.io/sflo/ontology/previousHistoricalState> <https://spectacular-voyage.github.io/test-inn-ambush/rdf-export/inn-ambush-plan-b/state/s0002> .
-<https://spectacular-voyage.github.io/test-inn-ambush/rdf-export/inn-ambush-plan-b/file/s0003/ttl> <https://schema.org/contentUrl> "world/states/inn-ambush-plan-b-state/rdf-export.inn-ambush-plan-b.history.main/rdf-export.inn-ambush-plan-b.state.s0003/ttl/inn-ambush-plan-b-state.ttl" .
+	<https://schema.org/contentUrl> "memory:https://spectacular-voyage.github.io/test-inn-ambush/world/states/inn-ambush-plan-b-state/main/s0001" .
+<https://spectacular-voyage.github.io/test-inn-ambush/world/states/inn-ambush-plan-b-state/main/s0001> <http://purl.org/dc/terms/references> <https://spectacular-voyage.github.io/test-inn-ambush/clock-anchor/world-clock/offset-960s> , <https://spectacular-voyage.github.io/test-inn-ambush/frame/ambush-night> .

@@ -14,12 +14,12 @@
     "authorityRecord": "https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/outcome-committed/plan-b-001",
     "committedEvent": "https://spectacular-voyage.github.io/test-inn-ambush/committed-event/plan-b-001",
     "commitCertificate": "https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/commit-certificate/plan-b-001",
-    "projectionState": "https://spectacular-voyage.github.io/test-inn-ambush/rdf-export/inn-ambush-plan-b/state/s0001",
+    "projectionState": "https://spectacular-voyage.github.io/test-inn-ambush/world/states/inn-ambush-plan-b-state/main/s0001",
     "stateMutation": "https://spectacular-voyage.github.io/test-inn-ambush/state-mutation/door-barred-plan-b-001"
   },
   "resync": {
     "mode": "read-projection-fixture",
-    "state": "https://spectacular-voyage.github.io/test-inn-ambush/rdf-export/inn-ambush-plan-b/state/s0001",
+    "state": "https://spectacular-voyage.github.io/test-inn-ambush/world/states/inn-ambush-plan-b-state/main/s0001",
     "path": "dependencies/github.com/spectacular-voyage/test-inn-ambush/world/states/inn-ambush-plan-b-state/inn-ambush-plan-b-state.ttl"
   },
   "requestedAt": "2026-06-29T13:35:02Z"

@@ -6,17 +6,17 @@
   "participant": "https://spectacular-voyage.github.io/test-inn-ambush/participant/alice",
   "participantProjection": "https://spectacular-voyage.github.io/test-inn-ambush/projection/alice/inn-ambush-plan-b",
   "projectionAudience": "participant",
-  "projectionHistory": "https://spectacular-voyage.github.io/test-inn-ambush/rdf-export/inn-ambush-plan-b/history/main",
+  "projectionHistory": "https://spectacular-voyage.github.io/test-inn-ambush/world/states/inn-ambush-plan-b-state/main",
   "projectionState": "https://spectacular-voyage.github.io/test-inn-ambush/branch/plan-b",
   "projectionStateOrdinal": 0,
   "projectionTimeline": {
     "capturePolicy": "in-memory-session-only",
-    "projectionHistory": "https://spectacular-voyage.github.io/test-inn-ambush/rdf-export/inn-ambush-plan-b/history/main",
+    "projectionHistory": "https://spectacular-voyage.github.io/test-inn-ambush/world/states/inn-ambush-plan-b-state/main",
     "states": [
       {
         "kind": "live",
         "label": "Now",
-        "previousProjectionState": "https://spectacular-voyage.github.io/test-inn-ambush/rdf-export/inn-ambush-plan-b/state/s0001",
+        "previousProjectionState": "https://spectacular-voyage.github.io/test-inn-ambush/world/states/inn-ambush-plan-b-state/main/s0001",
         "projectionState": "https://spectacular-voyage.github.io/test-inn-ambush/branch/plan-b",
         "projectionStateOrdinal": 0
       },
@@ -25,7 +25,7 @@
         "checkpoint": "https://spectacular-voyage.github.io/test-inn-ambush/checkpoint/session-start",
         "label": "ambush night, late evening",
         "nextProjectionState": "https://spectacular-voyage.github.io/test-inn-ambush/branch/plan-b",
-        "projectionState": "https://spectacular-voyage.github.io/test-inn-ambush/rdf-export/inn-ambush-plan-b/state/s0001",
+        "projectionState": "https://spectacular-voyage.github.io/test-inn-ambush/world/states/inn-ambush-plan-b-state/main/s0001",
         "projectionStateOrdinal": 1
       }
     ]
