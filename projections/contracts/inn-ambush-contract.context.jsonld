@@ -302,6 +302,25 @@
     "relatesTo": {
       "@type": "@id"
     },
+    "D20TestRequest": {
+      "@id": "sc:D20TestRequest",
+      "@context": {
+        "warrant": {
+          "@id": "dyn:resolvesWarrant",
+          "@type": "@id"
+        }
+      }
+    },
+    "D20TestWarrantRequest": "sc:D20TestWarrantRequest",
+    "D20TestWarrantWithdrawalRequest": {
+      "@id": "sc:D20TestWarrantWithdrawalRequest",
+      "@context": {
+        "warrant": {
+          "@id": "dyn:withdrawsWarrant",
+          "@type": "@id"
+        }
+      }
+    },
     "actor": {
       "@id": "dyn:warrantedActor",
       "@type": "@id"
@@ -313,6 +332,14 @@
     "targetNumber": {
       "@id": "dyn:targetNumber",
       "@type": "xsd:integer"
+    },
+    "hiddenDc": {
+      "@id": "dyn:hiddenTargetNumber",
+      "@type": "xsd:boolean"
+    },
+    "hiddenResult": {
+      "@id": "dyn:hiddenResult",
+      "@type": "xsd:boolean"
     },
     "diceExpression": "dyn:diceExpression",
     "modifiers": {
@@ -330,6 +357,12 @@
       }
     },
     "consequenceDescription": "dyn:consequenceDescription",
+    "purpose": "dcterms:description",
+    "reason": "dcterms:description",
+    "adjudicatesIntent": {
+      "@id": "dyn:adjudicatesIntent",
+      "@type": "@id"
+    },
     "intentBearingActant": {
       "@type": "@id"
     },

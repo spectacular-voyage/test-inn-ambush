@@ -1,0 +1,14 @@
+{
+  "@context": "https://spectacular-voyage.github.io/test-inn-ambush/projections/contracts/inn-ambush-contract.context.jsonld",
+  "@type": "D20TestWarrantWithdrawalRequest",
+  "type": "stagecraft.d20-test-warrant.withdrawal-request.v1",
+  "id": "d20-test-warrant-withdrawal-request-fixture",
+  "requestedByParticipant": "https://spectacular-voyage.github.io/test-inn-ambush/gm/alex",
+  "warrant": "https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/d20-test-warrant/session-authority/d20-test-warrant-request-hidden-result-fixture",
+  "reason": "The hidden ambush watch is no longer active.",
+  "sourceProjection": {
+    "observedProjectionState": "https://spectacular-voyage.github.io/test-inn-ambush/branch/plan-b",
+    "participantProjection": "https://spectacular-voyage.github.io/test-inn-ambush/projection/gm/alex/inn-ambush-plan-b"
+  },
+  "createdAt": "2026-07-07T19:50:00Z"
+}

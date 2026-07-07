@@ -1,0 +1,19 @@
+{
+  "@context": "https://spectacular-voyage.github.io/test-inn-ambush/projections/contracts/inn-ambush-contract.context.jsonld",
+  "@type": "D20TestWarrantRequest",
+  "type": "stagecraft.d20-test-warrant.request.v1",
+  "id": "d20-test-warrant-request-hidden-result-fixture",
+  "requestedByParticipant": "https://spectacular-voyage.github.io/test-inn-ambush/gm/alex",
+  "actor": "https://spectacular-voyage.github.io/test-inn-ambush/actant/elara",
+  "testType": "https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/Stealth",
+  "targetNumber": 15,
+  "hiddenDc": true,
+  "hiddenResult": true,
+  "purpose": "Elara makes a hidden stealth check against the ambush watch.",
+  "adjudicatesIntent": "https://spectacular-voyage.github.io/test-inn-ambush/intent/elara-avoid-ambush-watch",
+  "sourceProjection": {
+    "observedProjectionState": "https://spectacular-voyage.github.io/test-inn-ambush/branch/plan-b",
+    "participantProjection": "https://spectacular-voyage.github.io/test-inn-ambush/projection/gm/alex/inn-ambush-plan-b"
+  },
+  "createdAt": "2026-07-07T19:49:00Z"
+}
