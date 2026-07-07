@@ -927,6 +927,27 @@
           }
         }
       ]
+    },
+    {
+      "id": "#49-serialization-checkpoint-flush",
+      "type": "ScenarioStep",
+      "manifestPath": "49-serialization-checkpoint-flush.jsonld",
+      "hasLaneBinding": [
+        {
+          "type": "LaneStateBinding",
+          "lane": "#fixture-lane",
+          "fromLaneState": {
+            "type": "StateLocator",
+            "locatorKind": "gitRefState",
+            "ref": "a.48-projection-timeline-contract"
+          },
+          "toLaneState": {
+            "type": "StateLocator",
+            "locatorKind": "gitRefState",
+            "ref": "a.49-serialization-checkpoint-flush"
+          }
+        }
+      ]
     }
   ]
 }
