@@ -367,9 +367,7 @@
   dyn:adjudicationNote "GM override: Elara spots the scuffed threshold because the earlier door-bar plan put her attention on the entryway." ;
   dyn:mechanicalResult "failure" ;
   dyn:resolvesWarrant <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/d20-test-warrant/perception-check-001> ;
-  dyn:rollEvidence <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/d20-roll/perception-check-001> ;
-  dyn:rollTotal 13 ;
-  dyn:targetNumber 15 .
+  dyn:rollEvidence <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/d20-roll/perception-check-001> .
 
 <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/commit-certificate/d20-test-consequence/perception-check-001>
   a sc:CommitCertificate ;
