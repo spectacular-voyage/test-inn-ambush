@@ -1,5 +1,6 @@
 @prefix sc: <https://spectacular-voyage.github.io/stagecraft/ontology/> .
 @prefix sc-sh: <https://spectacular-voyage.github.io/stagecraft/shacl/> .
+@prefix dyn: <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix sh: <http://www.w3.org/ns/shacl#> .
 @prefix time: <http://www.w3.org/2006/time#> .
@@ -427,6 +428,110 @@ sc-sh:CheckpointRequestShape
   sh:property [
     sh:path sc:sourceProjection ;
     sh:node sc-sh:SourceProjectionShape ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] .
+
+sc-sh:D20RollModifierInputShape
+  a sh:NodeShape ;
+  sh:property [
+    sh:path dyn:modifierKind ;
+    sh:in (
+      "ability"
+      "proficiency"
+      "circumstance"
+    ) ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path dyn:modifierSource ;
+    sh:nodeKind sh:IRI ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path dyn:modifierValue ;
+    sh:datatype xsd:integer ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] .
+
+sc-sh:D20TestRequestShape
+  a sh:NodeShape ;
+  sh:targetClass sc:D20TestRequest ;
+  sh:property [
+    sh:path sc:envelopeType ;
+    sh:hasValue "stagecraft.d20-test.request.v1" ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path sc:envelopeId ;
+    sh:datatype xsd:string ;
+    sh:minLength 1 ;
+    sh:pattern "\\S" ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path sc:requestedByParticipant ;
+    sh:nodeKind sh:IRI ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path sc:speakingContext ;
+    sh:node sc-sh:SpeakingContextShape ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path dyn:warrantedActor ;
+    sh:nodeKind sh:IRI ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path dyn:warrantedTestType ;
+    sh:nodeKind sh:IRI ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path dyn:targetNumber ;
+    sh:datatype xsd:integer ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path dyn:diceExpression ;
+    sh:datatype xsd:string ;
+    sh:minLength 1 ;
+    sh:pattern "\\S" ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path dyn:rollModifier ;
+    sh:node sc-sh:D20RollModifierInputShape ;
+  ] ;
+  sh:property [
+    sh:path dyn:consequenceDescription ;
+    sh:datatype xsd:string ;
+    sh:minLength 1 ;
+    sh:pattern "\\S" ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path sc:sourceProjection ;
+    sh:node sc-sh:SourceProjectionShape ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path sc:createdAt ;
+    sh:datatype xsd:dateTime ;
     sh:minCount 1 ;
     sh:maxCount 1 ;
   ] .
