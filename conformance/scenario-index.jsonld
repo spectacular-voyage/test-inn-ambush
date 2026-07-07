@@ -1059,6 +1059,27 @@
           }
         }
       ]
+    },
+    {
+      "id": "#55-standing-d20-warrant-contract",
+      "type": "ScenarioStep",
+      "manifestPath": "55-standing-d20-warrant-contract.jsonld",
+      "hasLaneBinding": [
+        {
+          "type": "LaneStateBinding",
+          "lane": "#fixture-b-lane",
+          "fromLaneState": {
+            "type": "StateLocator",
+            "locatorKind": "gitRefState",
+            "ref": "b.03-targetless-roll-request-contract"
+          },
+          "toLaneState": {
+            "type": "StateLocator",
+            "locatorKind": "gitRefState",
+            "ref": "b.04-standing-d20-warrant-contract"
+          }
+        }
+      ]
     }
   ]
 }

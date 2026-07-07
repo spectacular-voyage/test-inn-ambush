@@ -1,0 +1,95 @@
+{
+  "@context": {
+    "@vocab": "https://spectacular-voyage.github.io/accord/ontology/",
+    "dcterms": "http://purl.org/dc/terms/",
+    "id": "@id",
+    "type": "@type",
+    "changeType": {
+      "@type": "@vocab"
+    },
+    "compareMode": {
+      "@type": "@vocab"
+    },
+    "targetsFileExpectation": {
+      "@type": "@id"
+    },
+    "locatorKind": {
+      "@type": "@vocab"
+    }
+  },
+  "type": "Manifest",
+  "id": "urn:accord:stagecraft:test-inn-ambush:55-standing-d20-warrant-contract",
+  "dcterms:title": "Inn Ambush 55 standing D20 warrant contract",
+  "hasCase": [
+    {
+      "type": "TransitionCase",
+      "id": "#standing-d20-warrant-contract",
+      "fixtureRepo": "github.com/spectacular-voyage/test-inn-ambush",
+      "operationId": "stagecraft.fixture.addStandingD20WarrantContract",
+      "fromRef": "b.03-targetless-roll-request-contract",
+      "toRef": "b.04-standing-d20-warrant-contract",
+      "fromState": {
+        "type": "StateLocator",
+        "locatorKind": "gitRefState",
+        "ref": "b.03-targetless-roll-request-contract"
+      },
+      "toState": {
+        "type": "StateLocator",
+        "locatorKind": "gitRefState",
+        "ref": "b.04-standing-d20-warrant-contract"
+      },
+      "hasFileExpectation": [
+        {
+          "id": "#contract-context",
+          "type": "FileExpectation",
+          "path": "projections/contracts/inn-ambush-contract.context.jsonld",
+          "changeType": "updated",
+          "compareMode": "json"
+        },
+        {
+          "id": "#contract-shapes",
+          "type": "FileExpectation",
+          "path": "projections/contracts/inn-ambush-contract.shapes.ttl",
+          "changeType": "updated",
+          "compareMode": "rdfCanonical"
+        },
+        {
+          "id": "#hidden-result-warrant-request",
+          "type": "FileExpectation",
+          "path": "authority/d20-warrants/d20-test-warrant-request-hidden-result/d20-test-warrant-request-hidden-result.json",
+          "changeType": "added",
+          "compareMode": "json"
+        },
+        {
+          "id": "#warrant-withdrawal-request",
+          "type": "FileExpectation",
+          "path": "authority/d20-warrants/d20-test-warrant-withdrawal-request/d20-test-warrant-withdrawal-request.json",
+          "changeType": "added",
+          "compareMode": "json"
+        },
+        {
+          "id": "#roll-resolves-warrant-request",
+          "type": "FileExpectation",
+          "path": "authority/d20-tests/d20-roll-request-resolves-warrant/d20-roll-request-resolves-warrant.json",
+          "changeType": "added",
+          "compareMode": "json"
+        }
+      ],
+      "hasRdfExpectation": [
+        {
+          "id": "#contract-shapes-rdf",
+          "type": "RdfExpectation",
+          "targetsFileExpectation": "#contract-shapes",
+          "hasAskAssertion": [
+            {
+              "id": "#ask-standing-warrant-shapes",
+              "type": "SparqlAskAssertion",
+              "query": "ASK { <https://spectacular-voyage.github.io/stagecraft/shacl/D20TestRequestShape> <http://www.w3.org/ns/shacl#property> ?resolvesProperty . ?resolvesProperty <http://www.w3.org/ns/shacl#path> <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/resolvesWarrant> ; <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#IRI> . <https://spectacular-voyage.github.io/stagecraft/shacl/D20TestWarrantRequestShape> a <http://www.w3.org/ns/shacl#NodeShape> ; <http://www.w3.org/ns/shacl#targetClass> <https://spectacular-voyage.github.io/stagecraft/ontology/D20TestWarrantRequest> ; <http://www.w3.org/ns/shacl#property> ?hiddenDcProperty, ?hiddenResultProperty, ?intentProperty . ?hiddenDcProperty <http://www.w3.org/ns/shacl#path> <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/hiddenTargetNumber> ; <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#boolean> . ?hiddenResultProperty <http://www.w3.org/ns/shacl#path> <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/hiddenResult> ; <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#boolean> . ?intentProperty <http://www.w3.org/ns/shacl#path> <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/adjudicatesIntent> ; <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#IRI> . <https://spectacular-voyage.github.io/stagecraft/shacl/D20TestWarrantWithdrawalRequestShape> a <http://www.w3.org/ns/shacl#NodeShape> ; <http://www.w3.org/ns/shacl#targetClass> <https://spectacular-voyage.github.io/stagecraft/ontology/D20TestWarrantWithdrawalRequest> ; <http://www.w3.org/ns/shacl#property> ?withdrawsProperty . ?withdrawsProperty <http://www.w3.org/ns/shacl#path> <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/withdrawsWarrant> ; <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#IRI> . }",
+              "expectedBoolean": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
