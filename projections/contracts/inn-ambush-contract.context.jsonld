@@ -189,6 +189,7 @@
       "@type": "xsd:nonNegativeInteger"
     },
     "capturePolicy": "sc:capturePolicy",
+    "timelineStateKind": "sc:timelineStateKind",
     "states": {
       "@id": "sc:projectionTimelineStates"
     },
@@ -205,6 +206,19 @@
       "@id": "sc:nextProjectionState",
       "@type": "@id"
     },
+    "sourceProjection": {
+      "@id": "sc:sourceProjection",
+      "@context": {
+        "observedProjectionState": {
+          "@id": "sc:observedProjectionState",
+          "@type": "@id"
+        },
+        "participantProjection": {
+          "@id": "sc:participantProjection",
+          "@type": "@id"
+        }
+      }
+    },
     "projectionTimeline": {
       "@id": "sc:projectionTimeline",
       "@context": {
@@ -216,6 +230,7 @@
         "states": {
           "@id": "sc:projectionTimelineStates",
           "@context": {
+            "kind": "sc:timelineStateKind",
             "checkpoint": {
               "@id": "sc:checkpoint",
               "@type": "@id"
