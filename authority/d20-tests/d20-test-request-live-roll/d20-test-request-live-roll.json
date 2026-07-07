@@ -1,0 +1,29 @@
+{
+  "@context": "https://spectacular-voyage.github.io/test-inn-ambush/projections/contracts/inn-ambush-contract.context.jsonld",
+  "@type": "D20TestRequest",
+  "type": "stagecraft.d20-test.request.v1",
+  "id": "d20-test-request-live-roll-fixture",
+  "requestedByParticipant": "https://spectacular-voyage.github.io/test-inn-ambush/participant/alice",
+  "speakingContext": {
+    "type": "VoiceForActant",
+    "speaker": "https://spectacular-voyage.github.io/test-inn-ambush/participant/alice",
+    "actant": "https://spectacular-voyage.github.io/test-inn-ambush/actant/elara"
+  },
+  "actor": "https://spectacular-voyage.github.io/test-inn-ambush/actant/elara",
+  "testType": "https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/AbilityCheck",
+  "targetNumber": 15,
+  "diceExpression": "1d20+2",
+  "modifiers": [
+    {
+      "kind": "circumstance",
+      "source": "https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/d20-test",
+      "value": 2
+    }
+  ],
+  "consequenceDescription": "Elara rolls 1d20+2 vs DC 15.",
+  "sourceProjection": {
+    "observedProjectionState": "https://spectacular-voyage.github.io/test-inn-ambush/branch/plan-b",
+    "participantProjection": "https://spectacular-voyage.github.io/test-inn-ambush/projection/alice/inn-ambush-plan-b"
+  },
+  "createdAt": "2026-07-07T17:51:00Z"
+}

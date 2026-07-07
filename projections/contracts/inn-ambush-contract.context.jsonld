@@ -4,6 +4,7 @@
     "@vocab": "https://spectacular-voyage.github.io/stagecraft/ontology/",
     "sc": "https://spectacular-voyage.github.io/stagecraft/ontology/",
     "sflo": "https://semantic-flow.github.io/sflo/ontology/",
+    "dyn": "https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/",
     "dcterms": "http://purl.org/dc/terms/",
     "owlTime": "http://www.w3.org/2006/time#",
     "xsd": "http://www.w3.org/2001/XMLSchema#",
@@ -301,6 +302,34 @@
     "relatesTo": {
       "@type": "@id"
     },
+    "actor": {
+      "@id": "dyn:warrantedActor",
+      "@type": "@id"
+    },
+    "testType": {
+      "@id": "dyn:warrantedTestType",
+      "@type": "@id"
+    },
+    "targetNumber": {
+      "@id": "dyn:targetNumber",
+      "@type": "xsd:integer"
+    },
+    "diceExpression": "dyn:diceExpression",
+    "modifiers": {
+      "@id": "dyn:rollModifier",
+      "@context": {
+        "kind": "dyn:modifierKind",
+        "source": {
+          "@id": "dyn:modifierSource",
+          "@type": "@id"
+        },
+        "value": {
+          "@id": "dyn:modifierValue",
+          "@type": "xsd:integer"
+        }
+      }
+    },
+    "consequenceDescription": "dyn:consequenceDescription",
     "intentBearingActant": {
       "@type": "@id"
     },
