@@ -969,6 +969,27 @@
           }
         }
       ]
+    },
+    {
+      "id": "#51-live-now-projection-contract",
+      "type": "ScenarioStep",
+      "manifestPath": "51-live-now-projection-contract.jsonld",
+      "hasLaneBinding": [
+        {
+          "type": "LaneStateBinding",
+          "lane": "#fixture-lane",
+          "fromLaneState": {
+            "type": "StateLocator",
+            "locatorKind": "gitRefState",
+            "ref": "a.50-serialization-payload-boundary"
+          },
+          "toLaneState": {
+            "type": "StateLocator",
+            "locatorKind": "gitRefState",
+            "ref": "a.51-live-now-projection-contract"
+          }
+        }
+      ]
     }
   ]
 }
