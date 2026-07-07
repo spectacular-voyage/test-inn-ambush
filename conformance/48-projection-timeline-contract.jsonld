@@ -1,0 +1,88 @@
+{
+  "@context": {
+    "@vocab": "https://spectacular-voyage.github.io/accord/ontology/",
+    "dcterms": "http://purl.org/dc/terms/",
+    "id": "@id",
+    "type": "@type",
+    "changeType": {
+      "@type": "@vocab"
+    },
+    "compareMode": {
+      "@type": "@vocab"
+    },
+    "targetsFileExpectation": {
+      "@type": "@id"
+    },
+    "locatorKind": {
+      "@type": "@vocab"
+    }
+  },
+  "type": "Manifest",
+  "id": "urn:accord:stagecraft:test-inn-ambush:48-projection-timeline-contract",
+  "dcterms:title": "Inn Ambush 48 projection timeline contract",
+  "hasCase": [
+    {
+      "type": "TransitionCase",
+      "id": "#projection-timeline-contract",
+      "fixtureRepo": "github.com/spectacular-voyage/test-inn-ambush",
+      "operationId": "stagecraft.fixture.addProjectionTimelineContract",
+      "fromRef": "1194f16a93e749492fe51f2d1eea86d8b4ff0fb1",
+      "toRef": "a.48-projection-timeline-contract",
+      "fromState": {
+        "type": "StateLocator",
+        "locatorKind": "gitRefState",
+        "ref": "1194f16a93e749492fe51f2d1eea86d8b4ff0fb1"
+      },
+      "toState": {
+        "type": "StateLocator",
+        "locatorKind": "gitRefState",
+        "ref": "a.48-projection-timeline-contract"
+      },
+      "hasFileExpectation": [
+        {
+          "id": "#contract-context",
+          "type": "FileExpectation",
+          "path": "projections/contracts/inn-ambush-contract.context.jsonld",
+          "changeType": "updated",
+          "compareMode": "json"
+        },
+        {
+          "id": "#contract-shapes",
+          "type": "FileExpectation",
+          "path": "projections/contracts/inn-ambush-contract.shapes.ttl",
+          "changeType": "updated",
+          "compareMode": "rdfCanonical"
+        },
+        {
+          "id": "#alice-response",
+          "type": "FileExpectation",
+          "path": "projections/responses/participant-projection-response-alice/participant-projection-response-alice.json",
+          "changeType": "updated",
+          "compareMode": "json"
+        },
+        {
+          "id": "#gm-response",
+          "type": "FileExpectation",
+          "path": "projections/responses/participant-projection-response-gm/participant-projection-response-gm.json",
+          "changeType": "updated",
+          "compareMode": "json"
+        }
+      ],
+      "hasRdfExpectation": [
+        {
+          "id": "#contract-shapes-rdf",
+          "type": "RdfExpectation",
+          "targetsFileExpectation": "#contract-shapes",
+          "hasAskAssertion": [
+            {
+              "id": "#ask-projection-timeline-shapes",
+              "type": "SparqlAskAssertion",
+              "query": "ASK { <https://spectacular-voyage.github.io/stagecraft/shacl/ParticipantProjectionResponseShape> <http://www.w3.org/ns/shacl#property> ?timelineProperty . ?timelineProperty <http://www.w3.org/ns/shacl#path> <https://spectacular-voyage.github.io/stagecraft/ontology/projectionTimeline> ; <http://www.w3.org/ns/shacl#node> <https://spectacular-voyage.github.io/stagecraft/shacl/ProjectionTimelineShape> ; <http://www.w3.org/ns/shacl#minCount> \"1\"^^<http://www.w3.org/2001/XMLSchema#integer> ; <http://www.w3.org/ns/shacl#maxCount> \"1\"^^<http://www.w3.org/2001/XMLSchema#integer> . <https://spectacular-voyage.github.io/stagecraft/shacl/ProjectionTimelineShape> a <http://www.w3.org/ns/shacl#NodeShape> ; <http://www.w3.org/ns/shacl#property> ?historyProperty, ?statesProperty . ?historyProperty <http://www.w3.org/ns/shacl#path> <https://spectacular-voyage.github.io/stagecraft/ontology/projectionHistory> ; <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#IRI> . ?statesProperty <http://www.w3.org/ns/shacl#path> <https://spectacular-voyage.github.io/stagecraft/ontology/projectionTimelineStates> ; <http://www.w3.org/ns/shacl#node> <https://spectacular-voyage.github.io/stagecraft/shacl/ProjectionTimelineStateShape> ; <http://www.w3.org/ns/shacl#minCount> \"1\"^^<http://www.w3.org/2001/XMLSchema#integer> . <https://spectacular-voyage.github.io/stagecraft/shacl/ProjectionTimelineStateShape> a <http://www.w3.org/ns/shacl#NodeShape> ; <http://www.w3.org/ns/shacl#property> ?checkpointProperty, ?labelProperty, ?projectionStateProperty . ?checkpointProperty <http://www.w3.org/ns/shacl#path> <https://spectacular-voyage.github.io/stagecraft/ontology/checkpoint> ; <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#IRI> ; <http://www.w3.org/ns/shacl#minCount> \"1\"^^<http://www.w3.org/2001/XMLSchema#integer> . ?labelProperty <http://www.w3.org/ns/shacl#path> <https://spectacular-voyage.github.io/stagecraft/ontology/label> ; <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#string> ; <http://www.w3.org/ns/shacl#minCount> \"1\"^^<http://www.w3.org/2001/XMLSchema#integer> . ?projectionStateProperty <http://www.w3.org/ns/shacl#path> <https://spectacular-voyage.github.io/stagecraft/ontology/projectionState> ; <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#IRI> ; <http://www.w3.org/ns/shacl#minCount> \"1\"^^<http://www.w3.org/2001/XMLSchema#integer> . }",
+              "expectedBoolean": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

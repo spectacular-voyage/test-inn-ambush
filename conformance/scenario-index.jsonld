@@ -906,6 +906,27 @@
           }
         }
       ]
+    },
+    {
+      "id": "#48-projection-timeline-contract",
+      "type": "ScenarioStep",
+      "manifestPath": "48-projection-timeline-contract.jsonld",
+      "hasLaneBinding": [
+        {
+          "type": "LaneStateBinding",
+          "lane": "#fixture-lane",
+          "fromLaneState": {
+            "type": "StateLocator",
+            "locatorKind": "gitRefState",
+            "ref": "1194f16a93e749492fe51f2d1eea86d8b4ff0fb1"
+          },
+          "toLaneState": {
+            "type": "StateLocator",
+            "locatorKind": "gitRefState",
+            "ref": "a.48-projection-timeline-contract"
+          }
+        }
+      ]
     }
   ]
 }
