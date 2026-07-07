@@ -1038,6 +1038,27 @@
           }
         }
       ]
+    },
+    {
+      "id": "#54-targetless-roll-request-contract",
+      "type": "ScenarioStep",
+      "manifestPath": "54-targetless-roll-request-contract.jsonld",
+      "hasLaneBinding": [
+        {
+          "type": "LaneStateBinding",
+          "lane": "#fixture-b-lane",
+          "fromLaneState": {
+            "type": "StateLocator",
+            "locatorKind": "gitRefState",
+            "ref": "b.02-live-marker-acts-contract"
+          },
+          "toLaneState": {
+            "type": "StateLocator",
+            "locatorKind": "gitRefState",
+            "ref": "b.03-targetless-roll-request-contract"
+          }
+        }
+      ]
     }
   ]
 }
