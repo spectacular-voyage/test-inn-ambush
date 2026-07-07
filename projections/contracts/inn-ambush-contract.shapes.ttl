@@ -383,6 +383,44 @@ sc-sh:ChatContributionShape
     sh:message "ChatContribution must not carry accepted state provenance facts." ;
   ] .
 
+sc-sh:CheckpointRequestShape
+  a sh:NodeShape ;
+  sh:targetClass sc:CheckpointRequest ;
+  sh:property [
+    sh:path sc:envelopeType ;
+    sh:hasValue "stagecraft.checkpoint.request.v1" ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path sc:envelopeId ;
+    sh:datatype xsd:string ;
+    sh:minLength 1 ;
+    sh:pattern "\\S" ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path sc:requestedByParticipant ;
+    sh:nodeKind sh:IRI ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path sc:label ;
+    sh:datatype xsd:string ;
+    sh:minLength 1 ;
+    sh:pattern "\\S" ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path sc:sourceProjection ;
+    sh:node sc-sh:SourceProjectionShape ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] .
+
 sc-sh:CommittedSpeechEventShape
   a sh:NodeShape ;
   sh:targetClass sc:CommittedSpeechEvent ;
@@ -866,9 +904,17 @@ sc-sh:ProjectionTimelineShape
 sc-sh:ProjectionTimelineStateShape
   a sh:NodeShape ;
   sh:property [
+    sh:path sc:timelineStateKind ;
+    sh:in (
+      "live"
+      "checkpoint"
+    ) ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
     sh:path sc:checkpoint ;
     sh:nodeKind sh:IRI ;
-    sh:minCount 1 ;
     sh:maxCount 1 ;
   ] ;
   sh:property [

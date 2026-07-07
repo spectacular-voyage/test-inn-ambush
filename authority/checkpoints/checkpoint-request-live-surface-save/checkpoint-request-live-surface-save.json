@@ -1,0 +1,12 @@
+{
+  "@context": "https://spectacular-voyage.github.io/test-inn-ambush/projections/contracts/inn-ambush-contract.context.jsonld",
+  "@type": "CheckpointRequest",
+  "type": "stagecraft.checkpoint.request.v1",
+  "id": "checkpoint-live-surface-save-fixture",
+  "requestedByParticipant": "https://spectacular-voyage.github.io/test-inn-ambush/gm/alex",
+  "label": "Live surface save",
+  "sourceProjection": {
+    "observedProjectionState": "https://spectacular-voyage.github.io/test-inn-ambush/branch/plan-b",
+    "participantProjection": "https://spectacular-voyage.github.io/test-inn-ambush/projection/gm/alex/inn-ambush-plan-b"
+  }
+}
