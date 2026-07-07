@@ -1107,6 +1107,27 @@
           }
         }
       ]
+    },
+    {
+      "id": "#57-d20-outcome-record-dedup-contract",
+      "type": "ScenarioStep",
+      "manifestPath": "57-d20-outcome-record-dedup-contract.jsonld",
+      "hasLaneBinding": [
+        {
+          "type": "LaneStateBinding",
+          "lane": "#fixture-b-lane",
+          "fromLaneState": {
+            "type": "StateLocator",
+            "locatorKind": "gitRefState",
+            "ref": "b.05-curtain-up"
+          },
+          "toLaneState": {
+            "type": "StateLocator",
+            "locatorKind": "gitRefState",
+            "ref": "b.06-outcome-record-dedup"
+          }
+        }
+      ]
     }
   ]
 }

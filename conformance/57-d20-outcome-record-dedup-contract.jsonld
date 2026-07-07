@@ -1,0 +1,67 @@
+{
+  "@context": {
+    "@vocab": "https://spectacular-voyage.github.io/accord/ontology/",
+    "dcterms": "http://purl.org/dc/terms/",
+    "id": "@id",
+    "type": "@type",
+    "changeType": {
+      "@type": "@vocab"
+    },
+    "compareMode": {
+      "@type": "@vocab"
+    },
+    "targetsFileExpectation": {
+      "@type": "@id"
+    },
+    "locatorKind": {
+      "@type": "@vocab"
+    }
+  },
+  "type": "Manifest",
+  "id": "urn:accord:stagecraft:test-inn-ambush:57-d20-outcome-record-dedup-contract",
+  "dcterms:title": "Inn Ambush 57 D20 outcome record dedup contract",
+  "hasCase": [
+    {
+      "type": "TransitionCase",
+      "id": "#d20-outcome-record-dedup-contract",
+      "fixtureRepo": "github.com/spectacular-voyage/test-inn-ambush",
+      "operationId": "stagecraft.fixture.deduplicateD20OutcomeRecord",
+      "fromRef": "b.05-curtain-up",
+      "toRef": "b.06-outcome-record-dedup",
+      "fromState": {
+        "type": "StateLocator",
+        "locatorKind": "gitRefState",
+        "ref": "b.05-curtain-up"
+      },
+      "toState": {
+        "type": "StateLocator",
+        "locatorKind": "gitRefState",
+        "ref": "b.06-outcome-record-dedup"
+      },
+      "hasFileExpectation": [
+        {
+          "id": "#authority-journal",
+          "type": "FileExpectation",
+          "path": "authority/journals/plan-b/plan-b.ttl",
+          "changeType": "updated",
+          "compareMode": "rdfCanonical"
+        }
+      ],
+      "hasRdfExpectation": [
+        {
+          "id": "#authority-journal-rdf",
+          "type": "RdfExpectation",
+          "targetsFileExpectation": "#authority-journal",
+          "hasAskAssertion": [
+            {
+              "id": "#ask-outcome-links-not-copies",
+              "type": "SparqlAskAssertion",
+              "query": "ASK { <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/d20-test-outcome/perception-check-001> a <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/D20TestOutcome> ; <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/resolvesWarrant> <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/d20-test-warrant/perception-check-001> ; <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/rollEvidence> <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/d20-roll/perception-check-001> ; <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/mechanicalResult> \"failure\" ; <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/adjudicatedResult> \"success\" . <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/d20-test-warrant/perception-check-001> <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/targetNumber> 15 . <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/d20-roll/perception-check-001> <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/rollTotal> 13 . FILTER NOT EXISTS { <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/d20-test-outcome/perception-check-001> <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/rollTotal> ?copiedRollTotal . } FILTER NOT EXISTS { <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/d20-test-outcome/perception-check-001> <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/targetNumber> ?copiedTargetNumber . } }",
+              "expectedBoolean": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
