@@ -1,0 +1,81 @@
+{
+  "@context": {
+    "@vocab": "https://spectacular-voyage.github.io/accord/ontology/",
+    "dcterms": "http://purl.org/dc/terms/",
+    "id": "@id",
+    "type": "@type",
+    "changeType": {
+      "@type": "@vocab"
+    },
+    "compareMode": {
+      "@type": "@vocab"
+    },
+    "targetsFileExpectation": {
+      "@type": "@id"
+    },
+    "locatorKind": {
+      "@type": "@vocab"
+    }
+  },
+  "type": "Manifest",
+  "id": "urn:accord:stagecraft:test-inn-ambush:53-live-marker-acts-contract",
+  "dcterms:title": "Inn Ambush 53 live marker acts contract",
+  "hasCase": [
+    {
+      "type": "TransitionCase",
+      "id": "#live-marker-acts-contract",
+      "fixtureRepo": "github.com/spectacular-voyage/test-inn-ambush",
+      "operationId": "stagecraft.fixture.addLiveMarkerActsContract",
+      "fromRef": "b.01-view-as-character-reads-contract",
+      "toRef": "b.02-live-marker-acts-contract",
+      "fromState": {
+        "type": "StateLocator",
+        "locatorKind": "gitRefState",
+        "ref": "b.01-view-as-character-reads-contract"
+      },
+      "toState": {
+        "type": "StateLocator",
+        "locatorKind": "gitRefState",
+        "ref": "b.02-live-marker-acts-contract"
+      },
+      "hasFileExpectation": [
+        {
+          "id": "#contract-context",
+          "type": "FileExpectation",
+          "path": "projections/contracts/inn-ambush-contract.context.jsonld",
+          "changeType": "updated",
+          "compareMode": "json"
+        },
+        {
+          "id": "#contract-shapes",
+          "type": "FileExpectation",
+          "path": "projections/contracts/inn-ambush-contract.shapes.ttl",
+          "changeType": "updated",
+          "compareMode": "rdfCanonical"
+        },
+        {
+          "id": "#d20-test-request",
+          "type": "FileExpectation",
+          "path": "authority/d20-tests/d20-test-request-live-roll/d20-test-request-live-roll.json",
+          "changeType": "added",
+          "compareMode": "json"
+        }
+      ],
+      "hasRdfExpectation": [
+        {
+          "id": "#contract-shapes-rdf",
+          "type": "RdfExpectation",
+          "targetsFileExpectation": "#contract-shapes",
+          "hasAskAssertion": [
+            {
+              "id": "#ask-d20-request-shape",
+              "type": "SparqlAskAssertion",
+              "query": "ASK { <https://spectacular-voyage.github.io/stagecraft/shacl/D20TestRequestShape> a <http://www.w3.org/ns/shacl#NodeShape> ; <http://www.w3.org/ns/shacl#targetClass> <https://spectacular-voyage.github.io/stagecraft/ontology/D20TestRequest> ; <http://www.w3.org/ns/shacl#property> ?actorProperty, ?testTypeProperty, ?diceProperty, ?modifierProperty, ?sourceProjectionProperty . ?actorProperty <http://www.w3.org/ns/shacl#path> <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/warrantedActor> ; <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#IRI> . ?testTypeProperty <http://www.w3.org/ns/shacl#path> <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/warrantedTestType> ; <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#IRI> . ?diceProperty <http://www.w3.org/ns/shacl#path> <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/diceExpression> ; <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#string> . ?modifierProperty <http://www.w3.org/ns/shacl#path> <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/rollModifier> ; <http://www.w3.org/ns/shacl#node> <https://spectacular-voyage.github.io/stagecraft/shacl/D20RollModifierInputShape> . ?sourceProjectionProperty <http://www.w3.org/ns/shacl#path> <https://spectacular-voyage.github.io/stagecraft/ontology/sourceProjection> ; <http://www.w3.org/ns/shacl#node> <https://spectacular-voyage.github.io/stagecraft/shacl/SourceProjectionShape> . <https://spectacular-voyage.github.io/stagecraft/shacl/D20RollModifierInputShape> <http://www.w3.org/ns/shacl#property> ?modifierSourceProperty . ?modifierSourceProperty <http://www.w3.org/ns/shacl#path> <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/modifierSource> ; <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#IRI> . }",
+              "expectedBoolean": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

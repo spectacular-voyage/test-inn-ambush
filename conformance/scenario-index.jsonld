@@ -1017,6 +1017,27 @@
           }
         }
       ]
+    },
+    {
+      "id": "#53-live-marker-acts-contract",
+      "type": "ScenarioStep",
+      "manifestPath": "53-live-marker-acts-contract.jsonld",
+      "hasLaneBinding": [
+        {
+          "type": "LaneStateBinding",
+          "lane": "#fixture-b-lane",
+          "fromLaneState": {
+            "type": "StateLocator",
+            "locatorKind": "gitRefState",
+            "ref": "b.01-view-as-character-reads-contract"
+          },
+          "toLaneState": {
+            "type": "StateLocator",
+            "locatorKind": "gitRefState",
+            "ref": "b.02-live-marker-acts-contract"
+          }
+        }
+      ]
     }
   ]
 }
