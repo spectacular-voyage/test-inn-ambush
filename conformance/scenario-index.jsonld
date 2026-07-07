@@ -948,6 +948,27 @@
           }
         }
       ]
+    },
+    {
+      "id": "#50-serialization-payload-boundary",
+      "type": "ScenarioStep",
+      "manifestPath": "50-serialization-payload-boundary.jsonld",
+      "hasLaneBinding": [
+        {
+          "type": "LaneStateBinding",
+          "lane": "#fixture-lane",
+          "fromLaneState": {
+            "type": "StateLocator",
+            "locatorKind": "gitRefState",
+            "ref": "a.49-serialization-checkpoint-flush"
+          },
+          "toLaneState": {
+            "type": "StateLocator",
+            "locatorKind": "gitRefState",
+            "ref": "a.50-serialization-payload-boundary"
+          }
+        }
+      ]
     }
   ]
 }

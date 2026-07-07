@@ -1,0 +1,127 @@
+{
+  "@context": {
+    "@vocab": "https://spectacular-voyage.github.io/accord/ontology/",
+    "dcterms": "http://purl.org/dc/terms/",
+    "id": "@id",
+    "type": "@type",
+    "changeType": {
+      "@type": "@vocab"
+    },
+    "compareMode": {
+      "@type": "@vocab"
+    },
+    "targetsFileExpectation": {
+      "@type": "@id"
+    },
+    "locatorKind": {
+      "@type": "@vocab"
+    }
+  },
+  "type": "Manifest",
+  "id": "urn:accord:stagecraft:test-inn-ambush:50-serialization-payload-boundary",
+  "dcterms:title": "Inn Ambush 50 serialization payload boundary",
+  "hasCase": [
+    {
+      "type": "TransitionCase",
+      "id": "#serialization-payload-boundary",
+      "fixtureRepo": "github.com/spectacular-voyage/test-inn-ambush",
+      "operationId": "stagecraft.fixture.flushSerializationPayloadBoundary",
+      "fromRef": "a.49-serialization-checkpoint-flush",
+      "toRef": "a.50-serialization-payload-boundary",
+      "fromState": {
+        "type": "StateLocator",
+        "locatorKind": "gitRefState",
+        "ref": "a.49-serialization-checkpoint-flush"
+      },
+      "toState": {
+        "type": "StateLocator",
+        "locatorKind": "gitRefState",
+        "ref": "a.50-serialization-payload-boundary"
+      },
+      "hasFileExpectation": [
+        {
+          "id": "#world-state-inventory",
+          "type": "FileExpectation",
+          "path": "world/states/inn-ambush-plan-b-state/_knop/_inventory/inventory.ttl",
+          "changeType": "updated",
+          "compareMode": "rdfCanonical"
+        },
+        {
+          "id": "#world-state-working-file",
+          "type": "FileExpectation",
+          "path": "world/states/inn-ambush-plan-b-state/inn-ambush-plan-b-state.ttl",
+          "changeType": "updated",
+          "compareMode": "rdfCanonical"
+        },
+        {
+          "id": "#world-state-flushed-file",
+          "type": "FileExpectation",
+          "path": "world/states/inn-ambush-plan-b-state/rdf-export.inn-ambush-plan-b.history.main/rdf-export.inn-ambush-plan-b.state.s0003/ttl/inn-ambush-plan-b-state.ttl",
+          "changeType": "added",
+          "compareMode": "rdfCanonical"
+        },
+        {
+          "id": "#checkpoint-manifest-inventory",
+          "type": "FileExpectation",
+          "path": "world/checkpoint-manifests/inn-ambush-checkpoints/_knop/_inventory/inventory.ttl",
+          "changeType": "updated",
+          "compareMode": "rdfCanonical"
+        },
+        {
+          "id": "#checkpoint-manifest-working-file",
+          "type": "FileExpectation",
+          "path": "world/checkpoint-manifests/inn-ambush-checkpoints/checkpoint-manifest.ttl",
+          "changeType": "updated",
+          "compareMode": "rdfCanonical"
+        },
+        {
+          "id": "#checkpoint-manifest-flushed-file",
+          "type": "FileExpectation",
+          "path": "world/checkpoint-manifests/inn-ambush-checkpoints/rdf-export.inn-ambush-checkpoint-manifest.history.main/rdf-export.inn-ambush-checkpoint-manifest.state.s0003/ttl/checkpoint-manifest.ttl",
+          "changeType": "added",
+          "compareMode": "rdfCanonical"
+        }
+      ],
+      "hasRdfExpectation": [
+        {
+          "id": "#flushed-world-state-rdf",
+          "type": "RdfExpectation",
+          "targetsFileExpectation": "#world-state-flushed-file",
+          "hasAskAssertion": [
+            {
+              "id": "#ask-captured-payload-boundary-state",
+              "type": "SparqlAskAssertion",
+              "query": "ASK { <https://spectacular-voyage.github.io/test-inn-ambush/rdf-export/inn-ambush-plan-b/state/s0003> a <https://semantic-flow.github.io/sflo/ontology/HistoricalState>, <https://spectacular-voyage.github.io/stagecraft/ontology/ProjectionState> ; <https://semantic-flow.github.io/sflo/ontology/previousHistoricalState> <https://spectacular-voyage.github.io/test-inn-ambush/rdf-export/inn-ambush-plan-b/state/s0002> ; <https://semantic-flow.github.io/sflo/ontology/stateOrdinal> 3 ; <https://semantic-flow.github.io/sflo/ontology/locatedFileForState> <https://spectacular-voyage.github.io/test-inn-ambush/rdf-export/inn-ambush-plan-b/file/s0003/ttl> ; <https://spectacular-voyage.github.io/stagecraft/ontology/capturesCheckpoint> <https://spectacular-voyage.github.io/test-inn-ambush/checkpoint/checkpoint-fixture-payload-boundary-flush> . <https://spectacular-voyage.github.io/test-inn-ambush/rdf-export/inn-ambush-plan-b/file/s0003/ttl> <https://schema.org/contentUrl> \"world/states/inn-ambush-plan-b-state/rdf-export.inn-ambush-plan-b.history.main/rdf-export.inn-ambush-plan-b.state.s0003/ttl/inn-ambush-plan-b-state.ttl\" . }",
+              "expectedBoolean": true
+            },
+            {
+              "id": "#ask-payload-boundary-checkpoint-facts",
+              "type": "SparqlAskAssertion",
+              "query": "ASK { <https://spectacular-voyage.github.io/test-inn-ambush/checkpoint/checkpoint-fixture-payload-boundary-flush> a <https://spectacular-voyage.github.io/stagecraft/ontology/Checkpoint> ; <http://www.w3.org/2000/01/rdf-schema#label> \"Payload boundary flush\" ; <https://spectacular-voyage.github.io/stagecraft/ontology/checkpointWorldTimeAnchor> <https://spectacular-voyage.github.io/test-inn-ambush/clock-anchor/world-clock/offset-960s> ; <https://spectacular-voyage.github.io/stagecraft/ontology/checkpointActiveFrame> <https://spectacular-voyage.github.io/test-inn-ambush/frame/ambush-night> ; <https://spectacular-voyage.github.io/stagecraft/ontology/authorizedByAuthorityRecord> <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/checkpoint-committed/session-authority/checkpoint-fixture-payload-boundary-flush> ; <https://spectacular-voyage.github.io/stagecraft/ontology/committedEvent> <https://spectacular-voyage.github.io/test-inn-ambush/committed-event/checkpoint/session-authority/checkpoint-fixture-payload-boundary-flush> ; <https://spectacular-voyage.github.io/stagecraft/ontology/hasCommitCertificate> <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/commit-certificate/checkpoint/session-authority/checkpoint-fixture-payload-boundary-flush> . }",
+              "expectedBoolean": true
+            },
+            {
+              "id": "#ask-calendar-definitions-not-copied",
+              "type": "SparqlAskAssertion",
+              "query": "ASK { ?band a <https://spectacular-voyage.github.io/stagecraft/ontology/temporaenum/TimeOfDayBand> . }",
+              "expectedBoolean": false
+            }
+          ]
+        },
+        {
+          "id": "#flushed-checkpoint-manifest-rdf",
+          "type": "RdfExpectation",
+          "targetsFileExpectation": "#checkpoint-manifest-flushed-file",
+          "hasAskAssertion": [
+            {
+              "id": "#ask-payload-boundary-manifest-entry",
+              "type": "SparqlAskAssertion",
+              "query": "ASK { <https://spectacular-voyage.github.io/test-inn-ambush/rdf-export/inn-ambush-checkpoint-manifest> a <https://semantic-flow.github.io/sflo/ontology/DigitalArtifact>, <https://semantic-flow.github.io/sflo/ontology/RdfDocument> ; <https://schema.org/contentUrl> \"world/checkpoint-manifests/inn-ambush-checkpoints/rdf-export.inn-ambush-checkpoint-manifest.history.main/rdf-export.inn-ambush-checkpoint-manifest.state.s0003/ttl/checkpoint-manifest.ttl\" ; <http://purl.org/dc/terms/hasPart> <https://spectacular-voyage.github.io/test-inn-ambush/rdf-export/inn-ambush-checkpoint-manifest/entry/s0002>, <https://spectacular-voyage.github.io/test-inn-ambush/rdf-export/inn-ambush-checkpoint-manifest/entry/s0003> . <https://spectacular-voyage.github.io/test-inn-ambush/rdf-export/inn-ambush-checkpoint-manifest/entry/s0003> <http://www.w3.org/2000/01/rdf-schema#label> \"Payload boundary flush\" ; <https://semantic-flow.github.io/sflo/ontology/stateOrdinal> \"3\"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> ; <http://purl.org/dc/terms/references> <https://spectacular-voyage.github.io/test-inn-ambush/rdf-export/inn-ambush-plan-b/state/s0003> ; <https://spectacular-voyage.github.io/stagecraft/ontology/capturesCheckpoint> <https://spectacular-voyage.github.io/test-inn-ambush/checkpoint/checkpoint-fixture-payload-boundary-flush> ; <https://schema.org/contentUrl> \"world/states/inn-ambush-plan-b-state/rdf-export.inn-ambush-plan-b.history.main/rdf-export.inn-ambush-plan-b.state.s0003/ttl/inn-ambush-plan-b-state.ttl\" . }",
+              "expectedBoolean": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
