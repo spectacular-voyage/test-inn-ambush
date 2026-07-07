@@ -423,3 +423,23 @@
 <rules/dynamis/srd-5-2-1/weapons/index.html> a sflo:ResourcePage, sflo:LocatedFile .
 
 <rules/dynamis/srd-5-2-1/weapons/_knop/index.html> a sflo:ResourcePage, sflo:LocatedFile .
+
+<_mesh> sflo:hasKnop <world/checkpoint-manifests/inn-ambush-checkpoints/_knop> .
+
+<world/checkpoint-manifests/inn-ambush-checkpoints> a sflo:PayloadArtifact, sflo:DigitalArtifact, sflo:RdfDocument ;
+  sflo:hasWorkingLocatedFile <world/checkpoint-manifests/inn-ambush-checkpoints/checkpoint-manifest.ttl> .
+
+<world/checkpoint-manifests/inn-ambush-checkpoints/_knop> a sflo:Knop ;
+  sflo:hasWorkingKnopInventoryFile <world/checkpoint-manifests/inn-ambush-checkpoints/_knop/_inventory/inventory.ttl> .
+
+<world/checkpoint-manifests/inn-ambush-checkpoints/_knop/_inventory/inventory.ttl> a sflo:LocatedFile, sflo:RdfDocument .
+
+<world/checkpoint-manifests/inn-ambush-checkpoints/checkpoint-manifest.ttl> a sflo:LocatedFile, sflo:RdfDocument .
+
+<world/checkpoint-manifests/inn-ambush-checkpoints> sflo:hasResourcePage <world/checkpoint-manifests/inn-ambush-checkpoints/index.html> .
+
+<world/checkpoint-manifests/inn-ambush-checkpoints/_knop> sflo:hasResourcePage <world/checkpoint-manifests/inn-ambush-checkpoints/_knop/index.html> .
+
+<world/checkpoint-manifests/inn-ambush-checkpoints/index.html> a sflo:ResourcePage, sflo:LocatedFile .
+
+<world/checkpoint-manifests/inn-ambush-checkpoints/_knop/index.html> a sflo:ResourcePage, sflo:LocatedFile .
