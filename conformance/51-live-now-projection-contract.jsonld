@@ -27,7 +27,7 @@
       "fixtureRepo": "github.com/spectacular-voyage/test-inn-ambush",
       "operationId": "stagecraft.fixture.addLiveNowProjectionContract",
       "fromRef": "a.50-serialization-payload-boundary",
-      "toRef": "a.51-live-now-projection-contract",
+      "toRef": "a.51-live-now-branch-contract",
       "fromState": {
         "type": "StateLocator",
         "locatorKind": "gitRefState",
@@ -36,7 +36,7 @@
       "toState": {
         "type": "StateLocator",
         "locatorKind": "gitRefState",
-        "ref": "a.51-live-now-projection-contract"
+        "ref": "a.51-live-now-branch-contract"
       },
       "hasFileExpectation": [
         {

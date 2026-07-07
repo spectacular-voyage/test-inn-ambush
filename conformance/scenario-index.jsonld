@@ -986,7 +986,7 @@
           "toLaneState": {
             "type": "StateLocator",
             "locatorKind": "gitRefState",
-            "ref": "a.51-live-now-projection-contract"
+            "ref": "a.51-live-now-branch-contract"
           }
         }
       ]
