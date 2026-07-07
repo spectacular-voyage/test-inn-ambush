@@ -1,0 +1,271 @@
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix temp: <https://spectacular-voyage.github.io/stagecraft/ontology/temporaenum/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar>
+  a dcat:Dataset, temp:Calendar ;
+  dcterms:title "Inn Ambush custom calendar" ;
+  dcterms:description "Fixture custom calendar for deriving prose world time from world-clock axis offsets. Curated CSV tables are the permanent authoring surface; this Turtle is their RDF projection for runtime reads." ;
+  dcterms:created "2026-07-05"^^xsd:date ;
+  temp:calendarKind "custom" ;
+  temp:secondsPerDay 86400.0 ;
+  temp:epochYear 1 ;
+  temp:epochDayOfYear 0 ;
+  temp:epochSecondOfDay 74580.0 ;
+  temp:epochWeekdayOrdinal 0 ;
+  temp:hasWeekday
+    <https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/weekday/ashday>,
+    <https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/weekday/barrowday>,
+    <https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/weekday/coinday>,
+    <https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/weekday/driftday>,
+    <https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/weekday/eveday> ;
+  temp:hasMonth
+    <https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/month/emberwane>,
+    <https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/month/rainmoot>,
+    <https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/month/leafturn>,
+    <https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/month/frostwane>,
+    <https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/month/deepfrost>,
+    <https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/month/thawcall>,
+    <https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/month/seedmoot>,
+    <https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/month/suncrest>,
+    <https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/month/highsun>,
+    <https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/month/harvestwane>,
+    <https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/month/mistfall>,
+    <https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/month/longnight> ;
+  temp:hasSeason
+    <https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/season/early-autumn>,
+    <https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/season/deep-winter>,
+    <https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/season/new-spring>,
+    <https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/season/high-summer> ;
+  temp:hasTimeOfDayBand
+    <https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/band/night-before-dawn>,
+    <https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/band/early-morning>,
+    <https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/band/midmorning>,
+    <https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/band/midday>,
+    <https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/band/afternoon>,
+    <https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/band/late-evening>,
+    <https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/band/night-after-evening> ;
+  dcat:distribution
+    <https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/weekdays-csv>,
+    <https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/months-csv>,
+    <https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/seasons-csv>,
+    <https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/bands-csv>,
+    <https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/calendar-csvw> .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/weekdays-csv>
+  a dcat:Distribution ;
+  dcterms:title "Inn Ambush weekday curated CSV" ;
+  dcat:downloadURL <https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/weekdays.csv> .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/months-csv>
+  a dcat:Distribution ;
+  dcterms:title "Inn Ambush month curated CSV" ;
+  dcat:downloadURL <https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/months.csv> .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/seasons-csv>
+  a dcat:Distribution ;
+  dcterms:title "Inn Ambush season curated CSV" ;
+  dcat:downloadURL <https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/seasons.csv> .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/bands-csv>
+  a dcat:Distribution ;
+  dcterms:title "Inn Ambush time-of-day band curated CSV" ;
+  dcat:downloadURL <https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/bands.csv> .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/calendar-csvw>
+  a dcat:Distribution ;
+  dcterms:title "Inn Ambush calendar CSVW mapping" ;
+  dcat:downloadURL <https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/calendar.csvw.json> .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/weekday/ashday>
+  a temp:CalendarWeekday ;
+  rdfs:label "Ashday" ;
+  temp:calendarKey "ashday" ;
+  temp:ordinal 0 .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/weekday/barrowday>
+  a temp:CalendarWeekday ;
+  rdfs:label "Barrowday" ;
+  temp:calendarKey "barrowday" ;
+  temp:ordinal 1 .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/weekday/coinday>
+  a temp:CalendarWeekday ;
+  rdfs:label "Coinday" ;
+  temp:calendarKey "coinday" ;
+  temp:ordinal 2 .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/weekday/driftday>
+  a temp:CalendarWeekday ;
+  rdfs:label "Driftday" ;
+  temp:calendarKey "driftday" ;
+  temp:ordinal 3 .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/weekday/eveday>
+  a temp:CalendarWeekday ;
+  rdfs:label "Eveday" ;
+  temp:calendarKey "eveday" ;
+  temp:ordinal 4 .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/month/emberwane>
+  a temp:CalendarMonth ;
+  rdfs:label "Emberwane" ;
+  temp:calendarKey "emberwane" ;
+  temp:ordinal 0 ;
+  temp:daysInMonth 30 .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/month/rainmoot>
+  a temp:CalendarMonth ;
+  rdfs:label "Rainmoot" ;
+  temp:calendarKey "rainmoot" ;
+  temp:ordinal 1 ;
+  temp:daysInMonth 30 .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/month/leafturn>
+  a temp:CalendarMonth ;
+  rdfs:label "Leafturn" ;
+  temp:calendarKey "leafturn" ;
+  temp:ordinal 2 ;
+  temp:daysInMonth 30 .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/month/frostwane>
+  a temp:CalendarMonth ;
+  rdfs:label "Frostwane" ;
+  temp:calendarKey "frostwane" ;
+  temp:ordinal 3 ;
+  temp:daysInMonth 30 .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/month/deepfrost>
+  a temp:CalendarMonth ;
+  rdfs:label "Deepfrost" ;
+  temp:calendarKey "deepfrost" ;
+  temp:ordinal 4 ;
+  temp:daysInMonth 30 .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/month/thawcall>
+  a temp:CalendarMonth ;
+  rdfs:label "Thawcall" ;
+  temp:calendarKey "thawcall" ;
+  temp:ordinal 5 ;
+  temp:daysInMonth 30 .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/month/seedmoot>
+  a temp:CalendarMonth ;
+  rdfs:label "Seedmoot" ;
+  temp:calendarKey "seedmoot" ;
+  temp:ordinal 6 ;
+  temp:daysInMonth 30 .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/month/suncrest>
+  a temp:CalendarMonth ;
+  rdfs:label "Suncrest" ;
+  temp:calendarKey "suncrest" ;
+  temp:ordinal 7 ;
+  temp:daysInMonth 30 .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/month/highsun>
+  a temp:CalendarMonth ;
+  rdfs:label "Highsun" ;
+  temp:calendarKey "highsun" ;
+  temp:ordinal 8 ;
+  temp:daysInMonth 30 .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/month/harvestwane>
+  a temp:CalendarMonth ;
+  rdfs:label "Harvestwane" ;
+  temp:calendarKey "harvestwane" ;
+  temp:ordinal 9 ;
+  temp:daysInMonth 30 .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/month/mistfall>
+  a temp:CalendarMonth ;
+  rdfs:label "Mistfall" ;
+  temp:calendarKey "mistfall" ;
+  temp:ordinal 10 ;
+  temp:daysInMonth 30 .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/month/longnight>
+  a temp:CalendarMonth ;
+  rdfs:label "Longnight" ;
+  temp:calendarKey "longnight" ;
+  temp:ordinal 11 ;
+  temp:daysInMonth 30 .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/season/early-autumn>
+  a temp:CalendarSeason ;
+  rdfs:label "early autumn" ;
+  temp:calendarKey "early-autumn" ;
+  temp:startDayOfYear 0 ;
+  temp:endDayOfYear 90 .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/season/deep-winter>
+  a temp:CalendarSeason ;
+  rdfs:label "deep winter" ;
+  temp:calendarKey "deep-winter" ;
+  temp:startDayOfYear 90 ;
+  temp:endDayOfYear 180 .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/season/new-spring>
+  a temp:CalendarSeason ;
+  rdfs:label "new spring" ;
+  temp:calendarKey "new-spring" ;
+  temp:startDayOfYear 180 ;
+  temp:endDayOfYear 270 .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/season/high-summer>
+  a temp:CalendarSeason ;
+  rdfs:label "high summer" ;
+  temp:calendarKey "high-summer" ;
+  temp:startDayOfYear 270 ;
+  temp:endDayOfYear 360 .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/band/night-before-dawn>
+  a temp:TimeOfDayBand ;
+  rdfs:label "night" ;
+  temp:calendarKey "night-before-dawn" ;
+  temp:fromHour 0.0 ;
+  temp:toHour 6.0 .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/band/early-morning>
+  a temp:TimeOfDayBand ;
+  rdfs:label "early morning" ;
+  temp:calendarKey "early-morning" ;
+  temp:fromHour 6.0 ;
+  temp:toHour 9.0 .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/band/midmorning>
+  a temp:TimeOfDayBand ;
+  rdfs:label "midmorning" ;
+  temp:calendarKey "midmorning" ;
+  temp:fromHour 9.0 ;
+  temp:toHour 12.0 .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/band/midday>
+  a temp:TimeOfDayBand ;
+  rdfs:label "midday" ;
+  temp:calendarKey "midday" ;
+  temp:fromHour 12.0 ;
+  temp:toHour 14.0 .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/band/afternoon>
+  a temp:TimeOfDayBand ;
+  rdfs:label "afternoon" ;
+  temp:calendarKey "afternoon" ;
+  temp:fromHour 14.0 ;
+  temp:toHour 18.0 .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/band/late-evening>
+  a temp:TimeOfDayBand ;
+  rdfs:label "late evening" ;
+  temp:calendarKey "late-evening" ;
+  temp:fromHour 18.0 ;
+  temp:toHour 21.0 .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/band/night-after-evening>
+  a temp:TimeOfDayBand ;
+  rdfs:label "night" ;
+  temp:calendarKey "night-after-evening" ;
+  temp:fromHour 21.0 ;
+  temp:toHour 24.0 .

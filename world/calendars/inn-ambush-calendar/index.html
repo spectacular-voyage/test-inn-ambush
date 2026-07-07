@@ -1,0 +1,501 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>test-inn-ambush Inn Ambush custom calendar</title>
+  <link rel="canonical" href="https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar">
+  <style>
+    :root { min-height: 100%; color-scheme: light; font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background: #f6f7f4; color: #20231f; }
+    * { box-sizing: border-box; }
+    body { margin: 0; min-height: 100vh; display: flex; flex-direction: column; background: linear-gradient(180deg, #f6f7f4 0%, #ebece7 100%); }
+    a { color: #1f5f85; text-decoration-thickness: 0.08em; text-underline-offset: 0.18em; }
+    main { width: min(1120px, calc(100% - 32px)); margin: 0 auto; padding: 16px 0 42px; flex: 1 0 auto; }
+    .wf-shell { display: grid; gap: 18px; min-width: 0; }
+    .wf-shell > * { min-width: 0; }
+    .wf-masthead { min-width: 0; }
+    .wf-page-header { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-bottom: 4px; min-width: 0; }
+    .wf-eyebrow { margin: 0; color: #5e675d; font-size: 0.82rem; line-height: 1.2; letter-spacing: 0; font-weight: 700; }
+    .wf-breadcrumbs { display: flex; flex-wrap: wrap; gap: 0.35rem; align-items: center; }
+    .wf-breadcrumbs a { color: inherit; text-decoration-color: rgba(94, 103, 93, 0.45); }
+    .wf-mesh-favicon { flex: 0 0 auto; width: 32px; height: 32px; object-fit: contain; }
+    .wf-hero { border-top: 5px solid #435247; padding: 26px 0 12px; }
+    h1 { margin: 0; overflow-wrap: anywhere; font-size: clamp(1.7rem, 4vw, 2.7rem); line-height: 1.04; letter-spacing: 0; }
+    .wf-classes { margin: 8px 0 0; color: #687167; font-style: italic; }
+    .wf-classes a { color: inherit; text-decoration: underline; text-decoration-color: rgba(104, 113, 103, 0.34); text-decoration-thickness: 0.06em; text-underline-offset: 0.18em; }
+    .wf-summary { max-width: 820px; margin: 14px 0 0; color: #3f463f; font-size: 1.05rem; line-height: 1.6; }
+    .wf-metadata { width: 100%; margin-top: 24px; border-collapse: collapse; table-layout: fixed; border-top: 1px solid #cdd2ca; border-bottom: 1px solid #cdd2ca; }
+    .wf-metadata th, .wf-metadata td { padding: 10px 12px; border-top: 1px solid #e0e4dd; text-align: left; vertical-align: top; }
+    .wf-metadata tr:first-child th, .wf-metadata tr:first-child td { border-top: 0; }
+    .wf-metadata th { width: 180px; color: #4f594f; font-size: 0.78rem; line-height: 1.35; text-transform: uppercase; letter-spacing: 0; overflow-wrap: anywhere; word-break: break-word; }
+    .wf-metadata td { min-width: 0; overflow-wrap: anywhere; }
+    .wf-hero-metadata col.wf-metadata-key { width: 180px; }
+    .wf-child-identifiers { display: flex; flex-wrap: wrap; gap: 5px; align-items: baseline; min-width: 0; max-width: 100%; }
+    .wf-child-identifier { display: inline-block; padding: 0.08rem 0.36rem; border: 1px solid #cdd8cf; border-radius: 2px; background: #eef3ef; text-decoration: none; white-space: nowrap; }
+    .wf-child-identifier:hover, .wf-child-identifier:focus { background: #e0ebe4; border-color: #b8c8bc; }
+    .wf-child-identifiers-more { display: inline-block; max-width: 100%; min-width: 0; border: 0; border-radius: 0; background: transparent; }
+    .wf-child-identifiers-more[open] { flex: 1 1 100%; width: 100%; }
+    .wf-child-identifiers-more > summary { flex: 0 0 auto; display: inline-block; padding: 0.08rem 0.36rem; border: 1px solid #cdd8cf; border-radius: 2px; background: #eef3ef; color: #1f5f85; cursor: pointer; line-height: inherit; }
+    .wf-child-identifiers-more[open] > summary { margin-bottom: 5px; }
+    .wf-child-identifiers-overflow { display: flex; flex-wrap: wrap; gap: 5px; align-items: baseline; min-width: 0; max-width: 100%; }
+    .wf-child-identifiers-more > summary::-webkit-details-marker { display: none; }
+    .wf-child-identifiers-more > summary::marker { content: ""; }
+    .wf-source-summary { display: flex; flex-wrap: wrap; gap: 6px 10px; align-items: baseline; min-width: 0; }
+    .wf-source-chain { display: inline-flex; flex-wrap: wrap; align-items: center; gap: 0.28rem; max-width: 100%; padding: 0.16rem 0.22rem 0.16rem 0.5rem; border: 1px solid #c3d1c7; border-radius: 5px; background: #eef3ef; box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.48); }
+    .wf-source-chain a { display: inline-flex; align-items: center; max-width: 100%; min-width: 0; text-decoration: none; white-space: nowrap; border-radius: 3px; }
+    .wf-source-root { font-weight: 750; }
+    .wf-source-version-chain { display: inline-flex; flex-wrap: wrap; align-items: center; gap: 0.22rem; max-width: 100%; min-width: 0; padding: 0.12rem 0.14rem 0.12rem 0.38rem; border: 1px solid #bfd0c4; border-radius: 4px; background: #dfe9e3; box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.36); }
+    .wf-source-version-history { font-weight: 650; }
+    .wf-source-version { padding: 0.06rem 0.34rem; border: 1px solid #bdcec3; background: #f8fbf8; font-weight: 650; }
+    .wf-source-chain a:hover, .wf-source-chain a:focus { background: #d2e0d7; outline: 0; }
+    .wf-source-version:hover, .wf-source-version:focus { background: #edf5ef; }
+    .wf-term { cursor: help; border-bottom: 1px dotted currentColor; }
+    .wf-term-link { color: inherit; border-bottom: 0; text-decoration: underline; text-decoration-color: rgba(79, 89, 79, 0.35); text-decoration-thickness: 0.06em; text-underline-offset: 0.18em; }
+    .wf-term-link:hover, .wf-term-link:focus { text-decoration-color: currentColor; }
+    .wf-date-tip { position: relative; display: inline-block; }
+    .wf-date-tip::after { content: attr(data-tooltip); position: absolute; left: 50%; bottom: calc(100% + 8px); transform: translateX(-50%); opacity: 0; pointer-events: none; background: rgba(27, 32, 27, 0.94); color: #fff; border-radius: 5px; padding: 5px 7px; font-size: 0.78rem; white-space: nowrap; transition: opacity 120ms ease; }
+    .wf-date-tip:hover::after, .wf-date-tip:focus::after { opacity: 1; }
+    .wf-section, .wf-source { margin-top: 24px; min-width: 0; }
+    h2 { margin: 0 0 12px; font-size: 1rem; line-height: 1.25; letter-spacing: 0; color: #2f382f; }
+    ul { margin: 0; padding-left: 1.2rem; }
+    li { margin: 0.45rem 0; line-height: 1.45; }
+    code, pre { font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace; }
+    code { background: #e9ece6; border-radius: 4px; padding: 0.12rem 0.25rem; }
+    details { border: 1px solid #c9cec7; border-radius: 8px; background: #fff; min-width: 0; }
+    details + details { margin-top: 12px; }
+    summary { cursor: pointer; padding: 12px 14px; font-weight: 750; }
+    .wf-children { padding-bottom: 12px; }
+    .wf-children .wf-metadata { margin-top: 0; border-bottom: 0; }
+    .wf-properties { padding-bottom: 12px; }
+    .wf-properties .wf-metadata { margin-top: 0; border-bottom: 0; }
+    .wf-properties .wf-metadata th, .wf-blank-nodes .wf-metadata th { text-transform: none; }
+    .wf-blank-nodes { padding-bottom: 12px; }
+    .wf-blank-nodes .wf-metadata { margin-top: 0; border-bottom: 0; }
+    .wf-blank-node-code { max-height: 24rem; padding: 12px; border: 1px solid #d7dcd4; border-radius: 6px; font-size: 0.82rem; }
+    .wf-references { padding-bottom: 12px; }
+    .wf-reference-groups { display: grid; gap: 8px; padding: 0 14px 4px; }
+    .wf-reference-group { background: #f8faf7; border-color: #d5dbd3; }
+    .wf-reference-group ul { padding: 0 14px 12px 1.6rem; }
+    .wf-history { padding-bottom: 12px; }
+    .wf-history-tree { display: grid; gap: 10px; padding: 0 14px 4px; }
+    .wf-history-node { border: 1px solid #d5dbd3; border-radius: 8px; padding: 10px; }
+    .wf-history-node + .wf-history-node, .wf-history-node .wf-history-node { margin-top: 8px; }
+    .wf-history-node--history { background: #f8faf7; }
+    .wf-history-node--state { background: #eef3ef; }
+    .wf-history-node--manifestation { background: #e7eee9; }
+    .wf-history-node--file { background: #dfe8e2; }
+    .wf-history-node-header { display: flex; flex-wrap: wrap; gap: 8px; align-items: baseline; }
+    .wf-history-node > summary.wf-history-node-header { display: list-item; padding: 0; }
+    .wf-history-class { color: #687167; font-style: italic; font-size: 0.85rem; }
+    .wf-history-file-iri { font-size: 0.82rem; overflow-wrap: anywhere; }
+    .wf-history-gap { display: flex; align-items: center; justify-content: center; min-height: 28px; color: #687167; font-size: 1.15rem; line-height: 1; }
+    .wf-source-meta { display: flex; flex-wrap: wrap; gap: 10px; padding: 0 14px 12px; color: #596259; font-size: 0.88rem; }
+    .wf-source-omitted { margin: 0; padding: 0 14px 14px; color: #596259; line-height: 1.45; }
+    .wf-source-image-preview { display: block; max-width: min(320px, calc(100% - 28px)); max-height: 220px; margin: 0 14px 14px; padding: 12px; border: 1px solid #d7dcd4; border-radius: 6px; background: #f8faf7; object-fit: contain; }
+    pre { margin: 0; width: 100%; max-width: 100%; max-height: 64vh; overflow: auto; border-top: 1px solid #d7dcd4; background: #0d1117; color: #e6edf3; padding: 16px; font-size: 0.86rem; line-height: 1.55; tab-size: 2; white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
+    pre code { display: block; min-width: 0; background: transparent; color: inherit; border-radius: 0; padding: 0; white-space: inherit; overflow-wrap: inherit; word-break: inherit; }
+    pre code span { overflow-wrap: inherit; word-break: inherit; }
+    .wf-generated { width: min(1120px, calc(100% - 32px)); margin: 0 auto; padding: 8px 0 32px; text-align: center; color: rgba(49, 57, 49, 0.42); font-size: 0.78rem; flex: 0 0 auto; }
+    .wf-generated a { color: inherit; font-weight: 700; }
+  </style>
+
+  <script>
+    const canonicalLink = document.querySelector('link[rel="canonical"]');
+    if (canonicalLink && location.pathname.endsWith("/") && !location.search && !location.hash) {
+      const canonicalUrl = new URL(canonicalLink.href);
+      if (canonicalUrl.origin === location.origin && canonicalUrl.pathname === location.pathname.slice(0, -1)) {
+        history.replaceState(null, "", canonicalUrl.pathname);
+      }
+    }
+  </script>
+</head>
+<body>
+  <main>
+    <article class="wf-shell">
+      <header class="wf-masthead">
+        <div class="wf-page-header">
+          <nav class="wf-eyebrow wf-breadcrumbs" aria-label="Breadcrumb">
+<a href="/test-inn-ambush">test-inn-ambush</a> <span aria-hidden="true">/</span> <a href="/test-inn-ambush/world">world</a> <span aria-hidden="true">/</span> <a href="/test-inn-ambush/world/calendars">calendars</a> <span aria-hidden="true">/</span> <span aria-current="page">inn-ambush-calendar</span>
+          </nav>
+
+        </div>
+        <div class="wf-hero">
+        <h1>Inn Ambush custom calendar</h1>
+        <p class="wf-classes">a <a href="http://www.w3.org/ns/dcat#Dataset">dcat:Dataset</a>, <a href="https://spectacular-voyage.github.io/stagecraft/ontology/temporaenum/Calendar">temp:Calendar</a></p>
+        <p class="wf-summary">Fixture custom calendar for deriving prose world time from world-clock axis offsets. Curated CSV tables are the permanent authoring surface; this Turtle is their RDF projection for runtime reads.</p>
+        <table class="wf-metadata wf-hero-metadata">
+          <colgroup>
+            <col class="wf-metadata-key">
+            <col>
+            <col class="wf-metadata-key">
+            <col>
+          </colgroup>
+          <tbody>
+          <tr><th scope="row">Canonical IRI</th><td colspan="3"><span>https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar</span></td></tr>
+          <tr><th scope="row">Working File</th><td colspan="3"><a href="/test-inn-ambush/world/calendars/inn-ambush-calendar/calendar.ttl">world/calendars/inn-ambush-calendar/calendar.ttl</a></td></tr>
+          </tbody>
+        </table>
+
+        </div>
+      </header>
+    <section class="wf-section">
+      <details class="wf-properties" open>
+        <summary>Properties</summary>
+        <table class="wf-metadata">
+          <tbody>
+          <tr><th scope="row"><a class="wf-term wf-term-link" href="http://www.w3.org/ns/dcat#distribution" title="http://www.w3.org/ns/dcat#distribution">dcat:distribution</a></th><td><a href="https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/bands-csv">https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/bands-csv</a></td></tr>
+          <tr><th scope="row"><a class="wf-term wf-term-link" href="http://www.w3.org/ns/dcat#distribution" title="http://www.w3.org/ns/dcat#distribution">dcat:distribution</a></th><td><a href="https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/calendar-csvw">https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/calendar-csvw</a></td></tr>
+          <tr><th scope="row"><a class="wf-term wf-term-link" href="http://www.w3.org/ns/dcat#distribution" title="http://www.w3.org/ns/dcat#distribution">dcat:distribution</a></th><td><a href="https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/months-csv">https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/months-csv</a></td></tr>
+          <tr><th scope="row"><a class="wf-term wf-term-link" href="http://www.w3.org/ns/dcat#distribution" title="http://www.w3.org/ns/dcat#distribution">dcat:distribution</a></th><td><a href="https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/seasons-csv">https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/seasons-csv</a></td></tr>
+          <tr><th scope="row"><a class="wf-term wf-term-link" href="http://www.w3.org/ns/dcat#distribution" title="http://www.w3.org/ns/dcat#distribution">dcat:distribution</a></th><td><a href="https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/weekdays-csv">https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/weekdays-csv</a></td></tr>
+          <tr><th scope="row"><a class="wf-term wf-term-link" href="http://purl.org/dc/terms/created" title="http://purl.org/dc/terms/created">dcterms:created</a></th><td><span>2026-07-05</span></td></tr>
+          <tr><th scope="row"><a class="wf-term wf-term-link" href="http://purl.org/dc/terms/description" title="http://purl.org/dc/terms/description">dcterms:description</a></th><td><span>Fixture custom calendar for deriving prose world time from world-clock axis offsets. Curated CSV tables are the permanent authoring surface; this Turtle is their RDF projection for runtime reads.</span></td></tr>
+          <tr><th scope="row"><a class="wf-term wf-term-link" href="http://purl.org/dc/terms/title" title="http://purl.org/dc/terms/title">dcterms:title</a></th><td><span>Inn Ambush custom calendar</span></td></tr>
+          <tr><th scope="row"><a class="wf-term wf-term-link" href="http://www.w3.org/1999/02/22-rdf-syntax-ns#type" title="http://www.w3.org/1999/02/22-rdf-syntax-ns#type">rdf:type</a></th><td><a href="http://www.w3.org/ns/dcat#Dataset">dcat:Dataset</a></td></tr>
+          <tr><th scope="row"><a class="wf-term wf-term-link" href="http://www.w3.org/1999/02/22-rdf-syntax-ns#type" title="http://www.w3.org/1999/02/22-rdf-syntax-ns#type">rdf:type</a></th><td><a href="https://spectacular-voyage.github.io/stagecraft/ontology/temporaenum/Calendar">temp:Calendar</a></td></tr>
+          <tr><th scope="row"><a class="wf-term wf-term-link" href="https://spectacular-voyage.github.io/stagecraft/ontology/temporaenum/calendarKind" title="https://spectacular-voyage.github.io/stagecraft/ontology/temporaenum/calendarKind">temp:calendarKind</a></th><td><span>custom</span></td></tr>
+          <tr><th scope="row"><a class="wf-term wf-term-link" href="https://spectacular-voyage.github.io/stagecraft/ontology/temporaenum/epochDayOfYear" title="https://spectacular-voyage.github.io/stagecraft/ontology/temporaenum/epochDayOfYear">temp:epochDayOfYear</a></th><td><span>0</span></td></tr>
+          <tr><th scope="row"><a class="wf-term wf-term-link" href="https://spectacular-voyage.github.io/stagecraft/ontology/temporaenum/epochSecondOfDay" title="https://spectacular-voyage.github.io/stagecraft/ontology/temporaenum/epochSecondOfDay">temp:epochSecondOfDay</a></th><td><span>74580.0</span></td></tr>
+          <tr><th scope="row"><a class="wf-term wf-term-link" href="https://spectacular-voyage.github.io/stagecraft/ontology/temporaenum/epochWeekdayOrdinal" title="https://spectacular-voyage.github.io/stagecraft/ontology/temporaenum/epochWeekdayOrdinal">temp:epochWeekdayOrdinal</a></th><td><span>0</span></td></tr>
+          <tr><th scope="row"><a class="wf-term wf-term-link" href="https://spectacular-voyage.github.io/stagecraft/ontology/temporaenum/epochYear" title="https://spectacular-voyage.github.io/stagecraft/ontology/temporaenum/epochYear">temp:epochYear</a></th><td><span>1</span></td></tr>
+          <tr><th scope="row"><a class="wf-term wf-term-link" href="https://spectacular-voyage.github.io/stagecraft/ontology/temporaenum/hasMonth" title="https://spectacular-voyage.github.io/stagecraft/ontology/temporaenum/hasMonth">temp:hasMonth</a></th><td><a href="https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/month/deepfrost">https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/month/deepfrost</a></td></tr>
+          <tr><th scope="row"><a class="wf-term wf-term-link" href="https://spectacular-voyage.github.io/stagecraft/ontology/temporaenum/hasMonth" title="https://spectacular-voyage.github.io/stagecraft/ontology/temporaenum/hasMonth">temp:hasMonth</a></th><td><a href="https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/month/emberwane">https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/month/emberwane</a></td></tr>
+          <tr><th scope="row"><a class="wf-term wf-term-link" href="https://spectacular-voyage.github.io/stagecraft/ontology/temporaenum/hasMonth" title="https://spectacular-voyage.github.io/stagecraft/ontology/temporaenum/hasMonth">temp:hasMonth</a></th><td><a href="https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/month/frostwane">https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/month/frostwane</a></td></tr>
+          <tr><th scope="row"><a class="wf-term wf-term-link" href="https://spectacular-voyage.github.io/stagecraft/ontology/temporaenum/hasMonth" title="https://spectacular-voyage.github.io/stagecraft/ontology/temporaenum/hasMonth">temp:hasMonth</a></th><td><a href="https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/month/harvestwane">https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/month/harvestwane</a></td></tr>
+          <tr><th scope="row"><a class="wf-term wf-term-link" href="https://spectacular-voyage.github.io/stagecraft/ontology/temporaenum/hasMonth" title="https://spectacular-voyage.github.io/stagecraft/ontology/temporaenum/hasMonth">temp:hasMonth</a></th><td><a href="https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/month/highsun">https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/month/highsun</a></td></tr>
+          <tr><th scope="row"><a class="wf-term wf-term-link" href="https://spectacular-voyage.github.io/stagecraft/ontology/temporaenum/hasMonth" title="https://spectacular-voyage.github.io/stagecraft/ontology/temporaenum/hasMonth">temp:hasMonth</a></th><td><a href="https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/month/leafturn">https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/month/leafturn</a></td></tr>
+          <tr><th scope="row"><a class="wf-term wf-term-link" href="https://spectacular-voyage.github.io/stagecraft/ontology/temporaenum/hasMonth" title="https://spectacular-voyage.github.io/stagecraft/ontology/temporaenum/hasMonth">temp:hasMonth</a></th><td><a href="https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/month/longnight">https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/month/longnight</a></td></tr>
+          <tr><th scope="row"><a class="wf-term wf-term-link" href="https://spectacular-voyage.github.io/stagecraft/ontology/temporaenum/hasMonth" title="https://spectacular-voyage.github.io/stagecraft/ontology/temporaenum/hasMonth">temp:hasMonth</a></th><td><a href="https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/month/mistfall">https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/month/mistfall</a></td></tr>
+          <tr><th scope="row"><a class="wf-term wf-term-link" href="https://spectacular-voyage.github.io/stagecraft/ontology/temporaenum/hasMonth" title="https://spectacular-voyage.github.io/stagecraft/ontology/temporaenum/hasMonth">temp:hasMonth</a></th><td><a href="https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/month/rainmoot">https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/month/rainmoot</a></td></tr>
+          <tr><th scope="row"><a class="wf-term wf-term-link" href="https://spectacular-voyage.github.io/stagecraft/ontology/temporaenum/hasMonth" title="https://spectacular-voyage.github.io/stagecraft/ontology/temporaenum/hasMonth">temp:hasMonth</a></th><td><a href="https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/month/seedmoot">https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/month/seedmoot</a></td></tr>
+          <tr><th scope="row"><a class="wf-term wf-term-link" href="https://spectacular-voyage.github.io/stagecraft/ontology/temporaenum/hasMonth" title="https://spectacular-voyage.github.io/stagecraft/ontology/temporaenum/hasMonth">temp:hasMonth</a></th><td><a href="https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/month/suncrest">https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/month/suncrest</a></td></tr>
+          <tr><th scope="row"><a class="wf-term wf-term-link" href="https://spectacular-voyage.github.io/stagecraft/ontology/temporaenum/hasMonth" title="https://spectacular-voyage.github.io/stagecraft/ontology/temporaenum/hasMonth">temp:hasMonth</a></th><td><a href="https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/month/thawcall">https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/month/thawcall</a></td></tr>
+          <tr><th scope="row"><a class="wf-term wf-term-link" href="https://spectacular-voyage.github.io/stagecraft/ontology/temporaenum/hasSeason" title="https://spectacular-voyage.github.io/stagecraft/ontology/temporaenum/hasSeason">temp:hasSeason</a></th><td><a href="https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/season/deep-winter">https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/season/deep-winter</a></td></tr>
+          <tr><th scope="row"><a class="wf-term wf-term-link" href="https://spectacular-voyage.github.io/stagecraft/ontology/temporaenum/hasSeason" title="https://spectacular-voyage.github.io/stagecraft/ontology/temporaenum/hasSeason">temp:hasSeason</a></th><td><a href="https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/season/early-autumn">https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/season/early-autumn</a></td></tr>
+          <tr><th scope="row"><a class="wf-term wf-term-link" href="https://spectacular-voyage.github.io/stagecraft/ontology/temporaenum/hasSeason" title="https://spectacular-voyage.github.io/stagecraft/ontology/temporaenum/hasSeason">temp:hasSeason</a></th><td><a href="https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/season/high-summer">https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/season/high-summer</a></td></tr>
+          <tr><th scope="row"><a class="wf-term wf-term-link" href="https://spectacular-voyage.github.io/stagecraft/ontology/temporaenum/hasSeason" title="https://spectacular-voyage.github.io/stagecraft/ontology/temporaenum/hasSeason">temp:hasSeason</a></th><td><a href="https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/season/new-spring">https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/season/new-spring</a></td></tr>
+          <tr><th scope="row"><a class="wf-term wf-term-link" href="https://spectacular-voyage.github.io/stagecraft/ontology/temporaenum/hasTimeOfDayBand" title="https://spectacular-voyage.github.io/stagecraft/ontology/temporaenum/hasTimeOfDayBand">temp:hasTimeOfDayBand</a></th><td><a href="https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/band/afternoon">https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/band/afternoon</a></td></tr>
+          <tr><th scope="row"><a class="wf-term wf-term-link" href="https://spectacular-voyage.github.io/stagecraft/ontology/temporaenum/hasTimeOfDayBand" title="https://spectacular-voyage.github.io/stagecraft/ontology/temporaenum/hasTimeOfDayBand">temp:hasTimeOfDayBand</a></th><td><a href="https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/band/early-morning">https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/band/early-morning</a></td></tr>
+          <tr><th scope="row"><a class="wf-term wf-term-link" href="https://spectacular-voyage.github.io/stagecraft/ontology/temporaenum/hasTimeOfDayBand" title="https://spectacular-voyage.github.io/stagecraft/ontology/temporaenum/hasTimeOfDayBand">temp:hasTimeOfDayBand</a></th><td><a href="https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/band/late-evening">https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/band/late-evening</a></td></tr>
+          <tr><th scope="row"><a class="wf-term wf-term-link" href="https://spectacular-voyage.github.io/stagecraft/ontology/temporaenum/hasTimeOfDayBand" title="https://spectacular-voyage.github.io/stagecraft/ontology/temporaenum/hasTimeOfDayBand">temp:hasTimeOfDayBand</a></th><td><a href="https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/band/midday">https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/band/midday</a></td></tr>
+          <tr><th scope="row"><a class="wf-term wf-term-link" href="https://spectacular-voyage.github.io/stagecraft/ontology/temporaenum/hasTimeOfDayBand" title="https://spectacular-voyage.github.io/stagecraft/ontology/temporaenum/hasTimeOfDayBand">temp:hasTimeOfDayBand</a></th><td><a href="https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/band/midmorning">https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/band/midmorning</a></td></tr>
+          <tr><th scope="row"><a class="wf-term wf-term-link" href="https://spectacular-voyage.github.io/stagecraft/ontology/temporaenum/hasTimeOfDayBand" title="https://spectacular-voyage.github.io/stagecraft/ontology/temporaenum/hasTimeOfDayBand">temp:hasTimeOfDayBand</a></th><td><a href="https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/band/night-after-evening">https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/band/night-after-evening</a></td></tr>
+          <tr><th scope="row"><a class="wf-term wf-term-link" href="https://spectacular-voyage.github.io/stagecraft/ontology/temporaenum/hasTimeOfDayBand" title="https://spectacular-voyage.github.io/stagecraft/ontology/temporaenum/hasTimeOfDayBand">temp:hasTimeOfDayBand</a></th><td><a href="https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/band/night-before-dawn">https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/band/night-before-dawn</a></td></tr>
+          <tr><th scope="row"><a class="wf-term wf-term-link" href="https://spectacular-voyage.github.io/stagecraft/ontology/temporaenum/hasWeekday" title="https://spectacular-voyage.github.io/stagecraft/ontology/temporaenum/hasWeekday">temp:hasWeekday</a></th><td><a href="https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/weekday/ashday">https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/weekday/ashday</a></td></tr>
+          <tr><th scope="row"><a class="wf-term wf-term-link" href="https://spectacular-voyage.github.io/stagecraft/ontology/temporaenum/hasWeekday" title="https://spectacular-voyage.github.io/stagecraft/ontology/temporaenum/hasWeekday">temp:hasWeekday</a></th><td><a href="https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/weekday/barrowday">https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/weekday/barrowday</a></td></tr>
+          <tr><th scope="row"><a class="wf-term wf-term-link" href="https://spectacular-voyage.github.io/stagecraft/ontology/temporaenum/hasWeekday" title="https://spectacular-voyage.github.io/stagecraft/ontology/temporaenum/hasWeekday">temp:hasWeekday</a></th><td><a href="https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/weekday/coinday">https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/weekday/coinday</a></td></tr>
+          <tr><th scope="row"><a class="wf-term wf-term-link" href="https://spectacular-voyage.github.io/stagecraft/ontology/temporaenum/hasWeekday" title="https://spectacular-voyage.github.io/stagecraft/ontology/temporaenum/hasWeekday">temp:hasWeekday</a></th><td><a href="https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/weekday/driftday">https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/weekday/driftday</a></td></tr>
+          <tr><th scope="row"><a class="wf-term wf-term-link" href="https://spectacular-voyage.github.io/stagecraft/ontology/temporaenum/hasWeekday" title="https://spectacular-voyage.github.io/stagecraft/ontology/temporaenum/hasWeekday">temp:hasWeekday</a></th><td><a href="https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/weekday/eveday">https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/weekday/eveday</a></td></tr>
+          <tr><th scope="row"><a class="wf-term wf-term-link" href="https://spectacular-voyage.github.io/stagecraft/ontology/temporaenum/secondsPerDay" title="https://spectacular-voyage.github.io/stagecraft/ontology/temporaenum/secondsPerDay">temp:secondsPerDay</a></th><td><span>86400.0</span></td></tr>
+          </tbody>
+        </table>
+      </details>
+    </section>
+
+    <section class="wf-source">
+      <details open>
+        <summary>Latest historical manifestation file</summary>
+        <div class="wf-source-meta">
+          <span>world/calendars/inn-ambush-calendar/_history001/_s0001/ttl/calendar.ttl</span>
+          <a href="/test-inn-ambush/world/calendars/inn-ambush-calendar/_history001/_s0001/ttl/calendar.ttl">Raw file</a>
+        </div>
+<pre class="shiki github-dark-default" style="background-color:#0d1117;color:#e6edf3" tabindex="0"><code><span class="line"><span style="color:#FF7B72">@prefix dcat:</span><span style="color:#FFA657"> &#x3C;http://www.w3.org/ns/dcat#></span><span style="color:#E6EDF3"> .</span></span>
+<span class="line"><span style="color:#FF7B72">@prefix dcterms:</span><span style="color:#FFA657"> &#x3C;http://purl.org/dc/terms/></span><span style="color:#E6EDF3"> .</span></span>
+<span class="line"><span style="color:#FF7B72">@prefix rdfs:</span><span style="color:#FFA657"> &#x3C;http://www.w3.org/2000/01/rdf-schema#></span><span style="color:#E6EDF3"> .</span></span>
+<span class="line"><span style="color:#FF7B72">@prefix temp:</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/stagecraft/ontology/temporaenum/></span><span style="color:#E6EDF3"> .</span></span>
+<span class="line"><span style="color:#FF7B72">@prefix xsd:</span><span style="color:#FFA657"> &#x3C;http://www.w3.org/2001/XMLSchema#></span><span style="color:#E6EDF3"> .</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FFA657">&#x3C;https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar></span></span>
+<span class="line"><span style="color:#FF7B72">  a</span><span style="color:#FF7B72"> dcat:</span><span style="color:#79C0FF">Dataset</span><span style="color:#E6EDF3">, </span><span style="color:#FF7B72">temp:</span><span style="color:#79C0FF">Calendar</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dcterms:</span><span style="color:#79C0FF">title</span><span style="color:#A5D6FF"> "Inn Ambush custom calendar"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dcterms:</span><span style="color:#79C0FF">description</span><span style="color:#A5D6FF"> "Fixture custom calendar for deriving prose world time from world-clock axis offsets. Curated CSV tables are the permanent authoring surface; this Turtle is their RDF projection for runtime reads."</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dcterms:</span><span style="color:#79C0FF">created</span><span style="color:#A5D6FF"> "2026-07-05"</span><span style="color:#E6EDF3">^^</span><span style="color:#FF7B72">xsd:</span><span style="color:#79C0FF">date</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  temp:</span><span style="color:#79C0FF">calendarKind</span><span style="color:#A5D6FF"> "custom"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  temp:</span><span style="color:#79C0FF">secondsPerDay</span><span style="color:#79C0FF"> 86400.0</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  temp:</span><span style="color:#79C0FF">epochYear</span><span style="color:#79C0FF"> 1</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  temp:</span><span style="color:#79C0FF">epochDayOfYear</span><span style="color:#79C0FF"> 0</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  temp:</span><span style="color:#79C0FF">epochSecondOfDay</span><span style="color:#79C0FF"> 74580.0</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  temp:</span><span style="color:#79C0FF">epochWeekdayOrdinal</span><span style="color:#79C0FF"> 0</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  temp:</span><span style="color:#79C0FF">hasWeekday</span></span>
+<span class="line"><span style="color:#FFA657">    &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/weekday/ashday></span><span style="color:#E6EDF3">,</span></span>
+<span class="line"><span style="color:#FFA657">    &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/weekday/barrowday></span><span style="color:#E6EDF3">,</span></span>
+<span class="line"><span style="color:#FFA657">    &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/weekday/coinday></span><span style="color:#E6EDF3">,</span></span>
+<span class="line"><span style="color:#FFA657">    &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/weekday/driftday></span><span style="color:#E6EDF3">,</span></span>
+<span class="line"><span style="color:#FFA657">    &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/weekday/eveday></span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  temp:</span><span style="color:#79C0FF">hasMonth</span></span>
+<span class="line"><span style="color:#FFA657">    &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/month/emberwane></span><span style="color:#E6EDF3">,</span></span>
+<span class="line"><span style="color:#FFA657">    &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/month/rainmoot></span><span style="color:#E6EDF3">,</span></span>
+<span class="line"><span style="color:#FFA657">    &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/month/leafturn></span><span style="color:#E6EDF3">,</span></span>
+<span class="line"><span style="color:#FFA657">    &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/month/frostwane></span><span style="color:#E6EDF3">,</span></span>
+<span class="line"><span style="color:#FFA657">    &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/month/deepfrost></span><span style="color:#E6EDF3">,</span></span>
+<span class="line"><span style="color:#FFA657">    &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/month/thawcall></span><span style="color:#E6EDF3">,</span></span>
+<span class="line"><span style="color:#FFA657">    &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/month/seedmoot></span><span style="color:#E6EDF3">,</span></span>
+<span class="line"><span style="color:#FFA657">    &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/month/suncrest></span><span style="color:#E6EDF3">,</span></span>
+<span class="line"><span style="color:#FFA657">    &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/month/highsun></span><span style="color:#E6EDF3">,</span></span>
+<span class="line"><span style="color:#FFA657">    &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/month/harvestwane></span><span style="color:#E6EDF3">,</span></span>
+<span class="line"><span style="color:#FFA657">    &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/month/mistfall></span><span style="color:#E6EDF3">,</span></span>
+<span class="line"><span style="color:#FFA657">    &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/month/longnight></span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  temp:</span><span style="color:#79C0FF">hasSeason</span></span>
+<span class="line"><span style="color:#FFA657">    &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/season/early-autumn></span><span style="color:#E6EDF3">,</span></span>
+<span class="line"><span style="color:#FFA657">    &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/season/deep-winter></span><span style="color:#E6EDF3">,</span></span>
+<span class="line"><span style="color:#FFA657">    &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/season/new-spring></span><span style="color:#E6EDF3">,</span></span>
+<span class="line"><span style="color:#FFA657">    &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/season/high-summer></span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  temp:</span><span style="color:#79C0FF">hasTimeOfDayBand</span></span>
+<span class="line"><span style="color:#FFA657">    &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/band/night-before-dawn></span><span style="color:#E6EDF3">,</span></span>
+<span class="line"><span style="color:#FFA657">    &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/band/early-morning></span><span style="color:#E6EDF3">,</span></span>
+<span class="line"><span style="color:#FFA657">    &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/band/midmorning></span><span style="color:#E6EDF3">,</span></span>
+<span class="line"><span style="color:#FFA657">    &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/band/midday></span><span style="color:#E6EDF3">,</span></span>
+<span class="line"><span style="color:#FFA657">    &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/band/afternoon></span><span style="color:#E6EDF3">,</span></span>
+<span class="line"><span style="color:#FFA657">    &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/band/late-evening></span><span style="color:#E6EDF3">,</span></span>
+<span class="line"><span style="color:#FFA657">    &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/band/night-after-evening></span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dcat:</span><span style="color:#79C0FF">distribution</span></span>
+<span class="line"><span style="color:#FFA657">    &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/weekdays-csv></span><span style="color:#E6EDF3">,</span></span>
+<span class="line"><span style="color:#FFA657">    &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/months-csv></span><span style="color:#E6EDF3">,</span></span>
+<span class="line"><span style="color:#FFA657">    &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/seasons-csv></span><span style="color:#E6EDF3">,</span></span>
+<span class="line"><span style="color:#FFA657">    &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/bands-csv></span><span style="color:#E6EDF3">,</span></span>
+<span class="line"><span style="color:#FFA657">    &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/calendar-csvw></span><span style="color:#E6EDF3"> .</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FFA657">&#x3C;https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/weekdays-csv></span></span>
+<span class="line"><span style="color:#FF7B72">  a</span><span style="color:#FF7B72"> dcat:</span><span style="color:#79C0FF">Distribution</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dcterms:</span><span style="color:#79C0FF">title</span><span style="color:#A5D6FF"> "Inn Ambush weekday curated CSV"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dcat:</span><span style="color:#79C0FF">downloadURL</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/weekdays.csv></span><span style="color:#E6EDF3"> .</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FFA657">&#x3C;https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/months-csv></span></span>
+<span class="line"><span style="color:#FF7B72">  a</span><span style="color:#FF7B72"> dcat:</span><span style="color:#79C0FF">Distribution</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dcterms:</span><span style="color:#79C0FF">title</span><span style="color:#A5D6FF"> "Inn Ambush month curated CSV"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dcat:</span><span style="color:#79C0FF">downloadURL</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/months.csv></span><span style="color:#E6EDF3"> .</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FFA657">&#x3C;https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/seasons-csv></span></span>
+<span class="line"><span style="color:#FF7B72">  a</span><span style="color:#FF7B72"> dcat:</span><span style="color:#79C0FF">Distribution</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dcterms:</span><span style="color:#79C0FF">title</span><span style="color:#A5D6FF"> "Inn Ambush season curated CSV"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dcat:</span><span style="color:#79C0FF">downloadURL</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/seasons.csv></span><span style="color:#E6EDF3"> .</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FFA657">&#x3C;https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/bands-csv></span></span>
+<span class="line"><span style="color:#FF7B72">  a</span><span style="color:#FF7B72"> dcat:</span><span style="color:#79C0FF">Distribution</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dcterms:</span><span style="color:#79C0FF">title</span><span style="color:#A5D6FF"> "Inn Ambush time-of-day band curated CSV"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dcat:</span><span style="color:#79C0FF">downloadURL</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/bands.csv></span><span style="color:#E6EDF3"> .</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FFA657">&#x3C;https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/calendar-csvw></span></span>
+<span class="line"><span style="color:#FF7B72">  a</span><span style="color:#FF7B72"> dcat:</span><span style="color:#79C0FF">Distribution</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dcterms:</span><span style="color:#79C0FF">title</span><span style="color:#A5D6FF"> "Inn Ambush calendar CSVW mapping"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  dcat:</span><span style="color:#79C0FF">downloadURL</span><span style="color:#FFA657"> &#x3C;https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/calendar.csvw.json></span><span style="color:#E6EDF3"> .</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FFA657">&#x3C;https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/weekday/ashday></span></span>
+<span class="line"><span style="color:#FF7B72">  a</span><span style="color:#FF7B72"> temp:</span><span style="color:#79C0FF">CalendarWeekday</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  rdfs:</span><span style="color:#79C0FF">label</span><span style="color:#A5D6FF"> "Ashday"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  temp:</span><span style="color:#79C0FF">calendarKey</span><span style="color:#A5D6FF"> "ashday"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  temp:</span><span style="color:#79C0FF">ordinal</span><span style="color:#79C0FF"> 0</span><span style="color:#E6EDF3"> .</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FFA657">&#x3C;https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/weekday/barrowday></span></span>
+<span class="line"><span style="color:#FF7B72">  a</span><span style="color:#FF7B72"> temp:</span><span style="color:#79C0FF">CalendarWeekday</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  rdfs:</span><span style="color:#79C0FF">label</span><span style="color:#A5D6FF"> "Barrowday"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  temp:</span><span style="color:#79C0FF">calendarKey</span><span style="color:#A5D6FF"> "barrowday"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  temp:</span><span style="color:#79C0FF">ordinal</span><span style="color:#79C0FF"> 1</span><span style="color:#E6EDF3"> .</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FFA657">&#x3C;https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/weekday/coinday></span></span>
+<span class="line"><span style="color:#FF7B72">  a</span><span style="color:#FF7B72"> temp:</span><span style="color:#79C0FF">CalendarWeekday</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  rdfs:</span><span style="color:#79C0FF">label</span><span style="color:#A5D6FF"> "Coinday"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  temp:</span><span style="color:#79C0FF">calendarKey</span><span style="color:#A5D6FF"> "coinday"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  temp:</span><span style="color:#79C0FF">ordinal</span><span style="color:#79C0FF"> 2</span><span style="color:#E6EDF3"> .</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FFA657">&#x3C;https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/weekday/driftday></span></span>
+<span class="line"><span style="color:#FF7B72">  a</span><span style="color:#FF7B72"> temp:</span><span style="color:#79C0FF">CalendarWeekday</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  rdfs:</span><span style="color:#79C0FF">label</span><span style="color:#A5D6FF"> "Driftday"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  temp:</span><span style="color:#79C0FF">calendarKey</span><span style="color:#A5D6FF"> "driftday"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  temp:</span><span style="color:#79C0FF">ordinal</span><span style="color:#79C0FF"> 3</span><span style="color:#E6EDF3"> .</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FFA657">&#x3C;https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/weekday/eveday></span></span>
+<span class="line"><span style="color:#FF7B72">  a</span><span style="color:#FF7B72"> temp:</span><span style="color:#79C0FF">CalendarWeekday</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  rdfs:</span><span style="color:#79C0FF">label</span><span style="color:#A5D6FF"> "Eveday"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  temp:</span><span style="color:#79C0FF">calendarKey</span><span style="color:#A5D6FF"> "eveday"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  temp:</span><span style="color:#79C0FF">ordinal</span><span style="color:#79C0FF"> 4</span><span style="color:#E6EDF3"> .</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FFA657">&#x3C;https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/month/emberwane></span></span>
+<span class="line"><span style="color:#FF7B72">  a</span><span style="color:#FF7B72"> temp:</span><span style="color:#79C0FF">CalendarMonth</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  rdfs:</span><span style="color:#79C0FF">label</span><span style="color:#A5D6FF"> "Emberwane"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  temp:</span><span style="color:#79C0FF">calendarKey</span><span style="color:#A5D6FF"> "emberwane"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  temp:</span><span style="color:#79C0FF">ordinal</span><span style="color:#79C0FF"> 0</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  temp:</span><span style="color:#79C0FF">daysInMonth</span><span style="color:#79C0FF"> 30</span><span style="color:#E6EDF3"> .</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FFA657">&#x3C;https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/month/rainmoot></span></span>
+<span class="line"><span style="color:#FF7B72">  a</span><span style="color:#FF7B72"> temp:</span><span style="color:#79C0FF">CalendarMonth</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  rdfs:</span><span style="color:#79C0FF">label</span><span style="color:#A5D6FF"> "Rainmoot"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  temp:</span><span style="color:#79C0FF">calendarKey</span><span style="color:#A5D6FF"> "rainmoot"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  temp:</span><span style="color:#79C0FF">ordinal</span><span style="color:#79C0FF"> 1</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  temp:</span><span style="color:#79C0FF">daysInMonth</span><span style="color:#79C0FF"> 30</span><span style="color:#E6EDF3"> .</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FFA657">&#x3C;https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/month/leafturn></span></span>
+<span class="line"><span style="color:#FF7B72">  a</span><span style="color:#FF7B72"> temp:</span><span style="color:#79C0FF">CalendarMonth</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  rdfs:</span><span style="color:#79C0FF">label</span><span style="color:#A5D6FF"> "Leafturn"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  temp:</span><span style="color:#79C0FF">calendarKey</span><span style="color:#A5D6FF"> "leafturn"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  temp:</span><span style="color:#79C0FF">ordinal</span><span style="color:#79C0FF"> 2</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  temp:</span><span style="color:#79C0FF">daysInMonth</span><span style="color:#79C0FF"> 30</span><span style="color:#E6EDF3"> .</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FFA657">&#x3C;https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/month/frostwane></span></span>
+<span class="line"><span style="color:#FF7B72">  a</span><span style="color:#FF7B72"> temp:</span><span style="color:#79C0FF">CalendarMonth</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  rdfs:</span><span style="color:#79C0FF">label</span><span style="color:#A5D6FF"> "Frostwane"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  temp:</span><span style="color:#79C0FF">calendarKey</span><span style="color:#A5D6FF"> "frostwane"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  temp:</span><span style="color:#79C0FF">ordinal</span><span style="color:#79C0FF"> 3</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  temp:</span><span style="color:#79C0FF">daysInMonth</span><span style="color:#79C0FF"> 30</span><span style="color:#E6EDF3"> .</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FFA657">&#x3C;https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/month/deepfrost></span></span>
+<span class="line"><span style="color:#FF7B72">  a</span><span style="color:#FF7B72"> temp:</span><span style="color:#79C0FF">CalendarMonth</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  rdfs:</span><span style="color:#79C0FF">label</span><span style="color:#A5D6FF"> "Deepfrost"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  temp:</span><span style="color:#79C0FF">calendarKey</span><span style="color:#A5D6FF"> "deepfrost"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  temp:</span><span style="color:#79C0FF">ordinal</span><span style="color:#79C0FF"> 4</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  temp:</span><span style="color:#79C0FF">daysInMonth</span><span style="color:#79C0FF"> 30</span><span style="color:#E6EDF3"> .</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FFA657">&#x3C;https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/month/thawcall></span></span>
+<span class="line"><span style="color:#FF7B72">  a</span><span style="color:#FF7B72"> temp:</span><span style="color:#79C0FF">CalendarMonth</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  rdfs:</span><span style="color:#79C0FF">label</span><span style="color:#A5D6FF"> "Thawcall"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  temp:</span><span style="color:#79C0FF">calendarKey</span><span style="color:#A5D6FF"> "thawcall"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  temp:</span><span style="color:#79C0FF">ordinal</span><span style="color:#79C0FF"> 5</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  temp:</span><span style="color:#79C0FF">daysInMonth</span><span style="color:#79C0FF"> 30</span><span style="color:#E6EDF3"> .</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FFA657">&#x3C;https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/month/seedmoot></span></span>
+<span class="line"><span style="color:#FF7B72">  a</span><span style="color:#FF7B72"> temp:</span><span style="color:#79C0FF">CalendarMonth</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  rdfs:</span><span style="color:#79C0FF">label</span><span style="color:#A5D6FF"> "Seedmoot"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  temp:</span><span style="color:#79C0FF">calendarKey</span><span style="color:#A5D6FF"> "seedmoot"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  temp:</span><span style="color:#79C0FF">ordinal</span><span style="color:#79C0FF"> 6</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  temp:</span><span style="color:#79C0FF">daysInMonth</span><span style="color:#79C0FF"> 30</span><span style="color:#E6EDF3"> .</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FFA657">&#x3C;https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/month/suncrest></span></span>
+<span class="line"><span style="color:#FF7B72">  a</span><span style="color:#FF7B72"> temp:</span><span style="color:#79C0FF">CalendarMonth</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  rdfs:</span><span style="color:#79C0FF">label</span><span style="color:#A5D6FF"> "Suncrest"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  temp:</span><span style="color:#79C0FF">calendarKey</span><span style="color:#A5D6FF"> "suncrest"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  temp:</span><span style="color:#79C0FF">ordinal</span><span style="color:#79C0FF"> 7</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  temp:</span><span style="color:#79C0FF">daysInMonth</span><span style="color:#79C0FF"> 30</span><span style="color:#E6EDF3"> .</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FFA657">&#x3C;https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/month/highsun></span></span>
+<span class="line"><span style="color:#FF7B72">  a</span><span style="color:#FF7B72"> temp:</span><span style="color:#79C0FF">CalendarMonth</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  rdfs:</span><span style="color:#79C0FF">label</span><span style="color:#A5D6FF"> "Highsun"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  temp:</span><span style="color:#79C0FF">calendarKey</span><span style="color:#A5D6FF"> "highsun"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  temp:</span><span style="color:#79C0FF">ordinal</span><span style="color:#79C0FF"> 8</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  temp:</span><span style="color:#79C0FF">daysInMonth</span><span style="color:#79C0FF"> 30</span><span style="color:#E6EDF3"> .</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FFA657">&#x3C;https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/month/harvestwane></span></span>
+<span class="line"><span style="color:#FF7B72">  a</span><span style="color:#FF7B72"> temp:</span><span style="color:#79C0FF">CalendarMonth</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  rdfs:</span><span style="color:#79C0FF">label</span><span style="color:#A5D6FF"> "Harvestwane"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  temp:</span><span style="color:#79C0FF">calendarKey</span><span style="color:#A5D6FF"> "harvestwane"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  temp:</span><span style="color:#79C0FF">ordinal</span><span style="color:#79C0FF"> 9</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  temp:</span><span style="color:#79C0FF">daysInMonth</span><span style="color:#79C0FF"> 30</span><span style="color:#E6EDF3"> .</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FFA657">&#x3C;https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/month/mistfall></span></span>
+<span class="line"><span style="color:#FF7B72">  a</span><span style="color:#FF7B72"> temp:</span><span style="color:#79C0FF">CalendarMonth</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  rdfs:</span><span style="color:#79C0FF">label</span><span style="color:#A5D6FF"> "Mistfall"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  temp:</span><span style="color:#79C0FF">calendarKey</span><span style="color:#A5D6FF"> "mistfall"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  temp:</span><span style="color:#79C0FF">ordinal</span><span style="color:#79C0FF"> 10</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  temp:</span><span style="color:#79C0FF">daysInMonth</span><span style="color:#79C0FF"> 30</span><span style="color:#E6EDF3"> .</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FFA657">&#x3C;https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/month/longnight></span></span>
+<span class="line"><span style="color:#FF7B72">  a</span><span style="color:#FF7B72"> temp:</span><span style="color:#79C0FF">CalendarMonth</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  rdfs:</span><span style="color:#79C0FF">label</span><span style="color:#A5D6FF"> "Longnight"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  temp:</span><span style="color:#79C0FF">calendarKey</span><span style="color:#A5D6FF"> "longnight"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  temp:</span><span style="color:#79C0FF">ordinal</span><span style="color:#79C0FF"> 11</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  temp:</span><span style="color:#79C0FF">daysInMonth</span><span style="color:#79C0FF"> 30</span><span style="color:#E6EDF3"> .</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FFA657">&#x3C;https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/season/early-autumn></span></span>
+<span class="line"><span style="color:#FF7B72">  a</span><span style="color:#FF7B72"> temp:</span><span style="color:#79C0FF">CalendarSeason</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  rdfs:</span><span style="color:#79C0FF">label</span><span style="color:#A5D6FF"> "early autumn"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  temp:</span><span style="color:#79C0FF">calendarKey</span><span style="color:#A5D6FF"> "early-autumn"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  temp:</span><span style="color:#79C0FF">startDayOfYear</span><span style="color:#79C0FF"> 0</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  temp:</span><span style="color:#79C0FF">endDayOfYear</span><span style="color:#79C0FF"> 90</span><span style="color:#E6EDF3"> .</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FFA657">&#x3C;https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/season/deep-winter></span></span>
+<span class="line"><span style="color:#FF7B72">  a</span><span style="color:#FF7B72"> temp:</span><span style="color:#79C0FF">CalendarSeason</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  rdfs:</span><span style="color:#79C0FF">label</span><span style="color:#A5D6FF"> "deep winter"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  temp:</span><span style="color:#79C0FF">calendarKey</span><span style="color:#A5D6FF"> "deep-winter"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  temp:</span><span style="color:#79C0FF">startDayOfYear</span><span style="color:#79C0FF"> 90</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  temp:</span><span style="color:#79C0FF">endDayOfYear</span><span style="color:#79C0FF"> 180</span><span style="color:#E6EDF3"> .</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FFA657">&#x3C;https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/season/new-spring></span></span>
+<span class="line"><span style="color:#FF7B72">  a</span><span style="color:#FF7B72"> temp:</span><span style="color:#79C0FF">CalendarSeason</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  rdfs:</span><span style="color:#79C0FF">label</span><span style="color:#A5D6FF"> "new spring"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  temp:</span><span style="color:#79C0FF">calendarKey</span><span style="color:#A5D6FF"> "new-spring"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  temp:</span><span style="color:#79C0FF">startDayOfYear</span><span style="color:#79C0FF"> 180</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  temp:</span><span style="color:#79C0FF">endDayOfYear</span><span style="color:#79C0FF"> 270</span><span style="color:#E6EDF3"> .</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FFA657">&#x3C;https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/season/high-summer></span></span>
+<span class="line"><span style="color:#FF7B72">  a</span><span style="color:#FF7B72"> temp:</span><span style="color:#79C0FF">CalendarSeason</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  rdfs:</span><span style="color:#79C0FF">label</span><span style="color:#A5D6FF"> "high summer"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  temp:</span><span style="color:#79C0FF">calendarKey</span><span style="color:#A5D6FF"> "high-summer"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  temp:</span><span style="color:#79C0FF">startDayOfYear</span><span style="color:#79C0FF"> 270</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  temp:</span><span style="color:#79C0FF">endDayOfYear</span><span style="color:#79C0FF"> 360</span><span style="color:#E6EDF3"> .</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FFA657">&#x3C;https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/band/night-before-dawn></span></span>
+<span class="line"><span style="color:#FF7B72">  a</span><span style="color:#FF7B72"> temp:</span><span style="color:#79C0FF">TimeOfDayBand</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  rdfs:</span><span style="color:#79C0FF">label</span><span style="color:#A5D6FF"> "night"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  temp:</span><span style="color:#79C0FF">calendarKey</span><span style="color:#A5D6FF"> "night-before-dawn"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  temp:</span><span style="color:#79C0FF">fromHour</span><span style="color:#79C0FF"> 0.0</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  temp:</span><span style="color:#79C0FF">toHour</span><span style="color:#79C0FF"> 6.0</span><span style="color:#E6EDF3"> .</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FFA657">&#x3C;https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/band/early-morning></span></span>
+<span class="line"><span style="color:#FF7B72">  a</span><span style="color:#FF7B72"> temp:</span><span style="color:#79C0FF">TimeOfDayBand</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  rdfs:</span><span style="color:#79C0FF">label</span><span style="color:#A5D6FF"> "early morning"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  temp:</span><span style="color:#79C0FF">calendarKey</span><span style="color:#A5D6FF"> "early-morning"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  temp:</span><span style="color:#79C0FF">fromHour</span><span style="color:#79C0FF"> 6.0</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  temp:</span><span style="color:#79C0FF">toHour</span><span style="color:#79C0FF"> 9.0</span><span style="color:#E6EDF3"> .</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FFA657">&#x3C;https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/band/midmorning></span></span>
+<span class="line"><span style="color:#FF7B72">  a</span><span style="color:#FF7B72"> temp:</span><span style="color:#79C0FF">TimeOfDayBand</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  rdfs:</span><span style="color:#79C0FF">label</span><span style="color:#A5D6FF"> "midmorning"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  temp:</span><span style="color:#79C0FF">calendarKey</span><span style="color:#A5D6FF"> "midmorning"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  temp:</span><span style="color:#79C0FF">fromHour</span><span style="color:#79C0FF"> 9.0</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  temp:</span><span style="color:#79C0FF">toHour</span><span style="color:#79C0FF"> 12.0</span><span style="color:#E6EDF3"> .</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FFA657">&#x3C;https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/band/midday></span></span>
+<span class="line"><span style="color:#FF7B72">  a</span><span style="color:#FF7B72"> temp:</span><span style="color:#79C0FF">TimeOfDayBand</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  rdfs:</span><span style="color:#79C0FF">label</span><span style="color:#A5D6FF"> "midday"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  temp:</span><span style="color:#79C0FF">calendarKey</span><span style="color:#A5D6FF"> "midday"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  temp:</span><span style="color:#79C0FF">fromHour</span><span style="color:#79C0FF"> 12.0</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  temp:</span><span style="color:#79C0FF">toHour</span><span style="color:#79C0FF"> 14.0</span><span style="color:#E6EDF3"> .</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FFA657">&#x3C;https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/band/afternoon></span></span>
+<span class="line"><span style="color:#FF7B72">  a</span><span style="color:#FF7B72"> temp:</span><span style="color:#79C0FF">TimeOfDayBand</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  rdfs:</span><span style="color:#79C0FF">label</span><span style="color:#A5D6FF"> "afternoon"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  temp:</span><span style="color:#79C0FF">calendarKey</span><span style="color:#A5D6FF"> "afternoon"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  temp:</span><span style="color:#79C0FF">fromHour</span><span style="color:#79C0FF"> 14.0</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  temp:</span><span style="color:#79C0FF">toHour</span><span style="color:#79C0FF"> 18.0</span><span style="color:#E6EDF3"> .</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FFA657">&#x3C;https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/band/late-evening></span></span>
+<span class="line"><span style="color:#FF7B72">  a</span><span style="color:#FF7B72"> temp:</span><span style="color:#79C0FF">TimeOfDayBand</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  rdfs:</span><span style="color:#79C0FF">label</span><span style="color:#A5D6FF"> "late evening"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  temp:</span><span style="color:#79C0FF">calendarKey</span><span style="color:#A5D6FF"> "late-evening"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  temp:</span><span style="color:#79C0FF">fromHour</span><span style="color:#79C0FF"> 18.0</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  temp:</span><span style="color:#79C0FF">toHour</span><span style="color:#79C0FF"> 21.0</span><span style="color:#E6EDF3"> .</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FFA657">&#x3C;https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/band/night-after-evening></span></span>
+<span class="line"><span style="color:#FF7B72">  a</span><span style="color:#FF7B72"> temp:</span><span style="color:#79C0FF">TimeOfDayBand</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  rdfs:</span><span style="color:#79C0FF">label</span><span style="color:#A5D6FF"> "night"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  temp:</span><span style="color:#79C0FF">calendarKey</span><span style="color:#A5D6FF"> "night-after-evening"</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  temp:</span><span style="color:#79C0FF">fromHour</span><span style="color:#79C0FF"> 21.0</span><span style="color:#E6EDF3"> ;</span></span>
+<span class="line"><span style="color:#FF7B72">  temp:</span><span style="color:#79C0FF">toHour</span><span style="color:#79C0FF"> 24.0</span><span style="color:#E6EDF3"> .</span></span>
+<span class="line"></span></code></pre>
+      </details>
+    </section>    <section class="wf-section">
+      <details class="wf-history">
+        <summary>History</summary>
+        <div class="wf-history-tree">
+          <details class="wf-history-node wf-history-node--history" open>
+            <summary class="wf-history-node-header"><a href="/test-inn-ambush/world/calendars/inn-ambush-calendar/_history001">world/calendars/inn-ambush-calendar/_history001</a></summary>
+            <details class="wf-history-node wf-history-node--state" open>
+              <summary class="wf-history-node-header"><a href="/test-inn-ambush/world/calendars/inn-ambush-calendar/_history001/_s0001">_s0001</a></summary>
+              <details class="wf-history-node wf-history-node--manifestation" open>
+                <summary class="wf-history-node-header"><a href="/test-inn-ambush/world/calendars/inn-ambush-calendar/_history001/_s0001/ttl">ttl</a></summary>
+                <div class="wf-history-node wf-history-node--file">
+                  <div class="wf-history-node-header"><a href="/test-inn-ambush/world/calendars/inn-ambush-calendar/_history001/_s0001/ttl/calendar.ttl" class="wf-history-file-iri">https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/_history001/_s0001/ttl/calendar.ttl</a></div>
+                </div>
+              </details>
+            </details>
+          </details>
+        </div>
+      </details>
+    </section>
+
+    </article>
+  </main>
+  <footer class="wf-generated">
+    Generated on <span class="wf-term wf-date-tip" tabindex="0" title="2026-07-07T01:18:00.000Z" data-tooltip="2026-07-07T01:18:00.000Z">July 7, 2026</span> by <a href="https://github.com/semantic-flow/weave/">Weave</a>
+  </footer>
+</body>
+</html>

@@ -383,3 +383,43 @@
 <rules/dynamis/srd-5-2-1/d20-test/index.html> a sflo:ResourcePage, sflo:LocatedFile .
 
 <rules/dynamis/srd-5-2-1/d20-test/_knop/index.html> a sflo:ResourcePage, sflo:LocatedFile .
+
+<_mesh> sflo:hasKnop <world/calendars/inn-ambush-calendar/_knop> .
+
+<world/calendars/inn-ambush-calendar> a sflo:PayloadArtifact, sflo:DigitalArtifact, sflo:RdfDocument ;
+  sflo:hasWorkingLocatedFile <world/calendars/inn-ambush-calendar/calendar.ttl> .
+
+<world/calendars/inn-ambush-calendar/_knop> a sflo:Knop ;
+  sflo:hasWorkingKnopInventoryFile <world/calendars/inn-ambush-calendar/_knop/_inventory/inventory.ttl> .
+
+<world/calendars/inn-ambush-calendar/_knop/_inventory/inventory.ttl> a sflo:LocatedFile, sflo:RdfDocument .
+
+<world/calendars/inn-ambush-calendar/calendar.ttl> a sflo:LocatedFile, sflo:RdfDocument .
+
+<world/calendars/inn-ambush-calendar> sflo:hasResourcePage <world/calendars/inn-ambush-calendar/index.html> .
+
+<world/calendars/inn-ambush-calendar/_knop> sflo:hasResourcePage <world/calendars/inn-ambush-calendar/_knop/index.html> .
+
+<world/calendars/inn-ambush-calendar/index.html> a sflo:ResourcePage, sflo:LocatedFile .
+
+<world/calendars/inn-ambush-calendar/_knop/index.html> a sflo:ResourcePage, sflo:LocatedFile .
+
+<_mesh> sflo:hasKnop <rules/dynamis/srd-5-2-1/weapons/_knop> .
+
+<rules/dynamis/srd-5-2-1/weapons> a sflo:PayloadArtifact, sflo:DigitalArtifact, sflo:RdfDocument ;
+  sflo:hasWorkingLocatedFile <rules/dynamis/srd-5-2-1/weapons/weapons.ttl> .
+
+<rules/dynamis/srd-5-2-1/weapons/_knop> a sflo:Knop ;
+  sflo:hasWorkingKnopInventoryFile <rules/dynamis/srd-5-2-1/weapons/_knop/_inventory/inventory.ttl> .
+
+<rules/dynamis/srd-5-2-1/weapons/_knop/_inventory/inventory.ttl> a sflo:LocatedFile, sflo:RdfDocument .
+
+<rules/dynamis/srd-5-2-1/weapons/weapons.ttl> a sflo:LocatedFile, sflo:RdfDocument .
+
+<rules/dynamis/srd-5-2-1/weapons> sflo:hasResourcePage <rules/dynamis/srd-5-2-1/weapons/index.html> .
+
+<rules/dynamis/srd-5-2-1/weapons/_knop> sflo:hasResourcePage <rules/dynamis/srd-5-2-1/weapons/_knop/index.html> .
+
+<rules/dynamis/srd-5-2-1/weapons/index.html> a sflo:ResourcePage, sflo:LocatedFile .
+
+<rules/dynamis/srd-5-2-1/weapons/_knop/index.html> a sflo:ResourcePage, sflo:LocatedFile .
