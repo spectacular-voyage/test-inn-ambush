@@ -67,7 +67,16 @@
 	<https://spectacular-voyage.github.io/stagecraft/ontology/basedOnAuthorityRecord> <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/outcome-committed/plan-b-001> ;
 	<https://spectacular-voyage.github.io/stagecraft/ontology/applicableDuring> <https://spectacular-voyage.github.io/test-inn-ambush/scene-local-time/inn-scene-plan-b> ;
 	<https://spectacular-voyage.github.io/stagecraft/ontology/acceptedFrom> "2026-06-29T13:35:00Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	<https://spectacular-voyage.github.io/stagecraft/ontology/acceptedUntil> "2026-07-07T19:26:44Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
 	<https://spectacular-voyage.github.io/stagecraft/ontology/object> true ;
+	<https://spectacular-voyage.github.io/stagecraft/ontology/predicate> <https://spectacular-voyage.github.io/stagecraft/ontology/barred> ;
+	<https://spectacular-voyage.github.io/stagecraft/ontology/subject> <https://spectacular-voyage.github.io/test-inn-ambush/target/door> ;
+	a <https://spectacular-voyage.github.io/stagecraft/ontology/TemporalRelator> .
+<https://spectacular-voyage.github.io/test-inn-ambush/relator/door-barred/curtain-up-unbarred-current> <https://spectacular-voyage.github.io/stagecraft/ontology/branchContext> <https://spectacular-voyage.github.io/test-inn-ambush/branch/plan-b> ;
+	<https://spectacular-voyage.github.io/stagecraft/ontology/basedOnAuthorityRecord> <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/world-seeded/curtain-up-001> ;
+	<https://spectacular-voyage.github.io/stagecraft/ontology/applicableDuring> <https://spectacular-voyage.github.io/test-inn-ambush/scene-local-time/inn-scene-plan-b> ;
+	<https://spectacular-voyage.github.io/stagecraft/ontology/acceptedFrom> "2026-07-07T19:26:44Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	<https://spectacular-voyage.github.io/stagecraft/ontology/object> false ;
 	<https://spectacular-voyage.github.io/stagecraft/ontology/predicate> <https://spectacular-voyage.github.io/stagecraft/ontology/barred> ;
 	<https://spectacular-voyage.github.io/stagecraft/ontology/subject> <https://spectacular-voyage.github.io/test-inn-ambush/target/door> ;
 	a <https://spectacular-voyage.github.io/stagecraft/ontology/TemporalRelator> .
@@ -148,7 +157,16 @@
 	<https://spectacular-voyage.github.io/stagecraft/ontology/basedOnAuthorityRecord> <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/movement-committed/nera-to-old-road-001> ;
 	<https://spectacular-voyage.github.io/stagecraft/ontology/applicableDuring> <https://spectacular-voyage.github.io/test-inn-ambush/scene-local-time/inn-scene-plan-b> ;
 	<https://spectacular-voyage.github.io/stagecraft/ontology/acceptedFrom> "2026-06-29T13:38:00Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	<https://spectacular-voyage.github.io/stagecraft/ontology/acceptedUntil> "2026-07-07T19:26:44Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
 	<https://spectacular-voyage.github.io/stagecraft/ontology/object> <https://spectacular-voyage.github.io/test-inn-ambush/place/old-road> ;
+	<https://spectacular-voyage.github.io/stagecraft/ontology/predicate> <https://spectacular-voyage.github.io/stagecraft/ontology/locatedIn> ;
+	<https://spectacular-voyage.github.io/stagecraft/ontology/subject> <https://spectacular-voyage.github.io/test-inn-ambush/actant/nera> ;
+	a <https://spectacular-voyage.github.io/stagecraft/ontology/LocatedInRelator> , <https://spectacular-voyage.github.io/stagecraft/ontology/TemporalRelator> .
+<https://spectacular-voyage.github.io/test-inn-ambush/relator/location/nera/common-room-curtain-up-current> <https://spectacular-voyage.github.io/stagecraft/ontology/branchContext> <https://spectacular-voyage.github.io/test-inn-ambush/branch/plan-b> ;
+	<https://spectacular-voyage.github.io/stagecraft/ontology/basedOnAuthorityRecord> <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/world-seeded/curtain-up-001> ;
+	<https://spectacular-voyage.github.io/stagecraft/ontology/applicableDuring> <https://spectacular-voyage.github.io/test-inn-ambush/scene-local-time/inn-scene-plan-b> ;
+	<https://spectacular-voyage.github.io/stagecraft/ontology/acceptedFrom> "2026-07-07T19:26:44Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	<https://spectacular-voyage.github.io/stagecraft/ontology/object> <https://spectacular-voyage.github.io/test-inn-ambush/place/common-room> ;
 	<https://spectacular-voyage.github.io/stagecraft/ontology/predicate> <https://spectacular-voyage.github.io/stagecraft/ontology/locatedIn> ;
 	<https://spectacular-voyage.github.io/stagecraft/ontology/subject> <https://spectacular-voyage.github.io/test-inn-ambush/actant/nera> ;
 	a <https://spectacular-voyage.github.io/stagecraft/ontology/LocatedInRelator> , <https://spectacular-voyage.github.io/stagecraft/ontology/TemporalRelator> .
@@ -487,7 +505,7 @@
 	<https://spectacular-voyage.github.io/stagecraft/ontology/hasSceneLocalTime> <https://spectacular-voyage.github.io/test-inn-ambush/scene-local-time/inn-scene-plan-b> ;
 	<https://spectacular-voyage.github.io/stagecraft/ontology/hasContinuityDebt> <https://spectacular-voyage.github.io/test-inn-ambush/continuity-debt/plan-b-door-barred-before-attack> ;
 	<https://spectacular-voyage.github.io/stagecraft/ontology/branchContext> <https://spectacular-voyage.github.io/test-inn-ambush/branch/plan-b> ;
-	<https://spectacular-voyage.github.io/stagecraft/ontology/basedOnAuthorityRecord> <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/outcome-committed/plan-b-001> ;
+	<https://spectacular-voyage.github.io/stagecraft/ontology/basedOnAuthorityRecord> <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/world-seeded/curtain-up-001> , <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/outcome-committed/plan-b-001> ;
 	<http://purl.org/dc/terms/description> "Enemy attack is staged against the Inn scene and waits on branch-local continuity resolution." ;
 	a <https://spectacular-voyage.github.io/stagecraft/ontology/StagedAttack> .
 <https://spectacular-voyage.github.io/test-inn-ambush/duration/inn-scene-elastic-window> <https://spectacular-voyage.github.io/stagecraft/ontology/inTemporalScope> <https://spectacular-voyage.github.io/test-inn-ambush/temporal-scope/inn-scene> ;

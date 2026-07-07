@@ -72,6 +72,14 @@
   sc:basedOnHistory <https://spectacular-voyage.github.io/test-inn-ambush/history/main> ;
   dcterms:references <https://spectacular-voyage.github.io/test-inn-ambush/scenario/inn-ambush> .
 
+<https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/world-seeded/curtain-up-001>
+  a sc:WorldSeeded ;
+  dcterms:created "2026-07-07T19:26:44Z"^^xsd:dateTime ;
+  dcterms:description "Authored curtain-up baseline for live play: door unbarred, Nera in the common room, and the enemy ambush staged but not yet sprung. Earlier Plan B continuity remains recorded history." ;
+  sc:basedOnHistory <https://spectacular-voyage.github.io/test-inn-ambush/history/main> ;
+  dcterms:references <https://spectacular-voyage.github.io/test-inn-ambush/scenario/inn-ambush>,
+    <https://spectacular-voyage.github.io/test-inn-ambush/staged-attack/enemy-ambush> .
+
 <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/commit-certificate/time-advanced-inn-clock-001>
   a sc:CommitCertificate ;
   dcterms:created "2026-06-29T13:37:00Z"^^xsd:dateTime ;
