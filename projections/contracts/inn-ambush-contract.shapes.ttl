@@ -504,6 +504,11 @@ sc-sh:D20TestRequestShape
     sh:maxCount 1 ;
   ] ;
   sh:property [
+    sh:path dyn:resolvesWarrant ;
+    sh:nodeKind sh:IRI ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
     sh:path dyn:diceExpression ;
     sh:datatype xsd:string ;
     sh:minLength 1 ;
@@ -521,6 +526,131 @@ sc-sh:D20TestRequestShape
     sh:minLength 1 ;
     sh:pattern "\\S" ;
     sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path sc:sourceProjection ;
+    sh:node sc-sh:SourceProjectionShape ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path sc:createdAt ;
+    sh:datatype xsd:dateTime ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] .
+
+sc-sh:D20TestWarrantRequestShape
+  a sh:NodeShape ;
+  sh:targetClass sc:D20TestWarrantRequest ;
+  sh:property [
+    sh:path sc:envelopeType ;
+    sh:hasValue "stagecraft.d20-test-warrant.request.v1" ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path sc:envelopeId ;
+    sh:datatype xsd:string ;
+    sh:minLength 1 ;
+    sh:pattern "\\S" ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path sc:requestedByParticipant ;
+    sh:nodeKind sh:IRI ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path dyn:warrantedActor ;
+    sh:nodeKind sh:IRI ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path dyn:warrantedTestType ;
+    sh:nodeKind sh:IRI ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path dyn:targetNumber ;
+    sh:datatype xsd:integer ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path dyn:hiddenTargetNumber ;
+    sh:datatype xsd:boolean ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path dyn:hiddenResult ;
+    sh:datatype xsd:boolean ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path dcterms:description ;
+    sh:datatype xsd:string ;
+    sh:minLength 1 ;
+    sh:pattern "\\S" ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path dyn:adjudicatesIntent ;
+    sh:nodeKind sh:IRI ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path sc:sourceProjection ;
+    sh:node sc-sh:SourceProjectionShape ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path sc:createdAt ;
+    sh:datatype xsd:dateTime ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] .
+
+sc-sh:D20TestWarrantWithdrawalRequestShape
+  a sh:NodeShape ;
+  sh:targetClass sc:D20TestWarrantWithdrawalRequest ;
+  sh:property [
+    sh:path sc:envelopeType ;
+    sh:hasValue "stagecraft.d20-test-warrant.withdrawal-request.v1" ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path sc:envelopeId ;
+    sh:datatype xsd:string ;
+    sh:minLength 1 ;
+    sh:pattern "\\S" ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path sc:requestedByParticipant ;
+    sh:nodeKind sh:IRI ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path dyn:withdrawsWarrant ;
+    sh:nodeKind sh:IRI ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path dcterms:description ;
+    sh:datatype xsd:string ;
+    sh:minLength 1 ;
+    sh:pattern "\\S" ;
     sh:maxCount 1 ;
   ] ;
   sh:property [
