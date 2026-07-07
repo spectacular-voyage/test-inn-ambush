@@ -1,0 +1,91 @@
+{
+  "@context": "https://spectacular-voyage.github.io/test-inn-ambush/projections/contracts/inn-ambush-contract.context.jsonld",
+  "@type": "ParticipantProjectionResponse",
+  "type": "stagecraft.participant-projection.response.v1",
+  "id": "participant-projection-response-gm-as-elara-current-001",
+  "participant": "https://spectacular-voyage.github.io/test-inn-ambush/participant/alice",
+  "participantProjection": "https://spectacular-voyage.github.io/test-inn-ambush/projection/alice/inn-ambush-plan-b",
+  "projectionAudience": "participant",
+  "projectionHistory": "https://spectacular-voyage.github.io/test-inn-ambush/world/states/inn-ambush-plan-b-state/main",
+  "projectionState": "https://spectacular-voyage.github.io/test-inn-ambush/branch/plan-b",
+  "projectionStateOrdinal": 0,
+  "projectionTimeline": {
+    "capturePolicy": "in-memory-session-only",
+    "projectionHistory": "https://spectacular-voyage.github.io/test-inn-ambush/world/states/inn-ambush-plan-b-state/main",
+    "states": [
+      {
+        "kind": "live",
+        "label": "Now",
+        "previousProjectionState": "https://spectacular-voyage.github.io/test-inn-ambush/world/states/inn-ambush-plan-b-state/main/s0001",
+        "projectionState": "https://spectacular-voyage.github.io/test-inn-ambush/branch/plan-b",
+        "projectionStateOrdinal": 0
+      },
+      {
+        "kind": "checkpoint",
+        "checkpoint": "https://spectacular-voyage.github.io/test-inn-ambush/checkpoint/session-start",
+        "label": "ambush night, late evening",
+        "nextProjectionState": "https://spectacular-voyage.github.io/test-inn-ambush/branch/plan-b",
+        "projectionState": "https://spectacular-voyage.github.io/test-inn-ambush/world/states/inn-ambush-plan-b-state/main/s0001",
+        "projectionStateOrdinal": 1
+      }
+    ]
+  },
+  "sourceProjection": {
+    "observedProjectionState": "https://spectacular-voyage.github.io/test-inn-ambush/branch/plan-b",
+    "participantProjection": "https://spectacular-voyage.github.io/test-inn-ambush/projection/alice/inn-ambush-plan-b"
+  },
+  "authenticatedActor": {
+    "participant": "https://spectacular-voyage.github.io/test-inn-ambush/gm/alex",
+    "participantProjection": "https://spectacular-voyage.github.io/test-inn-ambush/projection/gm/alex/inn-ambush-plan-b",
+    "projectionAudience": "gm"
+  },
+  "appliedPerspective": {
+    "type": "character",
+    "character": "https://spectacular-voyage.github.io/test-inn-ambush/actant/elara",
+    "characterKey": "elara",
+    "characterLabel": "Elara",
+    "participant": "https://spectacular-voyage.github.io/test-inn-ambush/participant/alice",
+    "participantProjection": "https://spectacular-voyage.github.io/test-inn-ambush/projection/alice/inn-ambush-plan-b",
+    "projectionAudience": "participant",
+    "readSemantics": "read through the character's participant-visible scope"
+  },
+  "visibleResources": [
+    "https://spectacular-voyage.github.io/test-inn-ambush/beat/plan-b",
+    "https://spectacular-voyage.github.io/test-inn-ambush/actant/elara",
+    "https://spectacular-voyage.github.io/test-inn-ambush/actant/nera",
+    "https://spectacular-voyage.github.io/test-inn-ambush/suggestion/plan-b",
+    "https://spectacular-voyage.github.io/test-inn-ambush/intent/elara-plan-b"
+  ],
+  "resourceSummaries": [
+    {
+      "resource": "https://spectacular-voyage.github.io/test-inn-ambush/beat/plan-b",
+      "resourceClass": "https://spectacular-voyage.github.io/stagecraft/ontology/Beat",
+      "label": "Plan B beat",
+      "summary": "Plan B is the accepted table beat: Elara bars the inn door with Ashfang."
+    },
+    {
+      "resource": "https://spectacular-voyage.github.io/test-inn-ambush/actant/elara",
+      "resourceClass": "https://spectacular-voyage.github.io/stagecraft/ontology/Character",
+      "label": "Elara",
+      "summary": "Elara is Alice's character and the actant carrying the Plan B intent."
+    },
+    {
+      "resource": "https://spectacular-voyage.github.io/test-inn-ambush/actant/nera",
+      "resourceClass": "https://spectacular-voyage.github.io/stagecraft/ontology/Character",
+      "label": "Nera",
+      "summary": "Nera is in the inn scene; Plan B is about creating space for her escape."
+    },
+    {
+      "resource": "https://spectacular-voyage.github.io/test-inn-ambush/suggestion/plan-b",
+      "resourceClass": "https://spectacular-voyage.github.io/stagecraft/ontology/Suggestion",
+      "label": "Bob's Plan B suggestion",
+      "summary": "Bob suggested that Elara bar the door with Ashfang."
+    },
+    {
+      "resource": "https://spectacular-voyage.github.io/test-inn-ambush/intent/elara-plan-b",
+      "resourceClass": "https://spectacular-voyage.github.io/stagecraft/ontology/Intent",
+      "label": "Elara's Plan B intent",
+      "summary": "Alice declared Elara's intent to bar the door before the ambush resolves."
+    }
+  ]
+}

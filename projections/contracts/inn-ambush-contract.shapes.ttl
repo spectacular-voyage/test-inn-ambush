@@ -201,6 +201,16 @@ sc-sh:ParticipantProjectionResponseShape
     sh:maxCount 1 ;
   ] ;
   sh:property [
+    sh:path sc:authenticatedActor ;
+    sh:node sc-sh:ProjectionActorShape ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path sc:appliedPerspective ;
+    sh:node sc-sh:AppliedPerspectiveShape ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
     sh:path sc:visibleResources ;
     sh:nodeKind sh:IRI ;
     sh:minCount 1 ;
@@ -957,6 +967,88 @@ sc-sh:SourceProjectionShape
   sh:property [
     sh:path sc:participantProjection ;
     sh:nodeKind sh:IRI ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] .
+
+sc-sh:ProjectionActorShape
+  a sh:NodeShape ;
+  sh:property [
+    sh:path sc:participant ;
+    sh:nodeKind sh:IRI ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path sc:participantProjection ;
+    sh:nodeKind sh:IRI ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path sc:projectionAudience ;
+    sh:in (
+      "participant"
+      "gm"
+    ) ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] .
+
+sc-sh:AppliedPerspectiveShape
+  a sh:NodeShape ;
+  sh:property [
+    sh:path sc:perspectiveType ;
+    sh:hasValue "character" ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path sc:perspectiveCharacter ;
+    sh:nodeKind sh:IRI ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path sc:perspectiveCharacterKey ;
+    sh:datatype xsd:string ;
+    sh:minLength 1 ;
+    sh:pattern "\\S" ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path sc:perspectiveCharacterLabel ;
+    sh:datatype xsd:string ;
+    sh:minLength 1 ;
+    sh:pattern "\\S" ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path sc:participant ;
+    sh:nodeKind sh:IRI ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path sc:participantProjection ;
+    sh:nodeKind sh:IRI ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path sc:projectionAudience ;
+    sh:in (
+      "participant"
+      "gm"
+    ) ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path sc:readSemantics ;
+    sh:hasValue "read through the character's participant-visible scope" ;
     sh:minCount 1 ;
     sh:maxCount 1 ;
   ] .
