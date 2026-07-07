@@ -1,0 +1,81 @@
+{
+  "@context": {
+    "@vocab": "https://spectacular-voyage.github.io/accord/ontology/",
+    "dcterms": "http://purl.org/dc/terms/",
+    "id": "@id",
+    "type": "@type",
+    "changeType": {
+      "@type": "@vocab"
+    },
+    "compareMode": {
+      "@type": "@vocab"
+    },
+    "targetsFileExpectation": {
+      "@type": "@id"
+    },
+    "locatorKind": {
+      "@type": "@vocab"
+    }
+  },
+  "type": "Manifest",
+  "id": "urn:accord:stagecraft:test-inn-ambush:52-view-as-character-reads-contract",
+  "dcterms:title": "Inn Ambush 52 view-as character reads contract",
+  "hasCase": [
+    {
+      "type": "TransitionCase",
+      "id": "#view-as-character-reads-contract",
+      "fixtureRepo": "github.com/spectacular-voyage/test-inn-ambush",
+      "operationId": "stagecraft.fixture.addViewAsCharacterReadsContract",
+      "fromRef": "b.00-aligned-baseline",
+      "toRef": "b.01-view-as-character-reads-contract",
+      "fromState": {
+        "type": "StateLocator",
+        "locatorKind": "gitRefState",
+        "ref": "b.00-aligned-baseline"
+      },
+      "toState": {
+        "type": "StateLocator",
+        "locatorKind": "gitRefState",
+        "ref": "b.01-view-as-character-reads-contract"
+      },
+      "hasFileExpectation": [
+        {
+          "id": "#contract-context",
+          "type": "FileExpectation",
+          "path": "projections/contracts/inn-ambush-contract.context.jsonld",
+          "changeType": "updated",
+          "compareMode": "json"
+        },
+        {
+          "id": "#contract-shapes",
+          "type": "FileExpectation",
+          "path": "projections/contracts/inn-ambush-contract.shapes.ttl",
+          "changeType": "updated",
+          "compareMode": "rdfCanonical"
+        },
+        {
+          "id": "#gm-as-elara-response",
+          "type": "FileExpectation",
+          "path": "projections/responses/participant-projection-response-gm-as-elara/participant-projection-response-gm-as-elara.json",
+          "changeType": "added",
+          "compareMode": "json"
+        }
+      ],
+      "hasRdfExpectation": [
+        {
+          "id": "#contract-shapes-rdf",
+          "type": "RdfExpectation",
+          "targetsFileExpectation": "#contract-shapes",
+          "hasAskAssertion": [
+            {
+              "id": "#ask-perspective-envelope-shapes",
+              "type": "SparqlAskAssertion",
+              "query": "ASK { <https://spectacular-voyage.github.io/stagecraft/shacl/ParticipantProjectionResponseShape> <http://www.w3.org/ns/shacl#property> ?actorProperty, ?perspectiveProperty . ?actorProperty <http://www.w3.org/ns/shacl#path> <https://spectacular-voyage.github.io/stagecraft/ontology/authenticatedActor> ; <http://www.w3.org/ns/shacl#node> <https://spectacular-voyage.github.io/stagecraft/shacl/ProjectionActorShape> ; <http://www.w3.org/ns/shacl#maxCount> \"1\"^^<http://www.w3.org/2001/XMLSchema#integer> . ?perspectiveProperty <http://www.w3.org/ns/shacl#path> <https://spectacular-voyage.github.io/stagecraft/ontology/appliedPerspective> ; <http://www.w3.org/ns/shacl#node> <https://spectacular-voyage.github.io/stagecraft/shacl/AppliedPerspectiveShape> ; <http://www.w3.org/ns/shacl#maxCount> \"1\"^^<http://www.w3.org/2001/XMLSchema#integer> . <https://spectacular-voyage.github.io/stagecraft/shacl/AppliedPerspectiveShape> a <http://www.w3.org/ns/shacl#NodeShape> ; <http://www.w3.org/ns/shacl#property> ?typeProperty, ?characterProperty, ?semanticsProperty . ?typeProperty <http://www.w3.org/ns/shacl#path> <https://spectacular-voyage.github.io/stagecraft/ontology/perspectiveType> ; <http://www.w3.org/ns/shacl#hasValue> \"character\" . ?characterProperty <http://www.w3.org/ns/shacl#path> <https://spectacular-voyage.github.io/stagecraft/ontology/perspectiveCharacter> ; <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#IRI> ; <http://www.w3.org/ns/shacl#minCount> \"1\"^^<http://www.w3.org/2001/XMLSchema#integer> . ?semanticsProperty <http://www.w3.org/ns/shacl#path> <https://spectacular-voyage.github.io/stagecraft/ontology/readSemantics> ; <http://www.w3.org/ns/shacl#hasValue> \"read through the character's participant-visible scope\" . }",
+              "expectedBoolean": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

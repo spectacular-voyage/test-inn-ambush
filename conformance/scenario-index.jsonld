@@ -22,6 +22,12 @@
       "type": "StateLane",
       "laneKey": "fixture",
       "branchPrefix": "a."
+    },
+    {
+      "id": "#fixture-b-lane",
+      "type": "StateLane",
+      "laneKey": "fixture-b",
+      "branchPrefix": "b."
     }
   ],
   "hasStep": [
@@ -987,6 +993,27 @@
             "type": "StateLocator",
             "locatorKind": "gitRefState",
             "ref": "a.51-live-now-branch-contract"
+          }
+        }
+      ]
+    },
+    {
+      "id": "#52-view-as-character-reads-contract",
+      "type": "ScenarioStep",
+      "manifestPath": "52-view-as-character-reads-contract.jsonld",
+      "hasLaneBinding": [
+        {
+          "type": "LaneStateBinding",
+          "lane": "#fixture-b-lane",
+          "fromLaneState": {
+            "type": "StateLocator",
+            "locatorKind": "gitRefState",
+            "ref": "b.00-aligned-baseline"
+          },
+          "toLaneState": {
+            "type": "StateLocator",
+            "locatorKind": "gitRefState",
+            "ref": "b.01-view-as-character-reads-contract"
           }
         }
       ]
