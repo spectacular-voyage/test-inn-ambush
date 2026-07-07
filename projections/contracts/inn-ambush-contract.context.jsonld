@@ -262,6 +262,42 @@
     "participantProjection": {
       "@type": "@id"
     },
+    "authenticatedActor": {
+      "@id": "sc:authenticatedActor",
+      "@context": {
+        "participant": {
+          "@id": "sc:participant",
+          "@type": "@id"
+        },
+        "participantProjection": {
+          "@id": "sc:participantProjection",
+          "@type": "@id"
+        },
+        "projectionAudience": "sc:projectionAudience"
+      }
+    },
+    "appliedPerspective": {
+      "@id": "sc:appliedPerspective",
+      "@context": {
+        "type": "sc:perspectiveType",
+        "character": {
+          "@id": "sc:perspectiveCharacter",
+          "@type": "@id"
+        },
+        "characterKey": "sc:perspectiveCharacterKey",
+        "characterLabel": "sc:perspectiveCharacterLabel",
+        "participant": {
+          "@id": "sc:participant",
+          "@type": "@id"
+        },
+        "participantProjection": {
+          "@id": "sc:participantProjection",
+          "@type": "@id"
+        },
+        "projectionAudience": "sc:projectionAudience",
+        "readSemantics": "sc:readSemantics"
+      }
+    },
     "relatesTo": {
       "@type": "@id"
     },
