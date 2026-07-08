@@ -1,0 +1,22 @@
+{
+  "@context": "https://spectacular-voyage.github.io/test-inn-ambush/projections/contracts/inn-ambush-contract.context.jsonld",
+  "@type": "D20TestWarrantRequest",
+  "type": "stagecraft.d20-test-warrant.request.v1",
+  "id": "d20-test-warrant-request-party-addressed-fixture",
+  "requestedByParticipant": "https://spectacular-voyage.github.io/test-inn-ambush/gm/alex",
+  "actor": "https://spectacular-voyage.github.io/test-inn-ambush/actant/elara",
+  "addressedActors": [
+    "https://spectacular-voyage.github.io/test-inn-ambush/actant/elara",
+    "https://spectacular-voyage.github.io/test-inn-ambush/actant/nera"
+  ],
+  "testType": "https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/AbilityCheck",
+  "targetNumber": 12,
+  "hiddenDc": false,
+  "hiddenResult": false,
+  "purpose": "The party makes one athletics check against the common-room rush.",
+  "sourceProjection": {
+    "observedProjectionState": "https://spectacular-voyage.github.io/test-inn-ambush/branch/plan-b",
+    "participantProjection": "https://spectacular-voyage.github.io/test-inn-ambush/projection/gm/alex/inn-ambush-plan-b"
+  },
+  "createdAt": "2026-07-07T22:50:00Z"
+}
