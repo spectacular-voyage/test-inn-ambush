@@ -1,0 +1,101 @@
+{
+  "@context": {
+    "@vocab": "https://spectacular-voyage.github.io/accord/ontology/",
+    "dcterms": "http://purl.org/dc/terms/",
+    "id": "@id",
+    "type": "@type",
+    "changeType": {
+      "@type": "@vocab"
+    },
+    "compareMode": {
+      "@type": "@vocab"
+    },
+    "targetsFileExpectation": {
+      "@type": "@id"
+    },
+    "locatorKind": {
+      "@type": "@vocab"
+    }
+  },
+  "type": "Manifest",
+  "id": "urn:accord:stagecraft:test-inn-ambush:59-warrant-decline-control-assignment-contract",
+  "dcterms:title": "Inn Ambush 59 Warrant decline and control assignment contract",
+  "hasCase": [
+    {
+      "type": "TransitionCase",
+      "id": "#warrant-decline-control-assignment-contract",
+      "fixtureRepo": "github.com/spectacular-voyage/test-inn-ambush",
+      "operationId": "stagecraft.fixture.addWarrantDeclineControlAssignmentContract",
+      "fromRef": "b.07-transfer-request-contract",
+      "toRef": "b.08-warrant-decline-control-assignment-contract",
+      "fromState": {
+        "type": "StateLocator",
+        "locatorKind": "gitRefState",
+        "ref": "b.07-transfer-request-contract"
+      },
+      "toState": {
+        "type": "StateLocator",
+        "locatorKind": "gitRefState",
+        "ref": "b.08-warrant-decline-control-assignment-contract"
+      },
+      "hasFileExpectation": [
+        {
+          "id": "#projection-context",
+          "type": "FileExpectation",
+          "path": "projections/contracts/inn-ambush-contract.context.jsonld",
+          "changeType": "updated",
+          "compareMode": "text"
+        },
+        {
+          "id": "#projection-shapes",
+          "type": "FileExpectation",
+          "path": "projections/contracts/inn-ambush-contract.shapes.ttl",
+          "changeType": "updated",
+          "compareMode": "rdfCanonical"
+        },
+        {
+          "id": "#party-warrant-request",
+          "type": "FileExpectation",
+          "path": "authority/d20-warrants/d20-test-warrant-request-party-addressed/d20-test-warrant-request-party-addressed.json",
+          "changeType": "added",
+          "compareMode": "text"
+        },
+        {
+          "id": "#warrant-decline-request",
+          "type": "FileExpectation",
+          "path": "authority/d20-warrants/d20-test-warrant-decline-request-elara/d20-test-warrant-decline-request-elara.json",
+          "changeType": "added",
+          "compareMode": "text"
+        },
+        {
+          "id": "#control-assignment-request",
+          "type": "FileExpectation",
+          "path": "authority/participant-control/participant-control-assignment-request-nera-to-gm/participant-control-assignment-request-nera-to-gm.json",
+          "changeType": "added",
+          "compareMode": "text"
+        }
+      ],
+      "hasRdfExpectation": [
+        {
+          "id": "#projection-shapes-rdf",
+          "type": "RdfExpectation",
+          "targetsFileExpectation": "#projection-shapes",
+          "hasAskAssertion": [
+            {
+              "id": "#ask-warrant-decline-request-shape",
+              "type": "SparqlAskAssertion",
+              "query": "ASK { <https://spectacular-voyage.github.io/stagecraft/shacl/D20TestWarrantDeclineRequestShape> a <http://www.w3.org/ns/shacl#NodeShape> ; <http://www.w3.org/ns/shacl#targetClass> <https://spectacular-voyage.github.io/stagecraft/ontology/D20TestWarrantDeclineRequest> ; <http://www.w3.org/ns/shacl#property> [ <http://www.w3.org/ns/shacl#path> <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/declinesWarrant> ; <http://www.w3.org/ns/shacl#minCount> 1 ; <http://www.w3.org/ns/shacl#maxCount> 1 ], [ <http://www.w3.org/ns/shacl#path> <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/declinedWarrantActor> ; <http://www.w3.org/ns/shacl#minCount> 1 ; <http://www.w3.org/ns/shacl#maxCount> 1 ] . }",
+              "expectedBoolean": true
+            },
+            {
+              "id": "#ask-control-assignment-intent-only-shape",
+              "type": "SparqlAskAssertion",
+              "query": "ASK { <https://spectacular-voyage.github.io/stagecraft/shacl/ParticipantControlAssignmentRequestShape> a <http://www.w3.org/ns/shacl#NodeShape> ; <http://www.w3.org/ns/shacl#targetClass> <https://spectacular-voyage.github.io/stagecraft/ontology/ParticipantControlAssignmentRequest> ; <http://www.w3.org/ns/shacl#property> [ <http://www.w3.org/ns/shacl#path> <https://spectacular-voyage.github.io/stagecraft/ontology/assignsControlOf> ; <http://www.w3.org/ns/shacl#minCount> 1 ; <http://www.w3.org/ns/shacl#maxCount> 1 ], [ <http://www.w3.org/ns/shacl#path> <https://spectacular-voyage.github.io/stagecraft/ontology/opensControlRelator> ; <http://www.w3.org/ns/shacl#maxCount> 0 ], [ <http://www.w3.org/ns/shacl#path> <https://spectacular-voyage.github.io/stagecraft/ontology/stateMutation> ; <http://www.w3.org/ns/shacl#maxCount> 0 ] . }",
+              "expectedBoolean": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
