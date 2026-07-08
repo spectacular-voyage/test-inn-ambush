@@ -1193,6 +1193,27 @@
       ]
     },
     {
+      "id": "#61-play-the-door-bars-checkpoint",
+      "type": "ScenarioStep",
+      "manifestPath": "61-play-the-door-bars-checkpoint.jsonld",
+      "hasLaneBinding": [
+        {
+          "type": "LaneStateBinding",
+          "lane": "#play-lane",
+          "fromLaneState": {
+            "type": "StateLocator",
+            "locatorKind": "gitRefState",
+            "ref": "b.09-transfer-act-quantity-contract"
+          },
+          "toLaneState": {
+            "type": "StateLocator",
+            "locatorKind": "gitRefState",
+            "ref": "c.01-the-door-bars"
+          }
+        }
+      ]
+    },
+    {
       "id": "#62-perception-contract-slice",
       "type": "ScenarioStep",
       "manifestPath": "62-perception-contract-slice.jsonld",
