@@ -1317,6 +1317,27 @@
           }
         }
       ]
+    },
+    {
+      "id": "#67-weave-named-state-validation",
+      "type": "ScenarioStep",
+      "manifestPath": "67-weave-named-state-validation.jsonld",
+      "hasLaneBinding": [
+        {
+          "type": "LaneStateBinding",
+          "lane": "#fixture-b-lane",
+          "fromLaneState": {
+            "type": "StateLocator",
+            "locatorKind": "gitRefState",
+            "ref": "5b79bd24b3150bebe68bee051608f2c91f5f8c0e"
+          },
+          "toLaneState": {
+            "type": "StateLocator",
+            "locatorKind": "gitRefState",
+            "ref": "b.15-weave-named-state-validate"
+          }
+        }
+      ]
     }
   ]
 }

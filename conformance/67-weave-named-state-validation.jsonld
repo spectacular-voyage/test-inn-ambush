@@ -1,0 +1,87 @@
+{
+  "@context": {
+    "@vocab": "https://spectacular-voyage.github.io/accord/ontology/",
+    "dcterms": "http://purl.org/dc/terms/",
+    "id": "@id",
+    "type": "@type",
+    "changeType": {
+      "@type": "@vocab"
+    },
+    "compareMode": {
+      "@type": "@vocab"
+    },
+    "targetsFileExpectation": {
+      "@type": "@id"
+    },
+    "locatorKind": {
+      "@type": "@vocab"
+    }
+  },
+  "type": "Manifest",
+  "id": "urn:accord:stagecraft:test-inn-ambush:67-weave-named-state-validation",
+  "dcterms:title": "Inn Ambush 67 weave named-state validation",
+  "hasCase": [
+    {
+      "type": "TransitionCase",
+      "id": "#weave-named-state-validation",
+      "fixtureRepo": "github.com/spectacular-voyage/test-inn-ambush",
+      "operationId": "stagecraft.fixture.fixWeaveNamedStateValidation",
+      "fromRef": "5b79bd24b3150bebe68bee051608f2c91f5f8c0e",
+      "toRef": "b.15-weave-named-state-validate",
+      "fromState": {
+        "type": "StateLocator",
+        "locatorKind": "gitRefState",
+        "ref": "5b79bd24b3150bebe68bee051608f2c91f5f8c0e"
+      },
+      "toState": {
+        "type": "StateLocator",
+        "locatorKind": "gitRefState",
+        "ref": "b.15-weave-named-state-validate"
+      },
+      "hasFileExpectation": [
+        {
+          "id": "#plan-b-state-inventory",
+          "type": "FileExpectation",
+          "path": "world/states/inn-ambush-plan-b-state/_knop/_inventory/inventory.ttl",
+          "changeType": "updated",
+          "compareMode": "rdfCanonical"
+        },
+        {
+          "id": "#checkpoint-manifest-inventory",
+          "type": "FileExpectation",
+          "path": "world/checkpoint-manifests/inn-ambush-checkpoints/_knop/_inventory/inventory.ttl",
+          "changeType": "updated",
+          "compareMode": "rdfCanonical"
+        }
+      ],
+      "hasRdfExpectation": [
+        {
+          "id": "#named-state-inventories-rdf",
+          "type": "RdfExpectation",
+          "targetsFileExpectation": "#plan-b-state-inventory",
+          "hasAskAssertion": [
+            {
+              "id": "#ask-plan-b-state-next-state-name",
+              "type": "SparqlAskAssertion",
+              "query": "ASK { <https://spectacular-voyage.github.io/test-inn-ambush/world/states/inn-ambush-plan-b-state/main> <https://semantic-flow.github.io/sflo/ontology/latestHistoricalState> <https://spectacular-voyage.github.io/test-inn-ambush/world/states/inn-ambush-plan-b-state/main/s0002> ; <https://semantic-flow.github.io/sflo/ontology/nextStateOrdinal> \"3\"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> ; <https://semantic-flow.github.io/sflo/config/hasNextStateSegmentHint> \"s0003\" . <https://spectacular-voyage.github.io/test-inn-ambush/world/states/inn-ambush-plan-b-state/main/s0002> <https://semantic-flow.github.io/sflo/ontology/stateOrdinal> \"2\"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> . }",
+              "expectedBoolean": true
+            }
+          ]
+        },
+        {
+          "id": "#checkpoint-manifest-inventory-rdf",
+          "type": "RdfExpectation",
+          "targetsFileExpectation": "#checkpoint-manifest-inventory",
+          "hasAskAssertion": [
+            {
+              "id": "#ask-checkpoint-manifest-next-state-name",
+              "type": "SparqlAskAssertion",
+              "query": "ASK { <https://spectacular-voyage.github.io/test-inn-ambush/world/checkpoint-manifests/inn-ambush-checkpoints/main> <https://semantic-flow.github.io/sflo/ontology/latestHistoricalState> <https://spectacular-voyage.github.io/test-inn-ambush/world/checkpoint-manifests/inn-ambush-checkpoints/main/s0002> ; <https://semantic-flow.github.io/sflo/ontology/nextStateOrdinal> \"3\"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> ; <https://semantic-flow.github.io/sflo/config/hasNextStateSegmentHint> \"s0003\" . <https://spectacular-voyage.github.io/test-inn-ambush/world/checkpoint-manifests/inn-ambush-checkpoints/main/s0002> <https://semantic-flow.github.io/sflo/ontology/stateOrdinal> \"2\"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> . }",
+              "expectedBoolean": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
