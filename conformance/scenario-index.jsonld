@@ -1233,6 +1233,27 @@
           }
         }
       ]
+    },
+    {
+      "id": "#63-outcome-consequence-bridge-contract",
+      "type": "ScenarioStep",
+      "manifestPath": "63-outcome-consequence-bridge-contract.jsonld",
+      "hasLaneBinding": [
+        {
+          "type": "LaneStateBinding",
+          "lane": "#fixture-b-lane",
+          "fromLaneState": {
+            "type": "StateLocator",
+            "locatorKind": "gitRefState",
+            "ref": "b.10-perception-contract-slice"
+          },
+          "toLaneState": {
+            "type": "StateLocator",
+            "locatorKind": "gitRefState",
+            "ref": "b.11-outcome-consequence-bridge-contract"
+          }
+        }
+      ]
     }
   ]
 }

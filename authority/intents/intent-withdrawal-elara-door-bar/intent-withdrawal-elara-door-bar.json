@@ -1,0 +1,14 @@
+{
+  "@context": "https://spectacular-voyage.github.io/test-inn-ambush/projections/contracts/inn-ambush-contract.context.jsonld",
+  "@type": "IntentWithdrawalRequest",
+  "type": "stagecraft.intent-withdrawal.request.v1",
+  "id": "intent-withdrawal-elara-door-bar-fixture",
+  "requestedByParticipant": "https://spectacular-voyage.github.io/test-inn-ambush/participant/alice",
+  "intent": "https://spectacular-voyage.github.io/test-inn-ambush/intent/session-authority/intent-declaration-elara-door-bar-fixture-20260708t054500z",
+  "reason": "Elara changes plans before any warrant adjudicates the declaration.",
+  "sourceProjection": {
+    "observedProjectionState": "https://spectacular-voyage.github.io/test-inn-ambush/branch/plan-b",
+    "participantProjection": "https://spectacular-voyage.github.io/test-inn-ambush/projection/alice/inn-ambush-plan-b"
+  },
+  "createdAt": "2026-07-08T05:46:00Z"
+}

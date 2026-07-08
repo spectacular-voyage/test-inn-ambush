@@ -528,6 +528,61 @@ sc-sh:D20TestRequestShape
     sh:datatype xsd:string ;
     sh:minLength 1 ;
     sh:pattern "\\S" ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path sc:sourceProjection ;
+    sh:node sc-sh:SourceProjectionShape ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path sc:createdAt ;
+    sh:datatype xsd:dateTime ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] .
+
+sc-sh:D20TestAdjudicationRequestShape
+  a sh:NodeShape ;
+  sh:targetClass sc:D20TestAdjudicationRequest ;
+  sh:property [
+    sh:path sc:envelopeType ;
+    sh:hasValue "stagecraft.d20-test-adjudication.request.v1" ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path sc:envelopeId ;
+    sh:datatype xsd:string ;
+    sh:minLength 1 ;
+    sh:pattern "\\S" ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path sc:requestedByParticipant ;
+    sh:nodeKind sh:IRI ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path dyn:resolvesWarrant ;
+    sh:nodeKind sh:IRI ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path dyn:consequenceDescription ;
+    sh:datatype xsd:string ;
+    sh:minLength 1 ;
+    sh:pattern "\\S" ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path sc:barred ;
+    sh:datatype xsd:boolean ;
     sh:minCount 1 ;
     sh:maxCount 1 ;
   ] ;
@@ -542,6 +597,11 @@ sc-sh:D20TestRequestShape
     sh:datatype xsd:dateTime ;
     sh:minCount 1 ;
     sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path sc:stateMutation ;
+    sh:maxCount 0 ;
+    sh:message "D20TestAdjudicationRequest states a requested consequence; authority resolves state mutations." ;
   ] .
 
 sc-sh:D20TestWarrantRequestShape
@@ -699,6 +759,116 @@ sc-sh:D20TestWarrantDeclineRequestShape
   ] ;
   sh:property [
     sh:path dyn:declinedWarrantActor ;
+    sh:nodeKind sh:IRI ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path dcterms:description ;
+    sh:datatype xsd:string ;
+    sh:minLength 1 ;
+    sh:pattern "\\S" ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path sc:sourceProjection ;
+    sh:node sc-sh:SourceProjectionShape ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path sc:createdAt ;
+    sh:datatype xsd:dateTime ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] .
+
+sc-sh:IntentDeclarationRequestShape
+  a sh:NodeShape ;
+  sh:targetClass sc:IntentDeclarationRequest ;
+  sh:property [
+    sh:path sc:envelopeType ;
+    sh:hasValue "stagecraft.intent-declaration.request.v1" ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path sc:envelopeId ;
+    sh:datatype xsd:string ;
+    sh:minLength 1 ;
+    sh:pattern "\\S" ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path sc:requestedByParticipant ;
+    sh:nodeKind sh:IRI ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path sc:speakingContext ;
+    sh:node sc-sh:SpeakingContextShape ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path sc:intentForActant ;
+    sh:nodeKind sh:IRI ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path dcterms:description ;
+    sh:datatype xsd:string ;
+    sh:minLength 1 ;
+    sh:pattern "\\S" ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path sc:sourceProjection ;
+    sh:node sc-sh:SourceProjectionShape ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path sc:createdAt ;
+    sh:datatype xsd:dateTime ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path sc:stateMutation ;
+    sh:maxCount 0 ;
+    sh:message "IntentDeclarationRequest must not claim world-branch state mutation." ;
+  ] .
+
+sc-sh:IntentWithdrawalRequestShape
+  a sh:NodeShape ;
+  sh:targetClass sc:IntentWithdrawalRequest ;
+  sh:property [
+    sh:path sc:envelopeType ;
+    sh:hasValue "stagecraft.intent-withdrawal.request.v1" ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path sc:envelopeId ;
+    sh:datatype xsd:string ;
+    sh:minLength 1 ;
+    sh:pattern "\\S" ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path sc:requestedByParticipant ;
+    sh:nodeKind sh:IRI ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path sc:withdrawsIntent ;
     sh:nodeKind sh:IRI ;
     sh:minCount 1 ;
     sh:maxCount 1 ;

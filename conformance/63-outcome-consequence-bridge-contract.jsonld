@@ -1,0 +1,102 @@
+{
+  "@context": {
+    "@vocab": "https://spectacular-voyage.github.io/accord/ontology/",
+    "dcterms": "http://purl.org/dc/terms/",
+    "id": "@id",
+    "type": "@type",
+    "changeType": {
+      "@type": "@vocab"
+    },
+    "compareMode": {
+      "@type": "@vocab"
+    },
+    "targetsFileExpectation": {
+      "@type": "@id"
+    },
+    "locatorKind": {
+      "@type": "@vocab"
+    }
+  },
+  "type": "Manifest",
+  "id": "urn:accord:stagecraft:test-inn-ambush:63-outcome-consequence-bridge-contract",
+  "dcterms:title": "Inn Ambush 63 outcome consequence bridge contract",
+  "hasCase": [
+    {
+      "type": "TransitionCase",
+      "id": "#outcome-consequence-bridge-contract",
+      "fixtureRepo": "github.com/spectacular-voyage/test-inn-ambush",
+      "operationId": "stagecraft.fixture.addOutcomeConsequenceBridgeContract",
+      "fromRef": "b.10-perception-contract-slice",
+      "toRef": "b.11-outcome-consequence-bridge-contract",
+      "fromState": {
+        "type": "StateLocator",
+        "locatorKind": "gitRefState",
+        "ref": "b.10-perception-contract-slice"
+      },
+      "toState": {
+        "type": "StateLocator",
+        "locatorKind": "gitRefState",
+        "ref": "b.11-outcome-consequence-bridge-contract"
+      },
+      "hasFileExpectation": [
+        {
+          "id": "#projection-context",
+          "type": "FileExpectation",
+          "path": "projections/contracts/inn-ambush-contract.context.jsonld",
+          "changeType": "updated",
+          "compareMode": "json"
+        },
+        {
+          "id": "#projection-shapes",
+          "type": "FileExpectation",
+          "path": "projections/contracts/inn-ambush-contract.shapes.ttl",
+          "changeType": "updated",
+          "compareMode": "rdfCanonical"
+        },
+        {
+          "id": "#d20-roll-request",
+          "type": "FileExpectation",
+          "path": "authority/d20-tests/d20-roll-request-resolves-warrant/d20-roll-request-resolves-warrant.json",
+          "changeType": "updated",
+          "compareMode": "json"
+        },
+        {
+          "id": "#d20-adjudication-request",
+          "type": "FileExpectation",
+          "path": "authority/d20-tests/d20-test-adjudication-request-door-barred/d20-test-adjudication-request-door-barred.json",
+          "changeType": "added",
+          "compareMode": "json"
+        },
+        {
+          "id": "#intent-declaration-request",
+          "type": "FileExpectation",
+          "path": "authority/intents/intent-declaration-elara-door-bar/intent-declaration-elara-door-bar.json",
+          "changeType": "added",
+          "compareMode": "json"
+        },
+        {
+          "id": "#intent-withdrawal-request",
+          "type": "FileExpectation",
+          "path": "authority/intents/intent-withdrawal-elara-door-bar/intent-withdrawal-elara-door-bar.json",
+          "changeType": "added",
+          "compareMode": "json"
+        }
+      ],
+      "hasRdfExpectation": [
+        {
+          "id": "#projection-shapes-rdf",
+          "type": "RdfExpectation",
+          "targetsFileExpectation": "#projection-shapes",
+          "hasAskAssertion": [
+            {
+              "id": "#ask-outcome-consequence-bridge-request-shapes",
+              "type": "SparqlAskAssertion",
+              "query": "ASK { <https://spectacular-voyage.github.io/stagecraft/shacl/D20TestRequestShape> a <http://www.w3.org/ns/shacl#NodeShape> ; <http://www.w3.org/ns/shacl#targetClass> <https://spectacular-voyage.github.io/stagecraft/ontology/D20TestRequest> ; <http://www.w3.org/ns/shacl#property> ?legacyConsequence . ?legacyConsequence <http://www.w3.org/ns/shacl#path> <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/consequenceDescription> ; <http://www.w3.org/ns/shacl#maxCount> 1 . FILTER NOT EXISTS { ?legacyConsequence <http://www.w3.org/ns/shacl#minCount> ?legacyMinCount . } <https://spectacular-voyage.github.io/stagecraft/shacl/D20TestAdjudicationRequestShape> a <http://www.w3.org/ns/shacl#NodeShape> ; <http://www.w3.org/ns/shacl#targetClass> <https://spectacular-voyage.github.io/stagecraft/ontology/D20TestAdjudicationRequest> ; <http://www.w3.org/ns/shacl#property> ?adjudicationWarrant, ?adjudicationConsequence, ?adjudicationDoor, ?adjudicationNoMutation . ?adjudicationWarrant <http://www.w3.org/ns/shacl#path> <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/resolvesWarrant> ; <http://www.w3.org/ns/shacl#minCount> 1 ; <http://www.w3.org/ns/shacl#maxCount> 1 . ?adjudicationConsequence <http://www.w3.org/ns/shacl#path> <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/consequenceDescription> ; <http://www.w3.org/ns/shacl#minCount> 1 ; <http://www.w3.org/ns/shacl#maxCount> 1 . ?adjudicationDoor <http://www.w3.org/ns/shacl#path> <https://spectacular-voyage.github.io/stagecraft/ontology/barred> ; <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#boolean> ; <http://www.w3.org/ns/shacl#minCount> 1 ; <http://www.w3.org/ns/shacl#maxCount> 1 . ?adjudicationNoMutation <http://www.w3.org/ns/shacl#path> <https://spectacular-voyage.github.io/stagecraft/ontology/stateMutation> ; <http://www.w3.org/ns/shacl#maxCount> 0 . <https://spectacular-voyage.github.io/stagecraft/shacl/IntentDeclarationRequestShape> a <http://www.w3.org/ns/shacl#NodeShape> ; <http://www.w3.org/ns/shacl#targetClass> <https://spectacular-voyage.github.io/stagecraft/ontology/IntentDeclarationRequest> ; <http://www.w3.org/ns/shacl#property> ?intentActant, ?intentDescription, ?intentNoMutation . ?intentActant <http://www.w3.org/ns/shacl#path> <https://spectacular-voyage.github.io/stagecraft/ontology/intentForActant> ; <http://www.w3.org/ns/shacl#minCount> 1 ; <http://www.w3.org/ns/shacl#maxCount> 1 . ?intentDescription <http://www.w3.org/ns/shacl#path> <http://purl.org/dc/terms/description> ; <http://www.w3.org/ns/shacl#minCount> 1 ; <http://www.w3.org/ns/shacl#maxCount> 1 . ?intentNoMutation <http://www.w3.org/ns/shacl#path> <https://spectacular-voyage.github.io/stagecraft/ontology/stateMutation> ; <http://www.w3.org/ns/shacl#maxCount> 0 . <https://spectacular-voyage.github.io/stagecraft/shacl/IntentWithdrawalRequestShape> a <http://www.w3.org/ns/shacl#NodeShape> ; <http://www.w3.org/ns/shacl#targetClass> <https://spectacular-voyage.github.io/stagecraft/ontology/IntentWithdrawalRequest> ; <http://www.w3.org/ns/shacl#property> ?withdrawsIntent . ?withdrawsIntent <http://www.w3.org/ns/shacl#path> <https://spectacular-voyage.github.io/stagecraft/ontology/withdrawsIntent> ; <http://www.w3.org/ns/shacl#minCount> 1 ; <http://www.w3.org/ns/shacl#maxCount> 1 . }",
+              "expectedBoolean": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

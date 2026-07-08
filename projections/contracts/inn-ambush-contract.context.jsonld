@@ -339,6 +339,15 @@
         }
       }
     },
+    "D20TestAdjudicationRequest": {
+      "@id": "sc:D20TestAdjudicationRequest",
+      "@context": {
+        "warrant": {
+          "@id": "dyn:resolvesWarrant",
+          "@type": "@id"
+        }
+      }
+    },
     "D20TestWarrantRequest": {
       "@id": "sc:D20TestWarrantRequest",
       "@context": {
@@ -366,6 +375,16 @@
         },
         "actor": {
           "@id": "dyn:declinedWarrantActor",
+          "@type": "@id"
+        }
+      }
+    },
+    "IntentDeclarationRequest": "sc:IntentDeclarationRequest",
+    "IntentWithdrawalRequest": {
+      "@id": "sc:IntentWithdrawalRequest",
+      "@context": {
+        "intent": {
+          "@id": "sc:withdrawsIntent",
           "@type": "@id"
         }
       }
@@ -420,6 +439,15 @@
       }
     },
     "consequenceDescription": "dyn:consequenceDescription",
+    "doorBarred": {
+      "@id": "sc:barred",
+      "@type": "xsd:boolean"
+    },
+    "declaration": "dcterms:description",
+    "intentForActant": {
+      "@id": "sc:intentForActant",
+      "@type": "@id"
+    },
     "purpose": "dcterms:description",
     "reason": "dcterms:description",
     "adjudicatesIntent": {
