@@ -1,0 +1,147 @@
+{
+  "@context": {
+    "@vocab": "https://spectacular-voyage.github.io/accord/ontology/",
+    "dcterms": "http://purl.org/dc/terms/",
+    "id": "@id",
+    "type": "@type",
+    "changeType": {
+      "@type": "@vocab"
+    },
+    "compareMode": {
+      "@type": "@vocab"
+    },
+    "targetsFileExpectation": {
+      "@type": "@id"
+    },
+    "locatorKind": {
+      "@type": "@vocab"
+    }
+  },
+  "type": "Manifest",
+  "id": "urn:accord:stagecraft:test-inn-ambush:65-table-roll-request-contract",
+  "dcterms:title": "Inn Ambush 65 table roll request contract",
+  "hasCase": [
+    {
+      "type": "TransitionCase",
+      "id": "#table-roll-request-contract",
+      "fixtureRepo": "github.com/spectacular-voyage/test-inn-ambush",
+      "operationId": "stagecraft.fixture.addTableRollRequestContract",
+      "fromRef": "2949d6a9c65fe32343090026f15ef77b33ff632a",
+      "toRef": "b.13-table-roll-request-contract",
+      "fromState": {
+        "type": "StateLocator",
+        "locatorKind": "gitRefState",
+        "ref": "2949d6a9c65fe32343090026f15ef77b33ff632a"
+      },
+      "toState": {
+        "type": "StateLocator",
+        "locatorKind": "gitRefState",
+        "ref": "b.13-table-roll-request-contract"
+      },
+      "hasFileExpectation": [
+        {
+          "id": "#projection-context",
+          "type": "FileExpectation",
+          "path": "projections/contracts/inn-ambush-contract.context.jsonld",
+          "changeType": "updated",
+          "compareMode": "text"
+        },
+        {
+          "id": "#projection-shapes",
+          "type": "FileExpectation",
+          "path": "projections/contracts/inn-ambush-contract.shapes.ttl",
+          "changeType": "updated",
+          "compareMode": "rdfCanonical"
+        },
+        {
+          "id": "#table-roll-request",
+          "type": "FileExpectation",
+          "path": "authority/table-rolls/table-roll-request-open-table/table-roll-request-open-table.json",
+          "changeType": "added",
+          "compareMode": "json"
+        }
+      ],
+      "hasRdfExpectation": [
+        {
+          "id": "#projection-shapes-rdf",
+          "type": "RdfExpectation",
+          "targetsFileExpectation": "#projection-shapes",
+          "hasAskAssertion": [
+            {
+              "id": "#ask-table-roll-request-shape-target",
+              "type": "SparqlAskAssertion",
+              "query": "ASK { <https://spectacular-voyage.github.io/stagecraft/shacl/TableRollRequestShape> a <http://www.w3.org/ns/shacl#NodeShape> ; <http://www.w3.org/ns/shacl#targetClass> <https://spectacular-voyage.github.io/stagecraft/ontology/TableRollRequest> . }",
+              "expectedBoolean": true
+            },
+            {
+              "id": "#ask-table-roll-request-envelope",
+              "type": "SparqlAskAssertion",
+              "query": "ASK { <https://spectacular-voyage.github.io/stagecraft/shacl/TableRollRequestShape> <http://www.w3.org/ns/shacl#property> [ <http://www.w3.org/ns/shacl#path> <https://spectacular-voyage.github.io/stagecraft/ontology/envelopeType> ; <http://www.w3.org/ns/shacl#hasValue> \"stagecraft.table-roll.request.v1\" ; <http://www.w3.org/ns/shacl#minCount> 1 ; <http://www.w3.org/ns/shacl#maxCount> 1 ] . }",
+              "expectedBoolean": true
+            },
+            {
+              "id": "#ask-table-roll-request-participant",
+              "type": "SparqlAskAssertion",
+              "query": "ASK { <https://spectacular-voyage.github.io/stagecraft/shacl/TableRollRequestShape> <http://www.w3.org/ns/shacl#property> [ <http://www.w3.org/ns/shacl#path> <https://spectacular-voyage.github.io/stagecraft/ontology/requestedByParticipant> ; <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#IRI> ; <http://www.w3.org/ns/shacl#minCount> 1 ; <http://www.w3.org/ns/shacl#maxCount> 1 ] . }",
+              "expectedBoolean": true
+            },
+            {
+              "id": "#ask-table-roll-request-dice-expression",
+              "type": "SparqlAskAssertion",
+              "query": "ASK { <https://spectacular-voyage.github.io/stagecraft/shacl/TableRollRequestShape> <http://www.w3.org/ns/shacl#property> [ <http://www.w3.org/ns/shacl#path> <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/diceExpression> ; <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#string> ; <http://www.w3.org/ns/shacl#minCount> 1 ; <http://www.w3.org/ns/shacl#maxCount> 1 ] . }",
+              "expectedBoolean": true
+            },
+            {
+              "id": "#ask-table-roll-request-audience",
+              "type": "SparqlAskAssertion",
+              "query": "ASK { <https://spectacular-voyage.github.io/stagecraft/shacl/TableRollRequestShape> <http://www.w3.org/ns/shacl#property> [ <http://www.w3.org/ns/shacl#path> <https://spectacular-voyage.github.io/stagecraft/ontology/deliveredTo> ; <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#IRI> ] . }",
+              "expectedBoolean": true
+            },
+            {
+              "id": "#ask-table-roll-request-source-projection",
+              "type": "SparqlAskAssertion",
+              "query": "ASK { <https://spectacular-voyage.github.io/stagecraft/shacl/TableRollRequestShape> <http://www.w3.org/ns/shacl#property> [ <http://www.w3.org/ns/shacl#path> <https://spectacular-voyage.github.io/stagecraft/ontology/sourceProjection> ; <http://www.w3.org/ns/shacl#node> <https://spectacular-voyage.github.io/stagecraft/shacl/SourceProjectionShape> ; <http://www.w3.org/ns/shacl#minCount> 1 ; <http://www.w3.org/ns/shacl#maxCount> 1 ] . }",
+              "expectedBoolean": true
+            },
+            {
+              "id": "#ask-table-roll-request-no-actor",
+              "type": "SparqlAskAssertion",
+              "query": "ASK { <https://spectacular-voyage.github.io/stagecraft/shacl/TableRollRequestShape> <http://www.w3.org/ns/shacl#property> [ <http://www.w3.org/ns/shacl#path> <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/warrantedActor> ; <http://www.w3.org/ns/shacl#maxCount> 0 ] . }",
+              "expectedBoolean": true
+            },
+            {
+              "id": "#ask-table-roll-request-no-test-type",
+              "type": "SparqlAskAssertion",
+              "query": "ASK { <https://spectacular-voyage.github.io/stagecraft/shacl/TableRollRequestShape> <http://www.w3.org/ns/shacl#property> [ <http://www.w3.org/ns/shacl#path> <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/warrantedTestType> ; <http://www.w3.org/ns/shacl#maxCount> 0 ] . }",
+              "expectedBoolean": true
+            },
+            {
+              "id": "#ask-table-roll-request-no-target-number",
+              "type": "SparqlAskAssertion",
+              "query": "ASK { <https://spectacular-voyage.github.io/stagecraft/shacl/TableRollRequestShape> <http://www.w3.org/ns/shacl#property> [ <http://www.w3.org/ns/shacl#path> <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/targetNumber> ; <http://www.w3.org/ns/shacl#maxCount> 0 ] . }",
+              "expectedBoolean": true
+            },
+            {
+              "id": "#ask-table-roll-request-no-warrant",
+              "type": "SparqlAskAssertion",
+              "query": "ASK { <https://spectacular-voyage.github.io/stagecraft/shacl/TableRollRequestShape> <http://www.w3.org/ns/shacl#property> [ <http://www.w3.org/ns/shacl#path> <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/resolvesWarrant> ; <http://www.w3.org/ns/shacl#maxCount> 0 ] . }",
+              "expectedBoolean": true
+            },
+            {
+              "id": "#ask-table-roll-request-no-mechanical-result",
+              "type": "SparqlAskAssertion",
+              "query": "ASK { <https://spectacular-voyage.github.io/stagecraft/shacl/TableRollRequestShape> <http://www.w3.org/ns/shacl#property> [ <http://www.w3.org/ns/shacl#path> <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/mechanicalResult> ; <http://www.w3.org/ns/shacl#maxCount> 0 ] . }",
+              "expectedBoolean": true
+            },
+            {
+              "id": "#ask-table-roll-request-no-adjudicated-result",
+              "type": "SparqlAskAssertion",
+              "query": "ASK { <https://spectacular-voyage.github.io/stagecraft/shacl/TableRollRequestShape> <http://www.w3.org/ns/shacl#property> [ <http://www.w3.org/ns/shacl#path> <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/adjudicatedResult> ; <http://www.w3.org/ns/shacl#maxCount> 0 ] . }",
+              "expectedBoolean": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

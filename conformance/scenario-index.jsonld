@@ -1275,6 +1275,27 @@
           }
         }
       ]
+    },
+    {
+      "id": "#65-table-roll-request-contract",
+      "type": "ScenarioStep",
+      "manifestPath": "65-table-roll-request-contract.jsonld",
+      "hasLaneBinding": [
+        {
+          "type": "LaneStateBinding",
+          "lane": "#fixture-b-lane",
+          "fromLaneState": {
+            "type": "StateLocator",
+            "locatorKind": "gitRefState",
+            "ref": "2949d6a9c65fe32343090026f15ef77b33ff632a"
+          },
+          "toLaneState": {
+            "type": "StateLocator",
+            "locatorKind": "gitRefState",
+            "ref": "b.13-table-roll-request-contract"
+          }
+        }
+      ]
     }
   ]
 }
