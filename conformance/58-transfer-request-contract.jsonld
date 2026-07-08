@@ -1,0 +1,88 @@
+{
+  "@context": {
+    "@vocab": "https://spectacular-voyage.github.io/accord/ontology/",
+    "dcterms": "http://purl.org/dc/terms/",
+    "id": "@id",
+    "type": "@type",
+    "changeType": {
+      "@type": "@vocab"
+    },
+    "compareMode": {
+      "@type": "@vocab"
+    },
+    "targetsFileExpectation": {
+      "@type": "@id"
+    },
+    "locatorKind": {
+      "@type": "@vocab"
+    }
+  },
+  "type": "Manifest",
+  "id": "urn:accord:stagecraft:test-inn-ambush:58-transfer-request-contract",
+  "dcterms:title": "Inn Ambush 58 Transfer request contract",
+  "hasCase": [
+    {
+      "type": "TransitionCase",
+      "id": "#transfer-request-contract",
+      "fixtureRepo": "github.com/spectacular-voyage/test-inn-ambush",
+      "operationId": "stagecraft.fixture.addTransferRequestContract",
+      "fromRef": "b.06-outcome-record-dedup",
+      "toRef": "b.07-transfer-request-contract",
+      "fromState": {
+        "type": "StateLocator",
+        "locatorKind": "gitRefState",
+        "ref": "b.06-outcome-record-dedup"
+      },
+      "toState": {
+        "type": "StateLocator",
+        "locatorKind": "gitRefState",
+        "ref": "b.07-transfer-request-contract"
+      },
+      "hasFileExpectation": [
+        {
+          "id": "#projection-context",
+          "type": "FileExpectation",
+          "path": "projections/contracts/inn-ambush-contract.context.jsonld",
+          "changeType": "updated",
+          "compareMode": "text"
+        },
+        {
+          "id": "#projection-shapes",
+          "type": "FileExpectation",
+          "path": "projections/contracts/inn-ambush-contract.shapes.ttl",
+          "changeType": "updated",
+          "compareMode": "rdfCanonical"
+        },
+        {
+          "id": "#transfer-lantern-request",
+          "type": "FileExpectation",
+          "path": "authority/transfers/transfer-request-elara-give-lantern/transfer-request-elara-give-lantern.json",
+          "changeType": "added",
+          "compareMode": "text"
+        },
+        {
+          "id": "#transfer-coin-request",
+          "type": "FileExpectation",
+          "path": "authority/transfers/transfer-request-nera-give-coin/transfer-request-nera-give-coin.json",
+          "changeType": "added",
+          "compareMode": "text"
+        }
+      ],
+      "hasRdfExpectation": [
+        {
+          "id": "#projection-shapes-rdf",
+          "type": "RdfExpectation",
+          "targetsFileExpectation": "#projection-shapes",
+          "hasAskAssertion": [
+            {
+              "id": "#ask-transfer-request-shape",
+              "type": "SparqlAskAssertion",
+              "query": "ASK { <https://spectacular-voyage.github.io/stagecraft/shacl/TransferRequestShape> a <http://www.w3.org/ns/shacl#NodeShape> ; <http://www.w3.org/ns/shacl#targetClass> <https://spectacular-voyage.github.io/stagecraft/ontology/TransferRequest> ; <http://www.w3.org/ns/shacl#property> [ <http://www.w3.org/ns/shacl#path> <https://spectacular-voyage.github.io/stagecraft/ontology/possessio/transferActKind> ; <http://www.w3.org/ns/shacl#minCount> 1 ; <http://www.w3.org/ns/shacl#maxCount> 1 ], [ <http://www.w3.org/ns/shacl#path> <https://spectacular-voyage.github.io/stagecraft/ontology/possessio/opensHolding> ; <http://www.w3.org/ns/shacl#maxCount> 0 ], [ <http://www.w3.org/ns/shacl#path> <https://spectacular-voyage.github.io/stagecraft/ontology/wouldProduce> ; <http://www.w3.org/ns/shacl#maxCount> 0 ] . }",
+              "expectedBoolean": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

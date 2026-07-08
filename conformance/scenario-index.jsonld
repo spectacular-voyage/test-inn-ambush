@@ -1128,6 +1128,27 @@
           }
         }
       ]
+    },
+    {
+      "id": "#58-transfer-request-contract",
+      "type": "ScenarioStep",
+      "manifestPath": "58-transfer-request-contract.jsonld",
+      "hasLaneBinding": [
+        {
+          "type": "LaneStateBinding",
+          "lane": "#fixture-b-lane",
+          "fromLaneState": {
+            "type": "StateLocator",
+            "locatorKind": "gitRefState",
+            "ref": "b.06-outcome-record-dedup"
+          },
+          "toLaneState": {
+            "type": "StateLocator",
+            "locatorKind": "gitRefState",
+            "ref": "b.07-transfer-request-contract"
+          }
+        }
+      ]
     }
   ]
 }
