@@ -19,6 +19,7 @@
     <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/spells/schools-csv>,
     <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/spells/spell-classes-csv>,
     <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/spells/spell-expressions-csv>,
+    <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/spells/spell-area-shapes-csv>,
     <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/spells/spells-csvw> .
 
 <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/spells/spells-csv>
@@ -40,6 +41,11 @@
   a dcat:Distribution ;
   dcterms:title "SRD 5.2.1 spell expression curated CSV" ;
   dcat:downloadURL <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/spells/spell-expressions.csv> .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/spells/spell-area-shapes-csv>
+  a dcat:Distribution ;
+  dcterms:title "SRD 5.2.1 spell area shape curated CSV" ;
+  dcat:downloadURL <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/spells/spell-area-shapes.csv> .
 
 <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/spells/spells-csvw>
   a dcat:Distribution ;
@@ -2941,6 +2947,7 @@
   dyn:saveAbility dyn:Dexterity ;
   dyn:requiresAttackRoll false ;
   dyn:atHigherLevelsText "Using a Higher-Level Spell Slot. The damage increases by 1d6 for each spell slot level above 3." ;
+  dyn:areaShape <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/spells/area-shape/fireball-sphere-20> ;
   dyn:sourceSection "Spell Descriptions: Fireball" .
 
 <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/spells/spell/fire-bolt>
@@ -6400,6 +6407,7 @@
   dyn:saveAbility dyn:Constitution ;
   dyn:requiresAttackRoll false ;
   dyn:atHigherLevelsText "Using a Higher-Level Spell Slot. The damage increases by 1d8 for each spell slot level above 2." ;
+  dyn:areaShape <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/spells/area-shape/shatter-sphere-10> ;
   dyn:sourceSection "Spell Descriptions: Shatter" .
 
 <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/spells/spell/shield>
@@ -7894,6 +7902,22 @@
   dyn:saveAbility dyn:Charisma ;
   dyn:requiresAttackRoll false ;
   dyn:sourceSection "Spell Descriptions: Zone of Truth" .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/spells/area-shape/fireball-sphere-20>
+  a dyn:AreaOfEffectShape ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/spells> ;
+  rdfs:label "Fireball sphere area" ;
+  dyn:areaShapeKind "sphere" ;
+  dyn:radiusFeet 20 ;
+  dyn:sourceSection "Spell Descriptions: Fireball" .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/spells/area-shape/shatter-sphere-10>
+  a dyn:AreaOfEffectShape ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/spells> ;
+  rdfs:label "Shatter sphere area" ;
+  dyn:areaShapeKind "sphere" ;
+  dyn:radiusFeet 10 ;
+  dyn:sourceSection "Spell Descriptions: Shatter" .
 
 <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/spells/spell-class/dancing-lights-bard>
   a dyn:SpellClassAvailability ;
