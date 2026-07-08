@@ -420,6 +420,10 @@
       "@id": "possessio:quantity",
       "@type": "xsd:decimal"
     },
+    "transferQuantity": {
+      "@id": "possessio:transferQuantity",
+      "@type": "xsd:decimal"
+    },
     "transferContainer": {
       "@id": "possessio:transferContainer",
       "@type": "@id"
