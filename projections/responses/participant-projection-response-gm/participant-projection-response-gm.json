@@ -40,6 +40,7 @@
     "https://spectacular-voyage.github.io/test-inn-ambush/actant/nera",
     "https://spectacular-voyage.github.io/test-inn-ambush/suggestion/plan-b",
     "https://spectacular-voyage.github.io/test-inn-ambush/intent/elara-plan-b",
+    "https://spectacular-voyage.github.io/test-inn-ambush/item/ashfang",
     "https://spectacular-voyage.github.io/test-inn-ambush/target/door",
     "https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/outcome-committed/plan-b-001",
     "https://spectacular-voyage.github.io/test-inn-ambush/committed-event/plan-b-001",
@@ -75,6 +76,12 @@
       "resourceClass": "https://spectacular-voyage.github.io/stagecraft/ontology/Intent",
       "label": "Elara's Plan B intent",
       "summary": "Alice declared Elara's intent to bar the door before the ambush resolves."
+    },
+    {
+      "resource": "https://spectacular-voyage.github.io/test-inn-ambush/item/ashfang",
+      "resourceClass": "https://spectacular-voyage.github.io/stagecraft/ontology/Item",
+      "label": "Ashfang",
+      "summary": "Ashfang is Elara's weapon in the inn common room."
     },
     {
       "resource": "https://spectacular-voyage.github.io/test-inn-ambush/target/door",

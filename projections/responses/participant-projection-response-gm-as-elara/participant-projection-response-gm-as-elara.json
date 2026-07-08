@@ -53,6 +53,7 @@
     "https://spectacular-voyage.github.io/test-inn-ambush/beat/plan-b",
     "https://spectacular-voyage.github.io/test-inn-ambush/actant/elara",
     "https://spectacular-voyage.github.io/test-inn-ambush/actant/nera",
+    "https://spectacular-voyage.github.io/test-inn-ambush/item/ashfang",
     "https://spectacular-voyage.github.io/test-inn-ambush/suggestion/plan-b",
     "https://spectacular-voyage.github.io/test-inn-ambush/intent/elara-plan-b"
   ],
@@ -74,6 +75,12 @@
       "resourceClass": "https://spectacular-voyage.github.io/stagecraft/ontology/Character",
       "label": "Nera",
       "summary": "Nera is in the inn scene; Plan B is about creating space for her escape."
+    },
+    {
+      "resource": "https://spectacular-voyage.github.io/test-inn-ambush/item/ashfang",
+      "resourceClass": "https://spectacular-voyage.github.io/stagecraft/ontology/Item",
+      "label": "Ashfang",
+      "summary": "Ashfang is Elara's weapon in the inn common room."
     },
     {
       "resource": "https://spectacular-voyage.github.io/test-inn-ambush/suggestion/plan-b",

@@ -1179,6 +1179,11 @@
 	<https://spectacular-voyage.github.io/stagecraft/ontology/predicate> <https://spectacular-voyage.github.io/stagecraft/ontology/visibleTo> ;
 	<https://spectacular-voyage.github.io/stagecraft/ontology/object> <https://spectacular-voyage.github.io/test-inn-ambush/gm/alex> ;
 	<https://spectacular-voyage.github.io/stagecraft/ontology/acceptedFrom> "2026-06-29T13:35:00Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://spectacular-voyage.github.io/test-inn-ambush/relator/visibility/ashfang/players-current> a <https://spectacular-voyage.github.io/stagecraft/ontology/TemporalRelator> ;
+	<https://spectacular-voyage.github.io/stagecraft/ontology/subject> <https://spectacular-voyage.github.io/test-inn-ambush/item/ashfang> ;
+	<https://spectacular-voyage.github.io/stagecraft/ontology/predicate> <https://spectacular-voyage.github.io/stagecraft/ontology/visibleTo> ;
+	<https://spectacular-voyage.github.io/stagecraft/ontology/object> <https://spectacular-voyage.github.io/test-inn-ambush/participant/alice> , <https://spectacular-voyage.github.io/test-inn-ambush/participant/bob> ;
+	<https://spectacular-voyage.github.io/stagecraft/ontology/acceptedFrom> "2026-06-29T13:35:00Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
 <https://spectacular-voyage.github.io/test-inn-ambush/relator/visibility/calendar/package/players-current> a <https://spectacular-voyage.github.io/stagecraft/ontology/TemporalRelator> ;
 	<https://spectacular-voyage.github.io/stagecraft/ontology/subject> <https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar> ;
 	<https://spectacular-voyage.github.io/stagecraft/ontology/predicate> <https://spectacular-voyage.github.io/stagecraft/ontology/visibleTo> ;
@@ -1330,6 +1335,7 @@
 	<https://spectacular-voyage.github.io/stagecraft/ontology/object> <https://spectacular-voyage.github.io/test-inn-ambush/participant/alice> , <https://spectacular-voyage.github.io/test-inn-ambush/participant/bob> ;
 	<https://spectacular-voyage.github.io/stagecraft/ontology/acceptedFrom> "2026-06-29T13:35:00Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
 <https://spectacular-voyage.github.io/test-inn-ambush/item/ashfang> a <https://spectacular-voyage.github.io/stagecraft/ontology/Item> , <https://spectacular-voyage.github.io/stagecraft/ontology/Target> ;
+	<http://www.w3.org/2000/01/rdf-schema#label> "Ashfang" ;
 	<https://spectacular-voyage.github.io/stagecraft/ontology/heldBy> <https://spectacular-voyage.github.io/test-inn-ambush/actant/elara> ;
 	<https://spectacular-voyage.github.io/stagecraft/ontology/inHistory> <https://spectacular-voyage.github.io/test-inn-ambush/history/main> ;
 	<https://spectacular-voyage.github.io/stagecraft/ontology/inScenario> <https://spectacular-voyage.github.io/test-inn-ambush/scenario/inn-ambush> ;
