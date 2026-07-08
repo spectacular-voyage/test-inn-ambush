@@ -1,6 +1,8 @@
 @prefix sc: <https://spectacular-voyage.github.io/stagecraft/ontology/> .
 @prefix sc-sh: <https://spectacular-voyage.github.io/stagecraft/shacl/> .
 @prefix dyn: <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/> .
+@prefix possessio: <https://spectacular-voyage.github.io/stagecraft/ontology/possessio/> .
+@prefix roleosum: <https://spectacular-voyage.github.io/stagecraft/ontology/roleosum/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix sh: <http://www.w3.org/ns/shacl#> .
 @prefix time: <http://www.w3.org/2006/time#> .
@@ -664,6 +666,160 @@ sc-sh:D20TestWarrantWithdrawalRequestShape
     sh:datatype xsd:dateTime ;
     sh:minCount 1 ;
     sh:maxCount 1 ;
+  ] .
+
+sc-sh:TransferRequestShape
+  a sh:NodeShape ;
+  sh:targetClass sc:TransferRequest ;
+  sh:property [
+    sh:path sc:envelopeType ;
+    sh:hasValue "stagecraft.transfer.request.v1" ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path sc:envelopeId ;
+    sh:datatype xsd:string ;
+    sh:minLength 1 ;
+    sh:pattern "\\S" ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path sc:requestedByParticipant ;
+    sh:nodeKind sh:IRI ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path possessio:transferActKind ;
+    sh:nodeKind sh:IRI ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path possessio:transferActor ;
+    sh:nodeKind sh:IRI ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path possessio:transferCounterparty ;
+    sh:nodeKind sh:IRI ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path possessio:transferItem ;
+    sh:nodeKind sh:IRI ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path possessio:quantity ;
+    sh:datatype xsd:decimal ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path possessio:transferContainer ;
+    sh:nodeKind sh:IRI ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path possessio:underCommitment ;
+    sh:nodeKind sh:IRI ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path sc:sourceProjection ;
+    sh:node sc-sh:SourceProjectionShape ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path sc:createdAt ;
+    sh:datatype xsd:dateTime ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path possessio:opensHolding ;
+    sh:maxCount 0 ;
+    sh:message "TransferRequest states intent only; authority resolves opened holding relators." ;
+  ] ;
+  sh:property [
+    sh:path possessio:closesHolding ;
+    sh:maxCount 0 ;
+    sh:message "TransferRequest states intent only; authority resolves closed holding relators." ;
+  ] ;
+  sh:property [
+    sh:path possessio:opensOwnership ;
+    sh:maxCount 0 ;
+    sh:message "TransferRequest states intent only; authority resolves opened ownership relators." ;
+  ] ;
+  sh:property [
+    sh:path possessio:closesOwnership ;
+    sh:maxCount 0 ;
+    sh:message "TransferRequest states intent only; authority resolves closed ownership relators." ;
+  ] ;
+  sh:property [
+    sh:path possessio:opensContainment ;
+    sh:maxCount 0 ;
+    sh:message "TransferRequest states intent only; authority resolves opened containment relators." ;
+  ] ;
+  sh:property [
+    sh:path possessio:closesContainment ;
+    sh:maxCount 0 ;
+    sh:message "TransferRequest states intent only; authority resolves closed containment relators." ;
+  ] ;
+  sh:property [
+    sh:path possessio:opensEquipped ;
+    sh:maxCount 0 ;
+    sh:message "TransferRequest states intent only; authority resolves opened equipped relators." ;
+  ] ;
+  sh:property [
+    sh:path possessio:closesEquipped ;
+    sh:maxCount 0 ;
+    sh:message "TransferRequest states intent only; authority resolves closed equipped relators." ;
+  ] ;
+  sh:property [
+    sh:path possessio:opensAttunement ;
+    sh:maxCount 0 ;
+    sh:message "TransferRequest states intent only; authority resolves opened attunement relators." ;
+  ] ;
+  sh:property [
+    sh:path possessio:closesAttunement ;
+    sh:maxCount 0 ;
+    sh:message "TransferRequest states intent only; authority resolves closed attunement relators." ;
+  ] ;
+  sh:property [
+    sh:path sc:wouldProduce ;
+    sh:maxCount 0 ;
+    sh:message "TransferRequest must not preview authority-produced resources." ;
+  ] ;
+  sh:property [
+    sh:path sc:producedResources ;
+    sh:maxCount 0 ;
+    sh:message "TransferRequest must not claim authority-produced resources." ;
+  ] ;
+  sh:property [
+    sh:path sc:authorityRecord ;
+    sh:maxCount 0 ;
+    sh:message "TransferRequest must not claim authority-produced resources." ;
+  ] ;
+  sh:property [
+    sh:path sc:committedEvent ;
+    sh:maxCount 0 ;
+    sh:message "TransferRequest must not claim authority-produced resources." ;
+  ] ;
+  sh:property [
+    sh:path sc:commitCertificate ;
+    sh:maxCount 0 ;
+    sh:message "TransferRequest must not claim authority-produced resources." ;
+  ] ;
+  sh:property [
+    sh:path sc:stateMutation ;
+    sh:maxCount 0 ;
+    sh:message "TransferRequest must not claim authority-produced resources or accepted state mutation records." ;
   ] .
 
 sc-sh:CommittedSpeechEventShape

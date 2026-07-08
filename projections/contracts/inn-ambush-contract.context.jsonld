@@ -5,6 +5,8 @@
     "sc": "https://spectacular-voyage.github.io/stagecraft/ontology/",
     "sflo": "https://semantic-flow.github.io/sflo/ontology/",
     "dyn": "https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/",
+    "possessio": "https://spectacular-voyage.github.io/stagecraft/ontology/possessio/",
+    "roleosum": "https://spectacular-voyage.github.io/stagecraft/ontology/roleosum/",
     "dcterms": "http://purl.org/dc/terms/",
     "owlTime": "http://www.w3.org/2006/time#",
     "xsd": "http://www.w3.org/2001/XMLSchema#",
@@ -321,6 +323,7 @@
         }
       }
     },
+    "TransferRequest": "sc:TransferRequest",
     "actor": {
       "@id": "dyn:warrantedActor",
       "@type": "@id"
@@ -361,6 +364,74 @@
     "reason": "dcterms:description",
     "adjudicatesIntent": {
       "@id": "dyn:adjudicatesIntent",
+      "@type": "@id"
+    },
+    "transferActKind": {
+      "@id": "possessio:transferActKind",
+      "@type": "@id"
+    },
+    "transferActor": {
+      "@id": "possessio:transferActor",
+      "@type": "@id"
+    },
+    "transferCounterparty": {
+      "@id": "possessio:transferCounterparty",
+      "@type": "@id"
+    },
+    "transferItem": {
+      "@id": "possessio:transferItem",
+      "@type": "@id"
+    },
+    "quantity": {
+      "@id": "possessio:quantity",
+      "@type": "xsd:decimal"
+    },
+    "transferContainer": {
+      "@id": "possessio:transferContainer",
+      "@type": "@id"
+    },
+    "underCommitment": {
+      "@id": "possessio:underCommitment",
+      "@type": "@id"
+    },
+    "opensHolding": {
+      "@id": "possessio:opensHolding",
+      "@type": "@id"
+    },
+    "closesHolding": {
+      "@id": "possessio:closesHolding",
+      "@type": "@id"
+    },
+    "opensOwnership": {
+      "@id": "possessio:opensOwnership",
+      "@type": "@id"
+    },
+    "closesOwnership": {
+      "@id": "possessio:closesOwnership",
+      "@type": "@id"
+    },
+    "opensContainment": {
+      "@id": "possessio:opensContainment",
+      "@type": "@id"
+    },
+    "closesContainment": {
+      "@id": "possessio:closesContainment",
+      "@type": "@id"
+    },
+    "opensEquipped": {
+      "@id": "possessio:opensEquipped",
+      "@type": "@id"
+    },
+    "closesEquipped": {
+      "@id": "possessio:closesEquipped",
+      "@type": "@id"
+    },
+    "opensAttunement": {
+      "@id": "possessio:opensAttunement",
+      "@type": "@id"
+    },
+    "closesAttunement": {
+      "@id": "possessio:closesAttunement",
       "@type": "@id"
     },
     "intentBearingActant": {

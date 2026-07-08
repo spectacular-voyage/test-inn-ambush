@@ -1,0 +1,18 @@
+{
+  "@context": "https://spectacular-voyage.github.io/test-inn-ambush/projections/contracts/inn-ambush-contract.context.jsonld",
+  "@type": "TransferRequest",
+  "type": "stagecraft.transfer.request.v1",
+  "id": "transfer-request-nera-give-coin-fixture",
+  "requestedByParticipant": "https://spectacular-voyage.github.io/test-inn-ambush/participant/bob",
+  "transferActKind": "https://spectacular-voyage.github.io/stagecraft/ontology/possessio/give",
+  "transferActor": "https://spectacular-voyage.github.io/test-inn-ambush/actant/nera",
+  "transferCounterparty": "https://spectacular-voyage.github.io/test-inn-ambush/actant/elara",
+  "transferItem": "https://spectacular-voyage.github.io/test-inn-ambush/item/silver-coin",
+  "quantity": 3,
+  "underCommitment": "https://spectacular-voyage.github.io/test-inn-ambush/commitment/lantern-for-watch",
+  "sourceProjection": {
+    "observedProjectionState": "https://spectacular-voyage.github.io/test-inn-ambush/branch/plan-b",
+    "participantProjection": "https://spectacular-voyage.github.io/test-inn-ambush/projection/bob/inn-ambush-plan-b"
+  },
+  "createdAt": "2026-07-07T17:46:00Z"
+}
