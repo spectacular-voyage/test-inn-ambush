@@ -543,6 +543,91 @@ sc-sh:D20TestRequestShape
     sh:maxCount 1 ;
   ] .
 
+sc-sh:TableRollRequestShape
+  a sh:NodeShape ;
+  sh:targetClass sc:TableRollRequest ;
+  sh:property [
+    sh:path sc:envelopeType ;
+    sh:hasValue "stagecraft.table-roll.request.v1" ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path sc:envelopeId ;
+    sh:datatype xsd:string ;
+    sh:minLength 1 ;
+    sh:pattern "\\S" ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path sc:requestedByParticipant ;
+    sh:nodeKind sh:IRI ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path dyn:diceExpression ;
+    sh:datatype xsd:string ;
+    sh:minLength 1 ;
+    sh:pattern "\\S" ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path sc:label ;
+    sh:datatype xsd:string ;
+    sh:minLength 1 ;
+    sh:pattern "\\S" ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path sc:deliveredTo ;
+    sh:nodeKind sh:IRI ;
+  ] ;
+  sh:property [
+    sh:path sc:sourceProjection ;
+    sh:node sc-sh:SourceProjectionShape ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path sc:createdAt ;
+    sh:datatype xsd:dateTime ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path dyn:warrantedActor ;
+    sh:maxCount 0 ;
+    sh:message "TableRollRequest is table-layer dice evidence and must not name an actant." ;
+  ] ;
+  sh:property [
+    sh:path dyn:warrantedTestType ;
+    sh:maxCount 0 ;
+    sh:message "TableRollRequest is table-layer dice evidence and must not name a D20 test type." ;
+  ] ;
+  sh:property [
+    sh:path dyn:targetNumber ;
+    sh:maxCount 0 ;
+    sh:message "TableRollRequest is table-layer dice evidence and must not carry a target number." ;
+  ] ;
+  sh:property [
+    sh:path dyn:resolvesWarrant ;
+    sh:maxCount 0 ;
+    sh:message "TableRollRequest cannot resolve a warrant; warrants require character context." ;
+  ] ;
+  sh:property [
+    sh:path dyn:mechanicalResult ;
+    sh:maxCount 0 ;
+    sh:message "TableRollRequest is evidence only and must not claim a success judgment." ;
+  ] ;
+  sh:property [
+    sh:path dyn:adjudicatedResult ;
+    sh:maxCount 0 ;
+    sh:message "TableRollRequest is evidence only and must not claim an adjudicated result." ;
+  ] .
+
 sc-sh:D20TestAdjudicationRequestShape
   a sh:NodeShape ;
   sh:targetClass sc:D20TestAdjudicationRequest ;
