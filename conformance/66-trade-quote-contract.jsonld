@@ -1,0 +1,88 @@
+{
+  "@context": {
+    "@vocab": "https://spectacular-voyage.github.io/accord/ontology/",
+    "dcterms": "http://purl.org/dc/terms/",
+    "id": "@id",
+    "type": "@type",
+    "changeType": {
+      "@type": "@vocab"
+    },
+    "compareMode": {
+      "@type": "@vocab"
+    },
+    "targetsFileExpectation": {
+      "@type": "@id"
+    },
+    "locatorKind": {
+      "@type": "@vocab"
+    }
+  },
+  "type": "Manifest",
+  "id": "urn:accord:stagecraft:test-inn-ambush:66-trade-quote-contract",
+  "dcterms:title": "Inn Ambush 66 trade quote contract",
+  "hasCase": [
+    {
+      "type": "TransitionCase",
+      "id": "#trade-quote-contract",
+      "fixtureRepo": "github.com/spectacular-voyage/test-inn-ambush",
+      "operationId": "stagecraft.fixture.addTradeQuoteContract",
+      "fromRef": "30440609df5e9e8c25167ca334984a5983dcd5e3",
+      "toRef": "b.14-trade-quote-contract",
+      "fromState": {
+        "type": "StateLocator",
+        "locatorKind": "gitRefState",
+        "ref": "30440609df5e9e8c25167ca334984a5983dcd5e3"
+      },
+      "toState": {
+        "type": "StateLocator",
+        "locatorKind": "gitRefState",
+        "ref": "b.14-trade-quote-contract"
+      },
+      "hasFileExpectation": [
+        {
+          "id": "#projection-context",
+          "type": "FileExpectation",
+          "path": "projections/contracts/inn-ambush-contract.context.jsonld",
+          "changeType": "updated",
+          "compareMode": "text"
+        },
+        {
+          "id": "#projection-shapes",
+          "type": "FileExpectation",
+          "path": "projections/contracts/inn-ambush-contract.shapes.ttl",
+          "changeType": "updated",
+          "compareMode": "rdfCanonical"
+        },
+        {
+          "id": "#trade-quote-request",
+          "type": "FileExpectation",
+          "path": "authority/trade-quotes/trade-quote-request-talla-lantern/trade-quote-request-talla-lantern.json",
+          "changeType": "added",
+          "compareMode": "json"
+        },
+        {
+          "id": "#trade-quote-acceptance-request",
+          "type": "FileExpectation",
+          "path": "authority/trade-quotes/trade-quote-acceptance-request-alice-lantern/trade-quote-acceptance-request-alice-lantern.json",
+          "changeType": "added",
+          "compareMode": "json"
+        }
+      ],
+      "hasRdfExpectation": [
+        {
+          "id": "#projection-shapes-rdf",
+          "type": "RdfExpectation",
+          "targetsFileExpectation": "#projection-shapes",
+          "hasAskAssertion": [
+            {
+              "id": "#ask-trade-quote-request-shapes",
+              "type": "SparqlAskAssertion",
+              "query": "ASK { <https://spectacular-voyage.github.io/stagecraft/shacl/TradeQuoteRequestShape> a <http://www.w3.org/ns/shacl#NodeShape> ; <http://www.w3.org/ns/shacl#targetClass> <https://spectacular-voyage.github.io/stagecraft/ontology/TradeQuoteRequest> ; <http://www.w3.org/ns/shacl#property> [ <http://www.w3.org/ns/shacl#path> <https://spectacular-voyage.github.io/stagecraft/ontology/roleosum/quotedItem> ; <http://www.w3.org/ns/shacl#minCount> 1 ; <http://www.w3.org/ns/shacl#maxCount> 1 ], [ <http://www.w3.org/ns/shacl#path> <https://spectacular-voyage.github.io/stagecraft/ontology/roleosum/hasObligation> ; <http://www.w3.org/ns/shacl#maxCount> 0 ], [ <http://www.w3.org/ns/shacl#path> <https://spectacular-voyage.github.io/stagecraft/ontology/wouldProduce> ; <http://www.w3.org/ns/shacl#maxCount> 0 ] . <https://spectacular-voyage.github.io/stagecraft/shacl/TradeQuoteAcceptanceRequestShape> a <http://www.w3.org/ns/shacl#NodeShape> ; <http://www.w3.org/ns/shacl#targetClass> <https://spectacular-voyage.github.io/stagecraft/ontology/TradeQuoteAcceptanceRequest> ; <http://www.w3.org/ns/shacl#property> [ <http://www.w3.org/ns/shacl#path> <https://spectacular-voyage.github.io/stagecraft/ontology/roleosum/acceptsProposedCommitment> ; <http://www.w3.org/ns/shacl#minCount> 1 ; <http://www.w3.org/ns/shacl#maxCount> 1 ], [ <http://www.w3.org/ns/shacl#path> <https://spectacular-voyage.github.io/stagecraft/ontology/roleosum/acceptedCommitment> ; <http://www.w3.org/ns/shacl#maxCount> 0 ] . }",
+              "expectedBoolean": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

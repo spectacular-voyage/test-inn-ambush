@@ -1296,6 +1296,27 @@
           }
         }
       ]
+    },
+    {
+      "id": "#66-trade-quote-contract",
+      "type": "ScenarioStep",
+      "manifestPath": "66-trade-quote-contract.jsonld",
+      "hasLaneBinding": [
+        {
+          "type": "LaneStateBinding",
+          "lane": "#fixture-b-lane",
+          "fromLaneState": {
+            "type": "StateLocator",
+            "locatorKind": "gitRefState",
+            "ref": "30440609df5e9e8c25167ca334984a5983dcd5e3"
+          },
+          "toLaneState": {
+            "type": "StateLocator",
+            "locatorKind": "gitRefState",
+            "ref": "b.14-trade-quote-contract"
+          }
+        }
+      ]
     }
   ]
 }
