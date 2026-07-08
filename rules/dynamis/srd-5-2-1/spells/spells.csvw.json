@@ -118,6 +118,31 @@
         ],
         "aboutUrl": "https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/spells/spell-expression/{expressionKey}"
       }
+    },
+    {
+      "url": "spell-area-shapes.csv",
+      "tableSchema": {
+        "columns": [
+          { "name": "shapeKey", "datatype": "string", "required": true },
+          { "name": "spellKey", "datatype": "string", "required": true },
+          { "name": "spellLabel", "datatype": "string", "required": true },
+          { "name": "shapeKind", "datatype": "string", "required": true },
+          { "name": "radiusFeet", "datatype": "integer" },
+          { "name": "rangeFeet", "datatype": "integer" },
+          { "name": "sourceSection", "datatype": "string", "required": true }
+        ],
+        "primaryKey": "shapeKey",
+        "foreignKeys": [
+          {
+            "columnReference": "spellKey",
+            "reference": {
+              "resource": "spells.csv",
+              "columnReference": "spellKey"
+            }
+          }
+        ],
+        "aboutUrl": "https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/spells/area-shape/{shapeKey}"
+      }
     }
   ]
 }
