@@ -412,6 +412,16 @@
       }
     },
     "TransferRequest": "sc:TransferRequest",
+    "TradeQuoteRequest": "sc:TradeQuoteRequest",
+    "TradeQuoteAcceptanceRequest": {
+      "@id": "sc:TradeQuoteAcceptanceRequest",
+      "@context": {
+        "quote": {
+          "@id": "roleosum:acceptsProposedCommitment",
+          "@type": "@id"
+        }
+      }
+    },
     "actor": {
       "@id": "dyn:warrantedActor",
       "@type": "@id"
@@ -493,6 +503,46 @@
     },
     "underCommitment": {
       "@id": "possessio:underCommitment",
+      "@type": "@id"
+    },
+    "seller": {
+      "@id": "roleosum:proposedBy",
+      "@type": "@id"
+    },
+    "buyer": {
+      "@id": "roleosum:proposedTo",
+      "@type": "@id"
+    },
+    "buyerParticipant": {
+      "@id": "sc:deliveredTo",
+      "@type": "@id"
+    },
+    "item": {
+      "@id": "roleosum:quotedItem",
+      "@type": "@id"
+    },
+    "priceItem": {
+      "@id": "roleosum:quotedPriceItem",
+      "@type": "@id"
+    },
+    "priceQuantity": {
+      "@id": "roleosum:quotedPriceQuantity",
+      "@type": "xsd:decimal"
+    },
+    "expiresAt": {
+      "@id": "roleosum:expiresAt",
+      "@type": "xsd:dateTime"
+    },
+    "quote": {
+      "@id": "roleosum:acceptsProposedCommitment",
+      "@type": "@id"
+    },
+    "hasObligation": {
+      "@id": "roleosum:hasObligation",
+      "@type": "@id"
+    },
+    "acceptedCommitment": {
+      "@id": "roleosum:acceptedCommitment",
       "@type": "@id"
     },
     "opensHolding": {

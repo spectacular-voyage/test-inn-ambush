@@ -1,0 +1,19 @@
+{
+  "@context": "https://spectacular-voyage.github.io/test-inn-ambush/projections/contracts/inn-ambush-contract.context.jsonld",
+  "@type": "TradeQuoteRequest",
+  "type": "stagecraft.trade-quote.request.v1",
+  "id": "trade-quote-request-talla-lantern-001",
+  "requestedByParticipant": "https://spectacular-voyage.github.io/test-inn-ambush/participant/agent/talla",
+  "seller": "https://spectacular-voyage.github.io/test-inn-ambush/npc/talla-mosswick",
+  "buyer": "https://spectacular-voyage.github.io/test-inn-ambush/party/protagonists",
+  "buyerParticipant": "https://spectacular-voyage.github.io/test-inn-ambush/participant/alice",
+  "item": "https://spectacular-voyage.github.io/test-inn-ambush/item/wares/storm-lantern",
+  "priceItem": "https://spectacular-voyage.github.io/test-inn-ambush/fungible/silver-coin",
+  "priceQuantity": 3,
+  "expiresAt": "2026-07-07T20:05:00Z",
+  "sourceProjection": {
+    "observedProjectionState": "https://spectacular-voyage.github.io/test-inn-ambush/branch/plan-b",
+    "participantProjection": "https://spectacular-voyage.github.io/test-inn-ambush/projection/agent/talla/inn-ambush-plan-b"
+  },
+  "createdAt": "2026-07-07T20:00:00Z"
+}
