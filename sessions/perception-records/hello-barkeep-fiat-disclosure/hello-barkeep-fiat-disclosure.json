@@ -1,0 +1,14 @@
+{
+  "@context": "https://spectacular-voyage.github.io/test-inn-ambush/projections/contracts/inn-ambush-contract.context.jsonld",
+  "@type": "PerceptionRecord",
+  "type": "stagecraft.perception-record.v1",
+  "id": "perception-record-hello-barkeep-fiat-disclosure-001",
+  "perceiver": "https://spectacular-voyage.github.io/test-inn-ambush/actant/elara",
+  "percept": "https://spectacular-voyage.github.io/test-inn-ambush/speech-event/hello-barkeep-001",
+  "modality": "https://spectacular-voyage.github.io/stagecraft/ontology/perceptio/sight",
+  "basis": "https://spectacular-voyage.github.io/stagecraft/ontology/perceptio/fiat",
+  "basisDetail": [
+    "https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/speech-committed/hello-barkeep-001"
+  ],
+  "atInstant": "2026-07-07T19:27:00Z"
+}

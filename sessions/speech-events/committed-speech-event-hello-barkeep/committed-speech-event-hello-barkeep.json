@@ -10,10 +10,5 @@
   "basedOnHistory": "https://spectacular-voyage.github.io/test-inn-ambush/history/main",
   "spokenByParticipant": "https://spectacular-voyage.github.io/test-inn-ambush/participant/alice",
   "spokenByActant": "https://spectacular-voyage.github.io/test-inn-ambush/actant/elara",
-  "speechKind": "in-character",
-  "deliveredTo": [
-    "https://spectacular-voyage.github.io/test-inn-ambush/participant/alice",
-    "https://spectacular-voyage.github.io/test-inn-ambush/participant/bob",
-    "https://spectacular-voyage.github.io/test-inn-ambush/gm/alex"
-  ]
+  "speechKind": "in-character"
 }

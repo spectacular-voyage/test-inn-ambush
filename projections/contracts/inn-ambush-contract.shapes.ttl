@@ -1,6 +1,7 @@
 @prefix sc: <https://spectacular-voyage.github.io/stagecraft/ontology/> .
 @prefix sc-sh: <https://spectacular-voyage.github.io/stagecraft/shacl/> .
 @prefix dyn: <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/> .
+@prefix perceptio: <https://spectacular-voyage.github.io/stagecraft/ontology/perceptio/> .
 @prefix possessio: <https://spectacular-voyage.github.io/stagecraft/ontology/possessio/> .
 @prefix roleosum: <https://spectacular-voyage.github.io/stagecraft/ontology/roleosum/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
@@ -1041,8 +1042,8 @@ sc-sh:CommittedSpeechEventShape
   ] ;
   sh:property [
     sh:path sc:deliveredTo ;
-    sh:nodeKind sh:IRI ;
-    sh:minCount 1 ;
+    sh:maxCount 0 ;
+    sh:message "CommittedSpeechEvent delivery is generalized by perceptio:PerceptionRecord." ;
   ] ;
   sh:property [
     sh:path dcterms:created ;
@@ -1083,6 +1084,58 @@ sc-sh:CommittedSpeechEventShape
     sh:path sc:stateMutation ;
     sh:maxCount 0 ;
     sh:message "CommittedSpeechEvent must not point to state mutation records." ;
+  ] .
+
+sc-sh:PerceptionRecordShape
+  a sh:NodeShape ;
+  sh:targetClass perceptio:PerceptionRecord ;
+  sh:property [
+    sh:path sc:envelopeType ;
+    sh:hasValue "stagecraft.perception-record.v1" ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path sc:envelopeId ;
+    sh:datatype xsd:string ;
+    sh:minLength 1 ;
+    sh:pattern "\\S" ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path perceptio:perceiver ;
+    sh:nodeKind sh:IRI ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path perceptio:percept ;
+    sh:nodeKind sh:IRI ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path perceptio:modality ;
+    sh:nodeKind sh:IRI ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path perceptio:basis ;
+    sh:nodeKind sh:IRI ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path perceptio:basisDetail ;
+    sh:nodeKind sh:IRI ;
+  ] ;
+  sh:property [
+    sh:path perceptio:atInstant ;
+    sh:datatype xsd:dateTime ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
   ] .
 
 sc-sh:SpeechCommittedShape

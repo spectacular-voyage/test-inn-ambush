@@ -5,6 +5,7 @@
     "sc": "https://spectacular-voyage.github.io/stagecraft/ontology/",
     "sflo": "https://semantic-flow.github.io/sflo/ontology/",
     "dyn": "https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/",
+    "perceptio": "https://spectacular-voyage.github.io/stagecraft/ontology/perceptio/",
     "possessio": "https://spectacular-voyage.github.io/stagecraft/ontology/possessio/",
     "roleosum": "https://spectacular-voyage.github.io/stagecraft/ontology/roleosum/",
     "dcterms": "http://purl.org/dc/terms/",
@@ -48,6 +49,31 @@
     },
     "deliveredTo": {
       "@type": "@id"
+    },
+    "PerceptionRecord": "perceptio:PerceptionRecord",
+    "perceiver": {
+      "@id": "perceptio:perceiver",
+      "@type": "@id"
+    },
+    "percept": {
+      "@id": "perceptio:percept",
+      "@type": "@id"
+    },
+    "modality": {
+      "@id": "perceptio:modality",
+      "@type": "@id"
+    },
+    "basis": {
+      "@id": "perceptio:basis",
+      "@type": "@id"
+    },
+    "basisDetail": {
+      "@id": "perceptio:basisDetail",
+      "@type": "@id"
+    },
+    "atInstant": {
+      "@id": "perceptio:atInstant",
+      "@type": "xsd:dateTime"
     },
     "spokenByActant": {
       "@type": "@id"
