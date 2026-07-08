@@ -1,0 +1,122 @@
+{
+  "@context": {
+    "@vocab": "https://spectacular-voyage.github.io/accord/ontology/",
+    "dcterms": "http://purl.org/dc/terms/",
+    "id": "@id",
+    "type": "@type",
+    "changeType": {
+      "@type": "@vocab"
+    },
+    "compareMode": {
+      "@type": "@vocab"
+    },
+    "targetsFileExpectation": {
+      "@type": "@id"
+    },
+    "locatorKind": {
+      "@type": "@vocab"
+    }
+  },
+  "type": "Manifest",
+  "id": "urn:accord:stagecraft:test-inn-ambush:62-perception-contract-slice",
+  "dcterms:title": "Inn Ambush 62 perception contract slice",
+  "hasCase": [
+    {
+      "type": "TransitionCase",
+      "id": "#perception-contract-slice",
+      "fixtureRepo": "github.com/spectacular-voyage/test-inn-ambush",
+      "operationId": "stagecraft.fixture.addPerceptionContractSlice",
+      "fromRef": "b.09-transfer-act-quantity-contract",
+      "toRef": "b.10-perception-contract-slice",
+      "fromState": {
+        "type": "StateLocator",
+        "locatorKind": "gitRefState",
+        "ref": "b.09-transfer-act-quantity-contract"
+      },
+      "toState": {
+        "type": "StateLocator",
+        "locatorKind": "gitRefState",
+        "ref": "b.10-perception-contract-slice"
+      },
+      "hasFileExpectation": [
+        {
+          "id": "#projection-context",
+          "type": "FileExpectation",
+          "path": "projections/contracts/inn-ambush-contract.context.jsonld",
+          "changeType": "updated",
+          "compareMode": "json"
+        },
+        {
+          "id": "#projection-shapes",
+          "type": "FileExpectation",
+          "path": "projections/contracts/inn-ambush-contract.shapes.ttl",
+          "changeType": "updated",
+          "compareMode": "rdfCanonical"
+        },
+        {
+          "id": "#committed-speech-event",
+          "type": "FileExpectation",
+          "path": "sessions/speech-events/committed-speech-event-hello-barkeep/committed-speech-event-hello-barkeep.json",
+          "changeType": "updated",
+          "compareMode": "json"
+        },
+        {
+          "id": "#perception-elara-sight",
+          "type": "FileExpectation",
+          "path": "sessions/perception-records/hello-barkeep-elara-sight/hello-barkeep-elara-sight.json",
+          "changeType": "added",
+          "compareMode": "json"
+        },
+        {
+          "id": "#perception-elara-hearing",
+          "type": "FileExpectation",
+          "path": "sessions/perception-records/hello-barkeep-elara-hearing/hello-barkeep-elara-hearing.json",
+          "changeType": "added",
+          "compareMode": "json"
+        },
+        {
+          "id": "#perception-nera-sight",
+          "type": "FileExpectation",
+          "path": "sessions/perception-records/hello-barkeep-nera-sight/hello-barkeep-nera-sight.json",
+          "changeType": "added",
+          "compareMode": "json"
+        },
+        {
+          "id": "#perception-nera-hearing",
+          "type": "FileExpectation",
+          "path": "sessions/perception-records/hello-barkeep-nera-hearing/hello-barkeep-nera-hearing.json",
+          "changeType": "added",
+          "compareMode": "json"
+        },
+        {
+          "id": "#perception-fiat-disclosure",
+          "type": "FileExpectation",
+          "path": "sessions/perception-records/hello-barkeep-fiat-disclosure/hello-barkeep-fiat-disclosure.json",
+          "changeType": "added",
+          "compareMode": "json"
+        }
+      ],
+      "hasRdfExpectation": [
+        {
+          "id": "#projection-shapes-rdf",
+          "type": "RdfExpectation",
+          "targetsFileExpectation": "#projection-shapes",
+          "hasAskAssertion": [
+            {
+              "id": "#ask-committed-speech-generalizes-delivery",
+              "type": "SparqlAskAssertion",
+              "query": "ASK { <https://spectacular-voyage.github.io/stagecraft/shacl/CommittedSpeechEventShape> a <http://www.w3.org/ns/shacl#NodeShape> ; <http://www.w3.org/ns/shacl#targetClass> <https://spectacular-voyage.github.io/stagecraft/ontology/CommittedSpeechEvent> ; <http://www.w3.org/ns/shacl#property> ?deliveryGuard . ?deliveryGuard <http://www.w3.org/ns/shacl#path> <https://spectacular-voyage.github.io/stagecraft/ontology/deliveredTo> ; <http://www.w3.org/ns/shacl#maxCount> \"0\"^^<http://www.w3.org/2001/XMLSchema#integer> ; <http://www.w3.org/ns/shacl#message> \"CommittedSpeechEvent delivery is generalized by perceptio:PerceptionRecord.\" . }",
+              "expectedBoolean": true
+            },
+            {
+              "id": "#ask-perception-record-shape",
+              "type": "SparqlAskAssertion",
+              "query": "ASK { <https://spectacular-voyage.github.io/stagecraft/shacl/PerceptionRecordShape> a <http://www.w3.org/ns/shacl#NodeShape> ; <http://www.w3.org/ns/shacl#targetClass> <https://spectacular-voyage.github.io/stagecraft/ontology/perceptio/PerceptionRecord> ; <http://www.w3.org/ns/shacl#property> ?perceiver, ?percept, ?modality, ?basis, ?basisDetail, ?atInstant . ?perceiver <http://www.w3.org/ns/shacl#path> <https://spectacular-voyage.github.io/stagecraft/ontology/perceptio/perceiver> ; <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#IRI> ; <http://www.w3.org/ns/shacl#minCount> \"1\"^^<http://www.w3.org/2001/XMLSchema#integer> ; <http://www.w3.org/ns/shacl#maxCount> \"1\"^^<http://www.w3.org/2001/XMLSchema#integer> . ?percept <http://www.w3.org/ns/shacl#path> <https://spectacular-voyage.github.io/stagecraft/ontology/perceptio/percept> ; <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#IRI> ; <http://www.w3.org/ns/shacl#minCount> \"1\"^^<http://www.w3.org/2001/XMLSchema#integer> ; <http://www.w3.org/ns/shacl#maxCount> \"1\"^^<http://www.w3.org/2001/XMLSchema#integer> . ?modality <http://www.w3.org/ns/shacl#path> <https://spectacular-voyage.github.io/stagecraft/ontology/perceptio/modality> ; <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#IRI> ; <http://www.w3.org/ns/shacl#minCount> \"1\"^^<http://www.w3.org/2001/XMLSchema#integer> ; <http://www.w3.org/ns/shacl#maxCount> \"1\"^^<http://www.w3.org/2001/XMLSchema#integer> . ?basis <http://www.w3.org/ns/shacl#path> <https://spectacular-voyage.github.io/stagecraft/ontology/perceptio/basis> ; <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#IRI> ; <http://www.w3.org/ns/shacl#minCount> \"1\"^^<http://www.w3.org/2001/XMLSchema#integer> ; <http://www.w3.org/ns/shacl#maxCount> \"1\"^^<http://www.w3.org/2001/XMLSchema#integer> . ?basisDetail <http://www.w3.org/ns/shacl#path> <https://spectacular-voyage.github.io/stagecraft/ontology/perceptio/basisDetail> ; <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#IRI> . ?atInstant <http://www.w3.org/ns/shacl#path> <https://spectacular-voyage.github.io/stagecraft/ontology/perceptio/atInstant> ; <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#dateTime> ; <http://www.w3.org/ns/shacl#minCount> \"1\"^^<http://www.w3.org/2001/XMLSchema#integer> ; <http://www.w3.org/ns/shacl#maxCount> \"1\"^^<http://www.w3.org/2001/XMLSchema#integer> . }",
+              "expectedBoolean": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

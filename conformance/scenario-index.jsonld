@@ -1191,6 +1191,27 @@
           }
         }
       ]
+    },
+    {
+      "id": "#62-perception-contract-slice",
+      "type": "ScenarioStep",
+      "manifestPath": "62-perception-contract-slice.jsonld",
+      "hasLaneBinding": [
+        {
+          "type": "LaneStateBinding",
+          "lane": "#fixture-b-lane",
+          "fromLaneState": {
+            "type": "StateLocator",
+            "locatorKind": "gitRefState",
+            "ref": "b.09-transfer-act-quantity-contract"
+          },
+          "toLaneState": {
+            "type": "StateLocator",
+            "locatorKind": "gitRefState",
+            "ref": "b.10-perception-contract-slice"
+          }
+        }
+      ]
     }
   ]
 }
