@@ -380,6 +380,15 @@
       }
     },
     "IntentDeclarationRequest": "sc:IntentDeclarationRequest",
+    "TableRollRequest": {
+      "@id": "sc:TableRollRequest",
+      "@context": {
+        "participantAudience": {
+          "@id": "sc:deliveredTo",
+          "@type": "@id"
+        }
+      }
+    },
     "IntentWithdrawalRequest": {
       "@id": "sc:IntentWithdrawalRequest",
       "@context": {

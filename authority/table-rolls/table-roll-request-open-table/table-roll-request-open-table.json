@@ -1,0 +1,19 @@
+{
+  "@context": "https://spectacular-voyage.github.io/test-inn-ambush/projections/contracts/inn-ambush-contract.context.jsonld",
+  "@type": "TableRollRequest",
+  "type": "stagecraft.table-roll.request.v1",
+  "id": "table-roll-request-open-table-fixture",
+  "requestedByParticipant": "https://spectacular-voyage.github.io/test-inn-ambush/participant/alice",
+  "diceExpression": "1d20",
+  "label": "Open table roll",
+  "participantAudience": [
+    "https://spectacular-voyage.github.io/test-inn-ambush/participant/alice",
+    "https://spectacular-voyage.github.io/test-inn-ambush/participant/bob",
+    "https://spectacular-voyage.github.io/test-inn-ambush/gm/alex"
+  ],
+  "sourceProjection": {
+    "observedProjectionState": "https://spectacular-voyage.github.io/test-inn-ambush/branch/plan-b",
+    "participantProjection": "https://spectacular-voyage.github.io/test-inn-ambush/projection/alice/inn-ambush-plan-b"
+  },
+  "createdAt": "2026-07-08T18:40:00Z"
+}
