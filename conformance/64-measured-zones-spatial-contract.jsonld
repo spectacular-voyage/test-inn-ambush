@@ -1,0 +1,101 @@
+{
+  "@context": {
+    "@vocab": "https://spectacular-voyage.github.io/accord/ontology/",
+    "dcterms": "http://purl.org/dc/terms/",
+    "id": "@id",
+    "type": "@type",
+    "changeType": {
+      "@type": "@vocab"
+    },
+    "compareMode": {
+      "@type": "@vocab"
+    },
+    "targetsFileExpectation": {
+      "@type": "@id"
+    },
+    "locatorKind": {
+      "@type": "@vocab"
+    }
+  },
+  "type": "Manifest",
+  "id": "urn:accord:stagecraft:test-inn-ambush:64-measured-zones-spatial-contract",
+  "dcterms:title": "Inn Ambush 64 measured zones spatial contract",
+  "hasCase": [
+    {
+      "type": "TransitionCase",
+      "id": "#measured-zones-spatial-contract",
+      "fixtureRepo": "github.com/spectacular-voyage/test-inn-ambush",
+      "operationId": "stagecraft.fixture.addMeasuredZonesSpatialContract",
+      "fromRef": "1963c2a7d876c056cdee1a4c10582d81ef08217d",
+      "toRef": "b.12-measured-zones-spatial-contract",
+      "fromState": {
+        "type": "StateLocator",
+        "locatorKind": "gitRefState",
+        "ref": "1963c2a7d876c056cdee1a4c10582d81ef08217d"
+      },
+      "toState": {
+        "type": "StateLocator",
+        "locatorKind": "gitRefState",
+        "ref": "b.12-measured-zones-spatial-contract"
+      },
+      "hasFileExpectation": [
+        {
+          "id": "#spell-area-shapes-csv",
+          "type": "FileExpectation",
+          "path": "rules/dynamis/srd-5-2-1/spells/spell-area-shapes.csv",
+          "changeType": "added",
+          "compareMode": "text"
+        },
+        {
+          "id": "#spells-csvw",
+          "type": "FileExpectation",
+          "path": "rules/dynamis/srd-5-2-1/spells/spells.csvw.json",
+          "changeType": "updated",
+          "compareMode": "json"
+        },
+        {
+          "id": "#spells-rdf",
+          "type": "FileExpectation",
+          "path": "rules/dynamis/srd-5-2-1/spells/spells.ttl",
+          "changeType": "updated",
+          "compareMode": "rdfCanonical"
+        },
+        {
+          "id": "#world-state",
+          "type": "FileExpectation",
+          "path": "world/states/inn-ambush-plan-b-state/inn-ambush-plan-b-state.ttl",
+          "changeType": "updated",
+          "compareMode": "rdfCanonical"
+        }
+      ],
+      "hasRdfExpectation": [
+        {
+          "id": "#spells-rdf-expectation",
+          "type": "RdfExpectation",
+          "targetsFileExpectation": "#spells-rdf",
+          "hasAskAssertion": [
+            {
+              "id": "#ask-spell-area-shapes",
+              "type": "SparqlAskAssertion",
+              "query": "ASK { <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/spells> <http://www.w3.org/ns/dcat#distribution> <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/spells/spell-area-shapes-csv> . <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/spells/spell/fireball> <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/areaShape> <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/spells/area-shape/fireball-sphere-20> . <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/spells/area-shape/fireball-sphere-20> a <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/AreaOfEffectShape> ; <http://www.w3.org/2000/01/rdf-schema#label> \"Fireball sphere area\" ; <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/areaShapeKind> \"sphere\" ; <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/radiusFeet> 20 ; <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/sourceSection> \"Spell Descriptions: Fireball\" . <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/spells/spell/shatter> <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/areaShape> <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/spells/area-shape/shatter-sphere-10> . <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/spells/area-shape/shatter-sphere-10> a <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/AreaOfEffectShape> ; <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/areaShapeKind> \"sphere\" ; <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/radiusFeet> 10 . }",
+              "expectedBoolean": true
+            }
+          ]
+        },
+        {
+          "id": "#world-state-rdf-expectation",
+          "type": "RdfExpectation",
+          "targetsFileExpectation": "#world-state",
+          "hasAskAssertion": [
+            {
+              "id": "#ask-measured-zone-spatial-state",
+              "type": "SparqlAskAssertion",
+              "query": "ASK { <https://spectacular-voyage.github.io/test-inn-ambush/scenario/inn-ambush> <https://spectacular-voyage.github.io/stagecraft/ontology/hasSpatialModel> <https://spectacular-voyage.github.io/stagecraft/ontology/spatial-model/r0-zone-graph> . <https://spectacular-voyage.github.io/test-inn-ambush/frame/ambush-night> <https://spectacular-voyage.github.io/stagecraft/ontology/hasSpatialModel> <https://spectacular-voyage.github.io/stagecraft/ontology/spatial-model/r1-measured-zones> . <https://spectacular-voyage.github.io/test-inn-ambush/place/common-room> <https://spectacular-voyage.github.io/stagecraft/ontology/zoneExtentFeet> \"60.0\"^^<http://www.w3.org/2001/XMLSchema#decimal> ; <https://spectacular-voyage.github.io/stagecraft/ontology/elevationBand> 0 ; <https://spectacular-voyage.github.io/stagecraft/ontology/hasLocus> <https://spectacular-voyage.github.io/test-inn-ambush/locus/common-room/by-the-bar>, <https://spectacular-voyage.github.io/test-inn-ambush/locus/common-room/near-front-door>, <https://spectacular-voyage.github.io/test-inn-ambush/locus/common-room/loft-landing> . <https://spectacular-voyage.github.io/test-inn-ambush/locus/common-room/loft-landing> a <https://spectacular-voyage.github.io/stagecraft/ontology/NamedLocus> ; <https://spectacular-voyage.github.io/stagecraft/ontology/locatedIn> <https://spectacular-voyage.github.io/test-inn-ambush/place/common-room> ; <https://spectacular-voyage.github.io/stagecraft/ontology/elevationBand> 2 . <https://spectacular-voyage.github.io/test-inn-ambush/spatial/locus-distance/common-room/bar-to-door> <https://spectacular-voyage.github.io/stagecraft/ontology/fromLocus> <https://spectacular-voyage.github.io/test-inn-ambush/locus/common-room/by-the-bar> ; <https://spectacular-voyage.github.io/stagecraft/ontology/toLocus> <https://spectacular-voyage.github.io/test-inn-ambush/locus/common-room/near-front-door> ; <https://spectacular-voyage.github.io/stagecraft/ontology/distanceFeet> \"25.0\"^^<http://www.w3.org/2001/XMLSchema#decimal> . <https://spectacular-voyage.github.io/test-inn-ambush/spatial/edge/common-room-front-door-threshold> a <https://spectacular-voyage.github.io/stagecraft/ontology/ZoneEdge> ; <https://spectacular-voyage.github.io/stagecraft/ontology/fromPlace> <https://spectacular-voyage.github.io/test-inn-ambush/place/common-room> ; <https://spectacular-voyage.github.io/stagecraft/ontology/toPlace> <https://spectacular-voyage.github.io/test-inn-ambush/place/front-door-threshold> ; <https://spectacular-voyage.github.io/stagecraft/ontology/distanceFeet> \"10.0\"^^<http://www.w3.org/2001/XMLSchema#decimal> ; <https://spectacular-voyage.github.io/stagecraft/ontology/lineOfEffectState> \"partial\" . <https://spectacular-voyage.github.io/test-inn-ambush/spatial/edge/front-door-threshold-old-road> a <https://spectacular-voyage.github.io/stagecraft/ontology/ZoneEdge> ; <https://spectacular-voyage.github.io/stagecraft/ontology/fromPlace> <https://spectacular-voyage.github.io/test-inn-ambush/place/front-door-threshold> ; <https://spectacular-voyage.github.io/stagecraft/ontology/toPlace> <https://spectacular-voyage.github.io/test-inn-ambush/place/old-road> ; <https://spectacular-voyage.github.io/stagecraft/ontology/distanceFeet> \"120.0\"^^<http://www.w3.org/2001/XMLSchema#decimal> ; <https://spectacular-voyage.github.io/stagecraft/ontology/lineOfEffectState> \"blocked\" . <https://spectacular-voyage.github.io/test-inn-ambush/relator/location/elara/common-room-current> <https://spectacular-voyage.github.io/stagecraft/ontology/locus> <https://spectacular-voyage.github.io/test-inn-ambush/locus/common-room/by-the-bar> ; <https://spectacular-voyage.github.io/stagecraft/ontology/elevationBand> 0 . <https://spectacular-voyage.github.io/test-inn-ambush/relator/location/front-door/front-door-threshold-current> <https://spectacular-voyage.github.io/stagecraft/ontology/locus> <https://spectacular-voyage.github.io/test-inn-ambush/locus/front-door-threshold/at-door> ; <https://spectacular-voyage.github.io/stagecraft/ontology/elevationBand> 0 . }",
+              "expectedBoolean": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

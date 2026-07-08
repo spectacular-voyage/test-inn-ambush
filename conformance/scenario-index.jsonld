@@ -1254,6 +1254,27 @@
           }
         }
       ]
+    },
+    {
+      "id": "#64-measured-zones-spatial-contract",
+      "type": "ScenarioStep",
+      "manifestPath": "64-measured-zones-spatial-contract.jsonld",
+      "hasLaneBinding": [
+        {
+          "type": "LaneStateBinding",
+          "lane": "#fixture-b-lane",
+          "fromLaneState": {
+            "type": "StateLocator",
+            "locatorKind": "gitRefState",
+            "ref": "1963c2a7d876c056cdee1a4c10582d81ef08217d"
+          },
+          "toLaneState": {
+            "type": "StateLocator",
+            "locatorKind": "gitRefState",
+            "ref": "b.12-measured-zones-spatial-contract"
+          }
+        }
+      ]
     }
   ]
 }
