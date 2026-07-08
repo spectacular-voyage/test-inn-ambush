@@ -1,0 +1,15 @@
+{
+  "@context": "https://spectacular-voyage.github.io/test-inn-ambush/projections/contracts/inn-ambush-contract.context.jsonld",
+  "@type": "D20TestAdjudicationRequest",
+  "type": "stagecraft.d20-test-adjudication.request.v1",
+  "id": "d20-test-adjudication-request-door-barred-fixture",
+  "requestedByParticipant": "https://spectacular-voyage.github.io/test-inn-ambush/gm/alex",
+  "warrant": "https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/d20-test-warrant/session-authority/d20-test-warrant-request-hidden-result-fixture",
+  "consequenceDescription": "The resolved check commits the door as barred.",
+  "doorBarred": true,
+  "sourceProjection": {
+    "observedProjectionState": "https://spectacular-voyage.github.io/test-inn-ambush/branch/plan-b",
+    "participantProjection": "https://spectacular-voyage.github.io/test-inn-ambush/projection/gm/alex/inn-ambush-plan-b"
+  },
+  "createdAt": "2026-07-08T05:47:00Z"
+}
