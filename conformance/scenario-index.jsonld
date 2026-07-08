@@ -1170,6 +1170,27 @@
           }
         }
       ]
+    },
+    {
+      "id": "#60-transfer-act-quantity-contract",
+      "type": "ScenarioStep",
+      "manifestPath": "60-transfer-act-quantity-contract.jsonld",
+      "hasLaneBinding": [
+        {
+          "type": "LaneStateBinding",
+          "lane": "#fixture-b-lane",
+          "fromLaneState": {
+            "type": "StateLocator",
+            "locatorKind": "gitRefState",
+            "ref": "b.08-warrant-decline-control-assignment-contract"
+          },
+          "toLaneState": {
+            "type": "StateLocator",
+            "locatorKind": "gitRefState",
+            "ref": "b.09-transfer-act-quantity-contract"
+          }
+        }
+      ]
     }
   ]
 }
