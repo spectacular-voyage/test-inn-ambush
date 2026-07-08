@@ -61,6 +61,13 @@
           "compareMode": "text"
         },
         {
+          "id": "#hidden-result-warrant-request",
+          "type": "FileExpectation",
+          "path": "authority/d20-warrants/d20-test-warrant-request-hidden-result/d20-test-warrant-request-hidden-result.json",
+          "changeType": "updated",
+          "compareMode": "text"
+        },
+        {
           "id": "#warrant-decline-request",
           "type": "FileExpectation",
           "path": "authority/d20-warrants/d20-test-warrant-decline-request-elara/d20-test-warrant-decline-request-elara.json",
