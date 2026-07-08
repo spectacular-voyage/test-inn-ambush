@@ -4,7 +4,6 @@
   "type": "stagecraft.d20-test-warrant.request.v1",
   "id": "d20-test-warrant-request-party-addressed-fixture",
   "requestedByParticipant": "https://spectacular-voyage.github.io/test-inn-ambush/gm/alex",
-  "actor": "https://spectacular-voyage.github.io/test-inn-ambush/actant/elara",
   "addressedActors": [
     "https://spectacular-voyage.github.io/test-inn-ambush/actant/elara",
     "https://spectacular-voyage.github.io/test-inn-ambush/actant/nera"
