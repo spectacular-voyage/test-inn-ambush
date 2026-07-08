@@ -570,7 +570,6 @@ sc-sh:D20TestWarrantRequestShape
     sh:path dyn:warrantedActor ;
     sh:nodeKind sh:IRI ;
     sh:minCount 1 ;
-    sh:maxCount 1 ;
   ] ;
   sh:property [
     sh:path dyn:warrantedTestType ;
@@ -666,6 +665,131 @@ sc-sh:D20TestWarrantWithdrawalRequestShape
     sh:datatype xsd:dateTime ;
     sh:minCount 1 ;
     sh:maxCount 1 ;
+  ] .
+
+sc-sh:D20TestWarrantDeclineRequestShape
+  a sh:NodeShape ;
+  sh:targetClass sc:D20TestWarrantDeclineRequest ;
+  sh:property [
+    sh:path sc:envelopeType ;
+    sh:hasValue "stagecraft.d20-test-warrant.decline-request.v1" ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path sc:envelopeId ;
+    sh:datatype xsd:string ;
+    sh:minLength 1 ;
+    sh:pattern "\\S" ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path sc:requestedByParticipant ;
+    sh:nodeKind sh:IRI ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path dyn:declinesWarrant ;
+    sh:nodeKind sh:IRI ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path dyn:declinedWarrantActor ;
+    sh:nodeKind sh:IRI ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path dcterms:description ;
+    sh:datatype xsd:string ;
+    sh:minLength 1 ;
+    sh:pattern "\\S" ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path sc:sourceProjection ;
+    sh:node sc-sh:SourceProjectionShape ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path sc:createdAt ;
+    sh:datatype xsd:dateTime ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] .
+
+sc-sh:ParticipantControlAssignmentRequestShape
+  a sh:NodeShape ;
+  sh:targetClass sc:ParticipantControlAssignmentRequest ;
+  sh:property [
+    sh:path sc:envelopeType ;
+    sh:hasValue "stagecraft.participant-control-assignment.request.v1" ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path sc:envelopeId ;
+    sh:datatype xsd:string ;
+    sh:minLength 1 ;
+    sh:pattern "\\S" ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path sc:requestedByParticipant ;
+    sh:nodeKind sh:IRI ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path sc:assignsControlOf ;
+    sh:nodeKind sh:IRI ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path sc:assignsControlTo ;
+    sh:nodeKind sh:IRI ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path dcterms:description ;
+    sh:datatype xsd:string ;
+    sh:minLength 1 ;
+    sh:pattern "\\S" ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path sc:sourceProjection ;
+    sh:node sc-sh:SourceProjectionShape ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path sc:createdAt ;
+    sh:datatype xsd:dateTime ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path sc:opensControlRelator ;
+    sh:maxCount 0 ;
+    sh:message "ParticipantControlAssignmentRequest states intent only; authority resolves opened control relators." ;
+  ] ;
+  sh:property [
+    sh:path sc:closesControlRelator ;
+    sh:maxCount 0 ;
+    sh:message "ParticipantControlAssignmentRequest states intent only; authority resolves closed control relators." ;
+  ] ;
+  sh:property [
+    sh:path sc:stateMutation ;
+    sh:maxCount 0 ;
+    sh:message "ParticipantControlAssignmentRequest must not claim authority-produced state mutations." ;
   ] .
 
 sc-sh:TransferRequestShape

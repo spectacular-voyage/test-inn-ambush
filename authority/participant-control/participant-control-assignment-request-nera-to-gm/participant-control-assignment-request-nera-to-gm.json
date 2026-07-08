@@ -1,0 +1,15 @@
+{
+  "@context": "https://spectacular-voyage.github.io/test-inn-ambush/projections/contracts/inn-ambush-contract.context.jsonld",
+  "@type": "ParticipantControlAssignmentRequest",
+  "type": "stagecraft.participant-control-assignment.request.v1",
+  "id": "participant-control-assignment-request-nera-to-gm-fixture",
+  "requestedByParticipant": "https://spectacular-voyage.github.io/test-inn-ambush/gm/alex",
+  "actant": "https://spectacular-voyage.github.io/test-inn-ambush/actant/nera",
+  "controller": "https://spectacular-voyage.github.io/test-inn-ambush/gm/alex",
+  "reason": "GM temporarily controls Nera for adjudication.",
+  "sourceProjection": {
+    "observedProjectionState": "https://spectacular-voyage.github.io/test-inn-ambush/branch/plan-b",
+    "participantProjection": "https://spectacular-voyage.github.io/test-inn-ambush/projection/gm/alex/inn-ambush-plan-b"
+  },
+  "createdAt": "2026-07-07T22:52:00Z"
+}

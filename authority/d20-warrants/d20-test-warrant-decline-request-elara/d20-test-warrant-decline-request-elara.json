@@ -1,0 +1,15 @@
+{
+  "@context": "https://spectacular-voyage.github.io/test-inn-ambush/projections/contracts/inn-ambush-contract.context.jsonld",
+  "@type": "D20TestWarrantDeclineRequest",
+  "type": "stagecraft.d20-test-warrant.decline-request.v1",
+  "id": "d20-test-warrant-decline-request-elara-fixture",
+  "requestedByParticipant": "https://spectacular-voyage.github.io/test-inn-ambush/participant/alice",
+  "warrant": "https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/d20-test-warrant/session-authority/d20-test-warrant-request-party-addressed-fixture",
+  "actor": "https://spectacular-voyage.github.io/test-inn-ambush/actant/elara",
+  "reason": "Elara yields the party check to Nera.",
+  "sourceProjection": {
+    "observedProjectionState": "https://spectacular-voyage.github.io/test-inn-ambush/branch/plan-b",
+    "participantProjection": "https://spectacular-voyage.github.io/test-inn-ambush/projection/alice/inn-ambush-plan-b"
+  },
+  "createdAt": "2026-07-07T22:51:00Z"
+}

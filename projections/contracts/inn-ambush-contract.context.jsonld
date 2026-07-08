@@ -313,12 +313,46 @@
         }
       }
     },
-    "D20TestWarrantRequest": "sc:D20TestWarrantRequest",
+    "D20TestWarrantRequest": {
+      "@id": "sc:D20TestWarrantRequest",
+      "@context": {
+        "addressedActors": {
+          "@id": "dyn:warrantedActor",
+          "@type": "@id"
+        }
+      }
+    },
     "D20TestWarrantWithdrawalRequest": {
       "@id": "sc:D20TestWarrantWithdrawalRequest",
       "@context": {
         "warrant": {
           "@id": "dyn:withdrawsWarrant",
+          "@type": "@id"
+        }
+      }
+    },
+    "D20TestWarrantDeclineRequest": {
+      "@id": "sc:D20TestWarrantDeclineRequest",
+      "@context": {
+        "warrant": {
+          "@id": "dyn:declinesWarrant",
+          "@type": "@id"
+        },
+        "actor": {
+          "@id": "dyn:declinedWarrantActor",
+          "@type": "@id"
+        }
+      }
+    },
+    "ParticipantControlAssignmentRequest": {
+      "@id": "sc:ParticipantControlAssignmentRequest",
+      "@context": {
+        "actant": {
+          "@id": "sc:assignsControlOf",
+          "@type": "@id"
+        },
+        "controller": {
+          "@id": "sc:assignsControlTo",
           "@type": "@id"
         }
       }
