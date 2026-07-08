@@ -4,7 +4,9 @@
   "type": "stagecraft.d20-test-warrant.request.v1",
   "id": "d20-test-warrant-request-hidden-result-fixture",
   "requestedByParticipant": "https://spectacular-voyage.github.io/test-inn-ambush/gm/alex",
-  "actor": "https://spectacular-voyage.github.io/test-inn-ambush/actant/elara",
+  "addressedActors": [
+    "https://spectacular-voyage.github.io/test-inn-ambush/actant/elara"
+  ],
   "testType": "https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/Stealth",
   "targetNumber": 15,
   "hiddenDc": true,
