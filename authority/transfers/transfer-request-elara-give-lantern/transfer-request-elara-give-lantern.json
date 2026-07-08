@@ -1,0 +1,17 @@
+{
+  "@context": "https://spectacular-voyage.github.io/test-inn-ambush/projections/contracts/inn-ambush-contract.context.jsonld",
+  "@type": "TransferRequest",
+  "type": "stagecraft.transfer.request.v1",
+  "id": "transfer-request-elara-give-lantern-fixture",
+  "requestedByParticipant": "https://spectacular-voyage.github.io/test-inn-ambush/participant/alice",
+  "transferActKind": "https://spectacular-voyage.github.io/stagecraft/ontology/possessio/give",
+  "transferActor": "https://spectacular-voyage.github.io/test-inn-ambush/actant/elara",
+  "transferCounterparty": "https://spectacular-voyage.github.io/test-inn-ambush/actant/nera",
+  "transferItem": "https://spectacular-voyage.github.io/test-inn-ambush/item/storm-lantern",
+  "underCommitment": "https://spectacular-voyage.github.io/test-inn-ambush/commitment/lantern-for-watch",
+  "sourceProjection": {
+    "observedProjectionState": "https://spectacular-voyage.github.io/test-inn-ambush/branch/plan-b",
+    "participantProjection": "https://spectacular-voyage.github.io/test-inn-ambush/projection/alice/inn-ambush-plan-b"
+  },
+  "createdAt": "2026-07-07T17:45:00Z"
+}
