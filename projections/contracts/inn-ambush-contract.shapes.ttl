@@ -792,6 +792,39 @@ sc-sh:ParticipantControlAssignmentRequestShape
     sh:message "ParticipantControlAssignmentRequest must not claim authority-produced state mutations." ;
   ] .
 
+sc-sh:TransferActShape
+  a sh:NodeShape ;
+  sh:targetClass possessio:TransferAct ;
+  sh:property [
+    sh:path possessio:transferQuantity ;
+    sh:datatype xsd:decimal ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:sparql [
+    sh:message "Fungible TransferAct must record exactly one possessio:transferQuantity." ;
+    sh:select """
+      PREFIX possessio: <https://spectacular-voyage.github.io/stagecraft/ontology/possessio/>
+      SELECT $this WHERE {
+        $this possessio:transferItem ?item .
+        ?item a possessio:FungibleKind .
+        FILTER NOT EXISTS { $this possessio:transferQuantity ?quantity . }
+      }
+      """ ;
+  ] ;
+  sh:sparql [
+    sh:message "Non-fungible TransferAct must not carry possessio:transferQuantity." ;
+    sh:select """
+      PREFIX possessio: <https://spectacular-voyage.github.io/stagecraft/ontology/possessio/>
+      SELECT $this WHERE {
+        $this possessio:transferQuantity ?quantity .
+        FILTER NOT EXISTS {
+          $this possessio:transferItem ?item .
+          ?item a possessio:FungibleKind .
+        }
+      }
+      """ ;
+  ] .
+
 sc-sh:TransferRequestShape
   a sh:NodeShape ;
   sh:targetClass sc:TransferRequest ;
