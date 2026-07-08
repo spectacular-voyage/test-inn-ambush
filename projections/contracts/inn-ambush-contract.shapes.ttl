@@ -1235,6 +1235,161 @@ sc-sh:TransferRequestShape
     sh:message "TransferRequest must not claim authority-produced resources or accepted state mutation records." ;
   ] .
 
+sc-sh:TradeQuoteRequestShape
+  a sh:NodeShape ;
+  sh:targetClass sc:TradeQuoteRequest ;
+  sh:property [
+    sh:path sc:envelopeType ;
+    sh:hasValue "stagecraft.trade-quote.request.v1" ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path sc:envelopeId ;
+    sh:datatype xsd:string ;
+    sh:minLength 1 ;
+    sh:pattern "\\S" ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path sc:requestedByParticipant ;
+    sh:nodeKind sh:IRI ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path roleosum:proposedBy ;
+    sh:nodeKind sh:IRI ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path roleosum:proposedTo ;
+    sh:nodeKind sh:IRI ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path sc:deliveredTo ;
+    sh:nodeKind sh:IRI ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path roleosum:quotedItem ;
+    sh:nodeKind sh:IRI ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path roleosum:quotedPriceItem ;
+    sh:nodeKind sh:IRI ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path roleosum:quotedPriceQuantity ;
+    sh:datatype xsd:decimal ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path roleosum:expiresAt ;
+    sh:datatype xsd:dateTime ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path sc:sourceProjection ;
+    sh:node sc-sh:SourceProjectionShape ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path sc:createdAt ;
+    sh:datatype xsd:dateTime ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path roleosum:hasObligation ;
+    sh:maxCount 0 ;
+    sh:message "TradeQuoteRequest names requested terms only; authority mints proposed commitment obligations." ;
+  ] ;
+  sh:property [
+    sh:path roleosum:acceptedCommitment ;
+    sh:maxCount 0 ;
+    sh:message "TradeQuoteRequest must not claim an accepted commitment." ;
+  ] ;
+  sh:property [
+    sh:path possessio:opensHolding ;
+    sh:maxCount 0 ;
+    sh:message "TradeQuoteRequest must not preview transfer effects." ;
+  ] ;
+  sh:property [
+    sh:path sc:wouldProduce ;
+    sh:maxCount 0 ;
+    sh:message "TradeQuoteRequest must not preview authority-produced resources." ;
+  ] .
+
+sc-sh:TradeQuoteAcceptanceRequestShape
+  a sh:NodeShape ;
+  sh:targetClass sc:TradeQuoteAcceptanceRequest ;
+  sh:property [
+    sh:path sc:envelopeType ;
+    sh:hasValue "stagecraft.trade-quote.acceptance-request.v1" ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path sc:envelopeId ;
+    sh:datatype xsd:string ;
+    sh:minLength 1 ;
+    sh:pattern "\\S" ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path sc:requestedByParticipant ;
+    sh:nodeKind sh:IRI ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path roleosum:acceptsProposedCommitment ;
+    sh:nodeKind sh:IRI ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path sc:sourceProjection ;
+    sh:node sc-sh:SourceProjectionShape ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path sc:createdAt ;
+    sh:datatype xsd:dateTime ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path roleosum:acceptedCommitment ;
+    sh:maxCount 0 ;
+    sh:message "TradeQuoteAcceptanceRequest names the quote only; authority mints the accepted commitment." ;
+  ] ;
+  sh:property [
+    sh:path possessio:opensHolding ;
+    sh:maxCount 0 ;
+    sh:message "TradeQuoteAcceptanceRequest must not preview transfer effects." ;
+  ] ;
+  sh:property [
+    sh:path sc:wouldProduce ;
+    sh:maxCount 0 ;
+    sh:message "TradeQuoteAcceptanceRequest must not preview authority-produced resources." ;
+  ] .
+
 sc-sh:CommittedSpeechEventShape
   a sh:NodeShape ;
   sh:targetClass sc:CommittedSpeechEvent ;

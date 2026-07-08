@@ -1,0 +1,13 @@
+{
+  "@context": "https://spectacular-voyage.github.io/test-inn-ambush/projections/contracts/inn-ambush-contract.context.jsonld",
+  "@type": "TradeQuoteAcceptanceRequest",
+  "type": "stagecraft.trade-quote.acceptance-request.v1",
+  "id": "trade-quote-acceptance-request-alice-lantern-001",
+  "requestedByParticipant": "https://spectacular-voyage.github.io/test-inn-ambush/participant/alice",
+  "quote": "https://spectacular-voyage.github.io/test-inn-ambush/commitment/proposed/session-authority/talla-lantern-quote",
+  "sourceProjection": {
+    "observedProjectionState": "https://spectacular-voyage.github.io/test-inn-ambush/branch/plan-b",
+    "participantProjection": "https://spectacular-voyage.github.io/test-inn-ambush/projection/alice/inn-ambush-plan-b"
+  },
+  "createdAt": "2026-07-07T20:01:00Z"
+}
