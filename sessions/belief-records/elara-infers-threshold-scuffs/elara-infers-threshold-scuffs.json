@@ -1,0 +1,16 @@
+{
+  "@context": "https://spectacular-voyage.github.io/test-inn-ambush/projections/contracts/inn-ambush-contract.context.jsonld",
+  "@type": "BeliefRecord",
+  "type": "stagecraft.belief-record.v1",
+  "id": "belief-record-elara-threshold-scuffs-001",
+  "believer": "https://spectacular-voyage.github.io/test-inn-ambush/actant/elara",
+  "about": "https://spectacular-voyage.github.io/test-inn-ambush/target/door",
+  "content": "The inn door threshold shows fresh scuffs that suggest hurried movement through the doorway.",
+  "formationBasis": "https://spectacular-voyage.github.io/stagecraft/ontology/perceptio/inferenceAct",
+  "basisDetail": [
+    "https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/inference/threshold-scuffs-001",
+    "https://spectacular-voyage.github.io/test-inn-ambush/perception-record/hello-barkeep/elara/sight",
+    "https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/d20-test-outcome/perception-check-001"
+  ],
+  "sinceWhen": "2026-06-29T13:40:30Z"
+}

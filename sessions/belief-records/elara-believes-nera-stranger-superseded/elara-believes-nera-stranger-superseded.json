@@ -1,0 +1,15 @@
+{
+  "@context": "https://spectacular-voyage.github.io/test-inn-ambush/projections/contracts/inn-ambush-contract.context.jsonld",
+  "@type": "BeliefRecord",
+  "type": "stagecraft.belief-record.v1",
+  "id": "belief-record-elara-nera-stranger-superseded-001",
+  "believer": "https://spectacular-voyage.github.io/test-inn-ambush/actant/elara",
+  "about": "https://spectacular-voyage.github.io/test-inn-ambush/actant/nera",
+  "content": "Elara briefly remembers Nera only as a stranger from the road.",
+  "formationBasis": "https://spectacular-voyage.github.io/stagecraft/ontology/perceptio/seedMemory",
+  "basisDetail": [
+    "https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/world-seeded/inn-ambush-001"
+  ],
+  "sinceWhen": "2026-06-29T13:30:00Z",
+  "supersededBy": "https://spectacular-voyage.github.io/test-inn-ambush/belief-record/elara/nera-acquaintance"
+}

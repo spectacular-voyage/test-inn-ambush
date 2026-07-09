@@ -98,6 +98,32 @@
       "@id": "perceptio:nameKnowledgeBasis",
       "@type": "@id"
     },
+    "BeliefRecord": "perceptio:BeliefRecord",
+    "believer": {
+      "@id": "perceptio:believer",
+      "@type": "@id"
+    },
+    "about": {
+      "@id": "perceptio:about",
+      "@type": "@id"
+    },
+    "content": "perceptio:content",
+    "formationBasis": {
+      "@id": "perceptio:formationBasis",
+      "@type": "@id"
+    },
+    "credence": {
+      "@id": "perceptio:credence",
+      "@type": "xsd:decimal"
+    },
+    "sinceWhen": {
+      "@id": "perceptio:sinceWhen",
+      "@type": "xsd:dateTime"
+    },
+    "supersededBy": {
+      "@id": "perceptio:supersededBy",
+      "@type": "@id"
+    },
     "spokenByActant": {
       "@type": "@id"
     },

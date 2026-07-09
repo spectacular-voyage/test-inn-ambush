@@ -1,0 +1,183 @@
+{
+  "@context": {
+    "@vocab": "https://spectacular-voyage.github.io/accord/ontology/",
+    "dcterms": "http://purl.org/dc/terms/",
+    "id": "@id",
+    "type": "@type",
+    "changeType": {
+      "@type": "@vocab"
+    },
+    "compareMode": {
+      "@type": "@vocab"
+    },
+    "targetsFileExpectation": {
+      "@type": "@id"
+    },
+    "locatorKind": {
+      "@type": "@vocab"
+    }
+  },
+  "type": "Manifest",
+  "id": "urn:accord:stagecraft:test-inn-ambush:68-belief-records-party-name-seeds",
+  "dcterms:title": "Inn Ambush 68 belief records and party name seeds",
+  "hasCase": [
+    {
+      "type": "TransitionCase",
+      "id": "#belief-records-party-name-seeds",
+      "fixtureRepo": "github.com/spectacular-voyage/test-inn-ambush",
+      "operationId": "stagecraft.fixture.addBeliefRecordsAndPartyNameProofs",
+      "fromRef": "a2ea65816c186e4d19cb4622d84e6ef2a60b58f8",
+      "toRef": "b.16-belief-records-party-name-seeds",
+      "fromState": {
+        "type": "StateLocator",
+        "locatorKind": "gitRefState",
+        "ref": "a2ea65816c186e4d19cb4622d84e6ef2a60b58f8"
+      },
+      "toState": {
+        "type": "StateLocator",
+        "locatorKind": "gitRefState",
+        "ref": "b.16-belief-records-party-name-seeds"
+      },
+      "hasFileExpectation": [
+        {
+          "id": "#manifest",
+          "type": "FileExpectation",
+          "path": "conformance/68-belief-records-party-name-seeds.jsonld",
+          "changeType": "added",
+          "compareMode": "json"
+        },
+        {
+          "id": "#scenario-index",
+          "type": "FileExpectation",
+          "path": "conformance/scenario-index.jsonld",
+          "changeType": "updated",
+          "compareMode": "json"
+        },
+        {
+          "id": "#projection-context",
+          "type": "FileExpectation",
+          "path": "projections/contracts/inn-ambush-contract.context.jsonld",
+          "changeType": "updated",
+          "compareMode": "json"
+        },
+        {
+          "id": "#projection-shapes",
+          "type": "FileExpectation",
+          "path": "projections/contracts/inn-ambush-contract.shapes.ttl",
+          "changeType": "updated",
+          "compareMode": "rdfCanonical"
+        },
+        {
+          "id": "#authority-journal",
+          "type": "FileExpectation",
+          "path": "authority/journals/plan-b/plan-b.ttl",
+          "changeType": "updated",
+          "compareMode": "rdfCanonical"
+        },
+        {
+          "id": "#name-knowledge-elara-elara",
+          "type": "FileExpectation",
+          "path": "sessions/name-knowledge/elara-knows-elara/elara-knows-elara.json",
+          "changeType": "unchanged",
+          "compareMode": "text"
+        },
+        {
+          "id": "#name-knowledge-elara-nera",
+          "type": "FileExpectation",
+          "path": "sessions/name-knowledge/elara-knows-nera/elara-knows-nera.json",
+          "changeType": "unchanged",
+          "compareMode": "text"
+        },
+        {
+          "id": "#name-knowledge-nera-elara",
+          "type": "FileExpectation",
+          "path": "sessions/name-knowledge/nera-knows-elara/nera-knows-elara.json",
+          "changeType": "unchanged",
+          "compareMode": "text"
+        },
+        {
+          "id": "#name-knowledge-nera-nera",
+          "type": "FileExpectation",
+          "path": "sessions/name-knowledge/nera-knows-nera/nera-knows-nera.json",
+          "changeType": "unchanged",
+          "compareMode": "text"
+        },
+        {
+          "id": "#name-knowledge-elara-talla-absent",
+          "type": "FileExpectation",
+          "path": "sessions/name-knowledge/elara-knows-talla/elara-knows-talla.json",
+          "changeType": "absent"
+        },
+        {
+          "id": "#name-knowledge-nera-talla-absent",
+          "type": "FileExpectation",
+          "path": "sessions/name-knowledge/nera-knows-talla/nera-knows-talla.json",
+          "changeType": "absent"
+        },
+        {
+          "id": "#belief-elara-nera-acquaintance",
+          "type": "FileExpectation",
+          "path": "sessions/belief-records/elara-believes-nera-acquaintance/elara-believes-nera-acquaintance.json",
+          "changeType": "added",
+          "compareMode": "json"
+        },
+        {
+          "id": "#belief-elara-nera-superseded",
+          "type": "FileExpectation",
+          "path": "sessions/belief-records/elara-believes-nera-stranger-superseded/elara-believes-nera-stranger-superseded.json",
+          "changeType": "added",
+          "compareMode": "json"
+        },
+        {
+          "id": "#belief-nera-elara-acquaintance",
+          "type": "FileExpectation",
+          "path": "sessions/belief-records/nera-believes-elara-acquaintance/nera-believes-elara-acquaintance.json",
+          "changeType": "added",
+          "compareMode": "json"
+        },
+        {
+          "id": "#belief-elara-threshold-scuffs",
+          "type": "FileExpectation",
+          "path": "sessions/belief-records/elara-infers-threshold-scuffs/elara-infers-threshold-scuffs.json",
+          "changeType": "added",
+          "compareMode": "json"
+        },
+        {
+          "id": "#belief-nera-sable-bridge",
+          "type": "FileExpectation",
+          "path": "sessions/belief-records/nera-remembers-sable-bridge/nera-remembers-sable-bridge.json",
+          "changeType": "added",
+          "compareMode": "json"
+        }
+      ],
+      "hasRdfExpectation": [
+        {
+          "id": "#belief-record-shape-rdf",
+          "type": "RdfExpectation",
+          "targetsFileExpectation": "#projection-shapes",
+          "hasAskAssertion": [
+            {
+              "id": "#ask-belief-record-shape",
+              "type": "SparqlAskAssertion",
+              "query": "ASK { <https://spectacular-voyage.github.io/stagecraft/shacl/BeliefRecordShape> a <http://www.w3.org/ns/shacl#NodeShape> ; <http://www.w3.org/ns/shacl#targetClass> <https://spectacular-voyage.github.io/stagecraft/ontology/perceptio/BeliefRecord> ; <http://www.w3.org/ns/shacl#property> ?believer, ?about, ?content, ?formationBasis, ?basisDetail, ?sinceWhen . ?believer <http://www.w3.org/ns/shacl#path> <https://spectacular-voyage.github.io/stagecraft/ontology/perceptio/believer> ; <http://www.w3.org/ns/shacl#minCount> \"1\"^^<http://www.w3.org/2001/XMLSchema#integer> ; <http://www.w3.org/ns/shacl#maxCount> \"1\"^^<http://www.w3.org/2001/XMLSchema#integer> . ?about <http://www.w3.org/ns/shacl#path> <https://spectacular-voyage.github.io/stagecraft/ontology/perceptio/about> ; <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#IRI> ; <http://www.w3.org/ns/shacl#minCount> \"1\"^^<http://www.w3.org/2001/XMLSchema#integer> ; <http://www.w3.org/ns/shacl#maxCount> \"1\"^^<http://www.w3.org/2001/XMLSchema#integer> . ?content <http://www.w3.org/ns/shacl#path> <https://spectacular-voyage.github.io/stagecraft/ontology/perceptio/content> ; <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#string> . ?formationBasis <http://www.w3.org/ns/shacl#path> <https://spectacular-voyage.github.io/stagecraft/ontology/perceptio/formationBasis> ; <http://www.w3.org/ns/shacl#minCount> \"1\"^^<http://www.w3.org/2001/XMLSchema#integer> ; <http://www.w3.org/ns/shacl#maxCount> \"1\"^^<http://www.w3.org/2001/XMLSchema#integer> . ?basisDetail <http://www.w3.org/ns/shacl#path> <https://spectacular-voyage.github.io/stagecraft/ontology/perceptio/basisDetail> ; <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#IRI> . ?sinceWhen <http://www.w3.org/ns/shacl#path> <https://spectacular-voyage.github.io/stagecraft/ontology/perceptio/sinceWhen> ; <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#dateTime> . }",
+              "expectedBoolean": true
+            }
+          ]
+        },
+        {
+          "id": "#inference-act-rdf",
+          "type": "RdfExpectation",
+          "targetsFileExpectation": "#authority-journal",
+          "hasAskAssertion": [
+            {
+              "id": "#ask-inference-act-percept-basis-links",
+              "type": "SparqlAskAssertion",
+              "query": "ASK { <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/inference/threshold-scuffs-001> a <https://spectacular-voyage.github.io/stagecraft/ontology/perceptio/InferenceAct> ; <http://purl.org/dc/terms/references> <https://spectacular-voyage.github.io/test-inn-ambush/perception-record/hello-barkeep/elara/sight>, <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/d20-test-outcome/perception-check-001>, <https://spectacular-voyage.github.io/test-inn-ambush/belief-record/elara/threshold-scuffs> ; <https://spectacular-voyage.github.io/stagecraft/ontology/committedBy> <https://spectacular-voyage.github.io/test-inn-ambush/gm/alex> . }",
+              "expectedBoolean": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

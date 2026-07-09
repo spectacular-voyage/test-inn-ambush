@@ -1338,6 +1338,27 @@
           }
         }
       ]
+    },
+    {
+      "id": "#68-belief-records-party-name-seeds",
+      "type": "ScenarioStep",
+      "manifestPath": "68-belief-records-party-name-seeds.jsonld",
+      "hasLaneBinding": [
+        {
+          "type": "LaneStateBinding",
+          "lane": "#fixture-b-lane",
+          "fromLaneState": {
+            "type": "StateLocator",
+            "locatorKind": "gitRefState",
+            "ref": "a2ea65816c186e4d19cb4622d84e6ef2a60b58f8"
+          },
+          "toLaneState": {
+            "type": "StateLocator",
+            "locatorKind": "gitRefState",
+            "ref": "b.16-belief-records-party-name-seeds"
+          }
+        }
+      ]
     }
   ]
 }

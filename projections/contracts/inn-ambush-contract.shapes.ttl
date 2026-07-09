@@ -2152,6 +2152,72 @@ sc-sh:NameKnowledgeRecordShape
     sh:maxCount 1 ;
   ] .
 
+sc-sh:BeliefRecordShape
+  a sh:NodeShape ;
+  sh:targetClass perceptio:BeliefRecord ;
+  sh:property [
+    sh:path sc:envelopeType ;
+    sh:hasValue "stagecraft.belief-record.v1" ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path sc:envelopeId ;
+    sh:datatype xsd:string ;
+    sh:minLength 1 ;
+    sh:pattern "\\S" ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path perceptio:believer ;
+    sh:nodeKind sh:IRI ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path perceptio:about ;
+    sh:nodeKind sh:IRI ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path perceptio:content ;
+    sh:datatype xsd:string ;
+    sh:minLength 1 ;
+    sh:pattern "\\S" ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path perceptio:formationBasis ;
+    sh:nodeKind sh:IRI ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path perceptio:basisDetail ;
+    sh:nodeKind sh:IRI ;
+  ] ;
+  sh:property [
+    sh:path perceptio:credence ;
+    sh:datatype xsd:decimal ;
+    sh:minInclusive 0 ;
+    sh:maxInclusive 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path perceptio:sinceWhen ;
+    sh:datatype xsd:dateTime ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path perceptio:supersededBy ;
+    sh:nodeKind sh:IRI ;
+    sh:maxCount 1 ;
+  ] .
+
 sc-sh:ResourcePointersShape
   a sh:NodeShape ;
   sh:property [

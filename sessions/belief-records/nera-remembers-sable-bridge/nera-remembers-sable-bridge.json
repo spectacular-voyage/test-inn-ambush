@@ -1,0 +1,14 @@
+{
+  "@context": "https://spectacular-voyage.github.io/test-inn-ambush/projections/contracts/inn-ambush-contract.context.jsonld",
+  "@type": "BeliefRecord",
+  "type": "stagecraft.belief-record.v1",
+  "id": "belief-record-nera-sable-bridge-001",
+  "believer": "https://spectacular-voyage.github.io/test-inn-ambush/actant/nera",
+  "about": "https://spectacular-voyage.github.io/test-inn-ambush/backstory-event/sable-bridge-rescue",
+  "content": "Nera remembers pulling a frightened courier away from the Sable Bridge collapse.",
+  "formationBasis": "https://spectacular-voyage.github.io/stagecraft/ontology/perceptio/seedMemory",
+  "basisDetail": [
+    "https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/world-seeded/inn-ambush-001"
+  ],
+  "sinceWhen": "2026-06-29T13:35:00Z"
+}

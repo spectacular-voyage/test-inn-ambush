@@ -1,5 +1,6 @@
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix dyn: <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/> .
+@prefix perceptio: <https://spectacular-voyage.github.io/stagecraft/ontology/perceptio/> .
 @prefix sc: <https://spectacular-voyage.github.io/stagecraft/ontology/> .
 @prefix sflo: <https://semantic-flow.github.io/sflo/ontology/> .
 @prefix stage: <https://spectacular-voyage.github.io/test-inn-ambush/> .
@@ -368,6 +369,16 @@
   dyn:mechanicalResult "failure" ;
   dyn:resolvesWarrant <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/d20-test-warrant/perception-check-001> ;
   dyn:rollEvidence <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/d20-roll/perception-check-001> .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/inference/threshold-scuffs-001>
+  a perceptio:InferenceAct ;
+  dcterms:created "2026-06-29T13:40:30Z"^^xsd:dateTime ;
+  dcterms:description "Elara reasons from the visible threshold and the resolved perception check that the inn door was crossed in a hurry." ;
+  dcterms:references <https://spectacular-voyage.github.io/test-inn-ambush/perception-record/hello-barkeep/elara/sight>,
+    <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/d20-test-outcome/perception-check-001>,
+    <https://spectacular-voyage.github.io/test-inn-ambush/belief-record/elara/threshold-scuffs> ;
+  sc:basedOnHistory <https://spectacular-voyage.github.io/test-inn-ambush/history/main> ;
+  sc:committedBy <https://spectacular-voyage.github.io/test-inn-ambush/gm/alex> .
 
 <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/commit-certificate/d20-test-consequence/perception-check-001>
   a sc:CommitCertificate ;
