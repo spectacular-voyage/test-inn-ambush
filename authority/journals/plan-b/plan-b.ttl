@@ -1,5 +1,6 @@
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix dyn: <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/> .
+@prefix orexis: <https://spectacular-voyage.github.io/stagecraft/ontology/orexis/> .
 @prefix perceptio: <https://spectacular-voyage.github.io/stagecraft/ontology/perceptio/> .
 @prefix sc: <https://spectacular-voyage.github.io/stagecraft/ontology/> .
 @prefix sflo: <https://semantic-flow.github.io/sflo/ontology/> .
@@ -23,6 +24,7 @@
   sc:declaredBy <https://spectacular-voyage.github.io/test-inn-ambush/participant/alice> ;
   sc:intentForActant <https://spectacular-voyage.github.io/test-inn-ambush/actant/elara> ;
   sc:referencesSuggestion <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/suggestion-made/plan-b-001> ;
+  orexis:contraryTo <https://spectacular-voyage.github.io/test-inn-ambush/desire-record/elara/suggestion-old-road> ;
   sc:basedOnHistory <https://spectacular-voyage.github.io/test-inn-ambush/history/main> .
 
 <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/intent-accepted/elara-plan-b-001>
@@ -72,6 +74,29 @@
   dcterms:created "2026-06-29T13:29:00Z"^^xsd:dateTime ;
   sc:basedOnHistory <https://spectacular-voyage.github.io/test-inn-ambush/history/main> ;
   dcterms:references <https://spectacular-voyage.github.io/test-inn-ambush/scenario/inn-ambush> .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/spell/suggestion-old-road-001>
+  a orexis:ConativeImplantAct ;
+  dcterms:created "2026-07-07T19:55:00Z"^^xsd:dateTime ;
+  sc:committedBy <https://spectacular-voyage.github.io/test-inn-ambush/gm/alex> ;
+  dcterms:references <https://spectacular-voyage.github.io/test-inn-ambush/desire-record/elara/suggestion-old-road> ;
+  sc:basedOnHistory <https://spectacular-voyage.github.io/test-inn-ambush/history/main> .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/spell-expiry/suggestion-old-road-001>
+  a orexis:ConativeRecordRemovalAct ;
+  dcterms:created "2026-07-07T20:05:00Z"^^xsd:dateTime ;
+  sc:committedBy <https://spectacular-voyage.github.io/test-inn-ambush/gm/alex> ;
+  dcterms:references <https://spectacular-voyage.github.io/test-inn-ambush/desire-record/elara/suggestion-old-road>,
+    <https://spectacular-voyage.github.io/test-inn-ambush/belief-record/elara/realizes-suggested> ;
+  sc:basedOnHistory <https://spectacular-voyage.github.io/test-inn-ambush/history/main> .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/intent-declaration/talla-honest-trade-001>
+  a sc:IntentDeclaration ;
+  dcterms:created "2026-07-07T19:56:00Z"^^xsd:dateTime ;
+  dcterms:description "Talla intends to offer the party useful wares at fair prices." ;
+  sc:declaredBy <https://spectacular-voyage.github.io/test-inn-ambush/participant/agent/talla> ;
+  sc:intentForActant <https://spectacular-voyage.github.io/test-inn-ambush/npc/talla-mosswick> ;
+  sc:basedOnHistory <https://spectacular-voyage.github.io/test-inn-ambush/history/main> .
 
 <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/world-seeded/curtain-up-001>
   a sc:WorldSeeded ;

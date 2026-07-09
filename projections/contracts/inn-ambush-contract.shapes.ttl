@@ -1,6 +1,7 @@
 @prefix sc: <https://spectacular-voyage.github.io/stagecraft/ontology/> .
 @prefix sc-sh: <https://spectacular-voyage.github.io/stagecraft/shacl/> .
 @prefix dyn: <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/> .
+@prefix orexis: <https://spectacular-voyage.github.io/stagecraft/ontology/orexis/> .
 @prefix perceptio: <https://spectacular-voyage.github.io/stagecraft/ontology/perceptio/> .
 @prefix possessio: <https://spectacular-voyage.github.io/stagecraft/ontology/possessio/> .
 @prefix roleosum: <https://spectacular-voyage.github.io/stagecraft/ontology/roleosum/> .
@@ -2215,6 +2216,147 @@ sc-sh:BeliefRecordShape
   sh:property [
     sh:path perceptio:supersededBy ;
     sh:nodeKind sh:IRI ;
+    sh:maxCount 1 ;
+  ] .
+
+sc-sh:SharedConativeRecordShape
+  a sh:NodeShape ;
+  sh:property [
+    sh:path sc:envelopeId ;
+    sh:datatype xsd:string ;
+    sh:minLength 1 ;
+    sh:pattern "\\S" ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path orexis:owner ;
+    sh:nodeKind sh:IRI ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path orexis:content ;
+    sh:datatype xsd:string ;
+    sh:minLength 1 ;
+    sh:pattern "\\S" ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path orexis:persistence ;
+    sh:nodeKind sh:IRI ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path orexis:beneficiary ;
+    sh:nodeKind sh:IRI ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path orexis:atCostOf ;
+    sh:nodeKind sh:IRI ;
+  ] ;
+  sh:property [
+    sh:path orexis:authorshipBasis ;
+    sh:nodeKind sh:IRI ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path orexis:causedBy ;
+    sh:nodeKind sh:IRI ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path orexis:activeFrom ;
+    sh:datatype xsd:dateTime ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path orexis:activeUntil ;
+    sh:datatype xsd:dateTime ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path orexis:intensity ;
+    sh:datatype xsd:decimal ;
+    sh:minInclusive 0 ;
+    sh:maxInclusive 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path orexis:compulsionGrade ;
+    sh:nodeKind sh:IRI ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path orexis:removedBy ;
+    sh:nodeKind sh:IRI ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path orexis:adoptedAs ;
+    sh:nodeKind sh:IRI ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path sc:deliveredTo ;
+    sh:nodeKind sh:IRI ;
+  ] .
+
+sc-sh:DesireRecordShape
+  a sh:NodeShape ;
+  sh:targetClass orexis:DesireRecord ;
+  sh:node sc-sh:SharedConativeRecordShape ;
+  sh:property [
+    sh:path sc:envelopeType ;
+    sh:hasValue "stagecraft.desire-record.v1" ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path orexis:targetShape ;
+    sh:nodeKind sh:IRI ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path orexis:teleology ;
+    sh:nodeKind sh:IRI ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path orexis:servesGoal ;
+    sh:nodeKind sh:IRI ;
+    sh:maxCount 1 ;
+  ] .
+
+sc-sh:DispositionRecordShape
+  a sh:NodeShape ;
+  sh:targetClass orexis:DispositionRecord ;
+  sh:node sc-sh:SharedConativeRecordShape ;
+  sh:property [
+    sh:path sc:envelopeType ;
+    sh:hasValue "stagecraft.disposition-record.v1" ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path orexis:toward ;
+    sh:nodeKind sh:IRI ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path orexis:flavor ;
+    sh:nodeKind sh:IRI ;
+    sh:minCount 1 ;
     sh:maxCount 1 ;
   ] .
 

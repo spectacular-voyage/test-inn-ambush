@@ -1058,6 +1058,9 @@
 	<https://spectacular-voyage.github.io/stagecraft/ontology/inScenario> <https://spectacular-voyage.github.io/test-inn-ambush/scenario/inn-ambush> .
 <https://spectacular-voyage.github.io/test-inn-ambush/participant/bob> a <https://spectacular-voyage.github.io/stagecraft/ontology/Participant> , <https://spectacular-voyage.github.io/stagecraft/ontology/HumanParticipant> ;
 	<https://spectacular-voyage.github.io/stagecraft/ontology/inScenario> <https://spectacular-voyage.github.io/test-inn-ambush/scenario/inn-ambush> .
+<https://spectacular-voyage.github.io/test-inn-ambush/participant/agent/talla> a <https://spectacular-voyage.github.io/stagecraft/ontology/Participant> ;
+	<https://spectacular-voyage.github.io/stagecraft/ontology/roleplayerFor> <https://spectacular-voyage.github.io/test-inn-ambush/npc/talla-mosswick> ;
+	<https://spectacular-voyage.github.io/stagecraft/ontology/inScenario> <https://spectacular-voyage.github.io/test-inn-ambush/scenario/inn-ambush> .
 <https://spectacular-voyage.github.io/test-inn-ambush/gm/alex> a <https://spectacular-voyage.github.io/stagecraft/ontology/Participant> , <https://spectacular-voyage.github.io/stagecraft/ontology/HumanParticipant> , <https://spectacular-voyage.github.io/stagecraft/ontology/GM> ;
 	<https://spectacular-voyage.github.io/stagecraft/ontology/inScenario> <https://spectacular-voyage.github.io/test-inn-ambush/scenario/inn-ambush> .
 <https://spectacular-voyage.github.io/test-inn-ambush/suggestion/plan-b> a <https://spectacular-voyage.github.io/stagecraft/ontology/Suggestion> ;
@@ -1120,6 +1123,16 @@
 	<https://spectacular-voyage.github.io/stagecraft/ontology/inHistory> <https://spectacular-voyage.github.io/test-inn-ambush/history/main> ;
 	<https://spectacular-voyage.github.io/stagecraft/ontology/inScenario> <https://spectacular-voyage.github.io/test-inn-ambush/scenario/inn-ambush> ;
 	<https://spectacular-voyage.github.io/stagecraft/ontology/inTemporalScope> <https://spectacular-voyage.github.io/test-inn-ambush/temporal-scope/inn-scene> .
+<https://spectacular-voyage.github.io/test-inn-ambush/npc/talla-mosswick> a <https://spectacular-voyage.github.io/stagecraft/ontology/Actant> , <https://spectacular-voyage.github.io/stagecraft/ontology/Character> ;
+	<http://www.w3.org/2000/01/rdf-schema#label> "Talla Mosswick" ;
+	<https://spectacular-voyage.github.io/stagecraft/ontology/inHistory> <https://spectacular-voyage.github.io/test-inn-ambush/history/main> ;
+	<https://spectacular-voyage.github.io/stagecraft/ontology/inScenario> <https://spectacular-voyage.github.io/test-inn-ambush/scenario/inn-ambush> ;
+	<https://spectacular-voyage.github.io/stagecraft/ontology/inTemporalScope> <https://spectacular-voyage.github.io/test-inn-ambush/temporal-scope/inn-scene> .
+<https://spectacular-voyage.github.io/test-inn-ambush/value-declaration/talla/honest-trader> a <https://spectacular-voyage.github.io/stagecraft/ontology/roleosum/ValueDeclaration> ;
+	<https://spectacular-voyage.github.io/stagecraft/ontology/roleosum/declarationSubject> <https://spectacular-voyage.github.io/test-inn-ambush/npc/talla-mosswick> ;
+	<https://spectacular-voyage.github.io/stagecraft/ontology/roleosum/declarationTerm> <https://spectacular-voyage.github.io/stagecraft/ontology/roleosum/idealValue> ;
+	<https://spectacular-voyage.github.io/stagecraft/ontology/roleosum/declarationProse> "A trusted trader keeps honest prices and useful wares." ;
+	<https://spectacular-voyage.github.io/stagecraft/ontology/roleosum/sinceWhen> "2026-07-07T19:26:44Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
 <https://spectacular-voyage.github.io/test-inn-ambush/relator/visibility/suggestion-plan-b/alice-current> a <https://spectacular-voyage.github.io/stagecraft/ontology/TemporalRelator> ;
 	<https://spectacular-voyage.github.io/stagecraft/ontology/subject> <https://spectacular-voyage.github.io/test-inn-ambush/suggestion/plan-b> ;
 	<https://spectacular-voyage.github.io/stagecraft/ontology/predicate> <https://spectacular-voyage.github.io/stagecraft/ontology/visibleTo> ;

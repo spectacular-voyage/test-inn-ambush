@@ -1,0 +1,27 @@
+{
+  "@context": "https://spectacular-voyage.github.io/test-inn-ambush/projections/contracts/inn-ambush-contract.context.jsonld",
+  "@type": "DesireRecord",
+  "type": "stagecraft.desire-record.v1",
+  "id": "desire-record-elara-suggested-old-road-001",
+  "owner": "https://spectacular-voyage.github.io/test-inn-ambush/actant/elara",
+  "content": "Elara feels a magically compelled pull to step onto the old road and call for the ambushers to stand down.",
+  "targetShape": "https://spectacular-voyage.github.io/stagecraft/ontology/orexis/act",
+  "teleology": "https://spectacular-voyage.github.io/stagecraft/ontology/orexis/instrumental",
+  "servesGoal": "https://spectacular-voyage.github.io/test-inn-ambush/goal/ambushers-draw-elara-out",
+  "persistence": "https://spectacular-voyage.github.io/stagecraft/ontology/orexis/episodic",
+  "beneficiary": "https://spectacular-voyage.github.io/stagecraft/ontology/orexis/other",
+  "atCostOf": [
+    "https://spectacular-voyage.github.io/test-inn-ambush/actant/elara",
+    "https://spectacular-voyage.github.io/test-inn-ambush/party/protagonists"
+  ],
+  "authorshipBasis": "https://spectacular-voyage.github.io/stagecraft/ontology/orexis/implanted",
+  "causedBy": "https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/spell/suggestion-old-road-001",
+  "activeFrom": "2026-07-07T19:55:00Z",
+  "activeUntil": "2026-07-07T20:05:00Z",
+  "intensity": 1,
+  "compulsionGrade": "https://spectacular-voyage.github.io/stagecraft/ontology/orexis/compelled",
+  "removedBy": "https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/spell-expiry/suggestion-old-road-001",
+  "deliveredTo": [
+    "https://spectacular-voyage.github.io/test-inn-ambush/participant/alice"
+  ]
+}

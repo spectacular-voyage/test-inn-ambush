@@ -5,6 +5,7 @@
     "sc": "https://spectacular-voyage.github.io/stagecraft/ontology/",
     "sflo": "https://semantic-flow.github.io/sflo/ontology/",
     "dyn": "https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/",
+    "orexis": "https://spectacular-voyage.github.io/stagecraft/ontology/orexis/",
     "perceptio": "https://spectacular-voyage.github.io/stagecraft/ontology/perceptio/",
     "possessio": "https://spectacular-voyage.github.io/stagecraft/ontology/possessio/",
     "roleosum": "https://spectacular-voyage.github.io/stagecraft/ontology/roleosum/",
@@ -122,6 +123,90 @@
     },
     "supersededBy": {
       "@id": "perceptio:supersededBy",
+      "@type": "@id"
+    },
+    "DesireRecord": {
+      "@id": "orexis:DesireRecord",
+      "@context": {
+        "content": "orexis:content"
+      }
+    },
+    "DispositionRecord": {
+      "@id": "orexis:DispositionRecord",
+      "@context": {
+        "content": "orexis:content"
+      }
+    },
+    "owner": {
+      "@id": "orexis:owner",
+      "@type": "@id"
+    },
+    "targetShape": {
+      "@id": "orexis:targetShape",
+      "@type": "@id"
+    },
+    "teleology": {
+      "@id": "orexis:teleology",
+      "@type": "@id"
+    },
+    "servesGoal": {
+      "@id": "orexis:servesGoal",
+      "@type": "@id"
+    },
+    "persistence": {
+      "@id": "orexis:persistence",
+      "@type": "@id"
+    },
+    "beneficiary": {
+      "@id": "orexis:beneficiary",
+      "@type": "@id"
+    },
+    "atCostOf": {
+      "@id": "orexis:atCostOf",
+      "@type": "@id"
+    },
+    "authorshipBasis": {
+      "@id": "orexis:authorshipBasis",
+      "@type": "@id"
+    },
+    "causedBy": {
+      "@id": "orexis:causedBy",
+      "@type": "@id"
+    },
+    "activeFrom": {
+      "@id": "orexis:activeFrom",
+      "@type": "xsd:dateTime"
+    },
+    "activeUntil": {
+      "@id": "orexis:activeUntil",
+      "@type": "xsd:dateTime"
+    },
+    "intensity": {
+      "@id": "orexis:intensity",
+      "@type": "xsd:decimal"
+    },
+    "compulsionGrade": {
+      "@id": "orexis:compulsionGrade",
+      "@type": "@id"
+    },
+    "removedBy": {
+      "@id": "orexis:removedBy",
+      "@type": "@id"
+    },
+    "adoptedAs": {
+      "@id": "orexis:adoptedAs",
+      "@type": "@id"
+    },
+    "toward": {
+      "@id": "orexis:toward",
+      "@type": "@id"
+    },
+    "flavor": {
+      "@id": "orexis:flavor",
+      "@type": "@id"
+    },
+    "contraryTo": {
+      "@id": "orexis:contraryTo",
       "@type": "@id"
     },
     "spokenByActant": {

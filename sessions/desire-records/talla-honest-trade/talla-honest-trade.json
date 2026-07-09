@@ -1,0 +1,20 @@
+{
+  "@context": "https://spectacular-voyage.github.io/test-inn-ambush/projections/contracts/inn-ambush-contract.context.jsonld",
+  "@type": "DesireRecord",
+  "type": "stagecraft.desire-record.v1",
+  "id": "desire-record-talla-honest-trade-001",
+  "owner": "https://spectacular-voyage.github.io/test-inn-ambush/npc/talla-mosswick",
+  "content": "Talla wants to sell useful wares at fair prices so the road stays profitable and her name stays trusted.",
+  "targetShape": "https://spectacular-voyage.github.io/stagecraft/ontology/orexis/act",
+  "teleology": "https://spectacular-voyage.github.io/stagecraft/ontology/orexis/instrumental",
+  "servesGoal": "https://spectacular-voyage.github.io/test-inn-ambush/value-declaration/talla/honest-trader",
+  "persistence": "https://spectacular-voyage.github.io/stagecraft/ontology/orexis/standing",
+  "beneficiary": "https://spectacular-voyage.github.io/stagecraft/ontology/orexis/self",
+  "authorshipBasis": "https://spectacular-voyage.github.io/stagecraft/ontology/orexis/seed",
+  "causedBy": "https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/world-seeded/inn-ambush-001",
+  "activeFrom": "2026-07-07T19:26:44Z",
+  "adoptedAs": "https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/intent-declaration/talla-honest-trade-001",
+  "deliveredTo": [
+    "https://spectacular-voyage.github.io/test-inn-ambush/participant/agent/talla"
+  ]
+}
