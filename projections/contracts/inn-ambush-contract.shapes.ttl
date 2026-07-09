@@ -2821,6 +2821,102 @@ sc-sh:MovementEventShape
     sh:message "MovementEvent commit instants live on authority journal records." ;
   ] .
 
+sc-sh:SpatialFrameShape
+  a sh:NodeShape ;
+  sh:targetClass sc:SpatialFrame ;
+  sh:property [
+    sh:path sc:spatialOrigin ;
+    sh:nodeKind sh:IRI ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path sc:spatialUnit ;
+    sh:datatype xsd:string ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path sc:spatialGrade ;
+    sh:datatype xsd:string ;
+    sh:in ( "advisory" "measured" ) ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] .
+
+sc-sh:AbsolutePositionHintShape
+  a sh:NodeShape ;
+  sh:targetClass sc:AbsolutePositionHint ;
+  sh:property [
+    sh:path sc:hintSubject ;
+    sh:nodeKind sh:IRI ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path sc:hintFrame ;
+    sh:nodeKind sh:IRI ;
+    sh:class sc:SpatialFrame ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path sc:xCoordinate ;
+    sh:datatype xsd:decimal ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path sc:xCoordinateUnit ;
+    sh:datatype xsd:string ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path sc:yCoordinate ;
+    sh:datatype xsd:decimal ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path sc:yCoordinateUnit ;
+    sh:datatype xsd:string ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] .
+
+sc-sh:RelativePositionHintShape
+  a sh:NodeShape ;
+  sh:targetClass sc:RelativePositionHint ;
+  sh:property [
+    sh:path sc:hintSubject ;
+    sh:nodeKind sh:IRI ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path sc:hintReference ;
+    sh:nodeKind sh:IRI ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path sc:bearing ;
+    sh:datatype xsd:string ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path sc:distanceValue ;
+    sh:datatype xsd:decimal ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path sc:distanceUnit ;
+    sh:datatype xsd:string ;
+    sh:maxCount 1 ;
+  ] .
+
 sc-sh:IntentAcceptedShape
   a sh:NodeShape ;
   sh:targetSubjectsOf sc:acceptsIntent ;

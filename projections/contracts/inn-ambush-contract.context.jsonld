@@ -618,6 +618,44 @@
       "@id": "sc:consequenceOfIntent",
       "@type": "@id"
     },
+    "spatialOrigin": {
+      "@id": "sc:spatialOrigin",
+      "@type": "@id"
+    },
+    "hasPositionHint": {
+      "@id": "sc:hasPositionHint",
+      "@type": "@id"
+    },
+    "hintSubject": {
+      "@id": "sc:hintSubject",
+      "@type": "@id"
+    },
+    "hintFrame": {
+      "@id": "sc:hintFrame",
+      "@type": "@id"
+    },
+    "hintReference": {
+      "@id": "sc:hintReference",
+      "@type": "@id"
+    },
+    "spatialUnit": "sc:spatialUnit",
+    "spatialGrade": "sc:spatialGrade",
+    "xCoordinate": {
+      "@id": "sc:xCoordinate",
+      "@type": "xsd:decimal"
+    },
+    "xCoordinateUnit": "sc:xCoordinateUnit",
+    "yCoordinate": {
+      "@id": "sc:yCoordinate",
+      "@type": "xsd:decimal"
+    },
+    "yCoordinateUnit": "sc:yCoordinateUnit",
+    "bearing": "sc:bearing",
+    "distanceValue": {
+      "@id": "sc:distanceValue",
+      "@type": "xsd:decimal"
+    },
+    "distanceUnit": "sc:distanceUnit",
     "purpose": "dcterms:description",
     "reason": "dcterms:description",
     "adjudicatesIntent": {

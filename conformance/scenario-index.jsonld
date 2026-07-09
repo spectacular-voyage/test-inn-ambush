@@ -1422,6 +1422,27 @@
           }
         }
       ]
+    },
+    {
+      "id": "#72-zone-graph-position-hints",
+      "type": "ScenarioStep",
+      "manifestPath": "72-zone-graph-position-hints.jsonld",
+      "hasLaneBinding": [
+        {
+          "type": "LaneStateBinding",
+          "lane": "#fixture-b-lane",
+          "fromLaneState": {
+            "type": "StateLocator",
+            "locatorKind": "gitRefState",
+            "ref": "eeb74ac292d8f9e6d91184bd75f3994b8c4f4e25"
+          },
+          "toLaneState": {
+            "type": "StateLocator",
+            "locatorKind": "gitRefState",
+            "ref": "b.20-zone-graph-position-hints"
+          }
+        }
+      ]
     }
   ]
 }

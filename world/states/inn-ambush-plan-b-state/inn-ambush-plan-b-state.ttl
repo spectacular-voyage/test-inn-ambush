@@ -994,6 +994,7 @@
 	<http://purl.org/dc/terms/description> "The inn common room where Elara, Nera, Ashfang, and the Plan B beat begin." ;
 	<https://spectacular-voyage.github.io/stagecraft/ontology/containedIn> <https://spectacular-voyage.github.io/test-inn-ambush/room/old-mill-inn> ;
 	<https://spectacular-voyage.github.io/stagecraft/ontology/adjacentTo> <https://spectacular-voyage.github.io/test-inn-ambush/place/front-door-threshold> ;
+	<https://spectacular-voyage.github.io/stagecraft/ontology/hasPositionHint> <https://spectacular-voyage.github.io/test-inn-ambush/spatial/hint/absolute/common-room> ;
 	<https://spectacular-voyage.github.io/stagecraft/ontology/zoneExtentFeet> "60.0"^^<http://www.w3.org/2001/XMLSchema#decimal> ;
 	<https://spectacular-voyage.github.io/stagecraft/ontology/elevationBand> 0 ;
 	<https://spectacular-voyage.github.io/stagecraft/ontology/hasLocus> <https://spectacular-voyage.github.io/test-inn-ambush/locus/common-room/by-the-bar> , <https://spectacular-voyage.github.io/test-inn-ambush/locus/common-room/near-front-door> , <https://spectacular-voyage.github.io/test-inn-ambush/locus/common-room/loft-landing> ;
@@ -1002,6 +1003,7 @@
 	<http://purl.org/dc/terms/description> "The spatial threshold at the inn door; distinct from the physical door target that can be barred." ;
 	<https://spectacular-voyage.github.io/stagecraft/ontology/containedIn> <https://spectacular-voyage.github.io/test-inn-ambush/room/old-mill-inn> ;
 	<https://spectacular-voyage.github.io/stagecraft/ontology/adjacentTo> <https://spectacular-voyage.github.io/test-inn-ambush/place/common-room> , <https://spectacular-voyage.github.io/test-inn-ambush/place/old-road> ;
+	<https://spectacular-voyage.github.io/stagecraft/ontology/hasPositionHint> <https://spectacular-voyage.github.io/test-inn-ambush/spatial/hint/absolute/front-door-threshold> ;
 	<https://spectacular-voyage.github.io/stagecraft/ontology/zoneExtentFeet> "10.0"^^<http://www.w3.org/2001/XMLSchema#decimal> ;
 	<https://spectacular-voyage.github.io/stagecraft/ontology/elevationBand> 0 ;
 	<https://spectacular-voyage.github.io/stagecraft/ontology/hasLocus> <https://spectacular-voyage.github.io/test-inn-ambush/locus/front-door-threshold/at-door> ;
@@ -1009,6 +1011,7 @@
 <https://spectacular-voyage.github.io/test-inn-ambush/place/old-road> a <https://spectacular-voyage.github.io/stagecraft/ontology/Place> ;
 	<http://purl.org/dc/terms/description> "The road outside the Old Mill Inn." ;
 	<https://spectacular-voyage.github.io/stagecraft/ontology/adjacentTo> <https://spectacular-voyage.github.io/test-inn-ambush/place/front-door-threshold> ;
+	<https://spectacular-voyage.github.io/stagecraft/ontology/hasPositionHint> <https://spectacular-voyage.github.io/test-inn-ambush/spatial/hint/absolute/old-road> ;
 	<https://spectacular-voyage.github.io/stagecraft/ontology/zoneExtentFeet> "120.0"^^<http://www.w3.org/2001/XMLSchema#decimal> ;
 	<https://spectacular-voyage.github.io/stagecraft/ontology/elevationBand> 0 ;
 	<https://spectacular-voyage.github.io/stagecraft/ontology/hasLocus> <https://spectacular-voyage.github.io/test-inn-ambush/locus/old-road/outside-inn> ;
@@ -1051,8 +1054,42 @@
 	<http://purl.org/dc/terms/description> "From the front-door threshold, the barred door presents a visible way out without giving the characters knowledge of the outside place." ;
 	<https://spectacular-voyage.github.io/stagecraft/ontology/fromPlace> <https://spectacular-voyage.github.io/test-inn-ambush/place/front-door-threshold> ;
 	<https://spectacular-voyage.github.io/stagecraft/ontology/toPlace> <https://spectacular-voyage.github.io/test-inn-ambush/place/old-road> ;
+	<https://spectacular-voyage.github.io/stagecraft/ontology/hasPositionHint> <https://spectacular-voyage.github.io/test-inn-ambush/spatial/hint/relative/front-door-outside-east> ;
 	<https://spectacular-voyage.github.io/stagecraft/ontology/basedOnAuthorityRecord> <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/world-seeded/inn-ambush-001> ;
 	<https://spectacular-voyage.github.io/stagecraft/ontology/inScenario> <https://spectacular-voyage.github.io/test-inn-ambush/scenario/inn-ambush> .
+<https://spectacular-voyage.github.io/test-inn-ambush/spatial/frame/inn-ambush-ground> a <https://spectacular-voyage.github.io/stagecraft/ontology/SpatialFrame> ;
+	<http://purl.org/dc/terms/description> "Advisory north-up fixture frame for the Inn Ambush zone graph." ;
+	<https://spectacular-voyage.github.io/stagecraft/ontology/spatialOrigin> <https://spectacular-voyage.github.io/test-inn-ambush/place/common-room> ;
+	<https://spectacular-voyage.github.io/stagecraft/ontology/spatialUnit> "feet" ;
+	<https://spectacular-voyage.github.io/stagecraft/ontology/spatialGrade> "advisory" ;
+	<https://spectacular-voyage.github.io/stagecraft/ontology/inScenario> <https://spectacular-voyage.github.io/test-inn-ambush/scenario/inn-ambush> .
+<https://spectacular-voyage.github.io/test-inn-ambush/spatial/hint/absolute/common-room> a <https://spectacular-voyage.github.io/stagecraft/ontology/AbsolutePositionHint> ;
+	<https://spectacular-voyage.github.io/stagecraft/ontology/hintSubject> <https://spectacular-voyage.github.io/test-inn-ambush/place/common-room> ;
+	<https://spectacular-voyage.github.io/stagecraft/ontology/hintFrame> <https://spectacular-voyage.github.io/test-inn-ambush/spatial/frame/inn-ambush-ground> ;
+	<https://spectacular-voyage.github.io/stagecraft/ontology/xCoordinate> "0.0"^^<http://www.w3.org/2001/XMLSchema#decimal> ;
+	<https://spectacular-voyage.github.io/stagecraft/ontology/xCoordinateUnit> "feet" ;
+	<https://spectacular-voyage.github.io/stagecraft/ontology/yCoordinate> "0.0"^^<http://www.w3.org/2001/XMLSchema#decimal> ;
+	<https://spectacular-voyage.github.io/stagecraft/ontology/yCoordinateUnit> "feet" .
+<https://spectacular-voyage.github.io/test-inn-ambush/spatial/hint/absolute/front-door-threshold> a <https://spectacular-voyage.github.io/stagecraft/ontology/AbsolutePositionHint> ;
+	<https://spectacular-voyage.github.io/stagecraft/ontology/hintSubject> <https://spectacular-voyage.github.io/test-inn-ambush/place/front-door-threshold> ;
+	<https://spectacular-voyage.github.io/stagecraft/ontology/hintFrame> <https://spectacular-voyage.github.io/test-inn-ambush/spatial/frame/inn-ambush-ground> ;
+	<https://spectacular-voyage.github.io/stagecraft/ontology/xCoordinate> "90.0"^^<http://www.w3.org/2001/XMLSchema#decimal> ;
+	<https://spectacular-voyage.github.io/stagecraft/ontology/xCoordinateUnit> "feet" ;
+	<https://spectacular-voyage.github.io/stagecraft/ontology/yCoordinate> "0.0"^^<http://www.w3.org/2001/XMLSchema#decimal> ;
+	<https://spectacular-voyage.github.io/stagecraft/ontology/yCoordinateUnit> "feet" .
+<https://spectacular-voyage.github.io/test-inn-ambush/spatial/hint/absolute/old-road> a <https://spectacular-voyage.github.io/stagecraft/ontology/AbsolutePositionHint> ;
+	<https://spectacular-voyage.github.io/stagecraft/ontology/hintSubject> <https://spectacular-voyage.github.io/test-inn-ambush/place/old-road> ;
+	<https://spectacular-voyage.github.io/stagecraft/ontology/hintFrame> <https://spectacular-voyage.github.io/test-inn-ambush/spatial/frame/inn-ambush-ground> ;
+	<https://spectacular-voyage.github.io/stagecraft/ontology/xCoordinate> "220.0"^^<http://www.w3.org/2001/XMLSchema#decimal> ;
+	<https://spectacular-voyage.github.io/stagecraft/ontology/xCoordinateUnit> "feet" ;
+	<https://spectacular-voyage.github.io/stagecraft/ontology/yCoordinate> "0.0"^^<http://www.w3.org/2001/XMLSchema#decimal> ;
+	<https://spectacular-voyage.github.io/stagecraft/ontology/yCoordinateUnit> "feet" .
+<https://spectacular-voyage.github.io/test-inn-ambush/spatial/hint/relative/front-door-outside-east> a <https://spectacular-voyage.github.io/stagecraft/ontology/RelativePositionHint> ;
+	<https://spectacular-voyage.github.io/stagecraft/ontology/hintSubject> <https://spectacular-voyage.github.io/test-inn-ambush/passage/front-door-outside> ;
+	<https://spectacular-voyage.github.io/stagecraft/ontology/hintReference> <https://spectacular-voyage.github.io/test-inn-ambush/place/front-door-threshold> ;
+	<https://spectacular-voyage.github.io/stagecraft/ontology/bearing> "east" ;
+	<https://spectacular-voyage.github.io/stagecraft/ontology/distanceValue> "30.0"^^<http://www.w3.org/2001/XMLSchema#decimal> ;
+	<https://spectacular-voyage.github.io/stagecraft/ontology/distanceUnit> "feet" .
 <https://spectacular-voyage.github.io/test-inn-ambush/participant/alice> a <https://spectacular-voyage.github.io/stagecraft/ontology/Participant> , <https://spectacular-voyage.github.io/stagecraft/ontology/HumanParticipant> ;
 	<https://spectacular-voyage.github.io/stagecraft/ontology/roleplayerFor> <https://spectacular-voyage.github.io/test-inn-ambush/actant/elara> ;
 	<https://spectacular-voyage.github.io/stagecraft/ontology/inScenario> <https://spectacular-voyage.github.io/test-inn-ambush/scenario/inn-ambush> .
@@ -1206,6 +1243,26 @@
 	<https://spectacular-voyage.github.io/stagecraft/ontology/acceptedFrom> "2026-06-29T13:35:00Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
 <https://spectacular-voyage.github.io/test-inn-ambush/relator/visibility/passage-front-door-outside/alice-current> a <https://spectacular-voyage.github.io/stagecraft/ontology/TemporalRelator> ;
 	<https://spectacular-voyage.github.io/stagecraft/ontology/subject> <https://spectacular-voyage.github.io/test-inn-ambush/passage/front-door-outside> ;
+	<https://spectacular-voyage.github.io/stagecraft/ontology/predicate> <https://spectacular-voyage.github.io/stagecraft/ontology/visibleTo> ;
+	<https://spectacular-voyage.github.io/stagecraft/ontology/object> <https://spectacular-voyage.github.io/test-inn-ambush/participant/alice> ;
+	<https://spectacular-voyage.github.io/stagecraft/ontology/acceptedFrom> "2026-06-29T13:35:00Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://spectacular-voyage.github.io/test-inn-ambush/relator/visibility/spatial-frame-inn-ambush-ground/players-current> a <https://spectacular-voyage.github.io/stagecraft/ontology/TemporalRelator> ;
+	<https://spectacular-voyage.github.io/stagecraft/ontology/subject> <https://spectacular-voyage.github.io/test-inn-ambush/spatial/frame/inn-ambush-ground> ;
+	<https://spectacular-voyage.github.io/stagecraft/ontology/predicate> <https://spectacular-voyage.github.io/stagecraft/ontology/visibleTo> ;
+	<https://spectacular-voyage.github.io/stagecraft/ontology/object> <https://spectacular-voyage.github.io/test-inn-ambush/participant/alice> , <https://spectacular-voyage.github.io/test-inn-ambush/participant/bob> ;
+	<https://spectacular-voyage.github.io/stagecraft/ontology/acceptedFrom> "2026-06-29T13:35:00Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://spectacular-voyage.github.io/test-inn-ambush/relator/visibility/spatial-hint-common-room/players-current> a <https://spectacular-voyage.github.io/stagecraft/ontology/TemporalRelator> ;
+	<https://spectacular-voyage.github.io/stagecraft/ontology/subject> <https://spectacular-voyage.github.io/test-inn-ambush/spatial/hint/absolute/common-room> ;
+	<https://spectacular-voyage.github.io/stagecraft/ontology/predicate> <https://spectacular-voyage.github.io/stagecraft/ontology/visibleTo> ;
+	<https://spectacular-voyage.github.io/stagecraft/ontology/object> <https://spectacular-voyage.github.io/test-inn-ambush/participant/alice> , <https://spectacular-voyage.github.io/test-inn-ambush/participant/bob> ;
+	<https://spectacular-voyage.github.io/stagecraft/ontology/acceptedFrom> "2026-06-29T13:35:00Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://spectacular-voyage.github.io/test-inn-ambush/relator/visibility/spatial-hint-front-door-threshold/alice-current> a <https://spectacular-voyage.github.io/stagecraft/ontology/TemporalRelator> ;
+	<https://spectacular-voyage.github.io/stagecraft/ontology/subject> <https://spectacular-voyage.github.io/test-inn-ambush/spatial/hint/absolute/front-door-threshold> ;
+	<https://spectacular-voyage.github.io/stagecraft/ontology/predicate> <https://spectacular-voyage.github.io/stagecraft/ontology/visibleTo> ;
+	<https://spectacular-voyage.github.io/stagecraft/ontology/object> <https://spectacular-voyage.github.io/test-inn-ambush/participant/alice> ;
+	<https://spectacular-voyage.github.io/stagecraft/ontology/acceptedFrom> "2026-06-29T13:35:00Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://spectacular-voyage.github.io/test-inn-ambush/relator/visibility/spatial-hint-front-door-outside-east/alice-current> a <https://spectacular-voyage.github.io/stagecraft/ontology/TemporalRelator> ;
+	<https://spectacular-voyage.github.io/stagecraft/ontology/subject> <https://spectacular-voyage.github.io/test-inn-ambush/spatial/hint/relative/front-door-outside-east> ;
 	<https://spectacular-voyage.github.io/stagecraft/ontology/predicate> <https://spectacular-voyage.github.io/stagecraft/ontology/visibleTo> ;
 	<https://spectacular-voyage.github.io/stagecraft/ontology/object> <https://spectacular-voyage.github.io/test-inn-ambush/participant/alice> ;
 	<https://spectacular-voyage.github.io/stagecraft/ontology/acceptedFrom> "2026-06-29T13:35:00Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .

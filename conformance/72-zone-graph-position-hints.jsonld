@@ -1,0 +1,132 @@
+{
+  "@context": {
+    "@vocab": "https://spectacular-voyage.github.io/accord/ontology/",
+    "dcterms": "http://purl.org/dc/terms/",
+    "id": "@id",
+    "type": "@type",
+    "changeType": {
+      "@type": "@vocab"
+    },
+    "compareMode": {
+      "@type": "@vocab"
+    },
+    "targetsFileExpectation": {
+      "@type": "@id"
+    },
+    "locatorKind": {
+      "@type": "@vocab"
+    }
+  },
+  "type": "Manifest",
+  "id": "urn:accord:stagecraft:test-inn-ambush:72-zone-graph-position-hints",
+  "dcterms:title": "Inn Ambush 72 zone graph position hints",
+  "hasCase": [
+    {
+      "type": "TransitionCase",
+      "id": "#zone-graph-position-hints",
+      "fixtureRepo": "github.com/spectacular-voyage/test-inn-ambush",
+      "operationId": "stagecraft.fixture.addZoneGraphPositionHints",
+      "fromRef": "eeb74ac292d8f9e6d91184bd75f3994b8c4f4e25",
+      "toRef": "b.20-zone-graph-position-hints",
+      "fromState": {
+        "type": "StateLocator",
+        "locatorKind": "gitRefState",
+        "ref": "eeb74ac292d8f9e6d91184bd75f3994b8c4f4e25"
+      },
+      "toState": {
+        "type": "StateLocator",
+        "locatorKind": "gitRefState",
+        "ref": "b.20-zone-graph-position-hints"
+      },
+      "hasFileExpectation": [
+        {
+          "id": "#projection-context",
+          "type": "FileExpectation",
+          "path": "projections/contracts/inn-ambush-contract.context.jsonld",
+          "changeType": "updated",
+          "compareMode": "json"
+        },
+        {
+          "id": "#projection-shapes",
+          "type": "FileExpectation",
+          "path": "projections/contracts/inn-ambush-contract.shapes.ttl",
+          "changeType": "updated",
+          "compareMode": "rdfCanonical"
+        },
+        {
+          "id": "#world-state",
+          "type": "FileExpectation",
+          "path": "world/states/inn-ambush-plan-b-state/inn-ambush-plan-b-state.ttl",
+          "changeType": "updated",
+          "compareMode": "rdfCanonical"
+        },
+        {
+          "id": "#scenario-index",
+          "type": "FileExpectation",
+          "path": "conformance/scenario-index.jsonld",
+          "changeType": "updated",
+          "compareMode": "json"
+        },
+        {
+          "id": "#accord-manifest",
+          "type": "FileExpectation",
+          "path": "conformance/72-zone-graph-position-hints.jsonld",
+          "changeType": "added",
+          "compareMode": "json"
+        }
+      ],
+      "hasRdfExpectation": [
+        {
+          "id": "#position-hint-shapes-rdf",
+          "type": "RdfExpectation",
+          "targetsFileExpectation": "#projection-shapes",
+          "hasAskAssertion": [
+            {
+              "id": "#ask-spatial-frame-shape",
+              "type": "SparqlAskAssertion",
+              "query": "ASK { <https://spectacular-voyage.github.io/stagecraft/shacl/SpatialFrameShape> a <http://www.w3.org/ns/shacl#NodeShape> ; <http://www.w3.org/ns/shacl#targetClass> <https://spectacular-voyage.github.io/stagecraft/ontology/SpatialFrame> ; <http://www.w3.org/ns/shacl#property> ?origin, ?unit, ?grade . ?origin <http://www.w3.org/ns/shacl#path> <https://spectacular-voyage.github.io/stagecraft/ontology/spatialOrigin> ; <http://www.w3.org/ns/shacl#minCount> \"1\"^^<http://www.w3.org/2001/XMLSchema#integer> ; <http://www.w3.org/ns/shacl#maxCount> \"1\"^^<http://www.w3.org/2001/XMLSchema#integer> . ?unit <http://www.w3.org/ns/shacl#path> <https://spectacular-voyage.github.io/stagecraft/ontology/spatialUnit> ; <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#string> . ?grade <http://www.w3.org/ns/shacl#path> <https://spectacular-voyage.github.io/stagecraft/ontology/spatialGrade> ; <http://www.w3.org/ns/shacl#in> ?gradeValues . }",
+              "expectedBoolean": true
+            },
+            {
+              "id": "#ask-absolute-position-hint-shape",
+              "type": "SparqlAskAssertion",
+              "query": "ASK { <https://spectacular-voyage.github.io/stagecraft/shacl/AbsolutePositionHintShape> a <http://www.w3.org/ns/shacl#NodeShape> ; <http://www.w3.org/ns/shacl#targetClass> <https://spectacular-voyage.github.io/stagecraft/ontology/AbsolutePositionHint> ; <http://www.w3.org/ns/shacl#property> ?subject, ?frame, ?x, ?xUnit, ?y, ?yUnit . ?subject <http://www.w3.org/ns/shacl#path> <https://spectacular-voyage.github.io/stagecraft/ontology/hintSubject> ; <http://www.w3.org/ns/shacl#minCount> \"1\"^^<http://www.w3.org/2001/XMLSchema#integer> . ?frame <http://www.w3.org/ns/shacl#path> <https://spectacular-voyage.github.io/stagecraft/ontology/hintFrame> ; <http://www.w3.org/ns/shacl#class> <https://spectacular-voyage.github.io/stagecraft/ontology/SpatialFrame> . ?x <http://www.w3.org/ns/shacl#path> <https://spectacular-voyage.github.io/stagecraft/ontology/xCoordinate> ; <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#decimal> . ?xUnit <http://www.w3.org/ns/shacl#path> <https://spectacular-voyage.github.io/stagecraft/ontology/xCoordinateUnit> ; <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#string> . ?y <http://www.w3.org/ns/shacl#path> <https://spectacular-voyage.github.io/stagecraft/ontology/yCoordinate> ; <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#decimal> . ?yUnit <http://www.w3.org/ns/shacl#path> <https://spectacular-voyage.github.io/stagecraft/ontology/yCoordinateUnit> ; <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#string> . }",
+              "expectedBoolean": true
+            },
+            {
+              "id": "#ask-relative-position-hint-shape",
+              "type": "SparqlAskAssertion",
+              "query": "ASK { <https://spectacular-voyage.github.io/stagecraft/shacl/RelativePositionHintShape> a <http://www.w3.org/ns/shacl#NodeShape> ; <http://www.w3.org/ns/shacl#targetClass> <https://spectacular-voyage.github.io/stagecraft/ontology/RelativePositionHint> ; <http://www.w3.org/ns/shacl#property> ?subject, ?reference, ?bearing, ?distance, ?distanceUnit . ?subject <http://www.w3.org/ns/shacl#path> <https://spectacular-voyage.github.io/stagecraft/ontology/hintSubject> ; <http://www.w3.org/ns/shacl#minCount> \"1\"^^<http://www.w3.org/2001/XMLSchema#integer> . ?reference <http://www.w3.org/ns/shacl#path> <https://spectacular-voyage.github.io/stagecraft/ontology/hintReference> ; <http://www.w3.org/ns/shacl#minCount> \"1\"^^<http://www.w3.org/2001/XMLSchema#integer> . ?bearing <http://www.w3.org/ns/shacl#path> <https://spectacular-voyage.github.io/stagecraft/ontology/bearing> ; <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#string> . ?distance <http://www.w3.org/ns/shacl#path> <https://spectacular-voyage.github.io/stagecraft/ontology/distanceValue> ; <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#decimal> . ?distanceUnit <http://www.w3.org/ns/shacl#path> <https://spectacular-voyage.github.io/stagecraft/ontology/distanceUnit> ; <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#string> . }",
+              "expectedBoolean": true
+            }
+          ]
+        },
+        {
+          "id": "#position-hint-records-rdf",
+          "type": "RdfExpectation",
+          "targetsFileExpectation": "#world-state",
+          "hasAskAssertion": [
+            {
+              "id": "#ask-spatial-frame-and-absolute-hints",
+              "type": "SparqlAskAssertion",
+              "query": "ASK { <https://spectacular-voyage.github.io/test-inn-ambush/spatial/frame/inn-ambush-ground> a <https://spectacular-voyage.github.io/stagecraft/ontology/SpatialFrame> ; <https://spectacular-voyage.github.io/stagecraft/ontology/spatialOrigin> <https://spectacular-voyage.github.io/test-inn-ambush/place/common-room> ; <https://spectacular-voyage.github.io/stagecraft/ontology/spatialUnit> \"feet\" ; <https://spectacular-voyage.github.io/stagecraft/ontology/spatialGrade> \"advisory\" . <https://spectacular-voyage.github.io/test-inn-ambush/spatial/hint/absolute/common-room> a <https://spectacular-voyage.github.io/stagecraft/ontology/AbsolutePositionHint> ; <https://spectacular-voyage.github.io/stagecraft/ontology/hintSubject> <https://spectacular-voyage.github.io/test-inn-ambush/place/common-room> ; <https://spectacular-voyage.github.io/stagecraft/ontology/hintFrame> <https://spectacular-voyage.github.io/test-inn-ambush/spatial/frame/inn-ambush-ground> ; <https://spectacular-voyage.github.io/stagecraft/ontology/xCoordinate> \"0.0\"^^<http://www.w3.org/2001/XMLSchema#decimal> ; <https://spectacular-voyage.github.io/stagecraft/ontology/xCoordinateUnit> \"feet\" ; <https://spectacular-voyage.github.io/stagecraft/ontology/yCoordinate> \"0.0\"^^<http://www.w3.org/2001/XMLSchema#decimal> ; <https://spectacular-voyage.github.io/stagecraft/ontology/yCoordinateUnit> \"feet\" . <https://spectacular-voyage.github.io/test-inn-ambush/spatial/hint/absolute/front-door-threshold> a <https://spectacular-voyage.github.io/stagecraft/ontology/AbsolutePositionHint> ; <https://spectacular-voyage.github.io/stagecraft/ontology/hintSubject> <https://spectacular-voyage.github.io/test-inn-ambush/place/front-door-threshold> ; <https://spectacular-voyage.github.io/stagecraft/ontology/xCoordinate> \"90.0\"^^<http://www.w3.org/2001/XMLSchema#decimal> ; <https://spectacular-voyage.github.io/stagecraft/ontology/xCoordinateUnit> \"feet\" ; <https://spectacular-voyage.github.io/stagecraft/ontology/yCoordinate> \"0.0\"^^<http://www.w3.org/2001/XMLSchema#decimal> ; <https://spectacular-voyage.github.io/stagecraft/ontology/yCoordinateUnit> \"feet\" . <https://spectacular-voyage.github.io/test-inn-ambush/spatial/hint/absolute/old-road> a <https://spectacular-voyage.github.io/stagecraft/ontology/AbsolutePositionHint> ; <https://spectacular-voyage.github.io/stagecraft/ontology/hintSubject> <https://spectacular-voyage.github.io/test-inn-ambush/place/old-road> ; <https://spectacular-voyage.github.io/stagecraft/ontology/xCoordinate> \"220.0\"^^<http://www.w3.org/2001/XMLSchema#decimal> ; <https://spectacular-voyage.github.io/stagecraft/ontology/xCoordinateUnit> \"feet\" . }",
+              "expectedBoolean": true
+            },
+            {
+              "id": "#ask-relative-passage-hint-east",
+              "type": "SparqlAskAssertion",
+              "query": "ASK { <https://spectacular-voyage.github.io/test-inn-ambush/passage/front-door-outside> <https://spectacular-voyage.github.io/stagecraft/ontology/hasPositionHint> <https://spectacular-voyage.github.io/test-inn-ambush/spatial/hint/relative/front-door-outside-east> . <https://spectacular-voyage.github.io/test-inn-ambush/spatial/hint/relative/front-door-outside-east> a <https://spectacular-voyage.github.io/stagecraft/ontology/RelativePositionHint> ; <https://spectacular-voyage.github.io/stagecraft/ontology/hintSubject> <https://spectacular-voyage.github.io/test-inn-ambush/passage/front-door-outside> ; <https://spectacular-voyage.github.io/stagecraft/ontology/hintReference> <https://spectacular-voyage.github.io/test-inn-ambush/place/front-door-threshold> ; <https://spectacular-voyage.github.io/stagecraft/ontology/bearing> \"east\" ; <https://spectacular-voyage.github.io/stagecraft/ontology/distanceValue> \"30.0\"^^<http://www.w3.org/2001/XMLSchema#decimal> ; <https://spectacular-voyage.github.io/stagecraft/ontology/distanceUnit> \"feet\" . }",
+              "expectedBoolean": true
+            },
+            {
+              "id": "#ask-participant-visible-safe-hints",
+              "type": "SparqlAskAssertion",
+              "query": "ASK { <https://spectacular-voyage.github.io/test-inn-ambush/relator/visibility/spatial-hint-front-door-outside-east/alice-current> <https://spectacular-voyage.github.io/stagecraft/ontology/subject> <https://spectacular-voyage.github.io/test-inn-ambush/spatial/hint/relative/front-door-outside-east> ; <https://spectacular-voyage.github.io/stagecraft/ontology/object> <https://spectacular-voyage.github.io/test-inn-ambush/participant/alice> . <https://spectacular-voyage.github.io/test-inn-ambush/relator/visibility/spatial-hint-front-door-threshold/alice-current> <https://spectacular-voyage.github.io/stagecraft/ontology/subject> <https://spectacular-voyage.github.io/test-inn-ambush/spatial/hint/absolute/front-door-threshold> ; <https://spectacular-voyage.github.io/stagecraft/ontology/object> <https://spectacular-voyage.github.io/test-inn-ambush/participant/alice> . FILTER NOT EXISTS { ?relator <https://spectacular-voyage.github.io/stagecraft/ontology/subject> <https://spectacular-voyage.github.io/test-inn-ambush/spatial/hint/absolute/old-road> ; <https://spectacular-voyage.github.io/stagecraft/ontology/predicate> <https://spectacular-voyage.github.io/stagecraft/ontology/visibleTo> ; <https://spectacular-voyage.github.io/stagecraft/ontology/object> <https://spectacular-voyage.github.io/test-inn-ambush/participant/alice> . } }",
+              "expectedBoolean": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
