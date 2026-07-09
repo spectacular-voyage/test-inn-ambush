@@ -1,0 +1,94 @@
+{
+  "@context": {
+    "@vocab": "https://spectacular-voyage.github.io/accord/ontology/",
+    "dcterms": "http://purl.org/dc/terms/",
+    "id": "@id",
+    "type": "@type",
+    "changeType": {
+      "@type": "@vocab"
+    },
+    "compareMode": {
+      "@type": "@vocab"
+    },
+    "targetsFileExpectation": {
+      "@type": "@id"
+    },
+    "locatorKind": {
+      "@type": "@vocab"
+    }
+  },
+  "type": "Manifest",
+  "id": "urn:accord:stagecraft:test-inn-ambush:74-opening-narration",
+  "dcterms:title": "Inn Ambush 74 opening narration",
+  "hasCase": [
+    {
+      "type": "TransitionCase",
+      "id": "#opening-narration",
+      "fixtureRepo": "github.com/spectacular-voyage/test-inn-ambush",
+      "operationId": "stagecraft.fixture.addOpeningNarration",
+      "fromRef": "074ac96548df97a8a720fc86d82391bc165d31c7",
+      "toRef": "b.22-opening-narration",
+      "fromState": {
+        "type": "StateLocator",
+        "locatorKind": "gitRefState",
+        "ref": "074ac96548df97a8a720fc86d82391bc165d31c7"
+      },
+      "toState": {
+        "type": "StateLocator",
+        "locatorKind": "gitRefState",
+        "ref": "b.22-opening-narration"
+      },
+      "hasFileExpectation": [
+        {
+          "id": "#world-state",
+          "type": "FileExpectation",
+          "path": "world/states/inn-ambush-plan-b-state/inn-ambush-plan-b-state.ttl",
+          "changeType": "updated",
+          "compareMode": "rdfCanonical"
+        },
+        {
+          "id": "#contract-shapes",
+          "type": "FileExpectation",
+          "path": "projections/contracts/inn-ambush-contract.shapes.ttl",
+          "changeType": "updated",
+          "compareMode": "rdfCanonical"
+        },
+        {
+          "id": "#scenario-index",
+          "type": "FileExpectation",
+          "path": "conformance/scenario-index.jsonld",
+          "changeType": "updated",
+          "compareMode": "json"
+        },
+        {
+          "id": "#manifest",
+          "type": "FileExpectation",
+          "path": "conformance/74-opening-narration.jsonld",
+          "changeType": "added",
+          "compareMode": "json"
+        }
+      ],
+      "hasRdfExpectation": [
+        {
+          "id": "#opening-narration-records-rdf",
+          "type": "RdfExpectation",
+          "targetsFileExpectation": "#world-state",
+          "hasAskAssertion": [
+            {
+              "id": "#ask-authored-openers-cover-all-audience-selectors",
+              "type": "SparqlAskAssertion",
+              "query": "ASK { <https://spectacular-voyage.github.io/test-inn-ambush/opening-narration/inn-ambush/omni> a <https://spectacular-voyage.github.io/stagecraft/ontology/OpeningNarration> ; <https://spectacular-voyage.github.io/stagecraft/ontology/forActant> <https://spectacular-voyage.github.io/stagecraft/ontology/omniAudience> ; <https://spectacular-voyage.github.io/stagecraft/ontology/content> \"The prompt book opens on the Wayside Rest: every lantern, blade, and unpaid debt in view at once.\" . <https://spectacular-voyage.github.io/test-inn-ambush/opening-narration/inn-ambush/elara> a <https://spectacular-voyage.github.io/stagecraft/ontology/OpeningNarration> ; <https://spectacular-voyage.github.io/stagecraft/ontology/forActant> <https://spectacular-voyage.github.io/test-inn-ambush/actant/elara> ; <https://spectacular-voyage.github.io/stagecraft/ontology/content> \"Ashfang's worn grip warms under your palm as the common room's lantern light steadies around you.\" . <https://spectacular-voyage.github.io/test-inn-ambush/opening-narration/inn-ambush/nera> a <https://spectacular-voyage.github.io/stagecraft/ontology/OpeningNarration> ; <https://spectacular-voyage.github.io/stagecraft/ontology/forActant> <https://spectacular-voyage.github.io/test-inn-ambush/actant/nera> ; <https://spectacular-voyage.github.io/stagecraft/ontology/content> \"From the corner booth you count three exits before the foam settles on your ale.\" . <https://spectacular-voyage.github.io/test-inn-ambush/opening-narration/inn-ambush/table> a <https://spectacular-voyage.github.io/stagecraft/ontology/OpeningNarration> ; <https://spectacular-voyage.github.io/stagecraft/ontology/content> \"Evening settles over the Wayside Rest; rain taps the shutters and the fire burns low.\" . FILTER NOT EXISTS { <https://spectacular-voyage.github.io/test-inn-ambush/opening-narration/inn-ambush/table> <https://spectacular-voyage.github.io/stagecraft/ontology/forActant> ?tableAudience . } }",
+              "expectedBoolean": true
+            },
+            {
+              "id": "#ask-openers-never-carry-authored-delivery",
+              "type": "SparqlAskAssertion",
+              "query": "ASK { FILTER NOT EXISTS { ?opener a <https://spectacular-voyage.github.io/stagecraft/ontology/OpeningNarration> ; <https://spectacular-voyage.github.io/stagecraft/ontology/deliveredTo> ?anyone . } }",
+              "expectedBoolean": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

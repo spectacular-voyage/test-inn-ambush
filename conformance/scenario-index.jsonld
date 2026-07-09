@@ -1464,6 +1464,27 @@
           }
         }
       ]
+    },
+    {
+      "id": "#74-opening-narration",
+      "type": "ScenarioStep",
+      "manifestPath": "74-opening-narration.jsonld",
+      "hasLaneBinding": [
+        {
+          "type": "LaneStateBinding",
+          "lane": "#fixture-b-lane",
+          "fromLaneState": {
+            "type": "StateLocator",
+            "locatorKind": "gitRefState",
+            "ref": "b.21-spatial-gate-regressions"
+          },
+          "toLaneState": {
+            "type": "StateLocator",
+            "locatorKind": "gitRefState",
+            "ref": "b.22-opening-narration"
+          }
+        }
+      ]
     }
   ]
 }

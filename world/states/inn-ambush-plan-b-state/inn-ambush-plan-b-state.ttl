@@ -1706,3 +1706,18 @@
 <https://spectacular-voyage.github.io/test-inn-ambush/world/states/inn-ambush-plan-b-state/main/s0002> <http://purl.org/dc/terms/references> <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/checkpoint-committed/session-authority/checkpoint-mrbm6ttp> , <https://spectacular-voyage.github.io/test-inn-ambush/committed-event/checkpoint/session-authority/checkpoint-mrbm6ttp> , <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/commit-certificate/checkpoint/session-authority/checkpoint-mrbm6ttp> , <https://spectacular-voyage.github.io/test-inn-ambush/clock-anchor/world-clock/offset-11400s> , <https://spectacular-voyage.github.io/test-inn-ambush/frame/ambush-night> ;
 	<https://semantic-flow.github.io/sflo/ontology/previousHistoricalState> <https://spectacular-voyage.github.io/test-inn-ambush/world/states/inn-ambush-plan-b-state/main/s0001> .
 <https://spectacular-voyage.github.io/test-inn-ambush/world/states/inn-ambush-plan-b-state/main/s0002/ttl/inn-ambush-plan-b-state.ttl> <https://schema.org/contentUrl> "world/states/inn-ambush-plan-b-state/main/s0002/ttl/inn-ambush-plan-b-state.ttl" .
+<https://spectacular-voyage.github.io/test-inn-ambush/opening-narration/inn-ambush/omni> <https://spectacular-voyage.github.io/stagecraft/ontology/content> "The prompt book opens on the Wayside Rest: every lantern, blade, and unpaid debt in view at once." ;
+	<https://spectacular-voyage.github.io/stagecraft/ontology/forActant> <https://spectacular-voyage.github.io/stagecraft/ontology/omniAudience> ;
+	<https://spectacular-voyage.github.io/stagecraft/ontology/narrationOrder> "1"^^<http://www.w3.org/2001/XMLSchema#integer> ;
+	a <https://spectacular-voyage.github.io/stagecraft/ontology/OpeningNarration> .
+<https://spectacular-voyage.github.io/test-inn-ambush/opening-narration/inn-ambush/table> <https://spectacular-voyage.github.io/stagecraft/ontology/content> "Evening settles over the Wayside Rest; rain taps the shutters and the fire burns low." ;
+	<https://spectacular-voyage.github.io/stagecraft/ontology/narrationOrder> "2"^^<http://www.w3.org/2001/XMLSchema#integer> ;
+	a <https://spectacular-voyage.github.io/stagecraft/ontology/OpeningNarration> .
+<https://spectacular-voyage.github.io/test-inn-ambush/opening-narration/inn-ambush/elara> <https://spectacular-voyage.github.io/stagecraft/ontology/content> "Ashfang's worn grip warms under your palm as the common room's lantern light steadies around you." ;
+	<https://spectacular-voyage.github.io/stagecraft/ontology/forActant> <https://spectacular-voyage.github.io/test-inn-ambush/actant/elara> ;
+	<https://spectacular-voyage.github.io/stagecraft/ontology/narrationOrder> "3"^^<http://www.w3.org/2001/XMLSchema#integer> ;
+	a <https://spectacular-voyage.github.io/stagecraft/ontology/OpeningNarration> .
+<https://spectacular-voyage.github.io/test-inn-ambush/opening-narration/inn-ambush/nera> <https://spectacular-voyage.github.io/stagecraft/ontology/content> "From the corner booth you count three exits before the foam settles on your ale." ;
+	<https://spectacular-voyage.github.io/stagecraft/ontology/forActant> <https://spectacular-voyage.github.io/test-inn-ambush/actant/nera> ;
+	<https://spectacular-voyage.github.io/stagecraft/ontology/narrationOrder> "4"^^<http://www.w3.org/2001/XMLSchema#integer> ;
+	a <https://spectacular-voyage.github.io/stagecraft/ontology/OpeningNarration> .
