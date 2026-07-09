@@ -1,0 +1,67 @@
+{
+  "@context": {
+    "@vocab": "https://spectacular-voyage.github.io/accord/ontology/",
+    "dcterms": "http://purl.org/dc/terms/",
+    "id": "@id",
+    "type": "@type",
+    "changeType": {
+      "@type": "@vocab"
+    },
+    "compareMode": {
+      "@type": "@vocab"
+    },
+    "targetsFileExpectation": {
+      "@type": "@id"
+    },
+    "locatorKind": {
+      "@type": "@vocab"
+    }
+  },
+  "type": "Manifest",
+  "id": "urn:accord:stagecraft:test-inn-ambush:73-spatial-gate-regressions",
+  "dcterms:title": "Inn Ambush 73 spatial gate regressions",
+  "hasCase": [
+    {
+      "type": "TransitionCase",
+      "id": "#spatial-gate-regressions",
+      "fixtureRepo": "github.com/spectacular-voyage/test-inn-ambush",
+      "operationId": "stagecraft.fixture.addSpatialGateRegressions",
+      "fromRef": "b.20-zone-graph-position-hints",
+      "toRef": "b.21-spatial-gate-regressions",
+      "fromState": {
+        "type": "StateLocator",
+        "locatorKind": "gitRefState",
+        "ref": "b.20-zone-graph-position-hints"
+      },
+      "toState": {
+        "type": "StateLocator",
+        "locatorKind": "gitRefState",
+        "ref": "b.21-spatial-gate-regressions"
+      },
+      "hasFileExpectation": [
+        {
+          "id": "#world-state",
+          "type": "FileExpectation",
+          "path": "world/states/inn-ambush-plan-b-state/inn-ambush-plan-b-state.ttl",
+          "changeType": "updated",
+          "compareMode": "rdfCanonical"
+        }
+      ],
+      "hasRdfExpectation": [
+        {
+          "id": "#spatial-gate-regression-records-rdf",
+          "type": "RdfExpectation",
+          "targetsFileExpectation": "#world-state",
+          "hasAskAssertion": [
+            {
+              "id": "#ask-visible-risk-hints-with-hidden-endpoints",
+              "type": "SparqlAskAssertion",
+              "query": "ASK { <https://spectacular-voyage.github.io/test-inn-ambush/spatial/hint/absolute/old-road> a <https://spectacular-voyage.github.io/stagecraft/ontology/AbsolutePositionHint> ; <https://spectacular-voyage.github.io/stagecraft/ontology/hintSubject> <https://spectacular-voyage.github.io/test-inn-ambush/place/old-road> ; <https://spectacular-voyage.github.io/stagecraft/ontology/xCoordinate> \"220.0\"^^<http://www.w3.org/2001/XMLSchema#decimal> . <https://spectacular-voyage.github.io/test-inn-ambush/spatial/frame/old-road-hidden-origin> a <https://spectacular-voyage.github.io/stagecraft/ontology/SpatialFrame> ; <https://spectacular-voyage.github.io/stagecraft/ontology/spatialOrigin> <https://spectacular-voyage.github.io/test-inn-ambush/place/old-road> . <https://spectacular-voyage.github.io/test-inn-ambush/spatial/hint/absolute/common-room-hidden-frame-origin> a <https://spectacular-voyage.github.io/stagecraft/ontology/AbsolutePositionHint> ; <https://spectacular-voyage.github.io/stagecraft/ontology/hintSubject> <https://spectacular-voyage.github.io/test-inn-ambush/place/common-room> ; <https://spectacular-voyage.github.io/stagecraft/ontology/hintFrame> <https://spectacular-voyage.github.io/test-inn-ambush/spatial/frame/old-road-hidden-origin> . <https://spectacular-voyage.github.io/test-inn-ambush/spatial/hint/relative/front-door-outside-hidden-reference> a <https://spectacular-voyage.github.io/stagecraft/ontology/RelativePositionHint> ; <https://spectacular-voyage.github.io/stagecraft/ontology/hintSubject> <https://spectacular-voyage.github.io/test-inn-ambush/passage/front-door-outside> ; <https://spectacular-voyage.github.io/stagecraft/ontology/hintReference> <https://spectacular-voyage.github.io/test-inn-ambush/place/old-road> ; <https://spectacular-voyage.github.io/stagecraft/ontology/bearing> \"northwest\" . <https://spectacular-voyage.github.io/test-inn-ambush/relator/visibility/spatial-hint-old-road/alice-risk-current> <https://spectacular-voyage.github.io/stagecraft/ontology/subject> <https://spectacular-voyage.github.io/test-inn-ambush/spatial/hint/absolute/old-road> ; <https://spectacular-voyage.github.io/stagecraft/ontology/predicate> <https://spectacular-voyage.github.io/stagecraft/ontology/visibleTo> ; <https://spectacular-voyage.github.io/stagecraft/ontology/object> <https://spectacular-voyage.github.io/test-inn-ambush/participant/alice> . <https://spectacular-voyage.github.io/test-inn-ambush/relator/visibility/spatial-frame-old-road-hidden-origin/alice-risk-current> <https://spectacular-voyage.github.io/stagecraft/ontology/subject> <https://spectacular-voyage.github.io/test-inn-ambush/spatial/frame/old-road-hidden-origin> ; <https://spectacular-voyage.github.io/stagecraft/ontology/predicate> <https://spectacular-voyage.github.io/stagecraft/ontology/visibleTo> ; <https://spectacular-voyage.github.io/stagecraft/ontology/object> <https://spectacular-voyage.github.io/test-inn-ambush/participant/alice> . <https://spectacular-voyage.github.io/test-inn-ambush/relator/visibility/spatial-hint-common-room-hidden-frame-origin/alice-risk-current> <https://spectacular-voyage.github.io/stagecraft/ontology/subject> <https://spectacular-voyage.github.io/test-inn-ambush/spatial/hint/absolute/common-room-hidden-frame-origin> ; <https://spectacular-voyage.github.io/stagecraft/ontology/predicate> <https://spectacular-voyage.github.io/stagecraft/ontology/visibleTo> ; <https://spectacular-voyage.github.io/stagecraft/ontology/object> <https://spectacular-voyage.github.io/test-inn-ambush/participant/alice> . <https://spectacular-voyage.github.io/test-inn-ambush/relator/visibility/spatial-hint-front-door-outside-hidden-reference/alice-risk-current> <https://spectacular-voyage.github.io/stagecraft/ontology/subject> <https://spectacular-voyage.github.io/test-inn-ambush/spatial/hint/relative/front-door-outside-hidden-reference> ; <https://spectacular-voyage.github.io/stagecraft/ontology/predicate> <https://spectacular-voyage.github.io/stagecraft/ontology/visibleTo> ; <https://spectacular-voyage.github.io/stagecraft/ontology/object> <https://spectacular-voyage.github.io/test-inn-ambush/participant/alice> . FILTER NOT EXISTS { ?oldRoadVisibility <https://spectacular-voyage.github.io/stagecraft/ontology/subject> <https://spectacular-voyage.github.io/test-inn-ambush/place/old-road> ; <https://spectacular-voyage.github.io/stagecraft/ontology/predicate> <https://spectacular-voyage.github.io/stagecraft/ontology/visibleTo> ; <https://spectacular-voyage.github.io/stagecraft/ontology/object> <https://spectacular-voyage.github.io/test-inn-ambush/participant/alice> . } }",
+              "expectedBoolean": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

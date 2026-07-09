@@ -1443,6 +1443,27 @@
           }
         }
       ]
+    },
+    {
+      "id": "#73-spatial-gate-regressions",
+      "type": "ScenarioStep",
+      "manifestPath": "73-spatial-gate-regressions.jsonld",
+      "hasLaneBinding": [
+        {
+          "type": "LaneStateBinding",
+          "lane": "#fixture-b-lane",
+          "fromLaneState": {
+            "type": "StateLocator",
+            "locatorKind": "gitRefState",
+            "ref": "b.20-zone-graph-position-hints"
+          },
+          "toLaneState": {
+            "type": "StateLocator",
+            "locatorKind": "gitRefState",
+            "ref": "b.21-spatial-gate-regressions"
+          }
+        }
+      ]
     }
   ]
 }
