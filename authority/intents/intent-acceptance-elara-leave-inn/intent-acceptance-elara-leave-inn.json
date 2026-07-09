@@ -1,0 +1,14 @@
+{
+  "@context": "https://spectacular-voyage.github.io/test-inn-ambush/projections/contracts/inn-ambush-contract.context.jsonld",
+  "@type": "IntentAcceptanceRequest",
+  "type": "stagecraft.intent-acceptance.request.v1",
+  "id": "intent-acceptance-elara-leave-inn-001",
+  "requestedByParticipant": "https://spectacular-voyage.github.io/test-inn-ambush/gm/alex",
+  "intent": "https://spectacular-voyage.github.io/test-inn-ambush/intent/session-authority/elara-leave-inn-001",
+  "acceptance": "OK, you leave the inn.",
+  "sourceProjection": {
+    "observedProjectionState": "https://spectacular-voyage.github.io/test-inn-ambush/branch/plan-b",
+    "participantProjection": "https://spectacular-voyage.github.io/test-inn-ambush/projection/gm/alex/inn-ambush-plan-b"
+  },
+  "createdAt": "2026-07-09T17:15:00Z"
+}

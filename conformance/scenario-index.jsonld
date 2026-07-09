@@ -1401,6 +1401,27 @@
           }
         }
       ]
+    },
+    {
+      "id": "#71-intent-approval-to-consequence",
+      "type": "ScenarioStep",
+      "manifestPath": "71-intent-approval-to-consequence.jsonld",
+      "hasLaneBinding": [
+        {
+          "type": "LaneStateBinding",
+          "lane": "#fixture-b-lane",
+          "fromLaneState": {
+            "type": "StateLocator",
+            "locatorKind": "gitRefState",
+            "ref": "40f16be988bc6d1250195bf59f6be47404708962"
+          },
+          "toLaneState": {
+            "type": "StateLocator",
+            "locatorKind": "gitRefState",
+            "ref": "b.19-intent-approval-to-consequence"
+          }
+        }
+      ]
     }
   ]
 }

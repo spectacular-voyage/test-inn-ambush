@@ -2820,3 +2820,96 @@ sc-sh:MovementEventShape
     sh:maxCount 0 ;
     sh:message "MovementEvent commit instants live on authority journal records." ;
   ] .
+
+sc-sh:IntentAcceptedShape
+  a sh:NodeShape ;
+  sh:targetSubjectsOf sc:acceptsIntent ;
+  sh:property [
+    sh:path dcterms:created ;
+    sh:datatype xsd:dateTime ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path sc:acceptedBy ;
+    sh:nodeKind sh:IRI ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path sc:acceptsIntent ;
+    sh:nodeKind sh:IRI ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] .
+
+sc-sh:MovementConsequenceShape
+  a sh:NodeShape ;
+  sh:targetClass sc:MovementConsequence ;
+  sh:property [
+    sh:path dcterms:created ;
+    sh:datatype xsd:dateTime ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path sc:causedByAcceptedIntent ;
+    sh:nodeKind sh:IRI ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path sc:committedEvent ;
+    sh:nodeKind sh:IRI ;
+    sh:class sc:MovementEvent ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path sc:consequenceOfIntent ;
+    sh:nodeKind sh:IRI ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path sc:fromPlace ;
+    sh:nodeKind sh:IRI ;
+    sh:class sc:Place ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path sc:hasCommitCertificate ;
+    sh:nodeKind sh:IRI ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path sc:movesActant ;
+    sh:nodeKind sh:IRI ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path sc:toPlace ;
+    sh:nodeKind sh:IRI ;
+    sh:class sc:Place ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path dyn:actionType ;
+    sh:hasValue dyn:Move ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path dyn:adjudicatesIntent ;
+    sh:maxCount 0 ;
+    sh:message "A no-roll movement consequence links directly to the intent instead of minting a D20 warrant." ;
+  ] ;
+  sh:property [
+    sh:path dyn:consequenceOfOutcome ;
+    sh:maxCount 0 ;
+    sh:message "A no-roll movement consequence must not masquerade as a D20 outcome consequence." ;
+  ] .

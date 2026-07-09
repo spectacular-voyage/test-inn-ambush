@@ -1,0 +1,127 @@
+{
+  "@context": {
+    "@vocab": "https://spectacular-voyage.github.io/accord/ontology/",
+    "dcterms": "http://purl.org/dc/terms/",
+    "id": "@id",
+    "type": "@type",
+    "changeType": {
+      "@type": "@vocab"
+    },
+    "compareMode": {
+      "@type": "@vocab"
+    },
+    "targetsFileExpectation": {
+      "@type": "@id"
+    },
+    "locatorKind": {
+      "@type": "@vocab"
+    }
+  },
+  "type": "Manifest",
+  "id": "urn:accord:stagecraft:test-inn-ambush:71-intent-approval-to-consequence",
+  "dcterms:title": "Inn Ambush 71 intent approval to consequence",
+  "hasCase": [
+    {
+      "type": "TransitionCase",
+      "id": "#intent-approval-to-consequence",
+      "fixtureRepo": "github.com/spectacular-voyage/test-inn-ambush",
+      "operationId": "stagecraft.fixture.addIntentApprovalMovementConsequence",
+      "fromRef": "40f16be988bc6d1250195bf59f6be47404708962",
+      "toRef": "b.19-intent-approval-to-consequence",
+      "fromState": {
+        "type": "StateLocator",
+        "locatorKind": "gitRefState",
+        "ref": "40f16be988bc6d1250195bf59f6be47404708962"
+      },
+      "toState": {
+        "type": "StateLocator",
+        "locatorKind": "gitRefState",
+        "ref": "b.19-intent-approval-to-consequence"
+      },
+      "hasFileExpectation": [
+        {
+          "id": "#projection-context",
+          "type": "FileExpectation",
+          "path": "projections/contracts/inn-ambush-contract.context.jsonld",
+          "changeType": "updated",
+          "compareMode": "json"
+        },
+        {
+          "id": "#projection-shapes",
+          "type": "FileExpectation",
+          "path": "projections/contracts/inn-ambush-contract.shapes.ttl",
+          "changeType": "updated",
+          "compareMode": "rdfCanonical"
+        },
+        {
+          "id": "#intent-acceptance-request",
+          "type": "FileExpectation",
+          "path": "authority/intents/intent-acceptance-elara-leave-inn/intent-acceptance-elara-leave-inn.json",
+          "changeType": "added",
+          "compareMode": "json"
+        },
+        {
+          "id": "#movement-consequence-records",
+          "type": "FileExpectation",
+          "path": "sessions/movement-consequences/elara-leave-inn/elara-leave-inn.ttl",
+          "changeType": "added",
+          "compareMode": "rdfCanonical"
+        },
+        {
+          "id": "#scenario-index",
+          "type": "FileExpectation",
+          "path": "conformance/scenario-index.jsonld",
+          "changeType": "updated",
+          "compareMode": "json"
+        },
+        {
+          "id": "#accord-manifest",
+          "type": "FileExpectation",
+          "path": "conformance/71-intent-approval-to-consequence.jsonld",
+          "changeType": "added",
+          "compareMode": "json"
+        }
+      ],
+      "hasRdfExpectation": [
+        {
+          "id": "#movement-consequence-shapes-rdf",
+          "type": "RdfExpectation",
+          "targetsFileExpectation": "#projection-shapes",
+          "hasAskAssertion": [
+            {
+              "id": "#ask-intent-accepted-shape",
+              "type": "SparqlAskAssertion",
+              "query": "ASK { <https://spectacular-voyage.github.io/stagecraft/shacl/IntentAcceptedShape> a <http://www.w3.org/ns/shacl#NodeShape> ; <http://www.w3.org/ns/shacl#targetSubjectsOf> <https://spectacular-voyage.github.io/stagecraft/ontology/acceptsIntent> ; <http://www.w3.org/ns/shacl#property> ?acceptedBy, ?acceptsIntent . ?acceptedBy <http://www.w3.org/ns/shacl#path> <https://spectacular-voyage.github.io/stagecraft/ontology/acceptedBy> ; <http://www.w3.org/ns/shacl#minCount> \"1\"^^<http://www.w3.org/2001/XMLSchema#integer> ; <http://www.w3.org/ns/shacl#maxCount> \"1\"^^<http://www.w3.org/2001/XMLSchema#integer> . ?acceptsIntent <http://www.w3.org/ns/shacl#path> <https://spectacular-voyage.github.io/stagecraft/ontology/acceptsIntent> ; <http://www.w3.org/ns/shacl#minCount> \"1\"^^<http://www.w3.org/2001/XMLSchema#integer> ; <http://www.w3.org/ns/shacl#maxCount> \"1\"^^<http://www.w3.org/2001/XMLSchema#integer> . }",
+              "expectedBoolean": true
+            },
+            {
+              "id": "#ask-movement-consequence-shape",
+              "type": "SparqlAskAssertion",
+              "query": "ASK { <https://spectacular-voyage.github.io/stagecraft/shacl/MovementConsequenceShape> a <http://www.w3.org/ns/shacl#NodeShape> ; <http://www.w3.org/ns/shacl#targetClass> <https://spectacular-voyage.github.io/stagecraft/ontology/MovementConsequence> ; <http://www.w3.org/ns/shacl#property> ?causedBy, ?intent, ?actionType, ?noOutcome . ?causedBy <http://www.w3.org/ns/shacl#path> <https://spectacular-voyage.github.io/stagecraft/ontology/causedByAcceptedIntent> ; <http://www.w3.org/ns/shacl#minCount> \"1\"^^<http://www.w3.org/2001/XMLSchema#integer> ; <http://www.w3.org/ns/shacl#maxCount> \"1\"^^<http://www.w3.org/2001/XMLSchema#integer> . ?intent <http://www.w3.org/ns/shacl#path> <https://spectacular-voyage.github.io/stagecraft/ontology/consequenceOfIntent> ; <http://www.w3.org/ns/shacl#minCount> \"1\"^^<http://www.w3.org/2001/XMLSchema#integer> ; <http://www.w3.org/ns/shacl#maxCount> \"1\"^^<http://www.w3.org/2001/XMLSchema#integer> . ?actionType <http://www.w3.org/ns/shacl#path> <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/actionType> ; <http://www.w3.org/ns/shacl#hasValue> <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/Move> . ?noOutcome <http://www.w3.org/ns/shacl#path> <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/consequenceOfOutcome> ; <http://www.w3.org/ns/shacl#maxCount> \"0\"^^<http://www.w3.org/2001/XMLSchema#integer> . }",
+              "expectedBoolean": true
+            }
+          ]
+        },
+        {
+          "id": "#movement-consequence-records-rdf",
+          "type": "RdfExpectation",
+          "targetsFileExpectation": "#movement-consequence-records",
+          "hasAskAssertion": [
+            {
+              "id": "#ask-direct-acceptance-consequence-chain",
+              "type": "SparqlAskAssertion",
+              "query": "ASK { <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/intent-accepted/session-authority/elara-leave-inn-001> a <https://spectacular-voyage.github.io/stagecraft/ontology/IntentAccepted> ; <https://spectacular-voyage.github.io/stagecraft/ontology/acceptedBy> <https://spectacular-voyage.github.io/test-inn-ambush/gm/alex> ; <https://spectacular-voyage.github.io/stagecraft/ontology/acceptsIntent> <https://spectacular-voyage.github.io/test-inn-ambush/intent/session-authority/elara-leave-inn-001> . <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/movement-consequence/session-authority/elara-leave-inn-001> a <https://spectacular-voyage.github.io/stagecraft/ontology/MovementConsequence> ; <https://spectacular-voyage.github.io/stagecraft/ontology/causedByAcceptedIntent> <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/intent-accepted/session-authority/elara-leave-inn-001> ; <https://spectacular-voyage.github.io/stagecraft/ontology/consequenceOfIntent> <https://spectacular-voyage.github.io/test-inn-ambush/intent/session-authority/elara-leave-inn-001> ; <https://spectacular-voyage.github.io/stagecraft/ontology/movesActant> <https://spectacular-voyage.github.io/test-inn-ambush/actant/elara> ; <https://spectacular-voyage.github.io/stagecraft/ontology/fromPlace> <https://spectacular-voyage.github.io/test-inn-ambush/place/common-room> ; <https://spectacular-voyage.github.io/stagecraft/ontology/toPlace> <https://spectacular-voyage.github.io/test-inn-ambush/place/old-road> ; <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/actionType> <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/Move> . FILTER NOT EXISTS { ?warrant a <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/D20TestWarrant> ; <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/adjudicatesIntent> <https://spectacular-voyage.github.io/test-inn-ambush/intent/session-authority/elara-leave-inn-001> . } FILTER NOT EXISTS { <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/movement-consequence/session-authority/elara-leave-inn-001> <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/consequenceOfOutcome> ?outcome . } }",
+              "expectedBoolean": true
+            },
+            {
+              "id": "#ask-location-relator-close-open",
+              "type": "SparqlAskAssertion",
+              "query": "ASK { <https://spectacular-voyage.github.io/test-inn-ambush/relator/location/elara/common-room-current> <https://spectacular-voyage.github.io/stagecraft/ontology/acceptedUntil> \"2026-07-09T17:15:00Z\"^^<http://www.w3.org/2001/XMLSchema#dateTime> . <https://spectacular-voyage.github.io/test-inn-ambush/relator/location/session-authority/elara-leave-inn-001> a <https://spectacular-voyage.github.io/stagecraft/ontology/LocatedInRelator> ; <https://spectacular-voyage.github.io/stagecraft/ontology/subject> <https://spectacular-voyage.github.io/test-inn-ambush/actant/elara> ; <https://spectacular-voyage.github.io/stagecraft/ontology/predicate> <https://spectacular-voyage.github.io/stagecraft/ontology/locatedIn> ; <https://spectacular-voyage.github.io/stagecraft/ontology/object> <https://spectacular-voyage.github.io/test-inn-ambush/place/old-road> ; <https://spectacular-voyage.github.io/stagecraft/ontology/basedOnAuthorityRecord> <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/movement-consequence/session-authority/elara-leave-inn-001> . FILTER NOT EXISTS { <https://spectacular-voyage.github.io/test-inn-ambush/relator/location/session-authority/elara-leave-inn-001> <https://spectacular-voyage.github.io/stagecraft/ontology/acceptedUntil> ?closed . } }",
+              "expectedBoolean": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

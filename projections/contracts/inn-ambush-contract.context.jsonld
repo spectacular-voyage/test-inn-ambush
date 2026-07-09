@@ -597,14 +597,35 @@
       "@type": "xsd:boolean"
     },
     "declaration": "dcterms:description",
+    "acceptance": "dcterms:description",
     "intentForActant": {
       "@id": "sc:intentForActant",
+      "@type": "@id"
+    },
+    "acceptedBy": {
+      "@id": "sc:acceptedBy",
+      "@type": "@id"
+    },
+    "acceptsIntent": {
+      "@id": "sc:acceptsIntent",
+      "@type": "@id"
+    },
+    "causedByAcceptedIntent": {
+      "@id": "sc:causedByAcceptedIntent",
+      "@type": "@id"
+    },
+    "consequenceOfIntent": {
+      "@id": "sc:consequenceOfIntent",
       "@type": "@id"
     },
     "purpose": "dcterms:description",
     "reason": "dcterms:description",
     "adjudicatesIntent": {
       "@id": "dyn:adjudicatesIntent",
+      "@type": "@id"
+    },
+    "actionType": {
+      "@id": "dyn:actionType",
       "@type": "@id"
     },
     "transferActKind": {
@@ -779,6 +800,12 @@
       "@type": "@id"
     },
     "committedEvent": {
+      "@type": "@id"
+    },
+    "committedBy": {
+      "@type": "@id"
+    },
+    "hasCommitCertificate": {
       "@type": "@id"
     },
     "commitCertificate": {
