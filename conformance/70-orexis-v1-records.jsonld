@@ -1,0 +1,147 @@
+{
+  "@context": {
+    "@vocab": "https://spectacular-voyage.github.io/accord/ontology/",
+    "dcterms": "http://purl.org/dc/terms/",
+    "id": "@id",
+    "type": "@type",
+    "changeType": {
+      "@type": "@vocab"
+    },
+    "compareMode": {
+      "@type": "@vocab"
+    },
+    "targetsFileExpectation": {
+      "@type": "@id"
+    },
+    "locatorKind": {
+      "@type": "@vocab"
+    }
+  },
+  "type": "Manifest",
+  "id": "urn:accord:stagecraft:test-inn-ambush:70-orexis-v1-records",
+  "dcterms:title": "Inn Ambush 70 Orexis v1 records",
+  "hasCase": [
+    {
+      "type": "TransitionCase",
+      "id": "#orexis-v1-records",
+      "fixtureRepo": "github.com/spectacular-voyage/test-inn-ambush",
+      "operationId": "stagecraft.fixture.addOrexisV1Records",
+      "fromRef": "37b4c71965f5ac99a8f3bce803a416998cd23928",
+      "toRef": "b.18-orexis-v1-records",
+      "fromState": {
+        "type": "StateLocator",
+        "locatorKind": "gitRefState",
+        "ref": "37b4c71965f5ac99a8f3bce803a416998cd23928"
+      },
+      "toState": {
+        "type": "StateLocator",
+        "locatorKind": "gitRefState",
+        "ref": "b.18-orexis-v1-records"
+      },
+      "hasFileExpectation": [
+        {
+          "id": "#projection-context",
+          "type": "FileExpectation",
+          "path": "projections/contracts/inn-ambush-contract.context.jsonld",
+          "changeType": "updated",
+          "compareMode": "json"
+        },
+        {
+          "id": "#projection-shapes",
+          "type": "FileExpectation",
+          "path": "projections/contracts/inn-ambush-contract.shapes.ttl",
+          "changeType": "updated",
+          "compareMode": "rdfCanonical"
+        },
+        {
+          "id": "#authority-journal",
+          "type": "FileExpectation",
+          "path": "authority/journals/plan-b/plan-b.ttl",
+          "changeType": "updated",
+          "compareMode": "rdfCanonical"
+        },
+        {
+          "id": "#world-state",
+          "type": "FileExpectation",
+          "path": "world/states/inn-ambush-plan-b-state/inn-ambush-plan-b-state.ttl",
+          "changeType": "updated",
+          "compareMode": "rdfCanonical"
+        },
+        {
+          "id": "#suggestion-desire-record-json",
+          "type": "FileExpectation",
+          "path": "sessions/desire-records/elara-suggested-old-road/elara-suggested-old-road.json",
+          "changeType": "added",
+          "compareMode": "text"
+        },
+        {
+          "id": "#talla-standing-desire-record-json",
+          "type": "FileExpectation",
+          "path": "sessions/desire-records/talla-honest-trade/talla-honest-trade.json",
+          "changeType": "added",
+          "compareMode": "text"
+        },
+        {
+          "id": "#suggestion-expiry-belief-record-json",
+          "type": "FileExpectation",
+          "path": "sessions/belief-records/elara-realizes-suggested/elara-realizes-suggested.json",
+          "changeType": "added",
+          "compareMode": "text"
+        }
+      ],
+      "hasRdfExpectation": [
+        {
+          "id": "#orexis-shapes-rdf",
+          "type": "RdfExpectation",
+          "targetsFileExpectation": "#projection-shapes",
+          "hasAskAssertion": [
+            {
+              "id": "#ask-desire-record-shape",
+              "type": "SparqlAskAssertion",
+              "query": "ASK { <https://spectacular-voyage.github.io/stagecraft/shacl/DesireRecordShape> a <http://www.w3.org/ns/shacl#NodeShape> ; <http://www.w3.org/ns/shacl#targetClass> <https://spectacular-voyage.github.io/stagecraft/ontology/orexis/DesireRecord> ; <http://www.w3.org/ns/shacl#node> <https://spectacular-voyage.github.io/stagecraft/shacl/SharedConativeRecordShape> ; <http://www.w3.org/ns/shacl#property> ?targetShape, ?teleology, ?servesGoal . ?targetShape <http://www.w3.org/ns/shacl#path> <https://spectacular-voyage.github.io/stagecraft/ontology/orexis/targetShape> ; <http://www.w3.org/ns/shacl#minCount> \"1\"^^<http://www.w3.org/2001/XMLSchema#integer> ; <http://www.w3.org/ns/shacl#maxCount> \"1\"^^<http://www.w3.org/2001/XMLSchema#integer> . ?teleology <http://www.w3.org/ns/shacl#path> <https://spectacular-voyage.github.io/stagecraft/ontology/orexis/teleology> ; <http://www.w3.org/ns/shacl#minCount> \"1\"^^<http://www.w3.org/2001/XMLSchema#integer> ; <http://www.w3.org/ns/shacl#maxCount> \"1\"^^<http://www.w3.org/2001/XMLSchema#integer> . ?servesGoal <http://www.w3.org/ns/shacl#path> <https://spectacular-voyage.github.io/stagecraft/ontology/orexis/servesGoal> ; <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#IRI> ; <http://www.w3.org/ns/shacl#maxCount> \"1\"^^<http://www.w3.org/2001/XMLSchema#integer> . }",
+              "expectedBoolean": true
+            },
+            {
+              "id": "#ask-shared-conative-record-shape",
+              "type": "SparqlAskAssertion",
+              "query": "ASK { <https://spectacular-voyage.github.io/stagecraft/shacl/SharedConativeRecordShape> a <http://www.w3.org/ns/shacl#NodeShape> ; <http://www.w3.org/ns/shacl#property> ?owner, ?content, ?beneficiary, ?causedBy, ?activeFrom, ?intensity . ?owner <http://www.w3.org/ns/shacl#path> <https://spectacular-voyage.github.io/stagecraft/ontology/orexis/owner> ; <http://www.w3.org/ns/shacl#minCount> \"1\"^^<http://www.w3.org/2001/XMLSchema#integer> ; <http://www.w3.org/ns/shacl#maxCount> \"1\"^^<http://www.w3.org/2001/XMLSchema#integer> . ?content <http://www.w3.org/ns/shacl#path> <https://spectacular-voyage.github.io/stagecraft/ontology/orexis/content> ; <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#string> . ?beneficiary <http://www.w3.org/ns/shacl#path> <https://spectacular-voyage.github.io/stagecraft/ontology/orexis/beneficiary> ; <http://www.w3.org/ns/shacl#minCount> \"1\"^^<http://www.w3.org/2001/XMLSchema#integer> . ?causedBy <http://www.w3.org/ns/shacl#path> <https://spectacular-voyage.github.io/stagecraft/ontology/orexis/causedBy> ; <http://www.w3.org/ns/shacl#minCount> \"1\"^^<http://www.w3.org/2001/XMLSchema#integer> . ?activeFrom <http://www.w3.org/ns/shacl#path> <https://spectacular-voyage.github.io/stagecraft/ontology/orexis/activeFrom> ; <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#dateTime> . ?intensity <http://www.w3.org/ns/shacl#path> <https://spectacular-voyage.github.io/stagecraft/ontology/orexis/intensity> ; <http://www.w3.org/ns/shacl#minInclusive> 0 ; <http://www.w3.org/ns/shacl#maxInclusive> 1 . }",
+              "expectedBoolean": true
+            }
+          ]
+        },
+        {
+          "id": "#authority-journal-rdf",
+          "type": "RdfExpectation",
+          "targetsFileExpectation": "#authority-journal",
+          "hasAskAssertion": [
+            {
+              "id": "#ask-suggestion-implant-and-expiry",
+              "type": "SparqlAskAssertion",
+              "query": "ASK { <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/spell/suggestion-old-road-001> a <https://spectacular-voyage.github.io/stagecraft/ontology/orexis/ConativeImplantAct> ; <http://purl.org/dc/terms/created> \"2026-07-07T19:55:00Z\"^^<http://www.w3.org/2001/XMLSchema#dateTime> ; <https://spectacular-voyage.github.io/stagecraft/ontology/committedBy> <https://spectacular-voyage.github.io/test-inn-ambush/gm/alex> ; <http://purl.org/dc/terms/references> <https://spectacular-voyage.github.io/test-inn-ambush/desire-record/elara/suggestion-old-road> . <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/spell-expiry/suggestion-old-road-001> a <https://spectacular-voyage.github.io/stagecraft/ontology/orexis/ConativeRecordRemovalAct> ; <http://purl.org/dc/terms/created> \"2026-07-07T20:05:00Z\"^^<http://www.w3.org/2001/XMLSchema#dateTime> ; <http://purl.org/dc/terms/references> <https://spectacular-voyage.github.io/test-inn-ambush/desire-record/elara/suggestion-old-road>, <https://spectacular-voyage.github.io/test-inn-ambush/belief-record/elara/realizes-suggested> . }",
+              "expectedBoolean": true
+            },
+            {
+              "id": "#ask-contrary-intent-and-adopted-intent",
+              "type": "SparqlAskAssertion",
+              "query": "ASK { <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/declared-intent/elara-plan-b-001> <https://spectacular-voyage.github.io/stagecraft/ontology/orexis/contraryTo> <https://spectacular-voyage.github.io/test-inn-ambush/desire-record/elara/suggestion-old-road> . <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/intent-declaration/talla-honest-trade-001> a <https://spectacular-voyage.github.io/stagecraft/ontology/IntentDeclaration> ; <https://spectacular-voyage.github.io/stagecraft/ontology/declaredBy> <https://spectacular-voyage.github.io/test-inn-ambush/participant/agent/talla> ; <https://spectacular-voyage.github.io/stagecraft/ontology/intentForActant> <https://spectacular-voyage.github.io/test-inn-ambush/npc/talla-mosswick> . }",
+              "expectedBoolean": true
+            }
+          ]
+        },
+        {
+          "id": "#world-state-rdf",
+          "type": "RdfExpectation",
+          "targetsFileExpectation": "#world-state",
+          "hasAskAssertion": [
+            {
+              "id": "#ask-talla-value-declaration",
+              "type": "SparqlAskAssertion",
+              "query": "ASK { <https://spectacular-voyage.github.io/test-inn-ambush/npc/talla-mosswick> a <https://spectacular-voyage.github.io/stagecraft/ontology/Character> ; <http://www.w3.org/2000/01/rdf-schema#label> \"Talla Mosswick\" . <https://spectacular-voyage.github.io/test-inn-ambush/value-declaration/talla/honest-trader> a <https://spectacular-voyage.github.io/stagecraft/ontology/roleosum/ValueDeclaration> ; <https://spectacular-voyage.github.io/stagecraft/ontology/roleosum/declarationSubject> <https://spectacular-voyage.github.io/test-inn-ambush/npc/talla-mosswick> ; <https://spectacular-voyage.github.io/stagecraft/ontology/roleosum/declarationTerm> <https://spectacular-voyage.github.io/stagecraft/ontology/roleosum/idealValue> ; <https://spectacular-voyage.github.io/stagecraft/ontology/roleosum/declarationProse> \"A trusted trader keeps honest prices and useful wares.\" ; <https://spectacular-voyage.github.io/stagecraft/ontology/roleosum/sinceWhen> \"2026-07-07T19:26:44Z\"^^<http://www.w3.org/2001/XMLSchema#dateTime> . }",
+              "expectedBoolean": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

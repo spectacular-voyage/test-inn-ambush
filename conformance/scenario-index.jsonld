@@ -1380,6 +1380,27 @@
           }
         }
       ]
+    },
+    {
+      "id": "#70-orexis-v1-records",
+      "type": "ScenarioStep",
+      "manifestPath": "70-orexis-v1-records.jsonld",
+      "hasLaneBinding": [
+        {
+          "type": "LaneStateBinding",
+          "lane": "#fixture-b-lane",
+          "fromLaneState": {
+            "type": "StateLocator",
+            "locatorKind": "gitRefState",
+            "ref": "37b4c71965f5ac99a8f3bce803a416998cd23928"
+          },
+          "toLaneState": {
+            "type": "StateLocator",
+            "locatorKind": "gitRefState",
+            "ref": "b.18-orexis-v1-records"
+          }
+        }
+      ]
     }
   ]
 }
