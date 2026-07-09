@@ -3009,3 +3009,34 @@ sc-sh:MovementConsequenceShape
     sh:maxCount 0 ;
     sh:message "A no-roll movement consequence must not masquerade as a D20 outcome consequence." ;
   ] .
+
+sc-sh:OpeningNarrationShape
+  a sh:NodeShape ;
+  sh:targetClass sc:OpeningNarration ;
+  sh:property [
+    sh:path sc:content ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+    sh:datatype xsd:string ;
+    sh:minLength 1 ;
+  ] ;
+  sh:property [
+    sh:path sc:forActant ;
+    sh:maxCount 1 ;
+    sh:nodeKind sh:IRI ;
+  ] ;
+  sh:property [
+    sh:path sc:narrationOrder ;
+    sh:maxCount 1 ;
+    sh:datatype xsd:integer ;
+  ] ;
+  sh:property [
+    sh:path sc:deliveredTo ;
+    sh:maxCount 0 ;
+    sh:message "OpeningNarration is authored world data; delivery is perception-scoped at scene opening, never authored." ;
+  ] ;
+  sh:property [
+    sh:path sc:spokenByActant ;
+    sh:maxCount 0 ;
+    sh:message "OpeningNarration is authored world data, not a committed speech event; the narrator speaks it only through the scene-opening act." ;
+  ] .
