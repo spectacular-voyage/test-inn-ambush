@@ -1,0 +1,67 @@
+{
+  "@context": {
+    "@vocab": "https://spectacular-voyage.github.io/accord/ontology/",
+    "dcterms": "http://purl.org/dc/terms/",
+    "id": "@id",
+    "type": "@type",
+    "changeType": {
+      "@type": "@vocab"
+    },
+    "compareMode": {
+      "@type": "@vocab"
+    },
+    "targetsFileExpectation": {
+      "@type": "@id"
+    },
+    "locatorKind": {
+      "@type": "@vocab"
+    }
+  },
+  "type": "Manifest",
+  "id": "urn:accord:stagecraft:test-inn-ambush:69-zone-graph-unknown-nodes",
+  "dcterms:title": "Inn Ambush 69 zone graph unknown nodes",
+  "hasCase": [
+    {
+      "type": "TransitionCase",
+      "id": "#zone-graph-unknown-nodes",
+      "fixtureRepo": "github.com/spectacular-voyage/test-inn-ambush",
+      "operationId": "stagecraft.fixture.addZoneGraphUnknownNodes",
+      "fromRef": "21525990fcec99a490471010b0fedcce9f6d2950",
+      "toRef": "b.17-zone-graph-unknown-nodes",
+      "fromState": {
+        "type": "StateLocator",
+        "locatorKind": "gitRefState",
+        "ref": "21525990fcec99a490471010b0fedcce9f6d2950"
+      },
+      "toState": {
+        "type": "StateLocator",
+        "locatorKind": "gitRefState",
+        "ref": "b.17-zone-graph-unknown-nodes"
+      },
+      "hasFileExpectation": [
+        {
+          "id": "#world-state",
+          "type": "FileExpectation",
+          "path": "world/states/inn-ambush-plan-b-state/inn-ambush-plan-b-state.ttl",
+          "changeType": "updated",
+          "compareMode": "rdfCanonical"
+        }
+      ],
+      "hasRdfExpectation": [
+        {
+          "id": "#world-state-rdf",
+          "type": "RdfExpectation",
+          "targetsFileExpectation": "#world-state",
+          "hasAskAssertion": [
+            {
+              "id": "#ask-front-door-passage-affordance",
+              "type": "SparqlAskAssertion",
+              "query": "ASK { <https://spectacular-voyage.github.io/test-inn-ambush/passage/front-door-outside> a <https://spectacular-voyage.github.io/stagecraft/ontology/PassageAffordance> ; <http://www.w3.org/2000/01/rdf-schema#label> \"front door passage\" ; <https://spectacular-voyage.github.io/stagecraft/ontology/fromPlace> <https://spectacular-voyage.github.io/test-inn-ambush/place/front-door-threshold> ; <https://spectacular-voyage.github.io/stagecraft/ontology/toPlace> <https://spectacular-voyage.github.io/test-inn-ambush/place/old-road> . <https://spectacular-voyage.github.io/test-inn-ambush/relator/visibility/passage-front-door-outside/alice-current> a <https://spectacular-voyage.github.io/stagecraft/ontology/TemporalRelator> ; <https://spectacular-voyage.github.io/stagecraft/ontology/subject> <https://spectacular-voyage.github.io/test-inn-ambush/passage/front-door-outside> ; <https://spectacular-voyage.github.io/stagecraft/ontology/predicate> <https://spectacular-voyage.github.io/stagecraft/ontology/visibleTo> ; <https://spectacular-voyage.github.io/stagecraft/ontology/object> <https://spectacular-voyage.github.io/test-inn-ambush/participant/alice> ; <https://spectacular-voyage.github.io/stagecraft/ontology/acceptedFrom> \"2026-06-29T13:35:00Z\"^^<http://www.w3.org/2001/XMLSchema#dateTime> . }",
+              "expectedBoolean": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

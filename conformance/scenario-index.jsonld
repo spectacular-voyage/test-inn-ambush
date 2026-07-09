@@ -1359,6 +1359,27 @@
           }
         }
       ]
+    },
+    {
+      "id": "#69-zone-graph-unknown-nodes",
+      "type": "ScenarioStep",
+      "manifestPath": "69-zone-graph-unknown-nodes.jsonld",
+      "hasLaneBinding": [
+        {
+          "type": "LaneStateBinding",
+          "lane": "#fixture-b-lane",
+          "fromLaneState": {
+            "type": "StateLocator",
+            "locatorKind": "gitRefState",
+            "ref": "21525990fcec99a490471010b0fedcce9f6d2950"
+          },
+          "toLaneState": {
+            "type": "StateLocator",
+            "locatorKind": "gitRefState",
+            "ref": "b.17-zone-graph-unknown-nodes"
+          }
+        }
+      ]
     }
   ]
 }
