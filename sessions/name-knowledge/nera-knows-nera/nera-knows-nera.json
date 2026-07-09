@@ -1,0 +1,13 @@
+{
+  "@context": "https://spectacular-voyage.github.io/test-inn-ambush/projections/contracts/inn-ambush-contract.context.jsonld",
+  "@type": "NameKnowledgeRecord",
+  "type": "stagecraft.name-knowledge-record.v1",
+  "id": "name-knowledge-nera-knows-nera-001",
+  "nameKnower": "https://spectacular-voyage.github.io/test-inn-ambush/actant/nera",
+  "nameSubject": "https://spectacular-voyage.github.io/test-inn-ambush/actant/nera",
+  "nameKnowledgeBasis": "https://spectacular-voyage.github.io/stagecraft/ontology/perceptio/seedMemory",
+  "basisDetail": [
+    "https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/world-seeded/inn-ambush-001"
+  ],
+  "atInstant": "2026-06-29T13:35:00Z"
+}

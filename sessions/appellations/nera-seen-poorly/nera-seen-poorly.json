@@ -1,0 +1,9 @@
+{
+  "@context": "https://spectacular-voyage.github.io/test-inn-ambush/projections/contracts/inn-ambush-contract.context.jsonld",
+  "@type": "AuthoredAppellation",
+  "type": "stagecraft.authored-appellation.v1",
+  "id": "authored-appellation-nera-seen-poorly-001",
+  "appellationFor": "https://spectacular-voyage.github.io/test-inn-ambush/actant/nera",
+  "contactModality": "https://spectacular-voyage.github.io/stagecraft/ontology/perceptio/seenPoorly",
+  "appellationText": "a shadowed figure"
+}

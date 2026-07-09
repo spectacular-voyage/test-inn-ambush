@@ -75,6 +75,29 @@
       "@id": "perceptio:atInstant",
       "@type": "xsd:dateTime"
     },
+    "AuthoredAppellation": "perceptio:AuthoredAppellation",
+    "NameKnowledgeRecord": "perceptio:NameKnowledgeRecord",
+    "appellationFor": {
+      "@id": "perceptio:appellationFor",
+      "@type": "@id"
+    },
+    "contactModality": {
+      "@id": "perceptio:contactModality",
+      "@type": "@id"
+    },
+    "appellationText": "perceptio:appellationText",
+    "nameKnower": {
+      "@id": "perceptio:nameKnower",
+      "@type": "@id"
+    },
+    "nameSubject": {
+      "@id": "perceptio:nameSubject",
+      "@type": "@id"
+    },
+    "nameKnowledgeBasis": {
+      "@id": "perceptio:nameKnowledgeBasis",
+      "@type": "@id"
+    },
     "spokenByActant": {
       "@type": "@id"
     },

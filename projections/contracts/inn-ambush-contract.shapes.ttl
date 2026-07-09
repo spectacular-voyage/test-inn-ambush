@@ -2064,6 +2064,94 @@ sc-sh:AppliedPerspectiveShape
     sh:maxCount 1 ;
   ] .
 
+sc-sh:AuthoredAppellationShape
+  a sh:NodeShape ;
+  sh:targetClass perceptio:AuthoredAppellation ;
+  sh:property [
+    sh:path sc:envelopeType ;
+    sh:hasValue "stagecraft.authored-appellation.v1" ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path sc:envelopeId ;
+    sh:datatype xsd:string ;
+    sh:minLength 1 ;
+    sh:pattern "\\S" ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path perceptio:appellationFor ;
+    sh:nodeKind sh:IRI ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path perceptio:contactModality ;
+    sh:in (
+      perceptio:seenClearly
+      perceptio:seenPoorly
+      perceptio:heardOnly
+    ) ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path perceptio:appellationText ;
+    sh:datatype xsd:string ;
+    sh:minLength 1 ;
+    sh:pattern "\\S" ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] .
+
+sc-sh:NameKnowledgeRecordShape
+  a sh:NodeShape ;
+  sh:targetClass perceptio:NameKnowledgeRecord ;
+  sh:property [
+    sh:path sc:envelopeType ;
+    sh:hasValue "stagecraft.name-knowledge-record.v1" ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path sc:envelopeId ;
+    sh:datatype xsd:string ;
+    sh:minLength 1 ;
+    sh:pattern "\\S" ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path perceptio:nameKnower ;
+    sh:nodeKind sh:IRI ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path perceptio:nameSubject ;
+    sh:nodeKind sh:IRI ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path perceptio:nameKnowledgeBasis ;
+    sh:nodeKind sh:IRI ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path perceptio:basisDetail ;
+    sh:nodeKind sh:IRI ;
+  ] ;
+  sh:property [
+    sh:path perceptio:atInstant ;
+    sh:datatype xsd:dateTime ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] .
+
 sc-sh:ResourcePointersShape
   a sh:NodeShape ;
   sh:property [
