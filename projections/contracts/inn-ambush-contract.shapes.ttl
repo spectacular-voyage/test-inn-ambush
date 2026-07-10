@@ -51,6 +51,12 @@ sc-sh:ProjectionNotificationShape
     sh:maxCount 1 ;
   ] ;
   sh:property [
+    sh:path sc:actKind ;
+    sh:nodeKind sh:IRI ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
     sh:path sc:authorityRecord ;
     sh:nodeKind sh:IRI ;
     sh:maxCount 1 ;
@@ -68,6 +74,12 @@ sc-sh:ProjectionNotificationShape
   ] ;
   sh:or (
     [
+      sh:not [
+        sh:property [
+          sh:path sc:actKind ;
+          sh:hasValue sc:SceneOpened ;
+        ] ;
+      ] ;
       sh:property [
         sh:path sc:authorityRecord ;
         sh:minCount 1 ;
@@ -79,6 +91,10 @@ sc-sh:ProjectionNotificationShape
     ]
     [
       sh:property [
+        sh:path sc:actKind ;
+        sh:hasValue sc:SceneOpened ;
+      ] ;
+      sh:property [
         sh:path sc:authorityRecord ;
         sh:maxCount 0 ;
       ] ;
@@ -88,7 +104,7 @@ sc-sh:ProjectionNotificationShape
       ] ;
     ]
   ) ;
-  sh:message "ProjectionNotification evidence pointers must be both present or both absent." ;
+  sh:message "ProjectionNotification evidence pointers must be present except for SceneOpened, which must omit both." ;
   sh:property [
     sh:path sc:projectionState ;
     sh:nodeKind sh:IRI ;

@@ -837,6 +837,10 @@
     "authorityRecord": {
       "@type": "@id"
     },
+    "actKind": {
+      "@id": "sc:actKind",
+      "@type": "@id"
+    },
     "committedEvent": {
       "@type": "@id"
     },
