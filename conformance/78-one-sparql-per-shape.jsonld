@@ -1,0 +1,79 @@
+{
+  "@context": {
+    "@vocab": "https://spectacular-voyage.github.io/accord/ontology/",
+    "dcterms": "http://purl.org/dc/terms/",
+    "id": "@id",
+    "type": "@type",
+    "changeType": {
+      "@type": "@vocab"
+    },
+    "compareMode": {
+      "@type": "@vocab"
+    },
+    "targetsFileExpectation": {
+      "@type": "@id"
+    },
+    "locatorKind": {
+      "@type": "@vocab"
+    }
+  },
+  "type": "Manifest",
+  "id": "urn:accord:stagecraft:test-inn-ambush:78-one-sparql-per-shape",
+  "dcterms:title": "Inn Ambush 78 one sparql per shape",
+  "hasCase": [
+    {
+      "type": "TransitionCase",
+      "id": "#one-sparql-per-shape",
+      "fixtureRepo": "github.com/spectacular-voyage/test-inn-ambush",
+      "operationId": "stagecraft.fixture.splitTransferActSparqlConstraints",
+      "fromRef": "origin/b.25-projection-notification-act-kind-required",
+      "toRef": "origin/b.26-one-sparql-per-shape",
+      "fromState": {
+        "type": "StateLocator",
+        "locatorKind": "gitRefState",
+        "ref": "origin/b.25-projection-notification-act-kind-required"
+      },
+      "toState": {
+        "type": "StateLocator",
+        "locatorKind": "gitRefState",
+        "ref": "origin/b.26-one-sparql-per-shape"
+      },
+      "hasFileExpectation": [
+        {
+          "id": "#contract-shapes",
+          "type": "FileExpectation",
+          "path": "projections/contracts/inn-ambush-contract.shapes.ttl",
+          "changeType": "updated",
+          "compareMode": "rdfCanonical"
+        }
+      ],
+      "hasRdfExpectation": [
+        {
+          "id": "#contract-shapes-rdf",
+          "type": "RdfExpectation",
+          "targetsFileExpectation": "#contract-shapes",
+          "hasAskAssertion": [
+            {
+              "id": "#ask-nonfungible-guard-on-own-shape",
+              "type": "SparqlAskAssertion",
+              "query": "ASK { <https://spectacular-voyage.github.io/stagecraft/shacl/TransferActNonFungibleQuantityShape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#NodeShape> ; <http://www.w3.org/ns/shacl#targetClass> <https://spectacular-voyage.github.io/stagecraft/ontology/possessio/TransferAct> ; <http://www.w3.org/ns/shacl#sparql> ?constraint . ?constraint <http://www.w3.org/ns/shacl#message> \"Non-fungible TransferAct must not carry possessio:transferQuantity.\" ; <http://www.w3.org/ns/shacl#select> ?select . }",
+              "expectedBoolean": true
+            },
+            {
+              "id": "#ask-fungible-guard-stays-on-transfer-act-shape",
+              "type": "SparqlAskAssertion",
+              "query": "ASK { <https://spectacular-voyage.github.io/stagecraft/shacl/TransferActShape> <http://www.w3.org/ns/shacl#targetClass> <https://spectacular-voyage.github.io/stagecraft/ontology/possessio/TransferAct> ; <http://www.w3.org/ns/shacl#sparql> ?constraint . ?constraint <http://www.w3.org/ns/shacl#message> \"Fungible TransferAct must record exactly one possessio:transferQuantity.\" ; <http://www.w3.org/ns/shacl#select> ?select . }",
+              "expectedBoolean": true
+            },
+            {
+              "id": "#ask-no-shape-carries-two-sparql-constraints",
+              "type": "SparqlAskAssertion",
+              "query": "ASK { ?shape <http://www.w3.org/ns/shacl#sparql> ?first, ?second . FILTER(?first != ?second) }",
+              "expectedBoolean": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

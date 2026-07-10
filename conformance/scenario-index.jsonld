@@ -1548,6 +1548,27 @@
           }
         }
       ]
+    },
+    {
+      "id": "#78-one-sparql-per-shape",
+      "type": "ScenarioStep",
+      "manifestPath": "78-one-sparql-per-shape.jsonld",
+      "hasLaneBinding": [
+        {
+          "type": "LaneStateBinding",
+          "lane": "#fixture-b-lane",
+          "fromLaneState": {
+            "type": "StateLocator",
+            "locatorKind": "gitRefState",
+            "ref": "origin/b.25-projection-notification-act-kind-required"
+          },
+          "toLaneState": {
+            "type": "StateLocator",
+            "locatorKind": "gitRefState",
+            "ref": "origin/b.26-one-sparql-per-shape"
+          }
+        }
+      ]
     }
   ]
 }
