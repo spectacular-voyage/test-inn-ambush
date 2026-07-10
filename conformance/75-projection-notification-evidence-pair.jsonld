@@ -26,17 +26,17 @@
       "id": "#projection-notification-evidence-pair",
       "fixtureRepo": "github.com/spectacular-voyage/test-inn-ambush",
       "operationId": "stagecraft.fixture.allowPointerlessProjectionNotification",
-      "fromRef": "b.22-opening-narration",
-      "toRef": "b.23-projection-notification-evidence-pair",
+      "fromRef": "origin/b.22-opening-narration",
+      "toRef": "origin/b.23-projection-notification-evidence-pair",
       "fromState": {
         "type": "StateLocator",
         "locatorKind": "gitRefState",
-        "ref": "b.22-opening-narration"
+        "ref": "origin/b.22-opening-narration"
       },
       "toState": {
         "type": "StateLocator",
         "locatorKind": "gitRefState",
-        "ref": "b.23-projection-notification-evidence-pair"
+        "ref": "origin/b.23-projection-notification-evidence-pair"
       },
       "hasFileExpectation": [
         {

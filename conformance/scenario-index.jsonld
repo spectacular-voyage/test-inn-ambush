@@ -1497,12 +1497,33 @@
           "fromLaneState": {
             "type": "StateLocator",
             "locatorKind": "gitRefState",
-            "ref": "b.22-opening-narration"
+            "ref": "origin/b.22-opening-narration"
           },
           "toLaneState": {
             "type": "StateLocator",
             "locatorKind": "gitRefState",
-            "ref": "b.23-projection-notification-evidence-pair"
+            "ref": "origin/b.23-projection-notification-evidence-pair"
+          }
+        }
+      ]
+    },
+    {
+      "id": "#76-projection-notification-act-kind",
+      "type": "ScenarioStep",
+      "manifestPath": "76-projection-notification-act-kind.jsonld",
+      "hasLaneBinding": [
+        {
+          "type": "LaneStateBinding",
+          "lane": "#fixture-b-lane",
+          "fromLaneState": {
+            "type": "StateLocator",
+            "locatorKind": "gitRefState",
+            "ref": "origin/b.23-projection-notification-evidence-pair"
+          },
+          "toLaneState": {
+            "type": "StateLocator",
+            "locatorKind": "gitRefState",
+            "ref": "origin/b.24-projection-notification-act-kind"
           }
         }
       ]
