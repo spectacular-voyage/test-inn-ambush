@@ -1105,7 +1105,19 @@ sc-sh:TransferActShape
         FILTER NOT EXISTS { $this possessio:transferQuantity ?quantity . }
       }
       """ ;
-  ] ;
+  ] .
+
+# One sh:sparql constraint per shape: shacl-engine 1.1.2 mis-compiles shapes that
+# carry multiple sh:sparql constraints (compileSparql reads a single sh:select
+# over the multi-pointer, compiles an empty query, and pools every sh:message
+# onto every focus node). The non-fungible guard therefore lives on its own
+# target-class-sharing NodeShape. Semantically equivalent to the previous
+# two-sh:sparql TransferActShape: SPARQL constraints evaluate per focus node,
+# and both shapes target possessio:TransferAct.
+
+sc-sh:TransferActNonFungibleQuantityShape
+  a sh:NodeShape ;
+  sh:targetClass possessio:TransferAct ;
   sh:sparql [
     sh:message "Non-fungible TransferAct must not carry possessio:transferQuantity." ;
     sh:select """
