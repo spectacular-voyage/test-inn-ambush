@@ -1,0 +1,81 @@
+{
+  "@context": {
+    "@vocab": "https://spectacular-voyage.github.io/accord/ontology/",
+    "dcterms": "http://purl.org/dc/terms/",
+    "id": "@id",
+    "type": "@type",
+    "changeType": {
+      "@type": "@vocab"
+    },
+    "compareMode": {
+      "@type": "@vocab"
+    },
+    "targetsFileExpectation": {
+      "@type": "@id"
+    },
+    "locatorKind": {
+      "@type": "@vocab"
+    }
+  },
+  "type": "Manifest",
+  "id": "urn:accord:stagecraft:test-inn-ambush:75-projection-notification-evidence-pair",
+  "dcterms:title": "Inn Ambush 75 projection notification evidence pair",
+  "hasCase": [
+    {
+      "type": "TransitionCase",
+      "id": "#projection-notification-evidence-pair",
+      "fixtureRepo": "github.com/spectacular-voyage/test-inn-ambush",
+      "operationId": "stagecraft.fixture.allowPointerlessProjectionNotification",
+      "fromRef": "b.22-opening-narration",
+      "toRef": "b.23-projection-notification-evidence-pair",
+      "fromState": {
+        "type": "StateLocator",
+        "locatorKind": "gitRefState",
+        "ref": "b.22-opening-narration"
+      },
+      "toState": {
+        "type": "StateLocator",
+        "locatorKind": "gitRefState",
+        "ref": "b.23-projection-notification-evidence-pair"
+      },
+      "hasFileExpectation": [
+        {
+          "id": "#contract-shapes",
+          "type": "FileExpectation",
+          "path": "projections/contracts/inn-ambush-contract.shapes.ttl",
+          "changeType": "updated",
+          "compareMode": "rdfCanonical"
+        },
+        {
+          "id": "#scenario-index",
+          "type": "FileExpectation",
+          "path": "conformance/scenario-index.jsonld",
+          "changeType": "updated",
+          "compareMode": "json"
+        },
+        {
+          "id": "#manifest",
+          "type": "FileExpectation",
+          "path": "conformance/75-projection-notification-evidence-pair.jsonld",
+          "changeType": "added",
+          "compareMode": "json"
+        }
+      ],
+      "hasRdfExpectation": [
+        {
+          "id": "#contract-shapes-rdf",
+          "type": "RdfExpectation",
+          "targetsFileExpectation": "#contract-shapes",
+          "hasAskAssertion": [
+            {
+              "id": "#ask-evidence-pointers-are-paired",
+              "type": "SparqlAskAssertion",
+              "query": "ASK { <https://spectacular-voyage.github.io/stagecraft/shacl/ProjectionNotificationShape> <http://www.w3.org/ns/shacl#or> ?alternatives ; <http://www.w3.org/ns/shacl#property> ?authorityCardinality, ?certificateCardinality . ?authorityCardinality <http://www.w3.org/ns/shacl#path> <https://spectacular-voyage.github.io/stagecraft/ontology/authorityRecord> ; <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#IRI> ; <http://www.w3.org/ns/shacl#maxCount> \"1\"^^<http://www.w3.org/2001/XMLSchema#integer> . ?certificateCardinality <http://www.w3.org/ns/shacl#path> <https://spectacular-voyage.github.io/stagecraft/ontology/commitCertificate> ; <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#IRI> ; <http://www.w3.org/ns/shacl#maxCount> \"1\"^^<http://www.w3.org/2001/XMLSchema#integer> . ?alternatives <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> ?presentAlternative ; <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> ?absentList . ?absentList <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> ?absentAlternative ; <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> . ?presentAlternative <http://www.w3.org/ns/shacl#property> ?presentAuthority, ?presentCertificate . ?presentAuthority <http://www.w3.org/ns/shacl#path> <https://spectacular-voyage.github.io/stagecraft/ontology/authorityRecord> ; <http://www.w3.org/ns/shacl#minCount> \"1\"^^<http://www.w3.org/2001/XMLSchema#integer> . ?presentCertificate <http://www.w3.org/ns/shacl#path> <https://spectacular-voyage.github.io/stagecraft/ontology/commitCertificate> ; <http://www.w3.org/ns/shacl#minCount> \"1\"^^<http://www.w3.org/2001/XMLSchema#integer> . ?absentAlternative <http://www.w3.org/ns/shacl#property> ?absentAuthority, ?absentCertificate . ?absentAuthority <http://www.w3.org/ns/shacl#path> <https://spectacular-voyage.github.io/stagecraft/ontology/authorityRecord> ; <http://www.w3.org/ns/shacl#maxCount> \"0\"^^<http://www.w3.org/2001/XMLSchema#integer> . ?absentCertificate <http://www.w3.org/ns/shacl#path> <https://spectacular-voyage.github.io/stagecraft/ontology/commitCertificate> ; <http://www.w3.org/ns/shacl#maxCount> \"0\"^^<http://www.w3.org/2001/XMLSchema#integer> . FILTER NOT EXISTS { ?authorityCardinality <http://www.w3.org/ns/shacl#minCount> ?authorityMinimum . } FILTER NOT EXISTS { ?certificateCardinality <http://www.w3.org/ns/shacl#minCount> ?certificateMinimum . } }",
+              "expectedBoolean": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

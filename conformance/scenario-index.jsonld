@@ -1485,6 +1485,27 @@
           }
         }
       ]
+    },
+    {
+      "id": "#75-projection-notification-evidence-pair",
+      "type": "ScenarioStep",
+      "manifestPath": "75-projection-notification-evidence-pair.jsonld",
+      "hasLaneBinding": [
+        {
+          "type": "LaneStateBinding",
+          "lane": "#fixture-b-lane",
+          "fromLaneState": {
+            "type": "StateLocator",
+            "locatorKind": "gitRefState",
+            "ref": "b.22-opening-narration"
+          },
+          "toLaneState": {
+            "type": "StateLocator",
+            "locatorKind": "gitRefState",
+            "ref": "b.23-projection-notification-evidence-pair"
+          }
+        }
+      ]
     }
   ]
 }
