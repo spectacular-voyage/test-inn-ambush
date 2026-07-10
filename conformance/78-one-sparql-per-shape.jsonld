@@ -66,9 +66,9 @@
               "expectedBoolean": true
             },
             {
-              "id": "#ask-no-shape-carries-two-sparql-constraints",
+              "id": "#ask-no-shape-carries-both-quantity-guards",
               "type": "SparqlAskAssertion",
-              "query": "ASK { ?shape <http://www.w3.org/ns/shacl#sparql> ?first, ?second . FILTER(?first != ?second) }",
+              "query": "ASK { ?shape <http://www.w3.org/ns/shacl#sparql> ?fungible . ?fungible <http://www.w3.org/ns/shacl#message> \"Fungible TransferAct must record exactly one possessio:transferQuantity.\" . ?shape <http://www.w3.org/ns/shacl#sparql> ?nonFungible . ?nonFungible <http://www.w3.org/ns/shacl#message> \"Non-fungible TransferAct must not carry possessio:transferQuantity.\" . }",
               "expectedBoolean": false
             }
           ]
