@@ -27,7 +27,7 @@
       "fixtureRepo": "github.com/spectacular-voyage/test-inn-ambush",
       "operationId": "stagecraft.fixture.addMeasuredZonesSpatialContract",
       "fromRef": "1963c2a7d876c056cdee1a4c10582d81ef08217d",
-      "toRef": "b.12-measured-zones-spatial-contract",
+      "toRef": "origin/b.12-measured-zones-spatial-contract",
       "fromState": {
         "type": "StateLocator",
         "locatorKind": "gitRefState",
@@ -36,7 +36,7 @@
       "toState": {
         "type": "StateLocator",
         "locatorKind": "gitRefState",
-        "ref": "b.12-measured-zones-spatial-contract"
+        "ref": "origin/b.12-measured-zones-spatial-contract"
       },
       "hasFileExpectation": [
         {

@@ -1014,12 +1014,12 @@
           "fromLaneState": {
             "type": "StateLocator",
             "locatorKind": "gitRefState",
-            "ref": "b.00-aligned-baseline"
+            "ref": "origin/b.00-aligned-baseline"
           },
           "toLaneState": {
             "type": "StateLocator",
             "locatorKind": "gitRefState",
-            "ref": "b.01-view-as-character-reads-contract"
+            "ref": "origin/b.01-view-as-character-reads-contract"
           }
         }
       ]
@@ -1035,12 +1035,12 @@
           "fromLaneState": {
             "type": "StateLocator",
             "locatorKind": "gitRefState",
-            "ref": "b.01-view-as-character-reads-contract"
+            "ref": "origin/b.01-view-as-character-reads-contract"
           },
           "toLaneState": {
             "type": "StateLocator",
             "locatorKind": "gitRefState",
-            "ref": "b.02-live-marker-acts-contract"
+            "ref": "origin/b.02-live-marker-acts-contract"
           }
         }
       ]
@@ -1056,12 +1056,12 @@
           "fromLaneState": {
             "type": "StateLocator",
             "locatorKind": "gitRefState",
-            "ref": "b.02-live-marker-acts-contract"
+            "ref": "origin/b.02-live-marker-acts-contract"
           },
           "toLaneState": {
             "type": "StateLocator",
             "locatorKind": "gitRefState",
-            "ref": "b.03-targetless-roll-request-contract"
+            "ref": "origin/b.03-targetless-roll-request-contract"
           }
         }
       ]
@@ -1077,12 +1077,12 @@
           "fromLaneState": {
             "type": "StateLocator",
             "locatorKind": "gitRefState",
-            "ref": "b.03-targetless-roll-request-contract"
+            "ref": "origin/b.03-targetless-roll-request-contract"
           },
           "toLaneState": {
             "type": "StateLocator",
             "locatorKind": "gitRefState",
-            "ref": "b.04-standing-d20-warrant-contract"
+            "ref": "origin/b.04-standing-d20-warrant-contract"
           }
         }
       ]
@@ -1098,12 +1098,12 @@
           "fromLaneState": {
             "type": "StateLocator",
             "locatorKind": "gitRefState",
-            "ref": "b.04-standing-d20-warrant-contract"
+            "ref": "origin/b.04-standing-d20-warrant-contract"
           },
           "toLaneState": {
             "type": "StateLocator",
             "locatorKind": "gitRefState",
-            "ref": "b.05-curtain-up"
+            "ref": "origin/b.05-curtain-up"
           }
         }
       ]
@@ -1119,12 +1119,12 @@
           "fromLaneState": {
             "type": "StateLocator",
             "locatorKind": "gitRefState",
-            "ref": "b.05-curtain-up"
+            "ref": "origin/b.05-curtain-up"
           },
           "toLaneState": {
             "type": "StateLocator",
             "locatorKind": "gitRefState",
-            "ref": "b.06-outcome-record-dedup"
+            "ref": "origin/b.06-outcome-record-dedup"
           }
         }
       ]
@@ -1140,12 +1140,12 @@
           "fromLaneState": {
             "type": "StateLocator",
             "locatorKind": "gitRefState",
-            "ref": "b.06-outcome-record-dedup"
+            "ref": "origin/b.06-outcome-record-dedup"
           },
           "toLaneState": {
             "type": "StateLocator",
             "locatorKind": "gitRefState",
-            "ref": "b.07-transfer-request-contract"
+            "ref": "origin/b.07-transfer-request-contract"
           }
         }
       ]
@@ -1161,12 +1161,12 @@
           "fromLaneState": {
             "type": "StateLocator",
             "locatorKind": "gitRefState",
-            "ref": "b.07-transfer-request-contract"
+            "ref": "origin/b.07-transfer-request-contract"
           },
           "toLaneState": {
             "type": "StateLocator",
             "locatorKind": "gitRefState",
-            "ref": "b.08-warrant-decline-control-assignment-contract"
+            "ref": "origin/b.08-warrant-decline-control-assignment-contract"
           }
         }
       ]
@@ -1182,12 +1182,12 @@
           "fromLaneState": {
             "type": "StateLocator",
             "locatorKind": "gitRefState",
-            "ref": "b.08-warrant-decline-control-assignment-contract"
+            "ref": "origin/b.08-warrant-decline-control-assignment-contract"
           },
           "toLaneState": {
             "type": "StateLocator",
             "locatorKind": "gitRefState",
-            "ref": "b.09-transfer-act-quantity-contract"
+            "ref": "origin/b.09-transfer-act-quantity-contract"
           }
         }
       ]
@@ -1203,7 +1203,7 @@
           "fromLaneState": {
             "type": "StateLocator",
             "locatorKind": "gitRefState",
-            "ref": "b.09-transfer-act-quantity-contract"
+            "ref": "origin/b.09-transfer-act-quantity-contract"
           },
           "toLaneState": {
             "type": "StateLocator",
@@ -1224,12 +1224,12 @@
           "fromLaneState": {
             "type": "StateLocator",
             "locatorKind": "gitRefState",
-            "ref": "b.09-transfer-act-quantity-contract"
+            "ref": "origin/b.09-transfer-act-quantity-contract"
           },
           "toLaneState": {
             "type": "StateLocator",
             "locatorKind": "gitRefState",
-            "ref": "b.10-perception-contract-slice"
+            "ref": "origin/b.10-perception-contract-slice"
           }
         }
       ]
@@ -1245,12 +1245,12 @@
           "fromLaneState": {
             "type": "StateLocator",
             "locatorKind": "gitRefState",
-            "ref": "b.10-perception-contract-slice"
+            "ref": "origin/b.10-perception-contract-slice"
           },
           "toLaneState": {
             "type": "StateLocator",
             "locatorKind": "gitRefState",
-            "ref": "b.11-outcome-consequence-bridge-contract"
+            "ref": "origin/b.11-outcome-consequence-bridge-contract"
           }
         }
       ]
@@ -1271,7 +1271,7 @@
           "toLaneState": {
             "type": "StateLocator",
             "locatorKind": "gitRefState",
-            "ref": "b.12-measured-zones-spatial-contract"
+            "ref": "origin/b.12-measured-zones-spatial-contract"
           }
         }
       ]
@@ -1292,7 +1292,7 @@
           "toLaneState": {
             "type": "StateLocator",
             "locatorKind": "gitRefState",
-            "ref": "b.13-table-roll-request-contract"
+            "ref": "origin/b.13-table-roll-request-contract"
           }
         }
       ]
@@ -1313,7 +1313,7 @@
           "toLaneState": {
             "type": "StateLocator",
             "locatorKind": "gitRefState",
-            "ref": "b.14-trade-quote-contract"
+            "ref": "origin/b.14-trade-quote-contract"
           }
         }
       ]
@@ -1334,7 +1334,7 @@
           "toLaneState": {
             "type": "StateLocator",
             "locatorKind": "gitRefState",
-            "ref": "b.15-weave-named-state-validate"
+            "ref": "origin/b.15-weave-named-state-validate"
           }
         }
       ]
@@ -1355,7 +1355,7 @@
           "toLaneState": {
             "type": "StateLocator",
             "locatorKind": "gitRefState",
-            "ref": "b.16-belief-records-party-name-seeds"
+            "ref": "origin/b.16-belief-records-party-name-seeds"
           }
         }
       ]
@@ -1376,7 +1376,7 @@
           "toLaneState": {
             "type": "StateLocator",
             "locatorKind": "gitRefState",
-            "ref": "b.17-zone-graph-unknown-nodes"
+            "ref": "origin/b.17-zone-graph-unknown-nodes"
           }
         }
       ]
@@ -1397,7 +1397,7 @@
           "toLaneState": {
             "type": "StateLocator",
             "locatorKind": "gitRefState",
-            "ref": "b.18-orexis-v1-records"
+            "ref": "origin/b.18-orexis-v1-records"
           }
         }
       ]
@@ -1418,7 +1418,7 @@
           "toLaneState": {
             "type": "StateLocator",
             "locatorKind": "gitRefState",
-            "ref": "b.19-intent-approval-to-consequence"
+            "ref": "origin/b.19-intent-approval-to-consequence"
           }
         }
       ]
@@ -1439,7 +1439,7 @@
           "toLaneState": {
             "type": "StateLocator",
             "locatorKind": "gitRefState",
-            "ref": "b.20-zone-graph-position-hints"
+            "ref": "origin/b.20-zone-graph-position-hints"
           }
         }
       ]
@@ -1455,12 +1455,12 @@
           "fromLaneState": {
             "type": "StateLocator",
             "locatorKind": "gitRefState",
-            "ref": "b.20-zone-graph-position-hints"
+            "ref": "origin/b.20-zone-graph-position-hints"
           },
           "toLaneState": {
             "type": "StateLocator",
             "locatorKind": "gitRefState",
-            "ref": "b.21-spatial-gate-regressions"
+            "ref": "origin/b.21-spatial-gate-regressions"
           }
         }
       ]

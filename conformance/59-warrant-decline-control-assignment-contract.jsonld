@@ -26,17 +26,17 @@
       "id": "#warrant-decline-control-assignment-contract",
       "fixtureRepo": "github.com/spectacular-voyage/test-inn-ambush",
       "operationId": "stagecraft.fixture.addWarrantDeclineControlAssignmentContract",
-      "fromRef": "b.07-transfer-request-contract",
-      "toRef": "b.08-warrant-decline-control-assignment-contract",
+      "fromRef": "origin/b.07-transfer-request-contract",
+      "toRef": "origin/b.08-warrant-decline-control-assignment-contract",
       "fromState": {
         "type": "StateLocator",
         "locatorKind": "gitRefState",
-        "ref": "b.07-transfer-request-contract"
+        "ref": "origin/b.07-transfer-request-contract"
       },
       "toState": {
         "type": "StateLocator",
         "locatorKind": "gitRefState",
-        "ref": "b.08-warrant-decline-control-assignment-contract"
+        "ref": "origin/b.08-warrant-decline-control-assignment-contract"
       },
       "hasFileExpectation": [
         {

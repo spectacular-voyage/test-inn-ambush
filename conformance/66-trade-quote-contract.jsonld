@@ -27,7 +27,7 @@
       "fixtureRepo": "github.com/spectacular-voyage/test-inn-ambush",
       "operationId": "stagecraft.fixture.addTradeQuoteContract",
       "fromRef": "30440609df5e9e8c25167ca334984a5983dcd5e3",
-      "toRef": "b.14-trade-quote-contract",
+      "toRef": "origin/b.14-trade-quote-contract",
       "fromState": {
         "type": "StateLocator",
         "locatorKind": "gitRefState",
@@ -36,7 +36,7 @@
       "toState": {
         "type": "StateLocator",
         "locatorKind": "gitRefState",
-        "ref": "b.14-trade-quote-contract"
+        "ref": "origin/b.14-trade-quote-contract"
       },
       "hasFileExpectation": [
         {

@@ -26,17 +26,17 @@
       "id": "#curtain-up-baseline",
       "fixtureRepo": "github.com/spectacular-voyage/test-inn-ambush",
       "operationId": "stagecraft.fixture.addCurtainUpBaseline",
-      "fromRef": "b.04-standing-d20-warrant-contract",
-      "toRef": "b.05-curtain-up",
+      "fromRef": "origin/b.04-standing-d20-warrant-contract",
+      "toRef": "origin/b.05-curtain-up",
       "fromState": {
         "type": "StateLocator",
         "locatorKind": "gitRefState",
-        "ref": "b.04-standing-d20-warrant-contract"
+        "ref": "origin/b.04-standing-d20-warrant-contract"
       },
       "toState": {
         "type": "StateLocator",
         "locatorKind": "gitRefState",
-        "ref": "b.05-curtain-up"
+        "ref": "origin/b.05-curtain-up"
       },
       "hasFileExpectation": [
         {

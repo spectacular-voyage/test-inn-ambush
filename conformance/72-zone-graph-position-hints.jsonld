@@ -27,7 +27,7 @@
       "fixtureRepo": "github.com/spectacular-voyage/test-inn-ambush",
       "operationId": "stagecraft.fixture.addZoneGraphPositionHints",
       "fromRef": "eeb74ac292d8f9e6d91184bd75f3994b8c4f4e25",
-      "toRef": "b.20-zone-graph-position-hints",
+      "toRef": "origin/b.20-zone-graph-position-hints",
       "fromState": {
         "type": "StateLocator",
         "locatorKind": "gitRefState",
@@ -36,7 +36,7 @@
       "toState": {
         "type": "StateLocator",
         "locatorKind": "gitRefState",
-        "ref": "b.20-zone-graph-position-hints"
+        "ref": "origin/b.20-zone-graph-position-hints"
       },
       "hasFileExpectation": [
         {

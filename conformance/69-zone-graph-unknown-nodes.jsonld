@@ -27,7 +27,7 @@
       "fixtureRepo": "github.com/spectacular-voyage/test-inn-ambush",
       "operationId": "stagecraft.fixture.addZoneGraphUnknownNodes",
       "fromRef": "21525990fcec99a490471010b0fedcce9f6d2950",
-      "toRef": "b.17-zone-graph-unknown-nodes",
+      "toRef": "origin/b.17-zone-graph-unknown-nodes",
       "fromState": {
         "type": "StateLocator",
         "locatorKind": "gitRefState",
@@ -36,7 +36,7 @@
       "toState": {
         "type": "StateLocator",
         "locatorKind": "gitRefState",
-        "ref": "b.17-zone-graph-unknown-nodes"
+        "ref": "origin/b.17-zone-graph-unknown-nodes"
       },
       "hasFileExpectation": [
         {

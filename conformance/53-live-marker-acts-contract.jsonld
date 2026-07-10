@@ -26,17 +26,17 @@
       "id": "#live-marker-acts-contract",
       "fixtureRepo": "github.com/spectacular-voyage/test-inn-ambush",
       "operationId": "stagecraft.fixture.addLiveMarkerActsContract",
-      "fromRef": "b.01-view-as-character-reads-contract",
-      "toRef": "b.02-live-marker-acts-contract",
+      "fromRef": "origin/b.01-view-as-character-reads-contract",
+      "toRef": "origin/b.02-live-marker-acts-contract",
       "fromState": {
         "type": "StateLocator",
         "locatorKind": "gitRefState",
-        "ref": "b.01-view-as-character-reads-contract"
+        "ref": "origin/b.01-view-as-character-reads-contract"
       },
       "toState": {
         "type": "StateLocator",
         "locatorKind": "gitRefState",
-        "ref": "b.02-live-marker-acts-contract"
+        "ref": "origin/b.02-live-marker-acts-contract"
       },
       "hasFileExpectation": [
         {

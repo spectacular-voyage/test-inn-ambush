@@ -26,17 +26,17 @@
       "id": "#outcome-consequence-bridge-contract",
       "fixtureRepo": "github.com/spectacular-voyage/test-inn-ambush",
       "operationId": "stagecraft.fixture.addOutcomeConsequenceBridgeContract",
-      "fromRef": "b.10-perception-contract-slice",
-      "toRef": "b.11-outcome-consequence-bridge-contract",
+      "fromRef": "origin/b.10-perception-contract-slice",
+      "toRef": "origin/b.11-outcome-consequence-bridge-contract",
       "fromState": {
         "type": "StateLocator",
         "locatorKind": "gitRefState",
-        "ref": "b.10-perception-contract-slice"
+        "ref": "origin/b.10-perception-contract-slice"
       },
       "toState": {
         "type": "StateLocator",
         "locatorKind": "gitRefState",
-        "ref": "b.11-outcome-consequence-bridge-contract"
+        "ref": "origin/b.11-outcome-consequence-bridge-contract"
       },
       "hasFileExpectation": [
         {

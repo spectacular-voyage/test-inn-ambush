@@ -27,7 +27,7 @@
       "fixtureRepo": "github.com/spectacular-voyage/test-inn-ambush",
       "operationId": "stagecraft.fixture.addOrexisV1Records",
       "fromRef": "37b4c71965f5ac99a8f3bce803a416998cd23928",
-      "toRef": "b.18-orexis-v1-records",
+      "toRef": "origin/b.18-orexis-v1-records",
       "fromState": {
         "type": "StateLocator",
         "locatorKind": "gitRefState",
@@ -36,7 +36,7 @@
       "toState": {
         "type": "StateLocator",
         "locatorKind": "gitRefState",
-        "ref": "b.18-orexis-v1-records"
+        "ref": "origin/b.18-orexis-v1-records"
       },
       "hasFileExpectation": [
         {

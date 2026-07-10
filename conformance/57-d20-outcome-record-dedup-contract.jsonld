@@ -26,17 +26,17 @@
       "id": "#d20-outcome-record-dedup-contract",
       "fixtureRepo": "github.com/spectacular-voyage/test-inn-ambush",
       "operationId": "stagecraft.fixture.deduplicateD20OutcomeRecord",
-      "fromRef": "b.05-curtain-up",
-      "toRef": "b.06-outcome-record-dedup",
+      "fromRef": "origin/b.05-curtain-up",
+      "toRef": "origin/b.06-outcome-record-dedup",
       "fromState": {
         "type": "StateLocator",
         "locatorKind": "gitRefState",
-        "ref": "b.05-curtain-up"
+        "ref": "origin/b.05-curtain-up"
       },
       "toState": {
         "type": "StateLocator",
         "locatorKind": "gitRefState",
-        "ref": "b.06-outcome-record-dedup"
+        "ref": "origin/b.06-outcome-record-dedup"
       },
       "hasFileExpectation": [
         {

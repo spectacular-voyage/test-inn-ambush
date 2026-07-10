@@ -26,17 +26,17 @@
       "id": "#spatial-gate-regressions",
       "fixtureRepo": "github.com/spectacular-voyage/test-inn-ambush",
       "operationId": "stagecraft.fixture.addSpatialGateRegressions",
-      "fromRef": "b.20-zone-graph-position-hints",
-      "toRef": "b.21-spatial-gate-regressions",
+      "fromRef": "origin/b.20-zone-graph-position-hints",
+      "toRef": "origin/b.21-spatial-gate-regressions",
       "fromState": {
         "type": "StateLocator",
         "locatorKind": "gitRefState",
-        "ref": "b.20-zone-graph-position-hints"
+        "ref": "origin/b.20-zone-graph-position-hints"
       },
       "toState": {
         "type": "StateLocator",
         "locatorKind": "gitRefState",
-        "ref": "b.21-spatial-gate-regressions"
+        "ref": "origin/b.21-spatial-gate-regressions"
       },
       "hasFileExpectation": [
         {

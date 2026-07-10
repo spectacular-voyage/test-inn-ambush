@@ -27,7 +27,7 @@
       "fixtureRepo": "github.com/spectacular-voyage/test-inn-ambush",
       "operationId": "stagecraft.fixture.fixWeaveNamedStateValidation",
       "fromRef": "5b79bd24b3150bebe68bee051608f2c91f5f8c0e",
-      "toRef": "b.15-weave-named-state-validate",
+      "toRef": "origin/b.15-weave-named-state-validate",
       "fromState": {
         "type": "StateLocator",
         "locatorKind": "gitRefState",
@@ -36,7 +36,7 @@
       "toState": {
         "type": "StateLocator",
         "locatorKind": "gitRefState",
-        "ref": "b.15-weave-named-state-validate"
+        "ref": "origin/b.15-weave-named-state-validate"
       },
       "hasFileExpectation": [
         {

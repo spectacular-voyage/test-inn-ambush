@@ -26,17 +26,17 @@
       "id": "#view-as-character-reads-contract",
       "fixtureRepo": "github.com/spectacular-voyage/test-inn-ambush",
       "operationId": "stagecraft.fixture.addViewAsCharacterReadsContract",
-      "fromRef": "b.00-aligned-baseline",
-      "toRef": "b.01-view-as-character-reads-contract",
+      "fromRef": "origin/b.00-aligned-baseline",
+      "toRef": "origin/b.01-view-as-character-reads-contract",
       "fromState": {
         "type": "StateLocator",
         "locatorKind": "gitRefState",
-        "ref": "b.00-aligned-baseline"
+        "ref": "origin/b.00-aligned-baseline"
       },
       "toState": {
         "type": "StateLocator",
         "locatorKind": "gitRefState",
-        "ref": "b.01-view-as-character-reads-contract"
+        "ref": "origin/b.01-view-as-character-reads-contract"
       },
       "hasFileExpectation": [
         {

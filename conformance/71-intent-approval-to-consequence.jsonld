@@ -27,7 +27,7 @@
       "fixtureRepo": "github.com/spectacular-voyage/test-inn-ambush",
       "operationId": "stagecraft.fixture.addIntentApprovalMovementConsequence",
       "fromRef": "40f16be988bc6d1250195bf59f6be47404708962",
-      "toRef": "b.19-intent-approval-to-consequence",
+      "toRef": "origin/b.19-intent-approval-to-consequence",
       "fromState": {
         "type": "StateLocator",
         "locatorKind": "gitRefState",
@@ -36,7 +36,7 @@
       "toState": {
         "type": "StateLocator",
         "locatorKind": "gitRefState",
-        "ref": "b.19-intent-approval-to-consequence"
+        "ref": "origin/b.19-intent-approval-to-consequence"
       },
       "hasFileExpectation": [
         {

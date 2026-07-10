@@ -26,12 +26,12 @@
       "id": "#play-the-door-bars-checkpoint",
       "fixtureRepo": "github.com/spectacular-voyage/test-inn-ambush",
       "operationId": "stagecraft.play.captureTheDoorBarsCheckpoint",
-      "fromRef": "b.09-transfer-act-quantity-contract",
+      "fromRef": "origin/b.09-transfer-act-quantity-contract",
       "toRef": "c.01-the-door-bars",
       "fromState": {
         "type": "StateLocator",
         "locatorKind": "gitRefState",
-        "ref": "b.09-transfer-act-quantity-contract"
+        "ref": "origin/b.09-transfer-act-quantity-contract"
       },
       "toState": {
         "type": "StateLocator",

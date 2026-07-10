@@ -26,17 +26,17 @@
       "id": "#standing-d20-warrant-contract",
       "fixtureRepo": "github.com/spectacular-voyage/test-inn-ambush",
       "operationId": "stagecraft.fixture.addStandingD20WarrantContract",
-      "fromRef": "b.03-targetless-roll-request-contract",
-      "toRef": "b.04-standing-d20-warrant-contract",
+      "fromRef": "origin/b.03-targetless-roll-request-contract",
+      "toRef": "origin/b.04-standing-d20-warrant-contract",
       "fromState": {
         "type": "StateLocator",
         "locatorKind": "gitRefState",
-        "ref": "b.03-targetless-roll-request-contract"
+        "ref": "origin/b.03-targetless-roll-request-contract"
       },
       "toState": {
         "type": "StateLocator",
         "locatorKind": "gitRefState",
-        "ref": "b.04-standing-d20-warrant-contract"
+        "ref": "origin/b.04-standing-d20-warrant-contract"
       },
       "hasFileExpectation": [
         {

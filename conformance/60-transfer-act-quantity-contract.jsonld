@@ -26,17 +26,17 @@
       "id": "#transfer-act-quantity-contract",
       "fixtureRepo": "github.com/spectacular-voyage/test-inn-ambush",
       "operationId": "stagecraft.fixture.addTransferActQuantityContract",
-      "fromRef": "b.08-warrant-decline-control-assignment-contract",
-      "toRef": "b.09-transfer-act-quantity-contract",
+      "fromRef": "origin/b.08-warrant-decline-control-assignment-contract",
+      "toRef": "origin/b.09-transfer-act-quantity-contract",
       "fromState": {
         "type": "StateLocator",
         "locatorKind": "gitRefState",
-        "ref": "b.08-warrant-decline-control-assignment-contract"
+        "ref": "origin/b.08-warrant-decline-control-assignment-contract"
       },
       "toState": {
         "type": "StateLocator",
         "locatorKind": "gitRefState",
-        "ref": "b.09-transfer-act-quantity-contract"
+        "ref": "origin/b.09-transfer-act-quantity-contract"
       },
       "hasFileExpectation": [
         {

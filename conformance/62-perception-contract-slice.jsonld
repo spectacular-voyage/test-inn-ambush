@@ -26,17 +26,17 @@
       "id": "#perception-contract-slice",
       "fixtureRepo": "github.com/spectacular-voyage/test-inn-ambush",
       "operationId": "stagecraft.fixture.addPerceptionContractSlice",
-      "fromRef": "b.09-transfer-act-quantity-contract",
-      "toRef": "b.10-perception-contract-slice",
+      "fromRef": "origin/b.09-transfer-act-quantity-contract",
+      "toRef": "origin/b.10-perception-contract-slice",
       "fromState": {
         "type": "StateLocator",
         "locatorKind": "gitRefState",
-        "ref": "b.09-transfer-act-quantity-contract"
+        "ref": "origin/b.09-transfer-act-quantity-contract"
       },
       "toState": {
         "type": "StateLocator",
         "locatorKind": "gitRefState",
-        "ref": "b.10-perception-contract-slice"
+        "ref": "origin/b.10-perception-contract-slice"
       },
       "hasFileExpectation": [
         {

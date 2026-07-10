@@ -23,17 +23,17 @@
       "id": "#targetless-roll-request-contract",
       "fixtureRepo": "github.com/spectacular-voyage/test-inn-ambush",
       "operationId": "stagecraft.fixture.addTargetlessRollRequestContract",
-      "fromRef": "b.02-live-marker-acts-contract",
-      "toRef": "b.03-targetless-roll-request-contract",
+      "fromRef": "origin/b.02-live-marker-acts-contract",
+      "toRef": "origin/b.03-targetless-roll-request-contract",
       "fromState": {
         "type": "StateLocator",
         "locatorKind": "gitRefState",
-        "ref": "b.02-live-marker-acts-contract"
+        "ref": "origin/b.02-live-marker-acts-contract"
       },
       "toState": {
         "type": "StateLocator",
         "locatorKind": "gitRefState",
-        "ref": "b.03-targetless-roll-request-contract"
+        "ref": "origin/b.03-targetless-roll-request-contract"
       },
       "hasFileExpectation": [
         {

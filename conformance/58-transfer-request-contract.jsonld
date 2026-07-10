@@ -26,17 +26,17 @@
       "id": "#transfer-request-contract",
       "fixtureRepo": "github.com/spectacular-voyage/test-inn-ambush",
       "operationId": "stagecraft.fixture.addTransferRequestContract",
-      "fromRef": "b.06-outcome-record-dedup",
-      "toRef": "b.07-transfer-request-contract",
+      "fromRef": "origin/b.06-outcome-record-dedup",
+      "toRef": "origin/b.07-transfer-request-contract",
       "fromState": {
         "type": "StateLocator",
         "locatorKind": "gitRefState",
-        "ref": "b.06-outcome-record-dedup"
+        "ref": "origin/b.06-outcome-record-dedup"
       },
       "toState": {
         "type": "StateLocator",
         "locatorKind": "gitRefState",
-        "ref": "b.07-transfer-request-contract"
+        "ref": "origin/b.07-transfer-request-contract"
       },
       "hasFileExpectation": [
         {

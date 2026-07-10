@@ -27,7 +27,7 @@
       "fixtureRepo": "github.com/spectacular-voyage/test-inn-ambush",
       "operationId": "stagecraft.fixture.addBeliefRecordsAndPartyNameProofs",
       "fromRef": "a2ea65816c186e4d19cb4622d84e6ef2a60b58f8",
-      "toRef": "b.16-belief-records-party-name-seeds",
+      "toRef": "origin/b.16-belief-records-party-name-seeds",
       "fromState": {
         "type": "StateLocator",
         "locatorKind": "gitRefState",
@@ -36,7 +36,7 @@
       "toState": {
         "type": "StateLocator",
         "locatorKind": "gitRefState",
-        "ref": "b.16-belief-records-party-name-seeds"
+        "ref": "origin/b.16-belief-records-party-name-seeds"
       },
       "hasFileExpectation": [
         {

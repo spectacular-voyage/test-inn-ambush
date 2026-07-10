@@ -27,7 +27,7 @@
       "fixtureRepo": "github.com/spectacular-voyage/test-inn-ambush",
       "operationId": "stagecraft.fixture.addTableRollRequestContract",
       "fromRef": "2949d6a9c65fe32343090026f15ef77b33ff632a",
-      "toRef": "b.13-table-roll-request-contract",
+      "toRef": "origin/b.13-table-roll-request-contract",
       "fromState": {
         "type": "StateLocator",
         "locatorKind": "gitRefState",
@@ -36,7 +36,7 @@
       "toState": {
         "type": "StateLocator",
         "locatorKind": "gitRefState",
-        "ref": "b.13-table-roll-request-contract"
+        "ref": "origin/b.13-table-roll-request-contract"
       },
       "hasFileExpectation": [
         {
