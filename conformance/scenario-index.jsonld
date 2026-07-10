@@ -1476,12 +1476,12 @@
           "fromLaneState": {
             "type": "StateLocator",
             "locatorKind": "gitRefState",
-            "ref": "b.21-spatial-gate-regressions"
+            "ref": "origin/b.21-spatial-gate-regressions"
           },
           "toLaneState": {
             "type": "StateLocator",
             "locatorKind": "gitRefState",
-            "ref": "b.22-opening-narration"
+            "ref": "origin/b.22-opening-narration"
           }
         }
       ]

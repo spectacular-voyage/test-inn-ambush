@@ -27,7 +27,7 @@
       "fixtureRepo": "github.com/spectacular-voyage/test-inn-ambush",
       "operationId": "stagecraft.fixture.addOpeningNarration",
       "fromRef": "074ac96548df97a8a720fc86d82391bc165d31c7",
-      "toRef": "b.22-opening-narration",
+      "toRef": "origin/b.22-opening-narration",
       "fromState": {
         "type": "StateLocator",
         "locatorKind": "gitRefState",
@@ -36,7 +36,7 @@
       "toState": {
         "type": "StateLocator",
         "locatorKind": "gitRefState",
-        "ref": "b.22-opening-narration"
+        "ref": "origin/b.22-opening-narration"
       },
       "hasFileExpectation": [
         {
