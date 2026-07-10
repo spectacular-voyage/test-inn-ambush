@@ -1527,6 +1527,27 @@
           }
         }
       ]
+    },
+    {
+      "id": "#77-projection-notification-act-kind-required",
+      "type": "ScenarioStep",
+      "manifestPath": "77-projection-notification-act-kind-required.jsonld",
+      "hasLaneBinding": [
+        {
+          "type": "LaneStateBinding",
+          "lane": "#fixture-b-lane",
+          "fromLaneState": {
+            "type": "StateLocator",
+            "locatorKind": "gitRefState",
+            "ref": "origin/b.24-projection-notification-act-kind"
+          },
+          "toLaneState": {
+            "type": "StateLocator",
+            "locatorKind": "gitRefState",
+            "ref": "origin/b.25-projection-notification-act-kind-required"
+          }
+        }
+      ]
     }
   ]
 }
