@@ -8,5 +8,8 @@
   "sourceProjection": {
     "observedProjectionState": "https://spectacular-voyage.github.io/test-inn-ambush/branch/plan-b",
     "participantProjection": "https://spectacular-voyage.github.io/test-inn-ambush/projection/gm/alex/inn-ambush-plan-b"
-  }
+  },
+  "campaignId": "inn-ambush",
+  "sessionId": "inn-ambush-001",
+  "configRevision": 1
 }
