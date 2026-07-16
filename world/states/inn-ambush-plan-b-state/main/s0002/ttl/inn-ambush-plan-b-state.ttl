@@ -1003,7 +1003,7 @@
 	<https://spectacular-voyage.github.io/stagecraft/ontology/adjacentTo> <https://spectacular-voyage.github.io/test-inn-ambush/place/front-door-threshold> ;
 	<https://spectacular-voyage.github.io/stagecraft/ontology/inScenario> <https://spectacular-voyage.github.io/test-inn-ambush/scenario/inn-ambush> .
 <https://spectacular-voyage.github.io/test-inn-ambush/participant/alice> a <https://spectacular-voyage.github.io/stagecraft/ontology/Participant> , <https://spectacular-voyage.github.io/stagecraft/ontology/HumanParticipant> ;
-	<https://spectacular-voyage.github.io/stagecraft/ontology/roleplayerFor> <https://spectacular-voyage.github.io/test-inn-ambush/actant/elara> ;
+	<https://spectacular-voyage.github.io/stagecraft/ontology/controllerFor> <https://spectacular-voyage.github.io/test-inn-ambush/actant/elara> ;
 	<https://spectacular-voyage.github.io/stagecraft/ontology/inScenario> <https://spectacular-voyage.github.io/test-inn-ambush/scenario/inn-ambush> .
 <https://spectacular-voyage.github.io/test-inn-ambush/participant/bob> a <https://spectacular-voyage.github.io/stagecraft/ontology/Participant> , <https://spectacular-voyage.github.io/stagecraft/ontology/HumanParticipant> ;
 	<https://spectacular-voyage.github.io/stagecraft/ontology/inScenario> <https://spectacular-voyage.github.io/test-inn-ambush/scenario/inn-ambush> .
