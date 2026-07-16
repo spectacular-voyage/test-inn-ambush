@@ -2258,7 +2258,7 @@ sc-sh:BeliefRecordShape
     sh:maxCount 1 ;
   ] ;
   sh:property [
-    sh:path perceptio:sinceWhen ;
+    sh:path sc:acceptedFrom ;
     sh:datatype xsd:dateTime ;
     sh:minCount 1 ;
     sh:maxCount 1 ;
