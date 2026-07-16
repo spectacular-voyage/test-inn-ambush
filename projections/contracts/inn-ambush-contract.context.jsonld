@@ -117,8 +117,8 @@
       "@id": "perceptio:credence",
       "@type": "xsd:decimal"
     },
-    "sinceWhen": {
-      "@id": "perceptio:sinceWhen",
+    "acceptedFrom": {
+      "@id": "sc:acceptedFrom",
       "@type": "xsd:dateTime"
     },
     "supersededBy": {
