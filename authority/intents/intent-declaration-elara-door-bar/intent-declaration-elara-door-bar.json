@@ -1,8 +1,8 @@
 {
   "@context": "https://spectacular-voyage.github.io/test-inn-ambush/projections/contracts/inn-ambush-contract.context.jsonld",
   "@type": "IntentDeclarationRequest",
-  "type": "stagecraft.intent-declaration.request.v1",
-  "id": "intent-declaration-elara-door-bar-fixture",
+  "type": "stagecraft.intent-declaration.request.v2",
+  "replayKey": "intent-declaration-elara-door-bar-fixture",
   "requestedByParticipant": "https://spectacular-voyage.github.io/test-inn-ambush/participant/alice",
   "speakingContext": {
     "type": "VoiceForActant",
@@ -10,7 +10,13 @@
     "actant": "https://spectacular-voyage.github.io/test-inn-ambush/actant/elara"
   },
   "intentForActant": "https://spectacular-voyage.github.io/test-inn-ambush/actant/elara",
-  "declaration": "Elara means to bar the door before the hallway fills.",
+  "campaignId": "inn-ambush",
+  "sessionId": "inn-ambush-001",
+  "configRevision": 1,
+  "intentKind": "intent",
+  "intentProse": "Elara means to bar the door before the hallway fills.",
+  "visibilityScope": "table",
+  "submissionRollMode": "standard",
   "sourceProjection": {
     "observedProjectionState": "https://spectacular-voyage.github.io/test-inn-ambush/branch/plan-b",
     "participantProjection": "https://spectacular-voyage.github.io/test-inn-ambush/projection/alice/inn-ambush-plan-b"

@@ -912,7 +912,7 @@ sc-sh:IntentDeclarationRequestShape
   sh:targetClass sc:IntentDeclarationRequest ;
   sh:property [
     sh:path sc:envelopeType ;
-    sh:hasValue "stagecraft.intent-declaration.request.v1" ;
+    sh:hasValue "stagecraft.intent-declaration.request.v2" ;
     sh:minCount 1 ;
     sh:maxCount 1 ;
   ] ;
