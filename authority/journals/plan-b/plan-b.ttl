@@ -321,6 +321,11 @@
   sc:hasCommitCertificate <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/commit-certificate/d20-test-warrant/perception-check-001> ;
   par:warrantedActor <https://spectacular-voyage.github.io/test-inn-ambush/actant/elara> ;
   par:warrantedTestType <https://stagecraft.github.io/srd-rules/srd-5-2-1/d20-test/ability-check> ;
+  par:warrantParameter <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/d20-test-warrant/perception-check-001/parameter/target-number> .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/d20-test-warrant/perception-check-001/parameter/target-number>
+  a par:ResolutionParameter ;
+  par:parameterKind srd521:DifficultyClass ;
   par:targetNumber 15 .
 
 <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/commit-certificate/d20-roll/perception-check-001>
