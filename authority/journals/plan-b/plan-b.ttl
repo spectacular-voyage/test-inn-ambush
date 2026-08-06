@@ -319,7 +319,7 @@
   sc:committedBy <https://spectacular-voyage.github.io/test-inn-ambush/gm/alex> ;
   sc:committedEvent <https://spectacular-voyage.github.io/test-inn-ambush/committed-event/d20-test-warrant/perception-check-001> ;
   sc:hasCommitCertificate <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/commit-certificate/d20-test-warrant/perception-check-001> ;
-  par:warrantedActor <https://spectacular-voyage.github.io/test-inn-ambush/actant/elara> ;
+  par:warrantedActant <https://spectacular-voyage.github.io/test-inn-ambush/actant/elara> ;
   par:warrantedTestType <https://stagecraft.github.io/srd-rules/srd-5-2-1/d20-test/ability-check> ;
   par:warrantParameter <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/d20-test-warrant/perception-check-001/parameter/target-number> .
 
