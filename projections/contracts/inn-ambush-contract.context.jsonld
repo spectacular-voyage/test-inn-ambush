@@ -266,9 +266,6 @@
     "barred": {
       "@type": "xsd:boolean"
     },
-    "acceptedFrom": {
-      "@type": "xsd:dateTime"
-    },
     "acceptedUntil": {
       "@type": "xsd:dateTime"
     },
