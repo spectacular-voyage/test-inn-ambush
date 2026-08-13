@@ -1548,6 +1548,27 @@
           }
         }
       ]
+    },
+    {
+      "id": "#79-trade-price-lines",
+      "type": "ScenarioStep",
+      "manifestPath": "79-trade-price-lines.jsonld",
+      "hasLaneBinding": [
+        {
+          "type": "LaneStateBinding",
+          "lane": "#fixture-b-lane",
+          "fromLaneState": {
+            "type": "StateLocator",
+            "locatorKind": "gitRefState",
+            "ref": "eecdcec6ace6074e2d4010d42baff56e9c674ed9"
+          },
+          "toLaneState": {
+            "type": "StateLocator",
+            "locatorKind": "gitRefState",
+            "ref": "origin/b.27-trade-price-lines"
+          }
+        }
+      ]
     }
   ]
 }

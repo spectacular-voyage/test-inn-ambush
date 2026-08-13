@@ -1,0 +1,105 @@
+{
+  "@context": {
+    "@vocab": "https://spectacular-voyage.github.io/accord/ontology/",
+    "dcterms": "http://purl.org/dc/terms/",
+    "id": "@id",
+    "type": "@type",
+    "changeType": {
+      "@type": "@vocab"
+    },
+    "compareMode": {
+      "@type": "@vocab"
+    },
+    "targetsFileExpectation": {
+      "@type": "@id"
+    },
+    "locatorKind": {
+      "@type": "@vocab"
+    }
+  },
+  "type": "Manifest",
+  "id": "urn:accord:stagecraft:test-inn-ambush:79-trade-price-lines",
+  "dcterms:title": "Inn Ambush 79 trade price lines",
+  "hasCase": [
+    {
+      "type": "TransitionCase",
+      "id": "#trade-price-lines",
+      "fixtureRepo": "github.com/spectacular-voyage/test-inn-ambush",
+      "operationId": "stagecraft.fixture.moveTradeQuoteContractToPriceLines",
+      "fromRef": "eecdcec6ace6074e2d4010d42baff56e9c674ed9",
+      "toRef": "origin/b.27-trade-price-lines",
+      "fromState": {
+        "type": "StateLocator",
+        "locatorKind": "gitRefState",
+        "ref": "eecdcec6ace6074e2d4010d42baff56e9c674ed9"
+      },
+      "toState": {
+        "type": "StateLocator",
+        "locatorKind": "gitRefState",
+        "ref": "origin/b.27-trade-price-lines"
+      },
+      "hasFileExpectation": [
+        {
+          "id": "#projection-context",
+          "type": "FileExpectation",
+          "path": "projections/contracts/inn-ambush-contract.context.jsonld",
+          "changeType": "updated",
+          "compareMode": "text"
+        },
+        {
+          "id": "#projection-shapes",
+          "type": "FileExpectation",
+          "path": "projections/contracts/inn-ambush-contract.shapes.ttl",
+          "changeType": "updated",
+          "compareMode": "rdfCanonical"
+        },
+        {
+          "id": "#trade-quote-request",
+          "type": "FileExpectation",
+          "path": "authority/trade-quotes/trade-quote-request-talla-lantern/trade-quote-request-talla-lantern.json",
+          "changeType": "updated",
+          "compareMode": "json"
+        }
+      ],
+      "hasRdfExpectation": [
+        {
+          "id": "#projection-shapes-rdf",
+          "type": "RdfExpectation",
+          "targetsFileExpectation": "#projection-shapes",
+          "hasAskAssertion": [
+            {
+              "id": "#ask-request-shape-requires-price-lines",
+              "type": "SparqlAskAssertion",
+              "query": "ASK { <https://spectacular-voyage.github.io/stagecraft/shacl/TradeQuoteRequestShape> a <http://www.w3.org/ns/shacl#NodeShape> ; <http://www.w3.org/ns/shacl#targetClass> <https://spectacular-voyage.github.io/stagecraft/ontology/TradeQuoteRequest> ; <http://www.w3.org/ns/shacl#property> [ <http://www.w3.org/ns/shacl#path> <https://spectacular-voyage.github.io/stagecraft/ontology/roleosum/hasCommitmentTerm> ; <http://www.w3.org/ns/shacl#node> <https://spectacular-voyage.github.io/stagecraft/shacl/TradePriceLineShape> ; <http://www.w3.org/ns/shacl#minCount> 1 ] . }",
+              "expectedBoolean": true
+            },
+            {
+              "id": "#ask-price-line-shape-pairs-kosmion-amount",
+              "type": "SparqlAskAssertion",
+              "query": "ASK { <https://spectacular-voyage.github.io/stagecraft/shacl/TradePriceLineShape> a <http://www.w3.org/ns/shacl#NodeShape> ; <http://www.w3.org/ns/shacl#class> <https://spectacular-voyage.github.io/stagecraft/ontology/roleosum/TradePriceLine> ; <http://www.w3.org/ns/shacl#property> [ <http://www.w3.org/ns/shacl#path> <https://kosmion.github.io/ontology/fungibleKind> ; <http://www.w3.org/ns/shacl#minCount> 1 ; <http://www.w3.org/ns/shacl#maxCount> 1 ], [ <http://www.w3.org/ns/shacl#path> <https://kosmion.github.io/ontology/quantity> ; <http://www.w3.org/ns/shacl#minCount> 1 ; <http://www.w3.org/ns/shacl#maxCount> 1 ] . }",
+              "expectedBoolean": true
+            },
+            {
+              "id": "#ask-duplicate-denomination-refusal-on-request-shape",
+              "type": "SparqlAskAssertion",
+              "query": "ASK { <https://spectacular-voyage.github.io/stagecraft/shacl/TradeQuoteRequestShape> <http://www.w3.org/ns/shacl#sparql> ?constraint . ?constraint <http://www.w3.org/ns/shacl#message> \"duplicate same-denomination trade price lines on one offer: a price states each denomination once\" ; <http://www.w3.org/ns/shacl#select> ?select . }",
+              "expectedBoolean": true
+            },
+            {
+              "id": "#ask-retired-quoted-price-item-absent",
+              "type": "SparqlAskAssertion",
+              "query": "ASK { ?shape <http://www.w3.org/ns/shacl#property> ?property . ?property <http://www.w3.org/ns/shacl#path> <https://spectacular-voyage.github.io/stagecraft/ontology/roleosum/quotedPriceItem> . }",
+              "expectedBoolean": false
+            },
+            {
+              "id": "#ask-retired-quoted-price-quantity-absent",
+              "type": "SparqlAskAssertion",
+              "query": "ASK { ?shape <http://www.w3.org/ns/shacl#property> ?property . ?property <http://www.w3.org/ns/shacl#path> <https://spectacular-voyage.github.io/stagecraft/ontology/roleosum/quotedPriceQuantity> . }",
+              "expectedBoolean": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
