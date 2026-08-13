@@ -11,29 +11,9 @@
   sflo:hasResourcePage <world/states/inn-ambush-plan-b-state/_knop/index.html> .
 
 <world/states/inn-ambush-plan-b-state> a sflo:PayloadArtifact, sflo:DigitalArtifact, sflo:RdfDocument ;
-  sflo:hasArtifactHistory <world/states/inn-ambush-plan-b-state/main> ;
-  sflo:currentArtifactHistory <world/states/inn-ambush-plan-b-state/main> ;
   sflo:nextHistoryOrdinal "2"^^xsd:nonNegativeInteger ;
   sflo:hasWorkingLocatedFile <world/states/inn-ambush-plan-b-state/inn-ambush-plan-b-state.ttl> ;
   sflo:hasResourcePage <world/states/inn-ambush-plan-b-state/index.html> .
-
-<world/states/inn-ambush-plan-b-state/main> a sflo:ArtifactHistory ;
-  sflo:historyOrdinal "1"^^xsd:nonNegativeInteger ;
-  sflo:hasHistoricalState <world/states/inn-ambush-plan-b-state/main/s0002> ;
-  sflo:latestHistoricalState <world/states/inn-ambush-plan-b-state/main/s0002> ;
-  sflo:nextStateOrdinal "3"^^xsd:nonNegativeInteger ;
-  sfcfg:hasNextStateSegmentHint "s0003" ;
-  sflo:hasResourcePage <world/states/inn-ambush-plan-b-state/main/index.html> .
-
-<world/states/inn-ambush-plan-b-state/main/s0002> a sflo:HistoricalState ;
-  sflo:stateOrdinal "2"^^xsd:nonNegativeInteger ;
-  sflo:hasManifestation <world/states/inn-ambush-plan-b-state/main/s0002/ttl> ;
-  sflo:locatedFileForState <world/states/inn-ambush-plan-b-state/main/s0002/ttl/inn-ambush-plan-b-state.ttl> ;
-  sflo:hasResourcePage <world/states/inn-ambush-plan-b-state/main/s0002/index.html> .
-
-<world/states/inn-ambush-plan-b-state/main/s0002/ttl> a sflo:ArtifactManifestation, sflo:RdfDocument ;
-  sflo:locatedFileForManifestation <world/states/inn-ambush-plan-b-state/main/s0002/ttl/inn-ambush-plan-b-state.ttl> ;
-  sflo:hasResourcePage <world/states/inn-ambush-plan-b-state/main/s0002/ttl/index.html> .
 
 <world/states/inn-ambush-plan-b-state/_knop/_meta> a sflo:KnopMetadata, sflo:DigitalArtifact, sflo:RdfDocument ;
   sflo:hasWorkingLocatedFile <world/states/inn-ambush-plan-b-state/_knop/_meta/meta.ttl> ;
@@ -49,15 +29,7 @@
 
 <world/states/inn-ambush-plan-b-state/inn-ambush-plan-b-state.ttl> a sflo:LocatedFile, sflo:RdfDocument .
 
-<world/states/inn-ambush-plan-b-state/main/s0002/ttl/inn-ambush-plan-b-state.ttl> a sflo:LocatedFile, sflo:RdfDocument .
-
 <world/states/inn-ambush-plan-b-state/index.html> a sflo:ResourcePage, sflo:LocatedFile .
-
-<world/states/inn-ambush-plan-b-state/main/index.html> a sflo:ResourcePage, sflo:LocatedFile .
-
-<world/states/inn-ambush-plan-b-state/main/s0002/index.html> a sflo:ResourcePage, sflo:LocatedFile .
-
-<world/states/inn-ambush-plan-b-state/main/s0002/ttl/index.html> a sflo:ResourcePage, sflo:LocatedFile .
 
 <world/states/inn-ambush-plan-b-state/_knop/index.html> a sflo:ResourcePage, sflo:LocatedFile .
 

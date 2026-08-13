@@ -11,29 +11,9 @@
   sflo:hasResourcePage <world/checkpoint-manifests/inn-ambush-checkpoints/_knop/index.html> .
 
 <world/checkpoint-manifests/inn-ambush-checkpoints> a sflo:PayloadArtifact, sflo:DigitalArtifact, sflo:RdfDocument ;
-  sflo:hasArtifactHistory <world/checkpoint-manifests/inn-ambush-checkpoints/main> ;
-  sflo:currentArtifactHistory <world/checkpoint-manifests/inn-ambush-checkpoints/main> ;
   sflo:nextHistoryOrdinal "2"^^xsd:nonNegativeInteger ;
   sflo:hasWorkingLocatedFile <world/checkpoint-manifests/inn-ambush-checkpoints/checkpoint-manifest.ttl> ;
   sflo:hasResourcePage <world/checkpoint-manifests/inn-ambush-checkpoints/index.html> .
-
-<world/checkpoint-manifests/inn-ambush-checkpoints/main> a sflo:ArtifactHistory ;
-  sflo:historyOrdinal "1"^^xsd:nonNegativeInteger ;
-  sflo:hasHistoricalState <world/checkpoint-manifests/inn-ambush-checkpoints/main/s0002> ;
-  sflo:latestHistoricalState <world/checkpoint-manifests/inn-ambush-checkpoints/main/s0002> ;
-  sflo:nextStateOrdinal "3"^^xsd:nonNegativeInteger ;
-  sfcfg:hasNextStateSegmentHint "s0003" ;
-  sflo:hasResourcePage <world/checkpoint-manifests/inn-ambush-checkpoints/main/index.html> .
-
-<world/checkpoint-manifests/inn-ambush-checkpoints/main/s0002> a sflo:HistoricalState ;
-  sflo:stateOrdinal "2"^^xsd:nonNegativeInteger ;
-  sflo:hasManifestation <world/checkpoint-manifests/inn-ambush-checkpoints/main/s0002/ttl> ;
-  sflo:locatedFileForState <world/checkpoint-manifests/inn-ambush-checkpoints/main/s0002/ttl/checkpoint-manifest.ttl> ;
-  sflo:hasResourcePage <world/checkpoint-manifests/inn-ambush-checkpoints/main/s0002/index.html> .
-
-<world/checkpoint-manifests/inn-ambush-checkpoints/main/s0002/ttl> a sflo:ArtifactManifestation, sflo:RdfDocument ;
-  sflo:locatedFileForManifestation <world/checkpoint-manifests/inn-ambush-checkpoints/main/s0002/ttl/checkpoint-manifest.ttl> ;
-  sflo:hasResourcePage <world/checkpoint-manifests/inn-ambush-checkpoints/main/s0002/ttl/index.html> .
 
 <world/checkpoint-manifests/inn-ambush-checkpoints/_knop/_meta> a sflo:KnopMetadata, sflo:DigitalArtifact, sflo:RdfDocument ;
   sflo:hasWorkingLocatedFile <world/checkpoint-manifests/inn-ambush-checkpoints/_knop/_meta/meta.ttl> ;
@@ -49,15 +29,7 @@
 
 <world/checkpoint-manifests/inn-ambush-checkpoints/checkpoint-manifest.ttl> a sflo:LocatedFile, sflo:RdfDocument .
 
-<world/checkpoint-manifests/inn-ambush-checkpoints/main/s0002/ttl/checkpoint-manifest.ttl> a sflo:LocatedFile, sflo:RdfDocument .
-
 <world/checkpoint-manifests/inn-ambush-checkpoints/index.html> a sflo:ResourcePage, sflo:LocatedFile .
-
-<world/checkpoint-manifests/inn-ambush-checkpoints/main/index.html> a sflo:ResourcePage, sflo:LocatedFile .
-
-<world/checkpoint-manifests/inn-ambush-checkpoints/main/s0002/index.html> a sflo:ResourcePage, sflo:LocatedFile .
-
-<world/checkpoint-manifests/inn-ambush-checkpoints/main/s0002/ttl/index.html> a sflo:ResourcePage, sflo:LocatedFile .
 
 <world/checkpoint-manifests/inn-ambush-checkpoints/_knop/index.html> a sflo:ResourcePage, sflo:LocatedFile .
 
