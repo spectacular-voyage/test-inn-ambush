@@ -7,6 +7,7 @@
     "dyn": "https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/",
     "orexis": "https://spectacular-voyage.github.io/stagecraft/ontology/orexis/",
     "perceptio": "https://spectacular-voyage.github.io/stagecraft/ontology/perceptio/",
+    "kosm": "https://kosmion.github.io/ontology/",
     "possessio": "https://spectacular-voyage.github.io/stagecraft/ontology/possessio/",
     "roleosum": "https://spectacular-voyage.github.io/stagecraft/ontology/roleosum/",
     "dcterms": "http://purl.org/dc/terms/",
@@ -714,13 +715,19 @@
       "@id": "roleosum:quotedItem",
       "@type": "@id"
     },
-    "priceItem": {
-      "@id": "roleosum:quotedPriceItem",
-      "@type": "@id"
-    },
-    "priceQuantity": {
-      "@id": "roleosum:quotedPriceQuantity",
-      "@type": "xsd:decimal"
+    "priceLines": {
+      "@id": "roleosum:hasCommitmentTerm",
+      "@context": {
+        "TradePriceLine": "roleosum:TradePriceLine",
+        "fungibleKind": {
+          "@id": "kosm:fungibleKind",
+          "@type": "@id"
+        },
+        "quantity": {
+          "@id": "kosm:quantity",
+          "@type": "xsd:decimal"
+        }
+      }
     },
     "expiresAt": {
       "@id": "roleosum:expiresAt",

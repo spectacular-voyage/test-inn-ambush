@@ -3,6 +3,7 @@
 @prefix dyn: <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/> .
 @prefix orexis: <https://spectacular-voyage.github.io/stagecraft/ontology/orexis/> .
 @prefix perceptio: <https://spectacular-voyage.github.io/stagecraft/ontology/perceptio/> .
+@prefix kosm: <https://kosmion.github.io/ontology/> .
 @prefix possessio: <https://spectacular-voyage.github.io/stagecraft/ontology/possessio/> .
 @prefix roleosum: <https://spectacular-voyage.github.io/stagecraft/ontology/roleosum/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
@@ -1334,16 +1335,22 @@ sc-sh:TradeQuoteRequestShape
     sh:maxCount 1 ;
   ] ;
   sh:property [
-    sh:path roleosum:quotedPriceItem ;
-    sh:nodeKind sh:IRI ;
+    sh:path roleosum:hasCommitmentTerm ;
+    sh:node sc-sh:TradePriceLineShape ;
     sh:minCount 1 ;
-    sh:maxCount 1 ;
   ] ;
-  sh:property [
-    sh:path roleosum:quotedPriceQuantity ;
-    sh:datatype xsd:decimal ;
-    sh:minCount 1 ;
-    sh:maxCount 1 ;
+  sh:sparql [
+    sh:message "duplicate same-denomination trade price lines on one offer: a price states each denomination once" ;
+    sh:select """
+      PREFIX roleosum: <https://spectacular-voyage.github.io/stagecraft/ontology/roleosum/>
+      PREFIX kosm: <https://kosmion.github.io/ontology/>
+      SELECT $this WHERE {
+        $this roleosum:hasCommitmentTerm ?lineA, ?lineB .
+        ?lineA a roleosum:TradePriceLine ; kosm:fungibleKind ?kind .
+        ?lineB a roleosum:TradePriceLine ; kosm:fungibleKind ?kind .
+        FILTER (?lineA != ?lineB)
+      }
+      """ ;
   ] ;
   sh:property [
     sh:path roleosum:expiresAt ;
@@ -1382,6 +1389,23 @@ sc-sh:TradeQuoteRequestShape
     sh:path sc:wouldProduce ;
     sh:maxCount 0 ;
     sh:message "TradeQuoteRequest must not preview authority-produced resources." ;
+  ] .
+
+sc-sh:TradePriceLineShape
+  a sh:NodeShape ;
+  sh:class roleosum:TradePriceLine ;
+  sh:property [
+    sh:path kosm:fungibleKind ;
+    sh:nodeKind sh:IRI ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path kosm:quantity ;
+    sh:datatype xsd:decimal ;
+    sh:minExclusive 0 ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
   ] .
 
 sc-sh:TradeQuoteAcceptanceRequestShape
