@@ -1,0 +1,105 @@
+{
+  "@context": {
+    "@vocab": "https://spectacular-voyage.github.io/accord/ontology/",
+    "dcterms": "http://purl.org/dc/terms/",
+    "id": "@id",
+    "type": "@type",
+    "changeType": {
+      "@type": "@vocab"
+    },
+    "compareMode": {
+      "@type": "@vocab"
+    },
+    "targetsFileExpectation": {
+      "@type": "@id"
+    },
+    "locatorKind": {
+      "@type": "@vocab"
+    }
+  },
+  "type": "Manifest",
+  "id": "urn:accord:stagecraft:test-inn-ambush:80-advantage-roll-evidence-records",
+  "dcterms:title": "Inn Ambush 80 advantage roll evidence records",
+  "hasCase": [
+    {
+      "type": "TransitionCase",
+      "id": "#advantage-roll-evidence-records",
+      "fixtureRepo": "github.com/spectacular-voyage/test-inn-ambush",
+      "operationId": "stagecraft.fixture.addAdvantageRollEvidenceRecords",
+      "fromRef": "0e316a357d04f51b54a682215078b3b37917462d",
+      "toRef": "origin/b.28-advantage-roll-evidence",
+      "fromState": {
+        "type": "StateLocator",
+        "locatorKind": "gitRefState",
+        "ref": "0e316a357d04f51b54a682215078b3b37917462d"
+      },
+      "toState": {
+        "type": "StateLocator",
+        "locatorKind": "gitRefState",
+        "ref": "origin/b.28-advantage-roll-evidence"
+      },
+      "hasFileExpectation": [
+        {
+          "id": "#authority-journal",
+          "type": "FileExpectation",
+          "path": "authority/journals/plan-b/plan-b.ttl",
+          "changeType": "updated",
+          "compareMode": "rdfCanonical"
+        },
+        {
+          "id": "#manifest",
+          "type": "FileExpectation",
+          "path": "conformance/80-advantage-roll-evidence-records.jsonld",
+          "changeType": "added",
+          "compareMode": "json"
+        },
+        {
+          "id": "#scenario-index",
+          "type": "FileExpectation",
+          "path": "conformance/scenario-index.jsonld",
+          "changeType": "updated",
+          "compareMode": "json"
+        }
+      ],
+      "hasRdfExpectation": [
+        {
+          "id": "#authority-journal-rdf-expectation",
+          "type": "RdfExpectation",
+          "targetsFileExpectation": "#authority-journal",
+          "hasAskAssertion": [
+            {
+              "id": "#ask-live-warrant-event-evidence-outcome-chain",
+              "type": "SparqlAskAssertion",
+              "query": "PREFIX par: <https://participatorium.github.io/ontology/> ASK { <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/warrant/perception-advantage-001> a par:Warrant ; par:warrantedActant <https://spectacular-voyage.github.io/test-inn-ambush/actant/elara> ; par:warrantedTestType ?t ; par:warrantParameter <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/parameter/perception-advantage-001/dc> . <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/parameter/perception-advantage-001/dc> a par:ResolutionParameter ; par:targetNumber 15 . <https://spectacular-voyage.github.io/test-inn-ambush/table-roll/perception-advantage-001> a par:TableRoll ; par:resolvesWarrant <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/warrant/perception-advantage-001> ; par:hasRollEvidence <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/roll-evidence/perception-advantage-001> . <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/roll-evidence/perception-advantage-001> a par:RollEvidence ; par:testType ?t . <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/outcome-committed/perception-advantage-001> a par:OutcomeCommitted ; par:citesRollEvidence <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/roll-evidence/perception-advantage-001> . }",
+              "expectedBoolean": true
+            },
+            {
+              "id": "#ask-two-distinct-raw-faces",
+              "type": "SparqlAskAssertion",
+              "query": "PREFIX par: <https://participatorium.github.io/ontology/> ASK { <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/roll-evidence/perception-advantage-001> par:rawDieFace 7, 8 . { SELECT (COUNT(DISTINCT ?f) AS ?n) WHERE { <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/roll-evidence/perception-advantage-001> par:rawDieFace ?f . } } FILTER (?n = 2) }",
+              "expectedBoolean": true
+            },
+            {
+              "id": "#ask-advantage-selection-arithmetic-and-sources",
+              "type": "SparqlAskAssertion",
+              "query": "PREFIX par: <https://participatorium.github.io/ontology/> ASK { VALUES ?e { <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/roll-evidence/perception-advantage-001> } ?e par:rollRole \"advantage pair\" ; par:selectedRoll 8 ; par:rollTotal 13 ; par:rollModifier ?w, ?p . ?w par:modifierValue 3 ; par:modifierKind \"ability\" ; par:modifierSource ?ws . ?p par:modifierValue 2 ; par:modifierKind \"proficiency\" ; par:modifierSource ?ps . FILTER (?w != ?p && ?ws != ?ps) FILTER NOT EXISTS { ?e par:rawDieFace ?h . FILTER (?h > 8) } }",
+              "expectedBoolean": true
+            },
+            {
+              "id": "#ask-outcome-diverges-and-applies-consequence",
+              "type": "SparqlAskAssertion",
+              "query": "PREFIX par: <https://participatorium.github.io/ontology/> ASK { <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/outcome-committed/perception-advantage-001> par:citesRollEvidence <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/roll-evidence/perception-advantage-001> ; par:mechanicalResult \"failure\" ; par:adjudicatedResult \"success\" ; par:adjudicationNote ?n ; par:appliesConsequence ?c . }",
+              "expectedBoolean": true
+            },
+            {
+              "id": "#ask-no-serialized-or-retired-roll-shadow",
+              "type": "SparqlAskAssertion",
+              "query": "PREFIX par: <https://participatorium.github.io/ontology/> ASK { VALUES ?e { <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/roll-evidence/perception-advantage-001> } FILTER NOT EXISTS { ?e par:rollFaces ?x } FILTER NOT EXISTS { ?e par:derivedModifiers ?y } FILTER NOT EXISTS { ?e par:resolvesWarrant ?w } FILTER NOT EXISTS { ?e ?rp ?v . FILTER STRSTARTS(STR(?rp), \"https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/\") } }",
+              "expectedBoolean": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

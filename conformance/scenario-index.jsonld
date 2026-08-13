@@ -1086,6 +1086,27 @@
           }
         }
       ]
+    },
+    {
+      "id": "#80-advantage-roll-evidence-records",
+      "type": "ScenarioStep",
+      "manifestPath": "80-advantage-roll-evidence-records.jsonld",
+      "hasLaneBinding": [
+        {
+          "type": "LaneStateBinding",
+          "lane": "#fixture-b-lane",
+          "fromLaneState": {
+            "type": "StateLocator",
+            "locatorKind": "gitRefState",
+            "ref": "0e316a357d04f51b54a682215078b3b37917462d"
+          },
+          "toLaneState": {
+            "type": "StateLocator",
+            "locatorKind": "gitRefState",
+            "ref": "origin/b.28-advantage-roll-evidence"
+          }
+        }
+      ]
     }
   ]
 }

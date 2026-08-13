@@ -301,3 +301,66 @@
     <https://spectacular-voyage.github.io/test-inn-ambush/belief-record/elara/threshold-scuffs> ;
   sc:basedOnHistory <https://spectacular-voyage.github.io/test-inn-ambush/history/main> ;
   sc:committedBy <https://spectacular-voyage.github.io/test-inn-ambush/gm/alex> .
+## --- Advantage Perception roll, par: vocabulary, MULTI-DIE (2026-08-13) ---
+## Replaces the retired single-die perception-check-001 arc deleted at bb52e9c on Dave's word.
+## Faces 7 and 8 are DELIBERATELY DISTINCT: two equal faces collapse to one RDF triple, so an
+## equal-face throw cannot witness multiplicity in this model. The kept face (8), both modifier
+## values (+3, +2) and the total (13) are REPRODUCED from the retired arc so its arithmetic and
+## divergence coverage survive unchanged. Fiction times are the retired arc's own, so the
+## threshold-scuffs inference at 13:40:30Z again has a resolved perception check to reason from.
+## par:resolvesWarrant is on the ROLL EVENT, never on the evidence: its declared domain is
+## cat:Event, and the retired arc put it on the evidence — a category error not reproduced here.
+
+<https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/warrant/perception-advantage-001>
+  a par:Warrant ;
+  dcterms:created "2026-06-29T13:39:50Z"^^xsd:dateTime ;
+  par:warrantedActant <https://spectacular-voyage.github.io/test-inn-ambush/actant/elara> ;
+  par:warrantedTestType dyn:AbilityCheck ;
+  par:warrantParameter <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/parameter/perception-advantage-001/dc> ;
+  sc:committedBy <https://spectacular-voyage.github.io/test-inn-ambush/gm/alex> .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/parameter/perception-advantage-001/dc>
+  a par:ResolutionParameter ;
+  par:targetNumber 15 .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/table-roll/perception-advantage-001>
+  a par:TableRoll ;
+  dcterms:created "2026-06-29T13:40:00Z"^^xsd:dateTime ;
+  par:resolvesWarrant <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/warrant/perception-advantage-001> ;
+  par:hasRollEvidence <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/roll-evidence/perception-advantage-001> ;
+  sc:committedBy <https://spectacular-voyage.github.io/test-inn-ambush/gm/alex> .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/roll-evidence/perception-advantage-001>
+  a par:RollEvidence ;
+  dcterms:created "2026-06-29T13:40:00Z"^^xsd:dateTime ;
+  par:testType dyn:AbilityCheck ;
+  par:rawDieFace 7, 8 ;
+  par:rollRole "advantage pair" ;
+  par:selectedRoll 8 ;
+  par:rollTotal 13 ;
+  par:provenanceKind "generated" ;
+  par:rollModifier <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/roll-evidence/perception-advantage-001/modifier/wisdom>,
+    <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/roll-evidence/perception-advantage-001/modifier/perception-proficiency> .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/roll-evidence/perception-advantage-001/modifier/wisdom>
+  a par:ResolutionParameter ;
+  par:modifierValue 3 ;
+  par:modifierKind "ability" ;
+  par:modifierSource dyn:Wisdom .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/roll-evidence/perception-advantage-001/modifier/perception-proficiency>
+  a par:ResolutionParameter ;
+  par:modifierValue 2 ;
+  par:modifierKind "proficiency" ;
+  par:modifierSource <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-5-2-1/d20-test/skill-rule/perception> .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/outcome-committed/perception-advantage-001>
+  a par:OutcomeCommitted ;
+  dcterms:created "2026-06-29T13:40:10Z"^^xsd:dateTime ;
+  par:citesRollEvidence <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/roll-evidence/perception-advantage-001> ;
+  par:mechanicalResult "failure" ;
+  par:adjudicatedResult "success" ;
+  par:adjudicationNote "GM override: Elara spots the scuffed threshold because the earlier door-bar plan put her attention on the entryway." ;
+  par:appliesConsequence <https://spectacular-voyage.github.io/test-inn-ambush/consequence/threshold-noticed-elara-001> ;
+  sc:committedBy <https://spectacular-voyage.github.io/test-inn-ambush/gm/alex> ;
+  sc:basedOnHistory <https://spectacular-voyage.github.io/test-inn-ambush/history/main> .
