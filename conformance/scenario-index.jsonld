@@ -626,48 +626,6 @@
       ]
     },
     {
-      "id": "#27-d20-roll-evidence-records",
-      "type": "ScenarioStep",
-      "manifestPath": "27-d20-roll-evidence-records.jsonld",
-      "hasLaneBinding": [
-        {
-          "type": "LaneStateBinding",
-          "lane": "#fixture-lane",
-          "fromLaneState": {
-            "type": "StateLocator",
-            "locatorKind": "gitRefState",
-            "ref": "1e24564b83fd4234cc91d8ee018c1be8070270b9"
-          },
-          "toLaneState": {
-            "type": "StateLocator",
-            "locatorKind": "gitRefState",
-            "ref": "a.27-d20-roll-evidence-records"
-          }
-        }
-      ]
-    },
-    {
-      "id": "#28-d20-roll-evidence-woven",
-      "type": "ScenarioStep",
-      "manifestPath": "28-d20-roll-evidence-woven.jsonld",
-      "hasLaneBinding": [
-        {
-          "type": "LaneStateBinding",
-          "lane": "#fixture-lane",
-          "fromLaneState": {
-            "type": "StateLocator",
-            "locatorKind": "gitRefState",
-            "ref": "a.27-d20-roll-evidence-records"
-          },
-          "toLaneState": {
-            "type": "StateLocator",
-            "locatorKind": "gitRefState",
-            "ref": "a.28-d20-roll-evidence-woven"
-          }
-        }
-      ]
-    },
-    {
       "id": "#29-prose-clock-weekday-rename-records",
       "type": "ScenarioStep",
       "manifestPath": "29-prose-clock-weekday-rename-records.jsonld",
@@ -710,48 +668,6 @@
       ]
     },
     {
-      "id": "#31-d20-roll-evidence-commit-provenance",
-      "type": "ScenarioStep",
-      "manifestPath": "31-d20-roll-evidence-commit-provenance.jsonld",
-      "hasLaneBinding": [
-        {
-          "type": "LaneStateBinding",
-          "lane": "#fixture-lane",
-          "fromLaneState": {
-            "type": "StateLocator",
-            "locatorKind": "gitRefState",
-            "ref": "a500aa39153d970f21f1073a28b6d8443627222d"
-          },
-          "toLaneState": {
-            "type": "StateLocator",
-            "locatorKind": "gitRefState",
-            "ref": "a.31-d20-roll-evidence-commit-provenance"
-          }
-        }
-      ]
-    },
-    {
-      "id": "#32-d20-roll-evidence-commit-provenance-woven",
-      "type": "ScenarioStep",
-      "manifestPath": "32-d20-roll-evidence-commit-provenance-woven.jsonld",
-      "hasLaneBinding": [
-        {
-          "type": "LaneStateBinding",
-          "lane": "#fixture-lane",
-          "fromLaneState": {
-            "type": "StateLocator",
-            "locatorKind": "gitRefState",
-            "ref": "a.31-d20-roll-evidence-commit-provenance"
-          },
-          "toLaneState": {
-            "type": "StateLocator",
-            "locatorKind": "gitRefState",
-            "ref": "a.32-d20-roll-evidence-commit-provenance-woven"
-          }
-        }
-      ]
-    },
-    {
       "id": "#33-srd-weapons-records",
       "type": "ScenarioStep",
       "manifestPath": "33-srd-weapons-records.jsonld",
@@ -789,27 +705,6 @@
             "type": "StateLocator",
             "locatorKind": "gitRefState",
             "ref": "a.35-fabric-audience-routing-contract"
-          }
-        }
-      ]
-    },
-    {
-      "id": "#34-d20-outcome-roll-total-repair",
-      "type": "ScenarioStep",
-      "manifestPath": "34-d20-outcome-roll-total-repair.jsonld",
-      "hasLaneBinding": [
-        {
-          "type": "LaneStateBinding",
-          "lane": "#fixture-lane",
-          "fromLaneState": {
-            "type": "StateLocator",
-            "locatorKind": "gitRefState",
-            "ref": "02c31e50a299ededb44378ad2992b7ca46e99c3a"
-          },
-          "toLaneState": {
-            "type": "StateLocator",
-            "locatorKind": "gitRefState",
-            "ref": "a.34-d20-outcome-roll-total-repair"
           }
         }
       ]
@@ -1104,27 +999,6 @@
             "type": "StateLocator",
             "locatorKind": "gitRefState",
             "ref": "origin/b.05-curtain-up"
-          }
-        }
-      ]
-    },
-    {
-      "id": "#57-d20-outcome-record-dedup-contract",
-      "type": "ScenarioStep",
-      "manifestPath": "57-d20-outcome-record-dedup-contract.jsonld",
-      "hasLaneBinding": [
-        {
-          "type": "LaneStateBinding",
-          "lane": "#fixture-b-lane",
-          "fromLaneState": {
-            "type": "StateLocator",
-            "locatorKind": "gitRefState",
-            "ref": "origin/b.05-curtain-up"
-          },
-          "toLaneState": {
-            "type": "StateLocator",
-            "locatorKind": "gitRefState",
-            "ref": "origin/b.06-outcome-record-dedup"
           }
         }
       ]
