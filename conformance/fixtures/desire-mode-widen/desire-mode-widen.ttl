@@ -1,0 +1,110 @@
+# baseURI: https://spectacular-voyage.github.io/test-inn-ambush/conformance/fixtures/desire-mode-widen
+
+@prefix cat:     <https://categoriae.github.io/ontology/> .
+@prefix psy:     <https://psychikon.github.io/ontology/> .
+@prefix tmpo:    <https://temporaenum.github.io/ontology/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+
+## ---------------------------------------------------------------------------------------------
+## DESIRE-MODE WIDEN FIXTURE — rung ① of Dave's ⓑ′ ruling (2026-08-10 16:12, drop
+## 2026-08-10_1612 § ②): the estate's FIRST psy:Desire MODE subject, widening the record-only
+## conative plane. `active*` RETAINED: the committed record, its activeFrom/activeUntil, the
+## orexis: spellings, the contract shape and the JSON-LD context are ALL untouched — MIGRATE and
+## NARROW are later rungs. The committed authority journal is immutable: every act below is
+## referenced by IRI and gains only ADDITIVE assertions in this fixture graph, never a rewrite.
+##
+## THE ADJUDICATION THIS FIXTURE CARRIES (the mint's own fence — adjudicated, not assumed):
+## for THIS case — a wording revision of the committed record's characterization — the revision
+## is A REVISION OF THE RECORD, NOT A SECOND DESIRE. One implant act founds ONE mode; sharper
+## wording about the same compelled pull is new EVIDENCE about the same inner state (the
+## two-plane law: records are evidence about inner life), riding record supersession
+## (cat:supersededBy), with BOTH records psy:evidences the one mode. What WOULD found a second
+## mode is a second founding act — a re-cast spell, a fresh temptation — never an author
+## polishing a sentence. ⛔ DELIBERATELY NARROW: this adjudicates the wording-revision case
+## only; a revision that changes the desire's CONTENT (a different act, target or goal) is a
+## different case and gets its own adjudication when the fiction produces one.
+## FALSIFIER (#13): validation/same-desire-across-revision.rq is TRUE under this adjudication
+## and goes RED when the revision record's evidence edge is rebound to a second mode (the
+## rejected NEW-MODE reading) — and RED again when any lifetime carrier is deleted.
+## ---------------------------------------------------------------------------------------------
+
+## The mode subject: the compulsion itself, as an inner state of Elara — not the record of it.
+<https://spectacular-voyage.github.io/test-inn-ambush/desire-mode/elara/old-road-compulsion>
+  a cat:IntentionalMode ; cat:instanceOf psy:Desire ;
+  dcterms:title "Elara's compelled pull to the old road" ;
+  dcterms:description "The magically implanted desire itself, inhering in Elara for the ten fictional minutes the suggestion held — distinct from the committed records that evidence it." ;
+  cat:inheresIn <https://spectacular-voyage.github.io/test-inn-ambush/actant/elara> ;
+  cat:createdIn <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/spell/suggestion-old-road-001> ;
+  cat:terminatedIn <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/spell-expiry/suggestion-old-road-001> ;
+  cat:hasTimeExtent <https://spectacular-voyage.github.io/test-inn-ambush/interval/elara-old-road-compulsion> .
+
+## The mode's fiction-time lifetime: a closed interval whose bounds are DESIGNATED by narrative
+## anchors naming the founding and discharging acts. Deliberately NOT clock-grounded: the
+## committed acts carry table-clock dcterms:created instants, and no authority has mapped those
+## onto the Inn's world-time axis — minting offsets here would fabricate a correspondence
+## (including the tempting existing 900/1500 pair, refused as shape-inference). The deferred
+## grounding is carried as an addressable tmpo:ContinuityDebt on the axis qualification below.
+<https://spectacular-voyage.github.io/test-inn-ambush/interval/elara-old-road-compulsion>
+  a cat:TemporalRegion ; cat:instanceOf tmpo:Interval ;
+  dcterms:description "The fictional span of the compulsion, from the suggestion's casting to its expiry." ;
+  tmpo:hasBeginning <https://spectacular-voyage.github.io/test-inn-ambush/temporal-anchor/elara-old-road-compulsion/begin> ;
+  tmpo:hasEnd <https://spectacular-voyage.github.io/test-inn-ambush/temporal-anchor/elara-old-road-compulsion/end> .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/temporal-anchor/elara-old-road-compulsion/begin>
+  a cat:InformationObject ; cat:instanceOf tmpo:TemporalAnchor ;
+  dcterms:description "Narrative anchor, ungrounded: the moment the suggestion is cast." ;
+  dcterms:references <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/spell/suggestion-old-road-001> .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/temporal-anchor/elara-old-road-compulsion/end>
+  a cat:InformationObject ; cat:instanceOf tmpo:TemporalAnchor ;
+  dcterms:description "Narrative anchor, ungrounded: the moment the suggestion expires." ;
+  dcterms:references <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/spell-expiry/suggestion-old-road-001> .
+
+## The axis selection, stated without fabricating positions: the mode's lifetime is read on the
+## Inn's own world-time axis, and the anchors' positions on it are a named, addressable debt
+## whose discharge is a later grounding act — never a silent offset.
+<https://spectacular-voyage.github.io/test-inn-ambush/temporal-qualification/elara-old-road-compulsion>
+  a cat:Relator ; cat:instanceOf tmpo:TemporalQualification ;
+  tmpo:qualifiedEntity <https://spectacular-voyage.github.io/test-inn-ambush/desire-mode/elara/old-road-compulsion> ;
+  tmpo:qualifyingTime <https://spectacular-voyage.github.io/test-inn-ambush/interval/elara-old-road-compulsion> ;
+  tmpo:qualificationAxis <https://spectacular-voyage.github.io/test-inn-ambush/world-time-axis/main> ;
+  tmpo:hasContinuityDebt <https://spectacular-voyage.github.io/test-inn-ambush/continuity-debt/elara-old-road-compulsion-grounding> .
+
+<https://spectacular-voyage.github.io/test-inn-ambush/continuity-debt/elara-old-road-compulsion-grounding>
+  a cat:InformationObject ; cat:instanceOf tmpo:ContinuityDebt ;
+  dcterms:description "Deferred grounding: the compulsion interval's anchors have no adjudicated positions on the Inn world-time axis. The committed acts' dcterms:created values are table-clock instants and do not designate fiction positions; discharge is the grounding act that maps them." .
+
+## Family co-classification of the referenced estate subjects (the ratified regime: reach is
+## bought by explicit co-classification at write; the journal itself is never rewritten).
+<https://spectacular-voyage.github.io/test-inn-ambush/world-time-axis/main>
+  cat:instanceOf tmpo:WorldTimeAxis .
+<https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/spell/suggestion-old-road-001>
+  a cat:Event ; cat:instanceOf psy:ConativeImplantAct .
+<https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/spell-expiry/suggestion-old-road-001>
+  a cat:Event ; cat:instanceOf psy:ConativeRecordRemovalAct .
+
+## The characterization revision: a NEW record superseding the committed one. Same window, same
+## founding act, same compulsion — sharper wording of the same pull.
+<https://spectacular-voyage.github.io/test-inn-ambush/desire-record/elara/suggestion-old-road-r2>
+  a cat:InformationObject ; cat:instanceOf psy:DesireRecord ;
+  dcterms:description "Characterization revision of the committed desire record: sharper wording, same desire." ;
+  psy:experiencedBy <https://spectacular-voyage.github.io/test-inn-ambush/actant/elara> ;
+  psy:content "Elara feels a magically compelled pull to walk out onto the old road and call on the hidden ambushers to stand down." ;
+  psy:targetShape psy:actTarget ;
+  psy:teleology psy:instrumental ;
+  psy:servesGoal <https://spectacular-voyage.github.io/test-inn-ambush/goal/ambushers-draw-elara-out> ;
+  psy:persistence psy:episodic ;
+  psy:authorshipBasis psy:implanted ;
+  psy:causedBy <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/spell/suggestion-old-road-001> ;
+  psy:activeFrom "2026-07-07T19:55:00Z"^^xsd:dateTime ;
+  psy:activeUntil "2026-07-07T20:05:00Z"^^xsd:dateTime ;
+  psy:compulsionGrade psy:compelled ;
+  psy:removedBy <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/spell-expiry/suggestion-old-road-001> ;
+  psy:evidences <https://spectacular-voyage.github.io/test-inn-ambush/desire-mode/elara/old-road-compulsion> .
+
+## Supersession and the committed record's own evidence edge — additive assertions ABOUT the
+## immutable record, in this fixture graph.
+<https://spectacular-voyage.github.io/test-inn-ambush/desire-record/elara/suggestion-old-road>
+  cat:supersededBy <https://spectacular-voyage.github.io/test-inn-ambush/desire-record/elara/suggestion-old-road-r2> ;
+  psy:evidences <https://spectacular-voyage.github.io/test-inn-ambush/desire-mode/elara/old-road-compulsion> .

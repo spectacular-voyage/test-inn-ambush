@@ -1,0 +1,32 @@
+# THE ADJUDICATION'S WITNESS (the WIDEN fixture's #13 discriminator): the committed record and
+# its characterization revision converge on ONE Desire mode carrying the full lifetime. TRUE
+# under the adjudicated SAME-MODE reading; RED when the revision's evidence edge is rebound to
+# a second mode (the rejected NEW-MODE reading), and RED when any lifetime carrier is deleted.
+# Runs over the fixture file alone (asserted-only; the journal is referenced, not required).
+PREFIX cat:  <https://categoriae.github.io/ontology/>
+PREFIX psy:  <https://psychikon.github.io/ontology/>
+PREFIX tmpo: <https://temporaenum.github.io/ontology/>
+
+ASK {
+  <https://spectacular-voyage.github.io/test-inn-ambush/desire-record/elara/suggestion-old-road>
+    cat:supersededBy <https://spectacular-voyage.github.io/test-inn-ambush/desire-record/elara/suggestion-old-road-r2> ;
+    psy:evidences ?mode .
+  <https://spectacular-voyage.github.io/test-inn-ambush/desire-record/elara/suggestion-old-road-r2>
+    psy:evidences ?mode .
+  ?mode cat:instanceOf psy:Desire ;
+        cat:inheresIn <https://spectacular-voyage.github.io/test-inn-ambush/actant/elara> ;
+        cat:createdIn <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/spell/suggestion-old-road-001> ;
+        cat:terminatedIn <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/spell-expiry/suggestion-old-road-001> ;
+        cat:hasTimeExtent ?interval .
+  ?interval cat:instanceOf tmpo:Interval ;
+            tmpo:hasBeginning ?begin ;
+            tmpo:hasEnd ?end .
+  FILTER NOT EXISTS {
+    ?r psy:evidences ?otherMode .
+    VALUES ?r {
+      <https://spectacular-voyage.github.io/test-inn-ambush/desire-record/elara/suggestion-old-road>
+      <https://spectacular-voyage.github.io/test-inn-ambush/desire-record/elara/suggestion-old-road-r2>
+    }
+    FILTER (?otherMode != ?mode)
+  }
+}

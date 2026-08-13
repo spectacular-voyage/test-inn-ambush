@@ -1,0 +1,17 @@
+# One founding act founds ONE mode: exactly one Desire mode created in the suggestion implant
+# act and inhering in Elara. RED if a second mode is minted for the same founding act and
+# bearer — the adjudicated identity made testable as uniqueness.
+PREFIX cat: <https://categoriae.github.io/ontology/>
+PREFIX psy: <https://psychikon.github.io/ontology/>
+
+ASK {
+  ?m cat:instanceOf psy:Desire ;
+     cat:createdIn <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/spell/suggestion-old-road-001> ;
+     cat:inheresIn <https://spectacular-voyage.github.io/test-inn-ambush/actant/elara> .
+  FILTER NOT EXISTS {
+    ?m2 cat:instanceOf psy:Desire ;
+        cat:createdIn <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/spell/suggestion-old-road-001> ;
+        cat:inheresIn <https://spectacular-voyage.github.io/test-inn-ambush/actant/elara> .
+    FILTER (?m2 != ?m)
+  }
+}
