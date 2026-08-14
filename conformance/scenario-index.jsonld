@@ -164,9 +164,9 @@
       ]
     },
     {
-      "id": "#11-temporal-vocabulary-records",
+      "id": "#12-temporal-vocabulary-woven",
       "type": "ScenarioStep",
-      "manifestPath": "11-temporal-vocabulary-records.jsonld",
+      "manifestPath": "12-temporal-vocabulary-woven-scenario.jsonld",
       "hasLaneBinding": [
         {
           "type": "LaneStateBinding",
@@ -174,12 +174,12 @@
           "fromLaneState": {
             "type": "StateLocator",
             "locatorKind": "gitRefState",
-            "ref": "a.10-character-visibility-response-woven"
+            "ref": "a.11-temporal-vocabulary-records"
           },
           "toLaneState": {
             "type": "StateLocator",
             "locatorKind": "gitRefState",
-            "ref": "a.11-temporal-vocabulary-records"
+            "ref": "a.12-temporal-vocabulary-woven"
           }
         }
       ]
