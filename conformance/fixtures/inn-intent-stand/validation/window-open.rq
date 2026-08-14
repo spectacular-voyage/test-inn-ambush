@@ -1,0 +1,8 @@
+# The derived reconsideration window, single-cycle (the landed sg law): accepted AND no stand.
+# Over G+ returns exactly intent-bar-the-door; the mutants move this answer, which is the point.
+PREFIX cat: <https://categoriae.github.io/ontology/>
+PREFIX par: <https://participatorium.github.io/ontology/>
+SELECT DISTINCT ?intent WHERE {
+  ?acc cat:instanceOf par:IntentAccepted ; par:acceptsIntent ?intent .
+  FILTER NOT EXISTS { ?stand cat:instanceOf par:IntentStand ; par:standsIntent ?intent . }
+} ORDER BY ?intent

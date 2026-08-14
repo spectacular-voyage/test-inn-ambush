@@ -1,0 +1,9 @@
+# The construction receipt for the mint: a TYPED stand event stands the cellar intent — both
+# the class discriminator (cat:instanceOf par:IntentStand) and the relation discriminator
+# (par:standsIntent to THIS intent) in one joined ASK.
+PREFIX cat: <https://categoriae.github.io/ontology/>
+PREFIX par: <https://participatorium.github.io/ontology/>
+ASK {
+  ?stand a cat:Event ; cat:instanceOf par:IntentStand ;
+         par:standsIntent <https://spectacular-voyage.github.io/test-inn-ambush/conformance/fixtures/inn-intent-stand/intent-search-the-cellar> .
+}

@@ -1,0 +1,61 @@
+# baseURI: https://spectacular-voyage.github.io/test-inn-ambush/conformance/fixtures/inn-intent-stand
+
+@prefix cat:     <https://categoriae.github.io/ontology/> .
+@prefix par:     <https://participatorium.github.io/ontology/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix fix:     <https://spectacular-voyage.github.io/test-inn-ambush/conformance/fixtures/inn-intent-stand/> .
+
+## ---------------------------------------------------------------------------------------------
+## INN-INTENT-STAND FIXTURE — the #13-style exercise for tonight's par:IntentStand +
+## par:standsIntent mint, AND the witnessed demonstrations of BOTH same-night derivations:
+## the reconsideration window's derived openness (single-cycle) and the accepted-pending-
+## clarification query's missing discriminator (the false positive, witnessed not fixed).
+##
+## TWO otherwise-eligible accepted intents (the stand-design review's amendment ④); ONE stand
+## event standing exactly one of them. The DISCRIMINATORS: (class) removing the stand event's
+## cat:instanceOf par:IntentStand must flip the stood answer AND reopen A's derived window;
+## (relation) swapping par:standsIntent to the other intent must flip BOTH intents' answers.
+## Receipt-only mutants carry those ablations; the fixture graph is never world history.
+##
+## SCOPE, honestly: single acceptance/stand cycle per intent (the landed sg law — repeat-cycle
+## pairing needs a ruled contract and is NOT exercised here); the singleton-targeting convention
+## is NOT promoted to a shape (no sh legs — no par: shapes exist yet, stated rather than
+## implied); Wren's warrant below is an ORDINARY test-resolution warrant whose only job is to
+## witness the APC false positive.
+## ---------------------------------------------------------------------------------------------
+
+## Intent A — accepted AND stood: its derived reconsideration window is CLOSED.
+fix:intent-search-the-cellar
+  a cat:InformationObject ; cat:instanceOf par:Intent ;
+  dcterms:title "Search the cellar" ;
+  dcterms:description "Wren's declared intent: go below and search the inn's cellar before the light fails." .
+
+fix:acceptance-search-the-cellar
+  a cat:InformationObject ; cat:instanceOf par:IntentAccepted ;
+  dcterms:title "Acceptance: search the cellar" ;
+  par:acceptsIntent fix:intent-search-the-cellar .
+
+fix:stand-search-the-cellar
+  a cat:Event ; cat:instanceOf par:IntentStand ;
+  dcterms:title "The cellar search stands" ;
+  dcterms:description "The table's auto-stand tier lets the mundane declaration settle; no performer is asserted, per the labeled authoring convention." ;
+  par:standsIntent fix:intent-search-the-cellar .
+
+## Intent B — accepted, NOT stood: its derived window is OPEN. It also carries an ordinary live
+## adjudication warrant, which the naive pending-clarification query WRONGLY matches — the
+## witnessed missing-discriminator demonstration.
+fix:intent-bar-the-door
+  a cat:InformationObject ; cat:instanceOf par:Intent ;
+  dcterms:title "Bar the door" ;
+  dcterms:description "Talla's declared intent: drop the bar before whatever is on the road arrives." .
+
+fix:acceptance-bar-the-door
+  a cat:InformationObject ; cat:instanceOf par:IntentAccepted ;
+  dcterms:title "Acceptance: bar the door" ;
+  par:acceptsIntent fix:intent-bar-the-door .
+
+fix:warrant-bar-the-door
+  a cat:Relator ; cat:instanceOf par:Warrant ;
+  dcterms:title "Warrant: resolve the bar-the-door test" ;
+  dcterms:description "An ORDINARY test-resolution warrant, live (no resolving, declining or withdrawing act in this graph). Deliberately NOT a clarification round-trip — which is exactly why the naive pending-clarification query matching it is the witnessed false positive." ;
+  par:adjudicatesIntent fix:intent-bar-the-door .

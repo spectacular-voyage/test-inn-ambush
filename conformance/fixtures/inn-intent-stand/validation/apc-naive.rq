@@ -1,0 +1,13 @@
+# The NAIVE pending-clarification query (accepted + live adjudication warrant + no terminating
+# act). Over G+ it returns intent-bar-the-door — a WITNESSED FALSE POSITIVE: that warrant is an
+# ordinary test-resolution request, not a clarification round-trip. This leg DEMONSTRATES the
+# missing clarification discriminator the sg law records; it does not fix it.
+PREFIX cat: <https://categoriae.github.io/ontology/>
+PREFIX par: <https://participatorium.github.io/ontology/>
+SELECT DISTINCT ?intent WHERE {
+  ?acc cat:instanceOf par:IntentAccepted ; par:acceptsIntent ?intent .
+  ?w cat:instanceOf par:Warrant ; par:adjudicatesIntent ?intent .
+  FILTER NOT EXISTS { ?e par:resolvesWarrant ?w . }
+  FILTER NOT EXISTS { ?e2 par:declinesWarrant ?w . }
+  FILTER NOT EXISTS { ?e3 par:withdrawsWarrant ?w . }
+} ORDER BY ?intent
