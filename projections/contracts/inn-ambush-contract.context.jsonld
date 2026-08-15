@@ -5,7 +5,7 @@
     "sc": "https://spectacular-voyage.github.io/stagecraft/ontology/",
     "sflo": "https://semantic-flow.github.io/sflo/ontology/",
     "dyn": "https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/",
-    "orexis": "https://spectacular-voyage.github.io/stagecraft/ontology/orexis/",
+    "psy": "https://psychikon.github.io/ontology/",
     "perceptio": "https://spectacular-voyage.github.io/stagecraft/ontology/perceptio/",
     "kosm": "https://kosmion.github.io/ontology/",
     "possessio": "https://spectacular-voyage.github.io/stagecraft/ontology/possessio/",
@@ -127,87 +127,87 @@
       "@type": "@id"
     },
     "DesireRecord": {
-      "@id": "orexis:DesireRecord",
+      "@id": "psy:DesireRecord",
       "@context": {
-        "content": "orexis:content"
+        "content": "psy:content"
       }
     },
     "DispositionRecord": {
-      "@id": "orexis:DispositionRecord",
+      "@id": "psy:DispositionRecord",
       "@context": {
-        "content": "orexis:content"
+        "content": "psy:content"
       }
     },
     "owner": {
-      "@id": "orexis:owner",
+      "@id": "psy:experiencedBy",
       "@type": "@id"
     },
     "targetShape": {
-      "@id": "orexis:targetShape",
+      "@id": "psy:targetShape",
       "@type": "@id"
     },
     "teleology": {
-      "@id": "orexis:teleology",
+      "@id": "psy:teleology",
       "@type": "@id"
     },
     "servesGoal": {
-      "@id": "orexis:servesGoal",
+      "@id": "psy:servesGoal",
       "@type": "@id"
     },
     "persistence": {
-      "@id": "orexis:persistence",
+      "@id": "psy:persistence",
       "@type": "@id"
     },
     "beneficiary": {
-      "@id": "orexis:beneficiary",
+      "@id": "psy:beneficiary",
       "@type": "@id"
     },
     "atCostOf": {
-      "@id": "orexis:atCostOf",
+      "@id": "psy:atCostOf",
       "@type": "@id"
     },
     "authorshipBasis": {
-      "@id": "orexis:authorshipBasis",
+      "@id": "psy:authorshipBasis",
       "@type": "@id"
     },
     "causedBy": {
-      "@id": "orexis:causedBy",
+      "@id": "psy:causedBy",
       "@type": "@id"
     },
     "activeFrom": {
-      "@id": "orexis:activeFrom",
+      "@id": "psy:activeFrom",
       "@type": "xsd:dateTime"
     },
     "activeUntil": {
-      "@id": "orexis:activeUntil",
+      "@id": "psy:activeUntil",
       "@type": "xsd:dateTime"
     },
     "intensity": {
-      "@id": "orexis:intensity",
+      "@id": "psy:intensity",
       "@type": "xsd:decimal"
     },
     "compulsionGrade": {
-      "@id": "orexis:compulsionGrade",
+      "@id": "psy:compulsionGrade",
       "@type": "@id"
     },
     "removedBy": {
-      "@id": "orexis:removedBy",
+      "@id": "psy:removedBy",
       "@type": "@id"
     },
     "adoptedAs": {
-      "@id": "orexis:adoptedAs",
+      "@id": "psy:adoptedAs",
       "@type": "@id"
     },
     "toward": {
-      "@id": "orexis:toward",
+      "@id": "psy:toward",
       "@type": "@id"
     },
     "flavor": {
-      "@id": "orexis:flavor",
+      "@id": "psy:flavor",
       "@type": "@id"
     },
     "contraryTo": {
-      "@id": "orexis:contraryTo",
+      "@id": "psy:contraryTo",
       "@type": "@id"
     },
     "spokenByActant": {

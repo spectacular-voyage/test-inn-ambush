@@ -1,7 +1,7 @@
 @prefix sc: <https://spectacular-voyage.github.io/stagecraft/ontology/> .
 @prefix sc-sh: <https://spectacular-voyage.github.io/stagecraft/shacl/> .
 @prefix dyn: <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/> .
-@prefix orexis: <https://spectacular-voyage.github.io/stagecraft/ontology/orexis/> .
+@prefix psy: <https://psychikon.github.io/ontology/> .
 @prefix perceptio: <https://spectacular-voyage.github.io/stagecraft/ontology/perceptio/> .
 @prefix kosm: <https://kosmion.github.io/ontology/> .
 @prefix possessio: <https://spectacular-voyage.github.io/stagecraft/ontology/possessio/> .
@@ -2304,13 +2304,13 @@ sc-sh:SharedConativeRecordShape
     sh:maxCount 1 ;
   ] ;
   sh:property [
-    sh:path orexis:owner ;
+    sh:path psy:experiencedBy ;
     sh:nodeKind sh:IRI ;
     sh:minCount 1 ;
     sh:maxCount 1 ;
   ] ;
   sh:property [
-    sh:path orexis:content ;
+    sh:path psy:content ;
     sh:datatype xsd:string ;
     sh:minLength 1 ;
     sh:pattern "\\S" ;
@@ -2318,63 +2318,63 @@ sc-sh:SharedConativeRecordShape
     sh:maxCount 1 ;
   ] ;
   sh:property [
-    sh:path orexis:persistence ;
+    sh:path psy:persistence ;
     sh:nodeKind sh:IRI ;
     sh:minCount 1 ;
     sh:maxCount 1 ;
   ] ;
   sh:property [
-    sh:path orexis:beneficiary ;
+    sh:path psy:beneficiary ;
     sh:nodeKind sh:IRI ;
     sh:minCount 1 ;
     sh:maxCount 1 ;
   ] ;
   sh:property [
-    sh:path orexis:atCostOf ;
+    sh:path psy:atCostOf ;
     sh:nodeKind sh:IRI ;
   ] ;
   sh:property [
-    sh:path orexis:authorshipBasis ;
-    sh:nodeKind sh:IRI ;
-    sh:minCount 1 ;
-    sh:maxCount 1 ;
-  ] ;
-  sh:property [
-    sh:path orexis:causedBy ;
+    sh:path psy:authorshipBasis ;
     sh:nodeKind sh:IRI ;
     sh:minCount 1 ;
     sh:maxCount 1 ;
   ] ;
   sh:property [
-    sh:path orexis:activeFrom ;
+    sh:path psy:causedBy ;
+    sh:nodeKind sh:IRI ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path psy:activeFrom ;
     sh:datatype xsd:dateTime ;
     sh:minCount 1 ;
     sh:maxCount 1 ;
   ] ;
   sh:property [
-    sh:path orexis:activeUntil ;
+    sh:path psy:activeUntil ;
     sh:datatype xsd:dateTime ;
     sh:maxCount 1 ;
   ] ;
   sh:property [
-    sh:path orexis:intensity ;
+    sh:path psy:intensity ;
     sh:datatype xsd:decimal ;
     sh:minInclusive 0 ;
     sh:maxInclusive 1 ;
     sh:maxCount 1 ;
   ] ;
   sh:property [
-    sh:path orexis:compulsionGrade ;
+    sh:path psy:compulsionGrade ;
     sh:nodeKind sh:IRI ;
     sh:maxCount 1 ;
   ] ;
   sh:property [
-    sh:path orexis:removedBy ;
+    sh:path psy:removedBy ;
     sh:nodeKind sh:IRI ;
     sh:maxCount 1 ;
   ] ;
   sh:property [
-    sh:path orexis:adoptedAs ;
+    sh:path psy:adoptedAs ;
     sh:nodeKind sh:IRI ;
     sh:maxCount 1 ;
   ] ;
@@ -2385,7 +2385,7 @@ sc-sh:SharedConativeRecordShape
 
 sc-sh:DesireRecordShape
   a sh:NodeShape ;
-  sh:targetClass orexis:DesireRecord ;
+  sh:targetClass psy:DesireRecord ;
   sh:node sc-sh:SharedConativeRecordShape ;
   sh:property [
     sh:path sc:envelopeType ;
@@ -2394,26 +2394,26 @@ sc-sh:DesireRecordShape
     sh:maxCount 1 ;
   ] ;
   sh:property [
-    sh:path orexis:targetShape ;
+    sh:path psy:targetShape ;
     sh:nodeKind sh:IRI ;
     sh:minCount 1 ;
     sh:maxCount 1 ;
   ] ;
   sh:property [
-    sh:path orexis:teleology ;
+    sh:path psy:teleology ;
     sh:nodeKind sh:IRI ;
     sh:minCount 1 ;
     sh:maxCount 1 ;
   ] ;
   sh:property [
-    sh:path orexis:servesGoal ;
+    sh:path psy:servesGoal ;
     sh:nodeKind sh:IRI ;
     sh:maxCount 1 ;
   ] .
 
 sc-sh:DispositionRecordShape
   a sh:NodeShape ;
-  sh:targetClass orexis:DispositionRecord ;
+  sh:targetClass psy:DispositionRecord ;
   sh:node sc-sh:SharedConativeRecordShape ;
   sh:property [
     sh:path sc:envelopeType ;
@@ -2422,13 +2422,13 @@ sc-sh:DispositionRecordShape
     sh:maxCount 1 ;
   ] ;
   sh:property [
-    sh:path orexis:toward ;
+    sh:path psy:toward ;
     sh:nodeKind sh:IRI ;
     sh:minCount 1 ;
     sh:maxCount 1 ;
   ] ;
   sh:property [
-    sh:path orexis:flavor ;
+    sh:path psy:flavor ;
     sh:nodeKind sh:IRI ;
     sh:minCount 1 ;
     sh:maxCount 1 ;

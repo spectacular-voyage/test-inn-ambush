@@ -14,7 +14,7 @@ selection (`tmpo:TemporalQualification` onto the Inn's world-time axis), and the
 characterization-revision record `…suggestion-old-road-r2` superseding the committed record.
 
 ⛔ **NOT the MIGRATE or NARROW rungs**: the committed record, its `activeFrom`/`activeUntil`,
-the `orexis:` spellings, the Inn contract shape and the JSON-LD context are all untouched.
+the `orexis:` spellings, the Inn contract shape and the JSON-LD context are all untouched. *(AS OF THIS RUNG'S LANDING — the MIGRATE rung's orexis half was performed 2026-08-14 under the ambush migration's Slice 2, orexis-first: those spellings, the contract shape and the context now speak `psy:`; the committed records keep their IRIs.)*
 ⛔ **The committed authority journal is never rewritten**: every act is referenced by IRI;
 supersession, evidence edges and family co-classifications are additive assertions in THIS
 fixture graph (the ratified explicit-co-classification-at-write regime).
@@ -59,6 +59,6 @@ positive and did — the acts are real committed subjects, not fixture invention
 ## Boarded, not claimed
 
 - **MIGRATE rung**: the two committed conative records + the belief record, the Inn contract
-  shape (`orexis:activeFrom`), the JSON-LD context.
+  shape (`orexis:activeFrom`, now `psy:activeFrom` since the 2026-08-14 orexis migration), the JSON-LD context.
 - **NARROW rung**: `active*` retirement behind amendment #11's one absence receipt.
 - **Grounding act**: discharge of `continuity-debt/elara-old-road-compulsion-grounding`.

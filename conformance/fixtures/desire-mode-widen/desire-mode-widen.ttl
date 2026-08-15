@@ -11,6 +11,7 @@
 ## 2026-08-10_1612 § ②): the estate's FIRST psy:Desire MODE subject, widening the record-only
 ## conative plane. `active*` RETAINED: the committed record, its activeFrom/activeUntil, the
 ## orexis: spellings, the contract shape and the JSON-LD context are ALL untouched — MIGRATE and
+##   (as of this rung's landing; the orexis half of MIGRATE landed 2026-08-14 — those carriers now speak psy:)
 ## NARROW are later rungs. The committed authority journal is immutable: every act below is
 ## referenced by IRI and gains only ADDITIVE assertions in this fixture graph, never a rewrite.
 ##
