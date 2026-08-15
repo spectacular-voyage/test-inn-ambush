@@ -1,0 +1,85 @@
+{
+  "@context": "http://www.w3.org/ns/csvw",
+  "tableSchema": {
+    "aboutUrl": "https://stagecraft.github.io/srd-rules/srd-5-2-1/spells/{spellKey}",
+    "columns": [
+      {
+        "name": "spellKey"
+      },
+      {
+        "name": "spellLabel"
+      },
+      {
+        "name": "level"
+      },
+      {
+        "name": "schoolKey",
+        "valueUrl": "https://stagecraft.github.io/srd-rules/srd-5-2-1/spell-schools/{schoolKey}"
+      },
+      {
+        "name": "castingTime"
+      },
+      {
+        "name": "actionEconomyTag",
+        "valueUrl": "https://stagecraft.github.io/srd-rules/srd-5-2-1/action-economy-tags/{actionEconomyTag}"
+      },
+      {
+        "name": "rangeText"
+      },
+      {
+        "name": "rangeKind",
+        "valueUrl": "https://stagecraft.github.io/srd-rules/srd-5-2-1/spell-ranges/{rangeKind}"
+      },
+      {
+        "name": "rangeDistanceFeet"
+      },
+      {
+        "name": "rangeAreaText"
+      },
+      {
+        "name": "componentVerbal"
+      },
+      {
+        "name": "componentSomatic"
+      },
+      {
+        "name": "componentMaterial"
+      },
+      {
+        "name": "materialText"
+      },
+      {
+        "name": "duration"
+      },
+      {
+        "name": "concentration"
+      },
+      {
+        "name": "ritual"
+      },
+      {
+        "name": "requiresSavingThrow"
+      },
+      {
+        "name": "saveAbilityKeys",
+        "separator": ";",
+        "valueUrl": "https://stagecraft.github.io/srd-rules/srd-5-2-1/abilities/{saveAbilityKeys}"
+      },
+      {
+        "name": "requiresAttackRoll"
+      },
+      {
+        "name": "attackRollKind",
+        "valueUrl": "https://stagecraft.github.io/srd-rules/srd-5-2-1/attack-roll-kinds/{attackRollKind}"
+      },
+      {
+        "name": "atHigherLevelsText"
+      },
+      {
+        "name": "sourceSection"
+      }
+    ],
+    "primaryKey": "spellKey"
+  },
+  "url": "spells.csv"
+}

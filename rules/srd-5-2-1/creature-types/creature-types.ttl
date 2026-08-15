@@ -1,0 +1,83 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix dcterms: <http://purl.org/dc/terms/>.
+@prefix dcat: <http://www.w3.org/ns/dcat#>.
+@prefix cat: <https://categoriae.github.io/ontology/>.
+@prefix kosm: <https://kosmion.github.io/ontology/>.
+@prefix par: <https://participatorium.github.io/ontology/>.
+@prefix srd521: <https://stagecraft.github.io/srd-rules/srd-5-2-1/>.
+
+srd521:creature-types dcterms:source <https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf>;
+    dcterms:title "SRD 5.2.1 creature-types"@en;
+    a dcat:Dataset.
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/creature-types/aberration> cat:instanceOf srd521:CreatureTypeKind;
+    a cat:Individual;
+    rdfs:comment "The SRD 5.2.1 creature type Aberration.";
+    rdfs:label "Aberration"@en;
+    cat:lexicalToken "aberration".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/creature-types/beast> cat:instanceOf srd521:CreatureTypeKind;
+    a cat:Individual;
+    rdfs:comment "The SRD 5.2.1 creature type Beast.";
+    rdfs:label "Beast"@en;
+    cat:lexicalToken "beast".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/creature-types/celestial> cat:instanceOf srd521:CreatureTypeKind;
+    a cat:Individual;
+    rdfs:comment "The SRD 5.2.1 creature type Celestial.";
+    rdfs:label "Celestial"@en;
+    cat:lexicalToken "celestial".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/creature-types/construct> cat:instanceOf srd521:CreatureTypeKind;
+    a cat:Individual;
+    rdfs:comment "The SRD 5.2.1 creature type Construct.";
+    rdfs:label "Construct"@en;
+    cat:lexicalToken "construct".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/creature-types/dragon> cat:instanceOf srd521:CreatureTypeKind;
+    a cat:Individual;
+    rdfs:comment "The SRD 5.2.1 creature type Dragon.";
+    rdfs:label "Dragon"@en;
+    cat:lexicalToken "dragon".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/creature-types/elemental> cat:instanceOf srd521:CreatureTypeKind;
+    a cat:Individual;
+    rdfs:comment "The SRD 5.2.1 creature type Elemental.";
+    rdfs:label "Elemental"@en;
+    cat:lexicalToken "elemental".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/creature-types/fey> cat:instanceOf srd521:CreatureTypeKind;
+    a cat:Individual;
+    rdfs:comment "The SRD 5.2.1 creature type Fey.";
+    rdfs:label "Fey"@en;
+    cat:lexicalToken "fey".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/creature-types/fiend> cat:instanceOf srd521:CreatureTypeKind;
+    a cat:Individual;
+    rdfs:comment "The SRD 5.2.1 creature type Fiend.";
+    rdfs:label "Fiend"@en;
+    cat:lexicalToken "fiend".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/creature-types/giant> cat:instanceOf srd521:CreatureTypeKind;
+    a cat:Individual;
+    rdfs:comment "The SRD 5.2.1 creature type Giant.";
+    rdfs:label "Giant"@en;
+    cat:lexicalToken "giant".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/creature-types/humanoid> cat:instanceOf srd521:CreatureTypeKind;
+    a cat:Individual;
+    rdfs:comment "The SRD 5.2.1 creature type Humanoid.";
+    rdfs:label "Humanoid"@en;
+    cat:lexicalToken "humanoid".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/creature-types/monstrosity> cat:instanceOf srd521:CreatureTypeKind;
+    a cat:Individual;
+    rdfs:comment "The SRD 5.2.1 creature type Monstrosity.";
+    rdfs:label "Monstrosity"@en;
+    cat:lexicalToken "monstrosity".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/creature-types/ooze> cat:instanceOf srd521:CreatureTypeKind;
+    a cat:Individual;
+    rdfs:comment "The SRD 5.2.1 creature type Ooze.";
+    rdfs:label "Ooze"@en;
+    cat:lexicalToken "ooze".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/creature-types/plant> cat:instanceOf srd521:CreatureTypeKind;
+    a cat:Individual;
+    rdfs:comment "The SRD 5.2.1 creature type Plant.";
+    rdfs:label "Plant"@en;
+    cat:lexicalToken "plant".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/creature-types/undead> cat:instanceOf srd521:CreatureTypeKind;
+    a cat:Individual;
+    rdfs:comment "The SRD 5.2.1 creature type Undead.";
+    rdfs:label "Undead"@en;
+    cat:lexicalToken "undead".

@@ -1,0 +1,123 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix dcterms: <http://purl.org/dc/terms/>.
+@prefix dcat: <http://www.w3.org/ns/dcat#>.
+@prefix cat: <https://categoriae.github.io/ontology/>.
+@prefix kosm: <https://kosmion.github.io/ontology/>.
+@prefix par: <https://participatorium.github.io/ontology/>.
+@prefix srd521: <https://stagecraft.github.io/srd-rules/srd-5-2-1/>.
+
+srd521:creatures dcterms:source <https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf>;
+    dcterms:title "SRD 5.2.1 creature rules"@en;
+    a dcat:Dataset.
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/creatures/bandit> cat:instanceOf srd521:CreatureDefinition;
+    a cat:Description;
+    rdfs:label "Bandit"@en;
+    srd521:alignment srd521:neutral;
+    srd521:armorClass 12;
+    srd521:challengeRating 0.125;
+    srd521:charismaScore 10;
+    srd521:constitutionScore 12;
+    srd521:creatureTypeKind <https://stagecraft.github.io/srd-rules/srd-5-2-1/creature-types/humanoid>;
+    srd521:dexterityScore 12;
+    srd521:hitDiceExpression "2d8 + 2";
+    srd521:hitPointsAverage 11;
+    srd521:intelligenceScore 10;
+    srd521:languagesText "Common, Thieves’ Cant";
+    srd521:passivePerception 10;
+    srd521:proficiencyBonus 2;
+    srd521:sizeKind <https://stagecraft.github.io/srd-rules/srd-5-2-1/sizes/medium>, <https://stagecraft.github.io/srd-rules/srd-5-2-1/sizes/small>;
+    srd521:sourceSection "Monsters: Bandits: Bandit";
+    srd521:strengthScore 11;
+    srd521:walkSpeedFeet 30;
+    srd521:wisdomScore 10;
+    srd521:xpValue 25.
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/creatures/commoner> cat:instanceOf srd521:CreatureDefinition;
+    a cat:Description;
+    rdfs:label "Commoner"@en;
+    srd521:alignment srd521:neutral;
+    srd521:armorClass 10;
+    srd521:challengeRating 0;
+    srd521:charismaScore 10;
+    srd521:constitutionScore 10;
+    srd521:creatureTypeKind <https://stagecraft.github.io/srd-rules/srd-5-2-1/creature-types/humanoid>;
+    srd521:dexterityScore 10;
+    srd521:hitDiceExpression "1d8";
+    srd521:hitPointsAverage 4;
+    srd521:intelligenceScore 10;
+    srd521:languagesText "Common";
+    srd521:passivePerception 10;
+    srd521:proficiencyBonus 2;
+    srd521:sizeKind <https://stagecraft.github.io/srd-rules/srd-5-2-1/sizes/medium>, <https://stagecraft.github.io/srd-rules/srd-5-2-1/sizes/small>;
+    srd521:sourceSection "Monsters: Commoner";
+    srd521:strengthScore 10;
+    srd521:walkSpeedFeet 30;
+    srd521:wisdomScore 10;
+    srd521:xpValue 10.
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/creatures/guard> cat:instanceOf srd521:CreatureDefinition;
+    a cat:Description;
+    rdfs:label "Guard"@en;
+    srd521:alignment srd521:neutral;
+    srd521:armorClass 16;
+    srd521:challengeRating 0.125;
+    srd521:charismaScore 10;
+    srd521:constitutionScore 12;
+    srd521:creatureTypeKind <https://stagecraft.github.io/srd-rules/srd-5-2-1/creature-types/humanoid>;
+    srd521:dexterityScore 12;
+    srd521:hitDiceExpression "2d8 + 2";
+    srd521:hitPointsAverage 11;
+    srd521:intelligenceScore 10;
+    srd521:languagesText "Common";
+    srd521:passivePerception 12;
+    srd521:proficiencyBonus 2;
+    srd521:sizeKind <https://stagecraft.github.io/srd-rules/srd-5-2-1/sizes/medium>, <https://stagecraft.github.io/srd-rules/srd-5-2-1/sizes/small>;
+    srd521:sourceSection "Monsters: Guards: Guard";
+    srd521:strengthScore 13;
+    srd521:walkSpeedFeet 30;
+    srd521:wisdomScore 11;
+    srd521:xpValue 25.
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/creatures/guard-perception> cat:instanceOf srd521:CreatureSkillProficiency;
+    a cat:Description;
+    rdfs:label "Guard Perception +2"@en;
+    srd521:forCreature <https://stagecraft.github.io/srd-rules/srd-5-2-1/creatures/guard>;
+    srd521:skillBonus 2;
+    srd521:sourceSection "Monsters: Guards: Guard";
+    srd521:usesSkill <https://stagecraft.github.io/srd-rules/srd-5-2-1/skills/perception>.
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/creatures/wolf> cat:instanceOf srd521:CreatureDefinition;
+    a cat:Description;
+    rdfs:label "Wolf"@en;
+    srd521:alignment srd521:unaligned;
+    srd521:armorClass 12;
+    srd521:challengeRating 0.25;
+    srd521:charismaScore 6;
+    srd521:constitutionScore 12;
+    srd521:creatureTypeKind <https://stagecraft.github.io/srd-rules/srd-5-2-1/creature-types/beast>;
+    srd521:darkvisionFeet 60;
+    srd521:dexterityScore 15;
+    srd521:hitDiceExpression "2d8 + 2";
+    srd521:hitPointsAverage 11;
+    srd521:intelligenceScore 3;
+    srd521:languagesText "None";
+    srd521:passivePerception 15;
+    srd521:proficiencyBonus 2;
+    srd521:sizeKind <https://stagecraft.github.io/srd-rules/srd-5-2-1/sizes/medium>;
+    srd521:sourceSection "Animals: Wolf";
+    srd521:strengthScore 14;
+    srd521:walkSpeedFeet 40;
+    srd521:wisdomScore 12;
+    srd521:xpValue 50.
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/creatures/wolf-perception> cat:instanceOf srd521:CreatureSkillProficiency;
+    a cat:Description;
+    rdfs:label "Wolf Perception +5"@en;
+    srd521:forCreature <https://stagecraft.github.io/srd-rules/srd-5-2-1/creatures/wolf>;
+    srd521:skillBonus 5;
+    srd521:sourceSection "Animals: Wolf";
+    srd521:usesSkill <https://stagecraft.github.io/srd-rules/srd-5-2-1/skills/perception>.
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/creatures/wolf-stealth> cat:instanceOf srd521:CreatureSkillProficiency;
+    a cat:Description;
+    rdfs:label "Wolf Stealth +4"@en;
+    srd521:forCreature <https://stagecraft.github.io/srd-rules/srd-5-2-1/creatures/wolf>;
+    srd521:skillBonus 4;
+    srd521:sourceSection "Animals: Wolf";
+    srd521:usesSkill <https://stagecraft.github.io/srd-rules/srd-5-2-1/skills/stealth>.

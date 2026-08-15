@@ -1,0 +1,45 @@
+{
+  "@context": "http://www.w3.org/ns/csvw",
+  "tableSchema": {
+    "aboutUrl": "https://stagecraft.github.io/srd-rules/srd-5-2-1/spells/{shapeKey}",
+    "columns": [
+      {
+        "name": "shapeKey"
+      },
+      {
+        "name": "spellKey",
+        "valueUrl": "https://stagecraft.github.io/srd-rules/srd-5-2-1/spells/{spellKey}"
+      },
+      {
+        "name": "spellLabel"
+      },
+      {
+        "name": "shapeKind",
+        "valueUrl": "https://stagecraft.github.io/srd-rules/srd-5-2-1/area-shapes/{shapeKind}"
+      },
+      {
+        "name": "radiusFeet"
+      },
+      {
+        "name": "diameterFeet"
+      },
+      {
+        "name": "lengthFeet"
+      },
+      {
+        "name": "widthFeet"
+      },
+      {
+        "name": "heightFeet"
+      },
+      {
+        "name": "edgeFeet"
+      },
+      {
+        "name": "sourceSection"
+      }
+    ],
+    "primaryKey": "shapeKey"
+  },
+  "url": "spell-area-shapes.csv"
+}

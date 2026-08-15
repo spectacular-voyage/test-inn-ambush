@@ -1,0 +1,153 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix dcterms: <http://purl.org/dc/terms/>.
+@prefix dcat: <http://www.w3.org/ns/dcat#>.
+@prefix cat: <https://categoriae.github.io/ontology/>.
+@prefix kosm: <https://kosmion.github.io/ontology/>.
+@prefix par: <https://participatorium.github.io/ontology/>.
+@prefix srd521: <https://stagecraft.github.io/srd-rules/srd-5-2-1/>.
+
+srd521:condition-effects dcterms:source <https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf>;
+    dcterms:title "SRD 5.2.1 condition-effects"@en;
+    a dcat:Dataset.
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/condition-effects/ability-checks-and-attacks-affected> cat:instanceOf srd521:ConditionEffectType;
+    a cat:Individual;
+    rdfs:comment "The SRD 5.2.1 condition-effect type for Ability checks and attacks affected.";
+    rdfs:label "Ability checks and attacks affected"@en;
+    cat:lexicalToken "ability-checks-and-attacks-affected".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/condition-effects/attacks-affected> cat:instanceOf srd521:ConditionEffectType;
+    a cat:Individual;
+    rdfs:comment "The SRD 5.2.1 condition-effect type for Attacks affected.";
+    rdfs:label "Attacks affected"@en;
+    cat:lexicalToken "attacks-affected".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/condition-effects/automatic-critical-hits> cat:instanceOf srd521:ConditionEffectType;
+    a cat:Individual;
+    rdfs:comment "The SRD 5.2.1 condition-effect type for Automatic critical hits.";
+    rdfs:label "Automatic critical hits"@en;
+    cat:lexicalToken "automatic-critical-hits".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/condition-effects/cant-approach> cat:instanceOf srd521:ConditionEffectType;
+    a cat:Individual;
+    rdfs:comment "The SRD 5.2.1 condition-effect type for Can't approach.";
+    rdfs:label "Can't approach"@en;
+    cat:lexicalToken "cant-approach".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/condition-effects/cant-harm-the-charmer> cat:instanceOf srd521:ConditionEffectType;
+    a cat:Individual;
+    rdfs:comment "The SRD 5.2.1 condition-effect type for Can't harm the charmer.";
+    rdfs:label "Can't harm the charmer"@en;
+    cat:lexicalToken "cant-harm-the-charmer".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/condition-effects/cant-hear> cat:instanceOf srd521:ConditionEffectType;
+    a cat:Individual;
+    rdfs:comment "The SRD 5.2.1 condition-effect type for Can't hear.";
+    rdfs:label "Can't hear"@en;
+    cat:lexicalToken "cant-hear".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/condition-effects/cant-see> cat:instanceOf srd521:ConditionEffectType;
+    a cat:Individual;
+    rdfs:comment "The SRD 5.2.1 condition-effect type for Can't see.";
+    rdfs:label "Can't see"@en;
+    cat:lexicalToken "cant-see".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/condition-effects/concealed> cat:instanceOf srd521:ConditionEffectType;
+    a cat:Individual;
+    rdfs:comment "The SRD 5.2.1 condition-effect type for Concealed.";
+    rdfs:label "Concealed"@en;
+    cat:lexicalToken "concealed".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/condition-effects/d20-tests-affected> cat:instanceOf srd521:ConditionEffectType;
+    a cat:Individual;
+    rdfs:comment "The SRD 5.2.1 condition-effect type for D20 tests affected.";
+    rdfs:label "D20 tests affected"@en;
+    cat:lexicalToken "d20-tests-affected".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/condition-effects/exhaustion-levels> cat:instanceOf srd521:ConditionEffectType;
+    a cat:Individual;
+    rdfs:comment "The SRD 5.2.1 condition-effect type for Exhaustion levels.";
+    rdfs:label "Exhaustion levels"@en;
+    cat:lexicalToken "exhaustion-levels".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/condition-effects/inactive> cat:instanceOf srd521:ConditionEffectType;
+    a cat:Individual;
+    rdfs:comment "The SRD 5.2.1 condition-effect type for Inactive.";
+    rdfs:label "Inactive"@en;
+    cat:lexicalToken "inactive".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/condition-effects/incapacitated> cat:instanceOf srd521:ConditionEffectType;
+    a cat:Individual;
+    rdfs:comment "The SRD 5.2.1 condition-effect type for Incapacitated.";
+    rdfs:label "Incapacitated"@en;
+    cat:lexicalToken "incapacitated".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/condition-effects/inert> cat:instanceOf srd521:ConditionEffectType;
+    a cat:Individual;
+    rdfs:comment "The SRD 5.2.1 condition-effect type for Inert.";
+    rdfs:label "Inert"@en;
+    cat:lexicalToken "inert".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/condition-effects/movable> cat:instanceOf srd521:ConditionEffectType;
+    a cat:Individual;
+    rdfs:comment "The SRD 5.2.1 condition-effect type for Movable.";
+    rdfs:label "Movable"@en;
+    cat:lexicalToken "movable".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/condition-effects/no-concentration> cat:instanceOf srd521:ConditionEffectType;
+    a cat:Individual;
+    rdfs:comment "The SRD 5.2.1 condition-effect type for No concentration.";
+    rdfs:label "No concentration"@en;
+    cat:lexicalToken "no-concentration".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/condition-effects/poison-immunity> cat:instanceOf srd521:ConditionEffectType;
+    a cat:Individual;
+    rdfs:comment "The SRD 5.2.1 condition-effect type for Poison immunity.";
+    rdfs:label "Poison immunity"@en;
+    cat:lexicalToken "poison-immunity".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/condition-effects/removing-exhaustion-levels> cat:instanceOf srd521:ConditionEffectType;
+    a cat:Individual;
+    rdfs:comment "The SRD 5.2.1 condition-effect type for Removing exhaustion levels.";
+    rdfs:label "Removing exhaustion levels"@en;
+    cat:lexicalToken "removing-exhaustion-levels".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/condition-effects/resist-damage> cat:instanceOf srd521:ConditionEffectType;
+    a cat:Individual;
+    rdfs:comment "The SRD 5.2.1 condition-effect type for Resist damage.";
+    rdfs:label "Resist damage"@en;
+    cat:lexicalToken "resist-damage".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/condition-effects/restricted-movement> cat:instanceOf srd521:ConditionEffectType;
+    a cat:Individual;
+    rdfs:comment "The SRD 5.2.1 condition-effect type for Restricted movement.";
+    rdfs:label "Restricted movement"@en;
+    cat:lexicalToken "restricted-movement".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/condition-effects/saving-throws-affected> cat:instanceOf srd521:ConditionEffectType;
+    a cat:Individual;
+    rdfs:comment "The SRD 5.2.1 condition-effect type for Saving throws affected.";
+    rdfs:label "Saving throws affected"@en;
+    cat:lexicalToken "saving-throws-affected".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/condition-effects/social-advantage> cat:instanceOf srd521:ConditionEffectType;
+    a cat:Individual;
+    rdfs:comment "The SRD 5.2.1 condition-effect type for Social advantage.";
+    rdfs:label "Social advantage"@en;
+    cat:lexicalToken "social-advantage".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/condition-effects/speechless> cat:instanceOf srd521:ConditionEffectType;
+    a cat:Individual;
+    rdfs:comment "The SRD 5.2.1 condition-effect type for Speechless.";
+    rdfs:label "Speechless"@en;
+    cat:lexicalToken "speechless".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/condition-effects/speed-0> cat:instanceOf srd521:ConditionEffectType;
+    a cat:Individual;
+    rdfs:comment "The SRD 5.2.1 condition-effect type for Speed 0.";
+    rdfs:label "Speed 0"@en;
+    cat:lexicalToken "speed-0".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/condition-effects/speed-reduced> cat:instanceOf srd521:ConditionEffectType;
+    a cat:Individual;
+    rdfs:comment "The SRD 5.2.1 condition-effect type for Speed reduced.";
+    rdfs:label "Speed reduced"@en;
+    cat:lexicalToken "speed-reduced".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/condition-effects/surprise> cat:instanceOf srd521:ConditionEffectType;
+    a cat:Individual;
+    rdfs:comment "The SRD 5.2.1 condition-effect type for Surprise.";
+    rdfs:label "Surprise"@en;
+    cat:lexicalToken "surprise".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/condition-effects/surprised> cat:instanceOf srd521:ConditionEffectType;
+    a cat:Individual;
+    rdfs:comment "The SRD 5.2.1 condition-effect type for Surprised.";
+    rdfs:label "Surprised"@en;
+    cat:lexicalToken "surprised".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/condition-effects/turned-to-inanimate-substance> cat:instanceOf srd521:ConditionEffectType;
+    a cat:Individual;
+    rdfs:comment "The SRD 5.2.1 condition-effect type for Turned to inanimate substance.";
+    rdfs:label "Turned to inanimate substance"@en;
+    cat:lexicalToken "turned-to-inanimate-substance".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/condition-effects/unaware> cat:instanceOf srd521:ConditionEffectType;
+    a cat:Individual;
+    rdfs:comment "The SRD 5.2.1 condition-effect type for Unaware.";
+    rdfs:label "Unaware"@en;
+    cat:lexicalToken "unaware".

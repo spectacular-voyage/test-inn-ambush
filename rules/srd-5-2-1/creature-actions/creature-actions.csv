@@ -1,0 +1,8 @@
+creatureActionKey,creatureKey,creatureActionLabel,actionKind,attackBonus,reachFeet,rangeNormalFeet,rangeLongFeet,saveDc,saveAbility,damageAverage,damageExpression,damageTypeKey,rechargeText,actionText,sourceSection
+bandit-light-crossbow,bandit,Light Crossbow,action,3,,80,320,,,5,1d8 + 1,piercing,,"Ranged Attack Roll: +3, range 80/320 ft. Hit: 5 (1d8 + 1) Piercing damage.",Monsters: Bandits: Bandit
+bandit-scimitar,bandit,Scimitar,action,3,5,,,,,4,1d6 + 1,slashing,,"Melee Attack Roll: +3, reach 5 ft. Hit: 4 (1d6 + 1) Slashing damage.",Monsters: Bandits: Bandit
+commoner-club,commoner,Club,action,2,5,,,,,2,1d4,bludgeoning,,"Melee Attack Roll: +2, reach 5 ft. Hit: 2 (1d4) Bludgeoning damage.",Monsters: Commoner
+commoner-training,commoner,Training,trait,,,,,,,,,,,"The commoner has proficiency in one skill of the GM’s choice and has Advantage whenever it makes an ability check using that skill.",Monsters: Commoner
+guard-spear,guard,Spear,action,3,5,20,60,,,4,1d6 + 1,piercing,,"Melee or Ranged Attack Roll: +3, reach 5 ft. or range 20/60 ft. Hit: 4 (1d6 + 1) Piercing damage.",Monsters: Guards: Guard
+wolf-bite,wolf,Bite,action,4,5,,,,,5,1d6 + 2,piercing,,"Melee Attack Roll: +4, reach 5 ft. Hit: 5 (1d6 + 2) Piercing damage. If the target is a Medium or smaller creature, it has the Prone condition.",Animals: Wolf
+wolf-pack-tactics,wolf,Pack Tactics,trait,,,,,,,,,,,"The wolf has Advantage on attack rolls against a creature if at least one of the wolf’s allies is within 5 feet of the creature and the ally doesn’t have the Incapacitated condition.",Animals: Wolf

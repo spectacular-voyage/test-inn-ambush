@@ -1,0 +1,65 @@
+shapeKey,spellKey,spellLabel,shapeKind,radiusFeet,diameterFeet,lengthFeet,widthFeet,heightFeet,edgeFeet,sourceSection
+acid-splash-sphere-5,acid-splash,Acid Splash,sphere,5,,,,,,Spell Descriptions: Acid Splash
+alarm-cube-20,alarm,Alarm,cube,,,,,,20,Spell Descriptions: Alarm
+burning-hands-cone-15,burning-hands,Burning Hands,cone,,,15,,,,Spell Descriptions: Burning Hands
+calm-emotions-sphere-20,calm-emotions,Calm Emotions,sphere,20,,,,,,Spell Descriptions: Calm Emotions
+circle-of-death-sphere-60,circle-of-death,Circle of Death,sphere,60,,,,,,Spell Descriptions: Circle of Death
+cloudkill-sphere-20,cloudkill,Cloudkill,sphere,20,,,,,,Spell Descriptions: Cloudkill
+color-spray-cone-15,color-spray,Color Spray,cone,,,15,,,,Spell Descriptions: Color Spray
+cone-of-cold-cone-60,cone-of-cold,Cone of Cold,cone,,,60,,,,Spell Descriptions: Cone of Cold
+confusion-sphere-10,confusion,Confusion,sphere,10,,,,,,Spell Descriptions: Confusion
+conjure-celestial-cylinder-10,conjure-celestial,Conjure Celestial,cylinder,10,,,,40,,Spell Descriptions: Conjure Celestial
+create-or-destroy-water-cube-30,create-or-destroy-water,Create or Destroy Water,cube,,,,,,30,Spell Descriptions: Create or Destroy Water
+creation-cube-5,creation,Creation,cube,,,,,,5,Spell Descriptions: Creation
+darkness-sphere-15,darkness,Darkness,sphere,15,,,,,,Spell Descriptions: Darkness
+daylight-sphere-60,daylight,Daylight,sphere,60,,,,,,Spell Descriptions: Daylight
+delayed-blast-fireball-sphere-20,delayed-blast-fireball,Delayed Blast Fireball,sphere,20,,,,,,Spell Descriptions: Delayed Blast Fireball
+disintegrate-cube-10,disintegrate,Disintegrate,cube,,,,,,10,Spell Descriptions: Disintegrate
+dragons-breath-cone-15,dragons-breath,Dragon's Breath,cone,,,15,,,,Spell Descriptions: Dragon's Breath
+druidcraft-cube-5,druidcraft,Druidcraft,cube,,,,,,5,Spell Descriptions: Druidcraft
+elementalism-cube-5,elementalism,Elementalism,cube,,,,,,5,Spell Descriptions: Elementalism
+elementalism-cube-1,elementalism,Elementalism,cube,,,,,,1,Spell Descriptions: Elementalism
+fabricate-cube-10,fabricate,Fabricate,cube,,,,,,10,Spell Descriptions: Fabricate
+fabricate-cube-5,fabricate,Fabricate,cube,,,,,,5,Spell Descriptions: Fabricate
+faerie-fire-cube-20,faerie-fire,Faerie Fire,cube,,,,,,20,Spell Descriptions: Faerie Fire
+fear-cone-30,fear,Fear,cone,,,30,,,,Spell Descriptions: Fear
+fireball-sphere-20,fireball,Fireball,sphere,20,,,,,,Spell Descriptions: Fireball
+flaming-sphere-sphere-5,flaming-sphere,Flaming Sphere,sphere,,5,,,,,Spell Descriptions: Flaming Sphere
+fog-cloud-sphere-20,fog-cloud,Fog Cloud,sphere,20,,,,,,Spell Descriptions: Fog Cloud
+freezing-sphere-sphere-60,freezing-sphere,Freezing Sphere,sphere,60,,,,,,Spell Descriptions: Freezing Sphere
+glyph-of-warding-sphere-20,glyph-of-warding,Glyph of Warding,sphere,20,,,,,,Spell Descriptions: Glyph of Warding
+hallucinatory-terrain-cube-150,hallucinatory-terrain,Hallucinatory Terrain,cube,,,,,,150,Spell Descriptions: Hallucinatory Terrain
+heroes-feast-cube-10,heroes-feast,Heroes' Feast,cube,,,,,,10,Spell Descriptions: Heroes' Feast
+hypnotic-pattern-cube-30,hypnotic-pattern,Hypnotic Pattern,cube,,,,,,30,Spell Descriptions: Hypnotic Pattern
+ice-storm-cylinder-20,ice-storm,Ice Storm,cylinder,20,,,,40,,Spell Descriptions: Ice Storm
+incendiary-cloud-sphere-20,incendiary-cloud,Incendiary Cloud,sphere,20,,,,,,Spell Descriptions: Incendiary Cloud
+insect-plague-sphere-20,insect-plague,Insect Plague,sphere,20,,,,,,Spell Descriptions: Insect Plague
+lightning-bolt-line-100,lightning-bolt,Lightning Bolt,line,,,100,5,,,Spell Descriptions: Lightning Bolt
+magic-circle-cylinder-10,magic-circle,Magic Circle,cylinder,10,,,,20,,Spell Descriptions: Magic Circle
+major-image-cube-20,major-image,Major Image,cube,,,,,,20,Spell Descriptions: Major Image
+mass-cure-wounds-sphere-30,mass-cure-wounds,Mass Cure Wounds,sphere,30,,,,,,Spell Descriptions: Mass Cure Wounds
+meteor-swarm-sphere-40,meteor-swarm,Meteor Swarm,sphere,40,,,,,,Spell Descriptions: Meteor Swarm
+minor-illusion-cube-5,minor-illusion,Minor Illusion,cube,,,,,,5,Spell Descriptions: Minor Illusion
+moonbeam-cylinder-5,moonbeam,Moonbeam,cylinder,5,,,,40,,Spell Descriptions: Moonbeam
+phantasmal-force-cube-10,phantasmal-force,Phantasmal Force,cube,,,,,,10,Spell Descriptions: Phantasmal Force
+plant-growth-sphere-100,plant-growth,Plant Growth,sphere,100,,,,,,Spell Descriptions: Plant Growth
+prismatic-spray-cone-60,prismatic-spray,Prismatic Spray,cone,,,60,,,,Spell Descriptions: Prismatic Spray
+programmed-illusion-cube-30,programmed-illusion,Programmed Illusion,cube,,,,,,30,Spell Descriptions: Programmed Illusion
+purify-food-and-drink-sphere-5,purify-food-and-drink,Purify Food and Drink,sphere,5,,,,,,Spell Descriptions: Purify Food and Drink
+shatter-sphere-10,shatter,Shatter,sphere,10,,,,,,Spell Descriptions: Shatter
+silence-sphere-20,silence,Silence,sphere,20,,,,,,Spell Descriptions: Silence
+silent-image-cube-15,silent-image,Silent Image,cube,,,,,,15,Spell Descriptions: Silent Image
+sleep-sphere-5,sleep,Sleep,sphere,5,,,,,,Spell Descriptions: Sleep
+sleet-storm-cylinder-20,sleet-storm,Sleet Storm,cylinder,20,,,,40,,Spell Descriptions: Sleet Storm
+slow-cube-40,slow,Slow,cube,,,,,,40,Spell Descriptions: Slow
+spike-growth-sphere-20,spike-growth,Spike Growth,sphere,20,,,,,,Spell Descriptions: Spike Growth
+stinking-cloud-sphere-20,stinking-cloud,Stinking Cloud,sphere,20,,,,,,Spell Descriptions: Stinking Cloud
+sunbeam-line-60,sunbeam,Sunbeam,line,,,60,5,,,Spell Descriptions: Sunbeam
+sunburst-sphere-60,sunburst,Sunburst,sphere,60,,,,,,Spell Descriptions: Sunburst
+symbol-sphere-60,symbol,Symbol,sphere,60,,,,,,Spell Descriptions: Symbol
+thunderwave-cube-15,thunderwave,Thunderwave,cube,,,,,,15,Spell Descriptions: Thunderwave
+vitriolic-sphere-sphere-20,vitriolic-sphere,Vitriolic Sphere,sphere,20,,,,,,Spell Descriptions: Vitriolic Sphere
+web-cube-20,web,Web,cube,,,,,,20,Spell Descriptions: Web
+web-cube-5,web,Web,cube,,,,,,5,Spell Descriptions: Web
+weird-sphere-30,weird,Weird,sphere,30,,,,,,Spell Descriptions: Weird
+zone-of-truth-sphere-15,zone-of-truth,Zone of Truth,sphere,15,,,,,,Spell Descriptions: Zone of Truth

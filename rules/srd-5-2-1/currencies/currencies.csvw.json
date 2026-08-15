@@ -1,0 +1,17 @@
+{
+  "@context": "http://www.w3.org/ns/csvw",
+  "tableSchema": {
+    "aboutUrl": "https://stagecraft.github.io/srd-rules/srd-5-2-1/currencies/{rowKey}",
+    "columns": [
+      {
+        "name": "rowKey"
+      },
+      {
+        "name": "coin"
+      },
+      {
+        "name": "valueInGp"
+      }
+    ]
+  }
+}

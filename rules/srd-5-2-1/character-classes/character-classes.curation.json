@@ -1,0 +1,15 @@
+{
+  "schema": "manual-transcription curation sidecar (source evidence, not build provenance)",
+  "canonicalSource": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf",
+  "canonicalSourceMd5EtagVerified": "393692267005a40d5a194e1707eb9ebb",
+  "srdVersion": "5.2.1",
+  "tables": "the twelve Core <Class> Traits tables (Hit Point Die rows)",
+  "pdfPageIndices": {"barbarian": 28, "bard": 31, "cleric": 36, "druid": 41, "fighter": 47, "monk": 49, "paladin": 53, "ranger": 57, "rogue": 61, "sorcerer": 64, "warlock": 70, "wizard": 77},
+  "printedPageLabelsEqualIndices": true,
+  "retrievedAndCurated": "2026-08-14 (Pacific); values read at the identified tables in the retrieved PDF, never from memory; download verified byte-identical to upstream (md5 == S3 etag)",
+  "method": "pdftotext extraction of each 'D<N> per <Class> level' trait-table row, cross-checked per class page; evidence bundle is the twelve pages, ghostscript-recompressed, with all twelve rows re-extracted from the bundle as a post-compression control (12/12)",
+  "evidenceFile": "evidence/srd-5.2.1-character-classes-table.pdf",
+  "evidenceFileSha256": "8eff814ebcb471a969f26e48428f758cf19af7cb8ab94f7a75167c71236d8d38",
+  "csvSha256": "c8243705e0f1a939f5ef98128d35ea9763691cd38c02d20a8ff99a0ea8fd6c94",
+  "license": "CC-BY-4.0 (see repository NOTICE); SRD 5.2.1 by Wizards of the Coast LLC"
+}

@@ -1,0 +1,53 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix dcterms: <http://purl.org/dc/terms/>.
+@prefix dcat: <http://www.w3.org/ns/dcat#>.
+@prefix cat: <https://categoriae.github.io/ontology/>.
+@prefix kosm: <https://kosmion.github.io/ontology/>.
+@prefix par: <https://participatorium.github.io/ontology/>.
+@prefix srd521: <https://stagecraft.github.io/srd-rules/srd-5-2-1/>.
+
+srd521:spell-ranges dcterms:source <https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf>;
+    dcterms:title "SRD 5.2.1 spell-ranges"@en;
+    a dcat:Dataset.
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/spell-ranges/feet> cat:instanceOf srd521:SpellRangeKind;
+    a cat:Individual;
+    rdfs:comment "The SRD 5.2.1 spell-range kind Feet.";
+    rdfs:label "Feet"@en;
+    cat:lexicalToken "feet".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/spell-ranges/miles> cat:instanceOf srd521:SpellRangeKind;
+    a cat:Individual;
+    rdfs:comment "The SRD 5.2.1 spell-range kind Miles.";
+    rdfs:label "Miles"@en;
+    cat:lexicalToken "miles".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/spell-ranges/self> cat:instanceOf srd521:SpellRangeKind;
+    a cat:Individual;
+    rdfs:comment "The SRD 5.2.1 spell-range kind Self.";
+    rdfs:label "Self"@en;
+    cat:lexicalToken "self".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/spell-ranges/self-area> cat:instanceOf srd521:SpellRangeKind;
+    a cat:Individual;
+    rdfs:comment "The SRD 5.2.1 spell-range kind Self area.";
+    rdfs:label "Self area"@en;
+    cat:lexicalToken "self-area".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/spell-ranges/sight> cat:instanceOf srd521:SpellRangeKind;
+    a cat:Individual;
+    rdfs:comment "The SRD 5.2.1 spell-range kind Sight.";
+    rdfs:label "Sight"@en;
+    cat:lexicalToken "sight".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/spell-ranges/special> cat:instanceOf srd521:SpellRangeKind;
+    a cat:Individual;
+    rdfs:comment "The SRD 5.2.1 spell-range kind Special.";
+    rdfs:label "Special"@en;
+    cat:lexicalToken "special".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/spell-ranges/touch> cat:instanceOf srd521:SpellRangeKind;
+    a cat:Individual;
+    rdfs:comment "The SRD 5.2.1 spell-range kind Touch.";
+    rdfs:label "Touch"@en;
+    cat:lexicalToken "touch".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/spell-ranges/unlimited> cat:instanceOf srd521:SpellRangeKind;
+    a cat:Individual;
+    rdfs:comment "The SRD 5.2.1 spell-range kind Unlimited.";
+    rdfs:label "Unlimited"@en;
+    cat:lexicalToken "unlimited".

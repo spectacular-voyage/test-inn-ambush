@@ -1,0 +1,175 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix dcterms: <http://purl.org/dc/terms/>.
+@prefix dcat: <http://www.w3.org/ns/dcat#>.
+@prefix cat: <https://categoriae.github.io/ontology/>.
+@prefix kosm: <https://kosmion.github.io/ontology/>.
+@prefix par: <https://participatorium.github.io/ontology/>.
+@prefix srd521: <https://stagecraft.github.io/srd-rules/srd-5-2-1/>.
+
+srd521:skills dcterms:source <https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf>;
+    dcterms:title "SRD 5.2.1 skills"@en;
+    a dcat:Dataset.
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/skills/acrobatics> dcterms:isPartOf srd521:d20-test;
+    cat:instanceOf srd521:Skill;
+    a cat:Individual;
+    rdfs:comment "The SRD 5.2.1 skill named Acrobatics.";
+    rdfs:label "Acrobatics"@en;
+    cat:lexicalToken "acrobatics";
+    srd521:defaultAbility <https://stagecraft.github.io/srd-rules/srd-5-2-1/abilities/dexterity>;
+    srd521:exampleUses "Stay on your feet in a tricky situation, or perform an acrobatic stunt.";
+    srd521:sourceSection "Playing the Game: Skills".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/skills/animal-handling> dcterms:isPartOf srd521:d20-test;
+    cat:instanceOf srd521:Skill;
+    a cat:Individual;
+    rdfs:comment "The SRD 5.2.1 skill named Animal handling.";
+    rdfs:label "Animal handling"@en;
+    cat:lexicalToken "animal-handling";
+    srd521:defaultAbility <https://stagecraft.github.io/srd-rules/srd-5-2-1/abilities/wisdom>;
+    srd521:exampleUses "Calm or train an animal, or get an animal to behave in a certain way.";
+    srd521:sourceSection "Playing the Game: Skills".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/skills/arcana> dcterms:isPartOf srd521:d20-test;
+    cat:instanceOf srd521:Skill;
+    a cat:Individual;
+    rdfs:comment "The SRD 5.2.1 skill named Arcana.";
+    rdfs:label "Arcana"@en;
+    cat:lexicalToken "arcana";
+    srd521:defaultAbility <https://stagecraft.github.io/srd-rules/srd-5-2-1/abilities/intelligence>;
+    srd521:exampleUses "Recall lore about spells, magic items, and the planes of existence.";
+    srd521:sourceSection "Playing the Game: Skills".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/skills/athletics> dcterms:isPartOf srd521:d20-test;
+    cat:instanceOf srd521:Skill;
+    a cat:Individual;
+    rdfs:comment "The SRD 5.2.1 skill named Athletics.";
+    rdfs:label "Athletics"@en;
+    cat:lexicalToken "athletics";
+    srd521:defaultAbility <https://stagecraft.github.io/srd-rules/srd-5-2-1/abilities/strength>;
+    srd521:exampleUses "Jump farther than normal, stay afloat in rough water, or break something.";
+    srd521:sourceSection "Playing the Game: Skills".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/skills/deception> dcterms:isPartOf srd521:d20-test;
+    cat:instanceOf srd521:Skill;
+    a cat:Individual;
+    rdfs:comment "The SRD 5.2.1 skill named Deception.";
+    rdfs:label "Deception"@en;
+    cat:lexicalToken "deception";
+    srd521:defaultAbility <https://stagecraft.github.io/srd-rules/srd-5-2-1/abilities/charisma>;
+    srd521:exampleUses "Tell a convincing lie, or wear a disguise convincingly.";
+    srd521:sourceSection "Playing the Game: Skills".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/skills/history> dcterms:isPartOf srd521:d20-test;
+    cat:instanceOf srd521:Skill;
+    a cat:Individual;
+    rdfs:comment "The SRD 5.2.1 skill named History.";
+    rdfs:label "History"@en;
+    cat:lexicalToken "history";
+    srd521:defaultAbility <https://stagecraft.github.io/srd-rules/srd-5-2-1/abilities/intelligence>;
+    srd521:exampleUses "Recall lore about historical events, people, nations, and cultures.";
+    srd521:sourceSection "Playing the Game: Skills".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/skills/insight> dcterms:isPartOf srd521:d20-test;
+    cat:instanceOf srd521:Skill;
+    a cat:Individual;
+    rdfs:comment "The SRD 5.2.1 skill named Insight.";
+    rdfs:label "Insight"@en;
+    cat:lexicalToken "insight";
+    srd521:defaultAbility <https://stagecraft.github.io/srd-rules/srd-5-2-1/abilities/wisdom>;
+    srd521:exampleUses "Discern a person's mood and intentions.";
+    srd521:sourceSection "Playing the Game: Skills".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/skills/intimidation> dcterms:isPartOf srd521:d20-test;
+    cat:instanceOf srd521:Skill;
+    a cat:Individual;
+    rdfs:comment "The SRD 5.2.1 skill named Intimidation.";
+    rdfs:label "Intimidation"@en;
+    cat:lexicalToken "intimidation";
+    srd521:defaultAbility <https://stagecraft.github.io/srd-rules/srd-5-2-1/abilities/charisma>;
+    srd521:exampleUses "Awe or threaten someone into doing what you want.";
+    srd521:sourceSection "Playing the Game: Skills".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/skills/investigation> dcterms:isPartOf srd521:d20-test;
+    cat:instanceOf srd521:Skill;
+    a cat:Individual;
+    rdfs:comment "The SRD 5.2.1 skill named Investigation.";
+    rdfs:label "Investigation"@en;
+    cat:lexicalToken "investigation";
+    srd521:defaultAbility <https://stagecraft.github.io/srd-rules/srd-5-2-1/abilities/intelligence>;
+    srd521:exampleUses "Find obscure information in books, or deduce how something works.";
+    srd521:sourceSection "Playing the Game: Skills".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/skills/medicine> dcterms:isPartOf srd521:d20-test;
+    cat:instanceOf srd521:Skill;
+    a cat:Individual;
+    rdfs:comment "The SRD 5.2.1 skill named Medicine.";
+    rdfs:label "Medicine"@en;
+    cat:lexicalToken "medicine";
+    srd521:defaultAbility <https://stagecraft.github.io/srd-rules/srd-5-2-1/abilities/wisdom>;
+    srd521:exampleUses "Diagnose an illness, or determine what killed the recently slain.";
+    srd521:sourceSection "Playing the Game: Skills".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/skills/nature> dcterms:isPartOf srd521:d20-test;
+    cat:instanceOf srd521:Skill;
+    a cat:Individual;
+    rdfs:comment "The SRD 5.2.1 skill named Nature.";
+    rdfs:label "Nature"@en;
+    cat:lexicalToken "nature";
+    srd521:defaultAbility <https://stagecraft.github.io/srd-rules/srd-5-2-1/abilities/intelligence>;
+    srd521:exampleUses "Recall lore about terrain, plants, animals, and weather.";
+    srd521:sourceSection "Playing the Game: Skills".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/skills/perception> dcterms:isPartOf srd521:d20-test;
+    cat:instanceOf srd521:Skill;
+    a cat:Individual;
+    rdfs:comment "The SRD 5.2.1 skill named Perception.";
+    rdfs:label "Perception"@en;
+    cat:lexicalToken "perception";
+    srd521:defaultAbility <https://stagecraft.github.io/srd-rules/srd-5-2-1/abilities/wisdom>;
+    srd521:exampleUses "Using a combination of senses, notice something that's easy to miss.";
+    srd521:sourceSection "Playing the Game: Skills".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/skills/performance> dcterms:isPartOf srd521:d20-test;
+    cat:instanceOf srd521:Skill;
+    a cat:Individual;
+    rdfs:comment "The SRD 5.2.1 skill named Performance.";
+    rdfs:label "Performance"@en;
+    cat:lexicalToken "performance";
+    srd521:defaultAbility <https://stagecraft.github.io/srd-rules/srd-5-2-1/abilities/charisma>;
+    srd521:exampleUses "Act, tell a story, perform music, or dance.";
+    srd521:sourceSection "Playing the Game: Skills".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/skills/persuasion> dcterms:isPartOf srd521:d20-test;
+    cat:instanceOf srd521:Skill;
+    a cat:Individual;
+    rdfs:comment "The SRD 5.2.1 skill named Persuasion.";
+    rdfs:label "Persuasion"@en;
+    cat:lexicalToken "persuasion";
+    srd521:defaultAbility <https://stagecraft.github.io/srd-rules/srd-5-2-1/abilities/charisma>;
+    srd521:exampleUses "Honestly and graciously convince someone of something.";
+    srd521:sourceSection "Playing the Game: Skills".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/skills/religion> dcterms:isPartOf srd521:d20-test;
+    cat:instanceOf srd521:Skill;
+    a cat:Individual;
+    rdfs:comment "The SRD 5.2.1 skill named Religion.";
+    rdfs:label "Religion"@en;
+    cat:lexicalToken "religion";
+    srd521:defaultAbility <https://stagecraft.github.io/srd-rules/srd-5-2-1/abilities/intelligence>;
+    srd521:exampleUses "Recall lore about gods, religious rituals, and holy symbols.";
+    srd521:sourceSection "Playing the Game: Skills".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/skills/sleight-of-hand> dcterms:isPartOf srd521:d20-test;
+    cat:instanceOf srd521:Skill;
+    a cat:Individual;
+    rdfs:comment "The SRD 5.2.1 skill named Sleight of hand.";
+    rdfs:label "Sleight of hand"@en;
+    cat:lexicalToken "sleight-of-hand";
+    srd521:defaultAbility <https://stagecraft.github.io/srd-rules/srd-5-2-1/abilities/dexterity>;
+    srd521:exampleUses "Pick a pocket, conceal a handheld object, or perform legerdemain.";
+    srd521:sourceSection "Playing the Game: Skills".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/skills/stealth> dcterms:isPartOf srd521:d20-test;
+    cat:instanceOf srd521:Skill;
+    a cat:Individual;
+    rdfs:comment "The SRD 5.2.1 skill named Stealth.";
+    rdfs:label "Stealth"@en;
+    cat:lexicalToken "stealth";
+    srd521:defaultAbility <https://stagecraft.github.io/srd-rules/srd-5-2-1/abilities/dexterity>;
+    srd521:exampleUses "Escape notice by moving quietly and hiding behind things.";
+    srd521:sourceSection "Playing the Game: Skills".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/skills/survival> dcterms:isPartOf srd521:d20-test;
+    cat:instanceOf srd521:Skill;
+    a cat:Individual;
+    rdfs:comment "The SRD 5.2.1 skill named Survival.";
+    rdfs:label "Survival"@en;
+    cat:lexicalToken "survival";
+    srd521:defaultAbility <https://stagecraft.github.io/srd-rules/srd-5-2-1/abilities/wisdom>;
+    srd521:exampleUses "Follow tracks, forage, find a trail, or avoid natural hazards.";
+    srd521:sourceSection "Playing the Game: Skills".

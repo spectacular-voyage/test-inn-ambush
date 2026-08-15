@@ -1,0 +1,38 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix dcterms: <http://purl.org/dc/terms/>.
+@prefix dcat: <http://www.w3.org/ns/dcat#>.
+@prefix cat: <https://categoriae.github.io/ontology/>.
+@prefix kosm: <https://kosmion.github.io/ontology/>.
+@prefix par: <https://participatorium.github.io/ontology/>.
+@prefix srd521: <https://stagecraft.github.io/srd-rules/srd-5-2-1/>.
+
+srd521:area-shapes dcterms:source <https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf>;
+    dcterms:title "SRD 5.2.1 area-shapes"@en;
+    a dcat:Dataset.
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/area-shapes/cone> cat:instanceOf srd521:AreaShapeKind;
+    a cat:Individual;
+    rdfs:comment "The SRD 5.2.1 area-shape kind for a Cone. Minted 2026-07-27 with the F7 dimension properties; its dimension carrier is srd521:lengthFeet.";
+    rdfs:label "Cone"@en;
+    cat:lexicalToken "cone".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/area-shapes/cube> cat:instanceOf srd521:AreaShapeKind;
+    a cat:Individual;
+    rdfs:comment "The SRD 5.2.1 area-shape kind for a Cube. Minted 2026-07-27 with the F7 dimension properties; its dimension carrier is srd521:edgeFeet.";
+    rdfs:label "Cube"@en;
+    cat:lexicalToken "cube".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/area-shapes/cylinder> cat:instanceOf srd521:AreaShapeKind;
+    a cat:Individual;
+    rdfs:comment "The SRD 5.2.1 area-shape kind for a Cylinder. Minted 2026-07-27 with the F7 dimension properties; its dimension carriers are srd521:radiusFeet and srd521:heightFeet.";
+    rdfs:label "Cylinder"@en;
+    cat:lexicalToken "cylinder".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/area-shapes/line> cat:instanceOf srd521:AreaShapeKind;
+    a cat:Individual;
+    rdfs:comment "The SRD 5.2.1 area-shape kind for a Line. Minted 2026-07-27 with the F7 dimension properties; its dimension carriers are srd521:lengthFeet and srd521:widthFeet.";
+    rdfs:label "Line"@en;
+    cat:lexicalToken "line".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/area-shapes/sphere> cat:instanceOf srd521:AreaShapeKind;
+    a cat:Individual;
+    rdfs:comment "The SRD 5.2.1 area-shape kind for a Sphere.";
+    rdfs:label "Sphere"@en;
+    cat:lexicalToken "sphere".

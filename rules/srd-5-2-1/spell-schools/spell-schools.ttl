@@ -1,0 +1,69 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix dcterms: <http://purl.org/dc/terms/>.
+@prefix dcat: <http://www.w3.org/ns/dcat#>.
+@prefix cat: <https://categoriae.github.io/ontology/>.
+@prefix kosm: <https://kosmion.github.io/ontology/>.
+@prefix par: <https://participatorium.github.io/ontology/>.
+@prefix srd521: <https://stagecraft.github.io/srd-rules/srd-5-2-1/>.
+
+srd521:spell-schools dcterms:source <https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf>;
+    dcterms:title "SRD 5.2.1 spell-schools"@en;
+    a dcat:Dataset.
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/spell-schools/abjuration> dcterms:description "Prevents or reverses harmful effects";
+    cat:instanceOf srd521:SpellSchool;
+    a cat:Individual;
+    rdfs:comment "The SRD 5.2.1 school of magic named Abjuration.";
+    rdfs:label "Abjuration"@en;
+    cat:lexicalToken "abjuration";
+    srd521:sourceSection "Spells: Schools of Magic".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/spell-schools/conjuration> dcterms:description "Transports creatures or objects";
+    cat:instanceOf srd521:SpellSchool;
+    a cat:Individual;
+    rdfs:comment "The SRD 5.2.1 school of magic named Conjuration.";
+    rdfs:label "Conjuration"@en;
+    cat:lexicalToken "conjuration";
+    srd521:sourceSection "Spells: Schools of Magic".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/spell-schools/divination> dcterms:description "Reveals information";
+    cat:instanceOf srd521:SpellSchool;
+    a cat:Individual;
+    rdfs:comment "The SRD 5.2.1 school of magic named Divination.";
+    rdfs:label "Divination"@en;
+    cat:lexicalToken "divination";
+    srd521:sourceSection "Spells: Schools of Magic".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/spell-schools/enchantment> dcterms:description "Influences minds";
+    cat:instanceOf srd521:SpellSchool;
+    a cat:Individual;
+    rdfs:comment "The SRD 5.2.1 school of magic named Enchantment.";
+    rdfs:label "Enchantment"@en;
+    cat:lexicalToken "enchantment";
+    srd521:sourceSection "Spells: Schools of Magic".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/spell-schools/evocation> dcterms:description "Channels energy to create effects that are often destructive";
+    cat:instanceOf srd521:SpellSchool;
+    a cat:Individual;
+    rdfs:comment "The SRD 5.2.1 school of magic named Evocation.";
+    rdfs:label "Evocation"@en;
+    cat:lexicalToken "evocation";
+    srd521:sourceSection "Spells: Schools of Magic".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/spell-schools/illusion> dcterms:description "Deceives the mind or senses";
+    cat:instanceOf srd521:SpellSchool;
+    a cat:Individual;
+    rdfs:comment "The SRD 5.2.1 school of magic named Illusion.";
+    rdfs:label "Illusion"@en;
+    cat:lexicalToken "illusion";
+    srd521:sourceSection "Spells: Schools of Magic".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/spell-schools/necromancy> dcterms:description "Manipulates life and death";
+    cat:instanceOf srd521:SpellSchool;
+    a cat:Individual;
+    rdfs:comment "The SRD 5.2.1 school of magic named Necromancy.";
+    rdfs:label "Necromancy"@en;
+    cat:lexicalToken "necromancy";
+    srd521:sourceSection "Spells: Schools of Magic".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/spell-schools/transmutation> dcterms:description "Transforms creatures or objects";
+    cat:instanceOf srd521:SpellSchool;
+    a cat:Individual;
+    rdfs:comment "The SRD 5.2.1 school of magic named Transmutation.";
+    rdfs:label "Transmutation"@en;
+    cat:lexicalToken "transmutation";
+    srd521:sourceSection "Spells: Schools of Magic".

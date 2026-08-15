@@ -1,0 +1,4 @@
+creatureSkillKey,creatureKey,creatureSkillLabel,skillKey,skillBonus,sourceSection
+guard-perception,guard,Guard Perception +2,perception,2,Monsters: Guards: Guard
+wolf-perception,wolf,Wolf Perception +5,perception,5,Animals: Wolf
+wolf-stealth,wolf,Wolf Stealth +4,stealth,4,Animals: Wolf

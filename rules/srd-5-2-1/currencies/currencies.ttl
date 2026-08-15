@@ -1,0 +1,96 @@
+@prefix cat: <https://categoriae.github.io/ontology/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix kosm: <https://kosmion.github.io/ontology/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix srd521: <https://stagecraft.github.io/srd-rules/srd-5-2-1/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+## AUTHORED CONTENT (the currency-package seam's half ①, sc.disc.2026-08-12_1308): the SRD 5.2.1
+## Coin Values table as five two-sided value equations. NOT generator-emitted — the seam's ruled
+## order is data-before-pipeline, and this file is the data.
+##
+## ORIENTATION LAW, stated once: the source table's Value-in-GP lexicals are fractions ("1/100",
+## "1/10", "1/2") oriented one-coin-per-row; the equations below are authored in the source's own
+## worked-example orientation ("100 Copper Pieces are worth 1 Gold Piece" — SRD 5.2.1, Coins),
+## so every quantity is a whole decimal and no fraction is invented or parsed. The byte-faithful
+## table lexicals ride currencies.csv; this graph carries the semantics. No *Text property is
+## minted for the lexicals — the costText retirement (Dave, 2026-08-12) rules that class out.
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/currencies>
+    dcterms:title "SRD 5.2.1 coin values"@en;
+    a dcat:Dataset.
+
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/currencies/cp> cat:instanceOf srd521:CurrencyEquation;
+    a cat:Description;
+    rdfs:label "Copper Piece (CP)"@en;
+    srd521:coinSide <https://stagecraft.github.io/srd-rules/srd-5-2-1/currencies/cp-coin>;
+    srd521:valueSide <https://stagecraft.github.io/srd-rules/srd-5-2-1/currencies/cp-gp>;
+    srd521:sourceSection "Equipment: Coin Values table".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/currencies/cp-coin> cat:instanceOf srd521:CurrencyEquationSide;
+    a cat:Description;
+    kosm:quantity "100"^^xsd:decimal;
+    kosm:fungibleKind srd521:fungibleKind_cp.
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/currencies/cp-gp> cat:instanceOf srd521:CurrencyEquationSide;
+    a cat:Description;
+    kosm:quantity "1"^^xsd:decimal;
+    kosm:fungibleKind srd521:fungibleKind_gp.
+
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/currencies/sp> cat:instanceOf srd521:CurrencyEquation;
+    a cat:Description;
+    rdfs:label "Silver Piece (SP)"@en;
+    srd521:coinSide <https://stagecraft.github.io/srd-rules/srd-5-2-1/currencies/sp-coin>;
+    srd521:valueSide <https://stagecraft.github.io/srd-rules/srd-5-2-1/currencies/sp-gp>;
+    srd521:sourceSection "Equipment: Coin Values table".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/currencies/sp-coin> cat:instanceOf srd521:CurrencyEquationSide;
+    a cat:Description;
+    kosm:quantity "10"^^xsd:decimal;
+    kosm:fungibleKind srd521:fungibleKind_sp.
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/currencies/sp-gp> cat:instanceOf srd521:CurrencyEquationSide;
+    a cat:Description;
+    kosm:quantity "1"^^xsd:decimal;
+    kosm:fungibleKind srd521:fungibleKind_gp.
+
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/currencies/ep> cat:instanceOf srd521:CurrencyEquation;
+    a cat:Description;
+    rdfs:label "Electrum Piece (EP)"@en;
+    srd521:coinSide <https://stagecraft.github.io/srd-rules/srd-5-2-1/currencies/ep-coin>;
+    srd521:valueSide <https://stagecraft.github.io/srd-rules/srd-5-2-1/currencies/ep-gp>;
+    srd521:sourceSection "Equipment: Coin Values table".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/currencies/ep-coin> cat:instanceOf srd521:CurrencyEquationSide;
+    a cat:Description;
+    kosm:quantity "2"^^xsd:decimal;
+    kosm:fungibleKind srd521:fungibleKind_ep.
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/currencies/ep-gp> cat:instanceOf srd521:CurrencyEquationSide;
+    a cat:Description;
+    kosm:quantity "1"^^xsd:decimal;
+    kosm:fungibleKind srd521:fungibleKind_gp.
+
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/currencies/gp> cat:instanceOf srd521:CurrencyEquation;
+    a cat:Description;
+    rdfs:label "Gold Piece (GP)"@en;
+    srd521:coinSide <https://stagecraft.github.io/srd-rules/srd-5-2-1/currencies/gp-coin>;
+    srd521:valueSide <https://stagecraft.github.io/srd-rules/srd-5-2-1/currencies/gp-gp>;
+    srd521:sourceSection "Equipment: Coin Values table".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/currencies/gp-coin> cat:instanceOf srd521:CurrencyEquationSide;
+    a cat:Description;
+    kosm:quantity "1"^^xsd:decimal;
+    kosm:fungibleKind srd521:fungibleKind_gp.
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/currencies/gp-gp> cat:instanceOf srd521:CurrencyEquationSide;
+    a cat:Description;
+    kosm:quantity "1"^^xsd:decimal;
+    kosm:fungibleKind srd521:fungibleKind_gp.
+
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/currencies/pp> cat:instanceOf srd521:CurrencyEquation;
+    a cat:Description;
+    rdfs:label "Platinum Piece (PP)"@en;
+    srd521:coinSide <https://stagecraft.github.io/srd-rules/srd-5-2-1/currencies/pp-coin>;
+    srd521:valueSide <https://stagecraft.github.io/srd-rules/srd-5-2-1/currencies/pp-gp>;
+    srd521:sourceSection "Equipment: Coin Values table".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/currencies/pp-coin> cat:instanceOf srd521:CurrencyEquationSide;
+    a cat:Description;
+    kosm:quantity "1"^^xsd:decimal;
+    kosm:fungibleKind srd521:fungibleKind_pp.
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/currencies/pp-gp> cat:instanceOf srd521:CurrencyEquationSide;
+    a cat:Description;
+    kosm:quantity "10"^^xsd:decimal;
+    kosm:fungibleKind srd521:fungibleKind_gp.

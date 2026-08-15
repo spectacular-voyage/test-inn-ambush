@@ -1,0 +1,38 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix dcterms: <http://purl.org/dc/terms/>.
+@prefix dcat: <http://www.w3.org/ns/dcat#>.
+@prefix cat: <https://categoriae.github.io/ontology/>.
+@prefix kosm: <https://kosmion.github.io/ontology/>.
+@prefix par: <https://participatorium.github.io/ontology/>.
+@prefix srd521: <https://stagecraft.github.io/srd-rules/srd-5-2-1/>.
+
+srd521:speed-kinds dcterms:source <https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf>;
+    dcterms:title "SRD 5.2.1 speed-kinds"@en;
+    a dcat:Dataset.
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/speed-kinds/burrow> cat:instanceOf srd521:SpeedKind;
+    a cat:Individual;
+    rdfs:comment "The SRD 5.2.1 speed kind Burrow.";
+    rdfs:label "Burrow"@en;
+    cat:lexicalToken "burrow".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/speed-kinds/climb> cat:instanceOf srd521:SpeedKind;
+    a cat:Individual;
+    rdfs:comment "The SRD 5.2.1 speed kind Climb.";
+    rdfs:label "Climb"@en;
+    cat:lexicalToken "climb".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/speed-kinds/fly> cat:instanceOf srd521:SpeedKind;
+    a cat:Individual;
+    rdfs:comment "The SRD 5.2.1 speed kind Fly. A Fly Speed printed '(hover)' is recorded by srd521:canHover on the creature.";
+    rdfs:label "Fly"@en;
+    cat:lexicalToken "fly".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/speed-kinds/swim> cat:instanceOf srd521:SpeedKind;
+    a cat:Individual;
+    rdfs:comment "The SRD 5.2.1 speed kind Swim.";
+    rdfs:label "Swim"@en;
+    cat:lexicalToken "swim".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/speed-kinds/walk> cat:instanceOf srd521:SpeedKind;
+    a cat:Individual;
+    rdfs:comment "The SRD 5.2.1 base Speed; the statblock's unlabeled leading speed entry.";
+    rdfs:label "Walk"@en;
+    cat:lexicalToken "walk".

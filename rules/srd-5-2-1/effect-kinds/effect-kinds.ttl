@@ -1,0 +1,98 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix dcterms: <http://purl.org/dc/terms/>.
+@prefix dcat: <http://www.w3.org/ns/dcat#>.
+@prefix cat: <https://categoriae.github.io/ontology/>.
+@prefix kosm: <https://kosmion.github.io/ontology/>.
+@prefix par: <https://participatorium.github.io/ontology/>.
+@prefix srd521: <https://stagecraft.github.io/srd-rules/srd-5-2-1/>.
+
+srd521:effect-kinds dcterms:source <https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf>;
+    dcterms:title "SRD 5.2.1 effect-kinds"@en;
+    a dcat:Dataset.
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/effect-kinds/affordance-mask> cat:instanceOf srd521:EffectKind;
+    a cat:Individual;
+    rdfs:comment "The SRD 5.2.1 condition-effect mechanics kind Affordance mask.";
+    rdfs:label "Affordance mask"@en;
+    cat:lexicalToken "affordance-mask".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/effect-kinds/automatic-failure> cat:instanceOf srd521:EffectKind;
+    a cat:Individual;
+    rdfs:comment "The SRD 5.2.1 condition-effect mechanics kind Automatic failure.";
+    rdfs:label "Automatic failure"@en;
+    cat:lexicalToken "automatic-failure".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/effect-kinds/condition-counter> cat:instanceOf srd521:EffectKind;
+    a cat:Individual;
+    rdfs:comment "The SRD 5.2.1 condition-effect mechanics kind Condition counter.";
+    rdfs:label "Condition counter"@en;
+    cat:lexicalToken "condition-counter".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/effect-kinds/condition-recovery> cat:instanceOf srd521:EffectKind;
+    a cat:Individual;
+    rdfs:comment "The SRD 5.2.1 condition-effect mechanics kind Condition recovery.";
+    rdfs:label "Condition recovery"@en;
+    cat:lexicalToken "condition-recovery".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/effect-kinds/condition-reference-mask> cat:instanceOf srd521:EffectKind;
+    a cat:Individual;
+    rdfs:comment "The SRD 5.2.1 condition-effect mechanics kind Condition reference mask.";
+    rdfs:label "Condition reference mask"@en;
+    cat:lexicalToken "condition-reference-mask".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/effect-kinds/conditional-affordance-mask> cat:instanceOf srd521:EffectKind;
+    a cat:Individual;
+    rdfs:comment "The SRD 5.2.1 condition-effect mechanics kind Conditional affordance mask.";
+    rdfs:label "Conditional affordance mask"@en;
+    cat:lexicalToken "conditional-affordance-mask".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/effect-kinds/d20-modifier> cat:instanceOf srd521:EffectKind;
+    a cat:Individual;
+    rdfs:comment "The SRD 5.2.1 condition-effect mechanics kind D20 modifier.";
+    rdfs:label "D20 modifier"@en;
+    cat:lexicalToken "d20-modifier".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/effect-kinds/damage-modifier> cat:instanceOf srd521:EffectKind;
+    a cat:Individual;
+    rdfs:comment "The SRD 5.2.1 condition-effect mechanics kind Damage modifier.";
+    rdfs:label "Damage modifier"@en;
+    cat:lexicalToken "damage-modifier".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/effect-kinds/hit-resolution> cat:instanceOf srd521:EffectKind;
+    a cat:Individual;
+    rdfs:comment "The SRD 5.2.1 condition-effect mechanics kind Hit resolution.";
+    rdfs:label "Hit resolution"@en;
+    cat:lexicalToken "hit-resolution".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/effect-kinds/immunity> cat:instanceOf srd521:EffectKind;
+    a cat:Individual;
+    rdfs:comment "The SRD 5.2.1 condition-effect mechanics kind Immunity.";
+    rdfs:label "Immunity"@en;
+    cat:lexicalToken "immunity".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/effect-kinds/movement-adjudication> cat:instanceOf srd521:EffectKind;
+    a cat:Individual;
+    rdfs:comment "The SRD 5.2.1 condition-effect mechanics kind Movement adjudication.";
+    rdfs:label "Movement adjudication"@en;
+    cat:lexicalToken "movement-adjudication".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/effect-kinds/movement-modifier> cat:instanceOf srd521:EffectKind;
+    a cat:Individual;
+    rdfs:comment "The SRD 5.2.1 condition-effect mechanics kind Movement modifier.";
+    rdfs:label "Movement modifier"@en;
+    cat:lexicalToken "movement-modifier".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/effect-kinds/movement-restriction> cat:instanceOf srd521:EffectKind;
+    a cat:Individual;
+    rdfs:comment "The SRD 5.2.1 condition-effect mechanics kind Movement restriction.";
+    rdfs:label "Movement restriction"@en;
+    cat:lexicalToken "movement-restriction".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/effect-kinds/perception-adjudication> cat:instanceOf srd521:EffectKind;
+    a cat:Individual;
+    rdfs:comment "The SRD 5.2.1 condition-effect mechanics kind Perception adjudication.";
+    rdfs:label "Perception adjudication"@en;
+    cat:lexicalToken "perception-adjudication".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/effect-kinds/sensory-mask> cat:instanceOf srd521:EffectKind;
+    a cat:Individual;
+    rdfs:comment "The SRD 5.2.1 condition-effect mechanics kind Sensory mask.";
+    rdfs:label "Sensory mask"@en;
+    cat:lexicalToken "sensory-mask".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/effect-kinds/state-transformation> cat:instanceOf srd521:EffectKind;
+    a cat:Individual;
+    rdfs:comment "The SRD 5.2.1 condition-effect mechanics kind State transformation.";
+    rdfs:label "State transformation"@en;
+    cat:lexicalToken "state-transformation".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/effect-kinds/targeting-adjudication> cat:instanceOf srd521:EffectKind;
+    a cat:Individual;
+    rdfs:comment "The SRD 5.2.1 condition-effect mechanics kind Targeting adjudication.";
+    rdfs:label "Targeting adjudication"@en;
+    cat:lexicalToken "targeting-adjudication".

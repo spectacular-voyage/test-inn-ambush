@@ -1,0 +1,43 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix dcterms: <http://purl.org/dc/terms/>.
+@prefix dcat: <http://www.w3.org/ns/dcat#>.
+@prefix cat: <https://categoriae.github.io/ontology/>.
+@prefix kosm: <https://kosmion.github.io/ontology/>.
+@prefix par: <https://participatorium.github.io/ontology/>.
+@prefix srd521: <https://stagecraft.github.io/srd-rules/srd-5-2-1/>.
+
+srd521:sizes dcterms:source <https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf>;
+    dcterms:title "SRD 5.2.1 sizes"@en;
+    a dcat:Dataset.
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/sizes/gargantuan> cat:instanceOf srd521:SizeKind;
+    a cat:Individual;
+    rdfs:comment "The SRD 5.2.1 creature size Gargantuan.";
+    rdfs:label "Gargantuan"@en;
+    cat:lexicalToken "gargantuan".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/sizes/huge> cat:instanceOf srd521:SizeKind;
+    a cat:Individual;
+    rdfs:comment "The SRD 5.2.1 creature size Huge.";
+    rdfs:label "Huge"@en;
+    cat:lexicalToken "huge".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/sizes/large> cat:instanceOf srd521:SizeKind;
+    a cat:Individual;
+    rdfs:comment "The SRD 5.2.1 creature size Large.";
+    rdfs:label "Large"@en;
+    cat:lexicalToken "large".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/sizes/medium> cat:instanceOf srd521:SizeKind;
+    a cat:Individual;
+    rdfs:comment "The SRD 5.2.1 creature size Medium.";
+    rdfs:label "Medium"@en;
+    cat:lexicalToken "medium".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/sizes/small> cat:instanceOf srd521:SizeKind;
+    a cat:Individual;
+    rdfs:comment "The SRD 5.2.1 creature size Small.";
+    rdfs:label "Small"@en;
+    cat:lexicalToken "small".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/sizes/tiny> cat:instanceOf srd521:SizeKind;
+    a cat:Individual;
+    rdfs:comment "The SRD 5.2.1 creature size Tiny.";
+    rdfs:label "Tiny"@en;
+    cat:lexicalToken "tiny".

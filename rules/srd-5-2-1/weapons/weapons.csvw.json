@@ -1,0 +1,55 @@
+{
+  "@context": "http://www.w3.org/ns/csvw",
+  "tableSchema": {
+    "aboutUrl": "https://stagecraft.github.io/srd-rules/srd-5-2-1/weapons/{weaponKey}",
+    "columns": [
+      {
+        "name": "weaponKey"
+      },
+      {
+        "name": "weaponLabel"
+      },
+      {
+        "name": "category",
+        "valueUrl": "https://stagecraft.github.io/srd-rules/srd-5-2-1/weapon-categories/{category}"
+      },
+      {
+        "name": "rangeKind",
+        "valueUrl": "https://stagecraft.github.io/srd-rules/srd-5-2-1/weapon-range-kinds/{rangeKind}"
+      },
+      {
+        "name": "cost"
+      },
+      {
+        "name": "damageExpression"
+      },
+      {
+        "name": "staticDamage"
+      },
+      {
+        "name": "damageTypeKey",
+        "valueUrl": "https://stagecraft.github.io/srd-rules/srd-5-2-1/damage-types/{damageTypeKey}"
+      },
+      {
+        "name": "weight"
+      },
+      {
+        "name": "properties",
+        "separator": ";",
+        "valueUrl": "https://stagecraft.github.io/srd-rules/srd-5-2-1/weapon-properties/{properties}"
+      },
+      {
+        "name": "masteryKey",
+        "valueUrl": "https://stagecraft.github.io/srd-rules/srd-5-2-1/weapon-masteries/{masteryKey}"
+      },
+      {
+        "name": "sourceProperties"
+      },
+      {
+        "name": "sourceSection"
+      }
+    ],
+    "primaryKey": "weaponKey"
+  },
+  "url": "weapons.csv"
+}

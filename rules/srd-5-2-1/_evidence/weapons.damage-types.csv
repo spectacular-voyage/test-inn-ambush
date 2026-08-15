@@ -1,0 +1,14 @@
+damageTypeKey,damageTypeLabel,examples,sourceSection
+acid,Acid,"Corrosive liquids, digestive enzymes",Rules Glossary: Damage Types
+bludgeoning,Bludgeoning,"Blunt objects, constriction, falling",Rules Glossary: Damage Types
+cold,Cold,"Freezing water, icy blasts",Rules Glossary: Damage Types
+fire,Fire,"Flames, unbearable heat",Rules Glossary: Damage Types
+force,Force,Pure magical energy,Rules Glossary: Damage Types
+lightning,Lightning,Electricity,Rules Glossary: Damage Types
+necrotic,Necrotic,Life-draining energy,Rules Glossary: Damage Types
+piercing,Piercing,"Fangs, puncturing objects",Rules Glossary: Damage Types
+poison,Poison,"Toxic gas, venom",Rules Glossary: Damage Types
+psychic,Psychic,Mind-rending energy,Rules Glossary: Damage Types
+radiant,Radiant,"Holy energy, searing radiation",Rules Glossary: Damage Types
+slashing,Slashing,"Claws, cutting objects",Rules Glossary: Damage Types
+thunder,Thunder,Concussive sound,Rules Glossary: Damage Types

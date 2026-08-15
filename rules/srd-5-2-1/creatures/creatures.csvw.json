@@ -1,0 +1,113 @@
+{
+  "@context": "http://www.w3.org/ns/csvw",
+  "tableSchema": {
+    "aboutUrl": "https://stagecraft.github.io/srd-rules/srd-5-2-1/creatures/{creatureKey}",
+    "columns": [
+      {
+        "name": "creatureKey"
+      },
+      {
+        "name": "creatureLabel"
+      },
+      {
+        "name": "sizes",
+        "separator": ";",
+        "valueUrl": "https://stagecraft.github.io/srd-rules/srd-5-2-1/sizes/{sizes}"
+      },
+      {
+        "name": "creatureTypes",
+        "separator": ";",
+        "valueUrl": "https://stagecraft.github.io/srd-rules/srd-5-2-1/creature-types/{creatureTypes}"
+      },
+      {
+        "name": "alignment",
+        "valueUrl": "https://stagecraft.github.io/srd-rules/srd-5-2-1/{alignment}"
+      },
+      {
+        "name": "armorClass"
+      },
+      {
+        "name": "armorClassText"
+      },
+      {
+        "name": "hitPointsAverage"
+      },
+      {
+        "name": "hitDiceExpression"
+      },
+      {
+        "name": "walkSpeedFeet"
+      },
+      {
+        "name": "flySpeedFeet"
+      },
+      {
+        "name": "swimSpeedFeet"
+      },
+      {
+        "name": "burrowSpeedFeet"
+      },
+      {
+        "name": "climbSpeedFeet"
+      },
+      {
+        "name": "canHover"
+      },
+      {
+        "name": "strengthScore"
+      },
+      {
+        "name": "dexterityScore"
+      },
+      {
+        "name": "constitutionScore"
+      },
+      {
+        "name": "intelligenceScore"
+      },
+      {
+        "name": "wisdomScore"
+      },
+      {
+        "name": "charismaScore"
+      },
+      {
+        "name": "saveProficiencies",
+        "separator": ";",
+        "valueUrl": "https://stagecraft.github.io/srd-rules/srd-5-2-1/abilities/{saveProficiencies}"
+      },
+      {
+        "name": "darkvisionFeet"
+      },
+      {
+        "name": "blindsightFeet"
+      },
+      {
+        "name": "tremorsenseFeet"
+      },
+      {
+        "name": "truesightFeet"
+      },
+      {
+        "name": "passivePerception"
+      },
+      {
+        "name": "languagesText"
+      },
+      {
+        "name": "challengeRating"
+      },
+      {
+        "name": "xpValue"
+      },
+      {
+        "name": "proficiencyBonus"
+      },
+      {
+        "name": "sourceSection"
+      }
+    ],
+    "primaryKey": "creatureKey"
+  },
+  "url": "creatures.csv"
+}

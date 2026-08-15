@@ -1,0 +1,33 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix dcterms: <http://purl.org/dc/terms/>.
+@prefix dcat: <http://www.w3.org/ns/dcat#>.
+@prefix cat: <https://categoriae.github.io/ontology/>.
+@prefix kosm: <https://kosmion.github.io/ontology/>.
+@prefix par: <https://participatorium.github.io/ontology/>.
+@prefix srd521: <https://stagecraft.github.io/srd-rules/srd-5-2-1/>.
+
+srd521:sense-kinds dcterms:source <https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf>;
+    dcterms:title "SRD 5.2.1 sense-kinds"@en;
+    a dcat:Dataset.
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/sense-kinds/blindsight> cat:instanceOf srd521:SenseKind;
+    a cat:Individual;
+    rdfs:comment "The SRD 5.2.1 special sense Blindsight.";
+    rdfs:label "Blindsight"@en;
+    cat:lexicalToken "blindsight".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/sense-kinds/darkvision> cat:instanceOf srd521:SenseKind;
+    a cat:Individual;
+    rdfs:comment "The SRD 5.2.1 special sense Darkvision.";
+    rdfs:label "Darkvision"@en;
+    cat:lexicalToken "darkvision".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/sense-kinds/tremorsense> cat:instanceOf srd521:SenseKind;
+    a cat:Individual;
+    rdfs:comment "The SRD 5.2.1 special sense Tremorsense.";
+    rdfs:label "Tremorsense"@en;
+    cat:lexicalToken "tremorsense".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/sense-kinds/truesight> cat:instanceOf srd521:SenseKind;
+    a cat:Individual;
+    rdfs:comment "The SRD 5.2.1 special sense Truesight.";
+    rdfs:label "Truesight"@en;
+    cat:lexicalToken "truesight".

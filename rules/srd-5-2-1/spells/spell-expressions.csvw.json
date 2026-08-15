@@ -1,0 +1,45 @@
+{
+  "@context": "http://www.w3.org/ns/csvw",
+  "tableSchema": {
+    "aboutUrl": "https://stagecraft.github.io/srd-rules/srd-5-2-1/spells/{expressionKey}",
+    "columns": [
+      {
+        "name": "expressionKey"
+      },
+      {
+        "name": "spellKey",
+        "valueUrl": "https://stagecraft.github.io/srd-rules/srd-5-2-1/spells/{spellKey}"
+      },
+      {
+        "name": "spellLabel"
+      },
+      {
+        "name": "expressionKind",
+        "valueUrl": "https://stagecraft.github.io/srd-rules/srd-5-2-1/spell-expression-kinds/{expressionKind}"
+      },
+      {
+        "name": "diceExpression"
+      },
+      {
+        "name": "staticAmount"
+      },
+      {
+        "name": "damageTypeKeys",
+        "separator": ";",
+        "valueUrl": "https://stagecraft.github.io/srd-rules/srd-5-2-1/damage-types/{damageTypeKeys}"
+      },
+      {
+        "name": "healingKind",
+        "valueUrl": "https://stagecraft.github.io/srd-rules/srd-5-2-1/healing-kinds/{healingKind}"
+      },
+      {
+        "name": "context"
+      },
+      {
+        "name": "sourceSection"
+      }
+    ],
+    "primaryKey": "expressionKey"
+  },
+  "url": "spell-expressions.csv"
+}

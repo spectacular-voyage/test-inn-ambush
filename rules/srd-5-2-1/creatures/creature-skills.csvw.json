@@ -1,0 +1,30 @@
+{
+  "@context": "http://www.w3.org/ns/csvw",
+  "tableSchema": {
+    "aboutUrl": "https://stagecraft.github.io/srd-rules/srd-5-2-1/creatures/{creatureSkillKey}",
+    "columns": [
+      {
+        "name": "creatureSkillKey"
+      },
+      {
+        "name": "creatureKey",
+        "valueUrl": "https://stagecraft.github.io/srd-rules/srd-5-2-1/creatures/{creatureKey}"
+      },
+      {
+        "name": "creatureSkillLabel"
+      },
+      {
+        "name": "skillKey",
+        "valueUrl": "https://stagecraft.github.io/srd-rules/srd-5-2-1/skills/{skillKey}"
+      },
+      {
+        "name": "skillBonus"
+      },
+      {
+        "name": "sourceSection"
+      }
+    ],
+    "primaryKey": "creatureSkillKey"
+  },
+  "url": "creature-skills.csv"
+}

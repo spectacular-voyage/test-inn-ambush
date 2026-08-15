@@ -1,0 +1,40 @@
+{
+  "schema": "stagecraft.srd-extraction.provenance.v1",
+  "artifactPath": "spells/spells.ttl",
+  "artifactGraphSha256": "f976a3776d33d842b54371ec55d91ff0528bc7a85308d71a81825fadbdce67eb",
+  "modelVersion": "stagecraft.srd-5-2-1.family.v1",
+  "generatorVersion": "db4bbdc7c31d7c2afc2ff1d781461505b03d811f",
+  "generatorSourceSha256": "1eeae4552b03866042251f4974cf76f413fefe9b712c29d29048c69f287a7fdf",
+  "nodeVersion": "v26.5.0",
+  "dirty": false,
+  "manifest": {
+    "path": "tools/srd-extraction/srd-extraction-manifest.json",
+    "sha256": "109431d5381a12d65e201c4d4cb62d24ab3d02ed56805a4014db0eb4740c8f9f"
+  },
+  "resolutions": {
+    "path": "tools/srd-extraction/srd-term-resolutions.json",
+    "sha256": "0f196e251373514d76bc838ac90b60d0c65b7723ba2a69ab5d98005e99ae9414"
+  },
+  "inputs": [
+    {
+      "id": "spells.spell-area-shapes",
+      "path": "spells/spell-area-shapes.csv",
+      "sha256": "f948e8517f364b770a143c1ed202daa14f7fa6143110e90ca8810195228b3085"
+    },
+    {
+      "id": "spells.spell-classes",
+      "path": "spells/spell-classes.csv",
+      "sha256": "6ba0040de349a8cd05842761e84ba57918b76d0c2ed7a4044b232f2f13fe56ae"
+    },
+    {
+      "id": "spells.spell-expressions",
+      "path": "spells/spell-expressions.csv",
+      "sha256": "469a25bcfd0ee9a198c5cb9902b8b8380b7a59ae3eeeb6668b6b2d13912ed3da"
+    },
+    {
+      "id": "spells.spells",
+      "path": "spells/spells.csv",
+      "sha256": "0412fa82f195409ca006695d6514db8b7c4362dbbd79c897602ad99665d4015f"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+classKey,classLabel,classHitDie
+barbarian,Barbarian,d12
+bard,Bard,d8
+cleric,Cleric,d8
+druid,Druid,d8
+fighter,Fighter,d10
+monk,Monk,d8
+paladin,Paladin,d10
+ranger,Ranger,d10
+rogue,Rogue,d8
+sorcerer,Sorcerer,d6
+warlock,Warlock,d8
+wizard,Wizard,d6

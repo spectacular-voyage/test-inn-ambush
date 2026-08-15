@@ -1,0 +1,172 @@
+@prefix cat: <https://categoriae.github.io/ontology/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix kosm: <https://kosmion.github.io/ontology/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix srd521: <https://stagecraft.github.io/srd-rules/srd-5-2-1/> .
+@prefix srd521-sh: <https://stagecraft.github.io/srd-rules/srd-5-2-1/shacl/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+srd521-sh:vocabulary
+  a owl:Ontology ;
+  dcterms:title "Dungeons & Dragons SRD 5.2.1 SHACL shapes"@en ;
+  dcterms:description "Validation shapes for curated Dungeons & Dragons SRD 5.2.1 content."@en ;
+  dcterms:source srd521:vocabulary ;
+  dcterms:modified "2026-08-14"^^xsd:date .
+
+## LINEAGE: NEW MINT with no predecessor, minted 2026-08-11; ruled by the product seat 2026-08-11.
+srd521-sh:WeaponDefinitionCostShape
+  a sh:NodeShape ;
+  rdfs:label "Weapon definition cost shape"@en ;
+  rdfs:comment "Validates a weapon definition's normalized price as one decimal magnitude paired with one denomination that is a member of kosm:FungibleKind."@en ;
+  sh:target [
+    a sh:SPARQLTarget ;
+    sh:select """
+      SELECT ?this
+      WHERE {
+        ?this <https://categoriae.github.io/ontology/instanceOf>
+              <https://stagecraft.github.io/srd-rules/srd-5-2-1/WeaponDefinition> .
+      }
+    """
+  ] ;
+  sh:property [
+    sh:path kosm:quantity ;
+    sh:datatype xsd:decimal ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+    sh:message "A weapon definition has one decimal quantity."@en
+  ] ;
+  sh:property [
+    sh:path kosm:fungibleKind ;
+    sh:nodeKind sh:IRI ;
+    sh:in (
+      srd521:fungibleKind_cp
+      srd521:fungibleKind_sp
+      srd521:fungibleKind_gp
+    ) ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+    sh:node [
+      sh:property [
+        sh:path cat:instanceOf ;
+        sh:hasValue kosm:FungibleKind
+      ]
+    ] ;
+    sh:message "A weapon definition has one denomination that is a fungible-kind member."@en
+  ] .
+
+## LINEAGE: NEW MINT with no predecessor, minted 2026-08-14; ruled by the product seat 2026-08-14
+## (the currency-package seam's half ①). The allowed-set below lists all five ruled denominations;
+## the seam's half-② registry refactor makes the weapon shape's narrower set EQUAL the compiled
+## registry — until that lands, the two sh:in lists are separate authorities by design and this
+## one is the five-member superset.
+srd521-sh:CurrencyEquationShape
+  a sh:NodeShape ;
+  rdfs:label "Currency equation shape"@en ;
+  rdfs:comment "Validates a Coin Values row as a two-sided value equation: exactly one coin side and exactly one value side, each a currency equation side."@en ;
+  sh:target [
+    a sh:SPARQLTarget ;
+    sh:select """
+      SELECT ?this
+      WHERE {
+        ?this <https://categoriae.github.io/ontology/instanceOf>
+              <https://stagecraft.github.io/srd-rules/srd-5-2-1/CurrencyEquation> .
+      }
+    """
+  ] ;
+  sh:property [
+    sh:path srd521:coinSide ;
+    sh:nodeKind sh:IRI ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+    sh:node [
+      sh:property [
+        sh:path cat:instanceOf ;
+        sh:hasValue srd521:CurrencyEquationSide
+      ]
+    ] ;
+    sh:message "A currency equation has exactly one coin side, and it is a currency equation side."@en
+  ] ;
+  sh:property [
+    sh:path srd521:valueSide ;
+    sh:nodeKind sh:IRI ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+    sh:node [
+      sh:property [
+        sh:path cat:instanceOf ;
+        sh:hasValue srd521:CurrencyEquationSide
+      ]
+    ] ;
+    sh:message "A currency equation has exactly one value side, and it is a currency equation side."@en
+  ] ;
+  ## review F-2: the class comment's "the row itself bears no amount" is a GRAPH claim, so the
+  ## shape enforces it — the amount pair is refused ON the row.
+  sh:property [
+    sh:path kosm:quantity ;
+    sh:maxCount 0 ;
+    sh:message "A currency equation row bears no amount; quantities live on its sides."@en
+  ] ;
+  sh:property [
+    sh:path kosm:fungibleKind ;
+    sh:maxCount 0 ;
+    sh:message "A currency equation row bears no denomination; denominations live on its sides."@en
+  ] ;
+  ## review F-4: two-sidedness is a DISTINCTNESS claim, not two cardinalities — one physical side
+  ## in both roles is the one-side collapse the seam refuses.
+  sh:sparql [
+    a sh:SPARQLConstraint ;
+    sh:message "A currency equation's coin side and value side are distinct sides."@en ;
+    sh:select """
+      SELECT $this
+      WHERE {
+        $this <https://stagecraft.github.io/srd-rules/srd-5-2-1/coinSide> ?side .
+        $this <https://stagecraft.github.io/srd-rules/srd-5-2-1/valueSide> ?side .
+      }
+    """
+  ] .
+
+## LINEAGE: NEW MINT with no predecessor, minted 2026-08-14; ruled by the product seat 2026-08-14
+## (the currency-package seam's half ①).
+srd521-sh:CurrencyEquationSideShape
+  a sh:NodeShape ;
+  rdfs:label "Currency equation side shape"@en ;
+  rdfs:comment "Validates one side of a currency equation as a single denominated amount: one decimal quantity and one denomination drawn from the edition's five ruled fungible kinds."@en ;
+  sh:target [
+    a sh:SPARQLTarget ;
+    sh:select """
+      SELECT ?this
+      WHERE {
+        ?this <https://categoriae.github.io/ontology/instanceOf>
+              <https://stagecraft.github.io/srd-rules/srd-5-2-1/CurrencyEquationSide> .
+      }
+    """
+  ] ;
+  sh:property [
+    sh:path kosm:quantity ;
+    sh:datatype xsd:decimal ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+    sh:message "A currency equation side has one decimal quantity."@en
+  ] ;
+  sh:property [
+    sh:path kosm:fungibleKind ;
+    sh:nodeKind sh:IRI ;
+    sh:in (
+      srd521:fungibleKind_cp
+      srd521:fungibleKind_sp
+      srd521:fungibleKind_ep
+      srd521:fungibleKind_gp
+      srd521:fungibleKind_pp
+    ) ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+    sh:node [
+      sh:property [
+        sh:path cat:instanceOf ;
+        sh:hasValue kosm:FungibleKind
+      ]
+    ] ;
+    sh:message "A currency equation side has one denomination that is a fungible-kind member."@en
+  ] .

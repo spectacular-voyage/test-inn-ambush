@@ -1,0 +1,197 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix dcterms: <http://purl.org/dc/terms/>.
+@prefix dcat: <http://www.w3.org/ns/dcat#>.
+@prefix cat: <https://categoriae.github.io/ontology/>.
+@prefix kosm: <https://kosmion.github.io/ontology/>.
+@prefix par: <https://participatorium.github.io/ontology/>.
+@prefix srd521: <https://stagecraft.github.io/srd-rules/srd-5-2-1/>.
+
+srd521:d20-test dcterms:source <https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf>;
+    dcterms:title "SRD 5.2.1 D20 test rules"@en;
+    a dcat:Dataset.
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/d20-test/d20-test-warranted-precondition-ask> cat:instanceOf par:SparqlAskPrecondition;
+    a cat:InformationObject;
+    rdf:value "ASK { # Authority or a rule has warranted a D20 Test in the current circumstance. }";
+    rdfs:comment "RESTORED under DF-RESTORE-1/DF-CRUFT-2. The family regeneration DISSOLVED this individual and FLATTENED its rdf:value onto the dcterms:description of the D20 test types that referenced it. Verbatim from srd-rules 56aad03262a2 srd-5-2-1/d20-test/d20-test.ttl:43-45. NOTE: the frozen v2 row for dyn:D20TestWarrantedPreconditionAsk carries an EMPTY target, so the class here follows the conditions.ttl precedent (par:SparqlAskPrecondition) rather than a mapped target.".
+
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/d20-test/d20-roll-result-template> cat:instanceOf srd521:D20TestConsequence;
+    a cat:Description;
+    rdf:value "Roll 1d20, apply the relevant ability modifier, proficiency if applicable, and circumstantial modifiers, then compare against the target number.";
+    rdfs:comment "RESTORED under DF-RESTORE-1/DF-CRUFT-2, same dissolution as the precondition ask above. Verbatim from srd-rules 56aad03262a2 srd-5-2-1/d20-test/d20-test.ttl:47-49; class from the frozen row's own target (srd521:D20TestConsequence).".
+
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/d20-test/ability-check> dcterms:description "A creature uses talent and training to try to overcome a challenge when the outcome is uncertain and meaningful.";
+    par:preconditionAsk <https://stagecraft.github.io/srd-rules/srd-5-2-1/d20-test/d20-test-warranted-precondition-ask>;
+    par:consequenceTemplate <https://stagecraft.github.io/srd-rules/srd-5-2-1/d20-test/d20-roll-result-template>;
+    dcterms:isPartOf srd521:d20-test;
+    cat:instanceOf par:ActionType;
+    a cat:EventType;
+    cat:instanceCategory cat:Action;
+    par:rollProcedure srd521:D20RollProcedure;
+    cat:instanceOf srd521:D20TestType;
+    cat:specializes srd521:D20Test;
+    rdfs:comment "The SRD 5.2.1 ability check rules term.";
+    rdfs:label "Ability check";
+    cat:lexicalToken "ability-check";
+    srd521:mechanicalStatus <https://stagecraft.github.io/srd-rules/srd-5-2-1/mechanical-statuses/actiontype-family>;
+    srd521:sourceSection "Playing the Game: Ability Checks";
+    srd521:targetNumberName "Difficulty Class".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/d20-test/acrobatics> cat:instanceOf srd521:D20SkillRule;
+    a cat:Description;
+    rdfs:label "Acrobatics check rule"@en;
+    srd521:actionType <https://stagecraft.github.io/srd-rules/srd-5-2-1/d20-test/ability-check>;
+    srd521:sourceSection "Playing the Game: Skills";
+    srd521:usesAbility <https://stagecraft.github.io/srd-rules/srd-5-2-1/abilities/dexterity>;
+    srd521:usesSkill <https://stagecraft.github.io/srd-rules/srd-5-2-1/skills/acrobatics>.
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/d20-test/animal-handling> cat:instanceOf srd521:D20SkillRule;
+    a cat:Description;
+    rdfs:label "Animal Handling check rule"@en;
+    srd521:actionType <https://stagecraft.github.io/srd-rules/srd-5-2-1/d20-test/ability-check>;
+    srd521:sourceSection "Playing the Game: Skills";
+    srd521:usesAbility <https://stagecraft.github.io/srd-rules/srd-5-2-1/abilities/wisdom>;
+    srd521:usesSkill <https://stagecraft.github.io/srd-rules/srd-5-2-1/skills/animal-handling>.
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/d20-test/arcana> cat:instanceOf srd521:D20SkillRule;
+    a cat:Description;
+    rdfs:label "Arcana check rule"@en;
+    srd521:actionType <https://stagecraft.github.io/srd-rules/srd-5-2-1/d20-test/ability-check>;
+    srd521:sourceSection "Playing the Game: Skills";
+    srd521:usesAbility <https://stagecraft.github.io/srd-rules/srd-5-2-1/abilities/intelligence>;
+    srd521:usesSkill <https://stagecraft.github.io/srd-rules/srd-5-2-1/skills/arcana>.
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/d20-test/athletics> cat:instanceOf srd521:D20SkillRule;
+    a cat:Description;
+    rdfs:label "Athletics check rule"@en;
+    srd521:actionType <https://stagecraft.github.io/srd-rules/srd-5-2-1/d20-test/ability-check>;
+    srd521:sourceSection "Playing the Game: Skills";
+    srd521:usesAbility <https://stagecraft.github.io/srd-rules/srd-5-2-1/abilities/strength>;
+    srd521:usesSkill <https://stagecraft.github.io/srd-rules/srd-5-2-1/skills/athletics>.
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/d20-test/attack-roll> dcterms:description "A roll determines whether an attack hits by comparing the total to Armor Class.";
+    par:preconditionAsk <https://stagecraft.github.io/srd-rules/srd-5-2-1/d20-test/d20-test-warranted-precondition-ask>;
+    par:consequenceTemplate <https://stagecraft.github.io/srd-rules/srd-5-2-1/d20-test/d20-roll-result-template>;
+    dcterms:isPartOf srd521:d20-test;
+    cat:instanceOf par:ActionType;
+    a cat:EventType;
+    cat:instanceCategory cat:Action;
+    par:rollProcedure srd521:D20RollProcedure;
+    cat:instanceOf srd521:D20TestType;
+    cat:specializes srd521:D20Test;
+    rdfs:comment "The SRD 5.2.1 attack roll rules term.";
+    rdfs:label "Attack roll";
+    cat:lexicalToken "attack-roll";
+    srd521:mechanicalStatus <https://stagecraft.github.io/srd-rules/srd-5-2-1/mechanical-statuses/actiontype-family>;
+    srd521:sourceSection "Playing the Game: Attack Rolls";
+    srd521:targetNumberName "Armor Class".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/d20-test/deception> cat:instanceOf srd521:D20SkillRule;
+    a cat:Description;
+    rdfs:label "Deception check rule"@en;
+    srd521:actionType <https://stagecraft.github.io/srd-rules/srd-5-2-1/d20-test/ability-check>;
+    srd521:sourceSection "Playing the Game: Skills";
+    srd521:usesAbility <https://stagecraft.github.io/srd-rules/srd-5-2-1/abilities/charisma>;
+    srd521:usesSkill <https://stagecraft.github.io/srd-rules/srd-5-2-1/skills/deception>.
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/d20-test/history> cat:instanceOf srd521:D20SkillRule;
+    a cat:Description;
+    rdfs:label "History check rule"@en;
+    srd521:actionType <https://stagecraft.github.io/srd-rules/srd-5-2-1/d20-test/ability-check>;
+    srd521:sourceSection "Playing the Game: Skills";
+    srd521:usesAbility <https://stagecraft.github.io/srd-rules/srd-5-2-1/abilities/intelligence>;
+    srd521:usesSkill <https://stagecraft.github.io/srd-rules/srd-5-2-1/skills/history>.
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/d20-test/insight> cat:instanceOf srd521:D20SkillRule;
+    a cat:Description;
+    rdfs:label "Insight check rule"@en;
+    srd521:actionType <https://stagecraft.github.io/srd-rules/srd-5-2-1/d20-test/ability-check>;
+    srd521:sourceSection "Playing the Game: Skills";
+    srd521:usesAbility <https://stagecraft.github.io/srd-rules/srd-5-2-1/abilities/wisdom>;
+    srd521:usesSkill <https://stagecraft.github.io/srd-rules/srd-5-2-1/skills/insight>.
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/d20-test/intimidation> cat:instanceOf srd521:D20SkillRule;
+    a cat:Description;
+    rdfs:label "Intimidation check rule"@en;
+    srd521:actionType <https://stagecraft.github.io/srd-rules/srd-5-2-1/d20-test/ability-check>;
+    srd521:sourceSection "Playing the Game: Skills";
+    srd521:usesAbility <https://stagecraft.github.io/srd-rules/srd-5-2-1/abilities/charisma>;
+    srd521:usesSkill <https://stagecraft.github.io/srd-rules/srd-5-2-1/skills/intimidation>.
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/d20-test/investigation> cat:instanceOf srd521:D20SkillRule;
+    a cat:Description;
+    rdfs:label "Investigation check rule"@en;
+    srd521:actionType <https://stagecraft.github.io/srd-rules/srd-5-2-1/d20-test/ability-check>;
+    srd521:sourceSection "Playing the Game: Skills";
+    srd521:usesAbility <https://stagecraft.github.io/srd-rules/srd-5-2-1/abilities/intelligence>;
+    srd521:usesSkill <https://stagecraft.github.io/srd-rules/srd-5-2-1/skills/investigation>.
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/d20-test/medicine> cat:instanceOf srd521:D20SkillRule;
+    a cat:Description;
+    rdfs:label "Medicine check rule"@en;
+    srd521:actionType <https://stagecraft.github.io/srd-rules/srd-5-2-1/d20-test/ability-check>;
+    srd521:sourceSection "Playing the Game: Skills";
+    srd521:usesAbility <https://stagecraft.github.io/srd-rules/srd-5-2-1/abilities/wisdom>;
+    srd521:usesSkill <https://stagecraft.github.io/srd-rules/srd-5-2-1/skills/medicine>.
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/d20-test/nature> cat:instanceOf srd521:D20SkillRule;
+    a cat:Description;
+    rdfs:label "Nature check rule"@en;
+    srd521:actionType <https://stagecraft.github.io/srd-rules/srd-5-2-1/d20-test/ability-check>;
+    srd521:sourceSection "Playing the Game: Skills";
+    srd521:usesAbility <https://stagecraft.github.io/srd-rules/srd-5-2-1/abilities/intelligence>;
+    srd521:usesSkill <https://stagecraft.github.io/srd-rules/srd-5-2-1/skills/nature>.
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/d20-test/perception> cat:instanceOf srd521:D20SkillRule;
+    a cat:Description;
+    rdfs:label "Perception check rule"@en;
+    srd521:actionType <https://stagecraft.github.io/srd-rules/srd-5-2-1/d20-test/ability-check>;
+    srd521:sourceSection "Playing the Game: Skills";
+    srd521:usesAbility <https://stagecraft.github.io/srd-rules/srd-5-2-1/abilities/wisdom>;
+    srd521:usesSkill <https://stagecraft.github.io/srd-rules/srd-5-2-1/skills/perception>.
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/d20-test/performance> cat:instanceOf srd521:D20SkillRule;
+    a cat:Description;
+    rdfs:label "Performance check rule"@en;
+    srd521:actionType <https://stagecraft.github.io/srd-rules/srd-5-2-1/d20-test/ability-check>;
+    srd521:sourceSection "Playing the Game: Skills";
+    srd521:usesAbility <https://stagecraft.github.io/srd-rules/srd-5-2-1/abilities/charisma>;
+    srd521:usesSkill <https://stagecraft.github.io/srd-rules/srd-5-2-1/skills/performance>.
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/d20-test/persuasion> cat:instanceOf srd521:D20SkillRule;
+    a cat:Description;
+    rdfs:label "Persuasion check rule"@en;
+    srd521:actionType <https://stagecraft.github.io/srd-rules/srd-5-2-1/d20-test/ability-check>;
+    srd521:sourceSection "Playing the Game: Skills";
+    srd521:usesAbility <https://stagecraft.github.io/srd-rules/srd-5-2-1/abilities/charisma>;
+    srd521:usesSkill <https://stagecraft.github.io/srd-rules/srd-5-2-1/skills/persuasion>.
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/d20-test/religion> cat:instanceOf srd521:D20SkillRule;
+    a cat:Description;
+    rdfs:label "Religion check rule"@en;
+    srd521:actionType <https://stagecraft.github.io/srd-rules/srd-5-2-1/d20-test/ability-check>;
+    srd521:sourceSection "Playing the Game: Skills";
+    srd521:usesAbility <https://stagecraft.github.io/srd-rules/srd-5-2-1/abilities/intelligence>;
+    srd521:usesSkill <https://stagecraft.github.io/srd-rules/srd-5-2-1/skills/religion>.
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/d20-test/saving-throw> dcterms:description "A creature attempts to evade or resist a threat when a rule requires a save.";
+    par:preconditionAsk <https://stagecraft.github.io/srd-rules/srd-5-2-1/d20-test/d20-test-warranted-precondition-ask>;
+    par:consequenceTemplate <https://stagecraft.github.io/srd-rules/srd-5-2-1/d20-test/d20-roll-result-template>;
+    dcterms:isPartOf srd521:d20-test;
+    cat:instanceOf par:ActionType;
+    a cat:EventType;
+    cat:instanceCategory cat:Action;
+    par:rollProcedure srd521:D20RollProcedure;
+    cat:instanceOf srd521:D20TestType;
+    cat:specializes srd521:D20Test;
+    rdfs:comment "The SRD 5.2.1 saving throw rules term.";
+    rdfs:label "Saving throw";
+    cat:lexicalToken "saving-throw";
+    srd521:mechanicalStatus <https://stagecraft.github.io/srd-rules/srd-5-2-1/mechanical-statuses/actiontype-family>;
+    srd521:sourceSection "Playing the Game: Saving Throws";
+    srd521:targetNumberName "Difficulty Class".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/d20-test/sleight-of-hand> cat:instanceOf srd521:D20SkillRule;
+    a cat:Description;
+    rdfs:label "Sleight of Hand check rule"@en;
+    srd521:actionType <https://stagecraft.github.io/srd-rules/srd-5-2-1/d20-test/ability-check>;
+    srd521:sourceSection "Playing the Game: Skills";
+    srd521:usesAbility <https://stagecraft.github.io/srd-rules/srd-5-2-1/abilities/dexterity>;
+    srd521:usesSkill <https://stagecraft.github.io/srd-rules/srd-5-2-1/skills/sleight-of-hand>.
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/d20-test/stealth> cat:instanceOf srd521:D20SkillRule;
+    a cat:Description;
+    rdfs:label "Stealth check rule"@en;
+    srd521:actionType <https://stagecraft.github.io/srd-rules/srd-5-2-1/d20-test/ability-check>;
+    srd521:sourceSection "Playing the Game: Skills";
+    srd521:usesAbility <https://stagecraft.github.io/srd-rules/srd-5-2-1/abilities/dexterity>;
+    srd521:usesSkill <https://stagecraft.github.io/srd-rules/srd-5-2-1/skills/stealth>.
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/d20-test/survival> cat:instanceOf srd521:D20SkillRule;
+    a cat:Description;
+    rdfs:label "Survival check rule"@en;
+    srd521:actionType <https://stagecraft.github.io/srd-rules/srd-5-2-1/d20-test/ability-check>;
+    srd521:sourceSection "Playing the Game: Skills";
+    srd521:usesAbility <https://stagecraft.github.io/srd-rules/srd-5-2-1/abilities/wisdom>;
+    srd521:usesSkill <https://stagecraft.github.io/srd-rules/srd-5-2-1/skills/survival>.

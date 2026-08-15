@@ -1,0 +1,5 @@
+creatureKey,creatureLabel,sizes,creatureTypes,alignment,armorClass,armorClassText,hitPointsAverage,hitDiceExpression,walkSpeedFeet,flySpeedFeet,swimSpeedFeet,burrowSpeedFeet,climbSpeedFeet,canHover,strengthScore,dexterityScore,constitutionScore,intelligenceScore,wisdomScore,charismaScore,saveProficiencies,darkvisionFeet,blindsightFeet,tremorsenseFeet,truesightFeet,passivePerception,languagesText,challengeRating,xpValue,proficiencyBonus,sourceSection
+bandit,Bandit,medium;small,humanoid,neutral,12,,11,2d8 + 2,30,,,,,,11,12,12,10,10,10,,,,,,10,"Common, Thieves’ Cant",0.125,25,2,Monsters: Bandits: Bandit
+commoner,Commoner,medium;small,humanoid,neutral,10,,4,1d8,30,,,,,,10,10,10,10,10,10,,,,,,10,Common,0,10,2,Monsters: Commoner
+guard,Guard,medium;small,humanoid,neutral,16,,11,2d8 + 2,30,,,,,,13,12,12,10,11,10,,,,,,12,Common,0.125,25,2,Monsters: Guards: Guard
+wolf,Wolf,medium,beast,unaligned,12,,11,2d8 + 2,40,,,,,,14,15,12,3,12,6,,60,,,,15,None,0.25,50,2,Animals: Wolf

@@ -1,0 +1,1753 @@
+@prefix srd521: <https://stagecraft.github.io/srd-rules/srd-5-2-1/> .
+@prefix cat: <https://categoriae.github.io/ontology/> .
+@prefix kosm: <https://kosmion.github.io/ontology/> .
+@prefix par: <https://participatorium.github.io/ontology/> .
+@prefix rol: <https://roleosum.github.io/ontology/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+#################################################################
+# D&D SRD 5.2.1 content vocabulary
+#
+# This module references the Stagecraft vocabulary family by IRI.
+# It deliberately has no owl:imports and uses no SKOS.
+#
+# CLASSIFICATION LAW: every srd521 domain type is an INDIVIDUAL
+# with one fixed categoriae metatype. Domain classification uses
+# cat:instanceOf; same-order specialization uses cat:specializes.
+# No srd521 IRI is an rdfs:Class, and rdf:type is never used with
+# an srd521 domain type as its object.
+#################################################################
+
+srd521:vocabulary
+  a owl:Ontology ;
+  dcterms:title "Dungeons & Dragons SRD 5.2.1 content vocabulary"@en ;
+  dcterms:description "Edition-owned terms and curated content structures for the Dungeons & Dragons System Reference Document 5.2.1, expressed over the final Stagecraft vocabulary family."@en ;
+  dcterms:source <https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf> ;
+  dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
+  dcterms:modified "2026-08-11"^^xsd:date .
+
+#################################################################
+# Controlled value families
+#################################################################
+
+srd521:AbilityScore
+  a cat:Kind ;
+  cat:instanceCategory cat:Individual ;
+  rdfs:label "Ability score"@en ;
+  rdfs:comment "The edition's controlled family of ability-score terms."@en .
+
+srd521:Skill
+  a cat:Kind ;
+  cat:instanceCategory cat:Individual ;
+  rdfs:label "Skill"@en ;
+  rdfs:comment "The edition's controlled family of skill terms."@en .
+
+srd521:DamageType
+  a cat:Kind ;
+  cat:instanceCategory cat:Individual ;
+  rdfs:label "Damage type"@en ;
+  rdfs:comment "The edition's controlled family of damage-type terms."@en .
+
+srd521:SpellSchool
+  a cat:Kind ;
+  cat:instanceCategory cat:Individual ;
+  rdfs:label "Spell school"@en .
+
+srd521:ConditionEffectType
+  a cat:Kind ;
+  cat:instanceCategory cat:Individual ;
+  rdfs:label "Condition effect type"@en .
+
+srd521:EffectKind
+  a cat:Kind ;
+  cat:instanceCategory cat:Individual ;
+  rdfs:label "Effect kind"@en .
+
+srd521:MechanicalStatus
+  a cat:Kind ;
+  cat:instanceCategory cat:Individual ;
+  rdfs:label "Mechanical status"@en .
+
+srd521:CharacterClass
+  a cat:Kind ;
+  cat:instanceCategory cat:Individual ;
+  rdfs:label "Character class"@en .
+
+srd521:WeaponCategory
+  a cat:Kind ;
+  cat:instanceCategory cat:Individual ;
+  rdfs:label "Weapon category"@en .
+
+srd521:WeaponRangeKind
+  a cat:Kind ;
+  cat:instanceCategory cat:Individual ;
+  rdfs:label "Weapon range kind"@en .
+
+srd521:WeaponMastery
+  a cat:Kind ;
+  cat:instanceCategory cat:Individual ;
+  rdfs:label "Weapon mastery"@en .
+
+srd521:AttackMode
+  a cat:Kind ;
+  cat:instanceCategory cat:Individual ;
+  rdfs:label "Attack mode"@en .
+
+srd521:ActionEconomyTag
+  a cat:Kind ;
+  cat:instanceCategory cat:Individual ;
+  rdfs:label "Action economy tag"@en .
+
+srd521:SpellRangeKind
+  a cat:Kind ;
+  cat:instanceCategory cat:Individual ;
+  rdfs:label "Spell range kind"@en .
+
+srd521:AreaShapeKind
+  a cat:Kind ;
+  cat:instanceCategory cat:Individual ;
+  rdfs:label "Area shape kind"@en .
+
+srd521:AttackRollKind
+  a cat:Kind ;
+  cat:instanceCategory cat:Individual ;
+  rdfs:label "Attack roll kind"@en .
+
+srd521:SpellExpressionKind
+  a cat:Kind ;
+  cat:instanceCategory cat:Individual ;
+  rdfs:label "Spell expression kind"@en .
+
+srd521:HealingKind
+  a cat:Kind ;
+  cat:instanceCategory cat:Individual ;
+  rdfs:label "Healing kind"@en .
+
+## LINEAGE: NEW MINT with no predecessor, minted 2026-08-11; ruled by the product seat 2026-08-11.
+srd521:fungibleKind_cp
+  a cat:Individual ;
+  cat:instanceOf kosm:FungibleKind ;
+  rdfs:label "CP"@en ;
+  rdfs:comment "The D&D SRD 5.2.1 denomination CP, meaning copper pieces."@en .
+
+## LINEAGE: NEW MINT with no predecessor, minted 2026-08-11; ruled by the product seat 2026-08-11.
+srd521:fungibleKind_sp
+  a cat:Individual ;
+  cat:instanceOf kosm:FungibleKind ;
+  rdfs:label "SP"@en ;
+  rdfs:comment "The D&D SRD 5.2.1 denomination SP, meaning silver pieces."@en .
+
+## LINEAGE: NEW MINT with no predecessor, minted 2026-08-11; ruled by the product seat 2026-08-11.
+srd521:fungibleKind_gp
+  a cat:Individual ;
+  cat:instanceOf kosm:FungibleKind ;
+  rdfs:label "GP"@en ;
+  rdfs:comment "The D&D SRD 5.2.1 denomination GP, meaning gold pieces."@en .
+
+## LINEAGE: NEW MINT with no predecessor, minted 2026-08-14; ruled by the product seat 2026-08-14
+## (the currency-package seam's half ①, sc.disc.2026-08-12_1308; the Coin Values table is the
+## design-by-use consumer).
+srd521:fungibleKind_ep
+  a cat:Individual ;
+  cat:instanceOf kosm:FungibleKind ;
+  rdfs:label "EP"@en ;
+  rdfs:comment "The D&D SRD 5.2.1 denomination EP, meaning electrum pieces."@en .
+
+## LINEAGE: NEW MINT with no predecessor, minted 2026-08-14; ruled by the product seat 2026-08-14
+## (the currency-package seam's half ①, sc.disc.2026-08-12_1308; the Coin Values table is the
+## design-by-use consumer).
+srd521:fungibleKind_pp
+  a cat:Individual ;
+  cat:instanceOf kosm:FungibleKind ;
+  rdfs:label "PP"@en ;
+  rdfs:comment "The D&D SRD 5.2.1 denomination PP, meaning platinum pieces."@en .
+
+#################################################################
+# Curated description-record families
+#################################################################
+
+srd521:ConditionDefinition
+  a cat:Kind ;
+  cat:instanceCategory cat:Description ;
+  rdfs:label "Condition definition"@en .
+
+srd521:ConditionEffect
+  a cat:Kind ;
+  cat:instanceCategory cat:Description ;
+  rdfs:label "Condition effect"@en .
+
+srd521:D20SkillRule
+  a cat:Kind ;
+  cat:specializes par:DecisionRule ;
+  cat:instanceCategory cat:Description ;
+  rdfs:label "D20 skill rule"@en ;
+  rdfs:comment "A curated rule row linking a skill to its default ability and D20 test action-type."@en .
+
+srd521:ItemActionOption
+  a cat:Kind ;
+  cat:instanceCategory cat:Description ;
+  rdfs:label "Item action option"@en .
+
+srd521:SpellDefinition
+  a cat:Kind ;
+  cat:instanceCategory cat:Description ;
+  rdfs:label "Spell definition"@en .
+
+srd521:SpellClassAvailability
+  a cat:Kind ;
+  cat:instanceCategory cat:Description ;
+  rdfs:label "Spell class availability"@en .
+
+srd521:SpellExpression
+  a cat:Kind ;
+  cat:instanceCategory cat:Description ;
+  rdfs:label "Spell expression"@en .
+
+srd521:AreaOfEffectShape
+  a cat:Kind ;
+  cat:instanceCategory cat:Description ;
+  rdfs:label "Area-of-effect shape"@en .
+
+srd521:WeaponPropertyDefinition
+  a cat:Kind ;
+  cat:instanceCategory cat:Description ;
+  rdfs:label "Weapon property definition"@en .
+
+#################################################################
+# Weapon-definition and D20 concretions over kosmion/participatorium (weapon records are Descriptions as of the 2026-07-27 re-home)
+#################################################################
+
+## LINEAGE: NEW MINT with no predecessor, minted 2026-08-14; ruled by the product seat 2026-08-14
+## (the currency-package seam's two-sided row vocabulary — a value equation has TWO sides, so the
+## one-sided kosm:quantity + kosm:fungibleKind pair is refused ON THE ROW and carried by each side).
+srd521:CurrencyEquation
+  a cat:Kind ;
+  cat:instanceCategory cat:Description ;
+  rdfs:label "Currency equation"@en ;
+  rdfs:comment "One row of the edition's Coin Values table, stated as a value equation between two denominated amounts: a coin side and a value side that are worth the same. The row itself bears no amount; each side is a currency equation side carrying exactly one quantity and one denomination."@en .
+
+## LINEAGE: NEW MINT with no predecessor, minted 2026-08-14; ruled by the product seat 2026-08-14
+## (the seam's side carrier: each side IS one denominated amount, hence the amount-bearer
+## specialization the row class deliberately does not have).
+srd521:CurrencyEquationSide
+  a cat:Kind ;
+  cat:specializes cat:AmountBearer ;
+  cat:instanceCategory cat:Description ;
+  rdfs:label "Currency equation side"@en ;
+  rdfs:comment "One side of a currency equation: a single denominated amount, carried as one decimal quantity paired with one fungible-kind denomination."@en .
+
+srd521:WeaponDefinition
+  a cat:Kind ;
+  cat:specializes cat:AmountBearer ;
+  cat:instanceCategory cat:Description ;
+  rdfs:label "Weapon definition"@en ;
+  rdfs:comment "RE-HOMED to the SpellDefinition idiom (WT-3 ripple + SB-2, 2026-07-27; was a cat:SecondOrderType categorizing kosm:Item): a weapon record is a STATBLOCK — authored edition content, a cat:Description — not a kind of thing. The prior idiom asserted a rigid artifact-kind claim the source never makes, and it fell with kosm:Item's demotion. Kind-hood and item-type assertions belong in WORLD content (kosm:ItemType), where a world that stocks battleaxes says so; the rules package holds the statblock only."@en .
+## Joined cat:AmountBearer directly on 2026-08-11; ruled by the product seat 2026-08-11. The cat:Kind
+## metatype and cat:Description instance category are unchanged.
+
+srd521:D20Test
+  a cat:EventType ;
+  cat:instanceCategory cat:Action ;
+  rdfs:label "D20 test"@en ;
+  rdfs:comment "The base edition action event-type for uncertain tests resolved by a D20 procedure."@en .
+
+srd521:D20TestType
+  a cat:SecondOrderType ;
+  cat:specializes par:ActionType ;
+  cat:categorizes srd521:D20Test ;
+  rdfs:label "D20 test type"@en ;
+  rdfs:comment "The edition category whose members are D20 test action-types such as ability check, saving throw, and attack roll."@en .
+
+srd521:D20TestWarrant
+  a cat:Kind ;
+  cat:specializes par:Warrant ;
+  cat:instanceCategory cat:Relator ;
+  rdfs:label "D20 test warrant"@en ;
+  rdfs:comment "An edition warrant requesting resolution by a D20 test. It uses participatorium's three-way Warrant mediation and resolution-parameter machinery."@en .
+
+srd521:D20TestWarrantWithdrawal
+  a cat:EventType ;
+  cat:instanceCategory cat:Event ;
+  rdfs:label "D20 test warrant withdrawal"@en ;
+  rdfs:comment "An event that withdraws an open D20 test warrant through par:withdrawsWarrant."@en .
+
+srd521:D20TestWarrantDecline
+  a cat:EventType ;
+  cat:instanceCategory cat:Event ;
+  rdfs:label "D20 test warrant decline"@en ;
+  rdfs:comment "An event that declines an open D20 test warrant through par:declinesWarrant."@en .
+
+srd521:D20RollProcedure
+  a cat:Description ;
+  cat:instanceOf par:RollProcedure ;
+  rdfs:label "D20 roll procedure"@en ;
+  rdfs:comment "Roll 1d20, apply the relevant ability modifier, proficiency if applicable, and circumstantial modifiers, then compare the total with the warranted target number."@en .
+
+srd521:D20RollEvidence
+  a cat:Kind ;
+  cat:specializes par:RollEvidence ;
+  cat:instanceCategory cat:InformationObject ;
+  rdfs:label "D20 roll evidence"@en .
+
+srd521:D20RollModifier
+  a cat:Kind ;
+  cat:specializes par:ResolutionParameter ;
+  cat:instanceCategory cat:Parameter ;
+  rdfs:label "D20 roll modifier"@en .
+
+srd521:DifficultyClass
+  a cat:Kind ;
+  cat:specializes par:ResolutionParameter ;
+  cat:instanceCategory cat:Parameter ;
+  rdfs:label "Difficulty Class"@en ;
+  rdfs:comment "A D20 resolution parameter whose numeric value is carried by par:targetNumber."@en .
+
+srd521:D20TestOutcome
+  a cat:SituationType ;
+  cat:instanceCategory cat:Situation ;
+  rdfs:label "D20 test outcome"@en ;
+  rdfs:comment "The base situation-type for adjudicated D20 test outcomes."@en .
+
+srd521:D20OutcomeTier
+  a cat:SecondOrderType ;
+  cat:specializes par:OutcomeTier ;
+  cat:partitions srd521:D20TestOutcome ;
+  rdfs:label "D20 outcome tier"@en .
+
+srd521:D20Success
+  a cat:SituationType ;
+  cat:instanceOf srd521:D20OutcomeTier, par:OutcomeTier ;
+  cat:specializes srd521:D20TestOutcome ;
+  cat:instanceCategory cat:Situation ;
+  rdfs:label "D20 success"@en .
+
+srd521:D20Failure
+  a cat:SituationType ;
+  cat:instanceOf srd521:D20OutcomeTier, par:OutcomeTier ;
+  cat:specializes srd521:D20TestOutcome ;
+  cat:instanceCategory cat:Situation ;
+  rdfs:label "D20 failure"@en .
+
+srd521:D20TestConsequence
+  a cat:Kind ;
+  cat:specializes par:ConsequenceTemplate ;
+  cat:instanceCategory cat:Description ;
+  rdfs:label "D20 test consequence"@en .
+
+#################################################################
+# Edition action-types
+#################################################################
+
+srd521:Attack
+  a cat:EventType ;
+  cat:instanceOf par:ActionType ;
+  cat:specializes par:Attack ;
+  cat:instanceCategory cat:Action ;
+  par:actionFacet par:manipulation ;
+  cat:lexicalToken "attack" ;
+  rdfs:label "Attack"@en .
+
+srd521:Dash
+  a cat:EventType ;
+  cat:instanceOf par:ActionType ;
+  cat:instanceCategory cat:Action ;
+  par:actionFacet par:relocation ;
+  cat:lexicalToken "dash" ;
+  rdfs:label "Dash"@en .
+
+srd521:Disengage
+  a cat:EventType ;
+  cat:instanceOf par:ActionType ;
+  cat:instanceCategory cat:Action ;
+  par:actionFacet par:relocation, par:selfState ;
+  cat:lexicalToken "disengage" ;
+  rdfs:label "Disengage"@en .
+
+srd521:Dodge
+  a cat:EventType ;
+  cat:instanceOf par:ActionType ;
+  cat:instanceCategory cat:Action ;
+  par:actionFacet par:selfState ;
+  cat:lexicalToken "dodge" ;
+  rdfs:label "Dodge"@en .
+
+srd521:Help
+  a cat:EventType ;
+  cat:instanceOf par:ActionType ;
+  cat:instanceCategory cat:Action ;
+  cat:lexicalToken "help" ;
+  rdfs:label "Help"@en ;
+  rdfs:comment "A polymorphic edition action. It deliberately does NOT specialize par:Assist: Help covers several intentions (aiding a check, aiding an attack, and edition uses beyond assistance), so a type edge would over-claim — co-classification is per TOKEN, which is what par:Assist's own comment prescribes (\"D&D Help TOKENS that aid a check/attack co-classify, but Help-as-first-aid does NOT\"). ⛔ CORRECTED 2026-08-01: this comment previously gave the reason as \"par:Assist, whose intension is first aid,\" which inverts that term's landed text — first aid is the use par:Assist EXCLUDES, not its intension. Has no invariant facet profile, matching par:Assist's own no-fixed-facet stance."@en .
+
+srd521:Hide
+  a cat:EventType ;
+  cat:instanceOf par:ActionType ;
+  cat:specializes par:Hide ;
+  cat:instanceCategory cat:Action ;
+  par:actionFacet par:selfState ;
+  cat:lexicalToken "hide" ;
+  rdfs:label "Hide"@en .
+
+srd521:Influence
+  a cat:EventType ;
+  cat:instanceOf par:ActionType ;
+  cat:specializes par:Influence ;
+  cat:instanceCategory cat:Action ;
+  par:actionFacet par:communication ;
+  cat:lexicalToken "influence" ;
+  rdfs:label "Influence"@en .
+
+srd521:Ready
+  a cat:EventType ;
+  cat:instanceOf par:ActionType ;
+  cat:instanceCategory cat:Action ;
+  par:actionFacet par:temporalFlow ;
+  cat:lexicalToken "ready" ;
+  rdfs:label "Ready"@en .
+
+srd521:Search
+  a cat:EventType ;
+  cat:instanceOf par:ActionType ;
+  cat:specializes par:Observe ;
+  cat:instanceCategory cat:Action ;
+  par:actionFacet par:perception ;
+  cat:lexicalToken "search" ;
+  rdfs:label "Search"@en .
+
+srd521:Study
+  a cat:EventType ;
+  cat:instanceOf par:ActionType ;
+  cat:specializes par:Investigate ;
+  cat:instanceCategory cat:Action ;
+  par:actionFacet par:cognition ;
+  cat:lexicalToken "study" ;
+  rdfs:label "Study"@en .
+
+srd521:Utilize
+  a cat:EventType ;
+  cat:instanceOf par:ActionType ;
+  cat:instanceCategory cat:Action ;
+  par:actionFacet par:manipulation ;
+  cat:lexicalToken "utilize" ;
+  rdfs:label "Utilize"@en .
+
+srd521:Cast
+  a cat:EventType ;
+  cat:instanceOf par:ActionType ;
+  cat:instanceCategory cat:Action ;
+  cat:lexicalToken "magic" ;
+  rdfs:label "Magic"@en ;
+  rdfs:comment "The edition's spellcasting mechanism dispatcher. It has no common-catalog parent and no fixed facet profile; each spellcasting action token co-classifies to its real intention, such as par:Attack, par:Influence, or par:Observe."@en .
+
+srd521:Attune
+  a cat:EventType ;
+  cat:instanceOf par:ActionType ;
+  cat:instanceCategory cat:Action ;
+  cat:lexicalToken "attune" ;
+  rdfs:label "Attune"@en ;
+  rdfs:comment "The edition action that creates or maintains a D&D magic-item attunement. The bond relator machinery is kosm:Attunement; edition limits and slots remain srd521 content."@en .
+
+#################################################################
+# Attunement rules referencing kosmion's relator machinery
+#################################################################
+
+srd521:AttunementRule
+  a cat:Kind ;
+  cat:specializes par:DecisionRule ;
+  cat:instanceCategory cat:Description ;
+  rdfs:label "Attunement rule"@en .
+
+srd521:AttunementLimit
+  a cat:Kind ;
+  cat:specializes par:ResolutionParameter ;
+  cat:instanceCategory cat:Parameter ;
+  rdfs:label "Attunement limit"@en .
+
+srd521:AttunementSlot
+  a cat:Kind ;
+  cat:specializes par:ResolutionParameter ;
+  cat:instanceCategory cat:Parameter ;
+  rdfs:label "Attunement slot"@en .
+
+srd521:attunementRelator
+  a rdf:Property ;
+  cat:rangeType kosm:Attunement ;
+  rdfs:label "attunement relator"@en .
+
+srd521:attunementLimit
+  a rdf:Property ;
+  cat:domainType srd521:AttunementRule ;
+  cat:rangeType srd521:AttunementLimit ;
+  rdfs:label "attunement limit"@en .
+
+srd521:attunementSlot
+  a rdf:Property ;
+  cat:domainType kosm:Attunement ;
+  cat:rangeType srd521:AttunementSlot ;
+  rdfs:label "attunement slot"@en .
+
+#################################################################
+# Edition-owned damage effect family
+#################################################################
+
+srd521:DamageEffect
+  a cat:Kind ;
+  cat:specializes par:ConsequenceTemplate ;
+  cat:instanceCategory cat:Description ;
+  rdfs:label "Damage effect"@en .
+
+srd521:DamageEvidenceMode
+  a cat:Kind ;
+  cat:instanceCategory cat:Individual ;
+  rdfs:label "Damage evidence mode"@en .
+
+srd521:damageEvidenceMode_damageRoll
+  a cat:Individual ;
+  cat:instanceOf srd521:DamageEvidenceMode ;
+  rdfs:label "damage roll"@en ;
+  cat:lexicalToken "damage-roll" .
+
+srd521:damageEvidenceMode_staticDamage
+  a cat:Individual ;
+  cat:instanceOf srd521:DamageEvidenceMode ;
+  rdfs:label "static damage"@en ;
+  cat:lexicalToken "static-damage" .
+
+srd521:damageAmount
+  a rdf:Property ;
+  rdfs:range xsd:integer ;
+  rdfs:label "damage amount"@en ;
+  rdfs:comment "The damage magnitude on damage evidence and committed condition effects (measured: battle-beat-attack.ts:301 on AttackDamageEvidence, :356 on ConditionEffect — domain deliberately undeclared for that reason). Absorbs the retiring dynamis-subroot dyn:damageAmount (declared 2026-07-31, declare-the-36; edition boundary per participatorium.ttl:583-587)."@en .
+
+srd521:damageEvidenceMode
+  a rdf:Property ;
+  cat:rangeType srd521:DamageEvidenceMode ;
+  rdfs:label "damage evidence mode"@en ;
+  rdfs:comment "How this damage evidence was produced. The platform currently writes the lexical token as a string literal (battle-beat-attack.ts:302); migration lifts literals to members via cat:lexicalToken. Absorbs the retiring dynamis-subroot dyn:damageEvidenceMode (declared 2026-07-31, declare-the-36; the destination kind and members pre-existed this session and already follow the member-prefix convention)."@en .
+
+#################################################################
+# Nine-fold alignment declaration terms
+#################################################################
+
+srd521:AlignmentTerm
+  a cat:Kind ;
+  cat:instanceCategory cat:Individual ;
+  rdfs:label "Alignment term"@en ;
+  rdfs:comment "The edition family of declaration terms usable as rol:declarationTerm values on rol:AlignmentDeclaration records. Nine of its members sit on a two-axis grid and carry one rol:valueAxisPosition per axis; srd521:unaligned sits off the grid and is classified srd521:OffAxisAlignmentTerm instead."@en ;
+  rdfs:seeAlso rol:AlignmentDeclaration, rol:declarationTerm,
+    rol:ValueAxis, rol:ValueAxisPosition, rol:valueAxis, rol:valueAxisPosition .
+
+srd521:lawfulGood
+  a cat:Individual ;
+  cat:instanceOf srd521:AlignmentTerm ;
+  rol:valueAxisPosition srd521:valueAxisPosition_ethicsLawful, srd521:valueAxisPosition_moralsGood ;
+  rdfs:label "Lawful Good"@en .
+
+srd521:neutralGood
+  a cat:Individual ;
+  cat:instanceOf srd521:AlignmentTerm ;
+  rol:valueAxisPosition srd521:valueAxisPosition_ethicsNeutral, srd521:valueAxisPosition_moralsGood ;
+  rdfs:label "Neutral Good"@en .
+
+srd521:chaoticGood
+  a cat:Individual ;
+  cat:instanceOf srd521:AlignmentTerm ;
+  rol:valueAxisPosition srd521:valueAxisPosition_ethicsChaotic, srd521:valueAxisPosition_moralsGood ;
+  rdfs:label "Chaotic Good"@en .
+
+srd521:lawfulNeutral
+  a cat:Individual ;
+  cat:instanceOf srd521:AlignmentTerm ;
+  rol:valueAxisPosition srd521:valueAxisPosition_ethicsLawful, srd521:valueAxisPosition_moralsNeutral ;
+  rdfs:label "Lawful Neutral"@en .
+
+srd521:neutral
+  a cat:Individual ;
+  cat:instanceOf srd521:AlignmentTerm ;
+  rol:valueAxisPosition srd521:valueAxisPosition_ethicsNeutral, srd521:valueAxisPosition_moralsNeutral ;
+  rdfs:label "Neutral"@en .
+
+srd521:chaoticNeutral
+  a cat:Individual ;
+  cat:instanceOf srd521:AlignmentTerm ;
+  rol:valueAxisPosition srd521:valueAxisPosition_ethicsChaotic, srd521:valueAxisPosition_moralsNeutral ;
+  rdfs:label "Chaotic Neutral"@en .
+
+srd521:lawfulEvil
+  a cat:Individual ;
+  cat:instanceOf srd521:AlignmentTerm ;
+  rol:valueAxisPosition srd521:valueAxisPosition_ethicsLawful, srd521:valueAxisPosition_moralsEvil ;
+  rdfs:label "Lawful Evil"@en .
+
+srd521:neutralEvil
+  a cat:Individual ;
+  cat:instanceOf srd521:AlignmentTerm ;
+  rol:valueAxisPosition srd521:valueAxisPosition_ethicsNeutral, srd521:valueAxisPosition_moralsEvil ;
+  rdfs:label "Neutral Evil"@en .
+
+srd521:chaoticEvil
+  a cat:Individual ;
+  cat:instanceOf srd521:AlignmentTerm ;
+  rol:valueAxisPosition srd521:valueAxisPosition_ethicsChaotic, srd521:valueAxisPosition_moralsEvil ;
+  rdfs:label "Chaotic Evil"@en .
+
+#################################################################
+# Value-axis positions — this edition's cuts along the ruled axes
+#
+# The axes and the grammar are roleosum's (rol:ValueAxis,
+# rol:ValueAxisPosition, rol:valueAxis, rol:valueAxisPosition,
+# minted 2026-08-11 on Dave's ruling). The MEMBERS are edition
+# content and are declared here, per amendment #9: the theory arm
+# cannot tell lawful from chaotic without this rules system.
+#
+# Positions are AXIS-LOCAL. The two neutral positions are distinct
+# IRIs sharing an English token: "neutral on ethics" and "neutral on
+# morals" are different cuts, and collapsing them would make the
+# term -> position -> axis join ambiguous.
+#################################################################
+
+## NEW MINT with no predecessor, minted 2026-08-11; ruled by Dave 2026-08-11 (product channel).
+srd521:valueAxisPosition_ethicsLawful
+  a cat:Individual ;
+  cat:instanceOf rol:ValueAxisPosition ;
+  rol:valueAxis rol:valueAxis_ethics ;
+  cat:lexicalToken "lawful" ;
+  rdfs:label "Lawful"@en ;
+  rdfs:comment "The ethics-axis cut for a subject who honours order, rule and custom."@en .
+
+## NEW MINT with no predecessor, minted 2026-08-11; ruled by Dave 2026-08-11 (product channel).
+srd521:valueAxisPosition_ethicsNeutral
+  a cat:Individual ;
+  cat:instanceOf rol:ValueAxisPosition ;
+  rol:valueAxis rol:valueAxis_ethics ;
+  cat:lexicalToken "neutral" ;
+  rdfs:label "Neutral (ethics)"@en ;
+  rdfs:comment "The ethics-axis cut for a subject who is bound by neither order nor its rejection. Distinct from the morals-axis neutral position, which shares its token and not its identity."@en .
+
+## NEW MINT with no predecessor, minted 2026-08-11; ruled by Dave 2026-08-11 (product channel).
+srd521:valueAxisPosition_ethicsChaotic
+  a cat:Individual ;
+  cat:instanceOf rol:ValueAxisPosition ;
+  rol:valueAxis rol:valueAxis_ethics ;
+  cat:lexicalToken "chaotic" ;
+  rdfs:label "Chaotic"@en ;
+  rdfs:comment "The ethics-axis cut for a subject who follows personal impulse over order, rule and custom."@en .
+
+## NEW MINT with no predecessor, minted 2026-08-11; ruled by Dave 2026-08-11 (product channel).
+srd521:valueAxisPosition_moralsGood
+  a cat:Individual ;
+  cat:instanceOf rol:ValueAxisPosition ;
+  rol:valueAxis rol:valueAxis_morals ;
+  cat:lexicalToken "good" ;
+  rdfs:label "Good"@en ;
+  rdfs:comment "The morals-axis cut for a subject who acts for the welfare of others."@en .
+
+## NEW MINT with no predecessor, minted 2026-08-11; ruled by Dave 2026-08-11 (product channel).
+srd521:valueAxisPosition_moralsNeutral
+  a cat:Individual ;
+  cat:instanceOf rol:ValueAxisPosition ;
+  rol:valueAxis rol:valueAxis_morals ;
+  cat:lexicalToken "neutral" ;
+  rdfs:label "Neutral (morals)"@en ;
+  rdfs:comment "The morals-axis cut for a subject who is moved by neither the welfare of others nor its opposite. Distinct from the ethics-axis neutral position, which shares its token and not its identity."@en .
+
+## NEW MINT with no predecessor, minted 2026-08-11; ruled by Dave 2026-08-11 (product channel).
+srd521:valueAxisPosition_moralsEvil
+  a cat:Individual ;
+  cat:instanceOf rol:ValueAxisPosition ;
+  rol:valueAxis rol:valueAxis_morals ;
+  cat:lexicalToken "evil" ;
+  rdfs:label "Evil"@en ;
+  rdfs:comment "The morals-axis cut for a subject who acts against the welfare of others."@en .
+
+## NEW MINT with no predecessor, minted 2026-08-11; ruled by Dave 2026-08-11 (product channel).
+srd521:OffAxisAlignmentTerm
+  a cat:Kind ;
+  cat:specializes srd521:AlignmentTerm ;
+  cat:instanceCategory cat:Individual ;
+  rdfs:label "Off-axis alignment term"@en ;
+  rdfs:comment "An alignment term that sits off the two-axis grid rather than at a cell of it, and therefore carries no rol:valueAxisPosition. Being off the grid is asserted here positively rather than inferred from a missing edge, so a reader can tell it apart from a term whose positions merely have not been recorded."@en ;
+  rdfs:seeAlso rol:valueAxisPosition .
+
+#################################################################
+# Curated-content properties
+#
+# rdfs:domain/range are used only for fixed RDF/categoriae classes
+# or datatypes. Domain-type constraints use cat:domainType and
+# cat:rangeType.
+#################################################################
+
+srd521:hasConditionEffect
+  a rdf:Property ;
+  cat:domainType srd521:ConditionDefinition ;
+  cat:rangeType srd521:ConditionEffect ;
+  rdfs:label "has condition effect"@en .
+
+srd521:defaultAbility
+  a rdf:Property ;
+  cat:domainType srd521:Skill ;
+  cat:rangeType srd521:AbilityScore ;
+  rdfs:label "default ability"@en .
+
+srd521:actionType
+  a rdf:Property ;
+  cat:rangeType par:ActionType ;
+  rdfs:label "action type"@en .
+
+srd521:usesAbility
+  a rdf:Property ;
+  cat:rangeType srd521:AbilityScore ;
+  rdfs:label "uses ability"@en .
+
+## RETIRED 2026-08-10 — srd521:rollEvidence. Dave ruled the cut in the product channel: an edition-typed
+## clone of a general relation, whose narrowing is carried by SHACL, not by a second property.
+## Absorbed by par:citesRollEvidence, which the frozen mapping row for the pre-family
+## dynamis spelling now targets (class-3 freeze amendment, same act).
+## MEASURED AT THE CUT: 0 authored carriers and 0 platform consumers at this IRI — the platform
+## builds the dynamis spelling (packages/rules/src/index.ts:108 over dynamisVocab), so the
+## "serves the landed consumers" rationale in the retired comment was never true of THIS term.
+## The D20 typing it carried is already enforced at dyn-sh:D20TestOutcomeShape
+## (ontology/modules/dynamis-shacl.ttl:964-969: path, minCount 1, maxCount 1, class).
+## Reverses the DF-RESTORE-2 restoration (Dave, 2026-07-28) on new evidence, not as a tidy-up.
+
+
+srd521:weaponDefinition
+  a rdf:Property ;
+  cat:domainType kosm:Item ;
+  cat:rangeType srd521:WeaponDefinition ;
+  rdfs:label "weapon definition"@en ;
+  rdfs:comment "Links one identity-bearing live item to its reusable rules-package weapon definition. Action options remain rules data and are derived by joining the item-action-option records; they are never copied onto the live item. RESTORED under DF-RESTORE-1 (Dave, 2026-07-28: 'a frozen row can be corrected') from pre-family possessio:weaponDefinition, whose comment this preserves. The frozen v2 row CASE-FOLDED this owl:ObjectProperty onto its class sibling srd521:WeaponDefinition, so the property was never minted while packages/contracts/src/terms.ts:131 kept exporting its IRI as campaignSeedWeaponDefinitionPredicate. Homed in srd521 rather than the family because its range is edition content; the frozen row already named this base and only the case was wrong."@en .
+
+srd521:grantWeaponDefinition
+  a rdf:Property ;
+  cat:domainType kosm:ContentGrant ;
+  cat:rangeType srd521:WeaponDefinition ;
+  rdfs:label "grant weapon definition"@en ;
+  rdfs:comment "Links a content grant to the reusable rules-package weapon definition its granted item instantiates at founding. Minted 2026-08-05 (wave-1 slate-1 re-dispose, Dave in-channel). Homed by this file's own cross-base property pattern (cat:domainType kosm:Item at srd521:weaponDefinition, kosm:Attunement at srd521:AttunementRule, par:DecisionTable): an edition-specific relation whose meaning is the edition's - the granted item instantiates a 5.2.1 weapon definition. Absorbs the retiring sc:grantWeaponDefinition, which was never declared - used only as a SHACL path in the seed-founding contract (consult-2 finding 4 repairs this comment's first-landed provenance wording)."@en .
+
+srd521:usesSkill
+  a rdf:Property ;
+  cat:rangeType srd521:Skill ;
+  rdfs:label "uses skill"@en .
+
+srd521:hasWeaponProperty
+  a rdf:Property ;
+  cat:domainType srd521:WeaponDefinition ;
+  cat:rangeType srd521:WeaponPropertyDefinition ;
+  rdfs:label "has weapon property"@en .
+
+## LINEAGE: NEW MINT with no predecessor, minted 2026-08-14; ruled by the product seat 2026-08-14
+## (the currency-package seam's half ①). The coin side is the side the source row NAMES.
+srd521:coinSide
+  a rdf:Property ;
+  cat:domainType srd521:CurrencyEquation ;
+  cat:rangeType srd521:CurrencyEquationSide ;
+  rdfs:label "coin side"@en ;
+  rdfs:comment "The named-coin side of a currency equation — the denomination the source table's row is about, as one denominated amount."@en .
+
+## LINEAGE: NEW MINT with no predecessor, minted 2026-08-14; ruled by the product seat 2026-08-14
+## (the currency-package seam's half ①). The value side is what the coin side is worth.
+srd521:valueSide
+  a rdf:Property ;
+  cat:domainType srd521:CurrencyEquation ;
+  cat:rangeType srd521:CurrencyEquationSide ;
+  rdfs:label "value side"@en ;
+  rdfs:comment "The worth side of a currency equation — the denominated amount the coin side equals."@en .
+
+srd521:damageType
+  a rdf:Property ;
+  cat:rangeType srd521:DamageType ;
+  rdfs:label "damage type"@en .
+
+srd521:forItem
+  a rdf:Property ;
+  cat:domainType srd521:ItemActionOption ;
+  cat:rangeType srd521:WeaponDefinition ;
+  rdfs:label "for item"@en .
+
+srd521:itemActionTestType
+  a rdf:Property ;
+  cat:domainType srd521:ItemActionOption ;
+  cat:rangeType srd521:D20TestType ;
+  rdfs:label "item action test type"@en .
+
+srd521:spellSchool
+  a rdf:Property ;
+  cat:rangeType srd521:SpellSchool ;
+  rdfs:label "spell school"@en .
+
+srd521:forSpell
+  a rdf:Property ;
+  cat:rangeType srd521:SpellDefinition ;
+  rdfs:label "for spell"@en .
+
+srd521:areaShape
+  a rdf:Property ;
+  cat:rangeType srd521:AreaOfEffectShape ;
+  rdfs:label "area shape"@en .
+
+srd521:saveAbility
+  a rdf:Property ;
+  cat:rangeType srd521:AbilityScore ;
+  rdfs:label "save ability"@en .
+
+srd521:conditionEffectType
+  a rdf:Property ;
+  cat:domainType srd521:ConditionEffect ;
+  cat:rangeType srd521:ConditionEffectType ;
+  rdfs:label "condition effect type"@en .
+
+srd521:effectKind
+  a rdf:Property ;
+  cat:domainType srd521:ConditionEffect ;
+  cat:rangeType srd521:EffectKind ;
+  rdfs:label "effect kind"@en .
+
+srd521:mechanicalStatus
+  a rdf:Property ;
+  cat:rangeType srd521:MechanicalStatus ;
+  rdfs:label "mechanical status"@en .
+
+srd521:actionEconomyTag
+  a rdf:Property ;
+  cat:domainType srd521:SpellDefinition ;
+  cat:rangeType srd521:ActionEconomyTag ;
+  rdfs:label "action economy tag"@en .
+
+srd521:availableToClass
+  a rdf:Property ;
+  cat:domainType srd521:SpellClassAvailability ;
+  cat:rangeType srd521:CharacterClass ;
+  rdfs:label "available to class"@en .
+
+srd521:weaponCategory
+  a rdf:Property ;
+  cat:rangeType srd521:WeaponCategory ;
+  rdfs:label "weapon category"@en .
+
+srd521:weaponRangeKind
+  a rdf:Property ;
+  cat:rangeType srd521:WeaponRangeKind ;
+  rdfs:label "weapon range kind"@en .
+
+srd521:weaponMastery
+  a rdf:Property ;
+  cat:rangeType srd521:WeaponMastery ;
+  rdfs:label "weapon mastery"@en .
+
+srd521:attackMode
+  a rdf:Property ;
+  cat:domainType srd521:ItemActionOption ;
+  cat:rangeType srd521:AttackMode ;
+  rdfs:label "attack mode"@en .
+
+srd521:spellRangeKind
+  a rdf:Property ;
+  cat:domainType srd521:SpellDefinition ;
+  cat:rangeType srd521:SpellRangeKind ;
+  rdfs:label "spell range kind"@en .
+
+srd521:areaShapeKind
+  a rdf:Property ;
+  cat:domainType srd521:AreaOfEffectShape ;
+  cat:rangeType srd521:AreaShapeKind ;
+  rdfs:label "area shape kind"@en .
+
+srd521:attackRollKind
+  a rdf:Property ;
+  cat:domainType srd521:SpellDefinition ;
+  cat:rangeType srd521:AttackRollKind ;
+  rdfs:label "attack roll kind"@en .
+
+srd521:spellExpressionKind
+  a rdf:Property ;
+  cat:domainType srd521:SpellExpression ;
+  cat:rangeType srd521:SpellExpressionKind ;
+  rdfs:label "spell expression kind"@en .
+
+srd521:healingKind
+  a rdf:Property ;
+  cat:domainType srd521:SpellExpression ;
+  cat:rangeType srd521:HealingKind ;
+  rdfs:label "healing kind"@en .
+
+srd521:sourceSection
+  a rdf:Property ;
+  rdfs:range xsd:string ;
+  rdfs:label "source section"@en .
+
+srd521:srdReference
+  a rdf:Property ;
+  rdfs:range xsd:string ;
+  rdfs:label "SRD reference"@en .
+
+srd521:abilityCheckExample
+  a rdf:Property ;
+  cat:domainType srd521:AbilityScore ;
+  rdfs:range xsd:string ;
+  rdfs:label "ability check example"@en .
+
+srd521:savingThrowExample
+  a rdf:Property ;
+  cat:domainType srd521:AbilityScore ;
+  rdfs:range xsd:string ;
+  rdfs:label "saving throw example"@en .
+
+srd521:exampleUses
+  a rdf:Property ;
+  cat:domainType srd521:Skill ;
+  rdfs:range xsd:string ;
+  rdfs:label "example uses"@en .
+
+srd521:spellLevel
+  a rdf:Property ;
+  rdfs:range xsd:integer ;
+  rdfs:label "spell level"@en .
+
+srd521:classLabel
+  a rdf:Property ;
+  cat:domainType srd521:CharacterClass ;
+  rdfs:range xsd:string ;
+  rdfs:label "class label"@en .
+
+## minted 2026-08-14, ruled by Dave (product channel: "yes, let's do that!"); NO PREDECESSOR.
+## Ground: design-by-use — the character-sheet contract's required hit-die slot and the ruled
+## POC character generator read this per class. Data rides the regeneration pipeline (the class
+## rows do not carry it yet; the four non-caster classes land with the same regeneration).
+srd521:classHitDie
+  a rdf:Property ;
+  cat:domainType srd521:CharacterClass ;
+  rdfs:range xsd:string ;
+  rdfs:label "class hit die"@en ;
+  rdfs:comment "The die a character of this class gains per level - the per-level hit-die entitlement, written as a die token such as \"d10\", as the source class table states it. Distinct from srd521:hitDiceExpression, which is a creature statline's hit-point generation expression, not a per-level entitlement."@en .
+
+## RETIRED 2026-08-12 — srd521:costText. Dave ruled the retirement in the product channel
+## (2026-08-12 00:18 PDT): "yes, let's retire costText. Seems like a source of drift and confusion."
+## The drift is the term's own shape — one printed price held as an unparsed string beside the same
+## price held normalized, two spellings of a single fact with nothing reconciling them.
+## SUCCEEDED BY the normalized pair kosm:quantity + kosm:fungibleKind on the same WeaponDefinition,
+## which the retired declaration's carrier comment anticipated and which the extraction generator now
+## emits (stagecraft 019a2005) — landed in weapons/weapons.ttl by THIS commit. The declaration's
+## removal rides the regeneration's own epoch and never precedes it, so no window exists in which the
+## landed values are used-but-undeclared.
+## THE BYTE-FAITHFUL SOURCE IS UNCHANGED: weapons/weapons.csv carries the printed cost string verbatim
+## and remains the extraction evidence this property was minted to hold. The retirement drops the
+## derived second copy, not the source, so no fidelity is lost.
+## MEASURED AT THE CUT (at the files, this commit): weapons.ttl costText 38 -> 0, kosm:quantity 0 -> 38,
+## kosm:fungibleKind 0 -> 38 (CP 1, SP 5, GP 32), 1174 -> 1212 triples, weaponWeight byte-identical by
+## hash. Zero behavioural consumers at this IRI (census over 2,440 files / 17 repos); the surviving
+## occurrence records are stagecraft's term inventory and resolution map, which regenerate at the srd
+## pin roll and are deliberately not touched here.
+
+srd521:weaponWeight
+  a rdf:Property ;
+  cat:domainType srd521:WeaponDefinition ;
+  rdfs:range xsd:string ;
+  rdfs:label "weapon weight"@en .
+
+srd521:sourceProperties
+  a rdf:Property ;
+  rdfs:range xsd:string ;
+  rdfs:label "source properties"@en .
+
+srd521:damageExpression
+  a rdf:Property ;
+  rdfs:range xsd:string ;
+  rdfs:label "damage expression"@en .
+
+srd521:staticDamage
+  a rdf:Property ;
+  rdfs:range xsd:integer ;
+  rdfs:label "static damage"@en .
+
+srd521:handsRequired
+  a rdf:Property ;
+  cat:domainType srd521:ItemActionOption ;
+  rdfs:range xsd:integer ;
+  rdfs:label "hands required"@en .
+
+srd521:handsNote
+  a rdf:Property ;
+  cat:domainType srd521:ItemActionOption ;
+  rdfs:range xsd:string ;
+  rdfs:label "hands note"@en .
+
+srd521:normalRangeFeet
+  a rdf:Property ;
+  cat:domainType srd521:ItemActionOption ;
+  rdfs:range xsd:integer ;
+  rdfs:label "normal range in feet"@en .
+
+srd521:longRangeFeet
+  a rdf:Property ;
+  cat:domainType srd521:ItemActionOption ;
+  rdfs:range xsd:integer ;
+  rdfs:label "long range in feet"@en .
+
+srd521:castingTime
+  a rdf:Property ;
+  cat:domainType srd521:SpellDefinition ;
+  rdfs:range xsd:string ;
+  rdfs:label "casting time"@en .
+
+srd521:rangeText
+  a rdf:Property ;
+  cat:domainType srd521:SpellDefinition ;
+  rdfs:range xsd:string ;
+  rdfs:label "range text"@en .
+
+srd521:rangeDistanceFeet
+  a rdf:Property ;
+  cat:domainType srd521:SpellDefinition ;
+  rdfs:range xsd:integer ;
+  rdfs:label "range distance in feet"@en .
+
+srd521:rangeAreaText
+  a rdf:Property ;
+  cat:domainType srd521:SpellDefinition ;
+  rdfs:range xsd:string ;
+  rdfs:label "range area text"@en .
+
+srd521:radiusFeet
+  a rdf:Property ;
+  cat:domainType srd521:AreaOfEffectShape ;
+  rdfs:range xsd:integer ;
+  rdfs:label "radius in feet"@en .
+
+srd521:rangeFeet
+  a rdf:Property ;
+  cat:domainType srd521:AreaOfEffectShape ;
+  rdfs:range xsd:integer ;
+  rdfs:label "range in feet"@en ;
+  rdfs:comment "NO LONGER A DIMENSION CARRIER for area shapes as of the 2026-07-27 F7 mints: it carried a cone's length and a CUBE'S EDGE, so an Alarm row published rangeFeet 20 for what is its cube size — a false RANGE assertion, not a missing column. Each shape kind now carries its own semantically named dimension (edgeFeet / lengthFeet / widthFeet / heightFeet / radiusFeet / diameterFeet). Retirement of this term is sequenced at F7 adoption, not here — srd-family.mjs still emits it."@en .
+
+srd521:diameterFeet
+  a rdf:Property ;
+  cat:domainType srd521:AreaOfEffectShape ;
+  rdfs:range xsd:integer ;
+  rdfs:label "diameter in feet"@en ;
+  rdfs:comment "MINTED 2026-07-27 (F7 area-shape dimensions; product ruling A1 on sc.task.2026-07-27_1416-area-shape-dimensions). A sphere row records the dimension THE SOURCE STATES: Flaming Sphere reads \"5-foot-diameter sphere\", and publishing that as radiusFeet 5 asserted a radius twice the truth. Exactly one of srd521:radiusFeet and srd521:diameterFeet is populated per sphere shape. Radius-from-diameter is a DECLARED DOWNSTREAM DERIVATION, never a silent conversion at extraction — converting destroys provenance and rewrites record identity."@en .
+
+srd521:lengthFeet
+  a rdf:Property ;
+  cat:domainType srd521:AreaOfEffectShape ;
+  rdfs:range xsd:integer ;
+  rdfs:label "length in feet"@en ;
+  rdfs:comment "MINTED 2026-07-27 (F7 area-shape dimensions): the long axis of a cone or line area, previously mis-carried in srd521:rangeFeet."@en .
+
+srd521:widthFeet
+  a rdf:Property ;
+  cat:domainType srd521:AreaOfEffectShape ;
+  rdfs:range xsd:integer ;
+  rdfs:label "width in feet"@en ;
+  rdfs:comment "MINTED 2026-07-27 (F7 area-shape dimensions): the cross axis of a line area. Lightning Bolt is 100 feet long by 5 feet wide; the width had no carrier at all and was dropped at extraction."@en .
+
+srd521:heightFeet
+  a rdf:Property ;
+  cat:domainType srd521:AreaOfEffectShape ;
+  rdfs:range xsd:integer ;
+  rdfs:label "height in feet"@en ;
+  rdfs:comment "MINTED 2026-07-27 (F7 area-shape dimensions): the vertical extent of a cylinder area. Ice Storm is a 20-foot-radius, 40-foot-high cylinder; the height had no carrier at all and was dropped at extraction."@en .
+
+srd521:edgeFeet
+  a rdf:Property ;
+  cat:domainType srd521:AreaOfEffectShape ;
+  rdfs:range xsd:integer ;
+  rdfs:label "edge in feet"@en ;
+  rdfs:comment "MINTED 2026-07-27 (F7 area-shape dimensions): the edge length of a cube area — the dimension whose absence produced the false-range class this mint closes."@en .
+
+srd521:componentVerbal
+  a rdf:Property ;
+  cat:domainType srd521:SpellDefinition ;
+  rdfs:range xsd:boolean ;
+  rdfs:label "has verbal component"@en .
+
+srd521:componentSomatic
+  a rdf:Property ;
+  cat:domainType srd521:SpellDefinition ;
+  rdfs:range xsd:boolean ;
+  rdfs:label "has somatic component"@en .
+
+srd521:componentMaterial
+  a rdf:Property ;
+  cat:domainType srd521:SpellDefinition ;
+  rdfs:range xsd:boolean ;
+  rdfs:label "has material component"@en .
+
+srd521:materialText
+  a rdf:Property ;
+  cat:domainType srd521:SpellDefinition ;
+  rdfs:range xsd:string ;
+  rdfs:label "material text"@en .
+
+srd521:durationText
+  a rdf:Property ;
+  cat:domainType srd521:SpellDefinition ;
+  rdfs:range xsd:string ;
+  rdfs:label "duration text"@en .
+
+srd521:requiresConcentration
+  a rdf:Property ;
+  cat:domainType srd521:SpellDefinition ;
+  rdfs:range xsd:boolean ;
+  rdfs:label "requires concentration"@en .
+
+srd521:ritual
+  a rdf:Property ;
+  cat:domainType srd521:SpellDefinition ;
+  rdfs:range xsd:boolean ;
+  rdfs:label "ritual"@en .
+
+srd521:requiresSavingThrow
+  a rdf:Property ;
+  cat:domainType srd521:SpellDefinition ;
+  rdfs:range xsd:boolean ;
+  rdfs:label "requires saving throw"@en .
+
+srd521:requiresAttackRoll
+  a rdf:Property ;
+  cat:domainType srd521:SpellDefinition ;
+  rdfs:range xsd:boolean ;
+  rdfs:label "requires attack roll"@en .
+
+srd521:atHigherLevelsText
+  a rdf:Property ;
+  cat:domainType srd521:SpellDefinition ;
+  rdfs:range xsd:string ;
+  rdfs:label "at higher levels text"@en .
+
+srd521:staticAmount
+  a rdf:Property ;
+  cat:domainType srd521:SpellExpression ;
+  rdfs:range xsd:integer ;
+  rdfs:label "static amount"@en .
+
+srd521:expressionContext
+  a rdf:Property ;
+  cat:domainType srd521:SpellExpression ;
+  rdfs:range xsd:string ;
+  rdfs:label "expression context"@en .
+
+srd521:targetNumberName
+  a rdf:Property ;
+  cat:domainType srd521:D20TestType ;
+  rdfs:range xsd:string ;
+  rdfs:label "target number name"@en .
+
+srd521:hitPolicy
+  a rdf:Property ;
+  cat:domainType par:DecisionTable ;
+  rdfs:range xsd:string ;
+  rdfs:label "hit policy"@en .
+
+srd521:starterStatus
+  a rdf:Property ;
+  rdfs:range xsd:string ;
+  rdfs:label "starter status"@en .
+
+#################################################################
+## §SW-7 COMBAT RECORDS (RULED 2026-07-25 — the edition arm)
+## The census flagged these as records "Lane A deliberately did NOT invent". They land HERE, not in
+## participatorium, on the standing general-vs-edition charter line: participatorium owns the
+## GENERAL organized-play machinery (par:Intent, par:RollEvidence, par:Attack as an ActionType,
+## par:Encounter and par:EncounterEngagement — the last RULED general by Dave the same day), and
+## srd521 owns what is 5.2.1-specific: the attack/damage EVIDENCE shapes and encounter posture.
+## Every term below cat:specializes its participatorium general, so a second edition mints its own
+## records without either vocabulary learning about the other.
+#################################################################
+
+srd521:AttackIntent a cat:Kind ;
+  cat:specializes par:Intent ;
+  cat:instanceCategory cat:InformationObject ;
+  rdfs:label "Attack intent"@en ;
+  rdfs:comment "A declared intent to attack, in 5.2.1 terms — the artifact a warrant adjudicates. Specializes the general par:Intent; edition-specific because the parameters it carries (attack mode, roll kind, item) are this edition's." .
+
+## RETIRED 2026-08-06 — srd521:attackActor WITHDRAWN, no successor minted here: it re-expresses onto
+## par:intentForActant (Dave 2026-08-06). The two were the same relation and the edition one
+## stated no meaning of its own — identical cat:rangeType kosm:Actant, and its cat:domainType
+## srd521:AttackIntent cat:specializes par:Intent, which is par:intentForActant's own domain,
+## so every AttackIntent already qualifies. It carried NO rdfs:comment because there was no
+## distinct thing to say; its mapping rule was round2-minted-same-local, generated rather than
+## argued. A shape targeting srd521:AttackIntent constrains par:intentForActant on that focus
+## node without a separate predicate. Contrast its pair srd521:attackOpponent, which states a
+## reasoned naming decision and stays: the family has no "the one attacked" relation.
+## Frozen mapping RETARGETS the row (srd521 -> par) by freeze amendment in the same act — a
+## base change, so binding rule 3 does NOT cover it.
+
+srd521:attackOpponent a rdf:Property ;
+  cat:domainType srd521:AttackIntent ; cat:rangeType kosm:Actant ;
+  rdfs:label "attack opponent"@en ;
+  rdfs:comment "The declared target. NOT named attackTarget — target is overloaded across the estate (consequence targets, state targets, desire targets); opponent is unambiguous in an attack." .
+
+srd521:attackItem a rdf:Property ;
+  cat:domainType srd521:AttackIntent ; rdfs:range cat:Object ;
+  rdfs:label "attack item"@en ;
+  rdfs:comment "The weapon or object used. Range is cat:Object rather than kosm:Item per W-2 — an improvised rock is not an Item but attacks with it are legal." .
+
+srd521:AttackRollEvidence a cat:Kind ;
+  cat:specializes par:RollEvidence ;
+  cat:instanceCategory cat:InformationObject ;
+  rdfs:label "Attack roll evidence"@en ;
+  rdfs:comment "The immutable record produced by an attack roll event. Specializes par:RollEvidence and inherits its law: produced by the event via information-flow (never causation), immutable once committed." .
+
+srd521:AttackDamageEvidence a cat:Kind ;
+  cat:specializes par:ResolutionEvidence ;
+  cat:instanceCategory cat:InformationObject ;
+  rdfs:label "Attack damage evidence"@en ;
+  rdfs:comment "The immutable record of damage dealt. Kept SEPARATE from AttackRollEvidence because the two are produced by different events and either can exist without the other — automatic-hit damage has no attack roll, and a missed attack has a roll with no damage. Carries the existing srd521:damageAmount / damageType / damageExpression vocabulary. RE-PARENTED par:RollEvidence → par:ResolutionEvidence 2026-07-31 (court ④(a), close-review F10): a static-damage record (contracts/battle-beat.ts:108) is produced by NO roll, which falsified the RollEvidence parent against that class's own produced-by-the-roll-event definition." .
+
+srd521:forAttackIntent a rdf:Property ;
+  cat:rangeType srd521:AttackIntent ;
+  rdfs:label "for attack intent"@en ;
+  rdfs:comment "Evidence record → the intent it answers. Domain deliberately open: both evidence kinds use it." .
+
+srd521:adjudicatesDamageEvidence a rdf:Property ;
+  cat:rangeType srd521:AttackDamageEvidence ;
+  rdfs:label "adjudicates damage evidence"@en ;
+  rdfs:comment "The adjudication act → the damage evidence it rules on. Kept on the ADJUDICATING side, consistent with the ruled token-on-the-event-side discipline (participatorium R3)." .
+
+srd521:EncounterPostureKind a cat:Kind ;
+  rdfs:label "Encounter posture kind"@en ;
+  rdfs:comment "Enum: members are cat:instanceOf it (no punning). A combatant's posture within an encounter. ⚠️ FALSE-FRIEND GUARD: this is the home of the retiring bare sc:standing — which is ENCOUNTER POSTURE and must NEVER map to psy:standing (psychikon's SOCIAL standing, an entirely different concept). The census flagged this pair explicitly." .
+
+srd521:standingPosture cat:instanceOf srd521:EncounterPostureKind ; rdfs:label "standing"@en .
+srd521:pronePosture    cat:instanceOf srd521:EncounterPostureKind ; rdfs:label "prone"@en .
+
+srd521:encounterPosture a rdf:Property ;
+  cat:rangeType srd521:EncounterPostureKind ;
+  rdfs:label "encounter posture"@en ;
+  rdfs:comment "A combatant to its posture. Deliberately NOT named 'standing' — the bare local name is the psy:standing false friend, and naming the property for the axis rather than one of its values makes the collision unspellable." .
+
+#################################################################
+## §SB-1 STATBLOCKS (product desk 2026-07-25 — the creature arm; design: flag.task.2026-07-25_2200-statblock-package)
+## The fifth statblock package: creatures. srd521:CreatureDefinition mirrors the WeaponDefinition charter
+## shape over kosmion's reserved seam (kosm:CreatureType's own comment: "srd521 statblock species
+## are cat:instanceOf it"). Statblock scalars follow the flat weapons idiom: per-statblock speed and
+## sense-range properties rather than qualified entries. Skill proficiencies are the exception and
+## get qualified CreatureSkillProficiency rows because printed skill bonuses are NOT derivable
+## (expertise: the SRD Wolf's Perception +5 = WIS +1 plus twice PB +2). REUSED, not redeclared:
+## saveAbility, damageExpression, damageType, sourceSection, usesSkill, the AlignmentTerm
+## individuals, and the abilities/ skills/ damage-types/ conditions/ packages. The item-side
+## attackMode and normalRangeFeet/longRangeFeet are cat:domainType-locked to ItemActionOption, so
+## the creature arm carries its own rangeNormalFeet/rangeLongFeet and leaves attack mode to the
+## verbatim actionText.
+#################################################################
+
+srd521:CreatureDefinition
+  a cat:Kind ;
+  cat:instanceCategory cat:Description ;
+  rdfs:label "Creature definition"@en ;
+  rdfs:comment "RE-HOMED to the SpellDefinition idiom (SB-2 ruled + WT-3, 2026-07-27; was a cat:SecondOrderType whose own comment mandated 'the statblock is the KIND'): a creature record is a STATBLOCK — authored edition content, a cat:Description — and the statblock-is-the-kind mandate was the term conflating 'statistical template' with 'kind of thing' (two independent derivations found the same defect: the cat:Kind over-commitment on occupations, and CreatureDefinition's inability to hold a foreign statline). Species-hood lives in WORLD content — 'wolves are a species' is a kosm:CreatureType assertion where it was always true; an occupation statblock (bandit, guard) asserts no species at all; a named NPC is a kosmion actant whose world classification references its statblock by cat:describedBy."@en .
+
+srd521:CreatureActionOption
+  a cat:Kind ;
+  cat:instanceCategory cat:Description ;
+  rdfs:label "Creature action option"@en ;
+  rdfs:comment "A trait, action, bonus-action, reaction, or legendary-action row of a statblock. The verbatim SRD prose is srd521:actionText; structured attack/save/damage fields are added only where the statblock prints them, and pure-prose traits stay prose rows."@en .
+
+srd521:CreatureSkillProficiency
+  a cat:Kind ;
+  cat:instanceCategory cat:Description ;
+  rdfs:label "Creature skill proficiency"@en ;
+  rdfs:comment "A qualified skill-proficiency row (creature, skill, printed bonus). Qualified rather than a bare reference because the SRD prints per-skill bonuses that are not derivable from ability and CR alone."@en .
+
+srd521:SizeKind
+  a cat:Kind ;
+  cat:instanceCategory cat:Individual ;
+  rdfs:label "Size kind"@en ;
+  rdfs:comment "Enum: members are cat:instanceOf it (no punning). The six SRD 5.2.1 creature size categories; members live in sizes/."@en .
+
+srd521:CreatureTypeKind
+  a cat:Kind ;
+  cat:instanceCategory cat:Individual ;
+  rdfs:label "Creature type kind"@en ;
+  rdfs:comment "Enum: members are cat:instanceOf it (no punning). The fourteen SRD 5.2.1 creature types; members live in creature-types/."@en .
+
+srd521:SenseKind
+  a cat:Kind ;
+  cat:instanceCategory cat:Individual ;
+  rdfs:label "Sense kind"@en ;
+  rdfs:comment "Enum: members are cat:instanceOf it (no punning). The SRD 5.2.1 special senses; members live in sense-kinds/. Creature statblocks carry flat per-record ranges (darkvisionFeet etc.); the enum records the vocabulary."@en .
+
+srd521:SpeedKind
+  a cat:Kind ;
+  cat:instanceCategory cat:Individual ;
+  rdfs:label "Speed kind"@en ;
+  rdfs:comment "Enum: members are cat:instanceOf it (no punning). The SRD 5.2.1 movement kinds; members live in speed-kinds/. Creature statblocks carry flat per-record speeds (walkSpeedFeet etc.); the enum records the vocabulary."@en .
+
+srd521:CreatureActionKind
+  a cat:Kind ;
+  cat:instanceCategory cat:Individual ;
+  rdfs:label "Creature action kind"@en ;
+  rdfs:comment "Enum: members are cat:instanceOf it (no punning). The statblock section a CreatureActionOption row belongs to. Members are declared inline here (the DamageEvidenceMode precedent) because they are statblock structure, not glossary vocabulary."@en .
+
+srd521:actionKind_trait
+  a cat:Individual ;
+  cat:instanceOf srd521:CreatureActionKind ;
+  rdfs:label "trait"@en .
+
+srd521:actionKind_action
+  a cat:Individual ;
+  cat:instanceOf srd521:CreatureActionKind ;
+  rdfs:label "action"@en .
+
+srd521:actionKind_bonusAction
+  a cat:Individual ;
+  cat:instanceOf srd521:CreatureActionKind ;
+  rdfs:label "bonus action"@en .
+
+srd521:actionKind_reaction
+  a cat:Individual ;
+  cat:instanceOf srd521:CreatureActionKind ;
+  rdfs:label "reaction"@en .
+
+srd521:actionKind_legendaryAction
+  a cat:Individual ;
+  cat:instanceOf srd521:CreatureActionKind ;
+  rdfs:label "legendary action"@en .
+
+## Absorbs no predecessor; the OffAxisAlignmentTerm membership is added 2026-08-11, ruled by Dave
+##   2026-08-11 (product channel). It KEEPS srd521:AlignmentTerm: srd521:alignment's cat:rangeType is
+##   AlignmentTerm, so dropping that membership would invalidate every statblock using this term
+##   (the SRD Wolf at creatures/creatures.ttl). The off-axis classification is additive, never a move.
+srd521:unaligned
+  a cat:Individual ;
+  cat:instanceOf srd521:AlignmentTerm, srd521:OffAxisAlignmentTerm ;
+  rdfs:label "Unaligned"@en ;
+  rdfs:comment "The statblock alignment of creatures that lack moral agency (the SRD Wolf is Unaligned). Extends the nine-fold family for statblock use; 'Character Creation' describes the nine alignments and unaligned creatures. It sits off the two-axis grid rather than at a cell of it, and so occupies no position on either axis."@en .
+
+srd521:armorClass
+  a rdf:Property ;
+  rdfs:range xsd:integer ;
+  rdfs:label "armor class"@en ;
+  rdfs:comment "Domain deliberately open: the PC/creature shared core (abilities, AC, HP) converges on these terms."@en .
+
+srd521:armorClassText
+  a rdf:Property ;
+  rdfs:range xsd:string ;
+  rdfs:label "armor class text"@en ;
+  rdfs:comment "The source's AC parenthetical, when one is printed. Domain deliberately open, paired with armorClass."@en .
+
+srd521:hitPointsAverage
+  a rdf:Property ;
+  rdfs:range xsd:integer ;
+  rdfs:label "hit points average"@en ;
+  rdfs:comment "The printed Hit Points number. Domain deliberately open (shared core)."@en .
+
+srd521:hitDiceExpression
+  a rdf:Property ;
+  rdfs:range xsd:string ;
+  rdfs:label "hit dice expression"@en ;
+  rdfs:comment "The printed Hit Point Dice parenthetical, e.g. '2d8 + 2'. Domain deliberately open (shared core)."@en .
+
+srd521:strengthScore
+  a rdf:Property ;
+  rdfs:range xsd:integer ;
+  rdfs:label "Strength score"@en ;
+  rdfs:comment "Ability scores are flat integer properties (the flat weapons idiom); the abilities dataset remains the vocabulary anchor. Domain deliberately open (shared core)."@en .
+
+srd521:dexterityScore
+  a rdf:Property ;
+  rdfs:range xsd:integer ;
+  rdfs:label "Dexterity score"@en .
+
+srd521:constitutionScore
+  a rdf:Property ;
+  rdfs:range xsd:integer ;
+  rdfs:label "Constitution score"@en .
+
+srd521:intelligenceScore
+  a rdf:Property ;
+  rdfs:range xsd:integer ;
+  rdfs:label "Intelligence score"@en .
+
+srd521:wisdomScore
+  a rdf:Property ;
+  rdfs:range xsd:integer ;
+  rdfs:label "Wisdom score"@en .
+
+srd521:charismaScore
+  a rdf:Property ;
+  rdfs:range xsd:integer ;
+  rdfs:label "Charisma score"@en .
+
+srd521:sizeKind
+  a rdf:Property ;
+  cat:domainType srd521:CreatureDefinition ;
+  cat:rangeType srd521:SizeKind ;
+  rdfs:label "size kind"@en ;
+  rdfs:comment "Multi-valued when the statblock offers size options, e.g. 'Medium or Small Humanoid'."@en .
+
+srd521:creatureTypeKind
+  a rdf:Property ;
+  cat:domainType srd521:CreatureDefinition ;
+  cat:rangeType srd521:CreatureTypeKind ;
+  rdfs:label "creature type kind"@en ;
+  rdfs:comment "Multi-valued for multi-type statblocks, e.g. 'Large Celestial, Fey, or Fiend'."@en .
+
+srd521:alignment
+  a rdf:Property ;
+  cat:domainType srd521:CreatureDefinition ;
+  cat:rangeType srd521:AlignmentTerm ;
+  rdfs:label "alignment"@en ;
+  rdfs:comment "The statblock's default alignment suggestion, definition-level. Individual actants declare theirs via rol:AlignmentDeclaration."@en .
+
+srd521:challengeRating
+  a rdf:Property ;
+  cat:domainType srd521:CreatureDefinition ;
+  rdfs:range xsd:decimal ;
+  rdfs:label "challenge rating"@en ;
+  rdfs:comment "Fractional CRs are decimals: CR 1/8 = 0.125, CR 1/4 = 0.25."@en .
+
+srd521:xpValue
+  a rdf:Property ;
+  cat:domainType srd521:CreatureDefinition ;
+  rdfs:range xsd:integer ;
+  rdfs:label "XP value"@en .
+
+srd521:proficiencyBonus
+  a rdf:Property ;
+  cat:domainType srd521:CreatureDefinition ;
+  rdfs:range xsd:integer ;
+  rdfs:label "proficiency bonus"@en ;
+  rdfs:comment "Printed in the statblock's CR line ('CR 1/8 (XP 25; PB +2)'); recorded so the line is lossless."@en .
+
+srd521:walkSpeedFeet
+  a rdf:Property ;
+  cat:domainType srd521:CreatureDefinition ;
+  rdfs:range xsd:integer ;
+  rdfs:label "walk speed in feet"@en ;
+  rdfs:comment "Per-statblock flat speed properties (the flat weapons idiom) rather than qualified speed entries; speed-kinds/ records the vocabulary."@en .
+
+srd521:flySpeedFeet
+  a rdf:Property ;
+  cat:domainType srd521:CreatureDefinition ;
+  rdfs:range xsd:integer ;
+  rdfs:label "fly speed in feet"@en .
+
+srd521:swimSpeedFeet
+  a rdf:Property ;
+  cat:domainType srd521:CreatureDefinition ;
+  rdfs:range xsd:integer ;
+  rdfs:label "swim speed in feet"@en .
+
+srd521:burrowSpeedFeet
+  a rdf:Property ;
+  cat:domainType srd521:CreatureDefinition ;
+  rdfs:range xsd:integer ;
+  rdfs:label "burrow speed in feet"@en .
+
+srd521:climbSpeedFeet
+  a rdf:Property ;
+  cat:domainType srd521:CreatureDefinition ;
+  rdfs:range xsd:integer ;
+  rdfs:label "climb speed in feet"@en .
+
+srd521:canHover
+  a rdf:Property ;
+  cat:domainType srd521:CreatureDefinition ;
+  rdfs:range xsd:boolean ;
+  rdfs:label "can hover"@en ;
+  rdfs:comment "True when the statblock's Fly Speed carries the '(hover)' qualifier, e.g. 'Fly 20 ft. (hover)'."@en .
+
+srd521:darkvisionFeet
+  a rdf:Property ;
+  cat:domainType srd521:CreatureDefinition ;
+  rdfs:range xsd:integer ;
+  rdfs:label "darkvision range in feet"@en ;
+  rdfs:comment "Per-statblock flat sense-range properties (the flat weapons idiom) rather than qualified sense entries; sense-kinds/ records the vocabulary."@en .
+
+srd521:blindsightFeet
+  a rdf:Property ;
+  cat:domainType srd521:CreatureDefinition ;
+  rdfs:range xsd:integer ;
+  rdfs:label "blindsight range in feet"@en .
+
+srd521:tremorsenseFeet
+  a rdf:Property ;
+  cat:domainType srd521:CreatureDefinition ;
+  rdfs:range xsd:integer ;
+  rdfs:label "tremorsense range in feet"@en .
+
+srd521:truesightFeet
+  a rdf:Property ;
+  cat:domainType srd521:CreatureDefinition ;
+  rdfs:range xsd:integer ;
+  rdfs:label "truesight range in feet"@en .
+
+srd521:passivePerception
+  a rdf:Property ;
+  cat:domainType srd521:CreatureDefinition ;
+  rdfs:range xsd:integer ;
+  rdfs:label "passive Perception"@en .
+
+srd521:saveProficiency
+  a rdf:Property ;
+  cat:domainType srd521:CreatureDefinition ;
+  cat:rangeType srd521:AbilityScore ;
+  rdfs:label "save proficiency"@en ;
+  rdfs:comment "Marks an ability whose statblock SAVE entry exceeds its MOD entry; the printed save bonus is mod plus PB."@en .
+
+srd521:skillBonus
+  a rdf:Property ;
+  cat:domainType srd521:CreatureSkillProficiency ;
+  rdfs:range xsd:integer ;
+  rdfs:label "skill bonus"@en ;
+  rdfs:comment "The printed per-skill bonus, e.g. 'Stealth +4' records 4."@en .
+
+srd521:resistsDamageType
+  a rdf:Property ;
+  cat:domainType srd521:CreatureDefinition ;
+  cat:rangeType srd521:DamageType ;
+  rdfs:label "resists damage type"@en .
+
+srd521:immuneToDamageType
+  a rdf:Property ;
+  cat:domainType srd521:CreatureDefinition ;
+  cat:rangeType srd521:DamageType ;
+  rdfs:label "immune to damage type"@en .
+
+srd521:vulnerableToDamageType
+  a rdf:Property ;
+  cat:domainType srd521:CreatureDefinition ;
+  cat:rangeType srd521:DamageType ;
+  rdfs:label "vulnerable to damage type"@en .
+
+srd521:immuneToCondition
+  a rdf:Property ;
+  cat:domainType srd521:CreatureDefinition ;
+  cat:rangeType srd521:ConditionDefinition ;
+  rdfs:label "immune to condition"@en .
+
+srd521:languagesText
+  a rdf:Property ;
+  cat:domainType srd521:CreatureDefinition ;
+  rdfs:range xsd:string ;
+  rdfs:label "languages text"@en ;
+  rdfs:comment "The statblock's Languages line, verbatim ('None' stays 'None')."@en .
+
+srd521:forCreature
+  a rdf:Property ;
+  cat:rangeType srd521:CreatureDefinition ;
+  rdfs:label "for creature"@en ;
+  rdfs:comment "A row to its creature statblock (a CreatureDefinition Description). Domain deliberately open: CreatureActionOption and CreatureSkillProficiency rows both use it (the forItem precedent, generalized)."@en .
+
+srd521:actionKind
+  a rdf:Property ;
+  cat:domainType srd521:CreatureActionOption ;
+  cat:rangeType srd521:CreatureActionKind ;
+  rdfs:label "action kind"@en .
+
+srd521:attackBonus
+  a rdf:Property ;
+  cat:domainType srd521:CreatureActionOption ;
+  rdfs:range xsd:integer ;
+  rdfs:label "attack bonus"@en ;
+  rdfs:comment "The printed attack-roll modifier: 'Melee Attack Roll: +4' records 4."@en .
+
+srd521:reachFeet
+  a rdf:Property ;
+  cat:domainType srd521:CreatureActionOption ;
+  rdfs:range xsd:integer ;
+  rdfs:label "reach in feet"@en .
+
+srd521:rangeNormalFeet
+  a rdf:Property ;
+  cat:domainType srd521:CreatureActionOption ;
+  rdfs:range xsd:integer ;
+  rdfs:label "normal range in feet (creature action)"@en ;
+  rdfs:comment "Creature-side twin of normalRangeFeet, which is cat:domainType-locked to ItemActionOption. Spelled range-first to keep the pair adjacent; harmonizing the two pairs is a desk call, flagged in the SB-1 build report."@en .
+
+srd521:rangeLongFeet
+  a rdf:Property ;
+  cat:domainType srd521:CreatureActionOption ;
+  rdfs:range xsd:integer ;
+  rdfs:label "long range in feet (creature action)"@en .
+
+srd521:saveDc
+  a rdf:Property ;
+  rdfs:range xsd:integer ;
+  rdfs:label "save DC"@en ;
+  rdfs:comment "A printed fixed save DC. Domain deliberately open: statblock action rows and spellcasting prose both print fixed DCs."@en .
+
+srd521:damageAverage
+  a rdf:Property ;
+  cat:domainType srd521:CreatureActionOption ;
+  rdfs:range xsd:integer ;
+  rdfs:label "damage average"@en ;
+  rdfs:comment "The printed average preceding the dice parenthetical: 'Hit: 5 (1d6 + 2)' records 5 with damageExpression '1d6 + 2' — the hitPointsAverage/hitDiceExpression pair idiom."@en .
+
+srd521:rechargeText
+  a rdf:Property ;
+  cat:domainType srd521:CreatureActionOption ;
+  rdfs:range xsd:string ;
+  rdfs:label "recharge text"@en ;
+  rdfs:comment "The printed usage-limit qualifier, e.g. 'Recharge 5–6' or '3/Day'."@en .
+
+srd521:actionText
+  a rdf:Property ;
+  cat:domainType srd521:CreatureActionOption ;
+  rdfs:range xsd:string ;
+  rdfs:label "action text"@en ;
+  rdfs:comment "The row's verbatim SRD prose."@en .
+
+#################################################################
+## §DECLARE-THE-36 — THE SRD SIX (RULED row-by-row, Dave + Francis, 2026-07-31)
+## Rows: sc:StagedAttack · sc:commitsConditionEffect · dyn:damageAmount · dyn:damageEvidenceMode ·
+## sc:rangeBand · sc:rangeRulesBasis. Two rows resolved to ALREADY-LANDED destinations
+## (srd521:damageAmount, srd521:damageEvidenceMode — lineage sentences added in place); the rest
+## are declared below. Court rulings applied: ④(a) — srd521:AttackDamageEvidence re-parented onto
+## par:ResolutionEvidence (see its stanza); ⑤(c) — the rangeRulesBasis JSON blob DECOMPOSES and is
+## never blessed (three of its seven fields were IRIs flattened into a literal at write time —
+## battle-beat-attack.ts:182). Enum mints follow the ruled sflo member-prefix convention AND the
+## file's own landed neighbor idiom (srd521:DamageEvidenceMode + damageEvidenceMode_* — natural-head
+## class, prefixed members), which is the wave-2 endpoint; no *Kind suffix is minted to be renamed.
+#################################################################
+
+srd521:StagedAttack
+  a cat:Kind ;
+  cat:instanceCategory cat:InformationObject ;
+  rdfs:label "Staged attack"@en ;
+  rdfs:comment "An attack record staged against a scene and awaiting resolution — pending-until-answered, the rol:ProposedCommitment logic (an unresolved staging mediates nothing yet). Edition-owned per the participatorium boundary (edition-specific attack/damage records are the edition package's — participatorium.ttl:583-587). Absorbs the retiring sc:StagedAttack (declared 2026-07-31, declare-the-36; fixture: inn-state:976-982, 'staged against the Inn scene and waits on branch-local continuity resolution'; its temporal-scope placement COMPOSES per the temporaenum §SW-7 decline of sc:stagedInTemporalScope, and its continuity debt rides tmpo:hasContinuityDebt)."@en .
+
+srd521:commitsConditionEffect
+  a rdf:Property ;
+  cat:rangeType srd521:ConditionEffect ;
+  rdfs:label "commits condition effect"@en ;
+  rdfs:comment "An attack-consequence adjudication to the srd521:ConditionEffect record it commits. Domain deliberately open: the platform writes it from BOTH the journal adjudication record AND the committed session event (battle-beat-attack.ts:373 and :381). Absorbs the retiring sc:commitsConditionEffect (declared 2026-07-31, declare-the-36)."@en .
+
+srd521:RangeBand
+  a cat:Kind ;
+  cat:instanceCategory cat:Individual ;
+  rdfs:label "Range band"@en ;
+  rdfs:comment "Enum (SF pattern; the srd521:DamageEvidenceMode idiom): the attack-time distance classification of an attack intent. NOT srd521:WeaponRangeKind (the weapon's two-way melee/ranged category); this is the classifier's six-way band over a measured distance. Closed by the executable contract (packages/rules/src/range-band.ts:13). Minted 2026-07-31, declare-the-36, backing the sc:rangeBand row."@en .
+
+srd521:rangeBand_melee a cat:Individual ; cat:instanceOf srd521:RangeBand ; rdfs:label "Melee"@en ; cat:lexicalToken "melee" .
+srd521:rangeBand_reach a cat:Individual ; cat:instanceOf srd521:RangeBand ; rdfs:label "Reach"@en ; cat:lexicalToken "reach" .
+srd521:rangeBand_normal a cat:Individual ; cat:instanceOf srd521:RangeBand ; rdfs:label "Normal"@en ; cat:lexicalToken "normal" .
+srd521:rangeBand_long a cat:Individual ; cat:instanceOf srd521:RangeBand ; rdfs:label "Long"@en ; cat:lexicalToken "long" .
+srd521:rangeBand_outOfRange a cat:Individual ; cat:instanceOf srd521:RangeBand ; rdfs:label "Out of range"@en ; cat:lexicalToken "out-of-range" .
+srd521:rangeBand_unknown a cat:Individual ; cat:instanceOf srd521:RangeBand ; rdfs:label "Unknown"@en ; cat:lexicalToken "unknown" ;
+  rdfs:comment "The classifier's honest no-confident-band verdict ('never a confident band' — range-band.ts:129); WHY it is unknown stays code-side (DistanceUnknownKind) until a consumer needs it in RDF. Included per the psy:notKnown honest-enum precedent."@en .
+
+srd521:rangeBand
+  a rdf:Property ;
+  cat:rangeType srd521:RangeBand ;
+  rdfs:label "range band"@en ;
+  rdfs:comment "The classified distance band of an attack intent (measured subject: the platform's AttackIntent journal record — battle-beat-attack.ts:181; domain deliberately open for that reason). The platform currently writes the lexical token as a string literal; migration lifts literals to members via cat:lexicalToken. Absorbs the retiring sc:rangeBand (declared 2026-07-31, declare-the-36)."@en .
+
+## ⑤(c): the basis record. The retiring sc:rangeRulesBasis carried JSON.stringify of a 7-field
+## struct (range-band.ts:60-68) in which THREE fields were already IRIs. The blob is never blessed:
+## these declarations ARE the decomposed target shape; the emission change rides the named re-IRI
+## lane. Ruled ⑤(c), Dave, 2026-07-31.
+
+srd521:RangeRulesBasis
+  a cat:Kind ;
+  cat:instanceCategory cat:InformationObject ;
+  rdfs:label "Range rules basis"@en ;
+  rdfs:comment "The computed citation record for one range-band classification: which rules and definitions grounded the band call. Committed evidence, immutable once written; minted per attack intent."@en .
+
+srd521:rangeRulesBasis
+  a rdf:Property ;
+  cat:rangeType srd521:RangeRulesBasis ;
+  rdfs:label "range rules basis"@en ;
+  rdfs:comment "An attack intent to its basis record. Absorbs the retiring sc:rangeRulesBasis, whose JSON-blob value DECOMPOSES into this record's fields at migration — the blob itself never receives a blessed IRI (⑤(c), declared 2026-07-31, declare-the-36)."@en .
+
+srd521:basisActionRule
+  a rdf:Property ;
+  cat:domainType srd521:RangeRulesBasis ;
+  rdfs:label "basis action rule"@en ;
+  rdfs:comment "The consulted weapon-action rule resource (measured: action?.iri, range-band.ts:265; the referent carries its own srd521:sourceSection). Range deliberately open until the action-row class is pinned by its own declaration."@en .
+
+srd521:basisActionSourceSection
+  a rdf:Property ;
+  cat:domainType srd521:RangeRulesBasis ;
+  rdfs:range xsd:string ;
+  rdfs:label "basis action source section"@en ;
+  rdfs:comment "The SRD section label of the consulted action rule, CACHED at classification time — the referenced row's srd521:sourceSection as read then; evidence, not a live pointer."@en .
+
+srd521:basisMeleeReachSource
+  a rdf:Property ;
+  cat:domainType srd521:RangeRulesBasis ;
+  rdfs:range xsd:string ;
+  rdfs:label "basis melee reach source"@en ;
+  rdfs:comment "Citation for the base melee reach applied (policy.baseMeleeReachSource, range-band.ts:266)."@en .
+
+srd521:basisRangeProperty
+  a rdf:Property ;
+  cat:domainType srd521:RangeRulesBasis ;
+  cat:rangeType srd521:WeaponPropertyDefinition ;
+  rdfs:label "basis range property"@en ;
+  rdfs:comment "The weapon Range property definition consulted (measured: policy.rangePropertyDefinition.iri, range-band.ts:270 — a weapon-properties row, cat:instanceOf srd521:WeaponPropertyDefinition)."@en .
+
+srd521:basisReachProperty
+  a rdf:Property ;
+  cat:domainType srd521:RangeRulesBasis ;
+  cat:rangeType srd521:WeaponPropertyDefinition ;
+  rdfs:label "basis reach property"@en ;
+  rdfs:comment "The weapon Reach property definition consulted, when the weapon has one (measured: reach?.iri, range-band.ts:271 — optional by construction)."@en .
+
+srd521:basisNormalBoundary
+  a rdf:Property ;
+  cat:domainType srd521:RangeRulesBasis ;
+  rdfs:range xsd:string ;
+  rdfs:label "basis normal boundary"@en ;
+  rdfs:comment "Boundary posture applied at the weapon's normal range — closed value 'inclusive' (a distance exactly AT normal range classifies normal; range-band.ts:53). A verified policy reading, deliberately NOT an enum: it earns members only if the SRD ever offers a second posture (the named escalation trigger)."@en .
+
+srd521:basisLongBoundary
+  a rdf:Property ;
+  cat:domainType srd521:RangeRulesBasis ;
+  rdfs:range xsd:string ;
+  rdfs:label "basis long boundary"@en ;
+  rdfs:comment "Boundary posture applied at the weapon's long range — closed value 'inclusive' (range-band.ts:54); same escalation trigger as basisNormalBoundary. The retiring blob FUSED these two policy fields into one 'normal-inclusive,long-inclusive' string; the decomposition follows the SOURCE structure (RangeBandPolicy), not the blob's."@en .
+
+srd521:RollMode
+  a cat:Kind ;
+  cat:instanceCategory cat:Individual ;
+  rdfs:label "Roll mode"@en ;
+  rdfs:comment "Enum (SF pattern; the srd521:DamageEvidenceMode idiom): the D20 roll-mode dial — roll twice and take the higher (advantage) or the lower (disadvantage). Minted 2026-07-31 (declare-the-36) on the finding that the mechanic was VOCABULARY-HOMELESS: it existed only as TypeScript literal types, string literals in journal emissions (sc:submissionRollMode — intent.ts), JSON-blob fields, and rule-text prose. Future target for the sc:submissionRollMode disposition (flagged to the mapping); cat:lexicalToken is the lift bridge."@en .
+
+srd521:rollMode_advantage
+  a cat:Individual ;
+  cat:instanceOf srd521:RollMode ;
+  rdfs:label "Advantage"@en ;
+  cat:lexicalToken "advantage" ;
+  rdfs:comment "Roll twice, take the higher."@en .
+
+srd521:rollMode_disadvantage
+  a cat:Individual ;
+  cat:instanceOf srd521:RollMode ;
+  rdfs:label "Disadvantage"@en ;
+  cat:lexicalToken "disadvantage" ;
+  rdfs:comment "Roll twice, take the lower."@en .
+
+srd521:basisLongRangeAttackRoll
+  a rdf:Property ;
+  cat:domainType srd521:RangeRulesBasis ;
+  cat:rangeType srd521:RollMode ;
+  rdfs:label "basis long range attack roll"@en ;
+  rdfs:comment "The roll-mode consequence READ OFF the cited Range rule for attacks beyond normal range — srd521:rollMode_disadvantage, regex-verified at policy construction (createSrdRangeBandPolicy REFUSES unless the referenced definition's own text matches 'beyond normal range…Disadvantage' — range-band.ts:86-89). An applied reading whose authority is the referenced definition; remodeled from the blob's string constant on Dave's smell (2026-07-31)."@en .
+
+## WAVE-4 BATTLE-BEAT MINTS (Dave's batch word to planning 2026-08-05 20:34, on the slate as amended
+## by the Cinderwash supersession - ruling record at planning's freeze; slate drop 2026-08-05-wave4-slate
+## + -rows1-6-cinderwash. The retiring sc: terms split or retarget per those rows.)
+
+srd521:AttackConsequenceAdjudication a cat:Kind ;
+  cat:instanceCategory cat:InformationObject ;
+  rdfs:label "Attack consequence adjudication"@en ;
+  rdfs:comment "The record of an authority's adjudication of an attack's consequences: it rules on the damage evidence before it (srd521:adjudicatesDamageEvidence, whose landed comment already names this act) and identifies what the consequences affect. Edition-scoped because what it adjudicates - this edition's attack intents, rolls and damage - is edition machinery; the general adjudication theory stays participatorium's by reference. Shape-only origin: sc:AttackConsequenceAdjudication was never declared - the battle-beat contract SHACL and evidence fixtures are its rung. Re-homed srd521: from the frozen row's par: target by the wave-4 batch ruling (2026-08-05, the amendment-#9 homing test: indistinguishable from its Attack* siblings without edition subject matter; the v3 retarget rides the next compose batch)." .
+
+srd521:standing a rdf:Property ;
+  cat:rangeType srd521:EncounterPostureKind ;
+  rdfs:label "standing"@en ;
+  rdfs:comment "A combatant's posture within an encounter, as an EncounterPostureKind member. THE SITE SPLIT, ruled wave-4 2026-08-05: the retiring sc:standing converts here at POSTURE sites ONLY - at warrant sites its armed/fired/withdrawn values are the warrant relator's own lifecycle (created-unfired, fired, withdrawn termination) and dissolve into cat:createdIn/cat:terminatedIn on par:Warrant, never converting here - and psychikon's psy:standing (social standing) is a third, unrelated sense per the false-friend guard on this property's range class. A conversion or census that says standing without naming the sense is wrong by default." .
+
+srd521:engagement a rdf:Property ;
+  cat:domainType srd521:AttackIntent ;
+  cat:rangeType par:EncounterEngagement ;
+  rdfs:label "engagement"@en ;
+  rdfs:comment "The encounter engagement an attack intent is declared within - the edition intent references the general engagement relator by plain IRI (participatorium owns engagement; combat is one way to be engaged). Property half of the retiring sc:engagement, whose frozen row targeted the relator class alone (the property-to-class case-collapse, wave-4 row 1; the class needed no mint - par:EncounterEngagement is landed). Shape-only origin: the battle-beat contract SHACL and evidence fixtures are its rung." .

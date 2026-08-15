@@ -1,0 +1,37 @@
+{
+  "@context": "http://www.w3.org/ns/csvw",
+  "tableSchema": {
+    "aboutUrl": "https://stagecraft.github.io/srd-rules/srd-5-2-1/spells/{spellClassKey}",
+    "columns": [
+      {
+        "name": "spellClassKey"
+      },
+      {
+        "name": "spellKey",
+        "valueUrl": "https://stagecraft.github.io/srd-rules/srd-5-2-1/spells/{spellKey}"
+      },
+      {
+        "name": "spellLabel"
+      },
+      {
+        "name": "classKey",
+        "valueUrl": "https://stagecraft.github.io/srd-rules/srd-5-2-1/character-classes/{classKey}"
+      },
+      {
+        "name": "classLabel"
+      },
+      {
+        "name": "level"
+      },
+      {
+        "name": "schoolKey",
+        "valueUrl": "https://stagecraft.github.io/srd-rules/srd-5-2-1/spell-schools/{schoolKey}"
+      },
+      {
+        "name": "sourceSection"
+      }
+    ],
+    "primaryKey": "spellClassKey"
+  },
+  "url": "spell-classes.csv"
+}

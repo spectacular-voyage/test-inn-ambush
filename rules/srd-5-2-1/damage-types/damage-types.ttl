@@ -1,0 +1,104 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix dcterms: <http://purl.org/dc/terms/>.
+@prefix dcat: <http://www.w3.org/ns/dcat#>.
+@prefix cat: <https://categoriae.github.io/ontology/>.
+@prefix kosm: <https://kosmion.github.io/ontology/>.
+@prefix par: <https://participatorium.github.io/ontology/>.
+@prefix srd521: <https://stagecraft.github.io/srd-rules/srd-5-2-1/>.
+
+srd521:damage-types dcterms:source <https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf>;
+    dcterms:title "SRD 5.2.1 damage-types"@en;
+    a dcat:Dataset.
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/damage-types/acid> cat:instanceOf srd521:DamageType;
+    a cat:Individual;
+    rdfs:comment "The SRD 5.2.1 damage type named Acid.";
+    rdfs:label "Acid"@en;
+    cat:lexicalToken "acid";
+    srd521:exampleUses "Corrosive liquids, digestive enzymes";
+    srd521:sourceSection "Rules Glossary: Damage Types".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/damage-types/bludgeoning> cat:instanceOf srd521:DamageType;
+    a cat:Individual;
+    rdfs:comment "The SRD 5.2.1 damage type named Bludgeoning.";
+    rdfs:label "Bludgeoning"@en;
+    cat:lexicalToken "bludgeoning";
+    srd521:exampleUses "Blunt objects, constriction, falling";
+    srd521:sourceSection "Rules Glossary: Damage Types".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/damage-types/cold> cat:instanceOf srd521:DamageType;
+    a cat:Individual;
+    rdfs:comment "The SRD 5.2.1 damage type named Cold.";
+    rdfs:label "Cold"@en;
+    cat:lexicalToken "cold";
+    srd521:exampleUses "Freezing water, icy blasts";
+    srd521:sourceSection "Rules Glossary: Damage Types".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/damage-types/fire> cat:instanceOf srd521:DamageType;
+    a cat:Individual;
+    rdfs:comment "The SRD 5.2.1 damage type named Fire.";
+    rdfs:label "Fire"@en;
+    cat:lexicalToken "fire";
+    srd521:exampleUses "Flames, unbearable heat";
+    srd521:sourceSection "Rules Glossary: Damage Types".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/damage-types/force> cat:instanceOf srd521:DamageType;
+    a cat:Individual;
+    rdfs:comment "The SRD 5.2.1 damage type named Force.";
+    rdfs:label "Force"@en;
+    cat:lexicalToken "force";
+    srd521:exampleUses "Pure magical energy";
+    srd521:sourceSection "Rules Glossary: Damage Types".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/damage-types/lightning> cat:instanceOf srd521:DamageType;
+    a cat:Individual;
+    rdfs:comment "The SRD 5.2.1 damage type named Lightning.";
+    rdfs:label "Lightning"@en;
+    cat:lexicalToken "lightning";
+    srd521:exampleUses "Electricity";
+    srd521:sourceSection "Rules Glossary: Damage Types".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/damage-types/necrotic> cat:instanceOf srd521:DamageType;
+    a cat:Individual;
+    rdfs:comment "The SRD 5.2.1 damage type named Necrotic.";
+    rdfs:label "Necrotic"@en;
+    cat:lexicalToken "necrotic";
+    srd521:exampleUses "Life-draining energy";
+    srd521:sourceSection "Rules Glossary: Damage Types".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/damage-types/piercing> cat:instanceOf srd521:DamageType;
+    a cat:Individual;
+    rdfs:comment "The SRD 5.2.1 damage type named Piercing.";
+    rdfs:label "Piercing"@en;
+    cat:lexicalToken "piercing";
+    srd521:exampleUses "Fangs, puncturing objects";
+    srd521:sourceSection "Rules Glossary: Damage Types".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/damage-types/poison> cat:instanceOf srd521:DamageType;
+    a cat:Individual;
+    rdfs:comment "The SRD 5.2.1 damage type named Poison.";
+    rdfs:label "Poison"@en;
+    cat:lexicalToken "poison";
+    srd521:exampleUses "Toxic gas, venom";
+    srd521:sourceSection "Rules Glossary: Damage Types".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/damage-types/psychic> cat:instanceOf srd521:DamageType;
+    a cat:Individual;
+    rdfs:comment "The SRD 5.2.1 damage type named Psychic.";
+    rdfs:label "Psychic"@en;
+    cat:lexicalToken "psychic";
+    srd521:exampleUses "Mind-rending energy";
+    srd521:sourceSection "Rules Glossary: Damage Types".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/damage-types/radiant> cat:instanceOf srd521:DamageType;
+    a cat:Individual;
+    rdfs:comment "The SRD 5.2.1 damage type named Radiant.";
+    rdfs:label "Radiant"@en;
+    cat:lexicalToken "radiant";
+    srd521:exampleUses "Holy energy, searing radiation";
+    srd521:sourceSection "Rules Glossary: Damage Types".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/damage-types/slashing> cat:instanceOf srd521:DamageType;
+    a cat:Individual;
+    rdfs:comment "The SRD 5.2.1 damage type named Slashing.";
+    rdfs:label "Slashing"@en;
+    cat:lexicalToken "slashing";
+    srd521:exampleUses "Claws, cutting objects";
+    srd521:sourceSection "Rules Glossary: Damage Types".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/damage-types/thunder> cat:instanceOf srd521:DamageType;
+    a cat:Individual;
+    rdfs:comment "The SRD 5.2.1 damage type named Thunder.";
+    rdfs:label "Thunder"@en;
+    cat:lexicalToken "thunder";
+    srd521:exampleUses "Concussive sound";
+    srd521:sourceSection "Rules Glossary: Damage Types".

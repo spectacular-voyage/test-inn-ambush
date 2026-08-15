@@ -1,0 +1,53 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix dcterms: <http://purl.org/dc/terms/>.
+@prefix dcat: <http://www.w3.org/ns/dcat#>.
+@prefix cat: <https://categoriae.github.io/ontology/>.
+@prefix kosm: <https://kosmion.github.io/ontology/>.
+@prefix par: <https://participatorium.github.io/ontology/>.
+@prefix srd521: <https://stagecraft.github.io/srd-rules/srd-5-2-1/>.
+
+srd521:weapon-masteries dcterms:source <https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf>;
+    dcterms:title "SRD 5.2.1 weapon-masteries"@en;
+    a dcat:Dataset.
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/weapon-masteries/cleave> cat:instanceOf srd521:WeaponMastery;
+    a cat:Individual;
+    rdfs:comment "The SRD 5.2.1 weapon mastery Cleave.";
+    rdfs:label "Cleave"@en;
+    cat:lexicalToken "cleave".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/weapon-masteries/graze> cat:instanceOf srd521:WeaponMastery;
+    a cat:Individual;
+    rdfs:comment "The SRD 5.2.1 weapon mastery Graze.";
+    rdfs:label "Graze"@en;
+    cat:lexicalToken "graze".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/weapon-masteries/nick> cat:instanceOf srd521:WeaponMastery;
+    a cat:Individual;
+    rdfs:comment "The SRD 5.2.1 weapon mastery Nick.";
+    rdfs:label "Nick"@en;
+    cat:lexicalToken "nick".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/weapon-masteries/push> cat:instanceOf srd521:WeaponMastery;
+    a cat:Individual;
+    rdfs:comment "The SRD 5.2.1 weapon mastery Push.";
+    rdfs:label "Push"@en;
+    cat:lexicalToken "push".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/weapon-masteries/sap> cat:instanceOf srd521:WeaponMastery;
+    a cat:Individual;
+    rdfs:comment "The SRD 5.2.1 weapon mastery Sap.";
+    rdfs:label "Sap"@en;
+    cat:lexicalToken "sap".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/weapon-masteries/slow> cat:instanceOf srd521:WeaponMastery;
+    a cat:Individual;
+    rdfs:comment "The SRD 5.2.1 weapon mastery Slow.";
+    rdfs:label "Slow"@en;
+    cat:lexicalToken "slow".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/weapon-masteries/topple> cat:instanceOf srd521:WeaponMastery;
+    a cat:Individual;
+    rdfs:comment "The SRD 5.2.1 weapon mastery Topple.";
+    rdfs:label "Topple"@en;
+    cat:lexicalToken "topple".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/weapon-masteries/vex> cat:instanceOf srd521:WeaponMastery;
+    a cat:Individual;
+    rdfs:comment "The SRD 5.2.1 weapon mastery Vex.";
+    rdfs:label "Vex"@en;
+    cat:lexicalToken "vex".

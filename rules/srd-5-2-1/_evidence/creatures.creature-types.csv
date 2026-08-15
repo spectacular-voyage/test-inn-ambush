@@ -1,0 +1,15 @@
+creatureTypeKey,creatureTypeLabel,meaning,sourceSection
+aberration,Aberration,"Aberrations are utterly alien beings, such as aboleths and cloakers.",Monsters: Parts of a Stat Block: Creature Type
+beast,Beast,"Beasts are non-Humanoid natural creatures, like horses and wolves, as well as most giant animals.",Monsters: Parts of a Stat Block: Creature Type
+celestial,Celestial,"Celestials are magical creatures, such as angels and pegasi, with ties to the Upper Planes.",Monsters: Parts of a Stat Block: Creature Type
+construct,Construct,Constructs are magically created creatures such as homunculi and shield guardians.,Monsters: Parts of a Stat Block: Creature Type
+dragon,Dragon,"Dragons are scaly beings of ancient origin, such as red dragons and wyverns.",Monsters: Parts of a Stat Block: Creature Type
+elemental,Elemental,"Elementals are beings from the Elemental Planes, such as efreet and water elementals.",Monsters: Parts of a Stat Block: Creature Type
+fey,Fey,"Fey are creatures tied to the Feywild or the forces of nature, such as dryads and goblins.",Monsters: Parts of a Stat Block: Creature Type
+fiend,Fiend,"Fiends are creatures tied to terrifying Lower Planes, such as balors and hell hounds.",Monsters: Parts of a Stat Block: Creature Type
+giant,Giant,"Giants are towering beings with humanlike shapes, like fire giants and trolls.",Monsters: Parts of a Stat Block: Creature Type
+humanoid,Humanoid,"Humanoids are people defined by their roles and professions, such as mages, pirates, and warriors. They include members of varied species.",Monsters: Parts of a Stat Block: Creature Type
+monstrosity,Monstrosity,"Monstrosities are unnatural creatures with strange origins, such as mimics and owlbears.",Monsters: Parts of a Stat Block: Creature Type
+ooze,Ooze,"Oozes are gelatinous creatures, including black puddings and gelatinous cubes.",Monsters: Parts of a Stat Block: Creature Type
+plant,Plant,"Plants are sentient vegetation and fungal monsters, such as shambling mounds and treants.",Monsters: Parts of a Stat Block: Creature Type
+undead,Undead,"Undead are spirits and the reanimated dead, such as ghosts, vampires, and zombies.",Monsters: Parts of a Stat Block: Creature Type

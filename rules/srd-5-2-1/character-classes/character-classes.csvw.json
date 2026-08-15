@@ -1,0 +1,27 @@
+{
+  "@context": "http://www.w3.org/ns/csvw",
+  "http://purl.org/dc/terms/source": { "@id": "evidence/srd-5.2.1-character-classes-table.pdf" },
+  "tableSchema": {
+    "aboutUrl": "https://stagecraft.github.io/srd-rules/srd-5-2-1/character-classes/{classKey}",
+    "columns": [
+      {
+        "name": "classKey",
+        "required": true,
+        "propertyUrl": "https://categoriae.github.io/ontology/lexicalToken"
+      },
+      {
+        "name": "classLabel",
+        "required": true,
+        "propertyUrl": "https://stagecraft.github.io/srd-rules/srd-5-2-1/classLabel"
+      },
+      {
+        "name": "classHitDie",
+        "required": true,
+        "datatype": { "base": "string", "format": "^d(4|6|8|10|12|20)$" },
+        "propertyUrl": "https://stagecraft.github.io/srd-rules/srd-5-2-1/classHitDie"
+      }
+    ],
+    "primaryKey": "classKey"
+  },
+  "url": "character-classes.csv"
+}

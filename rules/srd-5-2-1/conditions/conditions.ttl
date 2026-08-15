@@ -1,0 +1,712 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix dcterms: <http://purl.org/dc/terms/>.
+@prefix dcat: <http://www.w3.org/ns/dcat#>.
+@prefix cat: <https://categoriae.github.io/ontology/>.
+@prefix kosm: <https://kosmion.github.io/ontology/>.
+@prefix par: <https://participatorium.github.io/ontology/>.
+@prefix srd521: <https://stagecraft.github.io/srd-rules/srd-5-2-1/>.
+
+srd521:conditions dcterms:source <https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf>;
+    dcterms:title "SRD 5.2.1 condition rules"@en;
+    a dcat:Dataset.
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/conditions/condition-mask-adjudicated-precondition-ask> cat:instanceOf par:SparqlAskPrecondition;
+    a cat:InformationObject;
+    rdf:value "ASK { # Condition mask family is adjudicated by the condition effect and live mask interval. }";
+    rdfs:comment "RESTORED under DF-RESTORE-1. The family regeneration DISSOLVED this individual and FLATTENED its rdf:value onto the dcterms:description of every ActionType that referenced it -- the text survived, the structure did not, and par:preconditionAsk is what packages/rules queries. Verbatim from srd-rules 56aad03262a2 srd-5-2-1/conditions/conditions.ttl:31-33.".
+
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/conditions/condition-mask-adjudicated-consequence-template> cat:instanceOf par:ConsequenceTemplate;
+    a cat:Description;
+    rdf:value "No standalone consequence template; this action family exists so source-derived condition masks can name the affordance they suspend.";
+    rdfs:comment "RESTORED under DF-RESTORE-1, same flattening as the precondition ask above. Verbatim from srd-rules 56aad03262a2 srd-5-2-1/conditions/conditions.ttl:35-37.".
+
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/conditions/blinded> cat:instanceOf srd521:ConditionDefinition;
+    a cat:Description;
+    rdfs:comment "The SRD 5.2.1 condition named Blinded."@en;
+    rdfs:label "Blinded"@en;
+    cat:lexicalToken "blinded";
+    srd521:hasConditionEffect <https://stagecraft.github.io/srd-rules/srd-5-2-1/conditions/blinded-attacks-affected>, <https://stagecraft.github.io/srd-rules/srd-5-2-1/conditions/blinded-cant-see>;
+    srd521:sourceSection "Rules Glossary: Blinded [Condition]".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/conditions/blinded-attacks-affected> dcterms:description "Attack rolls against you have Advantage, and your attack rolls have Disadvantage.";
+    dcterms:isPartOf <https://stagecraft.github.io/srd-rules/srd-5-2-1/conditions/blinded>;
+    cat:instanceOf srd521:ConditionEffect;
+    a cat:Description;
+    rdfs:label "Attacks Affected"@en;
+    par:adjudicationNote "Attack-roll advantage and disadvantage are roll modifiers, not action masks.";
+    srd521:conditionEffectType <https://stagecraft.github.io/srd-rules/srd-5-2-1/condition-effects/attacks-affected>;
+    srd521:effectKind <https://stagecraft.github.io/srd-rules/srd-5-2-1/effect-kinds/d20-modifier>;
+    srd521:mechanicalStatus <https://stagecraft.github.io/srd-rules/srd-5-2-1/mechanical-statuses/structured-not-mask>;
+    srd521:sourceSection "Rules Glossary: Blinded [Condition]".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/conditions/blinded-cant-see> dcterms:description "You can't see and automatically fail any ability check that requires sight.";
+    dcterms:isPartOf <https://stagecraft.github.io/srd-rules/srd-5-2-1/conditions/blinded>;
+    cat:instanceOf par:AffordanceMaskDefinition;
+    a cat:Description;
+    cat:instanceOf srd521:ConditionEffect;
+    rdfs:label "Can't See"@en;
+    par:adjudicationNote "The ability-check auto-failure depends on whether a check requires sight; the mask records the sensory affordance only.";
+    par:masksActionType <https://stagecraft.github.io/srd-rules/srd-5-2-1/conditions/use-sight>;
+    srd521:conditionEffectType <https://stagecraft.github.io/srd-rules/srd-5-2-1/condition-effects/cant-see>;
+    srd521:effectKind <https://stagecraft.github.io/srd-rules/srd-5-2-1/effect-kinds/sensory-mask>;
+    srd521:mechanicalStatus <https://stagecraft.github.io/srd-rules/srd-5-2-1/mechanical-statuses/codified-mask>;
+    srd521:sourceSection "Rules Glossary: Blinded [Condition]".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/conditions/charmed> cat:instanceOf srd521:ConditionDefinition;
+    a cat:Description;
+    rdfs:comment "The SRD 5.2.1 condition named Charmed."@en;
+    rdfs:label "Charmed"@en;
+    cat:lexicalToken "charmed";
+    srd521:hasConditionEffect <https://stagecraft.github.io/srd-rules/srd-5-2-1/conditions/charmed-cant-harm-the-charmer>, <https://stagecraft.github.io/srd-rules/srd-5-2-1/conditions/charmed-social-advantage>;
+    srd521:sourceSection "Rules Glossary: Charmed [Condition]".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/conditions/charmed-cant-harm-the-charmer> dcterms:description "You can't attack the charmer or target the charmer with damaging abilities or magical effects.";
+    dcterms:isPartOf <https://stagecraft.github.io/srd-rules/srd-5-2-1/conditions/charmed>;
+    cat:instanceOf par:AffordanceMaskDefinition;
+    a cat:Description;
+    cat:instanceOf srd521:ConditionEffect;
+    rdfs:label "Can't Harm the Charmer"@en;
+    par:adjudicationNote "The mask is source-scoped to the charmer and does not prohibit harm against others.";
+    par:masksActionType <https://stagecraft.github.io/srd-rules/srd-5-2-1/conditions/harm-condition-source>;
+    srd521:conditionEffectType <https://stagecraft.github.io/srd-rules/srd-5-2-1/condition-effects/cant-harm-the-charmer>;
+    srd521:effectKind <https://stagecraft.github.io/srd-rules/srd-5-2-1/effect-kinds/conditional-affordance-mask>;
+    srd521:mechanicalStatus <https://stagecraft.github.io/srd-rules/srd-5-2-1/mechanical-statuses/adjudication-scoped-mask>;
+    srd521:sourceSection "Rules Glossary: Charmed [Condition]".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/conditions/charmed-social-advantage> dcterms:description "The charmer has Advantage on any ability check to interact with you socially.";
+    dcterms:isPartOf <https://stagecraft.github.io/srd-rules/srd-5-2-1/conditions/charmed>;
+    cat:instanceOf srd521:ConditionEffect;
+    a cat:Description;
+    rdfs:label "Social Advantage"@en;
+    par:adjudicationNote "Social interaction advantage is a roll modifier, not an action mask.";
+    srd521:conditionEffectType <https://stagecraft.github.io/srd-rules/srd-5-2-1/condition-effects/social-advantage>;
+    srd521:effectKind <https://stagecraft.github.io/srd-rules/srd-5-2-1/effect-kinds/d20-modifier>;
+    srd521:mechanicalStatus <https://stagecraft.github.io/srd-rules/srd-5-2-1/mechanical-statuses/structured-not-mask>;
+    srd521:sourceSection "Rules Glossary: Charmed [Condition]".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/conditions/deafened> cat:instanceOf srd521:ConditionDefinition;
+    a cat:Description;
+    rdfs:comment "The SRD 5.2.1 condition named Deafened."@en;
+    rdfs:label "Deafened"@en;
+    cat:lexicalToken "deafened";
+    srd521:hasConditionEffect <https://stagecraft.github.io/srd-rules/srd-5-2-1/conditions/deafened-cant-hear>;
+    srd521:sourceSection "Rules Glossary: Deafened [Condition]".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/conditions/deafened-cant-hear> dcterms:description "You can't hear and automatically fail any ability check that requires hearing.";
+    dcterms:isPartOf <https://stagecraft.github.io/srd-rules/srd-5-2-1/conditions/deafened>;
+    cat:instanceOf par:AffordanceMaskDefinition;
+    a cat:Description;
+    cat:instanceOf srd521:ConditionEffect;
+    rdfs:label "Can't Hear"@en;
+    par:adjudicationNote "The ability-check auto-failure depends on whether a check requires hearing; the mask records the sensory affordance only.";
+    par:masksActionType <https://stagecraft.github.io/srd-rules/srd-5-2-1/conditions/use-hearing>;
+    srd521:conditionEffectType <https://stagecraft.github.io/srd-rules/srd-5-2-1/condition-effects/cant-hear>;
+    srd521:effectKind <https://stagecraft.github.io/srd-rules/srd-5-2-1/effect-kinds/sensory-mask>;
+    srd521:mechanicalStatus <https://stagecraft.github.io/srd-rules/srd-5-2-1/mechanical-statuses/codified-mask>;
+    srd521:sourceSection "Rules Glossary: Deafened [Condition]".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/conditions/exhaustion> cat:instanceOf srd521:ConditionDefinition;
+    a cat:Description;
+    rdfs:comment "The SRD 5.2.1 condition named Exhaustion."@en;
+    rdfs:label "Exhaustion"@en;
+    cat:lexicalToken "exhaustion";
+    srd521:hasConditionEffect <https://stagecraft.github.io/srd-rules/srd-5-2-1/conditions/exhaustion-d20-tests-affected>, <https://stagecraft.github.io/srd-rules/srd-5-2-1/conditions/exhaustion-exhaustion-levels>, <https://stagecraft.github.io/srd-rules/srd-5-2-1/conditions/exhaustion-removing-exhaustion-levels>, <https://stagecraft.github.io/srd-rules/srd-5-2-1/conditions/exhaustion-speed-reduced>;
+    srd521:sourceSection "Rules Glossary: Exhaustion [Condition]".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/conditions/exhaustion-d20-tests-affected> dcterms:description "When you make a D20 Test, the roll is reduced by 2 times your Exhaustion level.";
+    dcterms:isPartOf <https://stagecraft.github.io/srd-rules/srd-5-2-1/conditions/exhaustion>;
+    cat:instanceOf srd521:ConditionEffect;
+    a cat:Description;
+    rdfs:label "D20 Tests Affected"@en;
+    par:adjudicationNote "The roll reduction is mechanical but is not an action mask.";
+    srd521:conditionEffectType <https://stagecraft.github.io/srd-rules/srd-5-2-1/condition-effects/d20-tests-affected>;
+    srd521:effectKind <https://stagecraft.github.io/srd-rules/srd-5-2-1/effect-kinds/d20-modifier>;
+    srd521:mechanicalStatus <https://stagecraft.github.io/srd-rules/srd-5-2-1/mechanical-statuses/structured-not-mask>;
+    srd521:sourceSection "Rules Glossary: Exhaustion [Condition]".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/conditions/exhaustion-exhaustion-levels> dcterms:description "This condition is cumulative. Each time you receive it, you gain 1 Exhaustion level. You die if your Exhaustion level is 6.";
+    dcterms:isPartOf <https://stagecraft.github.io/srd-rules/srd-5-2-1/conditions/exhaustion>;
+    cat:instanceOf srd521:ConditionEffect;
+    a cat:Description;
+    rdfs:label "Exhaustion Levels"@en;
+    par:adjudicationNote "Exhaustion levels are cumulative condition state, not an affordance mask.";
+    srd521:conditionEffectType <https://stagecraft.github.io/srd-rules/srd-5-2-1/condition-effects/exhaustion-levels>;
+    srd521:effectKind <https://stagecraft.github.io/srd-rules/srd-5-2-1/effect-kinds/condition-counter>;
+    srd521:mechanicalStatus <https://stagecraft.github.io/srd-rules/srd-5-2-1/mechanical-statuses/structured-not-mask>;
+    srd521:sourceSection "Rules Glossary: Exhaustion [Condition]".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/conditions/exhaustion-removing-exhaustion-levels> dcterms:description "Finishing a Long Rest removes 1 of your Exhaustion levels. When your Exhaustion level reaches 0, the condition ends.";
+    dcterms:isPartOf <https://stagecraft.github.io/srd-rules/srd-5-2-1/conditions/exhaustion>;
+    cat:instanceOf srd521:ConditionEffect;
+    a cat:Description;
+    rdfs:label "Removing Exhaustion Levels"@en;
+    par:adjudicationNote "Recovery timing is condition lifecycle data, not an action mask.";
+    srd521:conditionEffectType <https://stagecraft.github.io/srd-rules/srd-5-2-1/condition-effects/removing-exhaustion-levels>;
+    srd521:effectKind <https://stagecraft.github.io/srd-rules/srd-5-2-1/effect-kinds/condition-recovery>;
+    srd521:mechanicalStatus <https://stagecraft.github.io/srd-rules/srd-5-2-1/mechanical-statuses/structured-not-mask>;
+    srd521:sourceSection "Rules Glossary: Exhaustion [Condition]".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/conditions/exhaustion-speed-reduced> dcterms:description "Your Speed is reduced by a number of feet equal to 5 times your Exhaustion level.";
+    dcterms:isPartOf <https://stagecraft.github.io/srd-rules/srd-5-2-1/conditions/exhaustion>;
+    cat:instanceOf srd521:ConditionEffect;
+    a cat:Description;
+    rdfs:label "Speed Reduced"@en;
+    par:adjudicationNote "Speed reduction may limit movement distance without masking Move entirely.";
+    srd521:conditionEffectType <https://stagecraft.github.io/srd-rules/srd-5-2-1/condition-effects/speed-reduced>;
+    srd521:effectKind <https://stagecraft.github.io/srd-rules/srd-5-2-1/effect-kinds/movement-modifier>;
+    srd521:mechanicalStatus <https://stagecraft.github.io/srd-rules/srd-5-2-1/mechanical-statuses/structured-not-mask>;
+    srd521:sourceSection "Rules Glossary: Exhaustion [Condition]".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/conditions/frightened> cat:instanceOf srd521:ConditionDefinition;
+    a cat:Description;
+    rdfs:comment "The SRD 5.2.1 condition named Frightened."@en;
+    rdfs:label "Frightened"@en;
+    cat:lexicalToken "frightened";
+    srd521:hasConditionEffect <https://stagecraft.github.io/srd-rules/srd-5-2-1/conditions/frightened-ability-checks-and-attacks-affected>, <https://stagecraft.github.io/srd-rules/srd-5-2-1/conditions/frightened-cant-approach>;
+    srd521:sourceSection "Rules Glossary: Frightened [Condition]".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/conditions/frightened-ability-checks-and-attacks-affected> dcterms:description "You have Disadvantage on ability checks and attack rolls while the source of fear is within line of sight.";
+    dcterms:isPartOf <https://stagecraft.github.io/srd-rules/srd-5-2-1/conditions/frightened>;
+    cat:instanceOf srd521:ConditionEffect;
+    a cat:Description;
+    rdfs:label "Ability Checks and Attacks Affected"@en;
+    par:adjudicationNote "The line-of-sight roll modifier is not an action mask.";
+    srd521:conditionEffectType <https://stagecraft.github.io/srd-rules/srd-5-2-1/condition-effects/ability-checks-and-attacks-affected>;
+    srd521:effectKind <https://stagecraft.github.io/srd-rules/srd-5-2-1/effect-kinds/d20-modifier>;
+    srd521:mechanicalStatus <https://stagecraft.github.io/srd-rules/srd-5-2-1/mechanical-statuses/structured-not-mask>;
+    srd521:sourceSection "Rules Glossary: Frightened [Condition]".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/conditions/frightened-cant-approach> dcterms:description "You can't willingly move closer to the source of fear.";
+    dcterms:isPartOf <https://stagecraft.github.io/srd-rules/srd-5-2-1/conditions/frightened>;
+    cat:instanceOf par:AffordanceMaskDefinition;
+    a cat:Description;
+    cat:instanceOf srd521:ConditionEffect;
+    rdfs:label "Can't Approach"@en;
+    par:adjudicationNote "The mask applies only to willing movement closer to the fear source.";
+    par:masksActionType <https://stagecraft.github.io/srd-rules/srd-5-2-1/conditions/move-closer-to-condition-source>;
+    srd521:conditionEffectType <https://stagecraft.github.io/srd-rules/srd-5-2-1/condition-effects/cant-approach>;
+    srd521:effectKind <https://stagecraft.github.io/srd-rules/srd-5-2-1/effect-kinds/conditional-affordance-mask>;
+    srd521:mechanicalStatus <https://stagecraft.github.io/srd-rules/srd-5-2-1/mechanical-statuses/adjudication-scoped-mask>;
+    srd521:sourceSection "Rules Glossary: Frightened [Condition]".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/conditions/grappled> cat:instanceOf srd521:ConditionDefinition;
+    a cat:Description;
+    rdfs:comment "The SRD 5.2.1 condition named Grappled."@en;
+    rdfs:label "Grappled"@en;
+    cat:lexicalToken "grappled";
+    srd521:hasConditionEffect <https://stagecraft.github.io/srd-rules/srd-5-2-1/conditions/grappled-attacks-affected>, <https://stagecraft.github.io/srd-rules/srd-5-2-1/conditions/grappled-movable>, <https://stagecraft.github.io/srd-rules/srd-5-2-1/conditions/grappled-speed-0>;
+    srd521:sourceSection "Rules Glossary: Grappled [Condition]".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/conditions/grappled-attacks-affected> dcterms:description "You have Disadvantage on attack rolls against any target other than the grappler.";
+    dcterms:isPartOf <https://stagecraft.github.io/srd-rules/srd-5-2-1/conditions/grappled>;
+    cat:instanceOf srd521:ConditionEffect;
+    a cat:Description;
+    rdfs:label "Attacks Affected"@en;
+    par:adjudicationNote "The attack-roll disadvantage is a roll modifier, not an action mask.";
+    srd521:conditionEffectType <https://stagecraft.github.io/srd-rules/srd-5-2-1/condition-effects/attacks-affected>;
+    srd521:effectKind <https://stagecraft.github.io/srd-rules/srd-5-2-1/effect-kinds/d20-modifier>;
+    srd521:mechanicalStatus <https://stagecraft.github.io/srd-rules/srd-5-2-1/mechanical-statuses/structured-not-mask>;
+    srd521:sourceSection "Rules Glossary: Grappled [Condition]".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/conditions/grappled-movable> dcterms:description "The grappler can drag or carry you when it moves, but every foot of movement costs it 1 extra foot unless you are Tiny or two or more sizes smaller than it.";
+    dcterms:isPartOf <https://stagecraft.github.io/srd-rules/srd-5-2-1/conditions/grappled>;
+    cat:instanceOf srd521:ConditionEffect;
+    a cat:Description;
+    rdfs:label "Movable"@en;
+    par:adjudicationNote "Dragging or carrying the grappled target depends on grappler movement and relative size.";
+    srd521:conditionEffectType <https://stagecraft.github.io/srd-rules/srd-5-2-1/condition-effects/movable>;
+    srd521:effectKind <https://stagecraft.github.io/srd-rules/srd-5-2-1/effect-kinds/movement-adjudication>;
+    srd521:mechanicalStatus <https://stagecraft.github.io/srd-rules/srd-5-2-1/mechanical-statuses/adjudication-required>;
+    srd521:sourceSection "Rules Glossary: Grappled [Condition]".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/conditions/grappled-speed-0> dcterms:description "Your Speed is 0 and can't increase.";
+    dcterms:isPartOf <https://stagecraft.github.io/srd-rules/srd-5-2-1/conditions/grappled>;
+    cat:instanceOf par:AffordanceMaskDefinition;
+    a cat:Description;
+    cat:instanceOf srd521:ConditionEffect;
+    rdfs:label "Speed 0"@en;
+    par:masksActionType par:Move;
+    srd521:conditionEffectType <https://stagecraft.github.io/srd-rules/srd-5-2-1/condition-effects/speed-0>;
+    srd521:effectKind <https://stagecraft.github.io/srd-rules/srd-5-2-1/effect-kinds/affordance-mask>;
+    srd521:mechanicalStatus <https://stagecraft.github.io/srd-rules/srd-5-2-1/mechanical-statuses/codified-mask>;
+    srd521:sourceSection "Rules Glossary: Grappled [Condition]".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/conditions/harm-condition-source>
+    par:preconditionAsk <https://stagecraft.github.io/srd-rules/srd-5-2-1/conditions/condition-mask-adjudicated-precondition-ask>;
+    par:consequenceTemplate <https://stagecraft.github.io/srd-rules/srd-5-2-1/conditions/condition-mask-adjudicated-consequence-template>;
+    cat:instanceOf par:ActionType;
+    a cat:EventType;
+    cat:instanceCategory cat:Action;
+    rdfs:comment "The SRD 5.2.1 harm condition source rules term.";
+    rdfs:label "Harm condition source";
+    cat:lexicalToken "harm-condition-source";
+    srd521:srdReference "SRD 5.2.1 condition rules".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/conditions/incapacitated> cat:instanceOf srd521:ConditionDefinition;
+    a cat:Description;
+    rdfs:comment "The SRD 5.2.1 condition named Incapacitated."@en;
+    rdfs:label "Incapacitated"@en;
+    cat:lexicalToken "incapacitated";
+    srd521:hasConditionEffect <https://stagecraft.github.io/srd-rules/srd-5-2-1/conditions/incapacitated-inactive>, <https://stagecraft.github.io/srd-rules/srd-5-2-1/conditions/incapacitated-no-concentration>, <https://stagecraft.github.io/srd-rules/srd-5-2-1/conditions/incapacitated-speechless>, <https://stagecraft.github.io/srd-rules/srd-5-2-1/conditions/incapacitated-surprised>;
+    srd521:sourceSection "Rules Glossary: Incapacitated [Condition]".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/conditions/incapacitated-inactive> dcterms:description "You can't take any action, Bonus Action, or Reaction.";
+    dcterms:isPartOf <https://stagecraft.github.io/srd-rules/srd-5-2-1/conditions/incapacitated>;
+    cat:instanceOf par:AffordanceMaskDefinition;
+    a cat:Description;
+    cat:instanceOf srd521:ConditionEffect;
+    rdfs:label "Inactive"@en;
+    par:masksActionType <https://stagecraft.github.io/srd-rules/srd-5-2-1/conditions/take-action>, <https://stagecraft.github.io/srd-rules/srd-5-2-1/conditions/take-bonus-action>, <https://stagecraft.github.io/srd-rules/srd-5-2-1/conditions/take-reaction>;
+    srd521:conditionEffectType <https://stagecraft.github.io/srd-rules/srd-5-2-1/condition-effects/inactive>;
+    srd521:effectKind <https://stagecraft.github.io/srd-rules/srd-5-2-1/effect-kinds/affordance-mask>;
+    srd521:mechanicalStatus <https://stagecraft.github.io/srd-rules/srd-5-2-1/mechanical-statuses/codified-mask>;
+    srd521:sourceSection "Rules Glossary: Incapacitated [Condition]".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/conditions/incapacitated-no-concentration> dcterms:description "Your Concentration is broken.";
+    dcterms:isPartOf <https://stagecraft.github.io/srd-rules/srd-5-2-1/conditions/incapacitated>;
+    cat:instanceOf par:AffordanceMaskDefinition;
+    a cat:Description;
+    cat:instanceOf srd521:ConditionEffect;
+    rdfs:label "No Concentration"@en;
+    par:masksActionType <https://stagecraft.github.io/srd-rules/srd-5-2-1/conditions/maintain-concentration>;
+    srd521:conditionEffectType <https://stagecraft.github.io/srd-rules/srd-5-2-1/condition-effects/no-concentration>;
+    srd521:effectKind <https://stagecraft.github.io/srd-rules/srd-5-2-1/effect-kinds/affordance-mask>;
+    srd521:mechanicalStatus <https://stagecraft.github.io/srd-rules/srd-5-2-1/mechanical-statuses/codified-mask>;
+    srd521:sourceSection "Rules Glossary: Incapacitated [Condition]".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/conditions/incapacitated-speechless> dcterms:description "You can't speak.";
+    dcterms:isPartOf <https://stagecraft.github.io/srd-rules/srd-5-2-1/conditions/incapacitated>;
+    cat:instanceOf par:AffordanceMaskDefinition;
+    a cat:Description;
+    cat:instanceOf srd521:ConditionEffect;
+    rdfs:label "Speechless"@en;
+    par:masksActionType par:Speak;
+    srd521:conditionEffectType <https://stagecraft.github.io/srd-rules/srd-5-2-1/condition-effects/speechless>;
+    srd521:effectKind <https://stagecraft.github.io/srd-rules/srd-5-2-1/effect-kinds/affordance-mask>;
+    srd521:mechanicalStatus <https://stagecraft.github.io/srd-rules/srd-5-2-1/mechanical-statuses/codified-mask>;
+    srd521:sourceSection "Rules Glossary: Incapacitated [Condition]".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/conditions/incapacitated-surprised> dcterms:description "If you're Incapacitated when you roll Initiative, you have Disadvantage on the roll.";
+    dcterms:isPartOf <https://stagecraft.github.io/srd-rules/srd-5-2-1/conditions/incapacitated>;
+    cat:instanceOf srd521:ConditionEffect;
+    a cat:Description;
+    rdfs:label "Surprised"@en;
+    par:adjudicationNote "Initiative disadvantage is a roll modifier, not an action mask.";
+    srd521:conditionEffectType <https://stagecraft.github.io/srd-rules/srd-5-2-1/condition-effects/surprised>;
+    srd521:effectKind <https://stagecraft.github.io/srd-rules/srd-5-2-1/effect-kinds/d20-modifier>;
+    srd521:mechanicalStatus <https://stagecraft.github.io/srd-rules/srd-5-2-1/mechanical-statuses/structured-not-mask>;
+    srd521:sourceSection "Rules Glossary: Incapacitated [Condition]".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/conditions/invisible> cat:instanceOf srd521:ConditionDefinition;
+    a cat:Description;
+    rdfs:comment "The SRD 5.2.1 condition named Invisible."@en;
+    rdfs:label "Invisible"@en;
+    cat:lexicalToken "invisible";
+    srd521:hasConditionEffect <https://stagecraft.github.io/srd-rules/srd-5-2-1/conditions/invisible-attacks-affected>, <https://stagecraft.github.io/srd-rules/srd-5-2-1/conditions/invisible-concealed>, <https://stagecraft.github.io/srd-rules/srd-5-2-1/conditions/invisible-surprise>;
+    srd521:sourceSection "Rules Glossary: Invisible [Condition]".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/conditions/invisible-attacks-affected> dcterms:description "Attack rolls against you have Disadvantage, and your attack rolls have Advantage. If a creature can somehow see you, you don't gain this benefit against that creature.";
+    dcterms:isPartOf <https://stagecraft.github.io/srd-rules/srd-5-2-1/conditions/invisible>;
+    cat:instanceOf srd521:ConditionEffect;
+    a cat:Description;
+    rdfs:label "Attacks Affected"@en;
+    par:adjudicationNote "Attack-roll advantage and disadvantage are roll modifiers, not action masks.";
+    srd521:conditionEffectType <https://stagecraft.github.io/srd-rules/srd-5-2-1/condition-effects/attacks-affected>;
+    srd521:effectKind <https://stagecraft.github.io/srd-rules/srd-5-2-1/effect-kinds/d20-modifier>;
+    srd521:mechanicalStatus <https://stagecraft.github.io/srd-rules/srd-5-2-1/mechanical-statuses/structured-not-mask>;
+    srd521:sourceSection "Rules Glossary: Invisible [Condition]".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/conditions/invisible-concealed> dcterms:description "You aren't affected by any effect that requires its target to be seen unless the effect's creator can somehow see you. Any equipment you are wearing or carrying is also concealed.";
+    dcterms:isPartOf <https://stagecraft.github.io/srd-rules/srd-5-2-1/conditions/invisible>;
+    cat:instanceOf srd521:ConditionEffect;
+    a cat:Description;
+    rdfs:label "Concealed"@en;
+    par:adjudicationNote "Sight-required targeting is source/observer dependent; this package records the prose rather than inventing a targeting engine.";
+    srd521:conditionEffectType <https://stagecraft.github.io/srd-rules/srd-5-2-1/condition-effects/concealed>;
+    srd521:effectKind <https://stagecraft.github.io/srd-rules/srd-5-2-1/effect-kinds/targeting-adjudication>;
+    srd521:mechanicalStatus <https://stagecraft.github.io/srd-rules/srd-5-2-1/mechanical-statuses/adjudication-required>;
+    srd521:sourceSection "Rules Glossary: Invisible [Condition]".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/conditions/invisible-surprise> dcterms:description "If you're Invisible when you roll Initiative, you have Advantage on the roll.";
+    dcterms:isPartOf <https://stagecraft.github.io/srd-rules/srd-5-2-1/conditions/invisible>;
+    cat:instanceOf srd521:ConditionEffect;
+    a cat:Description;
+    rdfs:label "Surprise"@en;
+    par:adjudicationNote "Initiative advantage is a roll modifier, not an action mask.";
+    srd521:conditionEffectType <https://stagecraft.github.io/srd-rules/srd-5-2-1/condition-effects/surprise>;
+    srd521:effectKind <https://stagecraft.github.io/srd-rules/srd-5-2-1/effect-kinds/d20-modifier>;
+    srd521:mechanicalStatus <https://stagecraft.github.io/srd-rules/srd-5-2-1/mechanical-statuses/structured-not-mask>;
+    srd521:sourceSection "Rules Glossary: Invisible [Condition]".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/conditions/maintain-concentration>
+    par:preconditionAsk <https://stagecraft.github.io/srd-rules/srd-5-2-1/conditions/condition-mask-adjudicated-precondition-ask>;
+    par:consequenceTemplate <https://stagecraft.github.io/srd-rules/srd-5-2-1/conditions/condition-mask-adjudicated-consequence-template>;
+    cat:instanceOf par:ActionType;
+    a cat:EventType;
+    cat:instanceCategory cat:Action;
+    rdfs:comment "The SRD 5.2.1 maintain concentration rules term.";
+    rdfs:label "Maintain concentration";
+    cat:lexicalToken "maintain-concentration";
+    srd521:srdReference "SRD 5.2.1 condition rules".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/conditions/move-closer-to-condition-source>
+    par:preconditionAsk <https://stagecraft.github.io/srd-rules/srd-5-2-1/conditions/condition-mask-adjudicated-precondition-ask>;
+    par:consequenceTemplate <https://stagecraft.github.io/srd-rules/srd-5-2-1/conditions/condition-mask-adjudicated-consequence-template>;
+    cat:instanceOf par:ActionType;
+    a cat:EventType;
+    cat:instanceCategory cat:Action;
+    rdfs:comment "The SRD 5.2.1 move closer to condition source rules term.";
+    rdfs:label "Move closer to condition source";
+    cat:lexicalToken "move-closer-to-condition-source";
+    srd521:srdReference "SRD 5.2.1 condition rules".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/conditions/paralyzed> cat:instanceOf srd521:ConditionDefinition;
+    a cat:Description;
+    rdfs:comment "The SRD 5.2.1 condition named Paralyzed."@en;
+    rdfs:label "Paralyzed"@en;
+    cat:lexicalToken "paralyzed";
+    srd521:hasConditionEffect <https://stagecraft.github.io/srd-rules/srd-5-2-1/conditions/paralyzed-attacks-affected>, <https://stagecraft.github.io/srd-rules/srd-5-2-1/conditions/paralyzed-automatic-critical-hits>, <https://stagecraft.github.io/srd-rules/srd-5-2-1/conditions/paralyzed-incapacitated>, <https://stagecraft.github.io/srd-rules/srd-5-2-1/conditions/paralyzed-saving-throws-affected>, <https://stagecraft.github.io/srd-rules/srd-5-2-1/conditions/paralyzed-speed-0>;
+    srd521:sourceSection "Rules Glossary: Paralyzed [Condition]".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/conditions/paralyzed-attacks-affected> dcterms:description "Attack rolls against you have Advantage.";
+    dcterms:isPartOf <https://stagecraft.github.io/srd-rules/srd-5-2-1/conditions/paralyzed>;
+    cat:instanceOf srd521:ConditionEffect;
+    a cat:Description;
+    rdfs:label "Attacks Affected"@en;
+    par:adjudicationNote "Attack-roll advantage is a roll modifier, not an action mask.";
+    srd521:conditionEffectType <https://stagecraft.github.io/srd-rules/srd-5-2-1/condition-effects/attacks-affected>;
+    srd521:effectKind <https://stagecraft.github.io/srd-rules/srd-5-2-1/effect-kinds/d20-modifier>;
+    srd521:mechanicalStatus <https://stagecraft.github.io/srd-rules/srd-5-2-1/mechanical-statuses/structured-not-mask>;
+    srd521:sourceSection "Rules Glossary: Paralyzed [Condition]".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/conditions/paralyzed-automatic-critical-hits> dcterms:description "Any attack roll that hits you is a Critical Hit if the attacker is within 5 feet of you.";
+    dcterms:isPartOf <https://stagecraft.github.io/srd-rules/srd-5-2-1/conditions/paralyzed>;
+    cat:instanceOf srd521:ConditionEffect;
+    a cat:Description;
+    rdfs:label "Automatic Critical Hits"@en;
+    par:adjudicationNote "Critical-hit conversion is attack resolution data, not an action mask.";
+    srd521:conditionEffectType <https://stagecraft.github.io/srd-rules/srd-5-2-1/condition-effects/automatic-critical-hits>;
+    srd521:effectKind <https://stagecraft.github.io/srd-rules/srd-5-2-1/effect-kinds/hit-resolution>;
+    srd521:mechanicalStatus <https://stagecraft.github.io/srd-rules/srd-5-2-1/mechanical-statuses/structured-not-mask>;
+    srd521:sourceSection "Rules Glossary: Paralyzed [Condition]".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/conditions/paralyzed-incapacitated> dcterms:description "You have the Incapacitated condition.";
+    dcterms:isPartOf <https://stagecraft.github.io/srd-rules/srd-5-2-1/conditions/paralyzed>;
+    cat:instanceOf par:AffordanceMaskDefinition;
+    a cat:Description;
+    cat:instanceOf srd521:ConditionEffect;
+    rdfs:label "Incapacitated"@en;
+    par:adjudicationNote "The action masks derive from the embedded Incapacitated condition.";
+    par:masksActionType par:Speak, <https://stagecraft.github.io/srd-rules/srd-5-2-1/conditions/maintain-concentration>, <https://stagecraft.github.io/srd-rules/srd-5-2-1/conditions/take-action>, <https://stagecraft.github.io/srd-rules/srd-5-2-1/conditions/take-bonus-action>, <https://stagecraft.github.io/srd-rules/srd-5-2-1/conditions/take-reaction>;
+    srd521:conditionEffectType <https://stagecraft.github.io/srd-rules/srd-5-2-1/condition-effects/incapacitated>;
+    srd521:effectKind <https://stagecraft.github.io/srd-rules/srd-5-2-1/effect-kinds/condition-reference-mask>;
+    srd521:mechanicalStatus <https://stagecraft.github.io/srd-rules/srd-5-2-1/mechanical-statuses/codified-mask>;
+    srd521:sourceSection "Rules Glossary: Paralyzed [Condition]".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/conditions/paralyzed-saving-throws-affected> dcterms:description "You automatically fail Strength and Dexterity saving throws.";
+    dcterms:isPartOf <https://stagecraft.github.io/srd-rules/srd-5-2-1/conditions/paralyzed>;
+    cat:instanceOf srd521:ConditionEffect;
+    a cat:Description;
+    rdfs:label "Saving Throws Affected"@en;
+    par:adjudicationNote "Automatic save failure is mechanical but is not an action mask.";
+    srd521:conditionEffectType <https://stagecraft.github.io/srd-rules/srd-5-2-1/condition-effects/saving-throws-affected>;
+    srd521:effectKind <https://stagecraft.github.io/srd-rules/srd-5-2-1/effect-kinds/automatic-failure>;
+    srd521:mechanicalStatus <https://stagecraft.github.io/srd-rules/srd-5-2-1/mechanical-statuses/structured-not-mask>;
+    srd521:sourceSection "Rules Glossary: Paralyzed [Condition]".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/conditions/paralyzed-speed-0> dcterms:description "Your Speed is 0 and can't increase.";
+    dcterms:isPartOf <https://stagecraft.github.io/srd-rules/srd-5-2-1/conditions/paralyzed>;
+    cat:instanceOf par:AffordanceMaskDefinition;
+    a cat:Description;
+    cat:instanceOf srd521:ConditionEffect;
+    rdfs:label "Speed 0"@en;
+    par:masksActionType par:Move;
+    srd521:conditionEffectType <https://stagecraft.github.io/srd-rules/srd-5-2-1/condition-effects/speed-0>;
+    srd521:effectKind <https://stagecraft.github.io/srd-rules/srd-5-2-1/effect-kinds/affordance-mask>;
+    srd521:mechanicalStatus <https://stagecraft.github.io/srd-rules/srd-5-2-1/mechanical-statuses/codified-mask>;
+    srd521:sourceSection "Rules Glossary: Paralyzed [Condition]".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/conditions/petrified> cat:instanceOf srd521:ConditionDefinition;
+    a cat:Description;
+    rdfs:comment "The SRD 5.2.1 condition named Petrified."@en;
+    rdfs:label "Petrified"@en;
+    cat:lexicalToken "petrified";
+    srd521:hasConditionEffect <https://stagecraft.github.io/srd-rules/srd-5-2-1/conditions/petrified-attacks-affected>, <https://stagecraft.github.io/srd-rules/srd-5-2-1/conditions/petrified-incapacitated>, <https://stagecraft.github.io/srd-rules/srd-5-2-1/conditions/petrified-poison-immunity>, <https://stagecraft.github.io/srd-rules/srd-5-2-1/conditions/petrified-resist-damage>, <https://stagecraft.github.io/srd-rules/srd-5-2-1/conditions/petrified-saving-throws-affected>, <https://stagecraft.github.io/srd-rules/srd-5-2-1/conditions/petrified-speed-0>, <https://stagecraft.github.io/srd-rules/srd-5-2-1/conditions/petrified-turned-to-inanimate-substance>;
+    srd521:sourceSection "Rules Glossary: Petrified [Condition]".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/conditions/petrified-attacks-affected> dcterms:description "Attack rolls against you have Advantage.";
+    dcterms:isPartOf <https://stagecraft.github.io/srd-rules/srd-5-2-1/conditions/petrified>;
+    cat:instanceOf srd521:ConditionEffect;
+    a cat:Description;
+    rdfs:label "Attacks Affected"@en;
+    par:adjudicationNote "Attack-roll advantage is a roll modifier, not an action mask.";
+    srd521:conditionEffectType <https://stagecraft.github.io/srd-rules/srd-5-2-1/condition-effects/attacks-affected>;
+    srd521:effectKind <https://stagecraft.github.io/srd-rules/srd-5-2-1/effect-kinds/d20-modifier>;
+    srd521:mechanicalStatus <https://stagecraft.github.io/srd-rules/srd-5-2-1/mechanical-statuses/structured-not-mask>;
+    srd521:sourceSection "Rules Glossary: Petrified [Condition]".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/conditions/petrified-incapacitated> dcterms:description "You have the Incapacitated condition.";
+    dcterms:isPartOf <https://stagecraft.github.io/srd-rules/srd-5-2-1/conditions/petrified>;
+    cat:instanceOf par:AffordanceMaskDefinition;
+    a cat:Description;
+    cat:instanceOf srd521:ConditionEffect;
+    rdfs:label "Incapacitated"@en;
+    par:adjudicationNote "The action masks derive from the embedded Incapacitated condition.";
+    par:masksActionType par:Speak, <https://stagecraft.github.io/srd-rules/srd-5-2-1/conditions/maintain-concentration>, <https://stagecraft.github.io/srd-rules/srd-5-2-1/conditions/take-action>, <https://stagecraft.github.io/srd-rules/srd-5-2-1/conditions/take-bonus-action>, <https://stagecraft.github.io/srd-rules/srd-5-2-1/conditions/take-reaction>;
+    srd521:conditionEffectType <https://stagecraft.github.io/srd-rules/srd-5-2-1/condition-effects/incapacitated>;
+    srd521:effectKind <https://stagecraft.github.io/srd-rules/srd-5-2-1/effect-kinds/condition-reference-mask>;
+    srd521:mechanicalStatus <https://stagecraft.github.io/srd-rules/srd-5-2-1/mechanical-statuses/codified-mask>;
+    srd521:sourceSection "Rules Glossary: Petrified [Condition]".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/conditions/petrified-poison-immunity> dcterms:description "You have Immunity to the Poisoned condition.";
+    dcterms:isPartOf <https://stagecraft.github.io/srd-rules/srd-5-2-1/conditions/petrified>;
+    cat:instanceOf srd521:ConditionEffect;
+    a cat:Description;
+    rdfs:label "Poison Immunity"@en;
+    par:adjudicationNote "Condition immunity is not an action mask.";
+    srd521:conditionEffectType <https://stagecraft.github.io/srd-rules/srd-5-2-1/condition-effects/poison-immunity>;
+    srd521:effectKind <https://stagecraft.github.io/srd-rules/srd-5-2-1/effect-kinds/immunity>;
+    srd521:mechanicalStatus <https://stagecraft.github.io/srd-rules/srd-5-2-1/mechanical-statuses/structured-not-mask>;
+    srd521:sourceSection "Rules Glossary: Petrified [Condition]".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/conditions/petrified-resist-damage> dcterms:description "You have Resistance to all damage.";
+    dcterms:isPartOf <https://stagecraft.github.io/srd-rules/srd-5-2-1/conditions/petrified>;
+    cat:instanceOf srd521:ConditionEffect;
+    a cat:Description;
+    rdfs:label "Resist Damage"@en;
+    par:adjudicationNote "Damage resistance is not an action mask.";
+    srd521:conditionEffectType <https://stagecraft.github.io/srd-rules/srd-5-2-1/condition-effects/resist-damage>;
+    srd521:effectKind <https://stagecraft.github.io/srd-rules/srd-5-2-1/effect-kinds/damage-modifier>;
+    srd521:mechanicalStatus <https://stagecraft.github.io/srd-rules/srd-5-2-1/mechanical-statuses/structured-not-mask>;
+    srd521:sourceSection "Rules Glossary: Petrified [Condition]".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/conditions/petrified-saving-throws-affected> dcterms:description "You automatically fail Strength and Dexterity saving throws.";
+    dcterms:isPartOf <https://stagecraft.github.io/srd-rules/srd-5-2-1/conditions/petrified>;
+    cat:instanceOf srd521:ConditionEffect;
+    a cat:Description;
+    rdfs:label "Saving Throws Affected"@en;
+    par:adjudicationNote "Automatic save failure is mechanical but is not an action mask.";
+    srd521:conditionEffectType <https://stagecraft.github.io/srd-rules/srd-5-2-1/condition-effects/saving-throws-affected>;
+    srd521:effectKind <https://stagecraft.github.io/srd-rules/srd-5-2-1/effect-kinds/automatic-failure>;
+    srd521:mechanicalStatus <https://stagecraft.github.io/srd-rules/srd-5-2-1/mechanical-statuses/structured-not-mask>;
+    srd521:sourceSection "Rules Glossary: Petrified [Condition]".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/conditions/petrified-speed-0> dcterms:description "Your Speed is 0 and can't increase.";
+    dcterms:isPartOf <https://stagecraft.github.io/srd-rules/srd-5-2-1/conditions/petrified>;
+    cat:instanceOf par:AffordanceMaskDefinition;
+    a cat:Description;
+    cat:instanceOf srd521:ConditionEffect;
+    rdfs:label "Speed 0"@en;
+    par:masksActionType par:Move;
+    srd521:conditionEffectType <https://stagecraft.github.io/srd-rules/srd-5-2-1/condition-effects/speed-0>;
+    srd521:effectKind <https://stagecraft.github.io/srd-rules/srd-5-2-1/effect-kinds/affordance-mask>;
+    srd521:mechanicalStatus <https://stagecraft.github.io/srd-rules/srd-5-2-1/mechanical-statuses/codified-mask>;
+    srd521:sourceSection "Rules Glossary: Petrified [Condition]".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/conditions/petrified-turned-to-inanimate-substance> dcterms:description "You are transformed, along with any nonmagical objects you are wearing and carrying, into a solid inanimate substance (usually stone). Your weight increases by a factor of ten, and you cease aging.";
+    dcterms:isPartOf <https://stagecraft.github.io/srd-rules/srd-5-2-1/conditions/petrified>;
+    cat:instanceOf srd521:ConditionEffect;
+    a cat:Description;
+    rdfs:label "Turned to Inanimate Substance"@en;
+    par:adjudicationNote "The transformation affects physical state and carried nonmagical objects; no action mask is invented here.";
+    srd521:conditionEffectType <https://stagecraft.github.io/srd-rules/srd-5-2-1/condition-effects/turned-to-inanimate-substance>;
+    srd521:effectKind <https://stagecraft.github.io/srd-rules/srd-5-2-1/effect-kinds/state-transformation>;
+    srd521:mechanicalStatus <https://stagecraft.github.io/srd-rules/srd-5-2-1/mechanical-statuses/adjudication-required>;
+    srd521:sourceSection "Rules Glossary: Petrified [Condition]".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/conditions/poisoned> cat:instanceOf srd521:ConditionDefinition;
+    a cat:Description;
+    rdfs:comment "The SRD 5.2.1 condition named Poisoned."@en;
+    rdfs:label "Poisoned"@en;
+    cat:lexicalToken "poisoned";
+    srd521:hasConditionEffect <https://stagecraft.github.io/srd-rules/srd-5-2-1/conditions/poisoned-ability-checks-and-attacks-affected>;
+    srd521:sourceSection "Rules Glossary: Poisoned [Condition]".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/conditions/poisoned-ability-checks-and-attacks-affected> dcterms:description "You have Disadvantage on attack rolls and ability checks.";
+    dcterms:isPartOf <https://stagecraft.github.io/srd-rules/srd-5-2-1/conditions/poisoned>;
+    cat:instanceOf srd521:ConditionEffect;
+    a cat:Description;
+    rdfs:label "Ability Checks and Attacks Affected"@en;
+    par:adjudicationNote "Attack-roll and ability-check disadvantage are roll modifiers, not action masks.";
+    srd521:conditionEffectType <https://stagecraft.github.io/srd-rules/srd-5-2-1/condition-effects/ability-checks-and-attacks-affected>;
+    srd521:effectKind <https://stagecraft.github.io/srd-rules/srd-5-2-1/effect-kinds/d20-modifier>;
+    srd521:mechanicalStatus <https://stagecraft.github.io/srd-rules/srd-5-2-1/mechanical-statuses/structured-not-mask>;
+    srd521:sourceSection "Rules Glossary: Poisoned [Condition]".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/conditions/prone> cat:instanceOf srd521:ConditionDefinition;
+    a cat:Description;
+    rdfs:comment "The SRD 5.2.1 condition named Prone."@en;
+    rdfs:label "Prone"@en;
+    cat:lexicalToken "prone";
+    srd521:hasConditionEffect <https://stagecraft.github.io/srd-rules/srd-5-2-1/conditions/prone-attacks-affected>, <https://stagecraft.github.io/srd-rules/srd-5-2-1/conditions/prone-restricted-movement>;
+    srd521:sourceSection "Rules Glossary: Prone [Condition]".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/conditions/prone-attacks-affected> dcterms:description "You have Disadvantage on attack rolls. An attack roll against you has Advantage if the attacker is within 5 feet of you. Otherwise, that attack roll has Disadvantage.";
+    dcterms:isPartOf <https://stagecraft.github.io/srd-rules/srd-5-2-1/conditions/prone>;
+    cat:instanceOf srd521:ConditionEffect;
+    a cat:Description;
+    rdfs:label "Attacks Affected"@en;
+    par:adjudicationNote "Attack-roll advantage and disadvantage are roll modifiers, not action masks.";
+    srd521:conditionEffectType <https://stagecraft.github.io/srd-rules/srd-5-2-1/condition-effects/attacks-affected>;
+    srd521:effectKind <https://stagecraft.github.io/srd-rules/srd-5-2-1/effect-kinds/d20-modifier>;
+    srd521:mechanicalStatus <https://stagecraft.github.io/srd-rules/srd-5-2-1/mechanical-statuses/structured-not-mask>;
+    srd521:sourceSection "Rules Glossary: Prone [Condition]".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/conditions/prone-restricted-movement> dcterms:description "Your only movement options are to crawl or to spend an amount of movement equal to half your Speed (round down) to right yourself and thereby end the condition. If your Speed is 0, you can't right yourself.";
+    dcterms:isPartOf <https://stagecraft.github.io/srd-rules/srd-5-2-1/conditions/prone>;
+    cat:instanceOf srd521:ConditionEffect;
+    a cat:Description;
+    rdfs:label "Restricted Movement"@en;
+    par:adjudicationNote "Prone constrains movement modes and standing cost but does not mask Move entirely.";
+    srd521:conditionEffectType <https://stagecraft.github.io/srd-rules/srd-5-2-1/condition-effects/restricted-movement>;
+    srd521:effectKind <https://stagecraft.github.io/srd-rules/srd-5-2-1/effect-kinds/movement-restriction>;
+    srd521:mechanicalStatus <https://stagecraft.github.io/srd-rules/srd-5-2-1/mechanical-statuses/adjudication-required>;
+    srd521:sourceSection "Rules Glossary: Prone [Condition]".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/conditions/restrained> cat:instanceOf srd521:ConditionDefinition;
+    a cat:Description;
+    rdfs:comment "The SRD 5.2.1 condition named Restrained."@en;
+    rdfs:label "Restrained"@en;
+    cat:lexicalToken "restrained";
+    srd521:hasConditionEffect <https://stagecraft.github.io/srd-rules/srd-5-2-1/conditions/restrained-attacks-affected>, <https://stagecraft.github.io/srd-rules/srd-5-2-1/conditions/restrained-saving-throws-affected>, <https://stagecraft.github.io/srd-rules/srd-5-2-1/conditions/restrained-speed-0>;
+    srd521:sourceSection "Rules Glossary: Restrained [Condition]".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/conditions/restrained-attacks-affected> dcterms:description "Attack rolls against you have Advantage, and your attack rolls have Disadvantage.";
+    dcterms:isPartOf <https://stagecraft.github.io/srd-rules/srd-5-2-1/conditions/restrained>;
+    cat:instanceOf srd521:ConditionEffect;
+    a cat:Description;
+    rdfs:label "Attacks Affected"@en;
+    par:adjudicationNote "Attack-roll advantage and disadvantage are roll modifiers, not action masks.";
+    srd521:conditionEffectType <https://stagecraft.github.io/srd-rules/srd-5-2-1/condition-effects/attacks-affected>;
+    srd521:effectKind <https://stagecraft.github.io/srd-rules/srd-5-2-1/effect-kinds/d20-modifier>;
+    srd521:mechanicalStatus <https://stagecraft.github.io/srd-rules/srd-5-2-1/mechanical-statuses/structured-not-mask>;
+    srd521:sourceSection "Rules Glossary: Restrained [Condition]".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/conditions/restrained-saving-throws-affected> dcterms:description "You have Disadvantage on Dexterity saving throws.";
+    dcterms:isPartOf <https://stagecraft.github.io/srd-rules/srd-5-2-1/conditions/restrained>;
+    cat:instanceOf srd521:ConditionEffect;
+    a cat:Description;
+    rdfs:label "Saving Throws Affected"@en;
+    par:adjudicationNote "Dexterity-save disadvantage is a roll modifier, not an action mask.";
+    srd521:conditionEffectType <https://stagecraft.github.io/srd-rules/srd-5-2-1/condition-effects/saving-throws-affected>;
+    srd521:effectKind <https://stagecraft.github.io/srd-rules/srd-5-2-1/effect-kinds/d20-modifier>;
+    srd521:mechanicalStatus <https://stagecraft.github.io/srd-rules/srd-5-2-1/mechanical-statuses/structured-not-mask>;
+    srd521:sourceSection "Rules Glossary: Restrained [Condition]".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/conditions/restrained-speed-0> dcterms:description "Your Speed is 0 and can't increase.";
+    dcterms:isPartOf <https://stagecraft.github.io/srd-rules/srd-5-2-1/conditions/restrained>;
+    cat:instanceOf par:AffordanceMaskDefinition;
+    a cat:Description;
+    cat:instanceOf srd521:ConditionEffect;
+    rdfs:label "Speed 0"@en;
+    par:masksActionType par:Move;
+    srd521:conditionEffectType <https://stagecraft.github.io/srd-rules/srd-5-2-1/condition-effects/speed-0>;
+    srd521:effectKind <https://stagecraft.github.io/srd-rules/srd-5-2-1/effect-kinds/affordance-mask>;
+    srd521:mechanicalStatus <https://stagecraft.github.io/srd-rules/srd-5-2-1/mechanical-statuses/codified-mask>;
+    srd521:sourceSection "Rules Glossary: Restrained [Condition]".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/conditions/stunned> cat:instanceOf srd521:ConditionDefinition;
+    a cat:Description;
+    rdfs:comment "The SRD 5.2.1 condition named Stunned."@en;
+    rdfs:label "Stunned"@en;
+    cat:lexicalToken "stunned";
+    srd521:hasConditionEffect <https://stagecraft.github.io/srd-rules/srd-5-2-1/conditions/stunned-attacks-affected>, <https://stagecraft.github.io/srd-rules/srd-5-2-1/conditions/stunned-incapacitated>, <https://stagecraft.github.io/srd-rules/srd-5-2-1/conditions/stunned-saving-throws-affected>;
+    srd521:sourceSection "Rules Glossary: Stunned [Condition]".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/conditions/stunned-attacks-affected> dcterms:description "Attack rolls against you have Advantage.";
+    dcterms:isPartOf <https://stagecraft.github.io/srd-rules/srd-5-2-1/conditions/stunned>;
+    cat:instanceOf srd521:ConditionEffect;
+    a cat:Description;
+    rdfs:label "Attacks Affected"@en;
+    par:adjudicationNote "Attack-roll advantage is a roll modifier, not an action mask.";
+    srd521:conditionEffectType <https://stagecraft.github.io/srd-rules/srd-5-2-1/condition-effects/attacks-affected>;
+    srd521:effectKind <https://stagecraft.github.io/srd-rules/srd-5-2-1/effect-kinds/d20-modifier>;
+    srd521:mechanicalStatus <https://stagecraft.github.io/srd-rules/srd-5-2-1/mechanical-statuses/structured-not-mask>;
+    srd521:sourceSection "Rules Glossary: Stunned [Condition]".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/conditions/stunned-incapacitated> dcterms:description "You have the Incapacitated condition.";
+    dcterms:isPartOf <https://stagecraft.github.io/srd-rules/srd-5-2-1/conditions/stunned>;
+    cat:instanceOf par:AffordanceMaskDefinition;
+    a cat:Description;
+    cat:instanceOf srd521:ConditionEffect;
+    rdfs:label "Incapacitated"@en;
+    par:adjudicationNote "The action masks derive from the embedded Incapacitated condition.";
+    par:masksActionType par:Speak, <https://stagecraft.github.io/srd-rules/srd-5-2-1/conditions/maintain-concentration>, <https://stagecraft.github.io/srd-rules/srd-5-2-1/conditions/take-action>, <https://stagecraft.github.io/srd-rules/srd-5-2-1/conditions/take-bonus-action>, <https://stagecraft.github.io/srd-rules/srd-5-2-1/conditions/take-reaction>;
+    srd521:conditionEffectType <https://stagecraft.github.io/srd-rules/srd-5-2-1/condition-effects/incapacitated>;
+    srd521:effectKind <https://stagecraft.github.io/srd-rules/srd-5-2-1/effect-kinds/condition-reference-mask>;
+    srd521:mechanicalStatus <https://stagecraft.github.io/srd-rules/srd-5-2-1/mechanical-statuses/codified-mask>;
+    srd521:sourceSection "Rules Glossary: Stunned [Condition]".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/conditions/stunned-saving-throws-affected> dcterms:description "You automatically fail Strength and Dexterity saving throws.";
+    dcterms:isPartOf <https://stagecraft.github.io/srd-rules/srd-5-2-1/conditions/stunned>;
+    cat:instanceOf srd521:ConditionEffect;
+    a cat:Description;
+    rdfs:label "Saving Throws Affected"@en;
+    par:adjudicationNote "Automatic save failure is mechanical but is not an action mask.";
+    srd521:conditionEffectType <https://stagecraft.github.io/srd-rules/srd-5-2-1/condition-effects/saving-throws-affected>;
+    srd521:effectKind <https://stagecraft.github.io/srd-rules/srd-5-2-1/effect-kinds/automatic-failure>;
+    srd521:mechanicalStatus <https://stagecraft.github.io/srd-rules/srd-5-2-1/mechanical-statuses/structured-not-mask>;
+    srd521:sourceSection "Rules Glossary: Stunned [Condition]".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/conditions/take-action>
+    par:preconditionAsk <https://stagecraft.github.io/srd-rules/srd-5-2-1/conditions/condition-mask-adjudicated-precondition-ask>;
+    par:consequenceTemplate <https://stagecraft.github.io/srd-rules/srd-5-2-1/conditions/condition-mask-adjudicated-consequence-template>;
+    cat:instanceOf par:ActionType;
+    a cat:EventType;
+    cat:instanceCategory cat:Action;
+    rdfs:comment "The SRD 5.2.1 take action rules term.";
+    rdfs:label "Take action";
+    cat:lexicalToken "take-action";
+    srd521:srdReference "SRD 5.2.1 condition rules".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/conditions/take-bonus-action>
+    par:preconditionAsk <https://stagecraft.github.io/srd-rules/srd-5-2-1/conditions/condition-mask-adjudicated-precondition-ask>;
+    par:consequenceTemplate <https://stagecraft.github.io/srd-rules/srd-5-2-1/conditions/condition-mask-adjudicated-consequence-template>;
+    cat:instanceOf par:ActionType;
+    a cat:EventType;
+    cat:instanceCategory cat:Action;
+    rdfs:comment "The SRD 5.2.1 take bonus action rules term.";
+    rdfs:label "Take bonus action";
+    cat:lexicalToken "take-bonus-action";
+    srd521:srdReference "SRD 5.2.1 condition rules".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/conditions/take-reaction>
+    par:preconditionAsk <https://stagecraft.github.io/srd-rules/srd-5-2-1/conditions/condition-mask-adjudicated-precondition-ask>;
+    par:consequenceTemplate <https://stagecraft.github.io/srd-rules/srd-5-2-1/conditions/condition-mask-adjudicated-consequence-template>;
+    cat:instanceOf par:ActionType;
+    a cat:EventType;
+    cat:instanceCategory cat:Action;
+    rdfs:comment "The SRD 5.2.1 take reaction rules term.";
+    rdfs:label "Take reaction";
+    cat:lexicalToken "take-reaction";
+    srd521:srdReference "SRD 5.2.1 condition rules".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/conditions/unconscious> cat:instanceOf srd521:ConditionDefinition;
+    a cat:Description;
+    rdfs:comment "The SRD 5.2.1 condition named Unconscious."@en;
+    rdfs:label "Unconscious"@en;
+    cat:lexicalToken "unconscious";
+    srd521:hasConditionEffect <https://stagecraft.github.io/srd-rules/srd-5-2-1/conditions/unconscious-attacks-affected>, <https://stagecraft.github.io/srd-rules/srd-5-2-1/conditions/unconscious-automatic-critical-hits>, <https://stagecraft.github.io/srd-rules/srd-5-2-1/conditions/unconscious-inert>, <https://stagecraft.github.io/srd-rules/srd-5-2-1/conditions/unconscious-saving-throws-affected>, <https://stagecraft.github.io/srd-rules/srd-5-2-1/conditions/unconscious-speed-0>, <https://stagecraft.github.io/srd-rules/srd-5-2-1/conditions/unconscious-unaware>;
+    srd521:sourceSection "Rules Glossary: Unconscious [Condition]".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/conditions/unconscious-attacks-affected> dcterms:description "Attack rolls against you have Advantage.";
+    dcterms:isPartOf <https://stagecraft.github.io/srd-rules/srd-5-2-1/conditions/unconscious>;
+    cat:instanceOf srd521:ConditionEffect;
+    a cat:Description;
+    rdfs:label "Attacks Affected"@en;
+    par:adjudicationNote "Attack-roll advantage is a roll modifier, not an action mask.";
+    srd521:conditionEffectType <https://stagecraft.github.io/srd-rules/srd-5-2-1/condition-effects/attacks-affected>;
+    srd521:effectKind <https://stagecraft.github.io/srd-rules/srd-5-2-1/effect-kinds/d20-modifier>;
+    srd521:mechanicalStatus <https://stagecraft.github.io/srd-rules/srd-5-2-1/mechanical-statuses/structured-not-mask>;
+    srd521:sourceSection "Rules Glossary: Unconscious [Condition]".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/conditions/unconscious-automatic-critical-hits> dcterms:description "Any attack roll that hits you is a Critical Hit if the attacker is within 5 feet of you.";
+    dcterms:isPartOf <https://stagecraft.github.io/srd-rules/srd-5-2-1/conditions/unconscious>;
+    cat:instanceOf srd521:ConditionEffect;
+    a cat:Description;
+    rdfs:label "Automatic Critical Hits"@en;
+    par:adjudicationNote "Critical-hit conversion is attack resolution data, not an action mask.";
+    srd521:conditionEffectType <https://stagecraft.github.io/srd-rules/srd-5-2-1/condition-effects/automatic-critical-hits>;
+    srd521:effectKind <https://stagecraft.github.io/srd-rules/srd-5-2-1/effect-kinds/hit-resolution>;
+    srd521:mechanicalStatus <https://stagecraft.github.io/srd-rules/srd-5-2-1/mechanical-statuses/structured-not-mask>;
+    srd521:sourceSection "Rules Glossary: Unconscious [Condition]".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/conditions/unconscious-inert> dcterms:description "You have the Incapacitated and Prone conditions, and you drop whatever you're holding. When this condition ends, you remain Prone.";
+    dcterms:isPartOf <https://stagecraft.github.io/srd-rules/srd-5-2-1/conditions/unconscious>;
+    cat:instanceOf par:AffordanceMaskDefinition;
+    a cat:Description;
+    cat:instanceOf srd521:ConditionEffect;
+    rdfs:label "Inert"@en;
+    par:adjudicationNote "The action masks derive from the embedded Incapacitated condition; dropping held objects and remaining Prone are recorded as prose.";
+    par:masksActionType par:Speak, <https://stagecraft.github.io/srd-rules/srd-5-2-1/conditions/maintain-concentration>, <https://stagecraft.github.io/srd-rules/srd-5-2-1/conditions/take-action>, <https://stagecraft.github.io/srd-rules/srd-5-2-1/conditions/take-bonus-action>, <https://stagecraft.github.io/srd-rules/srd-5-2-1/conditions/take-reaction>;
+    srd521:conditionEffectType <https://stagecraft.github.io/srd-rules/srd-5-2-1/condition-effects/inert>;
+    srd521:effectKind <https://stagecraft.github.io/srd-rules/srd-5-2-1/effect-kinds/condition-reference-mask>;
+    srd521:mechanicalStatus <https://stagecraft.github.io/srd-rules/srd-5-2-1/mechanical-statuses/codified-mask>;
+    srd521:sourceSection "Rules Glossary: Unconscious [Condition]".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/conditions/unconscious-saving-throws-affected> dcterms:description "You automatically fail Strength and Dexterity saving throws.";
+    dcterms:isPartOf <https://stagecraft.github.io/srd-rules/srd-5-2-1/conditions/unconscious>;
+    cat:instanceOf srd521:ConditionEffect;
+    a cat:Description;
+    rdfs:label "Saving Throws Affected"@en;
+    par:adjudicationNote "Automatic save failure is mechanical but is not an action mask.";
+    srd521:conditionEffectType <https://stagecraft.github.io/srd-rules/srd-5-2-1/condition-effects/saving-throws-affected>;
+    srd521:effectKind <https://stagecraft.github.io/srd-rules/srd-5-2-1/effect-kinds/automatic-failure>;
+    srd521:mechanicalStatus <https://stagecraft.github.io/srd-rules/srd-5-2-1/mechanical-statuses/structured-not-mask>;
+    srd521:sourceSection "Rules Glossary: Unconscious [Condition]".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/conditions/unconscious-speed-0> dcterms:description "Your Speed is 0 and can't increase.";
+    dcterms:isPartOf <https://stagecraft.github.io/srd-rules/srd-5-2-1/conditions/unconscious>;
+    cat:instanceOf par:AffordanceMaskDefinition;
+    a cat:Description;
+    cat:instanceOf srd521:ConditionEffect;
+    rdfs:label "Speed 0"@en;
+    par:masksActionType par:Move;
+    srd521:conditionEffectType <https://stagecraft.github.io/srd-rules/srd-5-2-1/condition-effects/speed-0>;
+    srd521:effectKind <https://stagecraft.github.io/srd-rules/srd-5-2-1/effect-kinds/affordance-mask>;
+    srd521:mechanicalStatus <https://stagecraft.github.io/srd-rules/srd-5-2-1/mechanical-statuses/codified-mask>;
+    srd521:sourceSection "Rules Glossary: Unconscious [Condition]".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/conditions/unconscious-unaware> dcterms:description "You're unaware of your surroundings.";
+    dcterms:isPartOf <https://stagecraft.github.io/srd-rules/srd-5-2-1/conditions/unconscious>;
+    cat:instanceOf srd521:ConditionEffect;
+    a cat:Description;
+    rdfs:label "Unaware"@en;
+    par:adjudicationNote "Awareness is observer/context dependent; this package keeps the source prose without inventing a perception engine.";
+    srd521:conditionEffectType <https://stagecraft.github.io/srd-rules/srd-5-2-1/condition-effects/unaware>;
+    srd521:effectKind <https://stagecraft.github.io/srd-rules/srd-5-2-1/effect-kinds/perception-adjudication>;
+    srd521:mechanicalStatus <https://stagecraft.github.io/srd-rules/srd-5-2-1/mechanical-statuses/adjudication-required>;
+    srd521:sourceSection "Rules Glossary: Unconscious [Condition]".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/conditions/use-hearing>
+    par:preconditionAsk <https://stagecraft.github.io/srd-rules/srd-5-2-1/conditions/condition-mask-adjudicated-precondition-ask>;
+    par:consequenceTemplate <https://stagecraft.github.io/srd-rules/srd-5-2-1/conditions/condition-mask-adjudicated-consequence-template>;
+    cat:instanceOf par:ActionType;
+    a cat:EventType;
+    cat:instanceCategory cat:Action;
+    rdfs:comment "The SRD 5.2.1 use hearing rules term.";
+    rdfs:label "Use hearing";
+    cat:lexicalToken "use-hearing";
+    srd521:srdReference "SRD 5.2.1 condition rules".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/conditions/use-sight>
+    par:preconditionAsk <https://stagecraft.github.io/srd-rules/srd-5-2-1/conditions/condition-mask-adjudicated-precondition-ask>;
+    par:consequenceTemplate <https://stagecraft.github.io/srd-rules/srd-5-2-1/conditions/condition-mask-adjudicated-consequence-template>;
+    cat:instanceOf par:ActionType;
+    a cat:EventType;
+    cat:instanceCategory cat:Action;
+    rdfs:comment "The SRD 5.2.1 use sight rules term.";
+    rdfs:label "Use sight";
+    cat:lexicalToken "use-sight";
+    srd521:srdReference "SRD 5.2.1 condition rules".

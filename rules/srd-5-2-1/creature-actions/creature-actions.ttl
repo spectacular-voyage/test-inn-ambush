@@ -1,0 +1,90 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix dcterms: <http://purl.org/dc/terms/>.
+@prefix dcat: <http://www.w3.org/ns/dcat#>.
+@prefix cat: <https://categoriae.github.io/ontology/>.
+@prefix kosm: <https://kosmion.github.io/ontology/>.
+@prefix par: <https://participatorium.github.io/ontology/>.
+@prefix srd521: <https://stagecraft.github.io/srd-rules/srd-5-2-1/>.
+
+srd521:creature-actions dcterms:source <https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf>;
+    dcterms:title "SRD 5.2.1 creature action rules"@en;
+    a dcat:Dataset.
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/creature-actions/bandit-light-crossbow> cat:instanceOf srd521:CreatureActionOption;
+    a cat:Description;
+    rdfs:label "Light Crossbow"@en;
+    srd521:actionKind srd521:actionKind_action;
+    srd521:actionText "Ranged Attack Roll: +3, range 80/320 ft. Hit: 5 (1d8 + 1) Piercing damage.";
+    srd521:attackBonus 3;
+    srd521:damageAverage 5;
+    srd521:damageExpression "1d8 + 1";
+    srd521:damageType <https://stagecraft.github.io/srd-rules/srd-5-2-1/damage-types/piercing>;
+    srd521:forCreature <https://stagecraft.github.io/srd-rules/srd-5-2-1/creatures/bandit>;
+    srd521:rangeLongFeet 320;
+    srd521:rangeNormalFeet 80;
+    srd521:sourceSection "Monsters: Bandits: Bandit".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/creature-actions/bandit-scimitar> cat:instanceOf srd521:CreatureActionOption;
+    a cat:Description;
+    rdfs:label "Scimitar"@en;
+    srd521:actionKind srd521:actionKind_action;
+    srd521:actionText "Melee Attack Roll: +3, reach 5 ft. Hit: 4 (1d6 + 1) Slashing damage.";
+    srd521:attackBonus 3;
+    srd521:damageAverage 4;
+    srd521:damageExpression "1d6 + 1";
+    srd521:damageType <https://stagecraft.github.io/srd-rules/srd-5-2-1/damage-types/slashing>;
+    srd521:forCreature <https://stagecraft.github.io/srd-rules/srd-5-2-1/creatures/bandit>;
+    srd521:reachFeet 5;
+    srd521:sourceSection "Monsters: Bandits: Bandit".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/creature-actions/commoner-club> cat:instanceOf srd521:CreatureActionOption;
+    a cat:Description;
+    rdfs:label "Club"@en;
+    srd521:actionKind srd521:actionKind_action;
+    srd521:actionText "Melee Attack Roll: +2, reach 5 ft. Hit: 2 (1d4) Bludgeoning damage.";
+    srd521:attackBonus 2;
+    srd521:damageAverage 2;
+    srd521:damageExpression "1d4";
+    srd521:damageType <https://stagecraft.github.io/srd-rules/srd-5-2-1/damage-types/bludgeoning>;
+    srd521:forCreature <https://stagecraft.github.io/srd-rules/srd-5-2-1/creatures/commoner>;
+    srd521:reachFeet 5;
+    srd521:sourceSection "Monsters: Commoner".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/creature-actions/commoner-training> cat:instanceOf srd521:CreatureActionOption;
+    a cat:Description;
+    rdfs:label "Training"@en;
+    srd521:actionKind srd521:actionKind_trait;
+    srd521:actionText "The commoner has proficiency in one skill of the GM’s choice and has Advantage whenever it makes an ability check using that skill.";
+    srd521:forCreature <https://stagecraft.github.io/srd-rules/srd-5-2-1/creatures/commoner>;
+    srd521:sourceSection "Monsters: Commoner".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/creature-actions/guard-spear> cat:instanceOf srd521:CreatureActionOption;
+    a cat:Description;
+    rdfs:label "Spear"@en;
+    srd521:actionKind srd521:actionKind_action;
+    srd521:actionText "Melee or Ranged Attack Roll: +3, reach 5 ft. or range 20/60 ft. Hit: 4 (1d6 + 1) Piercing damage.";
+    srd521:attackBonus 3;
+    srd521:damageAverage 4;
+    srd521:damageExpression "1d6 + 1";
+    srd521:damageType <https://stagecraft.github.io/srd-rules/srd-5-2-1/damage-types/piercing>;
+    srd521:forCreature <https://stagecraft.github.io/srd-rules/srd-5-2-1/creatures/guard>;
+    srd521:rangeLongFeet 60;
+    srd521:rangeNormalFeet 20;
+    srd521:reachFeet 5;
+    srd521:sourceSection "Monsters: Guards: Guard".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/creature-actions/wolf-bite> cat:instanceOf srd521:CreatureActionOption;
+    a cat:Description;
+    rdfs:label "Bite"@en;
+    srd521:actionKind srd521:actionKind_action;
+    srd521:actionText "Melee Attack Roll: +4, reach 5 ft. Hit: 5 (1d6 + 2) Piercing damage. If the target is a Medium or smaller creature, it has the Prone condition.";
+    srd521:attackBonus 4;
+    srd521:damageAverage 5;
+    srd521:damageExpression "1d6 + 2";
+    srd521:damageType <https://stagecraft.github.io/srd-rules/srd-5-2-1/damage-types/piercing>;
+    srd521:forCreature <https://stagecraft.github.io/srd-rules/srd-5-2-1/creatures/wolf>;
+    srd521:reachFeet 5;
+    srd521:sourceSection "Animals: Wolf".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/creature-actions/wolf-pack-tactics> cat:instanceOf srd521:CreatureActionOption;
+    a cat:Description;
+    rdfs:label "Pack Tactics"@en;
+    srd521:actionKind srd521:actionKind_trait;
+    srd521:actionText "The wolf has Advantage on attack rolls against a creature if at least one of the wolf’s allies is within 5 feet of the creature and the ally doesn’t have the Incapacitated condition.";
+    srd521:forCreature <https://stagecraft.github.io/srd-rules/srd-5-2-1/creatures/wolf>;
+    srd521:sourceSection "Animals: Wolf".

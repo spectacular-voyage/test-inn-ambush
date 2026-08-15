@@ -1,0 +1,30 @@
+{
+  "schema": "stagecraft.srd-extraction.provenance.v1",
+  "artifactPath": "weapons/weapons.ttl",
+  "artifactGraphSha256": "e41c5f92824bcfbdef6a9078508f7ea4354fc6914479eec6a4e21d43aa19e6db",
+  "modelVersion": "stagecraft.srd-5-2-1.family.v1",
+  "generatorVersion": "019a2005462caadcc391790dd1e1c2300ef8be69",
+  "generatorSourceSha256": "c2952136adf629946201d48a903c4c85e0b3c568ed3299c103fda44898742f99",
+  "nodeVersion": "v26.5.0",
+  "dirty": false,
+  "manifest": {
+    "path": "tools/srd-extraction/srd-extraction-manifest.json",
+    "sha256": "525ec6a7c980e649135c7b13c81bf64441a47c77cbcd5b7031cfd033a260791f"
+  },
+  "resolutions": {
+    "path": "tools/srd-extraction/srd-term-resolutions.json",
+    "sha256": "0f196e251373514d76bc838ac90b60d0c65b7723ba2a69ab5d98005e99ae9414"
+  },
+  "inputs": [
+    {
+      "id": "weapons.item-actions",
+      "path": "weapons/item-actions.csv",
+      "sha256": "4ff9f4b1f531bce546b58f9fa81cd019fca548ffcb46fde7f8d83f9c73d91a86"
+    },
+    {
+      "id": "weapons.weapons",
+      "path": "weapons/weapons.csv",
+      "sha256": "35bb1b2f0ad90c60922ebe1d0cdd4a57e33f37a8e18ef0c1335022130b9aeca0"
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix dcterms: <http://purl.org/dc/terms/>.
+@prefix dcat: <http://www.w3.org/ns/dcat#>.
+@prefix cat: <https://categoriae.github.io/ontology/>.
+@prefix kosm: <https://kosmion.github.io/ontology/>.
+@prefix par: <https://participatorium.github.io/ontology/>.
+@prefix srd521: <https://stagecraft.github.io/srd-rules/srd-5-2-1/>.
+
+srd521:weapon-categories dcterms:source <https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf>;
+    dcterms:title "SRD 5.2.1 weapon-categories"@en;
+    a dcat:Dataset.
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/weapon-categories/martial> cat:instanceOf srd521:WeaponCategory;
+    a cat:Individual;
+    rdfs:comment "The SRD 5.2.1 weapon category Martial.";
+    rdfs:label "Martial"@en;
+    cat:lexicalToken "martial".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/weapon-categories/simple> cat:instanceOf srd521:WeaponCategory;
+    a cat:Individual;
+    rdfs:comment "The SRD 5.2.1 weapon category Simple.";
+    rdfs:label "Simple"@en;
+    cat:lexicalToken "simple".

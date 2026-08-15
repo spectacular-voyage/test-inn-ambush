@@ -1,0 +1,67 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix dcterms: <http://purl.org/dc/terms/>.
+@prefix dcat: <http://www.w3.org/ns/dcat#>.
+@prefix cat: <https://categoriae.github.io/ontology/>.
+@prefix kosm: <https://kosmion.github.io/ontology/>.
+@prefix par: <https://participatorium.github.io/ontology/>.
+@prefix srd521: <https://stagecraft.github.io/srd-rules/srd-5-2-1/>.
+
+srd521:abilities dcterms:source <https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf>;
+    dcterms:title "SRD 5.2.1 abilities"@en;
+    a dcat:Dataset.
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/abilities/charisma> dcterms:isPartOf srd521:d20-test;
+    cat:instanceOf srd521:AbilityScore;
+    a cat:Individual;
+    rdfs:comment "The SRD 5.2.1 ability score named Charisma.";
+    rdfs:label "Charisma"@en;
+    cat:lexicalToken "charisma";
+    srd521:abilityCheckExample "Influence, entertain, or deceive";
+    srd521:savingThrowExample "Assert your identity";
+    srd521:sourceSection "Playing the Game: D20 Tests".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/abilities/constitution> dcterms:isPartOf srd521:d20-test;
+    cat:instanceOf srd521:AbilityScore;
+    a cat:Individual;
+    rdfs:comment "The SRD 5.2.1 ability score named Constitution.";
+    rdfs:label "Constitution"@en;
+    cat:lexicalToken "constitution";
+    srd521:abilityCheckExample "Push your body beyond normal limits";
+    srd521:savingThrowExample "Endure a toxic hazard";
+    srd521:sourceSection "Playing the Game: D20 Tests".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/abilities/dexterity> dcterms:isPartOf srd521:d20-test;
+    cat:instanceOf srd521:AbilityScore;
+    a cat:Individual;
+    rdfs:comment "The SRD 5.2.1 ability score named Dexterity.";
+    rdfs:label "Dexterity"@en;
+    cat:lexicalToken "dexterity";
+    srd521:abilityCheckExample "Move nimbly, quickly, or quietly";
+    srd521:savingThrowExample "Dodge out of harm's way";
+    srd521:sourceSection "Playing the Game: D20 Tests".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/abilities/intelligence> dcterms:isPartOf srd521:d20-test;
+    cat:instanceOf srd521:AbilityScore;
+    a cat:Individual;
+    rdfs:comment "The SRD 5.2.1 ability score named Intelligence.";
+    rdfs:label "Intelligence"@en;
+    cat:lexicalToken "intelligence";
+    srd521:abilityCheckExample "Reason or remember";
+    srd521:savingThrowExample "Recognize an illusion as fake";
+    srd521:sourceSection "Playing the Game: D20 Tests".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/abilities/strength> dcterms:isPartOf srd521:d20-test;
+    cat:instanceOf srd521:AbilityScore;
+    a cat:Individual;
+    rdfs:comment "The SRD 5.2.1 ability score named Strength.";
+    rdfs:label "Strength"@en;
+    cat:lexicalToken "strength";
+    srd521:abilityCheckExample "Lift, push, pull, or break something";
+    srd521:savingThrowExample "Physically resist direct force";
+    srd521:sourceSection "Playing the Game: D20 Tests".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/abilities/wisdom> dcterms:isPartOf srd521:d20-test;
+    cat:instanceOf srd521:AbilityScore;
+    a cat:Individual;
+    rdfs:comment "The SRD 5.2.1 ability score named Wisdom.";
+    rdfs:label "Wisdom"@en;
+    cat:lexicalToken "wisdom";
+    srd521:abilityCheckExample "Notice things in the environment or in creatures' behavior";
+    srd521:savingThrowExample "Resist a mental assault";
+    srd521:sourceSection "Playing the Game: D20 Tests".

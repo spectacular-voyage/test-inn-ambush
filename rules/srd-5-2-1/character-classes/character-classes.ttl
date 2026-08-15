@@ -1,0 +1,61 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix dcterms: <http://purl.org/dc/terms/>.
+@prefix dcat: <http://www.w3.org/ns/dcat#>.
+@prefix cat: <https://categoriae.github.io/ontology/>.
+@prefix kosm: <https://kosmion.github.io/ontology/>.
+@prefix par: <https://participatorium.github.io/ontology/>.
+@prefix srd521: <https://stagecraft.github.io/srd-rules/srd-5-2-1/>.
+
+srd521:character-classes dcterms:source <https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf>;
+    dcterms:title "SRD 5.2.1 character-classes"@en;
+    a dcat:Dataset.
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/character-classes/bard> cat:instanceOf srd521:CharacterClass;
+    a cat:Individual;
+    rdfs:comment "The SRD 5.2.1 character class named Bard.";
+    rdfs:label "Bard"@en;
+    cat:lexicalToken "bard";
+    srd521:classLabel "Bard".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/character-classes/cleric> cat:instanceOf srd521:CharacterClass;
+    a cat:Individual;
+    rdfs:comment "The SRD 5.2.1 character class named Cleric.";
+    rdfs:label "Cleric"@en;
+    cat:lexicalToken "cleric";
+    srd521:classLabel "Cleric".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/character-classes/druid> cat:instanceOf srd521:CharacterClass;
+    a cat:Individual;
+    rdfs:comment "The SRD 5.2.1 character class named Druid.";
+    rdfs:label "Druid"@en;
+    cat:lexicalToken "druid";
+    srd521:classLabel "Druid".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/character-classes/paladin> cat:instanceOf srd521:CharacterClass;
+    a cat:Individual;
+    rdfs:comment "The SRD 5.2.1 character class named Paladin.";
+    rdfs:label "Paladin"@en;
+    cat:lexicalToken "paladin";
+    srd521:classLabel "Paladin".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/character-classes/ranger> cat:instanceOf srd521:CharacterClass;
+    a cat:Individual;
+    rdfs:comment "The SRD 5.2.1 character class named Ranger.";
+    rdfs:label "Ranger"@en;
+    cat:lexicalToken "ranger";
+    srd521:classLabel "Ranger".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/character-classes/sorcerer> cat:instanceOf srd521:CharacterClass;
+    a cat:Individual;
+    rdfs:comment "The SRD 5.2.1 character class named Sorcerer.";
+    rdfs:label "Sorcerer"@en;
+    cat:lexicalToken "sorcerer";
+    srd521:classLabel "Sorcerer".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/character-classes/warlock> cat:instanceOf srd521:CharacterClass;
+    a cat:Individual;
+    rdfs:comment "The SRD 5.2.1 character class named Warlock.";
+    rdfs:label "Warlock"@en;
+    cat:lexicalToken "warlock";
+    srd521:classLabel "Warlock".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/character-classes/wizard> cat:instanceOf srd521:CharacterClass;
+    a cat:Individual;
+    rdfs:comment "The SRD 5.2.1 character class named Wizard.";
+    rdfs:label "Wizard"@en;
+    cat:lexicalToken "wizard";
+    srd521:classLabel "Wizard".

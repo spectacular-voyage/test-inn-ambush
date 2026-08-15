@@ -1,0 +1,38 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix dcterms: <http://purl.org/dc/terms/>.
+@prefix dcat: <http://www.w3.org/ns/dcat#>.
+@prefix cat: <https://categoriae.github.io/ontology/>.
+@prefix kosm: <https://kosmion.github.io/ontology/>.
+@prefix par: <https://participatorium.github.io/ontology/>.
+@prefix srd521: <https://stagecraft.github.io/srd-rules/srd-5-2-1/>.
+
+srd521:mechanical-statuses dcterms:source <https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf>;
+    dcterms:title "SRD 5.2.1 mechanical-statuses"@en;
+    a dcat:Dataset.
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/mechanical-statuses/actiontype-family> cat:instanceOf srd521:MechanicalStatus;
+    a cat:Individual;
+    rdfs:comment "The SRD 5.2.1 mechanical status Actiontype family.";
+    rdfs:label "Actiontype family"@en;
+    cat:lexicalToken "actiontype-family".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/mechanical-statuses/adjudication-required> cat:instanceOf srd521:MechanicalStatus;
+    a cat:Individual;
+    rdfs:comment "The SRD 5.2.1 mechanical status Adjudication required.";
+    rdfs:label "Adjudication required"@en;
+    cat:lexicalToken "adjudication-required".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/mechanical-statuses/adjudication-scoped-mask> cat:instanceOf srd521:MechanicalStatus;
+    a cat:Individual;
+    rdfs:comment "The SRD 5.2.1 mechanical status Adjudication scoped mask.";
+    rdfs:label "Adjudication scoped mask"@en;
+    cat:lexicalToken "adjudication-scoped-mask".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/mechanical-statuses/codified-mask> cat:instanceOf srd521:MechanicalStatus;
+    a cat:Individual;
+    rdfs:comment "The SRD 5.2.1 mechanical status Codified mask.";
+    rdfs:label "Codified mask"@en;
+    cat:lexicalToken "codified-mask".
+<https://stagecraft.github.io/srd-rules/srd-5-2-1/mechanical-statuses/structured-not-mask> cat:instanceOf srd521:MechanicalStatus;
+    a cat:Individual;
+    rdfs:comment "The SRD 5.2.1 mechanical status Structured not mask.";
+    rdfs:label "Structured not mask"@en;
+    cat:lexicalToken "structured-not-mask".
