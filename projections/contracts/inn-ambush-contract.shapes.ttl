@@ -5,7 +5,7 @@
 @prefix cat: <https://categoriae.github.io/ontology/> .
 @prefix kosm: <https://kosmion.github.io/ontology/> .
 @prefix possessio: <https://spectacular-voyage.github.io/stagecraft/ontology/possessio/> .
-@prefix roleosum: <https://spectacular-voyage.github.io/stagecraft/ontology/roleosum/> .
+@prefix rol: <https://roleosum.github.io/ontology/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix sh: <http://www.w3.org/ns/shacl#> .
 @prefix time: <http://www.w3.org/2006/time#> .
@@ -1311,13 +1311,13 @@ sc-sh:TradeQuoteRequestShape
     sh:maxCount 1 ;
   ] ;
   sh:property [
-    sh:path roleosum:proposedBy ;
+    sh:path rol:proposedBy ;
     sh:nodeKind sh:IRI ;
     sh:minCount 1 ;
     sh:maxCount 1 ;
   ] ;
   sh:property [
-    sh:path roleosum:proposedTo ;
+    sh:path rol:proposedTo ;
     sh:nodeKind sh:IRI ;
     sh:minCount 1 ;
     sh:maxCount 1 ;
@@ -1329,13 +1329,13 @@ sc-sh:TradeQuoteRequestShape
     sh:maxCount 1 ;
   ] ;
   sh:property [
-    sh:path roleosum:quotedItem ;
+    sh:path rol:quotedItem ;
     sh:nodeKind sh:IRI ;
     sh:minCount 1 ;
     sh:maxCount 1 ;
   ] ;
   sh:property [
-    sh:path roleosum:hasCommitmentTerm ;
+    sh:path rol:hasCommitmentTerm ;
     sh:node sc-sh:TradePriceLineShape ;
     sh:minCount 1 ;
   ] ;
@@ -1345,15 +1345,15 @@ sc-sh:TradeQuoteRequestShape
       PREFIX roleosum: <https://spectacular-voyage.github.io/stagecraft/ontology/roleosum/>
       PREFIX kosm: <https://kosmion.github.io/ontology/>
       SELECT $this WHERE {
-        $this roleosum:hasCommitmentTerm ?lineA, ?lineB .
-        ?lineA a roleosum:TradePriceLine ; kosm:fungibleKind ?kind .
-        ?lineB a roleosum:TradePriceLine ; kosm:fungibleKind ?kind .
+        $this rol:hasCommitmentTerm ?lineA, ?lineB .
+        ?lineA a rol:TradePriceLine ; kosm:fungibleKind ?kind .
+        ?lineB a rol:TradePriceLine ; kosm:fungibleKind ?kind .
         FILTER (?lineA != ?lineB)
       }
       """ ;
   ] ;
   sh:property [
-    sh:path roleosum:expiresAt ;
+    sh:path rol:expiresAt ;
     sh:datatype xsd:dateTime ;
     sh:minCount 1 ;
     sh:maxCount 1 ;
@@ -1371,12 +1371,12 @@ sc-sh:TradeQuoteRequestShape
     sh:maxCount 1 ;
   ] ;
   sh:property [
-    sh:path roleosum:hasObligation ;
+    sh:path rol:hasObligation ;
     sh:maxCount 0 ;
     sh:message "TradeQuoteRequest names requested terms only; authority mints proposed commitment obligations." ;
   ] ;
   sh:property [
-    sh:path roleosum:acceptedCommitment ;
+    sh:path rol:acceptedCommitment ;
     sh:maxCount 0 ;
     sh:message "TradeQuoteRequest must not claim an accepted commitment." ;
   ] ;
@@ -1393,7 +1393,7 @@ sc-sh:TradeQuoteRequestShape
 
 sc-sh:TradePriceLineShape
   a sh:NodeShape ;
-  sh:class roleosum:TradePriceLine ;
+  sh:class rol:TradePriceLine ;
   sh:property [
     sh:path kosm:fungibleKind ;
     sh:nodeKind sh:IRI ;
@@ -1432,7 +1432,7 @@ sc-sh:TradeQuoteAcceptanceRequestShape
     sh:maxCount 1 ;
   ] ;
   sh:property [
-    sh:path roleosum:acceptsProposedCommitment ;
+    sh:path rol:acceptsProposedCommitment ;
     sh:nodeKind sh:IRI ;
     sh:minCount 1 ;
     sh:maxCount 1 ;
@@ -1450,7 +1450,7 @@ sc-sh:TradeQuoteAcceptanceRequestShape
     sh:maxCount 1 ;
   ] ;
   sh:property [
-    sh:path roleosum:acceptedCommitment ;
+    sh:path rol:acceptedCommitment ;
     sh:maxCount 0 ;
     sh:message "TradeQuoteAcceptanceRequest names the quote only; authority mints the accepted commitment." ;
   ] ;

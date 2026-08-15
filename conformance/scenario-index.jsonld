@@ -1170,6 +1170,27 @@
           }
         }
       ]
+    },
+    {
+      "id": "#84-roleosum-endpoint-migration",
+      "type": "ScenarioStep",
+      "manifestPath": "84-roleosum-endpoint-migration.jsonld",
+      "hasLaneBinding": [
+        {
+          "type": "LaneStateBinding",
+          "lane": "#fixture-b-lane",
+          "fromLaneState": {
+            "type": "StateLocator",
+            "locatorKind": "gitRefState",
+            "ref": "3989d890154ccafbc84526115fecd8cf3a4e3e11"
+          },
+          "toLaneState": {
+            "type": "StateLocator",
+            "locatorKind": "gitRefState",
+            "ref": "origin/b.32-roleosum-endpoint-migration"
+          }
+        }
+      ]
     }
   ]
 }

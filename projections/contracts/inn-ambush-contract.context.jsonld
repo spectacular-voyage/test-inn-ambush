@@ -9,7 +9,7 @@
     "cat": "https://categoriae.github.io/ontology/",
     "kosm": "https://kosmion.github.io/ontology/",
     "possessio": "https://spectacular-voyage.github.io/stagecraft/ontology/possessio/",
-    "roleosum": "https://spectacular-voyage.github.io/stagecraft/ontology/roleosum/",
+    "rol": "https://roleosum.github.io/ontology/",
     "dcterms": "http://purl.org/dc/terms/",
     "owlTime": "http://www.w3.org/2006/time#",
     "xsd": "http://www.w3.org/2001/XMLSchema#",
@@ -549,7 +549,7 @@
       "@id": "sc:TradeQuoteAcceptanceRequest",
       "@context": {
         "quote": {
-          "@id": "roleosum:acceptsProposedCommitment",
+          "@id": "rol:acceptsProposedCommitment",
           "@type": "@id"
         }
       }
@@ -697,11 +697,11 @@
       "@type": "@id"
     },
     "seller": {
-      "@id": "roleosum:proposedBy",
+      "@id": "rol:proposedBy",
       "@type": "@id"
     },
     "buyer": {
-      "@id": "roleosum:proposedTo",
+      "@id": "rol:proposedTo",
       "@type": "@id"
     },
     "buyerParticipant": {
@@ -709,13 +709,13 @@
       "@type": "@id"
     },
     "item": {
-      "@id": "roleosum:quotedItem",
+      "@id": "rol:quotedItem",
       "@type": "@id"
     },
     "priceLines": {
-      "@id": "roleosum:hasCommitmentTerm",
+      "@id": "rol:hasCommitmentTerm",
       "@context": {
-        "TradePriceLine": "roleosum:TradePriceLine",
+        "TradePriceLine": "rol:TradePriceLine",
         "fungibleKind": {
           "@id": "kosm:fungibleKind",
           "@type": "@id"
@@ -727,19 +727,19 @@
       }
     },
     "expiresAt": {
-      "@id": "roleosum:expiresAt",
+      "@id": "rol:expiresAt",
       "@type": "xsd:dateTime"
     },
     "quote": {
-      "@id": "roleosum:acceptsProposedCommitment",
+      "@id": "rol:acceptsProposedCommitment",
       "@type": "@id"
     },
     "hasObligation": {
-      "@id": "roleosum:hasObligation",
+      "@id": "rol:hasObligation",
       "@type": "@id"
     },
     "acceptedCommitment": {
-      "@id": "roleosum:acceptedCommitment",
+      "@id": "rol:acceptedCommitment",
       "@type": "@id"
     },
     "opensHolding": {

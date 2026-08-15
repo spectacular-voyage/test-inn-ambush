@@ -1,0 +1,107 @@
+{
+  "@context": {
+    "@vocab": "https://spectacular-voyage.github.io/accord/ontology/",
+    "dcterms": "http://purl.org/dc/terms/",
+    "id": "@id",
+    "type": "@type",
+    "changeType": {
+      "@type": "@vocab"
+    },
+    "compareMode": {
+      "@type": "@vocab"
+    },
+    "targetsFileExpectation": {
+      "@type": "@id"
+    },
+    "locatorKind": {
+      "@type": "@vocab"
+    }
+  },
+  "type": "Manifest",
+  "id": "urn:accord:stagecraft:test-inn-ambush:84-roleosum-endpoint-migration",
+  "dcterms:title": "Inn Ambush 84 Roleosum endpoint migration (slice 2 commit 4)",
+  "dcterms:description": "TRANSITION CASE added 2026-08-15 (conformance-ladder discipline; sc.task.2026-07-29_0930 slice 2). Migrates the roleosum v1 carriers in the WORKING world state (Talla honest-trader value declaration; declarationTerm to rol:valueKind_ideal, the 2026-08-14 endpoint rename) and the contract pair (13 shape lines, 10 context mappings) to the family rol: namespace - including the TradePriceLine class, which the contract pair had bound under the v1 roleosum prefix to an IRI declared nowhere (slice-1 finding), now rol:TradePriceLine as the arm declares it. The quotedPriceItem/quotedPriceQuantity records exist only in conformance history (rungs kept as-is).",
+  "hasCase": [
+    {
+      "type": "TransitionCase",
+      "id": "#roleosum-endpoint-migration",
+      "fixtureRepo": "github.com/spectacular-voyage/test-inn-ambush",
+      "operationId": "stagecraft.fixture.migrateRoleosumToEndpoint",
+      "fromRef": "3989d890154ccafbc84526115fecd8cf3a4e3e11",
+      "toRef": "origin/b.32-roleosum-endpoint-migration",
+      "fromState": {
+        "type": "StateLocator",
+        "locatorKind": "gitRefState",
+        "ref": "3989d890154ccafbc84526115fecd8cf3a4e3e11"
+      },
+      "toState": {
+        "type": "StateLocator",
+        "locatorKind": "gitRefState",
+        "ref": "origin/b.32-roleosum-endpoint-migration"
+      },
+      "hasFileExpectation": [
+        {
+          "id": "#projections-contracts-inn-ambush-contract-context-jsonld",
+          "type": "FileExpectation",
+          "path": "projections/contracts/inn-ambush-contract.context.jsonld",
+          "changeType": "updated",
+          "compareMode": "json"
+        },
+        {
+          "id": "#projections-contracts-inn-ambush-contract-shapes-ttl",
+          "type": "FileExpectation",
+          "path": "projections/contracts/inn-ambush-contract.shapes.ttl",
+          "changeType": "updated",
+          "compareMode": "rdfCanonical"
+        },
+        {
+          "id": "#world-states-inn-ambush-plan-b-state-inn-ambush-plan-b-state-ttl",
+          "type": "FileExpectation",
+          "path": "world/states/inn-ambush-plan-b-state/inn-ambush-plan-b-state.ttl",
+          "changeType": "updated",
+          "compareMode": "rdfCanonical"
+        },
+        {
+          "id": "#conformance-scenario-index-jsonld",
+          "type": "FileExpectation",
+          "path": "conformance/scenario-index.jsonld",
+          "changeType": "updated",
+          "compareMode": "json"
+        },
+        {
+          "id": "#conformance-84-roleosum-endpoint-migration-jsonld",
+          "type": "FileExpectation",
+          "path": "conformance/84-roleosum-endpoint-migration.jsonld",
+          "changeType": "added",
+          "compareMode": "json"
+        }
+      ],
+      "hasRdfExpectation": [
+        {
+          "id": "#roleosum-shapes-rdf-endpoint",
+          "type": "RdfExpectation",
+          "targetsFileExpectation": "#projections-contracts-inn-ambush-contract-shapes-ttl",
+          "hasAskAssertion": [
+            {
+              "id": "#ask-trade-price-line-shape-family-class",
+              "type": "SparqlAskAssertion",
+              "query": "ASK { <https://spectacular-voyage.github.io/stagecraft/shacl/TradePriceLineShape> a <http://www.w3.org/ns/shacl#NodeShape> ; <http://www.w3.org/ns/shacl#class> <https://roleosum.github.io/ontology/TradePriceLine> . }"
+            }
+          ]
+        },
+        {
+          "id": "#roleosum-world-state-rdf-endpoint",
+          "type": "RdfExpectation",
+          "targetsFileExpectation": "#world-states-inn-ambush-plan-b-state-inn-ambush-plan-b-state-ttl",
+          "hasAskAssertion": [
+            {
+              "id": "#ask-talla-value-declaration-endpoint",
+              "type": "SparqlAskAssertion",
+              "query": "ASK { <https://spectacular-voyage.github.io/test-inn-ambush/value-declaration/talla/honest-trader> a <https://roleosum.github.io/ontology/ValueDeclaration> ; <https://roleosum.github.io/ontology/declarationSubject> <https://spectacular-voyage.github.io/test-inn-ambush/npc/talla-mosswick> ; <https://roleosum.github.io/ontology/declarationTerm> <https://roleosum.github.io/ontology/valueKind_ideal> . }"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
