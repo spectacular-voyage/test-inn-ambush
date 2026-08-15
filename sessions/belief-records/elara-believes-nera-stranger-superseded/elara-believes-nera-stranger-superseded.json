@@ -6,7 +6,7 @@
   "believer": "https://spectacular-voyage.github.io/test-inn-ambush/actant/elara",
   "about": "https://spectacular-voyage.github.io/test-inn-ambush/actant/nera",
   "content": "Elara briefly remembers Nera only as a stranger from the road.",
-  "formationBasis": "https://spectacular-voyage.github.io/stagecraft/ontology/perceptio/seedMemory",
+  "formationBasis": "https://psychikon.github.io/ontology/beliefFormationBasisKind_seedMemory",
   "basisDetail": [
     "https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/world-seeded/inn-ambush-001"
   ],

@@ -6,7 +6,7 @@
   "believer": "https://spectacular-voyage.github.io/test-inn-ambush/actant/elara",
   "about": "https://spectacular-voyage.github.io/test-inn-ambush/target/door",
   "content": "The inn door threshold shows fresh scuffs that suggest hurried movement through the doorway.",
-  "formationBasis": "https://spectacular-voyage.github.io/stagecraft/ontology/perceptio/inferenceAct",
+  "formationBasis": "https://psychikon.github.io/ontology/beliefFormationBasisKind_inferenceAct",
   "basisDetail": [
     "https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/inference/threshold-scuffs-001",
     "https://spectacular-voyage.github.io/test-inn-ambush/perception-record/hello-barkeep/elara/sight"

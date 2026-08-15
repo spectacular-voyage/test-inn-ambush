@@ -4,6 +4,6 @@
   "type": "stagecraft.authored-appellation.v1",
   "id": "authored-appellation-nera-heard-only-001",
   "appellationFor": "https://spectacular-voyage.github.io/test-inn-ambush/actant/nera",
-  "contactModality": "https://spectacular-voyage.github.io/stagecraft/ontology/perceptio/heardOnly",
+  "contactModality": "https://psychikon.github.io/ontology/contactModalityKind_heardOnly",
   "appellationText": "the voice behind the hood"
 }

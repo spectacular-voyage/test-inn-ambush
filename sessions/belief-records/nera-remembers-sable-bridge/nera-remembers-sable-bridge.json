@@ -6,7 +6,7 @@
   "believer": "https://spectacular-voyage.github.io/test-inn-ambush/actant/nera",
   "about": "https://spectacular-voyage.github.io/test-inn-ambush/backstory-event/sable-bridge-rescue",
   "content": "Nera remembers pulling a frightened courier away from the Sable Bridge collapse.",
-  "formationBasis": "https://spectacular-voyage.github.io/stagecraft/ontology/perceptio/seedMemory",
+  "formationBasis": "https://psychikon.github.io/ontology/beliefFormationBasisKind_seedMemory",
   "basisDetail": [
     "https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/world-seeded/inn-ambush-001"
   ],

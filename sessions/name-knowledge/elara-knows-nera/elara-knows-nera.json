@@ -5,7 +5,7 @@
   "id": "name-knowledge-elara-knows-nera-001",
   "nameKnower": "https://spectacular-voyage.github.io/test-inn-ambush/actant/elara",
   "nameSubject": "https://spectacular-voyage.github.io/test-inn-ambush/actant/nera",
-  "nameKnowledgeBasis": "https://spectacular-voyage.github.io/stagecraft/ontology/perceptio/seedMemory",
+  "nameKnowledgeBasis": "https://psychikon.github.io/ontology/nameKnowledgeBasisKind_seedMemory",
   "basisDetail": [
     "https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/world-seeded/inn-ambush-001"
   ],

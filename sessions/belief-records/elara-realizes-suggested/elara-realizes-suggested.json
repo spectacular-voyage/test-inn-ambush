@@ -6,7 +6,7 @@
   "believer": "https://spectacular-voyage.github.io/test-inn-ambush/actant/elara",
   "about": "https://spectacular-voyage.github.io/test-inn-ambush/desire-record/elara/suggestion-old-road",
   "content": "Elara knows a magical suggestion had pressed her toward the old road.",
-  "formationBasis": "https://spectacular-voyage.github.io/stagecraft/ontology/perceptio/fiat",
+  "formationBasis": "https://psychikon.github.io/ontology/beliefFormationBasisKind_fiat",
   "basisDetail": [
     "https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/spell-expiry/suggestion-old-road-001"
   ],

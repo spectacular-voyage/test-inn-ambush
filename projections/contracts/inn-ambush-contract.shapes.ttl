@@ -2,7 +2,7 @@
 @prefix sc-sh: <https://spectacular-voyage.github.io/stagecraft/shacl/> .
 @prefix dyn: <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/> .
 @prefix psy: <https://psychikon.github.io/ontology/> .
-@prefix perceptio: <https://spectacular-voyage.github.io/stagecraft/ontology/perceptio/> .
+@prefix cat: <https://categoriae.github.io/ontology/> .
 @prefix kosm: <https://kosmion.github.io/ontology/> .
 @prefix possessio: <https://spectacular-voyage.github.io/stagecraft/ontology/possessio/> .
 @prefix roleosum: <https://spectacular-voyage.github.io/stagecraft/ontology/roleosum/> .
@@ -1528,7 +1528,7 @@ sc-sh:CommittedSpeechEventShape
   sh:property [
     sh:path sc:deliveredTo ;
     sh:maxCount 0 ;
-    sh:message "CommittedSpeechEvent delivery is generalized by perceptio:PerceptionRecord." ;
+    sh:message "CommittedSpeechEvent delivery is generalized by psy:PerceptionRecord." ;
   ] ;
   sh:property [
     sh:path dcterms:created ;
@@ -1573,7 +1573,7 @@ sc-sh:CommittedSpeechEventShape
 
 sc-sh:PerceptionRecordShape
   a sh:NodeShape ;
-  sh:targetClass perceptio:PerceptionRecord ;
+  sh:targetClass psy:PerceptionRecord ;
   sh:property [
     sh:path sc:envelopeType ;
     sh:hasValue "stagecraft.perception-record.v1" ;
@@ -1589,35 +1589,35 @@ sc-sh:PerceptionRecordShape
     sh:maxCount 1 ;
   ] ;
   sh:property [
-    sh:path perceptio:perceiver ;
+    sh:path psy:perceiver ;
     sh:nodeKind sh:IRI ;
     sh:minCount 1 ;
     sh:maxCount 1 ;
   ] ;
   sh:property [
-    sh:path perceptio:percept ;
+    sh:path psy:percept ;
     sh:nodeKind sh:IRI ;
     sh:minCount 1 ;
     sh:maxCount 1 ;
   ] ;
   sh:property [
-    sh:path perceptio:modality ;
+    sh:path psy:modality ;
     sh:nodeKind sh:IRI ;
     sh:minCount 1 ;
     sh:maxCount 1 ;
   ] ;
   sh:property [
-    sh:path perceptio:basis ;
+    sh:path psy:basis ;
     sh:nodeKind sh:IRI ;
     sh:minCount 1 ;
     sh:maxCount 1 ;
   ] ;
   sh:property [
-    sh:path perceptio:basisDetail ;
+    sh:path psy:basisDetail ;
     sh:nodeKind sh:IRI ;
   ] ;
   sh:property [
-    sh:path perceptio:atInstant ;
+    sh:path psy:atInstant ;
     sh:datatype xsd:dateTime ;
     sh:minCount 1 ;
     sh:maxCount 1 ;
@@ -2141,7 +2141,7 @@ sc-sh:AppliedPerspectiveShape
 
 sc-sh:AuthoredAppellationShape
   a sh:NodeShape ;
-  sh:targetClass perceptio:AuthoredAppellation ;
+  sh:targetClass psy:AuthoredAppellation ;
   sh:property [
     sh:path sc:envelopeType ;
     sh:hasValue "stagecraft.authored-appellation.v1" ;
@@ -2157,23 +2157,23 @@ sc-sh:AuthoredAppellationShape
     sh:maxCount 1 ;
   ] ;
   sh:property [
-    sh:path perceptio:appellationFor ;
+    sh:path psy:appellationFor ;
     sh:nodeKind sh:IRI ;
     sh:minCount 1 ;
     sh:maxCount 1 ;
   ] ;
   sh:property [
-    sh:path perceptio:contactModality ;
+    sh:path psy:contactModality ;
     sh:in (
-      perceptio:seenClearly
-      perceptio:seenPoorly
-      perceptio:heardOnly
+      psy:contactModalityKind_seenClearly
+      psy:contactModalityKind_seenPoorly
+      psy:contactModalityKind_heardOnly
     ) ;
     sh:minCount 1 ;
     sh:maxCount 1 ;
   ] ;
   sh:property [
-    sh:path perceptio:appellationText ;
+    sh:path psy:appellationText ;
     sh:datatype xsd:string ;
     sh:minLength 1 ;
     sh:pattern "\\S" ;
@@ -2183,7 +2183,7 @@ sc-sh:AuthoredAppellationShape
 
 sc-sh:NameKnowledgeRecordShape
   a sh:NodeShape ;
-  sh:targetClass perceptio:NameKnowledgeRecord ;
+  sh:targetClass psy:NameKnowledgeRecord ;
   sh:property [
     sh:path sc:envelopeType ;
     sh:hasValue "stagecraft.name-knowledge-record.v1" ;
@@ -2199,29 +2199,29 @@ sc-sh:NameKnowledgeRecordShape
     sh:maxCount 1 ;
   ] ;
   sh:property [
-    sh:path perceptio:nameKnower ;
+    sh:path psy:nameKnower ;
     sh:nodeKind sh:IRI ;
     sh:minCount 1 ;
     sh:maxCount 1 ;
   ] ;
   sh:property [
-    sh:path perceptio:nameSubject ;
+    sh:path psy:nameSubject ;
     sh:nodeKind sh:IRI ;
     sh:minCount 1 ;
     sh:maxCount 1 ;
   ] ;
   sh:property [
-    sh:path perceptio:nameKnowledgeBasis ;
+    sh:path psy:nameKnowledgeBasis ;
     sh:nodeKind sh:IRI ;
     sh:minCount 1 ;
     sh:maxCount 1 ;
   ] ;
   sh:property [
-    sh:path perceptio:basisDetail ;
+    sh:path psy:basisDetail ;
     sh:nodeKind sh:IRI ;
   ] ;
   sh:property [
-    sh:path perceptio:atInstant ;
+    sh:path psy:atInstant ;
     sh:datatype xsd:dateTime ;
     sh:minCount 1 ;
     sh:maxCount 1 ;
@@ -2229,7 +2229,7 @@ sc-sh:NameKnowledgeRecordShape
 
 sc-sh:BeliefRecordShape
   a sh:NodeShape ;
-  sh:targetClass perceptio:BeliefRecord ;
+  sh:targetClass psy:BeliefRecord ;
   sh:property [
     sh:path sc:envelopeType ;
     sh:hasValue "stagecraft.belief-record.v1" ;
@@ -2245,19 +2245,19 @@ sc-sh:BeliefRecordShape
     sh:maxCount 1 ;
   ] ;
   sh:property [
-    sh:path perceptio:believer ;
+    sh:path psy:believer ;
     sh:nodeKind sh:IRI ;
     sh:minCount 1 ;
     sh:maxCount 1 ;
   ] ;
   sh:property [
-    sh:path perceptio:about ;
+    sh:path psy:about ;
     sh:nodeKind sh:IRI ;
     sh:minCount 1 ;
     sh:maxCount 1 ;
   ] ;
   sh:property [
-    sh:path perceptio:content ;
+    sh:path psy:content ;
     sh:datatype xsd:string ;
     sh:minLength 1 ;
     sh:pattern "\\S" ;
@@ -2265,17 +2265,17 @@ sc-sh:BeliefRecordShape
     sh:maxCount 1 ;
   ] ;
   sh:property [
-    sh:path perceptio:formationBasis ;
+    sh:path psy:formationBasis ;
     sh:nodeKind sh:IRI ;
     sh:minCount 1 ;
     sh:maxCount 1 ;
   ] ;
   sh:property [
-    sh:path perceptio:basisDetail ;
+    sh:path psy:basisDetail ;
     sh:nodeKind sh:IRI ;
   ] ;
   sh:property [
-    sh:path perceptio:credence ;
+    sh:path psy:credence ;
     sh:datatype xsd:decimal ;
     sh:minInclusive 0 ;
     sh:maxInclusive 1 ;
@@ -2288,7 +2288,7 @@ sc-sh:BeliefRecordShape
     sh:maxCount 1 ;
   ] ;
   sh:property [
-    sh:path perceptio:supersededBy ;
+    sh:path cat:supersededBy ;
     sh:nodeKind sh:IRI ;
     sh:maxCount 1 ;
   ] .

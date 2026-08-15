@@ -6,7 +6,7 @@
     "sflo": "https://semantic-flow.github.io/sflo/ontology/",
     "dyn": "https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/",
     "psy": "https://psychikon.github.io/ontology/",
-    "perceptio": "https://spectacular-voyage.github.io/stagecraft/ontology/perceptio/",
+    "cat": "https://categoriae.github.io/ontology/",
     "kosm": "https://kosmion.github.io/ontology/",
     "possessio": "https://spectacular-voyage.github.io/stagecraft/ontology/possessio/",
     "roleosum": "https://spectacular-voyage.github.io/stagecraft/ontology/roleosum/",
@@ -52,70 +52,70 @@
     "deliveredTo": {
       "@type": "@id"
     },
-    "PerceptionRecord": "perceptio:PerceptionRecord",
+    "PerceptionRecord": "psy:PerceptionRecord",
     "perceiver": {
-      "@id": "perceptio:perceiver",
+      "@id": "psy:perceiver",
       "@type": "@id"
     },
     "percept": {
-      "@id": "perceptio:percept",
+      "@id": "psy:percept",
       "@type": "@id"
     },
     "modality": {
-      "@id": "perceptio:modality",
+      "@id": "psy:modality",
       "@type": "@id"
     },
     "basis": {
-      "@id": "perceptio:basis",
+      "@id": "psy:basis",
       "@type": "@id"
     },
     "basisDetail": {
-      "@id": "perceptio:basisDetail",
+      "@id": "psy:basisDetail",
       "@type": "@id"
     },
     "atInstant": {
-      "@id": "perceptio:atInstant",
+      "@id": "psy:atInstant",
       "@type": "xsd:dateTime"
     },
-    "AuthoredAppellation": "perceptio:AuthoredAppellation",
-    "NameKnowledgeRecord": "perceptio:NameKnowledgeRecord",
+    "AuthoredAppellation": "psy:AuthoredAppellation",
+    "NameKnowledgeRecord": "psy:NameKnowledgeRecord",
     "appellationFor": {
-      "@id": "perceptio:appellationFor",
+      "@id": "psy:appellationFor",
       "@type": "@id"
     },
     "contactModality": {
-      "@id": "perceptio:contactModality",
+      "@id": "psy:contactModality",
       "@type": "@id"
     },
-    "appellationText": "perceptio:appellationText",
+    "appellationText": "psy:appellationText",
     "nameKnower": {
-      "@id": "perceptio:nameKnower",
+      "@id": "psy:nameKnower",
       "@type": "@id"
     },
     "nameSubject": {
-      "@id": "perceptio:nameSubject",
+      "@id": "psy:nameSubject",
       "@type": "@id"
     },
     "nameKnowledgeBasis": {
-      "@id": "perceptio:nameKnowledgeBasis",
+      "@id": "psy:nameKnowledgeBasis",
       "@type": "@id"
     },
-    "BeliefRecord": "perceptio:BeliefRecord",
+    "BeliefRecord": "psy:BeliefRecord",
     "believer": {
-      "@id": "perceptio:believer",
+      "@id": "psy:believer",
       "@type": "@id"
     },
     "about": {
-      "@id": "perceptio:about",
+      "@id": "psy:about",
       "@type": "@id"
     },
-    "content": "perceptio:content",
+    "content": "psy:content",
     "formationBasis": {
-      "@id": "perceptio:formationBasis",
+      "@id": "psy:formationBasis",
       "@type": "@id"
     },
     "credence": {
-      "@id": "perceptio:credence",
+      "@id": "psy:credence",
       "@type": "xsd:decimal"
     },
     "acceptedFrom": {
@@ -123,7 +123,7 @@
       "@type": "xsd:dateTime"
     },
     "supersededBy": {
-      "@id": "perceptio:supersededBy",
+      "@id": "cat:supersededBy",
       "@type": "@id"
     },
     "DesireRecord": {

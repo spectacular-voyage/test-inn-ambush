@@ -2,7 +2,7 @@
 @prefix dyn: <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/> .
 @prefix psy: <https://psychikon.github.io/ontology/> .
 @prefix par: <https://participatorium.github.io/ontology/> .
-@prefix perceptio: <https://spectacular-voyage.github.io/stagecraft/ontology/perceptio/> .
+@prefix cat: <https://categoriae.github.io/ontology/> .
 @prefix sc: <https://spectacular-voyage.github.io/stagecraft/ontology/> .
 @prefix sflo: <https://semantic-flow.github.io/sflo/ontology/> .
 @prefix srd521: <https://stagecraft.github.io/srd-rules/srd-5-2-1/> .
@@ -294,7 +294,7 @@
   sc:inTemporalScope <https://spectacular-voyage.github.io/test-inn-ambush/temporal-scope/inn-scene> .
 
 <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/inference/threshold-scuffs-001>
-  a perceptio:InferenceAct ;
+  a psy:InferenceAct ;
   dcterms:created "2026-06-29T13:40:30Z"^^xsd:dateTime ;
   dcterms:description "Elara reasons from the visible threshold and the resolved perception check that the inn door was crossed in a hurry." ;
   dcterms:references <https://spectacular-voyage.github.io/test-inn-ambush/perception-record/hello-barkeep/elara/sight>,

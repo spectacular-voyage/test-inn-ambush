@@ -6,7 +6,7 @@
   "believer": "https://spectacular-voyage.github.io/test-inn-ambush/actant/elara",
   "about": "https://spectacular-voyage.github.io/test-inn-ambush/actant/nera",
   "content": "Elara remembers Nera as a known companion from before the inn ambush.",
-  "formationBasis": "https://spectacular-voyage.github.io/stagecraft/ontology/perceptio/seedMemory",
+  "formationBasis": "https://psychikon.github.io/ontology/beliefFormationBasisKind_seedMemory",
   "basisDetail": [
     "https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/world-seeded/inn-ambush-001"
   ],

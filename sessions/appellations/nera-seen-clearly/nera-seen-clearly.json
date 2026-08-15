@@ -4,6 +4,6 @@
   "type": "stagecraft.authored-appellation.v1",
   "id": "authored-appellation-nera-seen-clearly-001",
   "appellationFor": "https://spectacular-voyage.github.io/test-inn-ambush/actant/nera",
-  "contactModality": "https://spectacular-voyage.github.io/stagecraft/ontology/perceptio/seenClearly",
+  "contactModality": "https://psychikon.github.io/ontology/contactModalityKind_seenClearly",
   "appellationText": "the hooded woman"
 }
