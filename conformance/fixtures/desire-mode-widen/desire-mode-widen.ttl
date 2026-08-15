@@ -91,15 +91,15 @@
   dcterms:description "Characterization revision of the committed desire record: sharper wording, same desire." ;
   psy:experiencedBy <https://spectacular-voyage.github.io/test-inn-ambush/actant/elara> ;
   psy:content "Elara feels a magically compelled pull to walk out onto the old road and call on the hidden ambushers to stand down." ;
-  psy:targetShape psy:actTarget ;
-  psy:teleology psy:instrumental ;
+  psy:targetShape psy:desireTargetShapeKind_act ;
+  psy:teleology psy:teleologyKind_instrumental ;
   psy:servesGoal <https://spectacular-voyage.github.io/test-inn-ambush/goal/ambushers-draw-elara-out> ;
-  psy:persistence psy:episodic ;
-  psy:authorshipBasis psy:implanted ;
+  psy:persistence psy:persistenceKind_episodic ;
+  psy:authorshipBasis psy:authorshipKind_implanted ;
   psy:causedBy <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/spell/suggestion-old-road-001> ;
   psy:activeFrom "2026-07-07T19:55:00Z"^^xsd:dateTime ;
   psy:activeUntil "2026-07-07T20:05:00Z"^^xsd:dateTime ;
-  psy:compulsionGrade psy:compelled ;
+  psy:compulsionGrade psy:compulsionGradeKind_compelled ;
   psy:removedBy <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/spell-expiry/suggestion-old-road-001> ;
   psy:evidences <https://spectacular-voyage.github.io/test-inn-ambush/desire-mode/elara/old-road-compulsion> .
 
