@@ -21,7 +21,7 @@ e18ac944bb9d29e7c21fab22d5454ac13a8961409976265495760c10ce9977f2  ./creatures/cr
 cb9e785988a86aaf44801c89d368a469b52f484abd6b0fcd4a24fa99c56222ee  ./creatures/creatures.ttl
 a373f02396768e05e4be18ea0f29e6a68c2e2eda5ce5b460c27e5b5e0eabd87d  ./creature-types/creature-types.ttl
 12ce1ed64a97178b992c74b9ce1036c60654a3addeae780f762a265fb69afc93  ./currencies/currencies.csv
-59cc6cf8cb5c33e533811a7fcc6fbfaaee661e70371c77d68993f0d2c7e412c8  ./currencies/currencies.csvw.json
+b2309430c03be737714bebe3932668da127eff252342cbfa6cd3eb53b2796fe6  ./currencies/currencies.csvw.json
 95fafdcb3031a1b74b439c33790a13274b93dc56a1d5516e8f1d8326628168e8  ./currencies/currencies.provenance.json
 25951ce41a7026fc862553f9991e2bdf4f38b4da8179da037f37fac4c5213b71  ./currencies/currencies.ttl
 d6cb860f5ba433679be1fafcfeff85f5e1a32dd95cc1551afeeed32af08be1ad  ./d20-test/d20-test.csvw.json
@@ -59,7 +59,7 @@ ba30f7a56045de3b561fcf919d77ac4d88559c162aa42bf62fa4f11d02084b40  ./spells/spell
 eb32f35285705f1d1ef375b3fc6c477c898ac99b49e6b44c66bc557cc40e1980  ./spells/spells.provenance.json
 a55ad444b85d31e2a550775cbbc743e120352fecbacc6d3616c26080a7664842  ./spells/spells.ttl
 bee312644b7aa89bbd74ab5372b9befa5ea20d638459f3ffed9f3e993c9c1b9a  ./srd521-shacl.ttl
-fd10c7c9ec7b08735982664291907c9ab6d2c3ba0511872360007949b1174d43  ./srd521.ttl
+5f6086294af20a4468984890756bc795eeb97afa93379ceb6079c5de70389011  ./srd521.ttl
 00e78b7e8862511d5f73e4110be3e984d99510e66e9a390b8c015e90d1a65130  ./weapon-categories/weapon-categories.ttl
 d6c9d29ff0eff2b3a2a87165807fafcf1264816d7ca15fe31b5f3f48c79a1d6e  ./weapon-masteries/weapon-masteries.ttl
 1e56cc1698884dfc4eaa9d7beef9e163d95d3430305f4b7ec5697e66e9697a74  ./weapon-properties/weapon-properties.ttl

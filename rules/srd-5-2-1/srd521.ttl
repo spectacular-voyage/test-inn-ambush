@@ -1212,7 +1212,7 @@ srd521:adjudicatesDamageEvidence a rdf:Property ;
 
 srd521:EncounterPostureKind a cat:Kind ;
   rdfs:label "Encounter posture kind"@en ;
-  rdfs:comment "Enum: members are cat:instanceOf it (no punning). A combatant's posture within an encounter. ⚠️ FALSE-FRIEND GUARD: this is the home of the retiring bare sc:standing — which is ENCOUNTER POSTURE and must NEVER map to psy:standing (psychikon's SOCIAL standing, an entirely different concept). The census flagged this pair explicitly." .
+  rdfs:comment "Enum: members are cat:instanceOf it (no punning). A combatant's posture within an encounter. ⚠️ FALSE-FRIEND GUARD: this is the home of the retiring bare sc:standing — which is ENCOUNTER POSTURE and must NEVER map to psy:persistenceKind_standing (renamed from psy:standing 2026-08-14, which dissolves the near-name) (psychikon's SOCIAL standing, an entirely different concept). The census flagged this pair explicitly." .
 
 srd521:standingPosture cat:instanceOf srd521:EncounterPostureKind ; rdfs:label "standing"@en .
 srd521:pronePosture    cat:instanceOf srd521:EncounterPostureKind ; rdfs:label "prone"@en .
@@ -1220,7 +1220,7 @@ srd521:pronePosture    cat:instanceOf srd521:EncounterPostureKind ; rdfs:label "
 srd521:encounterPosture a rdf:Property ;
   cat:rangeType srd521:EncounterPostureKind ;
   rdfs:label "encounter posture"@en ;
-  rdfs:comment "A combatant to its posture. Deliberately NOT named 'standing' — the bare local name is the psy:standing false friend, and naming the property for the axis rather than one of its values makes the collision unspellable." .
+  rdfs:comment "A combatant to its posture. Deliberately NOT named 'standing' — the bare local name is the psy:persistenceKind_standing (renamed from psy:standing 2026-08-14, which dissolves the near-name) false friend, and naming the property for the axis rather than one of its values makes the collision unspellable." .
 
 #################################################################
 ## §SB-1 STATBLOCKS (product desk 2026-07-25 — the creature arm; design: flag.task.2026-07-25_2200-statblock-package)
@@ -1632,7 +1632,7 @@ srd521:rangeBand_normal a cat:Individual ; cat:instanceOf srd521:RangeBand ; rdf
 srd521:rangeBand_long a cat:Individual ; cat:instanceOf srd521:RangeBand ; rdfs:label "Long"@en ; cat:lexicalToken "long" .
 srd521:rangeBand_outOfRange a cat:Individual ; cat:instanceOf srd521:RangeBand ; rdfs:label "Out of range"@en ; cat:lexicalToken "out-of-range" .
 srd521:rangeBand_unknown a cat:Individual ; cat:instanceOf srd521:RangeBand ; rdfs:label "Unknown"@en ; cat:lexicalToken "unknown" ;
-  rdfs:comment "The classifier's honest no-confident-band verdict ('never a confident band' — range-band.ts:129); WHY it is unknown stays code-side (DistanceUnknownKind) until a consumer needs it in RDF. Included per the psy:notKnown honest-enum precedent."@en .
+  rdfs:comment "The classifier's honest no-confident-band verdict ('never a confident band' — range-band.ts:129); WHY it is unknown stays code-side (DistanceUnknownKind) until a consumer needs it in RDF. Included per the psy:knowledgeStatusKind_notKnown honest-enum precedent."@en .
 
 srd521:rangeBand
   a rdf:Property ;
@@ -1744,7 +1744,7 @@ srd521:AttackConsequenceAdjudication a cat:Kind ;
 srd521:standing a rdf:Property ;
   cat:rangeType srd521:EncounterPostureKind ;
   rdfs:label "standing"@en ;
-  rdfs:comment "A combatant's posture within an encounter, as an EncounterPostureKind member. THE SITE SPLIT, ruled wave-4 2026-08-05: the retiring sc:standing converts here at POSTURE sites ONLY - at warrant sites its armed/fired/withdrawn values are the warrant relator's own lifecycle (created-unfired, fired, withdrawn termination) and dissolve into cat:createdIn/cat:terminatedIn on par:Warrant, never converting here - and psychikon's psy:standing (social standing) is a third, unrelated sense per the false-friend guard on this property's range class. A conversion or census that says standing without naming the sense is wrong by default." .
+  rdfs:comment "A combatant's posture within an encounter, as an EncounterPostureKind member. THE SITE SPLIT, ruled wave-4 2026-08-05: the retiring sc:standing converts here at POSTURE sites ONLY - at warrant sites its armed/fired/withdrawn values are the warrant relator's own lifecycle (created-unfired, fired, withdrawn termination) and dissolve into cat:createdIn/cat:terminatedIn on par:Warrant, never converting here - and psychikon's psy:persistenceKind_standing (renamed from psy:standing 2026-08-14, which dissolves the near-name) (social standing) is a third, unrelated sense per the false-friend guard on this property's range class. A conversion or census that says standing without naming the sense is wrong by default." .
 
 srd521:engagement a rdf:Property ;
   cat:domainType srd521:AttackIntent ;

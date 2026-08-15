@@ -6,7 +6,7 @@ vendored so this mesh can consume the family-form rules data without reaching
 outside the repository.
 
 - **Upstream:** `github.com/stagecraft/srd-rules`, path `srd-5-2-1/`
-- **Pinned commit:** `cc6c24d7383b6b2706d135a54676bec6ecd29344` (the snapshot identity;
+- **Pinned commit:** `394edf01bd9c20b1f47cf8979f083630344294ac` (the snapshot identity;
   never a branch label)
 - **Contents:** the complete tree at that commit — every dataset package, the
   `_evidence/` extraction sources, `srd521.ttl` and `srd521-shacl.ttl` — 72 files,
