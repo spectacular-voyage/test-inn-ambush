@@ -1,0 +1,254 @@
+{
+  "@context": {
+    "@vocab": "https://spectacular-voyage.github.io/accord/ontology/",
+    "dcterms": "http://purl.org/dc/terms/",
+    "id": "@id",
+    "type": "@type",
+    "changeType": {
+      "@type": "@vocab"
+    },
+    "compareMode": {
+      "@type": "@vocab"
+    },
+    "targetsFileExpectation": {
+      "@type": "@id"
+    },
+    "locatorKind": {
+      "@type": "@vocab"
+    }
+  },
+  "type": "Manifest",
+  "id": "urn:accord:stagecraft:test-inn-ambush:82-perceptio-endpoint-migration",
+  "dcterms:title": "Inn Ambush 82 Perceptio endpoint migration (slice 2 commit 2)",
+  "dcterms:description": "TRANSITION CASE added 2026-08-15 under the conformance-ladder discipline (historical expectations are never rewritten; transition cases are ADDED - sc.task.2026-07-29_0930 slice 2, fork ruled b). Asserts the perceptio vocabulary migration of the fixture data and contracts to the family endpoint form at the branch state; the pre-migration rung(s) 62 and 68 keep their v1 expectations against their own states and are retired explicitly at the Inn roll.",
+  "hasCase": [
+    {
+      "type": "TransitionCase",
+      "id": "#perceptio-endpoint-migration",
+      "fixtureRepo": "github.com/spectacular-voyage/test-inn-ambush",
+      "operationId": "stagecraft.fixture.migratePerceptioToEndpoint",
+      "fromRef": "94b03de7d39556ab5b758f89c5c57a7b55d369ee",
+      "toRef": "origin/b.30-perceptio-endpoint-migration",
+      "fromState": {
+        "type": "StateLocator",
+        "locatorKind": "gitRefState",
+        "ref": "94b03de7d39556ab5b758f89c5c57a7b55d369ee"
+      },
+      "toState": {
+        "type": "StateLocator",
+        "locatorKind": "gitRefState",
+        "ref": "origin/b.30-perceptio-endpoint-migration"
+      },
+      "hasFileExpectation": [
+        {
+          "id": "#authority-journals-plan-b-plan-b-ttl",
+          "type": "FileExpectation",
+          "path": "authority/journals/plan-b/plan-b.ttl",
+          "changeType": "updated",
+          "compareMode": "rdfCanonical"
+        },
+        {
+          "id": "#conformance-62-perception-contract-slice-jsonld",
+          "type": "FileExpectation",
+          "path": "conformance/62-perception-contract-slice.jsonld",
+          "changeType": "updated",
+          "compareMode": "json"
+        },
+        {
+          "id": "#conformance-68-belief-records-party-name-seeds-jsonld",
+          "type": "FileExpectation",
+          "path": "conformance/68-belief-records-party-name-seeds.jsonld",
+          "changeType": "updated",
+          "compareMode": "json"
+        },
+        {
+          "id": "#projections-contracts-inn-ambush-contract-context-jsonld",
+          "type": "FileExpectation",
+          "path": "projections/contracts/inn-ambush-contract.context.jsonld",
+          "changeType": "updated",
+          "compareMode": "json"
+        },
+        {
+          "id": "#projections-contracts-inn-ambush-contract-shapes-ttl",
+          "type": "FileExpectation",
+          "path": "projections/contracts/inn-ambush-contract.shapes.ttl",
+          "changeType": "updated",
+          "compareMode": "rdfCanonical"
+        },
+        {
+          "id": "#sessions-appellations-nera-heard-only-nera-heard-only-json",
+          "type": "FileExpectation",
+          "path": "sessions/appellations/nera-heard-only/nera-heard-only.json",
+          "changeType": "updated",
+          "compareMode": "json"
+        },
+        {
+          "id": "#sessions-appellations-nera-seen-clearly-nera-seen-clearly-json",
+          "type": "FileExpectation",
+          "path": "sessions/appellations/nera-seen-clearly/nera-seen-clearly.json",
+          "changeType": "updated",
+          "compareMode": "json"
+        },
+        {
+          "id": "#sessions-appellations-nera-seen-poorly-nera-seen-poorly-json",
+          "type": "FileExpectation",
+          "path": "sessions/appellations/nera-seen-poorly/nera-seen-poorly.json",
+          "changeType": "updated",
+          "compareMode": "json"
+        },
+        {
+          "id": "#sessions-belief-records-elara-believes-nera-acquaintance-elara-believes-nera-acquaintance-json",
+          "type": "FileExpectation",
+          "path": "sessions/belief-records/elara-believes-nera-acquaintance/elara-believes-nera-acquaintance.json",
+          "changeType": "updated",
+          "compareMode": "json"
+        },
+        {
+          "id": "#sessions-belief-records-elara-believes-nera-stranger-superseded-elara-believes-nera-stranger-superseded-json",
+          "type": "FileExpectation",
+          "path": "sessions/belief-records/elara-believes-nera-stranger-superseded/elara-believes-nera-stranger-superseded.json",
+          "changeType": "updated",
+          "compareMode": "json"
+        },
+        {
+          "id": "#sessions-belief-records-elara-infers-threshold-scuffs-elara-infers-threshold-scuffs-json",
+          "type": "FileExpectation",
+          "path": "sessions/belief-records/elara-infers-threshold-scuffs/elara-infers-threshold-scuffs.json",
+          "changeType": "updated",
+          "compareMode": "json"
+        },
+        {
+          "id": "#sessions-belief-records-elara-realizes-suggested-elara-realizes-suggested-json",
+          "type": "FileExpectation",
+          "path": "sessions/belief-records/elara-realizes-suggested/elara-realizes-suggested.json",
+          "changeType": "updated",
+          "compareMode": "json"
+        },
+        {
+          "id": "#sessions-belief-records-nera-believes-elara-acquaintance-nera-believes-elara-acquaintance-json",
+          "type": "FileExpectation",
+          "path": "sessions/belief-records/nera-believes-elara-acquaintance/nera-believes-elara-acquaintance.json",
+          "changeType": "updated",
+          "compareMode": "json"
+        },
+        {
+          "id": "#sessions-belief-records-nera-remembers-sable-bridge-nera-remembers-sable-bridge-json",
+          "type": "FileExpectation",
+          "path": "sessions/belief-records/nera-remembers-sable-bridge/nera-remembers-sable-bridge.json",
+          "changeType": "updated",
+          "compareMode": "json"
+        },
+        {
+          "id": "#sessions-name-knowledge-elara-knows-elara-elara-knows-elara-json",
+          "type": "FileExpectation",
+          "path": "sessions/name-knowledge/elara-knows-elara/elara-knows-elara.json",
+          "changeType": "updated",
+          "compareMode": "json"
+        },
+        {
+          "id": "#sessions-name-knowledge-elara-knows-nera-elara-knows-nera-json",
+          "type": "FileExpectation",
+          "path": "sessions/name-knowledge/elara-knows-nera/elara-knows-nera.json",
+          "changeType": "updated",
+          "compareMode": "json"
+        },
+        {
+          "id": "#sessions-name-knowledge-nera-knows-elara-nera-knows-elara-json",
+          "type": "FileExpectation",
+          "path": "sessions/name-knowledge/nera-knows-elara/nera-knows-elara.json",
+          "changeType": "updated",
+          "compareMode": "json"
+        },
+        {
+          "id": "#sessions-name-knowledge-nera-knows-nera-nera-knows-nera-json",
+          "type": "FileExpectation",
+          "path": "sessions/name-knowledge/nera-knows-nera/nera-knows-nera.json",
+          "changeType": "updated",
+          "compareMode": "json"
+        },
+        {
+          "id": "#sessions-perception-records-hello-barkeep-elara-hearing-hello-barkeep-elara-hearing-json",
+          "type": "FileExpectation",
+          "path": "sessions/perception-records/hello-barkeep-elara-hearing/hello-barkeep-elara-hearing.json",
+          "changeType": "updated",
+          "compareMode": "json"
+        },
+        {
+          "id": "#sessions-perception-records-hello-barkeep-elara-sight-hello-barkeep-elara-sight-json",
+          "type": "FileExpectation",
+          "path": "sessions/perception-records/hello-barkeep-elara-sight/hello-barkeep-elara-sight.json",
+          "changeType": "updated",
+          "compareMode": "json"
+        },
+        {
+          "id": "#sessions-perception-records-hello-barkeep-fiat-disclosure-hello-barkeep-fiat-disclosure-json",
+          "type": "FileExpectation",
+          "path": "sessions/perception-records/hello-barkeep-fiat-disclosure/hello-barkeep-fiat-disclosure.json",
+          "changeType": "updated",
+          "compareMode": "json"
+        },
+        {
+          "id": "#sessions-perception-records-hello-barkeep-nera-hearing-hello-barkeep-nera-hearing-json",
+          "type": "FileExpectation",
+          "path": "sessions/perception-records/hello-barkeep-nera-hearing/hello-barkeep-nera-hearing.json",
+          "changeType": "updated",
+          "compareMode": "json"
+        },
+        {
+          "id": "#sessions-perception-records-hello-barkeep-nera-sight-hello-barkeep-nera-sight-json",
+          "type": "FileExpectation",
+          "path": "sessions/perception-records/hello-barkeep-nera-sight/hello-barkeep-nera-sight.json",
+          "changeType": "updated",
+          "compareMode": "json"
+        }
+      ],
+      "hasRdfExpectation": [
+        {
+          "id": "#projection-shapes-rdf-endpoint",
+          "type": "RdfExpectation",
+          "targetsFileExpectation": "#projections-contracts-inn-ambush-contract-shapes-ttl",
+          "hasAskAssertion": [
+            {
+              "id": "#ask-committed-speech-generalizes-delivery",
+              "type": "SparqlAskAssertion",
+              "query": "ASK { <https://spectacular-voyage.github.io/stagecraft/shacl/CommittedSpeechEventShape> a <http://www.w3.org/ns/shacl#NodeShape> ; <http://www.w3.org/ns/shacl#targetClass> <https://spectacular-voyage.github.io/stagecraft/ontology/CommittedSpeechEvent> ; <http://www.w3.org/ns/shacl#property> ?deliveryGuard . ?deliveryGuard <http://www.w3.org/ns/shacl#path> <https://spectacular-voyage.github.io/stagecraft/ontology/deliveredTo> ; <http://www.w3.org/ns/shacl#maxCount> \"0\"^^<http://www.w3.org/2001/XMLSchema#integer> ; <http://www.w3.org/ns/shacl#message> \"CommittedSpeechEvent delivery is generalized by psy:PerceptionRecord.\" . }",
+              "expectedBoolean": true
+            },
+            {
+              "id": "#ask-perception-record-shape",
+              "type": "SparqlAskAssertion",
+              "query": "ASK { <https://spectacular-voyage.github.io/stagecraft/shacl/PerceptionRecordShape> a <http://www.w3.org/ns/shacl#NodeShape> ; <http://www.w3.org/ns/shacl#targetClass> <https://psychikon.github.io/ontology/PerceptionRecord> ; <http://www.w3.org/ns/shacl#property> ?perceiver, ?percept, ?modality, ?basis, ?basisDetail, ?atInstant . ?perceiver <http://www.w3.org/ns/shacl#path> <https://psychikon.github.io/ontology/perceiver> ; <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#IRI> ; <http://www.w3.org/ns/shacl#minCount> \"1\"^^<http://www.w3.org/2001/XMLSchema#integer> ; <http://www.w3.org/ns/shacl#maxCount> \"1\"^^<http://www.w3.org/2001/XMLSchema#integer> . ?percept <http://www.w3.org/ns/shacl#path> <https://psychikon.github.io/ontology/percept> ; <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#IRI> ; <http://www.w3.org/ns/shacl#minCount> \"1\"^^<http://www.w3.org/2001/XMLSchema#integer> ; <http://www.w3.org/ns/shacl#maxCount> \"1\"^^<http://www.w3.org/2001/XMLSchema#integer> . ?modality <http://www.w3.org/ns/shacl#path> <https://psychikon.github.io/ontology/modality> ; <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#IRI> ; <http://www.w3.org/ns/shacl#minCount> \"1\"^^<http://www.w3.org/2001/XMLSchema#integer> ; <http://www.w3.org/ns/shacl#maxCount> \"1\"^^<http://www.w3.org/2001/XMLSchema#integer> . ?basis <http://www.w3.org/ns/shacl#path> <https://psychikon.github.io/ontology/basis> ; <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#IRI> ; <http://www.w3.org/ns/shacl#minCount> \"1\"^^<http://www.w3.org/2001/XMLSchema#integer> ; <http://www.w3.org/ns/shacl#maxCount> \"1\"^^<http://www.w3.org/2001/XMLSchema#integer> . ?basisDetail <http://www.w3.org/ns/shacl#path> <https://psychikon.github.io/ontology/basisDetail> ; <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#IRI> . ?atInstant <http://www.w3.org/ns/shacl#path> <https://psychikon.github.io/ontology/atInstant> ; <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#dateTime> ; <http://www.w3.org/ns/shacl#minCount> \"1\"^^<http://www.w3.org/2001/XMLSchema#integer> ; <http://www.w3.org/ns/shacl#maxCount> \"1\"^^<http://www.w3.org/2001/XMLSchema#integer> . }",
+              "expectedBoolean": true
+            }
+          ]
+        },
+        {
+          "id": "#belief-record-shape-rdf-endpoint",
+          "type": "RdfExpectation",
+          "targetsFileExpectation": "#projections-contracts-inn-ambush-contract-shapes-ttl",
+          "hasAskAssertion": [
+            {
+              "id": "#ask-belief-record-shape",
+              "type": "SparqlAskAssertion",
+              "query": "ASK { <https://spectacular-voyage.github.io/stagecraft/shacl/BeliefRecordShape> a <http://www.w3.org/ns/shacl#NodeShape> ; <http://www.w3.org/ns/shacl#targetClass> <https://psychikon.github.io/ontology/BeliefRecord> ; <http://www.w3.org/ns/shacl#property> ?believer, ?about, ?content, ?formationBasis, ?basisDetail, ?sinceWhen . ?believer <http://www.w3.org/ns/shacl#path> <https://psychikon.github.io/ontology/believer> ; <http://www.w3.org/ns/shacl#minCount> \"1\"^^<http://www.w3.org/2001/XMLSchema#integer> ; <http://www.w3.org/ns/shacl#maxCount> \"1\"^^<http://www.w3.org/2001/XMLSchema#integer> . ?about <http://www.w3.org/ns/shacl#path> <https://psychikon.github.io/ontology/about> ; <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#IRI> ; <http://www.w3.org/ns/shacl#minCount> \"1\"^^<http://www.w3.org/2001/XMLSchema#integer> ; <http://www.w3.org/ns/shacl#maxCount> \"1\"^^<http://www.w3.org/2001/XMLSchema#integer> . ?content <http://www.w3.org/ns/shacl#path> <https://psychikon.github.io/ontology/content> ; <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#string> . ?formationBasis <http://www.w3.org/ns/shacl#path> <https://psychikon.github.io/ontology/formationBasis> ; <http://www.w3.org/ns/shacl#minCount> \"1\"^^<http://www.w3.org/2001/XMLSchema#integer> ; <http://www.w3.org/ns/shacl#maxCount> \"1\"^^<http://www.w3.org/2001/XMLSchema#integer> . ?basisDetail <http://www.w3.org/ns/shacl#path> <https://psychikon.github.io/ontology/basisDetail> ; <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#IRI> . ?sinceWhen <http://www.w3.org/ns/shacl#path> <https://spectacular-voyage.github.io/stagecraft/ontology/acceptedFrom> ; <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#dateTime> . }",
+              "expectedBoolean": true
+            }
+          ]
+        },
+        {
+          "id": "#inference-act-rdf-endpoint",
+          "type": "RdfExpectation",
+          "targetsFileExpectation": "#authority-journals-plan-b-plan-b-ttl",
+          "hasAskAssertion": [
+            {
+              "id": "#ask-inference-act-percept-basis-links",
+              "type": "SparqlAskAssertion",
+              "query": "ASK { <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/inference/threshold-scuffs-001> a <https://psychikon.github.io/ontology/InferenceAct> ; <http://purl.org/dc/terms/references> <https://spectacular-voyage.github.io/test-inn-ambush/perception-record/hello-barkeep/elara/sight>, <https://spectacular-voyage.github.io/test-inn-ambush/belief-record/elara/threshold-scuffs> ; <https://spectacular-voyage.github.io/stagecraft/ontology/committedBy> <https://spectacular-voyage.github.io/test-inn-ambush/gm/alex> . }",
+              "expectedBoolean": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

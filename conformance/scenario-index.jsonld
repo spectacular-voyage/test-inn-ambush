@@ -1107,6 +1107,48 @@
           }
         }
       ]
+    },
+    {
+      "id": "#81-orexis-endpoint-migration",
+      "type": "ScenarioStep",
+      "manifestPath": "81-orexis-endpoint-migration.jsonld",
+      "hasLaneBinding": [
+        {
+          "type": "LaneStateBinding",
+          "lane": "#fixture-b-lane",
+          "fromLaneState": {
+            "type": "StateLocator",
+            "locatorKind": "gitRefState",
+            "ref": "8ae27a203990c7a2d19cd82a00b5325557141899"
+          },
+          "toLaneState": {
+            "type": "StateLocator",
+            "locatorKind": "gitRefState",
+            "ref": "origin/b.29-orexis-endpoint-migration"
+          }
+        }
+      ]
+    },
+    {
+      "id": "#82-perceptio-endpoint-migration",
+      "type": "ScenarioStep",
+      "manifestPath": "82-perceptio-endpoint-migration.jsonld",
+      "hasLaneBinding": [
+        {
+          "type": "LaneStateBinding",
+          "lane": "#fixture-b-lane",
+          "fromLaneState": {
+            "type": "StateLocator",
+            "locatorKind": "gitRefState",
+            "ref": "94b03de7d39556ab5b758f89c5c57a7b55d369ee"
+          },
+          "toLaneState": {
+            "type": "StateLocator",
+            "locatorKind": "gitRefState",
+            "ref": "origin/b.30-perceptio-endpoint-migration"
+          }
+        }
+      ]
     }
   ]
 }

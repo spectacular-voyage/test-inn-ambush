@@ -1,0 +1,143 @@
+{
+  "@context": {
+    "@vocab": "https://spectacular-voyage.github.io/accord/ontology/",
+    "dcterms": "http://purl.org/dc/terms/",
+    "id": "@id",
+    "type": "@type",
+    "changeType": {
+      "@type": "@vocab"
+    },
+    "compareMode": {
+      "@type": "@vocab"
+    },
+    "targetsFileExpectation": {
+      "@type": "@id"
+    },
+    "locatorKind": {
+      "@type": "@vocab"
+    }
+  },
+  "type": "Manifest",
+  "id": "urn:accord:stagecraft:test-inn-ambush:81-orexis-endpoint-migration",
+  "dcterms:title": "Inn Ambush 81 Orexis endpoint migration (slice 2 commit 1)",
+  "dcterms:description": "TRANSITION CASE added 2026-08-15 under the conformance-ladder discipline (historical expectations are never rewritten; transition cases are ADDED - sc.task.2026-07-29_0930 slice 2, fork ruled b). Asserts the orexis vocabulary migration of the fixture data and contracts to the family endpoint form at the branch state; the pre-migration rung(s) 70 keep their v1 expectations against their own states and are retired explicitly at the Inn roll.",
+  "hasCase": [
+    {
+      "type": "TransitionCase",
+      "id": "#orexis-endpoint-migration",
+      "fixtureRepo": "github.com/spectacular-voyage/test-inn-ambush",
+      "operationId": "stagecraft.fixture.migrateOrexisToEndpoint",
+      "fromRef": "8ae27a203990c7a2d19cd82a00b5325557141899",
+      "toRef": "origin/b.29-orexis-endpoint-migration",
+      "fromState": {
+        "type": "StateLocator",
+        "locatorKind": "gitRefState",
+        "ref": "8ae27a203990c7a2d19cd82a00b5325557141899"
+      },
+      "toState": {
+        "type": "StateLocator",
+        "locatorKind": "gitRefState",
+        "ref": "origin/b.29-orexis-endpoint-migration"
+      },
+      "hasFileExpectation": [
+        {
+          "id": "#authority-journals-plan-b-plan-b-ttl",
+          "type": "FileExpectation",
+          "path": "authority/journals/plan-b/plan-b.ttl",
+          "changeType": "updated",
+          "compareMode": "rdfCanonical"
+        },
+        {
+          "id": "#conformance-70-orexis-v1-records-jsonld",
+          "type": "FileExpectation",
+          "path": "conformance/70-orexis-v1-records.jsonld",
+          "changeType": "updated",
+          "compareMode": "json"
+        },
+        {
+          "id": "#conformance-fixtures-desire-mode-widen-manifest-md",
+          "type": "FileExpectation",
+          "path": "conformance/fixtures/desire-mode-widen/MANIFEST.md",
+          "changeType": "updated",
+          "compareMode": "text"
+        },
+        {
+          "id": "#conformance-fixtures-desire-mode-widen-desire-mode-widen-ttl",
+          "type": "FileExpectation",
+          "path": "conformance/fixtures/desire-mode-widen/desire-mode-widen.ttl",
+          "changeType": "updated",
+          "compareMode": "text",
+          "dcterms:description": "comment-only edit (a dated prose scope note); quad-neutral, so compared as text"
+        },
+        {
+          "id": "#projections-contracts-inn-ambush-contract-context-jsonld",
+          "type": "FileExpectation",
+          "path": "projections/contracts/inn-ambush-contract.context.jsonld",
+          "changeType": "updated",
+          "compareMode": "json"
+        },
+        {
+          "id": "#projections-contracts-inn-ambush-contract-shapes-ttl",
+          "type": "FileExpectation",
+          "path": "projections/contracts/inn-ambush-contract.shapes.ttl",
+          "changeType": "updated",
+          "compareMode": "rdfCanonical"
+        },
+        {
+          "id": "#sessions-desire-records-elara-suggested-old-road-elara-suggested-old-road-json",
+          "type": "FileExpectation",
+          "path": "sessions/desire-records/elara-suggested-old-road/elara-suggested-old-road.json",
+          "changeType": "updated",
+          "compareMode": "json"
+        },
+        {
+          "id": "#sessions-desire-records-talla-honest-trade-talla-honest-trade-json",
+          "type": "FileExpectation",
+          "path": "sessions/desire-records/talla-honest-trade/talla-honest-trade.json",
+          "changeType": "updated",
+          "compareMode": "json"
+        }
+      ],
+      "hasRdfExpectation": [
+        {
+          "id": "#orexis-shapes-rdf-endpoint",
+          "type": "RdfExpectation",
+          "targetsFileExpectation": "#projections-contracts-inn-ambush-contract-shapes-ttl",
+          "hasAskAssertion": [
+            {
+              "id": "#ask-desire-record-shape",
+              "type": "SparqlAskAssertion",
+              "query": "ASK { <https://spectacular-voyage.github.io/stagecraft/shacl/DesireRecordShape> a <http://www.w3.org/ns/shacl#NodeShape> ; <http://www.w3.org/ns/shacl#targetClass> <https://psychikon.github.io/ontology/DesireRecord> ; <http://www.w3.org/ns/shacl#node> <https://spectacular-voyage.github.io/stagecraft/shacl/SharedConativeRecordShape> ; <http://www.w3.org/ns/shacl#property> ?targetShape, ?teleology, ?servesGoal . ?targetShape <http://www.w3.org/ns/shacl#path> <https://psychikon.github.io/ontology/targetShape> ; <http://www.w3.org/ns/shacl#minCount> \"1\"^^<http://www.w3.org/2001/XMLSchema#integer> ; <http://www.w3.org/ns/shacl#maxCount> \"1\"^^<http://www.w3.org/2001/XMLSchema#integer> . ?teleology <http://www.w3.org/ns/shacl#path> <https://psychikon.github.io/ontology/teleology> ; <http://www.w3.org/ns/shacl#minCount> \"1\"^^<http://www.w3.org/2001/XMLSchema#integer> ; <http://www.w3.org/ns/shacl#maxCount> \"1\"^^<http://www.w3.org/2001/XMLSchema#integer> . ?servesGoal <http://www.w3.org/ns/shacl#path> <https://psychikon.github.io/ontology/servesGoal> ; <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#IRI> ; <http://www.w3.org/ns/shacl#maxCount> \"1\"^^<http://www.w3.org/2001/XMLSchema#integer> . }",
+              "expectedBoolean": true
+            },
+            {
+              "id": "#ask-shared-conative-record-shape",
+              "type": "SparqlAskAssertion",
+              "query": "ASK { <https://spectacular-voyage.github.io/stagecraft/shacl/SharedConativeRecordShape> a <http://www.w3.org/ns/shacl#NodeShape> ; <http://www.w3.org/ns/shacl#property> ?owner, ?content, ?beneficiary, ?causedBy, ?activeFrom, ?intensity . ?owner <http://www.w3.org/ns/shacl#path> <https://psychikon.github.io/ontology/experiencedBy> ; <http://www.w3.org/ns/shacl#minCount> \"1\"^^<http://www.w3.org/2001/XMLSchema#integer> ; <http://www.w3.org/ns/shacl#maxCount> \"1\"^^<http://www.w3.org/2001/XMLSchema#integer> . ?content <http://www.w3.org/ns/shacl#path> <https://psychikon.github.io/ontology/content> ; <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#string> . ?beneficiary <http://www.w3.org/ns/shacl#path> <https://psychikon.github.io/ontology/beneficiary> ; <http://www.w3.org/ns/shacl#minCount> \"1\"^^<http://www.w3.org/2001/XMLSchema#integer> . ?causedBy <http://www.w3.org/ns/shacl#path> <https://psychikon.github.io/ontology/causedBy> ; <http://www.w3.org/ns/shacl#minCount> \"1\"^^<http://www.w3.org/2001/XMLSchema#integer> . ?activeFrom <http://www.w3.org/ns/shacl#path> <https://psychikon.github.io/ontology/activeFrom> ; <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#dateTime> . ?intensity <http://www.w3.org/ns/shacl#path> <https://psychikon.github.io/ontology/intensity> ; <http://www.w3.org/ns/shacl#minInclusive> 0 ; <http://www.w3.org/ns/shacl#maxInclusive> 1 . }",
+              "expectedBoolean": true
+            }
+          ]
+        },
+        {
+          "id": "#authority-journal-rdf-endpoint",
+          "type": "RdfExpectation",
+          "targetsFileExpectation": "#authority-journals-plan-b-plan-b-ttl",
+          "hasAskAssertion": [
+            {
+              "id": "#ask-suggestion-implant-and-expiry",
+              "type": "SparqlAskAssertion",
+              "query": "ASK { <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/spell/suggestion-old-road-001> a <https://psychikon.github.io/ontology/ConativeImplantAct> ; <http://purl.org/dc/terms/created> \"2026-07-07T19:55:00Z\"^^<http://www.w3.org/2001/XMLSchema#dateTime> ; <https://spectacular-voyage.github.io/stagecraft/ontology/committedBy> <https://spectacular-voyage.github.io/test-inn-ambush/gm/alex> ; <http://purl.org/dc/terms/references> <https://spectacular-voyage.github.io/test-inn-ambush/desire-record/elara/suggestion-old-road> . <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/spell-expiry/suggestion-old-road-001> a <https://psychikon.github.io/ontology/ConativeRecordRemovalAct> ; <http://purl.org/dc/terms/created> \"2026-07-07T20:05:00Z\"^^<http://www.w3.org/2001/XMLSchema#dateTime> ; <http://purl.org/dc/terms/references> <https://spectacular-voyage.github.io/test-inn-ambush/desire-record/elara/suggestion-old-road>, <https://spectacular-voyage.github.io/test-inn-ambush/belief-record/elara/realizes-suggested> . }",
+              "expectedBoolean": true
+            },
+            {
+              "id": "#ask-contrary-intent-and-adopted-intent",
+              "type": "SparqlAskAssertion",
+              "query": "ASK { <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/declared-intent/elara-plan-b-001> <https://psychikon.github.io/ontology/contraryTo> <https://spectacular-voyage.github.io/test-inn-ambush/desire-record/elara/suggestion-old-road> . <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/intent-declaration/talla-honest-trade-001> a <https://spectacular-voyage.github.io/stagecraft/ontology/IntentDeclaration> ; <https://spectacular-voyage.github.io/stagecraft/ontology/declaredBy> <https://spectacular-voyage.github.io/test-inn-ambush/participant/agent/talla> ; <https://spectacular-voyage.github.io/stagecraft/ontology/intentForActant> <https://spectacular-voyage.github.io/test-inn-ambush/npc/talla-mosswick> . }",
+              "expectedBoolean": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
