@@ -1,0 +1,109 @@
+{
+  "@context": {
+    "@vocab": "https://spectacular-voyage.github.io/accord/ontology/",
+    "dcterms": "http://purl.org/dc/terms/",
+    "id": "@id",
+    "type": "@type",
+    "changeType": {
+      "@type": "@vocab"
+    },
+    "compareMode": {
+      "@type": "@vocab"
+    },
+    "targetsFileExpectation": {
+      "@type": "@id"
+    },
+    "locatorKind": {
+      "@type": "@vocab"
+    }
+  },
+  "type": "Manifest",
+  "id": "urn:accord:stagecraft:test-inn-ambush:85-possessio-endpoint-migration",
+  "dcterms:title": "Inn Ambush 85 Possessio endpoint migration (slice 2 commit 5, the last)",
+  "dcterms:description": "TRANSITION CASE added 2026-08-15 (conformance-ladder discipline; sc.task.2026-07-29_0930 slice 2). Migrates the possessio v1 carriers - the contract pair (31 shape lines, 18 context mappings) and the two transfer-request fixtures - to the family kosm: namespace from the frozen mapping (45 rows, all map; the four once-needs-mint lifecycle terms opensAttunement/closesAttunement/opensEquipped/closesEquipped are now DECLARED at kosmion), with two successors resolved through the arm's own RENAMED chains: give -> transferActKind_give (2026-08-14 endpoint form) and transferActor -> transferActant -> transferGiver (2026-08-06, two hops - kosmion.ttl:442-448 says the mapping target must resolve through the whole chain at bind time). Journal/world/session possessio carriers: none live.",
+  "hasCase": [
+    {
+      "type": "TransitionCase",
+      "id": "#possessio-endpoint-migration",
+      "fixtureRepo": "github.com/spectacular-voyage/test-inn-ambush",
+      "operationId": "stagecraft.fixture.migratePossessioToEndpoint",
+      "fromRef": "a2cfadd295eb50600fa383935d1f7f8dbff96441",
+      "toRef": "origin/b.33-possessio-endpoint-migration",
+      "fromState": {
+        "type": "StateLocator",
+        "locatorKind": "gitRefState",
+        "ref": "a2cfadd295eb50600fa383935d1f7f8dbff96441"
+      },
+      "toState": {
+        "type": "StateLocator",
+        "locatorKind": "gitRefState",
+        "ref": "origin/b.33-possessio-endpoint-migration"
+      },
+      "hasFileExpectation": [
+        {
+          "id": "#authority-transfers-transfer-request-elara-give-lantern-transfer-request-elara-give-lantern-json",
+          "type": "FileExpectation",
+          "path": "authority/transfers/transfer-request-elara-give-lantern/transfer-request-elara-give-lantern.json",
+          "changeType": "updated",
+          "compareMode": "json"
+        },
+        {
+          "id": "#authority-transfers-transfer-request-nera-give-coin-transfer-request-nera-give-coin-json",
+          "type": "FileExpectation",
+          "path": "authority/transfers/transfer-request-nera-give-coin/transfer-request-nera-give-coin.json",
+          "changeType": "updated",
+          "compareMode": "json"
+        },
+        {
+          "id": "#projections-contracts-inn-ambush-contract-context-jsonld",
+          "type": "FileExpectation",
+          "path": "projections/contracts/inn-ambush-contract.context.jsonld",
+          "changeType": "updated",
+          "compareMode": "json"
+        },
+        {
+          "id": "#projections-contracts-inn-ambush-contract-shapes-ttl",
+          "type": "FileExpectation",
+          "path": "projections/contracts/inn-ambush-contract.shapes.ttl",
+          "changeType": "updated",
+          "compareMode": "rdfCanonical"
+        },
+        {
+          "id": "#conformance-scenario-index-jsonld",
+          "type": "FileExpectation",
+          "path": "conformance/scenario-index.jsonld",
+          "changeType": "updated",
+          "compareMode": "json"
+        },
+        {
+          "id": "#conformance-85-possessio-endpoint-migration-jsonld",
+          "type": "FileExpectation",
+          "path": "conformance/85-possessio-endpoint-migration.jsonld",
+          "changeType": "added",
+          "compareMode": "json"
+        }
+      ],
+      "hasRdfExpectation": [
+        {
+          "id": "#possessio-shapes-rdf-endpoint",
+          "type": "RdfExpectation",
+          "targetsFileExpectation": "#projections-contracts-inn-ambush-contract-shapes-ttl",
+          "hasAskAssertion": [
+            {
+              "id": "#ask-transfer-giver-path",
+              "type": "SparqlAskAssertion",
+              "expectedBoolean": true,
+              "query": "ASK { ?s <http://www.w3.org/ns/shacl#path> <https://kosmion.github.io/ontology/transferGiver> . FILTER NOT EXISTS { ?t <http://www.w3.org/ns/shacl#path> <https://spectacular-voyage.github.io/stagecraft/ontology/possessio/transferActor> } }"
+            },
+            {
+              "id": "#ask-transfer-act-kind-endpoint-member",
+              "type": "SparqlAskAssertion",
+              "expectedBoolean": true,
+              "query": "ASK { ?s <http://www.w3.org/ns/shacl#path> <https://kosmion.github.io/ontology/transferActKind> . }"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

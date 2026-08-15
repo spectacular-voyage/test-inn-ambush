@@ -8,7 +8,6 @@
     "psy": "https://psychikon.github.io/ontology/",
     "cat": "https://categoriae.github.io/ontology/",
     "kosm": "https://kosmion.github.io/ontology/",
-    "possessio": "https://spectacular-voyage.github.io/stagecraft/ontology/possessio/",
     "rol": "https://roleosum.github.io/ontology/",
     "dcterms": "http://purl.org/dc/terms/",
     "owlTime": "http://www.w3.org/2006/time#",
@@ -665,35 +664,35 @@
       "@type": "@id"
     },
     "transferActKind": {
-      "@id": "possessio:transferActKind",
+      "@id": "kosm:transferActKind",
       "@type": "@id"
     },
     "transferActor": {
-      "@id": "possessio:transferActor",
+      "@id": "kosm:transferGiver",
       "@type": "@id"
     },
     "transferCounterparty": {
-      "@id": "possessio:transferCounterparty",
+      "@id": "kosm:transferCounterparty",
       "@type": "@id"
     },
     "transferItem": {
-      "@id": "possessio:transferItem",
+      "@id": "kosm:transferItem",
       "@type": "@id"
     },
     "quantity": {
-      "@id": "possessio:quantity",
+      "@id": "kosm:quantity",
       "@type": "xsd:decimal"
     },
     "transferQuantity": {
-      "@id": "possessio:transferQuantity",
+      "@id": "kosm:quantity",
       "@type": "xsd:decimal"
     },
     "transferContainer": {
-      "@id": "possessio:transferContainer",
+      "@id": "kosm:transferContainer",
       "@type": "@id"
     },
     "underCommitment": {
-      "@id": "possessio:underCommitment",
+      "@id": "kosm:underCommitment",
       "@type": "@id"
     },
     "seller": {
@@ -743,43 +742,43 @@
       "@type": "@id"
     },
     "opensHolding": {
-      "@id": "possessio:opensHolding",
+      "@id": "kosm:opensHolding",
       "@type": "@id"
     },
     "closesHolding": {
-      "@id": "possessio:closesHolding",
+      "@id": "kosm:closesHolding",
       "@type": "@id"
     },
     "opensOwnership": {
-      "@id": "possessio:opensOwnership",
+      "@id": "kosm:opensOwnership",
       "@type": "@id"
     },
     "closesOwnership": {
-      "@id": "possessio:closesOwnership",
+      "@id": "kosm:closesOwnership",
       "@type": "@id"
     },
     "opensContainment": {
-      "@id": "possessio:opensContainment",
+      "@id": "kosm:opensContainment",
       "@type": "@id"
     },
     "closesContainment": {
-      "@id": "possessio:closesContainment",
+      "@id": "kosm:closesContainment",
       "@type": "@id"
     },
     "opensEquipped": {
-      "@id": "possessio:opensEquipped",
+      "@id": "kosm:opensEquipped",
       "@type": "@id"
     },
     "closesEquipped": {
-      "@id": "possessio:closesEquipped",
+      "@id": "kosm:closesEquipped",
       "@type": "@id"
     },
     "opensAttunement": {
-      "@id": "possessio:opensAttunement",
+      "@id": "kosm:opensAttunement",
       "@type": "@id"
     },
     "closesAttunement": {
-      "@id": "possessio:closesAttunement",
+      "@id": "kosm:closesAttunement",
       "@type": "@id"
     },
     "intentBearingActant": {

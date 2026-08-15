@@ -4,7 +4,6 @@
 @prefix psy: <https://psychikon.github.io/ontology/> .
 @prefix cat: <https://categoriae.github.io/ontology/> .
 @prefix kosm: <https://kosmion.github.io/ontology/> .
-@prefix possessio: <https://spectacular-voyage.github.io/stagecraft/ontology/possessio/> .
 @prefix rol: <https://roleosum.github.io/ontology/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix sh: <http://www.w3.org/ns/shacl#> .
@@ -1090,20 +1089,20 @@ sc-sh:ParticipantControlAssignmentRequestShape
 
 sc-sh:TransferActShape
   a sh:NodeShape ;
-  sh:targetClass possessio:TransferAct ;
+  sh:targetClass kosm:TransferAct ;
   sh:property [
-    sh:path possessio:transferQuantity ;
+    sh:path kosm:quantity ;
     sh:datatype xsd:decimal ;
     sh:maxCount 1 ;
   ] ;
   sh:sparql [
-    sh:message "Fungible TransferAct must record exactly one possessio:transferQuantity." ;
+    sh:message "Fungible TransferAct must record exactly one kosm:quantity." ;
     sh:select """
       PREFIX possessio: <https://spectacular-voyage.github.io/stagecraft/ontology/possessio/>
       SELECT $this WHERE {
-        $this possessio:transferItem ?item .
-        ?item a possessio:FungibleKind .
-        FILTER NOT EXISTS { $this possessio:transferQuantity ?quantity . }
+        $this kosm:transferItem ?item .
+        ?item a kosm:FungibleKind .
+        FILTER NOT EXISTS { $this kosm:quantity ?quantity . }
       }
       """ ;
   ] .
@@ -1114,20 +1113,20 @@ sc-sh:TransferActShape
 # onto every focus node). The non-fungible guard therefore lives on its own
 # target-class-sharing NodeShape. Semantically equivalent to the previous
 # two-sh:sparql TransferActShape: SPARQL constraints evaluate per focus node,
-# and both shapes target possessio:TransferAct.
+# and both shapes target kosm:TransferAct.
 
 sc-sh:TransferActNonFungibleQuantityShape
   a sh:NodeShape ;
-  sh:targetClass possessio:TransferAct ;
+  sh:targetClass kosm:TransferAct ;
   sh:sparql [
-    sh:message "Non-fungible TransferAct must not carry possessio:transferQuantity." ;
+    sh:message "Non-fungible TransferAct must not carry kosm:quantity." ;
     sh:select """
       PREFIX possessio: <https://spectacular-voyage.github.io/stagecraft/ontology/possessio/>
       SELECT $this WHERE {
-        $this possessio:transferQuantity ?quantity .
+        $this kosm:quantity ?quantity .
         FILTER NOT EXISTS {
-          $this possessio:transferItem ?item .
-          ?item a possessio:FungibleKind .
+          $this kosm:transferItem ?item .
+          ?item a kosm:FungibleKind .
         }
       }
       """ ;
@@ -1157,40 +1156,40 @@ sc-sh:TransferRequestShape
     sh:maxCount 1 ;
   ] ;
   sh:property [
-    sh:path possessio:transferActKind ;
+    sh:path kosm:transferActKind ;
     sh:nodeKind sh:IRI ;
     sh:minCount 1 ;
     sh:maxCount 1 ;
   ] ;
   sh:property [
-    sh:path possessio:transferActor ;
+    sh:path kosm:transferGiver ;
     sh:nodeKind sh:IRI ;
     sh:minCount 1 ;
     sh:maxCount 1 ;
   ] ;
   sh:property [
-    sh:path possessio:transferCounterparty ;
+    sh:path kosm:transferCounterparty ;
     sh:nodeKind sh:IRI ;
     sh:maxCount 1 ;
   ] ;
   sh:property [
-    sh:path possessio:transferItem ;
+    sh:path kosm:transferItem ;
     sh:nodeKind sh:IRI ;
     sh:minCount 1 ;
     sh:maxCount 1 ;
   ] ;
   sh:property [
-    sh:path possessio:quantity ;
+    sh:path kosm:quantity ;
     sh:datatype xsd:decimal ;
     sh:maxCount 1 ;
   ] ;
   sh:property [
-    sh:path possessio:transferContainer ;
+    sh:path kosm:transferContainer ;
     sh:nodeKind sh:IRI ;
     sh:maxCount 1 ;
   ] ;
   sh:property [
-    sh:path possessio:underCommitment ;
+    sh:path kosm:underCommitment ;
     sh:nodeKind sh:IRI ;
     sh:maxCount 1 ;
   ] ;
@@ -1207,52 +1206,52 @@ sc-sh:TransferRequestShape
     sh:maxCount 1 ;
   ] ;
   sh:property [
-    sh:path possessio:opensHolding ;
+    sh:path kosm:opensHolding ;
     sh:maxCount 0 ;
     sh:message "TransferRequest states intent only; authority resolves opened holding relators." ;
   ] ;
   sh:property [
-    sh:path possessio:closesHolding ;
+    sh:path kosm:closesHolding ;
     sh:maxCount 0 ;
     sh:message "TransferRequest states intent only; authority resolves closed holding relators." ;
   ] ;
   sh:property [
-    sh:path possessio:opensOwnership ;
+    sh:path kosm:opensOwnership ;
     sh:maxCount 0 ;
     sh:message "TransferRequest states intent only; authority resolves opened ownership relators." ;
   ] ;
   sh:property [
-    sh:path possessio:closesOwnership ;
+    sh:path kosm:closesOwnership ;
     sh:maxCount 0 ;
     sh:message "TransferRequest states intent only; authority resolves closed ownership relators." ;
   ] ;
   sh:property [
-    sh:path possessio:opensContainment ;
+    sh:path kosm:opensContainment ;
     sh:maxCount 0 ;
     sh:message "TransferRequest states intent only; authority resolves opened containment relators." ;
   ] ;
   sh:property [
-    sh:path possessio:closesContainment ;
+    sh:path kosm:closesContainment ;
     sh:maxCount 0 ;
     sh:message "TransferRequest states intent only; authority resolves closed containment relators." ;
   ] ;
   sh:property [
-    sh:path possessio:opensEquipped ;
+    sh:path kosm:opensEquipped ;
     sh:maxCount 0 ;
     sh:message "TransferRequest states intent only; authority resolves opened equipped relators." ;
   ] ;
   sh:property [
-    sh:path possessio:closesEquipped ;
+    sh:path kosm:closesEquipped ;
     sh:maxCount 0 ;
     sh:message "TransferRequest states intent only; authority resolves closed equipped relators." ;
   ] ;
   sh:property [
-    sh:path possessio:opensAttunement ;
+    sh:path kosm:opensAttunement ;
     sh:maxCount 0 ;
     sh:message "TransferRequest states intent only; authority resolves opened attunement relators." ;
   ] ;
   sh:property [
-    sh:path possessio:closesAttunement ;
+    sh:path kosm:closesAttunement ;
     sh:maxCount 0 ;
     sh:message "TransferRequest states intent only; authority resolves closed attunement relators." ;
   ] ;
@@ -1381,7 +1380,7 @@ sc-sh:TradeQuoteRequestShape
     sh:message "TradeQuoteRequest must not claim an accepted commitment." ;
   ] ;
   sh:property [
-    sh:path possessio:opensHolding ;
+    sh:path kosm:opensHolding ;
     sh:maxCount 0 ;
     sh:message "TradeQuoteRequest must not preview transfer effects." ;
   ] ;
@@ -1455,7 +1454,7 @@ sc-sh:TradeQuoteAcceptanceRequestShape
     sh:message "TradeQuoteAcceptanceRequest names the quote only; authority mints the accepted commitment." ;
   ] ;
   sh:property [
-    sh:path possessio:opensHolding ;
+    sh:path kosm:opensHolding ;
     sh:maxCount 0 ;
     sh:message "TradeQuoteAcceptanceRequest must not preview transfer effects." ;
   ] ;
