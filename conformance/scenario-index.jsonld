@@ -1149,6 +1149,27 @@
           }
         }
       ]
+    },
+    {
+      "id": "#83-dynamis-request-fixtures-endpoint",
+      "type": "ScenarioStep",
+      "manifestPath": "83-dynamis-request-fixtures-endpoint.jsonld",
+      "hasLaneBinding": [
+        {
+          "type": "LaneStateBinding",
+          "lane": "#fixture-b-lane",
+          "fromLaneState": {
+            "type": "StateLocator",
+            "locatorKind": "gitRefState",
+            "ref": "b06b20bea29913ffb79f6aff168db2d72c59609e"
+          },
+          "toLaneState": {
+            "type": "StateLocator",
+            "locatorKind": "gitRefState",
+            "ref": "origin/b.31-dynamis-request-fixtures-endpoint"
+          }
+        }
+      ]
     }
   ]
 }

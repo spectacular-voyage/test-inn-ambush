@@ -8,7 +8,7 @@
     "https://spectacular-voyage.github.io/test-inn-ambush/actant/elara",
     "https://spectacular-voyage.github.io/test-inn-ambush/actant/nera"
   ],
-  "testType": "https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/AbilityCheck",
+  "testType": "https://stagecraft.github.io/srd-rules/srd-5-2-1/d20-test/ability-check",
   "targetNumber": 12,
   "hiddenDc": false,
   "hiddenResult": false,

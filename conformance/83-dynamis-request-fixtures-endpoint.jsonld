@@ -1,0 +1,96 @@
+{
+  "@context": {
+    "@vocab": "https://spectacular-voyage.github.io/accord/ontology/",
+    "dcterms": "http://purl.org/dc/terms/",
+    "id": "@id",
+    "type": "@type",
+    "changeType": {
+      "@type": "@vocab"
+    },
+    "compareMode": {
+      "@type": "@vocab"
+    },
+    "targetsFileExpectation": {
+      "@type": "@id"
+    },
+    "locatorKind": {
+      "@type": "@vocab"
+    }
+  },
+  "type": "Manifest",
+  "id": "urn:accord:stagecraft:test-inn-ambush:83-dynamis-request-fixtures-endpoint",
+  "dcterms:title": "Inn Ambush 83 Dynamis request fixtures to endpoint (slice 2 commit 3)",
+  "dcterms:description": "TRANSITION CASE added 2026-08-15 (conformance-ladder discipline; sc.task.2026-07-29_0930 slice 2, dynamis per its register dispositions: fork 0016 ruled b + drop 1831 Q2 + drop 0017). Migrates the FIVE authority request fixtures - authored inputs, not journal - from dyn:AbilityCheck / dyn:Stealth testType values to the frozen-mapping targets declared at srd-rules (d20-test/ability-check, skills/stealth). NOT in this transition, by ruling: journal/world/session dyn: carriers (reseed liabilities), the contracts pair dyn: lines incl. consequenceDescription (execution consumer-patch rider), the srd-record rungs (legacy publication). RIDER for slice 3: the fixture used a SKILL IRI as a testType; the mapped value is the skill individual - whether the endpoint contract wants it as testType or as a separate skill key is the platform contract question, not decided here.",
+  "hasCase": [
+    {
+      "type": "TransitionCase",
+      "id": "#dynamis-request-fixtures-endpoint",
+      "fixtureRepo": "github.com/spectacular-voyage/test-inn-ambush",
+      "operationId": "stagecraft.fixture.migrateDynamisRequestFixturesToEndpoint",
+      "fromRef": "b06b20bea29913ffb79f6aff168db2d72c59609e",
+      "toRef": "origin/b.31-dynamis-request-fixtures-endpoint",
+      "fromState": {
+        "type": "StateLocator",
+        "locatorKind": "gitRefState",
+        "ref": "b06b20bea29913ffb79f6aff168db2d72c59609e"
+      },
+      "toState": {
+        "type": "StateLocator",
+        "locatorKind": "gitRefState",
+        "ref": "origin/b.31-dynamis-request-fixtures-endpoint"
+      },
+      "hasFileExpectation": [
+        {
+          "id": "#authority-d20-warrants-d20-test-warrant-request-party-addressed-d20-test-warrant-request-party-addressed-json",
+          "type": "FileExpectation",
+          "path": "authority/d20-warrants/d20-test-warrant-request-party-addressed/d20-test-warrant-request-party-addressed.json",
+          "changeType": "updated",
+          "compareMode": "json"
+        },
+        {
+          "id": "#authority-d20-warrants-d20-test-warrant-request-hidden-result-d20-test-warrant-request-hidden-result-json",
+          "type": "FileExpectation",
+          "path": "authority/d20-warrants/d20-test-warrant-request-hidden-result/d20-test-warrant-request-hidden-result.json",
+          "changeType": "updated",
+          "compareMode": "json"
+        },
+        {
+          "id": "#authority-d20-tests-d20-test-request-live-roll-d20-test-request-live-roll-json",
+          "type": "FileExpectation",
+          "path": "authority/d20-tests/d20-test-request-live-roll/d20-test-request-live-roll.json",
+          "changeType": "updated",
+          "compareMode": "json"
+        },
+        {
+          "id": "#authority-d20-tests-d20-roll-request-resolves-warrant-d20-roll-request-resolves-warrant-json",
+          "type": "FileExpectation",
+          "path": "authority/d20-tests/d20-roll-request-resolves-warrant/d20-roll-request-resolves-warrant.json",
+          "changeType": "updated",
+          "compareMode": "json"
+        },
+        {
+          "id": "#authority-d20-tests-d20-roll-request-live-bare-d20-roll-request-live-bare-json",
+          "type": "FileExpectation",
+          "path": "authority/d20-tests/d20-roll-request-live-bare/d20-roll-request-live-bare.json",
+          "changeType": "updated",
+          "compareMode": "json"
+        },
+        {
+          "id": "#conformance-scenario-index-jsonld",
+          "type": "FileExpectation",
+          "path": "conformance/scenario-index.jsonld",
+          "changeType": "updated",
+          "compareMode": "json"
+        },
+        {
+          "id": "#conformance-83-dynamis-request-fixtures-endpoint-jsonld",
+          "type": "FileExpectation",
+          "path": "conformance/83-dynamis-request-fixtures-endpoint.jsonld",
+          "changeType": "added",
+          "compareMode": "json"
+        }
+      ],
+      "hasRdfExpectation": []
+    }
+  ]
+}

@@ -7,7 +7,7 @@
   "addressedActors": [
     "https://spectacular-voyage.github.io/test-inn-ambush/actant/elara"
   ],
-  "testType": "https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/Stealth",
+  "testType": "https://stagecraft.github.io/srd-rules/srd-5-2-1/skills/stealth",
   "targetNumber": 15,
   "hiddenDc": true,
   "hiddenResult": true,
