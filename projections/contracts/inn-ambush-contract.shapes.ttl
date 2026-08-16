@@ -1341,7 +1341,7 @@ sc-sh:TradeQuoteRequestShape
   sh:sparql [
     sh:message "duplicate same-denomination trade price lines on one offer: a price states each denomination once" ;
     sh:select """
-      PREFIX roleosum: <https://spectacular-voyage.github.io/stagecraft/ontology/roleosum/>
+      PREFIX rol: <https://roleosum.github.io/ontology/>
       PREFIX kosm: <https://kosmion.github.io/ontology/>
       SELECT $this WHERE {
         $this rol:hasCommitmentTerm ?lineA, ?lineB .
