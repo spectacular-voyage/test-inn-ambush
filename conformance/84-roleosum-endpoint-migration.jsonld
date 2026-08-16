@@ -98,7 +98,7 @@
             {
               "id": "#ask-talla-value-declaration-endpoint",
               "type": "SparqlAskAssertion",
-              "query": "ASK { <https://spectacular-voyage.github.io/test-inn-ambush/value-declaration/talla/honest-trader> a <https://roleosum.github.io/ontology/ValueDeclaration> ; <https://roleosum.github.io/ontology/declarationSubject> <https://spectacular-voyage.github.io/test-inn-ambush/npc/talla-mosswick> ; <https://roleosum.github.io/ontology/declarationTerm> <https://roleosum.github.io/ontology/valueKind_ideal> . }",
+              "query": "ASK { <https://spectacular-voyage.github.io/test-inn-ambush/value-declaration/talla/honest-trader> a <https://roleosum.github.io/ontology/ValueDeclaration> ; <https://roleosum.github.io/ontology/valueDeclarationSubject> <https://spectacular-voyage.github.io/test-inn-ambush/npc/talla-mosswick> ; <https://roleosum.github.io/ontology/declarationTerm> <https://roleosum.github.io/ontology/valueKind_ideal> . }",
               "expectedBoolean": true
             }
           ]

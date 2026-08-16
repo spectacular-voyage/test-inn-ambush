@@ -1186,7 +1186,7 @@
 	<https://spectacular-voyage.github.io/stagecraft/ontology/inScenario> <https://spectacular-voyage.github.io/test-inn-ambush/scenario/inn-ambush> ;
 	<https://spectacular-voyage.github.io/stagecraft/ontology/inTemporalScope> <https://spectacular-voyage.github.io/test-inn-ambush/temporal-scope/inn-scene> .
 <https://spectacular-voyage.github.io/test-inn-ambush/value-declaration/talla/honest-trader> a <https://roleosum.github.io/ontology/ValueDeclaration> ;
-	<https://roleosum.github.io/ontology/declarationSubject> <https://spectacular-voyage.github.io/test-inn-ambush/npc/talla-mosswick> ;
+	<https://roleosum.github.io/ontology/valueDeclarationSubject> <https://spectacular-voyage.github.io/test-inn-ambush/npc/talla-mosswick> ;
 	<https://roleosum.github.io/ontology/declarationTerm> <https://roleosum.github.io/ontology/valueKind_ideal> ;
 	<https://roleosum.github.io/ontology/declarationProse> "A trusted trader keeps honest prices and useful wares." ;
 	<https://spectacular-voyage.github.io/stagecraft/ontology/acceptedFrom> "2026-07-07T19:26:44Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
