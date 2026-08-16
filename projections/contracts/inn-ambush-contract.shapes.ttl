@@ -1098,7 +1098,7 @@ sc-sh:TransferActShape
   sh:sparql [
     sh:message "Fungible TransferAct must record exactly one kosm:quantity." ;
     sh:select """
-      PREFIX possessio: <https://spectacular-voyage.github.io/stagecraft/ontology/possessio/>
+      PREFIX kosm: <https://kosmion.github.io/ontology/>
       SELECT $this WHERE {
         $this kosm:transferItem ?item .
         ?item a kosm:FungibleKind .
@@ -1121,7 +1121,7 @@ sc-sh:TransferActNonFungibleQuantityShape
   sh:sparql [
     sh:message "Non-fungible TransferAct must not carry kosm:quantity." ;
     sh:select """
-      PREFIX possessio: <https://spectacular-voyage.github.io/stagecraft/ontology/possessio/>
+      PREFIX kosm: <https://kosmion.github.io/ontology/>
       SELECT $this WHERE {
         $this kosm:quantity ?quantity .
         FILTER NOT EXISTS {
