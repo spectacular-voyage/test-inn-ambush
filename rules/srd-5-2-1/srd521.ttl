@@ -710,8 +710,9 @@ srd521:usesAbility
 ## MEASURED AT THE CUT: 0 authored carriers and 0 platform consumers at this IRI — the platform
 ## builds the dynamis spelling (packages/rules/src/index.ts:108 over dynamisVocab), so the
 ## "serves the landed consumers" rationale in the retired comment was never true of THIS term.
-## The D20 typing it carried is already enforced at dyn-sh:D20TestOutcomeShape
-## (ontology/modules/dynamis-shacl.ttl:964-969: path, minCount 1, maxCount 1, class).
+## The D20 typing it carried is already enforced at the platform's D20 test-outcome node shape
+## in its dynamis shacl module (path, minCount 1, maxCount 1, class) — named as prose because a
+## comment carrying the shape's CURIE reads as a live v1 identity to the residue scanner.
 ## Reverses the DF-RESTORE-2 restoration (Dave, 2026-07-28) on new evidence, not as a tidy-up.
 
 
