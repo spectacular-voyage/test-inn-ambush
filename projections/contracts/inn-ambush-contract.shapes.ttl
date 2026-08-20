@@ -563,13 +563,6 @@ sc-sh:D20TestRequestShape
     sh:node sc-sh:D20RollModifierInputShape ;
   ] ;
   sh:property [
-    sh:path dyn:consequenceDescription ;
-    sh:datatype xsd:string ;
-    sh:minLength 1 ;
-    sh:pattern "\\S" ;
-    sh:maxCount 1 ;
-  ] ;
-  sh:property [
     sh:path sc:sourceProjection ;
     sh:node sc-sh:SourceProjectionShape ;
     sh:minCount 1 ;
