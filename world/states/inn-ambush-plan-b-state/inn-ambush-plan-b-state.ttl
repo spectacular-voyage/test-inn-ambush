@@ -899,9 +899,10 @@
 	a <http://www.w3.org/2006/time#Instant> , <https://spectacular-voyage.github.io/stagecraft/ontology/ClockAnchor> , <https://spectacular-voyage.github.io/stagecraft/ontology/TemporalAnchor> .
 <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/plan-b-ttl> a <https://semantic-flow.github.io/sflo/ontology/RdfDocument> ;
 	<https://schema.org/contentUrl> "dependencies/github.com/spectacular-voyage/test-inn-ambush/authority/journals/plan-b/plan-b.ttl" .
+## RETIRED sc:hasHistory, sc:hasBranch 2026-08-20 ([trek-residual-c-five-disposition], steward's word (a)): undeclared in
+##   every ontology, read by nothing; lineage is the founding act's and the runtime derives history/main from the mesh
+##   base. The typed <history/main> and <branch/plan-b> individuals stay. This file carried no comments before this one.
 <https://spectacular-voyage.github.io/test-inn-ambush/scenario/inn-ambush> a <https://spectacular-voyage.github.io/stagecraft/ontology/Scenario> ;
-	<https://spectacular-voyage.github.io/stagecraft/ontology/hasHistory> <https://spectacular-voyage.github.io/test-inn-ambush/history/main> ;
-	<https://spectacular-voyage.github.io/stagecraft/ontology/hasBranch> <https://spectacular-voyage.github.io/test-inn-ambush/branch/plan-b> ;
 	<https://spectacular-voyage.github.io/stagecraft/ontology/hasWorldTimePolicy> <https://spectacular-voyage.github.io/test-inn-ambush/world-time-policy/held-elastic> , <https://spectacular-voyage.github.io/test-inn-ambush/world-time-policy/flowing-server> ;
 	<https://spectacular-voyage.github.io/stagecraft/ontology/hasSpatialModel> <https://spectacular-voyage.github.io/stagecraft/ontology/spatial-model/r0-zone-graph> ;
 	<https://spectacular-voyage.github.io/stagecraft/ontology/temporaenum/hasCalendar> <https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar> ;
