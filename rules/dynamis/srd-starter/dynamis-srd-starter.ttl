@@ -1,10 +1,12 @@
+@prefix cat: <https://categoriae.github.io/ontology/> .
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
-@prefix dyn: <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix par: <https://participatorium.github.io/ontology/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sc: <https://spectacular-voyage.github.io/stagecraft/ontology/> .
+@prefix srd521: <https://stagecraft.github.io/srd-rules/srd-5-2-1/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-starter>
@@ -19,27 +21,23 @@
 
 <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-starter/decision-table-csv>
   a dcat:Distribution ;
-  dcterms:title "Dynamis SRD starter decision table CSV" ;
+  dcterms:title "SRD starter decision table CSV" ;
   dcat:downloadURL <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-starter/dynamis-srd-starter.decision-table.csv> .
 
-dyn:SrdStarterActionTable
-  a dyn:DecisionTable ;
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-starter/action-table>
+  a par:DecisionTable ;
   dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-starter> ;
-  dyn:hitPolicy "first" ;
-  dyn:csvProjection <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-starter/dynamis-srd-starter.decision-table.csv> ;
-  dyn:hasDecisionRule dyn:MovementDecisionRule, dyn:SpeakDecisionRule, dyn:AttuneDecisionRule .
+  srd521:hitPolicy "first" .
 
-dyn:Move
-  a dyn:ActionType, owl:Class ;
+par:Move
+  a par:ActionType ;
   rdfs:label "Movement" ;
-  dyn:verbIri dyn:move ;
-  dyn:preconditionAsk dyn:MovePreconditionAsk ;
-  dyn:consequenceTemplate dyn:MoveConsequenceTemplate ;
-  dyn:punningDecision "ActionType is an individual rules record and an OWL class for move attempts in this starter package." ;
-  dyn:srdReference "SRD 5.1 movement rules" .
+  par:preconditionAsk <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-starter/ask/move> ;
+  par:consequenceTemplate <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-starter/template/move> ;
+  srd521:srdReference "SRD 5.1 movement rules" .
 
-dyn:MovePreconditionAsk
-  a dyn:SparqlAskPrecondition ;
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-starter/ask/move>
+  a par:SparqlAskPrecondition ;
   rdf:value """ASK {
   GRAPH ?stateGraph {
     VALUES (?actant ?fromPlace ?toPlace ?asOf) { (?actantValue ?fromPlaceValue ?toPlaceValue ?asOfValue) }
@@ -57,38 +55,35 @@ dyn:MovePreconditionAsk
   }
 }""" .
 
-dyn:MoveConsequenceTemplate
-  a dyn:ConsequenceTemplate ;
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-starter/template/move>
+  a par:ConsequenceTemplate ;
   rdf:value "Close the current sc:locatedIn relator for the actant and open a new sc:LocatedInRelator at the destination place, carrying authority and committed-event provenance." .
 
-dyn:MovementDecisionRule
-  a dyn:DecisionRule ;
-  dyn:csvRuleId "movement" ;
-  dyn:actionType dyn:Move ;
-  dyn:verbIri dyn:move ;
-  dyn:preconditionAsk dyn:MovePreconditionAsk ;
-  dyn:consequenceTemplate dyn:MoveConsequenceTemplate ;
-  dyn:srdReference "SRD 5.1 movement rules" ;
-  dyn:starterStatus "starter" .
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-starter/rule/movement>
+  a par:DecisionRule ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-starter/action-table> ;
+  srd521:actionType par:Move ;
+  par:preconditionAsk <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-starter/ask/move> ;
+  par:consequenceTemplate <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-starter/template/move> ;
+  srd521:srdReference "SRD 5.1 movement rules" ;
+  srd521:starterStatus "starter" .
 
-dyn:Speak
-  a dyn:ActionType, owl:Class ;
+par:Speak
+  a par:ActionType ;
   rdfs:label "Speak" ;
-  dyn:verbIri dyn:speak ;
-  dyn:preconditionAsk dyn:SpeakPreconditionAsk ;
-  dyn:consequenceTemplate dyn:SpeechEventTemplate ;
-  dyn:punningDecision "ActionType is an individual rules record and an OWL class for speak attempts in this starter package." ;
-  dyn:srdReference "Stagecraft dialogue doctrine plus SRD 5.1 silence mask pattern" .
+  par:preconditionAsk <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-starter/ask/speak> ;
+  par:consequenceTemplate <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-starter/template/speech-event> ;
+  srd521:srdReference "Stagecraft dialogue doctrine plus SRD 5.1 silence mask pattern" .
 
-dyn:SpeakPreconditionAsk
-  a dyn:SparqlAskPrecondition ;
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-starter/ask/speak>
+  a par:SparqlAskPrecondition ;
   rdf:value """ASK {
   GRAPH ?stateGraph {
-    VALUES (?actant ?actionType ?asOf) { (?actantValue dyn:Speak ?asOfValue) }
+    VALUES (?actant ?actionType ?asOf) { (?actantValue par:Speak ?asOfValue) }
     FILTER NOT EXISTS {
-      ?mask a dyn:AffordanceMask ;
-        dyn:masksActionType ?actionType ;
-        dyn:maskedActant ?actant ;
+      ?mask a par:AffordanceMask ;
+        par:masksActionType ?actionType ;
+        par:maskedActant ?actant ;
         sc:acceptedFrom ?acceptedFrom .
       FILTER(?acceptedFrom <= ?asOf)
       FILTER NOT EXISTS {
@@ -99,39 +94,36 @@ dyn:SpeakPreconditionAsk
   }
 }""" .
 
-dyn:SpeechEventTemplate
-  a dyn:ConsequenceTemplate ;
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-starter/template/speech-event>
+  a par:ConsequenceTemplate ;
   rdf:value "Commit a speech event without a state mutation; any founded effect is a separate tier-2 or tier-3 record." .
 
-dyn:SpeakDecisionRule
-  a dyn:DecisionRule ;
-  dyn:csvRuleId "speak" ;
-  dyn:actionType dyn:Speak ;
-  dyn:verbIri dyn:speak ;
-  dyn:preconditionAsk dyn:SpeakPreconditionAsk ;
-  dyn:consequenceTemplate dyn:SpeechEventTemplate ;
-  dyn:srdReference "Stagecraft dialogue doctrine plus SRD 5.1 silence mask pattern" ;
-  dyn:starterStatus "starter" .
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-starter/rule/speak>
+  a par:DecisionRule ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-starter/action-table> ;
+  srd521:actionType par:Speak ;
+  par:preconditionAsk <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-starter/ask/speak> ;
+  par:consequenceTemplate <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-starter/template/speech-event> ;
+  srd521:srdReference "Stagecraft dialogue doctrine plus SRD 5.1 silence mask pattern" ;
+  srd521:starterStatus "starter" .
 
-dyn:Attune
-  a dyn:ActionType, owl:Class ;
+srd521:Attune
+  a par:ActionType ;
   rdfs:label "Attune" ;
-  dyn:verbIri dyn:attune ;
-  dyn:preconditionAsk dyn:AttunePreconditionAsk ;
-  dyn:consequenceTemplate dyn:AttuneConsequenceTemplate ;
-  dyn:punningDecision "ActionType is an individual rules record and an OWL class for attune attempts in this starter package." ;
-  dyn:srdReference "SRD 5.1 attunement rules" .
+  par:preconditionAsk <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-starter/ask/attune> ;
+  par:consequenceTemplate <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-starter/template/attune> ;
+  srd521:srdReference "SRD 5.1 attunement rules" .
 
-dyn:AttunePreconditionAsk
-  a dyn:SparqlAskPrecondition ;
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-starter/ask/attune>
+  a par:SparqlAskPrecondition ;
   rdf:value """ASK {
   GRAPH ?stateGraph {
     VALUES (?actant ?item ?asOf) { (?actantValue ?itemValue ?asOfValue) }
-    ?item dyn:affords dyn:Attune .
+    ?item par:affords srd521:Attune .
     FILTER NOT EXISTS {
-      ?mask a dyn:AffordanceMask ;
-        dyn:masksActionType dyn:Attune ;
-        dyn:maskedActant ?actant ;
+      ?mask a par:AffordanceMask ;
+        par:masksActionType srd521:Attune ;
+        par:maskedActant ?actant ;
         sc:acceptedFrom ?acceptedFrom .
       FILTER(?acceptedFrom <= ?asOf)
       FILTER NOT EXISTS {
@@ -142,16 +134,15 @@ dyn:AttunePreconditionAsk
   }
 }""" .
 
-dyn:AttuneConsequenceTemplate
-  a dyn:ConsequenceTemplate ;
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-starter/template/attune>
+  a par:ConsequenceTemplate ;
   rdf:value "Open an interval-qualified attunement relator between the actant and item when authority accepts the completed action." .
 
-dyn:AttuneDecisionRule
-  a dyn:DecisionRule ;
-  dyn:csvRuleId "attune" ;
-  dyn:actionType dyn:Attune ;
-  dyn:verbIri dyn:attune ;
-  dyn:preconditionAsk dyn:AttunePreconditionAsk ;
-  dyn:consequenceTemplate dyn:AttuneConsequenceTemplate ;
-  dyn:srdReference "SRD 5.1 attunement rules" ;
-  dyn:starterStatus "stretch" .
+<https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-starter/rule/attune>
+  a par:DecisionRule ;
+  dcterms:isPartOf <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-starter/action-table> ;
+  srd521:actionType srd521:Attune ;
+  par:preconditionAsk <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-starter/ask/attune> ;
+  par:consequenceTemplate <https://spectacular-voyage.github.io/test-inn-ambush/rules/dynamis/srd-starter/template/attune> ;
+  srd521:srdReference "SRD 5.1 attunement rules" ;
+  srd521:starterStatus "stretch" .

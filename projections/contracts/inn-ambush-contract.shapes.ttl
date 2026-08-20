@@ -1,6 +1,7 @@
 @prefix sc: <https://spectacular-voyage.github.io/stagecraft/ontology/> .
 @prefix sc-sh: <https://spectacular-voyage.github.io/stagecraft/shacl/> .
-@prefix dyn: <https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/> .
+@prefix par: <https://participatorium.github.io/ontology/> .
+@prefix srd521: <https://stagecraft.github.io/srd-rules/srd-5-2-1/> .
 @prefix psy: <https://psychikon.github.io/ontology/> .
 @prefix cat: <https://categoriae.github.io/ontology/> .
 @prefix kosm: <https://kosmion.github.io/ontology/> .
@@ -477,7 +478,7 @@ sc-sh:CheckpointRequestShape
 sc-sh:D20RollModifierInputShape
   a sh:NodeShape ;
   sh:property [
-    sh:path dyn:modifierKind ;
+    sh:path par:modifierKind ;
     sh:in (
       "ability"
       "proficiency"
@@ -487,13 +488,13 @@ sc-sh:D20RollModifierInputShape
     sh:maxCount 1 ;
   ] ;
   sh:property [
-    sh:path dyn:modifierSource ;
+    sh:path par:modifierSource ;
     sh:nodeKind sh:IRI ;
     sh:minCount 1 ;
     sh:maxCount 1 ;
   ] ;
   sh:property [
-    sh:path dyn:modifierValue ;
+    sh:path par:modifierValue ;
     sh:datatype xsd:integer ;
     sh:minCount 1 ;
     sh:maxCount 1 ;
@@ -529,29 +530,29 @@ sc-sh:D20TestRequestShape
     sh:maxCount 1 ;
   ] ;
   sh:property [
-    sh:path dyn:warrantedActor ;
+    sh:path par:warrantedActant ;
     sh:nodeKind sh:IRI ;
     sh:minCount 1 ;
     sh:maxCount 1 ;
   ] ;
   sh:property [
-    sh:path dyn:warrantedTestType ;
+    sh:path par:warrantedTestType ;
     sh:nodeKind sh:IRI ;
     sh:minCount 1 ;
     sh:maxCount 1 ;
   ] ;
   sh:property [
-    sh:path dyn:targetNumber ;
+    sh:path par:targetNumber ;
     sh:datatype xsd:integer ;
     sh:maxCount 1 ;
   ] ;
   sh:property [
-    sh:path dyn:resolvesWarrant ;
+    sh:path par:resolvesWarrant ;
     sh:nodeKind sh:IRI ;
     sh:maxCount 1 ;
   ] ;
   sh:property [
-    sh:path dyn:diceExpression ;
+    sh:path par:diceExpression ;
     sh:datatype xsd:string ;
     sh:minLength 1 ;
     sh:pattern "\\S" ;
@@ -559,7 +560,7 @@ sc-sh:D20TestRequestShape
     sh:maxCount 1 ;
   ] ;
   sh:property [
-    sh:path dyn:rollModifier ;
+    sh:path par:rollModifier ;
     sh:node sc-sh:D20RollModifierInputShape ;
   ] ;
   sh:property [
@@ -599,7 +600,7 @@ sc-sh:TableRollRequestShape
     sh:maxCount 1 ;
   ] ;
   sh:property [
-    sh:path dyn:diceExpression ;
+    sh:path par:diceExpression ;
     sh:datatype xsd:string ;
     sh:minLength 1 ;
     sh:pattern "\\S" ;
@@ -630,32 +631,32 @@ sc-sh:TableRollRequestShape
     sh:maxCount 1 ;
   ] ;
   sh:property [
-    sh:path dyn:warrantedActor ;
+    sh:path par:warrantedActant ;
     sh:maxCount 0 ;
     sh:message "TableRollRequest is table-layer dice evidence and must not name an actant." ;
   ] ;
   sh:property [
-    sh:path dyn:warrantedTestType ;
+    sh:path par:warrantedTestType ;
     sh:maxCount 0 ;
     sh:message "TableRollRequest is table-layer dice evidence and must not name a D20 test type." ;
   ] ;
   sh:property [
-    sh:path dyn:targetNumber ;
+    sh:path par:targetNumber ;
     sh:maxCount 0 ;
     sh:message "TableRollRequest is table-layer dice evidence and must not carry a target number." ;
   ] ;
   sh:property [
-    sh:path dyn:resolvesWarrant ;
+    sh:path par:resolvesWarrant ;
     sh:maxCount 0 ;
     sh:message "TableRollRequest cannot resolve a warrant; warrants require character context." ;
   ] ;
   sh:property [
-    sh:path dyn:mechanicalResult ;
+    sh:path par:mechanicalResult ;
     sh:maxCount 0 ;
     sh:message "TableRollRequest is evidence only and must not claim a success judgment." ;
   ] ;
   sh:property [
-    sh:path dyn:adjudicatedResult ;
+    sh:path par:adjudicatedResult ;
     sh:maxCount 0 ;
     sh:message "TableRollRequest is evidence only and must not claim an adjudicated result." ;
   ] .
@@ -684,13 +685,13 @@ sc-sh:D20TestAdjudicationRequestShape
     sh:maxCount 1 ;
   ] ;
   sh:property [
-    sh:path dyn:resolvesWarrant ;
+    sh:path par:resolvesWarrant ;
     sh:nodeKind sh:IRI ;
     sh:minCount 1 ;
     sh:maxCount 1 ;
   ] ;
   sh:property [
-    sh:path dyn:consequenceDescription ;
+    sh:path sc:consequenceDescription ;
     sh:datatype xsd:string ;
     sh:minLength 1 ;
     sh:pattern "\\S" ;
@@ -745,28 +746,28 @@ sc-sh:D20TestWarrantRequestShape
     sh:maxCount 1 ;
   ] ;
   sh:property [
-    sh:path dyn:warrantedActor ;
+    sh:path par:warrantedActant ;
     sh:nodeKind sh:IRI ;
     sh:minCount 1 ;
   ] ;
   sh:property [
-    sh:path dyn:warrantedTestType ;
+    sh:path par:warrantedTestType ;
     sh:nodeKind sh:IRI ;
     sh:minCount 1 ;
     sh:maxCount 1 ;
   ] ;
   sh:property [
-    sh:path dyn:targetNumber ;
+    sh:path par:targetNumber ;
     sh:datatype xsd:integer ;
     sh:maxCount 1 ;
   ] ;
   sh:property [
-    sh:path dyn:hiddenTargetNumber ;
+    sh:path par:hiddenTargetNumber ;
     sh:datatype xsd:boolean ;
     sh:maxCount 1 ;
   ] ;
   sh:property [
-    sh:path dyn:hiddenResult ;
+    sh:path par:hiddenResult ;
     sh:datatype xsd:boolean ;
     sh:maxCount 1 ;
   ] ;
@@ -779,7 +780,7 @@ sc-sh:D20TestWarrantRequestShape
     sh:maxCount 1 ;
   ] ;
   sh:property [
-    sh:path dyn:adjudicatesIntent ;
+    sh:path par:adjudicatesIntent ;
     sh:nodeKind sh:IRI ;
     sh:maxCount 1 ;
   ] ;
@@ -820,7 +821,7 @@ sc-sh:D20TestWarrantWithdrawalRequestShape
     sh:maxCount 1 ;
   ] ;
   sh:property [
-    sh:path dyn:withdrawsWarrant ;
+    sh:path par:withdrawsWarrant ;
     sh:nodeKind sh:IRI ;
     sh:minCount 1 ;
     sh:maxCount 1 ;
@@ -869,13 +870,13 @@ sc-sh:D20TestWarrantDeclineRequestShape
     sh:maxCount 1 ;
   ] ;
   sh:property [
-    sh:path dyn:declinesWarrant ;
+    sh:path par:declinesWarrant ;
     sh:nodeKind sh:IRI ;
     sh:minCount 1 ;
     sh:maxCount 1 ;
   ] ;
   sh:property [
-    sh:path dyn:declinedWarrantActor ;
+    sh:path par:declinedWarrantActant ;
     sh:nodeKind sh:IRI ;
     sh:minCount 1 ;
     sh:maxCount 1 ;
@@ -3060,18 +3061,18 @@ sc-sh:MovementConsequenceShape
     sh:maxCount 1 ;
   ] ;
   sh:property [
-    sh:path dyn:actionType ;
-    sh:hasValue dyn:Move ;
+    sh:path srd521:actionType ;
+    sh:hasValue par:Move ;
     sh:minCount 1 ;
     sh:maxCount 1 ;
   ] ;
   sh:property [
-    sh:path dyn:adjudicatesIntent ;
+    sh:path par:adjudicatesIntent ;
     sh:maxCount 0 ;
     sh:message "A no-roll movement consequence links directly to the intent instead of minting a D20 warrant." ;
   ] ;
   sh:property [
-    sh:path dyn:consequenceOfOutcome ;
+    sh:path par:consequenceOfOutcome ;
     sh:maxCount 0 ;
     sh:message "A no-roll movement consequence must not masquerade as a D20 outcome consequence." ;
   ] .

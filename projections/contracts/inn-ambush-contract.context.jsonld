@@ -4,7 +4,8 @@
     "@vocab": "https://spectacular-voyage.github.io/stagecraft/ontology/",
     "sc": "https://spectacular-voyage.github.io/stagecraft/ontology/",
     "sflo": "https://semantic-flow.github.io/sflo/ontology/",
-    "dyn": "https://spectacular-voyage.github.io/stagecraft/ontology/dynamis/",
+    "par": "https://participatorium.github.io/ontology/",
+    "srd521": "https://stagecraft.github.io/srd-rules/srd-5-2-1/",
     "psy": "https://psychikon.github.io/ontology/",
     "cat": "https://categoriae.github.io/ontology/",
     "kosm": "https://kosmion.github.io/ontology/",
@@ -465,7 +466,7 @@
       "@id": "sc:D20TestRequest",
       "@context": {
         "warrant": {
-          "@id": "dyn:resolvesWarrant",
+          "@id": "par:resolvesWarrant",
           "@type": "@id"
         }
       }
@@ -474,7 +475,7 @@
       "@id": "sc:D20TestAdjudicationRequest",
       "@context": {
         "warrant": {
-          "@id": "dyn:resolvesWarrant",
+          "@id": "par:resolvesWarrant",
           "@type": "@id"
         }
       }
@@ -483,7 +484,7 @@
       "@id": "sc:D20TestWarrantRequest",
       "@context": {
         "addressedActors": {
-          "@id": "dyn:warrantedActor",
+          "@id": "par:warrantedActant",
           "@type": "@id"
         }
       }
@@ -492,7 +493,7 @@
       "@id": "sc:D20TestWarrantWithdrawalRequest",
       "@context": {
         "warrant": {
-          "@id": "dyn:withdrawsWarrant",
+          "@id": "par:withdrawsWarrant",
           "@type": "@id"
         }
       }
@@ -501,11 +502,11 @@
       "@id": "sc:D20TestWarrantDeclineRequest",
       "@context": {
         "warrant": {
-          "@id": "dyn:declinesWarrant",
+          "@id": "par:declinesWarrant",
           "@type": "@id"
         },
         "actor": {
-          "@id": "dyn:declinedWarrantActor",
+          "@id": "par:declinedWarrantActant",
           "@type": "@id"
         }
       }
@@ -554,41 +555,41 @@
       }
     },
     "actor": {
-      "@id": "dyn:warrantedActor",
+      "@id": "par:warrantedActant",
       "@type": "@id"
     },
     "testType": {
-      "@id": "dyn:warrantedTestType",
+      "@id": "par:warrantedTestType",
       "@type": "@id"
     },
     "targetNumber": {
-      "@id": "dyn:targetNumber",
+      "@id": "par:targetNumber",
       "@type": "xsd:integer"
     },
     "hiddenDc": {
-      "@id": "dyn:hiddenTargetNumber",
+      "@id": "par:hiddenTargetNumber",
       "@type": "xsd:boolean"
     },
     "hiddenResult": {
-      "@id": "dyn:hiddenResult",
+      "@id": "par:hiddenResult",
       "@type": "xsd:boolean"
     },
-    "diceExpression": "dyn:diceExpression",
+    "diceExpression": "par:diceExpression",
     "modifiers": {
-      "@id": "dyn:rollModifier",
+      "@id": "par:rollModifier",
       "@context": {
-        "kind": "dyn:modifierKind",
+        "kind": "par:modifierKind",
         "source": {
-          "@id": "dyn:modifierSource",
+          "@id": "par:modifierSource",
           "@type": "@id"
         },
         "value": {
-          "@id": "dyn:modifierValue",
+          "@id": "par:modifierValue",
           "@type": "xsd:integer"
         }
       }
     },
-    "consequenceDescription": "dyn:consequenceDescription",
+    "consequenceDescription": "sc:consequenceDescription",
     "doorBarred": {
       "@id": "sc:barred",
       "@type": "xsd:boolean"
@@ -656,11 +657,11 @@
     "purpose": "dcterms:description",
     "reason": "dcterms:description",
     "adjudicatesIntent": {
-      "@id": "dyn:adjudicatesIntent",
+      "@id": "par:adjudicatesIntent",
       "@type": "@id"
     },
     "actionType": {
-      "@id": "dyn:actionType",
+      "@id": "srd521:actionType",
       "@type": "@id"
     },
     "transferActKind": {
