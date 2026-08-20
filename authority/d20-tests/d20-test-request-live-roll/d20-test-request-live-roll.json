@@ -20,7 +20,6 @@
       "value": 2
     }
   ],
-  "consequenceDescription": "Elara rolls 1d20+2 vs DC 15.",
   "sourceProjection": {
     "observedProjectionState": "https://spectacular-voyage.github.io/test-inn-ambush/branch/plan-b",
     "participantProjection": "https://spectacular-voyage.github.io/test-inn-ambush/projection/alice/inn-ambush-plan-b"

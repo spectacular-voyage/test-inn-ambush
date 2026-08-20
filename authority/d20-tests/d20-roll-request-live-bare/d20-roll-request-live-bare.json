@@ -13,7 +13,6 @@
   "testType": "https://stagecraft.github.io/srd-rules/srd-5-2-1/d20-test/ability-check",
   "diceExpression": "1d20",
   "modifiers": [],
-  "consequenceDescription": "Elara rolls 1d20.",
   "sourceProjection": {
     "observedProjectionState": "https://spectacular-voyage.github.io/test-inn-ambush/branch/plan-b",
     "participantProjection": "https://spectacular-voyage.github.io/test-inn-ambush/projection/alice/inn-ambush-plan-b"
