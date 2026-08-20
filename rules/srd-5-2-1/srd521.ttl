@@ -55,7 +55,8 @@ srd521:DamageType
 srd521:SpellSchool
   a cat:Kind ;
   cat:instanceCategory cat:Individual ;
-  rdfs:label "Spell school"@en .
+  rdfs:label "Spell school"@en ;
+  rdfs:comment "A school of magic as the SRD 5.2.1 edition names it, used to classify spells. It is a reusable rules-data concept, not anything a spell or caster does in play."@en .
 
 srd521:ConditionEffectType
   a cat:Kind ;
@@ -173,12 +174,14 @@ srd521:fungibleKind_pp
 srd521:ConditionDefinition
   a cat:Kind ;
   cat:instanceCategory cat:Description ;
-  rdfs:label "Condition definition"@en .
+  rdfs:label "Condition definition"@en ;
+  rdfs:comment "A condition as the SRD 5.2.1 edition defines it, carrying the edition's prose and one row for each effect the condition imposes. It is rules-package data; it is not a claim that any live creature or character currently has the condition."@en .
 
 srd521:ConditionEffect
   a cat:Kind ;
   cat:instanceCategory cat:Description ;
-  rdfs:label "Condition effect"@en .
+  rdfs:label "Condition effect"@en ;
+  rdfs:comment "One effect that a condition imposes, taken row by row from the edition's prose for that condition. Where the effect takes a whole family of actions away (a condition that forbids attacking, for instance), the row records that withdrawal as data; the row does not itself apply the effect to anyone."@en .
 
 srd521:D20SkillRule
   a cat:Kind ;
@@ -190,32 +193,38 @@ srd521:D20SkillRule
 srd521:ItemActionOption
   a cat:Kind ;
   cat:instanceCategory cat:Description ;
-  rdfs:label "Item action option"@en .
+  rdfs:label "Item action option"@en ;
+  rdfs:comment "A row from the edition's equipment tables stating that an item presents an action option, such as a melee attack or a thrown attack with a weapon. It names the kind of D20 test that option would use, as data; it does not authorize anyone to take the action in play."@en .
 
 srd521:SpellDefinition
   a cat:Kind ;
   cat:instanceCategory cat:Description ;
-  rdfs:label "Spell definition"@en .
+  rdfs:label "Spell definition"@en ;
+  rdfs:comment "A spell as the SRD 5.2.1 edition defines it, held as reusable rules data. It is not a prepared spell, a spell slot, a commitment to cast, or the resolution of a spell's effect."@en .
 
 srd521:SpellClassAvailability
   a cat:Kind ;
   cat:instanceCategory cat:Description ;
-  rdfs:label "Spell class availability"@en .
+  rdfs:label "Spell class availability"@en ;
+  rdfs:comment "A row stating that a character class's spell list in the SRD 5.2.1 edition includes a spell. It records a table fact and nothing more; it is not a class package, a preparation rule, a spell-slot rule, or a claim about any character's known or prepared spells."@en .
 
 srd521:SpellExpression
   a cat:Kind ;
   cat:instanceCategory cat:Description ;
-  rdfs:label "Spell expression"@en .
+  rdfs:label "Spell expression"@en ;
+  rdfs:comment "A damage or healing quantity taken from a spell's description in the edition, recorded as a dice expression or a fixed amount. It preserves the number as data; it does not encode the spell's effect or how that effect resolves."@en .
 
 srd521:AreaOfEffectShape
   a cat:Kind ;
   cat:instanceCategory cat:Description ;
-  rdfs:label "Area-of-effect shape"@en .
+  rdfs:label "Area-of-effect shape"@en ;
+  rdfs:comment "The shape of a spell's area of effect as the SRD 5.2.1 edition states it, such as a sphere, cone, cube, line, or cylinder. It is reusable rules data describing the shape only; which creatures and places a live casting actually takes in is not settled by this record but adjudicated at the table against the scene's geometry."@en .
 
 srd521:WeaponPropertyDefinition
   a cat:Kind ;
   cat:instanceCategory cat:Description ;
-  rdfs:label "Weapon property definition"@en .
+  rdfs:label "Weapon property definition"@en ;
+  rdfs:comment "A weapon property as the SRD 5.2.1 edition describes it, kept as the edition's prose. The record is data only: reading a property as a parameter or precondition of an attack is a separate, later interpretation and is not made by this record."@en .
 
 #################################################################
 # Weapon-definition and D20 concretions over kosmion/participatorium (weapon records are Descriptions as of the 2026-07-27 re-home)
@@ -291,13 +300,15 @@ srd521:D20RollEvidence
   a cat:Kind ;
   cat:specializes par:RollEvidence ;
   cat:instanceCategory cat:InformationObject ;
-  rdfs:label "D20 roll evidence"@en .
+  rdfs:label "D20 roll evidence"@en ;
+  rdfs:comment "The committed evidence record of one roll in the edition's D20 family: an attack roll, ability check, or saving throw. It holds the dice expression, the raw faces rolled, each modifier with its source, the total, and how the roll was produced. It records the roll only; whether the roll succeeded is decided in a separate outcome record, never here."@en .
 
 srd521:D20RollModifier
   a cat:Kind ;
   cat:specializes par:ResolutionParameter ;
   cat:instanceCategory cat:Parameter ;
-  rdfs:label "D20 roll modifier"@en .
+  rdfs:label "D20 roll modifier"@en ;
+  rdfs:comment "One modifier contributing to a D20 roll's total, carried by that roll's evidence record: a signed whole number, the source it comes from, and its kind, such as an ability modifier, a proficiency bonus, or a circumstance bonus."@en .
 
 srd521:DifficultyClass
   a cat:Kind ;
@@ -336,7 +347,8 @@ srd521:D20TestConsequence
   a cat:Kind ;
   cat:specializes par:ConsequenceTemplate ;
   cat:instanceCategory cat:Description ;
-  rdfs:label "D20 test consequence"@en .
+  rdfs:label "D20 test consequence"@en ;
+  rdfs:comment "A consequence that follows from an adjudicated D20 test, citing the outcome it follows from. Changes of state and withdrawals of actions are attached here or downstream of here; they are never made by rewriting the warrant that called for the test, the roll evidence, or the outcome record."@en .
 
 #################################################################
 # Edition action-types
@@ -533,12 +545,17 @@ srd521:damageEvidenceMode
 # Nine-fold alignment declaration terms
 #################################################################
 
+## SPECIALIZES rol:ValueSchemeTerm 2026-08-16 (CARD AV (e), Dave 2026-08-15; the edge lands with
+##   the scheme mint): the family reaches theory through the TERM-FAMILY supertype, never through
+##   rol:ValueScheme itself — a term family is not a scheme, and specializing the scheme would make
+##   every alignment term a scheme instance.
 srd521:AlignmentTerm
   a cat:Kind ;
+  cat:specializes rol:ValueSchemeTerm ;
   cat:instanceCategory cat:Individual ;
   rdfs:label "Alignment term"@en ;
-  rdfs:comment "The edition family of declaration terms usable as rol:declarationTerm values on rol:AlignmentDeclaration records. Nine of its members sit on a two-axis grid and carry one rol:valueAxisPosition per axis; srd521:unaligned sits off the grid and is classified srd521:OffAxisAlignmentTerm instead."@en ;
-  rdfs:seeAlso rol:AlignmentDeclaration, rol:declarationTerm,
+  rdfs:comment "The edition family of declaration terms usable as rol:declarationTerm values on rol:ValueDeclaration records (rol:AlignmentDeclaration RETIRED 2026-08-15 with no successor: rol:ValueDeclaration absorbs it, and the alignment-vs-free-form discriminator is readable off the term rather than restated on the record). The family is governed by srd521:alignmentScheme, this edition's rol:ValueScheme: nine members sit on its two-axis grid and carry one rol:valueAxisPosition per axis; srd521:unaligned sits off the grid and is classified srd521:OffAxisAlignmentTerm instead."@en ;
+  rdfs:seeAlso srd521:alignmentScheme, rol:ValueScheme, rol:ValueDeclaration, rol:declarationTerm,
     rol:ValueAxis, rol:ValueAxisPosition, rol:valueAxis, rol:valueAxisPosition .
 
 srd521:lawfulGood
@@ -664,14 +681,49 @@ srd521:valueAxisPosition_moralsEvil
   rdfs:label "Evil"@en ;
   rdfs:comment "The morals-axis cut for a subject who acts against the welfare of others."@en .
 
+#################################################################
+# The alignment scheme — this edition's rol:ValueScheme
+#################################################################
+
+## NEW MINT with no predecessor; CARD AV (e) (Dave, 2026-08-15), scheme-owned occupancy policy
+##   ruled by Dave 2026-08-16 ("(b) Scheme-owned policy"). Instance idiom per d20-test.ttl
+##   (a cat:Description; cat:instanceOf <Kind>).
+srd521:alignmentScheme
+  a cat:Description ;
+  cat:instanceOf rol:ValueScheme ;
+  rol:schemeTermType srd521:AlignmentTerm ;
+  rol:valueSchemeAxisRule srd521:alignmentEthicsAxisRule, srd521:alignmentMoralsAxisRule ;
+  rol:occupancyRule rol:occupancyRule_allRequiredOrNone ;
+  rdfs:label "SRD 5.2.1 alignment scheme"@en ;
+  rdfs:comment "This edition's value scheme for alignment: the ethics and morals axes, both required, under the all-required-axes-or-none occupancy rule. Nine graded terms occupy both axes; unaligned is positively off-grid. The axes are roleosum's reusable stock; which of them this edition uses, and on what terms, is stated here and nowhere else."@en .
+
+## NEW MINT with no predecessor; the (scheme, ethics) rule row.
+srd521:alignmentEthicsAxisRule
+  a cat:Description ;
+  cat:instanceOf rol:ValueSchemeAxisRule ;
+  rol:governedValueAxis rol:valueAxis_ethics ;
+  rol:axisRequirement rol:axisRequirement_required ;
+  rdfs:label "SRD alignment ethics-axis rule"@en .
+
+## NEW MINT with no predecessor; the (scheme, morals) rule row.
+srd521:alignmentMoralsAxisRule
+  a cat:Description ;
+  cat:instanceOf rol:ValueSchemeAxisRule ;
+  rol:governedValueAxis rol:valueAxis_morals ;
+  rol:axisRequirement rol:axisRequirement_required ;
+  rdfs:label "SRD alignment morals-axis rule"@en .
+
 ## NEW MINT with no predecessor, minted 2026-08-11; ruled by Dave 2026-08-11 (product channel).
+## SPECIALIZES rol:OffGridValueSchemeTerm 2026-08-16 (with the scheme mint): the generic no-position
+##   marker is theory's, so the general occupancy shape names no edition IRI; this class keeps its
+##   landed name and its parent, and gains the theory edge.
 srd521:OffAxisAlignmentTerm
   a cat:Kind ;
-  cat:specializes srd521:AlignmentTerm ;
+  cat:specializes srd521:AlignmentTerm, rol:OffGridValueSchemeTerm ;
   cat:instanceCategory cat:Individual ;
   rdfs:label "Off-axis alignment term"@en ;
-  rdfs:comment "An alignment term that sits off the two-axis grid rather than at a cell of it, and therefore carries no rol:valueAxisPosition. Being off the grid is asserted here positively rather than inferred from a missing edge, so a reader can tell it apart from a term whose positions merely have not been recorded."@en ;
-  rdfs:seeAlso rol:valueAxisPosition .
+  rdfs:comment "An alignment term that sits off the two-axis grid rather than at a cell of it, and therefore carries no rol:valueAxisPosition. Being off the grid is asserted here positively rather than inferred from a missing edge, so a reader can tell it apart from a term whose positions merely have not been recorded. Under srd521:alignmentScheme's all-required-axes-or-none occupancy rule this is the second lawful case, never an exception."@en ;
+  rdfs:seeAlso rol:OffGridValueSchemeTerm, rol:valueAxisPosition .
 
 #################################################################
 # Curated-content properties
@@ -710,9 +762,8 @@ srd521:usesAbility
 ## MEASURED AT THE CUT: 0 authored carriers and 0 platform consumers at this IRI — the platform
 ## builds the dynamis spelling (packages/rules/src/index.ts:108 over dynamisVocab), so the
 ## "serves the landed consumers" rationale in the retired comment was never true of THIS term.
-## The D20 typing it carried is already enforced at the platform's D20 test-outcome node shape
-## in its dynamis shacl module (path, minCount 1, maxCount 1, class) — named as prose because a
-## comment carrying the shape's CURIE reads as a live v1 identity to the residue scanner.
+## The D20 typing it carried is already enforced at dyn-sh:D20TestOutcomeShape
+## (ontology/modules/dynamis-shacl.ttl:964-969: path, minCount 1, maxCount 1, class).
 ## Reverses the DF-RESTORE-2 restoration (Dave, 2026-07-28) on new evidence, not as a tidy-up.
 
 
@@ -774,7 +825,8 @@ srd521:itemActionTestType
   a rdf:Property ;
   cat:domainType srd521:ItemActionOption ;
   cat:rangeType srd521:D20TestType ;
-  rdfs:label "item action test type"@en .
+  rdfs:label "item action test type"@en ;
+  rdfs:comment "Links an item's action option to the kind of D20 test it would call for, such as an attack roll. This is a data link within the rules package; it does not grant authority to make the test."@en .
 
 srd521:spellSchool
   a rdf:Property ;
@@ -789,12 +841,14 @@ srd521:forSpell
 srd521:areaShape
   a rdf:Property ;
   cat:rangeType srd521:AreaOfEffectShape ;
-  rdfs:label "area shape"@en .
+  rdfs:label "area shape"@en ;
+  rdfs:comment "Links a spell definition to the shape of its area of effect as the edition states it. The shape is data; working out the actual places and creatures a live casting reaches is done against the scene's geometry and adjudicated at the table, not by this link."@en .
 
 srd521:saveAbility
   a rdf:Property ;
   cat:rangeType srd521:AbilityScore ;
-  rdfs:label "save ability"@en .
+  rdfs:label "save ability"@en ;
+  rdfs:comment "Links a spell definition to the ability score the edition's spell text names for the spell's saving throw. This is a data link; it is not a warrant for any live saving throw."@en .
 
 srd521:conditionEffectType
   a rdf:Property ;
@@ -828,23 +882,27 @@ srd521:availableToClass
 srd521:weaponCategory
   a rdf:Property ;
   cat:rangeType srd521:WeaponCategory ;
-  rdfs:label "weapon category"@en .
+  rdfs:label "weapon category"@en ;
+  rdfs:comment "The category the edition assigns a weapon. Its values, as the edition's tables use them, are simple and martial."@en .
 
 srd521:weaponRangeKind
   a rdf:Property ;
   cat:rangeType srd521:WeaponRangeKind ;
-  rdfs:label "weapon range kind"@en .
+  rdfs:label "weapon range kind"@en ;
+  rdfs:comment "The edition's classification of a weapon, or of an item's action option, by reach. Its values, as the edition's tables use them, are melee and ranged."@en .
 
 srd521:weaponMastery
   a rdf:Property ;
   cat:rangeType srd521:WeaponMastery ;
-  rdfs:label "weapon mastery"@en .
+  rdfs:label "weapon mastery"@en ;
+  rdfs:comment "The mastery property named in a weapon's row of the edition's table, kept as a key. What a mastery property does in play is not modelled by this term."@en .
 
 srd521:attackMode
   a rdf:Property ;
   cat:domainType srd521:ItemActionOption ;
   cat:rangeType srd521:AttackMode ;
-  rdfs:label "attack mode"@en .
+  rdfs:label "attack mode"@en ;
+  rdfs:comment "The mode in which an item's action option attacks. Its values, as the edition's tables use them, are melee, ranged, and thrown."@en .
 
 srd521:spellRangeKind
   a rdf:Property ;
@@ -953,17 +1011,20 @@ srd521:weaponWeight
 srd521:sourceProperties
   a rdf:Property ;
   rdfs:range xsd:string ;
-  rdfs:label "source properties"@en .
+  rdfs:label "source properties"@en ;
+  rdfs:comment "The properties column of a weapon's row in the edition's table, preserved as the text printed there rather than parsed into structured property records."@en .
 
 srd521:damageExpression
   a rdf:Property ;
   rdfs:range xsd:string ;
-  rdfs:label "damage expression"@en .
+  rdfs:label "damage expression"@en ;
+  rdfs:comment "Damage stated as a dice expression, for damage data taken from the edition. Non-empty values use the same compact dice notation as roll evidence; damage the edition states as a fixed number is recorded with srd521:staticDamage instead."@en .
 
 srd521:staticDamage
   a rdf:Property ;
   rdfs:range xsd:integer ;
-  rdfs:label "static damage"@en .
+  rdfs:label "static damage"@en ;
+  rdfs:comment "A fixed, non-negative damage amount, for damage data taken from the edition that is stated as a number rather than as a dice expression."@en .
 
 srd521:handsRequired
   a rdf:Property ;
@@ -1395,7 +1456,7 @@ srd521:alignment
   cat:domainType srd521:CreatureDefinition ;
   cat:rangeType srd521:AlignmentTerm ;
   rdfs:label "alignment"@en ;
-  rdfs:comment "The statblock's default alignment suggestion, definition-level. Individual actants declare theirs via rol:AlignmentDeclaration."@en .
+  rdfs:comment "The statblock's default alignment suggestion, definition-level. Individual actants declare theirs via rol:ValueDeclaration, whose term is an srd521:AlignmentTerm."@en .
 
 srd521:challengeRating
   a rdf:Property ;

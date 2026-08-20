@@ -6,8 +6,10 @@ vendored so this mesh can consume the family-form rules data without reaching
 outside the repository.
 
 - **Upstream:** `github.com/stagecraft/srd-rules`, path `srd-5-2-1/`
-- **Pinned commit:** `394edf01bd9c20b1f47cf8979f083630344294ac` (the snapshot identity;
-  never a branch label)
+- **Pinned commit:** `ec94c54842aacfd092354e57ca8b89a75238f046` (the snapshot identity;
+  never a branch label; the commit stagecraft pins in `srd-rules-repository.json`, refreshed
+  2026-08-20 from `394edf01` — the snapshot had drifted one hand edit and 92 upstream lines,
+  and `SHA256SUMS` disagreed with its own tree)
 - **Contents:** the complete tree at that commit — every dataset package, the
   `_evidence/` extraction sources, `srd521.ttl` and `srd521-shacl.ttl` — 72 files,
   enumerated with digests in `SHA256SUMS` (`sha256sum -c SHA256SUMS` verifies the
@@ -18,11 +20,13 @@ outside the repository.
   change. The canonical identities of the datasets and rows inside these files are
   the upstream `https://stagecraft.github.io/srd-rules/srd-5-2-1/...` IRIs — this
   directory records their local availability, nothing more.
-- **The legacy tree:** `rules/dynamis/**` remains in place, unmodified, as the
-  legacy publication of the retired predecessor vocabulary. Its artifacts, history
-  and pages stay true precisely because nothing there changed. Consumers cut over
-  from the legacy tree to this snapshot as their own coordinated change, not as
-  part of this vendoring.
+- **The legacy tree:** `rules/dynamis/**` remains in place as the legacy publication
+  of the retired predecessor vocabulary. It is no longer unmodified: its woven pages
+  and `_knop` inventories left with every other woven artifact in this mesh
+  (2026-08-20, `[fixture-weave-residue]`), and its starter package left the retired
+  namespace on the platform's ruling (`738762b`). Consumers cut over from the legacy
+  tree to this snapshot as their own coordinated change, not as part of this
+  vendoring.
 - **Refreshing:** replace the whole tree from a newer upstream commit and rewrite
   `SHA256SUMS` and the pin above in the same commit. Never hand-edit individual
   vendored files — a local fix belongs upstream.
