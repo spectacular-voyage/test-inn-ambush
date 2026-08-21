@@ -905,7 +905,7 @@
 <https://spectacular-voyage.github.io/test-inn-ambush/scenario/inn-ambush> a <https://spectacular-voyage.github.io/stagecraft/ontology/Scenario> ;
 	<https://spectacular-voyage.github.io/stagecraft/ontology/hasWorldTimePolicy> <https://spectacular-voyage.github.io/test-inn-ambush/world-time-policy/held-elastic> , <https://spectacular-voyage.github.io/test-inn-ambush/world-time-policy/flowing-server> ;
 	<https://spectacular-voyage.github.io/stagecraft/ontology/hasSpatialModel> <https://spectacular-voyage.github.io/stagecraft/ontology/spatial-model/r0-zone-graph> ;
-	<https://spectacular-voyage.github.io/stagecraft/ontology/temporaenum/hasCalendar> <https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar> ;
+	<https://temporaenum.github.io/ontology/hasCalendar> <https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar> ;
 	<https://spectacular-voyage.github.io/stagecraft/ontology/temporaenum/activeFrame> <https://spectacular-voyage.github.io/test-inn-ambush/frame/ambush-night> .
 <https://spectacular-voyage.github.io/test-inn-ambush/history/main> a <https://spectacular-voyage.github.io/stagecraft/ontology/History> .
 <https://spectacular-voyage.github.io/test-inn-ambush/branch/plan-b> a <https://spectacular-voyage.github.io/stagecraft/ontology/Branch> ;
@@ -924,8 +924,17 @@
 <https://spectacular-voyage.github.io/test-inn-ambush/world-time-axis/main> a <https://spectacular-voyage.github.io/stagecraft/ontology/WorldTimeAxis> ;
 	<http://purl.org/dc/terms/description> "Monotonic server-advanced world time axis for the live-world preview." ;
 	<https://spectacular-voyage.github.io/stagecraft/ontology/inScenario> <https://spectacular-voyage.github.io/test-inn-ambush/scenario/inn-ambush> ;
-	<https://spectacular-voyage.github.io/stagecraft/ontology/temporaenum/hasCalendar> <https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar> ;
 	<https://spectacular-voyage.github.io/stagecraft/ontology/temporaenum/activeFrame> <https://spectacular-voyage.github.io/test-inn-ambush/frame/ambush-night> .
+## The hasCalendar seam (dc-acd (b), stagecraft seating eleven, 2026-08-21): the AXIS's calendar link is a
+##   validity-bounded assertion from the authored curtain-up zero anchor, accepted in the world-seeded founding
+##   record; the scenario's link above renamed plainly (disposition W (a)). Lifted by graph recipe, oracle-certified.
+<https://spectacular-voyage.github.io/test-inn-ambush/temporal-assertion/axis-main-calendar/curtain-up> <https://categoriae.github.io/ontology/instanceOf> <https://temporaenum.github.io/ontology/TemporalAssertion> ;
+	<https://temporaenum.github.io/ontology/assertionSubject> <https://spectacular-voyage.github.io/test-inn-ambush/world-time-axis/main> ;
+	<https://temporaenum.github.io/ontology/assertionPredicate> <https://temporaenum.github.io/ontology/hasCalendar> ;
+	<https://temporaenum.github.io/ontology/assertionObject> <https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar> ;
+	<https://temporaenum.github.io/ontology/assertionStatus> <https://temporaenum.github.io/ontology/assertionStatus_asserted> ;
+	<https://temporaenum.github.io/ontology/validFrom> <https://spectacular-voyage.github.io/test-inn-ambush/clock-anchor/curtain-up-zero> ;
+	<https://categoriae.github.io/ontology/acceptedIn> <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/world-seeded/curtain-up-001> .
 <https://spectacular-voyage.github.io/test-inn-ambush/frame/ambush-night> a <https://spectacular-voyage.github.io/stagecraft/ontology/temporaenum/Frame> ;
 	<http://purl.org/dc/terms/title> "Ambush night frame" ;
 	<http://purl.org/dc/terms/description> "Unanchored dramatic frame for prose-clock rendering during the inn ambush night." ;
