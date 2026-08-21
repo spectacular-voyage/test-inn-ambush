@@ -937,6 +937,17 @@
 	<https://spectacular-voyage.github.io/stagecraft/ontology/inScenario> <https://spectacular-voyage.github.io/test-inn-ambush/scenario/inn-ambush> ;
 	<https://spectacular-voyage.github.io/stagecraft/ontology/usesWorldTimeAxis> <https://spectacular-voyage.github.io/test-inn-ambush/world-time-axis/main> ;
 	<https://spectacular-voyage.github.io/stagecraft/ontology/startsAtClockAnchor> <https://spectacular-voyage.github.io/test-inn-ambush/clock-anchor/inn-clock-001> .
+## AUTHORED ADDITION 2026-08-21 (the hasCalendar seam, fork Z ruled (b); the dc-abz (c) authored-additions
+##   precedent): the axis's ZERO anchor, minted so the calendar assertion's validFrom covers [0, 900) — the
+##   span prose-clock rendered a calendar in before the first authority-written anchor (inn-clock-001, offset
+##   900, the file's minimum). Cites the world's own founding record rather than a time-advanced record:
+##   this instant was never advanced TO, it is where the curtain rose.
+<https://spectacular-voyage.github.io/test-inn-ambush/clock-anchor/curtain-up-zero> a <https://spectacular-voyage.github.io/stagecraft/ontology/TemporalAnchor> , <https://spectacular-voyage.github.io/stagecraft/ontology/ClockAnchor> , <http://www.w3.org/2006/time#Instant> ;
+	<http://purl.org/dc/terms/description> "Authored curtain-up zero anchor: world-time axis offset 0, where live play begins." ;
+	<https://spectacular-voyage.github.io/stagecraft/ontology/basedOnAuthorityRecord> <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/world-seeded/curtain-up-001> ;
+	<https://spectacular-voyage.github.io/stagecraft/ontology/clockOffsetSeconds> "0"^^<http://www.w3.org/2001/XMLSchema#decimal> ;
+	<https://spectacular-voyage.github.io/stagecraft/ontology/clockPrecision> "second" ;
+	<https://spectacular-voyage.github.io/stagecraft/ontology/onWorldTimeAxis> <https://spectacular-voyage.github.io/test-inn-ambush/world-time-axis/main> .
 <https://spectacular-voyage.github.io/test-inn-ambush/clock-anchor/inn-clock-001> a <https://spectacular-voyage.github.io/stagecraft/ontology/TemporalAnchor> , <https://spectacular-voyage.github.io/stagecraft/ontology/ClockAnchor> , <http://www.w3.org/2006/time#Instant> ;
 	<http://purl.org/dc/terms/description> "First fixture-proven clock anchor: fifteen minutes after the world-time axis seed." ;
 	<https://spectacular-voyage.github.io/stagecraft/ontology/basedOnAuthorityRecord> <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/time-advanced/inn-clock-001> ;
