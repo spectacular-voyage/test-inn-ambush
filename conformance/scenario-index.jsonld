@@ -1212,6 +1212,27 @@
           }
         }
       ]
+    },
+    {
+      "id": "#86-calendar-cluster-cutover",
+      "type": "ScenarioStep",
+      "manifestPath": "86-calendar-cluster-cutover.jsonld",
+      "hasLaneBinding": [
+        {
+          "type": "LaneStateBinding",
+          "lane": "#fixture-lane",
+          "fromLaneState": {
+            "type": "StateLocator",
+            "locatorKind": "gitRefState",
+            "ref": "e0db9f45a1fc700493986c9bbe965be9a5d3dd35"
+          },
+          "toLaneState": {
+            "type": "StateLocator",
+            "locatorKind": "gitRefState",
+            "ref": "a.86-calendar-cluster-cutover"
+          }
+        }
+      ]
     }
   ]
 }

@@ -1,0 +1,122 @@
+{
+  "@context": {
+    "@vocab": "https://spectacular-voyage.github.io/accord/ontology/",
+    "dcterms": "http://purl.org/dc/terms/",
+    "id": "@id",
+    "type": "@type",
+    "changeType": {
+      "@type": "@vocab"
+    },
+    "compareMode": {
+      "@type": "@vocab"
+    },
+    "targetsFileExpectation": {
+      "@type": "@id"
+    },
+    "locatorKind": {
+      "@type": "@vocab"
+    }
+  },
+  "type": "Manifest",
+  "id": "urn:accord:stagecraft:test-inn-ambush:86-calendar-cluster-cutover",
+  "dcterms:title": "Inn Ambush 86 calendar cluster cutover — the calendar rewritten from the v1 temporaenum vocabulary to the temporaenum arm's (stagecraft seating seven, 2026-08-20; this rung cut by seating eight)",
+  "hasCase": [
+    {
+      "type": "TransitionCase",
+      "id": "#calendar-cluster-cutover",
+      "fixtureRepo": "github.com/spectacular-voyage/test-inn-ambush",
+      "operationId": "stagecraft.platform.rewriteCalendarToTemporaenumArm",
+      "fromRef": "e0db9f45a1fc700493986c9bbe965be9a5d3dd35",
+      "toRef": "a.86-calendar-cluster-cutover",
+      "fromState": {
+        "type": "StateLocator",
+        "locatorKind": "gitRefState",
+        "ref": "e0db9f45a1fc700493986c9bbe965be9a5d3dd35"
+      },
+      "toState": {
+        "type": "StateLocator",
+        "locatorKind": "gitRefState",
+        "ref": "a.86-calendar-cluster-cutover"
+      },
+      "hasFileExpectation": [
+        {
+          "id": "#calendar-rdf",
+          "type": "FileExpectation",
+          "path": "world/calendars/inn-ambush-calendar/calendar.ttl",
+          "changeType": "updated",
+          "compareMode": "rdfCanonical"
+        },
+        {
+          "id": "#bands-csv-unchanged",
+          "type": "FileExpectation",
+          "path": "world/calendars/inn-ambush-calendar/bands.csv",
+          "changeType": "unchanged",
+          "compareMode": "bytes"
+        },
+        {
+          "id": "#months-csv-unchanged",
+          "type": "FileExpectation",
+          "path": "world/calendars/inn-ambush-calendar/months.csv",
+          "changeType": "unchanged",
+          "compareMode": "bytes"
+        },
+        {
+          "id": "#seasons-csv-unchanged",
+          "type": "FileExpectation",
+          "path": "world/calendars/inn-ambush-calendar/seasons.csv",
+          "changeType": "unchanged",
+          "compareMode": "bytes"
+        },
+        {
+          "id": "#weekdays-csv-unchanged",
+          "type": "FileExpectation",
+          "path": "world/calendars/inn-ambush-calendar/weekdays.csv",
+          "changeType": "unchanged",
+          "compareMode": "bytes"
+        },
+        {
+          "id": "#calendar-csvw-unchanged",
+          "type": "FileExpectation",
+          "path": "world/calendars/inn-ambush-calendar/calendar.csvw.json",
+          "changeType": "unchanged",
+          "compareMode": "bytes"
+        },
+        {
+          "id": "#world-state-unchanged",
+          "type": "FileExpectation",
+          "path": "world/states/inn-ambush-plan-b-state/inn-ambush-plan-b-state.ttl",
+          "changeType": "unchanged",
+          "compareMode": "rdfCanonical"
+        }
+      ],
+      "hasRdfExpectation": [
+        {
+          "id": "#calendar-rdf-assertions",
+          "type": "RdfExpectation",
+          "targetsFileExpectation": "#calendar-rdf",
+          "hasAskAssertion": [
+            {
+              "id": "#ask-alphabetical-weekdays-target",
+              "type": "SparqlAskAssertion",
+              "query": "ASK {\n  <https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar> <https://temporaenum.github.io/ontology/hasWeekday> <https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/weekday/ashday>,\n      <https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/weekday/barrowday>,\n      <https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/weekday/coinday>,\n      <https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/weekday/driftday>,\n      <https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/weekday/eveday> .\n  <https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/weekday/ashday> <http://www.w3.org/2000/01/rdf-schema#label> \"Ashday\" ;\n    <https://temporaenum.github.io/ontology/calendarKey> \"ashday\" ;\n    <https://temporaenum.github.io/ontology/ordinal> 0 .\n  <https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/weekday/barrowday> <http://www.w3.org/2000/01/rdf-schema#label> \"Barrowday\" ;\n    <https://temporaenum.github.io/ontology/calendarKey> \"barrowday\" ;\n    <https://temporaenum.github.io/ontology/ordinal> 1 .\n  <https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/weekday/eveday> <http://www.w3.org/2000/01/rdf-schema#label> \"Eveday\" ;\n    <https://temporaenum.github.io/ontology/calendarKey> \"eveday\" ;\n    <https://temporaenum.github.io/ontology/ordinal> 4 .\n  FILTER NOT EXISTS { <https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/weekday/toilday> ?oldToilPredicate ?oldToilObject .\n  } FILTER NOT EXISTS { <https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar/weekday/starday> ?oldStarPredicate ?oldStarObject .\n  }\n}",
+              "expectedBoolean": true
+            }
+          ]
+        },
+        {
+          "id": "#world-state-assertions",
+          "type": "RdfExpectation",
+          "targetsFileExpectation": "#world-state-unchanged",
+          "hasAskAssertion": [
+            {
+              "id": "#ask-calendar-definitions-not-copied-target",
+              "type": "SparqlAskAssertion",
+              "query": "ASK {\n  ?band <https://categoriae.github.io/ontology/instanceOf> <https://temporaenum.github.io/ontology/TimeOfDayBand> .\n}",
+              "expectedBoolean": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
