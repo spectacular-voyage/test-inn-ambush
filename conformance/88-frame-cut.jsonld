@@ -1,0 +1,105 @@
+{
+  "@context": {
+    "@vocab": "https://spectacular-voyage.github.io/accord/ontology/",
+    "dcterms": "http://purl.org/dc/terms/",
+    "id": "@id",
+    "type": "@type",
+    "changeType": {
+      "@type": "@vocab"
+    },
+    "compareMode": {
+      "@type": "@vocab"
+    },
+    "targetsFileExpectation": {
+      "@type": "@id"
+    },
+    "locatorKind": {
+      "@type": "@vocab"
+    }
+  },
+  "type": "Manifest",
+  "id": "urn:accord:stagecraft:test-inn-ambush:88-frame-cut",
+  "dcterms:title": "Inn Ambush 88 frame cut — the active-frame selection is session state: the two world temp:activeFrame triples retire with no successor (the checkpoint record sc:checkpointActiveFrame is the one selection) and the frame's classification lifts to the family form (stagecraft seating thirteen, 2026-08-21, dc-ace A ⓓ + C ⓐ; ASK #45 stays history-bound at its own rung, the old IDs stay)",
+  "hasCase": [
+    {
+      "type": "TransitionCase",
+      "id": "#frame-cut",
+      "fixtureRepo": "github.com/spectacular-voyage/test-inn-ambush",
+      "operationId": "stagecraft.platform.retireWorldActiveFrameAndLiftDramaticFrame",
+      "fromRef": "b70b7cc29747ae6cc5f456ca6c9ca86fa699ecc1",
+      "toRef": "a.88-frame-cut",
+      "fromState": {
+        "type": "StateLocator",
+        "locatorKind": "gitRefState",
+        "ref": "b70b7cc29747ae6cc5f456ca6c9ca86fa699ecc1"
+      },
+      "toState": {
+        "type": "StateLocator",
+        "locatorKind": "gitRefState",
+        "ref": "a.88-frame-cut"
+      },
+      "hasFileExpectation": [
+        {
+          "id": "#world-state-rdf",
+          "type": "FileExpectation",
+          "path": "world/states/inn-ambush-plan-b-state/inn-ambush-plan-b-state.ttl",
+          "changeType": "updated",
+          "compareMode": "rdfCanonical"
+        },
+        {
+          "id": "#calendar-unchanged",
+          "type": "FileExpectation",
+          "path": "world/calendars/inn-ambush-calendar/calendar.ttl",
+          "changeType": "unchanged",
+          "compareMode": "bytes"
+        },
+        {
+          "id": "#plan-b-journal-unchanged",
+          "type": "FileExpectation",
+          "path": "authority/journals/plan-b/plan-b.ttl",
+          "changeType": "unchanged",
+          "compareMode": "bytes"
+        }
+      ],
+      "hasRdfExpectation": [
+        {
+          "id": "#world-state-assertions",
+          "type": "RdfExpectation",
+          "targetsFileExpectation": "#world-state-rdf",
+          "hasAskAssertion": [
+            {
+              "id": "#ask-checkpoint-record-is-the-selection",
+              "type": "SparqlAskAssertion",
+              "query": "ASK {\n  <https://spectacular-voyage.github.io/test-inn-ambush/checkpoint/checkpoint-mrbm6ttp> <https://spectacular-voyage.github.io/stagecraft/ontology/checkpointActiveFrame> <https://spectacular-voyage.github.io/test-inn-ambush/frame/ambush-night> .\n}",
+              "expectedBoolean": true
+            },
+            {
+              "id": "#ask-frame-lifted-to-family-form",
+              "type": "SparqlAskAssertion",
+              "query": "ASK {\n  <https://spectacular-voyage.github.io/test-inn-ambush/frame/ambush-night> a <https://categoriae.github.io/ontology/Description> ;\n    <https://categoriae.github.io/ontology/instanceOf> <https://fabularia.github.io/ontology/DramaticFrame> ;\n    <http://www.w3.org/2000/01/rdf-schema#label> \"ambush night\" .\n}",
+              "expectedBoolean": true
+            },
+            {
+              "id": "#ask-legacy-selection-gone",
+              "type": "SparqlAskAssertion",
+              "query": "ASK {\n  ?s <https://spectacular-voyage.github.io/stagecraft/ontology/temporaenum/activeFrame> ?o .\n}",
+              "expectedBoolean": false
+            },
+            {
+              "id": "#ask-legacy-frame-typing-gone",
+              "type": "SparqlAskAssertion",
+              "query": "ASK {\n  ?s a <https://spectacular-voyage.github.io/stagecraft/ontology/temporaenum/Frame> .\n}",
+              "expectedBoolean": false
+            },
+            {
+              "id": "#ask-visibility-relator-unchanged",
+              "type": "SparqlAskAssertion",
+              "query": "ASK {\n  <https://spectacular-voyage.github.io/test-inn-ambush/relator/visibility/world-time/frame/players-current> <https://spectacular-voyage.github.io/stagecraft/ontology/subject> <https://spectacular-voyage.github.io/test-inn-ambush/world-time-axis/main>, <https://spectacular-voyage.github.io/test-inn-ambush/frame/ambush-night> ;\n    <https://spectacular-voyage.github.io/stagecraft/ontology/object> <https://spectacular-voyage.github.io/test-inn-ambush/participant/alice>, <https://spectacular-voyage.github.io/test-inn-ambush/participant/bob> .\n}",
+              "expectedBoolean": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

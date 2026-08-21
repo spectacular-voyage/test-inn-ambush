@@ -1254,6 +1254,27 @@
           }
         }
       ]
+    },
+    {
+      "id": "#88-frame-cut",
+      "type": "ScenarioStep",
+      "manifestPath": "88-frame-cut.jsonld",
+      "hasLaneBinding": [
+        {
+          "type": "LaneStateBinding",
+          "lane": "#fixture-lane",
+          "fromLaneState": {
+            "type": "StateLocator",
+            "locatorKind": "gitRefState",
+            "ref": "b70b7cc29747ae6cc5f456ca6c9ca86fa699ecc1"
+          },
+          "toLaneState": {
+            "type": "StateLocator",
+            "locatorKind": "gitRefState",
+            "ref": "a.88-frame-cut"
+          }
+        }
+      ]
     }
   ]
 }
