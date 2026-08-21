@@ -1233,6 +1233,27 @@
           }
         }
       ]
+    },
+    {
+      "id": "#87-hascalendar-seam",
+      "type": "ScenarioStep",
+      "manifestPath": "87-hascalendar-seam.jsonld",
+      "hasLaneBinding": [
+        {
+          "type": "LaneStateBinding",
+          "lane": "#fixture-lane",
+          "fromLaneState": {
+            "type": "StateLocator",
+            "locatorKind": "gitRefState",
+            "ref": "b9fbc25893a440bf07f1ec5e66d109abd8596083"
+          },
+          "toLaneState": {
+            "type": "StateLocator",
+            "locatorKind": "gitRefState",
+            "ref": "a.87-hascalendar-seam"
+          }
+        }
+      ]
     }
   ]
 }

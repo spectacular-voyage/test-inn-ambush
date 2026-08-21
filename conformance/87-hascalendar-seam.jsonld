@@ -1,0 +1,93 @@
+{
+  "@context": {
+    "@vocab": "https://spectacular-voyage.github.io/accord/ontology/",
+    "dcterms": "http://purl.org/dc/terms/",
+    "id": "@id",
+    "type": "@type",
+    "changeType": {
+      "@type": "@vocab"
+    },
+    "compareMode": {
+      "@type": "@vocab"
+    },
+    "targetsFileExpectation": {
+      "@type": "@id"
+    },
+    "locatorKind": {
+      "@type": "@vocab"
+    }
+  },
+  "type": "Manifest",
+  "id": "urn:accord:stagecraft:test-inn-ambush:87-hascalendar-seam",
+  "dcterms:title": "Inn Ambush 87 hasCalendar seam — the axis's calendar link becomes a validity-bounded temporal assertion from the curtain-up zero anchor; the scenario's link renamed plainly (stagecraft seating eleven, 2026-08-21, dc-acd ⓑ; the old ASK IDs stay history-bound at their rungs)",
+  "hasCase": [
+    {
+      "type": "TransitionCase",
+      "id": "#hascalendar-seam",
+      "fixtureRepo": "github.com/spectacular-voyage/test-inn-ambush",
+      "operationId": "stagecraft.platform.liftHasCalendarToTemporalAssertion",
+      "fromRef": "b9fbc25893a440bf07f1ec5e66d109abd8596083",
+      "toRef": "a.87-hascalendar-seam",
+      "fromState": {
+        "type": "StateLocator",
+        "locatorKind": "gitRefState",
+        "ref": "b9fbc25893a440bf07f1ec5e66d109abd8596083"
+      },
+      "toState": {
+        "type": "StateLocator",
+        "locatorKind": "gitRefState",
+        "ref": "a.87-hascalendar-seam"
+      },
+      "hasFileExpectation": [
+        {
+          "id": "#world-state-rdf",
+          "type": "FileExpectation",
+          "path": "world/states/inn-ambush-plan-b-state/inn-ambush-plan-b-state.ttl",
+          "changeType": "updated",
+          "compareMode": "rdfCanonical"
+        },
+        {
+          "id": "#calendar-unchanged",
+          "type": "FileExpectation",
+          "path": "world/calendars/inn-ambush-calendar/calendar.ttl",
+          "changeType": "unchanged",
+          "compareMode": "bytes"
+        },
+        {
+          "id": "#plan-b-journal-unchanged",
+          "type": "FileExpectation",
+          "path": "authority/journals/plan-b/plan-b.ttl",
+          "changeType": "unchanged",
+          "compareMode": "bytes"
+        }
+      ],
+      "hasRdfExpectation": [
+        {
+          "id": "#world-state-assertions",
+          "type": "RdfExpectation",
+          "targetsFileExpectation": "#world-state-rdf",
+          "hasAskAssertion": [
+            {
+              "id": "#ask-axis-calendar-assertion-target",
+              "type": "SparqlAskAssertion",
+              "query": "ASK {\n  <https://spectacular-voyage.github.io/test-inn-ambush/temporal-assertion/axis-main-calendar/curtain-up> <https://categoriae.github.io/ontology/instanceOf> <https://temporaenum.github.io/ontology/TemporalAssertion> ;\n    <https://temporaenum.github.io/ontology/assertionSubject> <https://spectacular-voyage.github.io/test-inn-ambush/world-time-axis/main> ;\n    <https://temporaenum.github.io/ontology/assertionPredicate> <https://temporaenum.github.io/ontology/hasCalendar> ;\n    <https://temporaenum.github.io/ontology/assertionObject> <https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar> ;\n    <https://temporaenum.github.io/ontology/assertionStatus> <https://temporaenum.github.io/ontology/assertionStatus_asserted> ;\n    <https://temporaenum.github.io/ontology/validFrom> <https://spectacular-voyage.github.io/test-inn-ambush/clock-anchor/curtain-up-zero> ;\n    <https://categoriae.github.io/ontology/acceptedIn> <https://spectacular-voyage.github.io/test-inn-ambush/authority-journal/world-seeded/curtain-up-001> .\n}",
+              "expectedBoolean": true
+            },
+            {
+              "id": "#ask-legacy-hascalendar-gone",
+              "type": "SparqlAskAssertion",
+              "query": "ASK {\n  ?s <https://spectacular-voyage.github.io/stagecraft/ontology/temporaenum/hasCalendar> ?o .\n}",
+              "expectedBoolean": false
+            },
+            {
+              "id": "#ask-scenario-link-renamed",
+              "type": "SparqlAskAssertion",
+              "query": "ASK {\n  <https://spectacular-voyage.github.io/test-inn-ambush/scenario/inn-ambush> <https://temporaenum.github.io/ontology/hasCalendar> <https://spectacular-voyage.github.io/test-inn-ambush/world/calendars/inn-ambush-calendar> .\n}",
+              "expectedBoolean": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
